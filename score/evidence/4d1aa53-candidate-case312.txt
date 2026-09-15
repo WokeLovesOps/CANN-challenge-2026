@@ -1,0 +1,80 @@
+2026-09-16 00:51:13 [INFO]  Op profiling analysis start.
+2026-09-16 00:51:13 [INFO]  Running simulation task: Binary Simulation Running, use simulator Ascend910B3 by --soc-version
+[INFO] Config file [config_stars.json] from environment variable [CAMODEL_CONFIG_PATH]. Path: /mnt/newdisk/code/CANN-challenge/Build/SmallDotChecks20260916/case312/OPPROF_20260916005113_YFNTAVFDFQRADEQV/device0/tmp_dump/config/config_stars.json
+[INFO] Config file is found, path is /mnt/newdisk/code/CANN-challenge/Build/SmallDotChecks20260916/case312/OPPROF_20260916005113_YFNTAVFDFQRADEQV/device0/tmp_dump/config/config_stars.json.
+[FuncCache]: size:0x20000, line_size:128, way_num:16, line_num:1024, idx_num:64
+             idx_lsb:7, idx_mask:0x3f, tag_lsb:13, tag_mask:0xffffffffffffffff, ofst_mask:0x7f
+
+[TmSim]: Run in parallel worker mode, core num is: 24
+
+[INFO] Config file [config.json] from environment variable [CAMODEL_CONFIG_PATH]. Path: /mnt/newdisk/code/CANN-challenge/Build/SmallDotChecks20260916/case312/OPPROF_20260916005113_YFNTAVFDFQRADEQV/device0/tmp_dump/config/config.json
+CASE_312_CALL_1_BEGIN
+[INFO] AicWrapper attach AIC 0, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 1, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 2, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 3, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 4, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 5, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 6, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 7, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 8, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 9, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 10, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 11, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 12, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 13, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 14, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 15, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 16, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 17, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 18, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 19, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 20, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 21, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 22, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 23, num_vec_core=2, num_subcore=3
+[INFO] Chip 0 AIC / Scheduler / Soc periods: 200.0000 / 200.0000 / 105.0000
+[INFO] chip 0 die 0 device created
+>> Start ModelParsim with 16 threads for 25 thread units, mode is 0
+================================================================================
+>>>>
+>>>>                             " PEM MODEL "
+>>>>             Total no. of 1 chip(s) Model Init Success!
+>>>>
+================================================================================
+[INFO] Model Start Time: 2026-09-16 00:51:14
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:0 swapbuf_addr:10000000
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:1 swapbuf_addr:10000040
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:2 swapbuf_addr:10000080
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:3 swapbuf_addr:100000c0
+[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+CASE_312_CALL_1_PASS
+CASE_312_CALL_2_BEGIN
+[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+2026-09-16 00:51:21 [INFO]  Extract 6099 relations from kernel
+2026-09-16 00:51:21 [INFO]  Parse 47800 addr2line relations
+2026-09-16 00:51:21 [INFO]  Core operator results run in simulator as follow:
+core_name           duration_time(us)   running_time(us)
+core0.cubecore0     8.39                6.66
+core0.veccore0      8.05                7.55
+CASE_312_CALL_2_PASS
+SIM_CORRECTNESS_PASS
+[INFO] Model Stop Time: 2026-09-16 00:51:24
+Model RUN TIME: 10414.2 ms
+[INFO] Total tick: 116345
+[INFO] Model stopped successfully.
+2026-09-16 00:51:26 [INFO]  Extract 6099 relations from kernel
+2026-09-16 00:51:26 [INFO]  Parse 47800 addr2line relations
+2026-09-16 00:51:26 [INFO]  Core operator results run in simulator as follow:
+core_name           duration_time(us)   running_time(us)
+core0.cubecore0     6.83                6.66
+core0.veccore0      6.48                6.35
+2026-09-16 00:51:27 [INFO]  Profiling running finished. All task success.
+2026-09-16 00:51:27 [INFO]  Start parse dump file
+2026-09-16 00:51:27 [INFO]  Profiling results saved in /mnt/newdisk/code/CANN-challenge/Build/SmallDotChecks20260916/case312/OPPROF_20260916005113_YFNTAVFDFQRADEQV
+2026-09-16 00:51:27 [INFO]  Profiling data parse finished.
+2026-09-16 00:51:27 [INFO]  Op profiling finish. Welcome to next use.
