@@ -17,7 +17,12 @@ def main():
     selection.add_argument("--cases", default="0", help="默认只运行最小用例 0")
     selection.add_argument("--all-cases", action="store_true", help="显式运行完整矩阵，耗时较长")
     parser.add_argument("--timeout-minutes", type=int, default=2)
+    parser.add_argument("--core-ids", default="0", help="解析核编号，以 | 分隔，默认只解析核 0")
     args = parser.parse_args()
+    if not re.fullmatch(r"\d+(\|\d+)*", args.core_ids):
+        parser.error("解析核编号必须是以 | 分隔的整数")
+    if any(int(core) > 49 for core in args.core_ids.split("|")):
+        parser.error("解析核编号必须在 0 到 49 之间")
     folder = args.output.resolve()
     folder.mkdir(parents=True, exist_ok=False, mode=0o700)
     library = args.library.resolve()
@@ -26,7 +31,7 @@ def main():
                     library_sha256=hashlib.sha256(library.read_bytes()).hexdigest(),
                     git_commit=subprocess.check_output(
                         ["git", "rev-parse", "HEAD"], text=True).strip(),
-                    soc="Ascend910B3", results=records)
+                    soc="Ascend910B3", parsed_core_ids=args.core_ids, results=records)
     environment = os.environ.copy()
     environment.update(OPENBLAS_NUM_THREADS="2", OMP_NUM_THREADS="2",
                        PYTHONDONTWRITEBYTECODE="1")
@@ -41,7 +46,7 @@ def main():
         log = folder / f"case{index}.log"
         output = folder / f"case{index}"
         command = ["msprof", "op", "simulator", "--soc-version=Ascend910B3",
-                   "--core-id=0", "--launch-count=4",
+                   f"--core-id={args.core_ids}", "--launch-count=4",
                    f"--timeout={args.timeout_minutes}", f"--output={output}",
                    sys.executable, str(application), str(library),
                    f"--case={index}", f"--report={report}"]
