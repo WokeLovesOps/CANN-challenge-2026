@@ -1,0 +1,182 @@
+{
+  "library": "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+  "library_sha256": "4de70fc38a34e4d455d3068f47ee621cb7d9262062e3f8544d6de87dab9fe740",
+  "git_commit": "3effb7c2561317c3904e660ac80bea37513fdbab",
+  "soc": "Ascend910B3",
+  "results": [
+    {
+      "case": 0,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinishChecks20260915/case0",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+        "--case=0",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinishChecks20260915/case0.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case0/OPPROF_20260915144439_MCHJHTOOQVBIRHSV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 7399436,
+          "sha256": "0446b1b41c40ebeabf3067c219118e48b752be76b83ecfe45d91bbba884d0d85"
+        },
+        {
+          "path": "case0/OPPROF_20260915144439_MCHJHTOOQVBIRHSV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 7158736,
+          "sha256": "f2e27c82366964ff9d636a1df36d56d604da197284afa2c2bc94d395e9574f0f"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ],
+      "model_core0_AIC_AIV_first_second_us": [
+        8.39,
+        8.07,
+        6.82,
+        6.49
+      ]
+    },
+    {
+      "case": 8,
+      "label": "双维尾块",
+      "shape": [
+        2,
+        33,
+        129,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 3.0517578125e-05,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinishChecks20260915/case8",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+        "--case=8",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinishChecks20260915/case8.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case8/OPPROF_20260915144452_LZLWTMFUUCSHLAQN/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 14009320,
+          "sha256": "19d6a7d96c8b96dcf368cb7c71ef32edb956ea00bbc96e034300875226ccab16"
+        },
+        {
+          "path": "case8/OPPROF_20260915144452_LZLWTMFUUCSHLAQN/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 13735900,
+          "sha256": "5a5ebd90ccae48e833099282d1b32a067e1236bf68cd6986b57fd697041dc32b"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ],
+      "model_core0_AIC_AIV_first_second_us": [
+        16.84,
+        16.7,
+        14.85,
+        14.49
+      ]
+    },
+    {
+      "case": 80,
+      "label": "流水槽复用",
+      "shape": [
+        1,
+        3,
+        257,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinishChecks20260915/case80",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+        "--case=80",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinishChecks20260915/case80.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case80/OPPROF_20260915144508_CUFLHNKHGPBZFDVZ/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 12419440,
+          "sha256": "69cd05aa7b88465c5e017766c60ff6af9c03e9cac08f09b572eddba21ac75322"
+        },
+        {
+          "path": "case80/OPPROF_20260915144508_CUFLHNKHGPBZFDVZ/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 12118892,
+          "sha256": "5c75ac129232665b32a6ce0667d9a24b8875c450f44ecb45fa717736d9052778"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ],
+      "model_core0_AIC_AIV_first_second_us": [
+        14.09,
+        13.98,
+        11.59,
+        11.48
+      ]
+    }
+  ]
+}
