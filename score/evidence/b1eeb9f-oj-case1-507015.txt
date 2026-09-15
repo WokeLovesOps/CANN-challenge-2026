@@ -1,0 +1,31 @@
+用户提供的 OJ 测试点 1 日志，2026-09-15。
+
+2026-09-15 13:02:37 [INFO]  Op profiling analysis start.
+2026-09-15 13:02:37 [INFO]  Running device task: DeviceProf
+[INFO] <ProfData> Start profiling on device 1, kernel: _ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[WARN] <ReplayOnce> Kernel run on device 1 No. 1 time failed.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  aclrtSynchronizeStream: 507015
+2026-09-15 13:02:39 [WARN]  Child process exited with status 134
+2026-09-15 13:02:40 [ERROR] Get profiling data failed.
+2026-09-15 13:02:40 [WARN]  Profiling running finished. May cause generating performance files to fail.
+2026-09-15 13:02:40 [WARN]  Running task failed, data parsing start
+2026-09-15 13:02:40 [INFO]  Start analyze kernel on device: device1, kernel: _ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 0
+2026-09-15 13:02:40 [WARN]  Access profiling data file [/<path>/DeviceProf1.bin] failed, maybe do not contain this file or it is not readable. Some indicators of [] failed to be collected.
+2026-09-15 13:02:40 [WARN]  Get op basic info [Task Duration] failed.
+2026-09-15 13:02:41 [INFO]  Operator Basic Information:
+
+Op Name: _ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+Op Type: vector
+Task Duration(us): 0.000000
+Block Dim: 1
+Mix Block Dim:
+Device Id: 1
+Pid: 1706835
+Current Freq: 1650
+Rated Freq: 1650
+
+2026-09-15 13:02:41 [INFO]  Profiling results saved in /<path>/OPPROF_20260915130237_PPXKFJFQZMPDUCLL
+2026-09-15 13:02:41 [INFO]  Profiling data parse finished.
+2026-09-15 13:02:41 [INFO]  Op profiling finish. Welcome to next use.
