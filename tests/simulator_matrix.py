@@ -32,6 +32,15 @@ SHAPES = [
     ("归约半行后尾", 1, 32, 65, 40),
     ("归约整行前尾", 1, 32, 127, 40),
     ("多核任务槽复用", 1, 641, 65, 32),
+    ("N分片四块边界", 1, 2, 385, 32),
+    ("N分片五块尾行", 2, 33, 513, 40),
+    ("N分片长列流水", 1, 32, 1537, 128),
+    ("N分片全负", 1, 31, 1025, 40),
+    ("N分片全零", 1, 31, 1025, 40),
+    ("N分片核数边界", 5, 1, 385, 32),
+    ("N分片核数回退", 6, 1, 385, 32),
+    ("N分片列数回退", 1, 2, 384, 32),
+    ("N分片单行", 1, 1, 512, 40),
 ]
 
 
@@ -55,11 +64,21 @@ def main():
     rng = np.random.default_rng(20260915 + args.case)
     a = rng.uniform(-1, 1, (batch, m, k)).astype(dtype)
     b = rng.uniform(-1, 1, (batch, k, n)).astype(dtype)
-    if label == "全负":
+    if label in ("全负", "N分片全负"):
         a = np.abs(a).astype(dtype)
         b = -np.abs(b).astype(dtype)
-    elif label == "全零":
+    elif label in ("全零", "N分片全零"):
         a.fill(0)
+    elif label == "N分片四块边界":
+        # 两行最优列位于不同分片；最后一列也必须参与，最终得分应为 23。
+        a.fill(0)
+        a[0, 0, 0] = 1
+        a[0, 1, 1] = 1
+        b.fill(0)
+        b[0, :2, :] = -4
+        b[0, 0, 0] = 10
+        b[0, 1, 128] = 10
+        b[0, 0, -1] = 13
     expected = golden(a, b)
     stored_a = np.ascontiguousarray(a.swapaxes(-1, -2) if trans_a else a)
     stored_b = np.ascontiguousarray(b.swapaxes(-1, -2) if trans_b else b)
