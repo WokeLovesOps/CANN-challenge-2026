@@ -1,0 +1,332 @@
+{
+  "说明": "基线新增用例使用 a542170 的原有诊断库，SHA-256 与该版存档一致；运行器 git_commit 是运行时仓库 HEAD，不是旧库源码版本。模型时间仅为 core 0。",
+  "baseline_kernel_commit": "a5421705174e68506e31be6f0e7052bccda75742",
+  "baseline": {
+    "library": "/mnt/newdisk/code/CANN-challenge/Build/SingleCoreBarrier20260915/libsimulator_bridge.so",
+    "library_sha256": "2cf37ae175bb5b7d05db724ad5f69511b7c4103a123cef6a3b70460c6aaec127",
+    "git_commit": "3c2315a4e761732981ff28d4e089c6c730f87500",
+    "soc": "Ascend910B3",
+    "results": [
+      {
+        "case": 72,
+        "label": "单任务小矩阵",
+        "shape": [
+          1,
+          31,
+          17,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/DirectResultBaseline20260915/case72",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/SingleCoreBarrier20260915/libsimulator_bridge.so",
+          "--case=72",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/DirectResultBaseline20260915/case72.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case72/OPPROF_20260915142727_FMFFEISZORZJGLGY/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 8860856,
+            "sha256": "a4fa20f6973936084b280e5713d6ca5980fc5b3650c989d39db4c83c9d0c3295"
+          },
+          {
+            "path": "case72/OPPROF_20260915142727_FMFFEISZORZJGLGY/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 8629424,
+            "sha256": "9ecf71a75d7c079f7b75d9df3773534d32a78a9dfd28defb8c28ca7dc30f884f"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ]
+      },
+      {
+        "case": 79,
+        "label": "单任务小矩阵",
+        "shape": [
+          1,
+          31,
+          17,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/DirectResultBaseline20260915/case79",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/SingleCoreBarrier20260915/libsimulator_bridge.so",
+          "--case=79",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/DirectResultBaseline20260915/case79.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case79/OPPROF_20260915142745_NEYOYIYVTEIZCLDJ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 8933572,
+            "sha256": "595b4e78579f3b1f0c89055c87315206c64ca144efbf404e831d516a2b18dd5c"
+          },
+          {
+            "path": "case79/OPPROF_20260915142745_NEYOYIYVTEIZCLDJ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 8670336,
+            "sha256": "30f04e241c915c46ebec3aaafb959f87709e7a9f4c8b1adc2d866365507dae72"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ]
+      }
+    ]
+  },
+  "candidate": {
+    "library": "/mnt/newdisk/code/CANN-challenge/Build/DirectResult20260915/libsimulator_bridge.so",
+    "library_sha256": "a1d5ce8e0646ead0707f451127f2c648e27b0e5dafe47954acdee0d3747c43c8",
+    "git_commit": "3fc5f4700833c31c6ab181363801fea91ca7ae9b",
+    "soc": "Ascend910B3",
+    "results": [
+      {
+        "case": 0,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case0",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/DirectResult20260915/libsimulator_bridge.so",
+          "--case=0",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case0.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case0/OPPROF_20260915142809_MLWSHDADRXLWGGGS/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 6989828,
+            "sha256": "54644ef69f61cfa9a81fe7abe4a31c27e162cf1f6c110d6e15858e32928a17cb"
+          },
+          {
+            "path": "case0/OPPROF_20260915142809_MLWSHDADRXLWGGGS/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 6757060,
+            "sha256": "55c6ce20a8bf1625ab9c4939b73894c2eb3ba7db99552537344f77a162291b17"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ]
+      },
+      {
+        "case": 72,
+        "label": "单任务小矩阵",
+        "shape": [
+          1,
+          31,
+          17,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case72",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/DirectResult20260915/libsimulator_bridge.so",
+          "--case=72",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case72.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case72/OPPROF_20260915142822_YNPLJJSJMMKNSVDV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 8515416,
+            "sha256": "e3c51e1a149de2d2cafb02eb1ab9bd3991cfa538ddae31399a37f3d076ae36b3"
+          },
+          {
+            "path": "case72/OPPROF_20260915142822_YNPLJJSJMMKNSVDV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 8252048,
+            "sha256": "e532ce718f2f447c163ed70605794e158c6822f1f0321b3e15e8333901bcd409"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ]
+      },
+      {
+        "case": 79,
+        "label": "单任务小矩阵",
+        "shape": [
+          1,
+          31,
+          17,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case79",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/DirectResult20260915/libsimulator_bridge.so",
+          "--case=79",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case79.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case79/OPPROF_20260915142835_HGLYZPIMYGLBDXJZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 8591912,
+            "sha256": "bd3a0fd6044d6dbe599fe48cb8ba6cdb59d6a2020a2dcc98992b7ff479c8c8ff"
+          },
+          {
+            "path": "case79/OPPROF_20260915142835_HGLYZPIMYGLBDXJZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 8327048,
+            "sha256": "6cb79ae08497d5c52e497f335848b9dc6b0d77d31941967a914d6866957edcff"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ]
+      },
+      {
+        "case": 8,
+        "label": "双维尾块",
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case8",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/DirectResult20260915/libsimulator_bridge.so",
+          "--case=8",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/DirectResultChecks20260915/case8.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case8/OPPROF_20260915142850_ICIBXTUNITURLQMX/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 14284828,
+            "sha256": "cec3cd37a13b79098efaad9703675750a36c1828490dc665d7d879a4f31c45f7"
+          },
+          {
+            "path": "case8/OPPROF_20260915142850_ICIBXTUNITURLQMX/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 14017432,
+            "sha256": "a3ad2416254a499da137c5d64eaff0d600823566143e7b062814e89358b3a861"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ]
+      }
+    ]
+  }
+}
