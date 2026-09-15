@@ -1,4 +1,4 @@
-"""通过 msprof op simulator 执行 72 组双调用检查；结果不是板上性能。"""
+"""通过 msprof op simulator 执行双调用检查；结果不是板上性能。"""
 import argparse
 import ctypes as c
 import itertools
@@ -25,13 +25,14 @@ SHAPES = [
     ("最大Batch", 64, 1, 1, 32),
     ("全负", 2, 33, 129, 40),
     ("全零", 2, 33, 129, 40),
+    ("单任务小矩阵", 1, 31, 17, 40),
 ]
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("library", type=Path)
-    parser.add_argument("--case", type=int, required=True, choices=range(72))
+    parser.add_argument("--case", type=int, required=True, choices=range(len(SHAPES) * 8))
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--capture", action="store_true", help="先普通调用，再捕获并重放两次")
     parser.add_argument("--real-npu", action="store_true", help="明确选择真实 NPU 验证")

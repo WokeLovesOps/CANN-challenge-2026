@@ -15,7 +15,7 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     selection = parser.add_mutually_exclusive_group()
     selection.add_argument("--cases", default="0", help="默认只运行最小用例 0")
-    selection.add_argument("--all-cases", action="store_true", help="显式运行完整 72 组矩阵，耗时较长")
+    selection.add_argument("--all-cases", action="store_true", help="显式运行完整矩阵，耗时较长")
     parser.add_argument("--timeout-minutes", type=int, default=2)
     args = parser.parse_args()
     folder = args.output.resolve()
@@ -31,7 +31,11 @@ def main():
     environment.update(OPENBLAS_NUM_THREADS="2", OMP_NUM_THREADS="2",
                        PYTHONDONTWRITEBYTECODE="1")
     application = Path(__file__).with_name("simulator_matrix.py").resolve()
-    indices = range(72) if args.all_cases else map(int, args.cases.split(","))
+    if args.all_cases:
+        from simulator_matrix import SHAPES
+        indices = range(len(SHAPES) * 8)
+    else:
+        indices = map(int, args.cases.split(","))
     for index in indices:
         report = folder / f"case{index}.json"
         log = folder / f"case{index}.log"
