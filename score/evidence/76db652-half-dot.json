@@ -1,0 +1,1224 @@
+{
+  "说明": "只保留平台已确认的 FP16 单点积候选族，其余源代码逐字等于 ca58e55；本地软件模型不替代设备预热重放。",
+  "source_commit": "76db652",
+  "baseline": "ca58e55",
+  "failed_candidate": "4d1aa53",
+  "baseline_source_sha256": "27c1b0b97d38704e6ad8668a669de44172e934e9d381574e19871000505bcd4a",
+  "baseline_remainder_identical": true,
+  "hashes": {
+    "src/kernel.asc": "5dfd63045ff69000ad2bd55b4d9941c23bd006a1775b7ff0d7ae8721707e785a",
+    "tests/simulator_matrix.py": "c7ec53f292fdf15c91406b570e960500254c8fb294efb7783a686f88f8556f7c",
+    "tests/run_simulator_matrix.py": "c8cad935753dfdaf0455dcfaf3306b6705150eec6008baee1f3233c66feb6fde",
+    "tests/simulator_sequence.py": "24acf15125f4f79cba72de7087bb7d2cab58138ad08c036bad4dc227cfd4d0db",
+    "tests/simulator_bridge.asc": "498df13b56b768c31df4d937b3fc2e0461d5a1536cd9fb6514e1626ec17c5b05",
+    "Build/half-dot-configure.log": "362afd80a6db935d7fbd9a8104f97f6af434d85967ab65cd01014bc5ac71fbef",
+    "Build/half-dot-build.log": "7779b3a97b26cec08b3b49fa09eab1c5e9bc2877038b2e3ccc4cad02e9a1696a",
+    "Build/half-dot-release-configure.log": "8e7fd28925fd2dbd5e2b92cd09a1a509d9ed4ec110957a8a541c6917e3f3fa8b",
+    "Build/half-dot-release-build.log": "ed9e9c8250273e89d6bee82e225256ca481737e892baf4292bdf358cbc620ca3",
+    "Build/HalfDot20260916/CMakeFiles/simulator_bridge.dir/flags.make": "ada3985e17a804a68837879f1dca46c3ebf4ede8457f23652cdc8367188c5c78",
+    "Build/HalfDotRelease20260916/CMakeFiles/batch_matmul_max_sum_custom.dir/flags.make": "ed78c093e0ddd385e314dbba056679f2343f2da66079192d09e2517bafe6d9c0",
+    "Build/HalfDotRelease20260916/batch_matmul_max_sum_custom": "361093fd9493d991247e1f1fc76d2e2eb9a88ce867d8047897ad075cb6817b14",
+    "Build/HalfDotAnalysis20260916/collect.py": "a6e62f996fea2a0f918c069c5c0901c8e6a5d9d44d0d2e5871a147d8271ae99a"
+  },
+  "matrix": {
+    "library": "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+    "library_sha256": "d5a1432f68548f57f6233110f69f27f3d9ebc693f1df343ac804471ec5e2d59e",
+    "git_commit": "76db652261ed1e5468c928cc5fe9b9deb3b12d68",
+    "soc": "Ascend910B3",
+    "parsed_core_ids": "0",
+    "results": [
+      {
+        "case": 0,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 5.960464477539063e-08,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case0",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=0",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case0.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case0/OPPROF_20260916011124_UJSXIMOVGDPPNOVV/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+            "size": 1192636,
+            "sha256": "797221dbe26b9116739ed6867fd3798bd2dbd51ce12769572a62106a7cdac691"
+          },
+          {
+            "path": "case0/OPPROF_20260916011124_UJSXIMOVGDPPNOVV/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+            "size": 1169912,
+            "sha256": "393f2caa00f71c370c5a1d4fba75b0b59e29418ea0c92ef7de43f82e28f0724f"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j"
+        ],
+        "expected_path": "ComputeDot",
+        "model_duration_us": {
+          "veccore0": [
+            0.87,
+            0.62
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case0.log",
+        "raw_log_sha256": "652133188be3adb42588800c7f9eda275d3689a79957482d8cc27155c3ef18f6",
+        "saved_log": "score/evidence/76db652-case0.txt",
+        "saved_log_sha256": "361061c903f20bd24c3fe0185fd1c4921bc5d2e0da5f0fb869e1f694b4544cda"
+      },
+      {
+        "case": 1,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case1",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=1",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case1.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case1/OPPROF_20260916011129_TMRJZVFKRTJBDVDO/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+            "size": 1192656,
+            "sha256": "fe367ccc9881b4f80318a17b566835c820923e3a99447922d83026b73ece8a01"
+          },
+          {
+            "path": "case1/OPPROF_20260916011129_TMRJZVFKRTJBDVDO/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+            "size": 1169928,
+            "sha256": "447f8aa60bd806dd090b91157594a0e96c424bf7191ceaf5c1d78b3b95764889"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j"
+        ],
+        "expected_path": "ComputeDot",
+        "model_duration_us": {
+          "veccore0": [
+            0.87,
+            0.62
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case1.log",
+        "raw_log_sha256": "9d1cf52b18940e308afe9ef3ea4afd6ead2f0cf07bbc15e848b7a58deabe4dbe",
+        "saved_log": "score/evidence/76db652-case1.txt",
+        "saved_log_sha256": "cecf792e105922c24349893298d2c0fdd386d4dd17d219270b220e5d78117559"
+      },
+      {
+        "case": 2,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 2.384185791015625e-07,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case2",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=2",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case2.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case2/OPPROF_20260916011134_QJCTZHCZGQESYXSC/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+            "size": 1192596,
+            "sha256": "efe400c6fc4f3b325b76b97b6ea43a95f7ba031c8d4e151144aa9c60e965e1af"
+          },
+          {
+            "path": "case2/OPPROF_20260916011134_QJCTZHCZGQESYXSC/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+            "size": 1170196,
+            "sha256": "1f1ed988856df3d4686b3fd15ad2c741dae99b27c60c9de72adf7a6a6bc0dd9b"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j"
+        ],
+        "expected_path": "ComputeDot",
+        "model_duration_us": {
+          "veccore0": [
+            0.87,
+            0.62
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case2.log",
+        "raw_log_sha256": "e6df32b4145f6028dabc57032ca65741fb85b92cd0ac40e5c03958a835db3128",
+        "saved_log": "score/evidence/76db652-case2.txt",
+        "saved_log_sha256": "cd29a59be89875f2756c7397863291a8f0fdcfd80227be9df6fc856487946392"
+      },
+      {
+        "case": 3,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.1920928955078125e-07,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case3",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=3",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case3.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case3/OPPROF_20260916011139_LAQKDCQFBGNFOBXG/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+            "size": 1192628,
+            "sha256": "5b405756b6e90beb884c2931646c1f3bc9bad437e9bf3856478af312d936715f"
+          },
+          {
+            "path": "case3/OPPROF_20260916011139_LAQKDCQFBGNFOBXG/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+            "size": 1170276,
+            "sha256": "c993e0b321330fe8ffc3ee84e5d36190882b765c2264883a49ae0cdf443b0e96"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j"
+        ],
+        "expected_path": "ComputeDot",
+        "model_duration_us": {
+          "veccore0": [
+            0.87,
+            0.62
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case3.log",
+        "raw_log_sha256": "8f7f8e03e3943cafdbf8a68a994d7cefaeb43c8f9459b72b19aa0c13ccc413ee",
+        "saved_log": "score/evidence/76db652-case3.txt",
+        "saved_log_sha256": "ac971b1b4c90d7e268387edeaf00f484eb49c655eae3bfa04d51c1bc403cdaa3"
+      },
+      {
+        "case": 4,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case4",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=4",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case4.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case4/OPPROF_20260916011145_JPUOKCXJXWFCTPNF/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 7498432,
+            "sha256": "a2ee0c33b37140e8a76d3e2df226b49f5391e503691b9e7584f6785a5ed8e2a9"
+          },
+          {
+            "path": "case4/OPPROF_20260916011145_JPUOKCXJXWFCTPNF/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 7249452,
+            "sha256": "1e6ea54ff2965ccdb8e4ada73b69c4894c0567fe9141793dfee1e6459141ff2d"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            8.39,
+            6.82
+          ],
+          "veccore0": [
+            8.02,
+            6.45
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case4.log",
+        "raw_log_sha256": "f3062edfb47e22b8ae82740abfe64280f2e59166e08b9abbd7856038f6fa915c",
+        "saved_log": "score/evidence/76db652-case4.txt",
+        "saved_log_sha256": "43ed873a817d02dc842c80ab79d31043b1619b1ed5345c917e251324ee9c05e2"
+      },
+      {
+        "case": 6,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case6",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=6",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case6.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case6/OPPROF_20260916011157_XNJGYFVBLDBBZKNQ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 7536212,
+            "sha256": "ba76d2e203be6d4a8e7c4c2c786966bcd3387e64a4694984675990b045e072cc"
+          },
+          {
+            "path": "case6/OPPROF_20260916011157_XNJGYFVBLDBBZKNQ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 7283964,
+            "sha256": "7c7f9cda511e3d12e589ea5e0eb01828bf7c08dad1c8eb89b0ba9c8da88c46d1"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            8.39,
+            6.81
+          ],
+          "veccore0": [
+            8.04,
+            6.47
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case6.log",
+        "raw_log_sha256": "9b3691b2909c58effd65a0bdbad1be53d148333cca35e9ae33954fa346a8cece",
+        "saved_log": "score/evidence/76db652-case6.txt",
+        "saved_log_sha256": "80475e01f98db40b1947789f4fa5c8bc6693ebf98c3f24a22f3652f7cb0732b9"
+      },
+      {
+        "case": 7,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case7",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=7",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case7.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case7/OPPROF_20260916011210_GVLMIJUJQFSTLMFL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 7580668,
+            "sha256": "ec5ef9cff13fd632aca6fb50375283263928728bc51dbf5ddd09d6819972f98b"
+          },
+          {
+            "path": "case7/OPPROF_20260916011210_GVLMIJUJQFSTLMFL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 7330900,
+            "sha256": "32f1b93b9e6fb968fce1067c3f91f139bae8fae34f3ba04980182e705df0d9d0"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            8.42,
+            6.85
+          ],
+          "veccore0": [
+            8.03,
+            6.48
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case7.log",
+        "raw_log_sha256": "6bcbcf9db414d7b10c7617edc3de0831c3b2ef9688f3eb6c2bbd8af5c7eeb4cf",
+        "saved_log": "score/evidence/76db652-case7.txt",
+        "saved_log_sha256": "41dc2dadbebd0c66bd82b56a8f5d61ab16a5d691d64f81fd32726be837fdafdd"
+      },
+      {
+        "case": 14,
+        "label": "双维尾块",
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case14",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=14",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case14.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case14/OPPROF_20260916011222_AFLAPTVXPNKKGIHS/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 10466348,
+            "sha256": "af82324fe87231df88f6f7251aced869789f9efbe194642a9a040910d972daad"
+          },
+          {
+            "path": "case14/OPPROF_20260916011222_AFLAPTVXPNKKGIHS/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 10214376,
+            "sha256": "294abd0b4093181f229cf74719801190ecd3875e455a99ebe532ffbf3cd2c26c"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            12.54,
+            10.97
+          ],
+          "veccore0": [
+            12.51,
+            10.54
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case14.log",
+        "raw_log_sha256": "75847194bb7eecbbd6a96b7ef61fb08f5606b0c802cfeb28011e8d98cccbb99f",
+        "saved_log": "score/evidence/76db652-case14.txt",
+        "saved_log_sha256": "643d8b94e1d1575e70045d9305e00ff7901b7e117fb31e28102d1ee65c524c16"
+      },
+      {
+        "case": 216,
+        "label": "单点积搬运尾块",
+        "shape": [
+          1,
+          1,
+          1,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 2.384185791015625e-07,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case216",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=216",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case216.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case216/OPPROF_20260916011235_BUMJTUGLQGUWGZMD/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+            "size": 1192660,
+            "sha256": "9b99485dcb9969bbcd583feb35ead1047ee5c9c97e5f9f7240d2571c703891f7"
+          },
+          {
+            "path": "case216/OPPROF_20260916011235_BUMJTUGLQGUWGZMD/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+            "size": 1170244,
+            "sha256": "d34b62c2f03db66f1ac5921570bc05f6fd9d0721a13eecdd4f0ebe507876e74f"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j"
+        ],
+        "expected_path": "ComputeDot",
+        "model_duration_us": {
+          "veccore0": [
+            0.87,
+            0.62
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case216.log",
+        "raw_log_sha256": "795c59d9ae16eaf2ec8f5dceddedefc1d1182889dfdd214f8cab1014eee11fca",
+        "saved_log": "score/evidence/76db652-case216.txt",
+        "saved_log_sha256": "2e6188743ce4518c353924adc9d9062db7ef2f96a40efd73b17609625b472dd5"
+      },
+      {
+        "case": 248,
+        "label": "单点积上限",
+        "shape": [
+          1,
+          1,
+          1,
+          256
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case248",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=248",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case248.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case248/OPPROF_20260916011241_BRXGACSNXEUAHGRS/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+            "size": 1192028,
+            "sha256": "461d0f2a1da683b042965de6793d554d9b5ee0602333c991b5059c041f85c271"
+          },
+          {
+            "path": "case248/OPPROF_20260916011241_BRXGACSNXEUAHGRS/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+            "size": 1170252,
+            "sha256": "ad0f23cbc5fa981140ceed7f0f3f2dffd53f544eca9e96d20bb4cad3099f7c06"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+          "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j"
+        ],
+        "expected_path": "ComputeDot",
+        "model_duration_us": {
+          "veccore0": [
+            0.89,
+            0.64
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case248.log",
+        "raw_log_sha256": "ee9cb7315b2f32a98e3e1ced112afff4ac7c39669986176c06d928c75fa7aaaf",
+        "saved_log": "score/evidence/76db652-case248.txt",
+        "saved_log_sha256": "248b4bcd994c9eadb36bc9e478858a7f9350d668ad83315fdd1a246c46e9dc6f"
+      },
+      {
+        "case": 255,
+        "label": "单点积上限",
+        "shape": [
+          1,
+          1,
+          1,
+          256
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 5.960464477539063e-08,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case255",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=255",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case255.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case255/OPPROF_20260916011246_BKGNLOVIVDOWOECX/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 8510340,
+            "sha256": "0a79e11ee7b5fe906aa021b3251b7f5a0c2a6e62c27f1b034a4a7d77e3afc230"
+          },
+          {
+            "path": "case255/OPPROF_20260916011246_BKGNLOVIVDOWOECX/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 8260788,
+            "sha256": "4b277e0840afdbce2777a6f887ca2c98f0cf5f14d91a411a2faf1bbe987499ad"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            8.81,
+            7.25
+          ],
+          "veccore0": [
+            8.6,
+            7.0
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case255.log",
+        "raw_log_sha256": "a26c7a59eb51a0bd676a1f4d513525a26a4d59596cb84ce41017625ea13af5c4",
+        "saved_log": "score/evidence/76db652-case255.txt",
+        "saved_log_sha256": "f76a2880ef727a6c9adfdbf464286a6ce4e5f2c4481e34dd1b67dd2a76687d6a"
+      },
+      {
+        "case": 262,
+        "label": "单点积K回退",
+        "shape": [
+          1,
+          1,
+          1,
+          264
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 5.960464477539063e-08,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case262",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=262",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case262.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case262/OPPROF_20260916011258_SQKTVNWSBSHPWZPB/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 9373620,
+            "sha256": "7bf945434951665105e9e1d091fc89ce2e988f0ddee4735c02b00181803e7a9f"
+          },
+          {
+            "path": "case262/OPPROF_20260916011258_SQKTVNWSBSHPWZPB/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 9089508,
+            "sha256": "410d72b5eab8d1af6be21d521c287cf4f12aea7b74c4f2dfde36aade6038e5ff"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            9.63,
+            7.58
+          ],
+          "veccore0": [
+            9.32,
+            7.47
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case262.log",
+        "raw_log_sha256": "648941f96c4ae4736ea9f2e12296bac163b654e410a46d3b15ad23bf72f8b7a2",
+        "saved_log": "score/evidence/76db652-case262.txt",
+        "saved_log_sha256": "b94f1f306336c2f7b868b7508132a3d7392b040f7101082a8d395bc41450afbf"
+      },
+      {
+        "case": 318,
+        "label": "基础小矩阵假设",
+        "shape": [
+          1,
+          2,
+          3,
+          32
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case318",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=318",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case318.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case318/OPPROF_20260916011311_WQHRRBIIFRDALTHH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 7543688,
+            "sha256": "398120bb95edbddaa1686b663987b1e6425787fe20b15063e1805e67010545db"
+          },
+          {
+            "path": "case318/OPPROF_20260916011311_WQHRRBIIFRDALTHH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 7291388,
+            "sha256": "81bcb6f9c7d22219686f1f4303eed5487e9e732fc95f32754ac25a46f62202bf"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            8.39,
+            6.81
+          ],
+          "veccore0": [
+            8.17,
+            6.49
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case318.log",
+        "raw_log_sha256": "d98be87be41af70b88814c6814c60175bd7c8023f5304710ef4694b8b9b23d4e",
+        "saved_log": "score/evidence/76db652-case318.txt",
+        "saved_log_sha256": "5bca4439240ebdd13ed209e58bc45e77c90001025edf794cd3100495fdd9d93f"
+      },
+      {
+        "case": 144,
+        "label": "N分片长列流水",
+        "shape": [
+          1,
+          32,
+          1537,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case144",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=144",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case144.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case144/OPPROF_20260916011323_JNGHTHDSRSHSNZSK/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 8579120,
+            "sha256": "9d4b8d11d9b0b2279efd38281d5e770128912aa5e006d1732b70fa547762fa37"
+          },
+          {
+            "path": "case144/OPPROF_20260916011323_JNGHTHDSRSHSNZSK/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 8238472,
+            "sha256": "a84ed77f4ccc19ef43dddf6836618769e003e062de20bb4a0d6c55dd1b374e0c"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            12.42,
+            9.43
+          ],
+          "veccore0": [
+            12.27,
+            9.02
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case144.log",
+        "raw_log_sha256": "debd1be89baa703448dda20242d6e3dcd6bc2e3f7227db5657564633f81a6b73",
+        "saved_log": "score/evidence/76db652-case144.txt",
+        "saved_log_sha256": "a4d5c4c4e63ad8b1375bb46b1bc0a1a46f87d557484fe0cacd304620163e676e"
+      },
+      {
+        "case": 208,
+        "label": "N自适应二十片",
+        "shape": [
+          1,
+          2,
+          8192,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case208",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+          "--case=208",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/HalfDotChecks20260916/case208.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case208/OPPROF_20260916011338_BDQXVVSLUZHWWULG/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 13062992,
+            "sha256": "4324ca4c8e4abf7efa4f2be54148b0b11c222214b32c1789af0645ad95236faf"
+          },
+          {
+            "path": "case208/OPPROF_20260916011338_BDQXVVSLUZHWWULG/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 12748556,
+            "sha256": "8948585536a2075052db6338029af600a5f52b111b181727591e00b850e0a578"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "expected_path": "Compute",
+        "model_duration_us": {
+          "cubecore0": [
+            17.43,
+            14.93
+          ],
+          "veccore0": [
+            17.12,
+            14.64
+          ]
+        },
+        "raw_log": "Build/HalfDotChecks20260916/case208.log",
+        "raw_log_sha256": "059b11bb762a531bcf55e1f8904b8a310d8f10adea4552e455f35563aeeeb076",
+        "saved_log": "score/evidence/76db652-case208.txt",
+        "saved_log_sha256": "904e051643aae9f3f7d1de0701a4b72a8dc4c5f37c32693d9466aaae535c94df"
+      }
+    ]
+  },
+  "sequence": {
+    "library": "/mnt/newdisk/code/CANN-challenge/Build/HalfDot20260916/libsimulator_bridge.so",
+    "library_sha256": "d5a1432f68548f57f6233110f69f27f3d9ebc693f1df343ac804471ec5e2d59e",
+    "execution": "simulator",
+    "cases": [
+      0,
+      318,
+      0,
+      262,
+      6,
+      14
+    ],
+    "passed": true,
+    "results": [
+      {
+        "position": 0,
+        "case": 0,
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 5.960464477539063e-08
+      },
+      {
+        "position": 1,
+        "case": 318,
+        "shape": [
+          1,
+          2,
+          3,
+          32
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "position": 2,
+        "case": 0,
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 5.960464477539063e-08
+      },
+      {
+        "position": 3,
+        "case": 262,
+        "shape": [
+          1,
+          1,
+          1,
+          264
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 5.960464477539063e-08
+      },
+      {
+        "position": 4,
+        "case": 6,
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "position": 5,
+        "case": 14,
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 3.0517578125e-05
+      }
+    ],
+    "available_cores": 20,
+    "profiled_launches": [
+      "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+      "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+      "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+      "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+    ],
+    "bins": [
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/3/simulator/visualize_data.bin",
+        "size": 9092448,
+        "sha256": "7968a0f32e78fdd3df9e9f73c07ad0fc69f466f4faacfe962b5ba31f2df2f40e"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+        "size": 7543600,
+        "sha256": "0b4e349c626e6e457724f3c2f628187dc0d6fb59d620b9f3fd05d0a421f7a4e8"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/2/simulator/visualize_data.bin",
+        "size": 9093204,
+        "sha256": "96ef53fa7b3eaa79d7407260a45a782b7a1adbe3995bbc364370bb237d87d866"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/4/simulator/visualize_data.bin",
+        "size": 7286276,
+        "sha256": "66221029cacf12f1d1ef4e1d7f92485984c92ed36e60cdb0c3055386476e46d1"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/6/simulator/visualize_data.bin",
+        "size": 10337920,
+        "sha256": "6e93cc334b301b3fe62dc4e0f2903a9ef4a1d03db8b313e3d7da6ee066a0c8a8"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+        "size": 7290564,
+        "sha256": "99f258ad0b1f00f55e653eddb40fdbac78f58152d8ed4d00023977061b478156"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/5/simulator/visualize_data.bin",
+        "size": 7286340,
+        "sha256": "7d88e73f3e5d3bae9f2c272f3a60a83c00e90ba4415fda4d41e25f60dabc613e"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/7/simulator/visualize_data.bin",
+        "size": 10182584,
+        "sha256": "057be2b85e91d7c3ea900d8a604e3533a8f2ebe68b5b8ad05e1b06c933158331"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/3/simulator/visualize_data.bin",
+        "size": 1170248,
+        "sha256": "54df93f1609755d5f690a3ecf41afebe51805f667fbfa246acaf0ddc24decbf9"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+        "size": 1192644,
+        "sha256": "ccf3ede2d64fdc7a2250335d3ee13c5521b7288c0a277a8aad4cf4a7ad0230b5"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/2/simulator/visualize_data.bin",
+        "size": 1170260,
+        "sha256": "8eeec9fae91cf0f8c06acb27cf5ab9e59888b0219db289a58ba9f37a4c1734c0"
+      },
+      {
+        "path": "Build/HalfDotSwitch20260916/profile/OPPROF_20260916011418_WHMCNOPQLMXSOGIL/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+        "size": 1170240,
+        "sha256": "0224d0a0e309dbd45b2f08dc4bcc3c054a843e4120756f7f350f6c29d779082d"
+      }
+    ],
+    "raw_log": "Build/HalfDotSwitch20260916/run.log",
+    "raw_log_sha256": "82d22b6f2632488c449c37775a1a0f9ba72f78fdab70869d5b9037430a7a445e",
+    "saved_log": "score/evidence/76db652-switch.txt",
+    "saved_log_sha256": "9855f021cb5682f62e0a3a676877f2cda3228c49af08101da962062f139b5508",
+    "command": "msprof op simulator --soc-version=Ascend910B3 --core-id=0 --launch-count=12 --timeout=2 --output=Build/HalfDotSwitch20260916/profile python3 tests/simulator_sequence.py Build/HalfDot20260916/libsimulator_bridge.so --cases=0,318,0,262,6,14 --report=Build/HalfDotSwitch20260916/report.json"
+  },
+  "device_object": {
+    "path": "Build/HalfDotChecks20260916/case0/OPPROF_20260916011124_UJSXIMOVGDPPNOVV/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/dump/aicore_binary.o",
+    "sha256": "ac6f3da127c2406db300d25fe2e91727188f7a4b76ddbf30f60b8e384fdff9ef",
+    "fp16_dot_present": true,
+    "bf16_dot_present": false
+  },
+  "limits": [
+    "K 仍未确认，按平台命中的 FP16、B=M=N=1、32<=K<=256 保留分支。",
+    "普通调用及同进程切换通过，未宣称修复平台点 2 的 507015。",
+    "未重跑已知失败的本地图回放和正式模板独立入口，未访问真实或云端 NPU。"
+  ]
+}

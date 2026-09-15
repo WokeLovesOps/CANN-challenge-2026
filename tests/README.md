@@ -121,6 +121,8 @@ python3 tests/simulator_matrix.py Build/SimulatorValidation/libsimulator_bridge.
 
 `4d1aa53` 新增 `ComputeDot`，仅在实际输入 `B=M=N=1、32<=K<=256` 时启用，一个 Vector 核完成 FP32 Cast、Mul 和 ReduceSum。普通路径仍使用 `Compute`，每次调用总共只能启动其中一个。现有启动数检查的 `Compute` 名称匹配同时覆盖这两个入口，最终证据还须按输入形状核对是否选中 `ComputeDot`。
 
+`76db652` 将专用分支收窄为 FP16；BF16 小点积也恢复基线 Compute。平台核名已确认点 1 为 FP16 单点积，但具体 K 未知，因此保留合法 K=32–256 的范围。后续核入口核验需要同时检查 dtype 和形状，不能只按 B/M/N/K 判断。
+
 追加场景保留既有编号与随机种子，当前矩阵为 328 个可选用例。本轮是定向验证，不代表运行完整矩阵。
 
 | 用例编号 | B,M,N,K | 检查目的 |
