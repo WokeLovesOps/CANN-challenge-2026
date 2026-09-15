@@ -1,0 +1,1561 @@
+{
+  "说明": "本地 CANN 9.0.0 / Ascend910B3 软件模型；仅解析 core 0。非真实 NPU 或 OJ 性能。",
+  "source_commit": "2dcd5d484c3e241bf90d1fab9f461d73d5ffbc3c",
+  "baseline_source_commit": "3effb7c2561317c3904e660ac80bea37513fdbab",
+  "hashes": {
+    "src/kernel.asc": "112ebe35e484edff740b0df33cc7092f944b153db29efdfdb98037c317c5b252",
+    "tests/simulator_matrix.py": "a1ac0322d27a7e23ce4ae7bca84823f1bfc82d65e6a11637c9a7399ca1e0ddc3",
+    "tests/run_simulator_matrix.py": "572ba00923aebcf478463a6280f113a2187d11b2186d85483b01018f5bbeeb1f",
+    "tests/simulator_bridge.asc": "498df13b56b768c31df4d937b3fc2e0461d5a1536cd9fb6514e1626ec17c5b05",
+    "tests/correctness.py": "5853758e967060d8d41bda721f4c8e1754dbad89269436b9eec9d1ba24bb1866",
+    "Build/row-parallel-build.log": "5a750cdbf2f6042537631e1add788e6acbf837e21eeda783938944b8d60b6cc9",
+    "Build/row-parallel-release-build.log": "4314dcd443b519ec9b188017a8e6c3b67373ebb07f0ac0a2c1c960813f554c71",
+    "Build/RowParallel20260915/CMakeFiles/simulator_bridge.dir/flags.make": "ada3985e17a804a68837879f1dca46c3ebf4ede8457f23652cdc8367188c5c78",
+    "Build/RowParallelRelease20260915/CMakeFiles/batch_matmul_max_sum_custom.dir/flags.make": "0a8f8d5aa2506ab88bbcf8c2d393a91781496d6ca8762ce42c84ad34322fd435",
+    "Build/ParallelismDocs20260915/collect_evidence.py": "e09713ac7b8bc3e439fabdbb25fee38ef5052e5f2f9cc5a52ca246164cb8047c"
+  },
+  "candidate": [
+    {
+      "library": "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+      "library_sha256": "71f64422f8cab226e5dde715d45c8b384c1d4d651404fb3548e4619f01bf555d",
+      "soc": "Ascend910B3",
+      "results": [
+        {
+          "case": 0,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelSmoke20260915/case0",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=0",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelSmoke20260915/case0.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case0/OPPROF_20260915221100_PGZIRIHKKOXQUVHH/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7363908,
+              "sha256": "27ae1e6df928696b5aaede3784cb197a9efd9d90f516f6665f2361ed57bd036b"
+            },
+            {
+              "path": "case0/OPPROF_20260915221100_PGZIRIHKKOXQUVHH/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7122780,
+              "sha256": "1ed3d4700ba5b8bc32b852786b00ea7cdc3a4becc1e5d6f06ee6222f8067b98d"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            8.38,
+            8.03,
+            6.83,
+            6.47
+          ],
+          "log_sha256": "0182c075b39b5578b4ad55b6786fd5cd6e37126bc9fae77bd4e29e5ef4af0155",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case0.txt",
+          "saved_log_sha256": "30cf5105974221ddedc524e8892a270f6590a5350bd43608c51d542d3c9551de",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 8,
+          "label": "双维尾块",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 3.0517578125e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelSmoke20260915/case8",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=8",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelSmoke20260915/case8.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case8/OPPROF_20260915221112_XVUWRJHXFRFKUMPX/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10175920,
+              "sha256": "40e4c24d0ade03f490fad138e3f386645fa04aae258be4dd9865b2d3bebfc800"
+            },
+            {
+              "path": "case8/OPPROF_20260915221112_XVUWRJHXFRFKUMPX/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 9934568,
+              "sha256": "b6fbb3763cc92f07c5f996e958874c0797e125b22031f10a69ae9a0fb481ef48"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            12.53,
+            12.48,
+            10.96,
+            10.47
+          ],
+          "log_sha256": "26d5b65cc051189b37e9858a490eca626733cdc134e9cdb37a34e7a4340b2c65",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case8.txt",
+          "saved_log_sha256": "80617263069e824046a80aac94fcd1a3a6fc2a5012c302dca1fb45447ae74c41",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        }
+      ],
+      "runner_git_commit": "2dcd5d484c3e241bf90d1fab9f461d73d5ffbc3c",
+      "kernel_source_commit": "2dcd5d484c3e241bf90d1fab9f461d73d5ffbc3c",
+      "raw_directory": "/mnt/newdisk/code/CANN-challenge/Build/RowParallelSmoke20260915"
+    },
+    {
+      "library": "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+      "library_sha256": "71f64422f8cab226e5dde715d45c8b384c1d4d651404fb3548e4619f01bf555d",
+      "soc": "Ascend910B3",
+      "results": [
+        {
+          "case": 9,
+          "label": "双维尾块",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case9",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=9",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case9.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case9/OPPROF_20260915221142_GCDLKZGFCLKHHHYW/_ZN13batch_max_sum7ComputeIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10300656,
+              "sha256": "f1e4c722a4ef00e8d987353f4a0ff2abe5d9664f3c94f13499e1f5b1b33e2a10"
+            },
+            {
+              "path": "case9/OPPROF_20260915221142_GCDLKZGFCLKHHHYW/_ZN13batch_max_sum7ComputeIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 9968624,
+              "sha256": "12e36cbf02a114adde4e914c9f8f34c62f923300d5500606f766b3642626e747"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            13.56,
+            13.26,
+            10.51,
+            10.47
+          ],
+          "log_sha256": "c98c61e625b1b7aba245a2a111445510906b8c4c76f12f5d8151b8449b8c6263",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case9.txt",
+          "saved_log_sha256": "1fd1b63a8ab7d38b2d78bd317fac91520cd68bbe4b5514d6975e5f62c023995b",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 10,
+          "label": "双维尾块",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            true,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case10",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=10",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case10.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case10/OPPROF_20260915221152_AWHUXJYMIVEXZVGX/_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10298864,
+              "sha256": "d0d4c2b2b2b4ebd64e278cfa8e3cc07d7bfff466305c4a46b9e68decf0768aac"
+            },
+            {
+              "path": "case10/OPPROF_20260915221152_AWHUXJYMIVEXZVGX/_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 9997596,
+              "sha256": "9026575c61fde3ee5e5435271ca26b1f81a526a9c2feb535f4481bb13b8ed8f4"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            13.5,
+            13.03,
+            11.0,
+            10.54
+          ],
+          "log_sha256": "a02c30035de047a7a29b5d739329bc65c84859e5279defb0083da778b7b61d18",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case10.txt",
+          "saved_log_sha256": "67dc39b09b2732a28426187e4a731bd664d60106a93d1d411d82b85483c39323",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 12,
+          "label": "双维尾块",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case12",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=12",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case12.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case12/OPPROF_20260915221205_LBSRTPPPVIQRQDPH/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10236692,
+              "sha256": "5d00d2cea9bed2f312e863c3485b7341ed89d112a94cbff9272e85771bd05f36"
+            },
+            {
+              "path": "case12/OPPROF_20260915221205_LBSRTPPPVIQRQDPH/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 9935444,
+              "sha256": "a9bfce5fa56046795919acc54a67b29ca76198b5a27b758954cac088eb02c2fe"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            13.52,
+            13.02,
+            10.97,
+            10.52
+          ],
+          "log_sha256": "430be35f5c20f12cf956c283d9f5e458336ef78a221991138ee7ef020a349f6a",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case12.txt",
+          "saved_log_sha256": "4e70699305e41dfd9d1ea229e4ef6a2de5b363ea4945c4253b7e9deda5498870",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 15,
+          "label": "双维尾块",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case15",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=15",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case15.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case15/OPPROF_20260915221216_ZTVMRIBHUQZHSOGP/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10326880,
+              "sha256": "bf8184af3ff3a0b709c4ef98ad29e8d7eaf1bb30d8cf5153d046843373ac58f5"
+            },
+            {
+              "path": "case15/OPPROF_20260915221216_ZTVMRIBHUQZHSOGP/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 10028372,
+              "sha256": "977b33f3e8e3135978320bdedfc71a5fe047dee30f1e94fa53203d30dc01d49f"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            13.06,
+            13.02,
+            10.55,
+            10.49
+          ],
+          "log_sha256": "7c4d1e3b9ad7744f32fa0e6e538052837df9969c4f1bb0a743c0a15adc290d80",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case15.txt",
+          "saved_log_sha256": "4bf85a838b7945e3e5e85db407f3e386ca62b054fd0d0c1d6a9b5b95997ce569",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 56,
+          "label": "全负",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case56",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=56",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case56.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case56/OPPROF_20260915221228_BBRYKNKFJUPAVOYO/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10175788,
+              "sha256": "29e136ed2031782723967cef550e9dda2aec3cff91db6de3addc0d6e23f8131b"
+            },
+            {
+              "path": "case56/OPPROF_20260915221228_BBRYKNKFJUPAVOYO/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 9934656,
+              "sha256": "48d1cf32ddd3f60d208167057981aaaffeefc8230e78568cd22b6dc176c958e7"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            12.53,
+            12.48,
+            10.96,
+            10.46
+          ],
+          "log_sha256": "770376eb8dec71e1c7e598396a8394714b0f3fd1b4368307d598d8cd303181da",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case56.txt",
+          "saved_log_sha256": "115d04ca05e9a8e465fb8906d7d4f9b2b70737e6c0a4f39846afc199bf1c5af9",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 63,
+          "label": "全负",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 3.0517578125e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case63",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=63",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case63.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case63/OPPROF_20260915221240_HGKDOJAVJPKPJGWR/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10327348,
+              "sha256": "b2ad5ed34982469ea243689d1cc86ebdc155acb26a8fbc15768f912d2d473f15"
+            },
+            {
+              "path": "case63/OPPROF_20260915221240_HGKDOJAVJPKPJGWR/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 10028496,
+              "sha256": "3e44d1d1534dcbfc5d7817fd43f5cab7e6d1ba36361f693b622421d678ba5f0d"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            13.06,
+            13.02,
+            10.58,
+            10.51
+          ],
+          "log_sha256": "9c62b23730e87dbaca150f4634a7daf9bc36adcbc4ce7ccac352bd76dd646d97",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case63.txt",
+          "saved_log_sha256": "f35580a5e33a353888549a3886e36a4aae07fc0ff7427c5f20488beb1abc0d7e",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 64,
+          "label": "全零",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case64",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=64",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case64.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case64/OPPROF_20260915221252_IHVISXHXZJMBELJM/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10174268,
+              "sha256": "b97203c38a83203172eb96443393de4d1885c22f8bffd018f5a5bc34c4ecfe11"
+            },
+            {
+              "path": "case64/OPPROF_20260915221252_IHVISXHXZJMBELJM/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 9932828,
+              "sha256": "e03c09a4395c24cdc17a5133cccea640620793d2f9142f983930a36832b8f75e"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            12.52,
+            12.47,
+            10.96,
+            10.47
+          ],
+          "log_sha256": "18e6abf063c051523a58cd8742d455eefad50b080093fcdd935e672e702b4392",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case64.txt",
+          "saved_log_sha256": "28c8c896b4bf7a58899f3084a8a57ff570ce2625e1124d4e6cf42f9fbe3a9a99",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 79,
+          "label": "单任务小矩阵",
+          "shape": [
+            1,
+            31,
+            17,
+            40
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case79",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=79",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case79.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case79/OPPROF_20260915221304_WVEPYLZHQVRGOAKV/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7684004,
+              "sha256": "c12fe2694100ac26363c1abfd9271bf9c01357d0f8f9050389eae1a38b687d52"
+            },
+            {
+              "path": "case79/OPPROF_20260915221304_WVEPYLZHQVRGOAKV/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7414528,
+              "sha256": "26ace117344577cb256a7159aae8d01e25ac71c780e0006d9a5723b40dee1e17"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            9.35,
+            9.22,
+            7.37,
+            7.34
+          ],
+          "log_sha256": "d4ff2d0a3cccfe1979050c03b0235a15ea82fd7d600181bfb44a43080585ea79",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case79.txt",
+          "saved_log_sha256": "7c7b9bcb42980358f9e9d01877196eac6d9db4e7acf806b63255ff650f007680",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 87,
+          "label": "流水槽复用",
+          "shape": [
+            1,
+            3,
+            257,
+            40
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case87",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=87",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case87.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case87/OPPROF_20260915221313_PLMXJSUZZONPNLAK/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 12262092,
+              "sha256": "7458854c1e4f90fb1e0e12f93acdbd9c652e451f9ce59b60800be7e219eafb69"
+            },
+            {
+              "path": "case87/OPPROF_20260915221313_PLMXJSUZZONPNLAK/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 11932208,
+              "sha256": "560b4441029b13de5c6b4291c212c9c9dd9d4aead9a820616a4643b17312159d"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            15.62,
+            15.34,
+            12.61,
+            12.33
+          ],
+          "log_sha256": "718d7ed9bef5ac0532bd45b1deb3173a806b471c052110d1b5fd0a37ff28a3cc",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case87.txt",
+          "saved_log_sha256": "8e66f4e5856593fdc930da7dd7e38ca5d00620d2435046d859cfef460b0c49e2",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 88,
+          "label": "归约半行前尾",
+          "shape": [
+            1,
+            32,
+            63,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 3.0517578125e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case88",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=88",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case88.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case88/OPPROF_20260915221324_LPDCFEWAVSXKBGSV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7613940,
+              "sha256": "fad755ad43f0373d0628de3178bb22431531329bf7f1c38e0b4facb8c5299e1d"
+            },
+            {
+              "path": "case88/OPPROF_20260915221324_LPDCFEWAVSXKBGSV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7342536,
+              "sha256": "bad9764e25e247d9aff291ec0f767cbdf7036977bcd041af45bd99879da2fee0"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            9.81,
+            9.53,
+            7.82,
+            7.59
+          ],
+          "log_sha256": "3445db8b2dacafc081c7c3cceff563def3242b3fa63fd80b928f595ed576a86d",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case88.txt",
+          "saved_log_sha256": "2667f040815bc4020b7d0d43f538e1312f828e99e45424c39f6d32f7c47b6fb2",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 96,
+          "label": "归约半行边界",
+          "shape": [
+            1,
+            32,
+            64,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case96",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=96",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case96.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case96/OPPROF_20260915221334_YNRRHRYUHUHQCUOP/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7580104,
+              "sha256": "ffcf5b07e7a6612d099a88e1324349a2ee9216c3e67f91d312e54bf7d2e3dabf"
+            },
+            {
+              "path": "case96/OPPROF_20260915221334_YNRRHRYUHUHQCUOP/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7337048,
+              "sha256": "06e634e7d4c5de108acd1e196ef5e48dfe19b18adc800b3b61c3ef1d41ad66e7"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            9.32,
+            8.99,
+            7.78,
+            7.37
+          ],
+          "log_sha256": "789581d19d18f41fba13b7d496f4a6457e2d3b02ff90f1ef8d395a90221e50e9",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case96.txt",
+          "saved_log_sha256": "d2f807f0eda80072be02ef9f36d51c6a17a6998ebc707515786afcd058f0b430",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 104,
+          "label": "归约半行后尾",
+          "shape": [
+            1,
+            32,
+            65,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case104",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=104",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case104.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case104/OPPROF_20260915221345_RGPOKAINZGMCAMOK/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7801452,
+              "sha256": "ce1bf154973dc17ee45afa2fa89de08f6323f8f1a78eaefd9615b0bc6f07b820"
+            },
+            {
+              "path": "case104/OPPROF_20260915221345_RGPOKAINZGMCAMOK/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7501104,
+              "sha256": "66403ff816483467fae28a922f4696c6d90c7647b52d655b7a73fa26d6a76b80"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            10.29,
+            9.83,
+            7.8,
+            7.74
+          ],
+          "log_sha256": "2cf98dbce6eeec1273f8d492ac78a791007bd16561954fb32561fb6dadba346b",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case104.txt",
+          "saved_log_sha256": "49f617f3380de9ad98c42e0dd20d0a7b6f74b04c645a6e72a06d044a4fa4da74",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 112,
+          "label": "归约整行前尾",
+          "shape": [
+            1,
+            32,
+            127,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case112",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=112",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case112.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case112/OPPROF_20260915221357_JPUAWZDDFLFXUUVV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7799088,
+              "sha256": "89493aaf4660985dbbca2afb9c1cadb6479088d4c024fc53bc2270c517db9fcd"
+            },
+            {
+              "path": "case112/OPPROF_20260915221357_JPUAWZDDFLFXUUVV/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7528376,
+              "sha256": "e4b2f11b65e2adefd1fd39697a0cf4d086ddb42d5f689497d6fdb4451f9c9344"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            10.29,
+            10.07,
+            8.25,
+            7.82
+          ],
+          "log_sha256": "4bd36753e607e9b4faa99d9f32eb3299fac7b4b9817cd9610e5bff0bafd39d0c",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case112.txt",
+          "saved_log_sha256": "cf0ed0896b3c7e10d0393447a8d94bf2fbef62345f0d4e99681d7d2435f9c21d",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        },
+        {
+          "case": 120,
+          "label": "多核任务槽复用",
+          "shape": [
+            1,
+            641,
+            65,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case120",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/RowParallel20260915/libsimulator_bridge.so",
+            "--case=120",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915/case120.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case120/OPPROF_20260915221407_HNMXWPQNVPZYDAZG/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10319972,
+              "sha256": "2c4da43d01d32d61ffee8ab61c43799891baee4bf2a7962514c61f798fe780e9"
+            },
+            {
+              "path": "case120/OPPROF_20260915221407_HNMXWPQNVPZYDAZG/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 10048488,
+              "sha256": "9e72907aa1d12bc440d53bad61dab237ba0f60989048ce2935f958d2c9b35a9e"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core0_AIC_AIV_first_second_us": [
+            13.2,
+            13.04,
+            11.07,
+            10.77
+          ],
+          "log_sha256": "a1d0bd21fccf283b4d37a675a61bf0f2eae3200d86c1f2dfdba92fdbc2f6b7f6",
+          "saved_log": "score/evidence/2dcd5d4-candidate-case120.txt",
+          "saved_log_sha256": "b657b871ae349148a1bff7bd32eb5b36e3c2d04a97d1f75e061545d309053045",
+          "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+        }
+      ],
+      "runner_git_commit": "2dcd5d484c3e241bf90d1fab9f461d73d5ffbc3c",
+      "kernel_source_commit": "2dcd5d484c3e241bf90d1fab9f461d73d5ffbc3c",
+      "raw_directory": "/mnt/newdisk/code/CANN-challenge/Build/RowParallelChecks20260915"
+    }
+  ],
+  "baseline": {
+    "library": "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+    "library_sha256": "4de70fc38a34e4d455d3068f47ee621cb7d9262062e3f8544d6de87dab9fe740",
+    "soc": "Ascend910B3",
+    "results": [
+      {
+        "case": 8,
+        "label": "双维尾块",
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case8",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+          "--case=8",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case8.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case8/OPPROF_20260915221443_AVXKYMEWUANJUXTH/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 14009220,
+            "sha256": "313781aac29eee552b3994b3dda6559311b72cba055ca3ba2dd25949d97f5406"
+          },
+          {
+            "path": "case8/OPPROF_20260915221443_AVXKYMEWUANJUXTH/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 13736576,
+            "sha256": "76ab5bfd6e6038bd6708679b19026a85bc3b1db913591c29d944c6cef55d0506"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "model_core0_AIC_AIV_first_second_us": [
+          16.84,
+          16.71,
+          14.81,
+          14.49
+        ],
+        "log_sha256": "4858dc567cea2ff9bdd97d7d68e34d5d58df0c55aaa574c2bf218b9002476a8d",
+        "saved_log": "score/evidence/2dcd5d4-baseline-case8.txt",
+        "saved_log_sha256": "8740134abd0a543724e24a2dd03aa06223807c578007acb03480a5c746889d20",
+        "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+      },
+      {
+        "case": 15,
+        "label": "双维尾块",
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case15",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+          "--case=15",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case15.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case15/OPPROF_20260915221456_KMBANCGMGUNLZTTC/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 14162180,
+            "sha256": "5035e0f6d5bf322e1a408d8a8ec699d9a235e1899b9a578d1b373470aa911e47"
+          },
+          {
+            "path": "case15/OPPROF_20260915221456_KMBANCGMGUNLZTTC/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 13858092,
+            "sha256": "c21cc82d8017f74a18241406f0f39a78d8fdce863e0541e73a57079eb1e2ad50"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "model_core0_AIC_AIV_first_second_us": [
+          17.38,
+          17.06,
+          14.9,
+          14.51
+        ],
+        "log_sha256": "b6c71270fae6a593aa6b83244e6f098b6095515f6918ee84a328461058cb81f0",
+        "saved_log": "score/evidence/2dcd5d4-baseline-case15.txt",
+        "saved_log_sha256": "a8adf679b018458ad74ccadef34484e7a928d991d3b1a31296fc2a1b42052e44",
+        "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+      },
+      {
+        "case": 79,
+        "label": "单任务小矩阵",
+        "shape": [
+          1,
+          31,
+          17,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case79",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+          "--case=79",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case79.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case79/OPPROF_20260915221508_MOKXUCBVTAIONTQX/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 9008444,
+            "sha256": "9e7177624fb9de11f9a609ce79ba531c91ae3dfb1ddf73d020a9196511a4b171"
+          },
+          {
+            "path": "case79/OPPROF_20260915221508_MOKXUCBVTAIONTQX/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 8763544,
+            "sha256": "41e5db6f7308d2bc7ef064b46203c06f4e8cfbfa9f6b5084a3e28eb64cb46881"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "model_core0_AIC_AIV_first_second_us": [
+          11.27,
+          11.18,
+          9.79,
+          9.3
+        ],
+        "log_sha256": "0b8c79025cdf714825cb26571e19f0cebd2867ca50db85ccf7d8e51aa0a4fba9",
+        "saved_log": "score/evidence/2dcd5d4-baseline-case79.txt",
+        "saved_log_sha256": "35fc109219d569cec2f836a40b621e3a35b176727f2a40e14ecde8710fdb2bbc",
+        "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+      },
+      {
+        "case": 87,
+        "label": "流水槽复用",
+        "shape": [
+          1,
+          3,
+          257,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case87",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+          "--case=87",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case87.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case87/OPPROF_20260915221519_UNKWTCAADCOQWWBQ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 12683608,
+            "sha256": "10a699a0fdbe0d3c6a28875fcade96508bf588ddd7640f9533c48b85f7d96014"
+          },
+          {
+            "path": "case87/OPPROF_20260915221519_UNKWTCAADCOQWWBQ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 12350468,
+            "sha256": "870ca15a82d7f9f1f8e4404e748946710c3866faaafd19aaea579238844cd840"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "model_core0_AIC_AIV_first_second_us": [
+          15.62,
+          15.49,
+          12.63,
+          12.49
+        ],
+        "log_sha256": "1e53d9f3ae997bf3c045b6a4559b7781df6e56d1ed9c43034589ab46d83ebca9",
+        "saved_log": "score/evidence/2dcd5d4-baseline-case87.txt",
+        "saved_log_sha256": "4226c57aaaa4e0966c8a5812c7cef5378ef57771ce9876c7d23199d3017b1f32",
+        "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+      },
+      {
+        "case": 104,
+        "label": "归约半行后尾",
+        "shape": [
+          1,
+          32,
+          65,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case104",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+          "--case=104",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case104.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case104/OPPROF_20260915221530_INLENPWBYOHQWKFC/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 11550576,
+            "sha256": "83763f03573129e729d03c2f9bda7d51ce08c7df3ad65988896d7449e8fbee45"
+          },
+          {
+            "path": "case104/OPPROF_20260915221530_INLENPWBYOHQWKFC/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 11273960,
+            "sha256": "bcb276f0d6617a29d15635f5d1a32bd9a5a3267045c9df6449fbc46bcda68af2"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "model_core0_AIC_AIV_first_second_us": [
+          16.03,
+          15.9,
+          14.01,
+          13.81
+        ],
+        "log_sha256": "1670c16cb724ceb0fa0dee0e09a53e0938502b7efff29b0367fa77377a704ee0",
+        "saved_log": "score/evidence/2dcd5d4-baseline-case104.txt",
+        "saved_log_sha256": "a51bd0523cbe93bf17ed491915514baad6459765ddfa99a10ef283733519465a",
+        "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+      },
+      {
+        "case": 120,
+        "label": "多核任务槽复用",
+        "shape": [
+          1,
+          641,
+          65,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0,
+        "command": [
+          "msprof",
+          "op",
+          "simulator",
+          "--soc-version=Ascend910B3",
+          "--core-id=0",
+          "--launch-count=4",
+          "--timeout=2",
+          "--output=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case120",
+          "/usr/bin/python3",
+          "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+          "/mnt/newdisk/code/CANN-challenge/Build/PipelineOriginalFinish20260915/libsimulator_bridge.so",
+          "--case=120",
+          "--report=/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915/case120.json"
+        ],
+        "profiler_exitcode": 0,
+        "bins": [
+          {
+            "path": "case120/OPPROF_20260915221540_EICJDIQLRBPAPQIR/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+            "size": 14142600,
+            "sha256": "a7c156fabb2bdadcc93667106b9d8c22afad8b46c5949578b03daef4c5d84ba0"
+          },
+          {
+            "path": "case120/OPPROF_20260915221540_EICJDIQLRBPAPQIR/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+            "size": 13893108,
+            "sha256": "368ac36092c155372256c17cae75412dbd880850d2786d662a274b8e4aa350c9"
+          }
+        ],
+        "profiled_launches": [
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+        ],
+        "model_core0_AIC_AIV_first_second_us": [
+          18.87,
+          18.85,
+          17.3,
+          17.13
+        ],
+        "log_sha256": "481dab6b0d2d705a77ecf513dabd8ea8dc39d398df38a61e540d652a6bcec64c",
+        "saved_log": "score/evidence/2dcd5d4-baseline-case120.txt",
+        "saved_log_sha256": "7cd49a4e92a2f6f4950f22457c9fe9d93cb748e3db6b43088d0ba98ef87ef2ce",
+        "saved_log_note": "仅移除行尾空白；原始日志及其哈希保留在 raw_directory 和 log_sha256。"
+      }
+    ],
+    "runner_git_commit": "2dcd5d484c3e241bf90d1fab9f461d73d5ffbc3c",
+    "kernel_source_commit": "3effb7c2561317c3904e660ac80bea37513fdbab",
+    "raw_directory": "/mnt/newdisk/code/CANN-challenge/Build/RowParallelBaseline20260915"
+  },
+  "comparisons": [
+    {
+      "case": 8,
+      "baseline": [
+        16.84,
+        16.71,
+        14.81,
+        14.49
+      ],
+      "candidate": [
+        12.53,
+        12.48,
+        10.96,
+        10.47
+      ],
+      "second_call_model_decrease_percent": 25.99594868332208
+    },
+    {
+      "case": 15,
+      "baseline": [
+        17.38,
+        17.06,
+        14.9,
+        14.51
+      ],
+      "candidate": [
+        13.06,
+        13.02,
+        10.55,
+        10.49
+      ],
+      "second_call_model_decrease_percent": 29.194630872483216
+    },
+    {
+      "case": 79,
+      "baseline": [
+        11.27,
+        11.18,
+        9.79,
+        9.3
+      ],
+      "candidate": [
+        9.35,
+        9.22,
+        7.37,
+        7.34
+      ],
+      "second_call_model_decrease_percent": 24.7191011235955
+    },
+    {
+      "case": 87,
+      "baseline": [
+        15.62,
+        15.49,
+        12.63,
+        12.49
+      ],
+      "candidate": [
+        15.62,
+        15.34,
+        12.61,
+        12.33
+      ],
+      "second_call_model_decrease_percent": 0.15835312747427555
+    },
+    {
+      "case": 104,
+      "baseline": [
+        16.03,
+        15.9,
+        14.01,
+        13.81
+      ],
+      "candidate": [
+        10.29,
+        9.83,
+        7.8,
+        7.74
+      ],
+      "second_call_model_decrease_percent": 44.3254817987152
+    },
+    {
+      "case": 120,
+      "baseline": [
+        18.87,
+        18.85,
+        17.3,
+        17.13
+      ],
+      "candidate": [
+        13.2,
+        13.04,
+        11.07,
+        10.77
+      ],
+      "second_call_model_decrease_percent": 36.01156069364162
+    }
+  ],
+  "trace_comparison": {
+    "baseline": {
+      "trace": "Build/RowParallelBaseline20260915/case8/OPPROF_20260915221443_AVXKYMEWUANJUXTH/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/trace.json",
+      "sha256": "6c5da5c3bca12c0118fc953070f86fc7f18d72b5bd2026bee8f6bc5e20aebf70",
+      "VCMAX": 128,
+      "VMAX": 0,
+      "paired_WAIT_FLAG": 488,
+      "wait_directions": {
+        "PIPE:MTE2,TRIGGERPIPE:VEC,FLAGID:0,": 4,
+        "PIPE:MTE3,TRIGGERPIPE:SCALAR,FLAGID:0,": 5,
+        "PIPE:MTE3,TRIGGERPIPE:SCALAR,FLAGID:7,": 1,
+        "PIPE:MTE3,TRIGGERPIPE:VEC,FLAGID:0,": 1,
+        "PIPE:MTE3,TRIGGERPIPE:VEC,FLAGID:1,": 1,
+        "PIPE:SCALAR,TRIGGERPIPE:MTE3,FLAGID:0,": 72,
+        "PIPE:SCALAR,TRIGGERPIPE:MTE3,FLAGID:7,": 2,
+        "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,": 132,
+        "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:7,": 66,
+        "PIPE:VEC,TRIGGERPIPE:MTE2,FLAGID:0,": 2,
+        "PIPE:VEC,TRIGGERPIPE:MTE2,FLAGID:1,": 2,
+        "PIPE:VEC,TRIGGERPIPE:MTE3,FLAGID:0,": 2,
+        "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,": 132,
+        "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:7,": 66
+      },
+      "instruction_X_total": 7042
+    },
+    "candidate": {
+      "trace": "Build/RowParallelSmoke20260915/case8/OPPROF_20260915221112_XVUWRJHXFRFKUMPX/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/trace.json",
+      "sha256": "fcb1e22c8fae3efd6e923f05d91ae0ee937e4c88d42eec8b516059166af7af24",
+      "VCMAX": 3,
+      "VMAX": 1,
+      "paired_WAIT_FLAG": 50,
+      "wait_directions": {
+        "PIPE:MTE2,TRIGGERPIPE:VEC,FLAGID:0,": 4,
+        "PIPE:MTE3,TRIGGERPIPE:SCALAR,FLAGID:0,": 5,
+        "PIPE:MTE3,TRIGGERPIPE:SCALAR,FLAGID:7,": 1,
+        "PIPE:MTE3,TRIGGERPIPE:VEC,FLAGID:0,": 1,
+        "PIPE:MTE3,TRIGGERPIPE:VEC,FLAGID:1,": 1,
+        "PIPE:SCALAR,TRIGGERPIPE:MTE3,FLAGID:0,": 8,
+        "PIPE:SCALAR,TRIGGERPIPE:MTE3,FLAGID:7,": 2,
+        "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,": 6,
+        "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:7,": 4,
+        "PIPE:VEC,TRIGGERPIPE:MTE2,FLAGID:0,": 2,
+        "PIPE:VEC,TRIGGERPIPE:MTE2,FLAGID:1,": 2,
+        "PIPE:VEC,TRIGGERPIPE:MTE3,FLAGID:0,": 2,
+        "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,": 6,
+        "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:7,": 6
+      },
+      "instruction_X_total": 2737
+    }
+  }
+}
