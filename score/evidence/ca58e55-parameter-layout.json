@@ -1,0 +1,3602 @@
+{
+  "说明": "CANN 9.0.0 / Ascend910B3 软件模型，只解析 core 0；普通调用成功不替代 OJ 预热重放验证。日志副本只清理行尾空白。",
+  "source_commit": "ca58e55",
+  "failed_source_commit": "9f31802",
+  "platform_baseline": "62bec9f",
+  "hashes": {
+    "src/kernel.asc": "27c1b0b97d38704e6ad8668a669de44172e934e9d381574e19871000505bcd4a",
+    "tests/simulator_matrix.py": "d07e23444a162adc92ec46139d9e4d7f4bce12a6a9be753de6baf23f66f01a16",
+    "tests/run_simulator_matrix.py": "c8cad935753dfdaf0455dcfaf3306b6705150eec6008baee1f3233c66feb6fde",
+    "tests/simulator_bridge.asc": "498df13b56b768c31df4d937b3fc2e0461d5a1536cd9fb6514e1626ec17c5b05",
+    "tests/correctness.py": "5853758e967060d8d41bda721f4c8e1754dbad89269436b9eec9d1ba24bb1866",
+    "Build/adaptive-n-abi-build.log": "4845dc18fc1b7830314ee9870ba061fbafbf1c4857d3422e61b689dfe2c44247",
+    "Build/adaptive-n-abi-release-build.log": "5c648edc8b95b73cf7663303dabc0554ae2d568d41bce897d00f370cf6b0c7be",
+    "Build/adaptive-n-abi-configure.log": "b0f95873e1c9a81184d431683c3506f05d9d9817215892505b8e765b11781fdc",
+    "Build/adaptive-n-abi-release-configure.log": "76f69d0b366886e170d0df4e13fa6bd5bb9212dc491bb750dd2ca64bc19f8d52",
+    "Build/AdaptiveNAbi20260916/CMakeFiles/simulator_bridge.dir/flags.make": "ada3985e17a804a68837879f1dca46c3ebf4ede8457f23652cdc8367188c5c78",
+    "Build/AdaptiveNAbiRelease20260916/CMakeFiles/batch_matmul_max_sum_custom.dir/flags.make": "9757fbb29fd9d212319c2aed7a9f1671e9179fb5c43acdc61f634cc861798977",
+    "Build/AdaptiveNAbiAnalysis20260916/inspect.py": "e2c50b8849bb547e40a5f7c5c3f5b9522b5f694671ab0d1feba6d2feca80cb0e",
+    "Build/AdaptiveNAbiAnalysis20260916/collect.py": "558245fc846816e0ccdb1581ff5cc56988de017bcfd7cc4e6d97612e37d76c8c"
+  },
+  "candidate": [
+    {
+      "library": "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+      "library_sha256": "46bdb11607f0136ed5bdee045fffc54ee28fecb580fa3e1dcddec847ae5e05a1",
+      "soc": "Ascend910B3",
+      "parsed_core_ids": "0",
+      "results": [
+        {
+          "case": 0,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case0",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=0",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case0.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case0/OPPROF_20260916001324_KVCZAHCTIBRDCBGN/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7517412,
+              "sha256": "7aaf5189d73bf850a5500e6803ed36ed656bc845f78cad90e6ee48f4cba09479"
+            },
+            {
+              "path": "case0/OPPROF_20260916001324_KVCZAHCTIBRDCBGN/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7267876,
+              "sha256": "2d653f2844da8e33cb58c9e5af2218a794716dd9795477c698c46debe894192c"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.38,
+              6.83
+            ],
+            "core0.veccore0": [
+              8.02,
+              6.46
+            ]
+          },
+          "log_sha256": "18bf6aacb4ce70371f2c910bcadf02bafe8c80e829b050427ce5b371c733c06d",
+          "saved_log": "score/evidence/ca58e55-candidate-case0.txt",
+          "saved_log_sha256": "e897249198595e8629a059bafade08d84ee2ef882811dbfb9c7a18e42bb54c1d",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 8,
+          "label": "双维尾块",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 3.0517578125e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case8",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=8",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case8.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case8/OPPROF_20260916001336_THCMSKXGKIDMEQJY/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10431188,
+              "sha256": "922d29a1621ce991719de68e7460d8948f8274615acdbe639c2e76ceb2fe2e14"
+            },
+            {
+              "path": "case8/OPPROF_20260916001336_THCMSKXGKIDMEQJY/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 10181888,
+              "sha256": "a83e6a15ac90b5d931e41f3eda274315c98a6b0a270beb1b62bd2576bb2e5f44"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              12.54,
+              10.97
+            ],
+            "core0.veccore0": [
+              12.48,
+              10.52
+            ]
+          },
+          "log_sha256": "63acd70ee7a64e5ec9e6d69a98173f856a88a2b455a9de9f7d86ff6a911205d7",
+          "saved_log": "score/evidence/ca58e55-candidate-case8.txt",
+          "saved_log_sha256": "9a8b8f917b5b5dab90e33f8b697ce0eb293dd2196cfd50198949302b5cc80fc9",
+          "host_n_parts": 1,
+          "host_cores": 4
+        },
+        {
+          "case": 200,
+          "label": "N自适应十三片",
+          "shape": [
+            1,
+            2,
+            1537,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case200",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=200",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case200.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case200/OPPROF_20260916001352_PMZRWRQHZBQYYOXF/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 8086300,
+              "sha256": "10456088612d542513d5803ba79863d8da56fb7c4545fcf41c1c78bff458f352"
+            },
+            {
+              "path": "case200/OPPROF_20260916001352_PMZRWRQHZBQYYOXF/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7806244,
+              "sha256": "4bcb64c1b5775dffd68368b82e122b2651e5683e4cfdaf22ea72fe3feb1792b9"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              9.52,
+              7.48
+            ],
+            "core0.veccore0": [
+              9.14,
+              7.3
+            ]
+          },
+          "log_sha256": "fc3df1e08d424691a5e1749a7bdbb43e70a9889fd7d91de91fbdd75b53ddf444",
+          "saved_log": "score/evidence/ca58e55-candidate-case200.txt",
+          "saved_log_sha256": "99951bb969f505d840263e0477cf52dce701c580fe196faad9f2db22088c61b8",
+          "host_n_parts": 13,
+          "host_cores": 13
+        },
+        {
+          "case": 208,
+          "label": "N自适应二十片",
+          "shape": [
+            1,
+            2,
+            8192,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case208",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=208",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916/case208.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case208/OPPROF_20260916001407_YWIZOGMYISLFDMVB/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 13111660,
+              "sha256": "7123d03f0b58e2ca66d78a8403a73f7109883bf09017fefc16704e3e31128608"
+            },
+            {
+              "path": "case208/OPPROF_20260916001407_YWIZOGMYISLFDMVB/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 12799792,
+              "sha256": "9caac1122d8d98d3d0ff95909b34938d7c6ab047221acdb94f53d2911ddee6f4"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              17.43,
+              14.93
+            ],
+            "core0.veccore0": [
+              17.12,
+              14.63
+            ]
+          },
+          "log_sha256": "7e1302947d426b73fa3b7761f575733c7f64dbad659c8ce5e37a257f772b816c",
+          "saved_log": "score/evidence/ca58e55-candidate-case208.txt",
+          "saved_log_sha256": "d0a6f5bd30e480f26c02223f62ab14633a9d5e987199155980b385902e523e10",
+          "host_n_parts": 20,
+          "host_cores": 20
+        }
+      ],
+      "runner_git_commit": "ca58e55c0cf59c5fe33c47a158759574b4325f2c",
+      "kernel_source_commit": "ca58e55",
+      "raw_directory": "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSmoke20260916"
+    },
+    {
+      "library": "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+      "library_sha256": "46bdb11607f0136ed5bdee045fffc54ee28fecb580fa3e1dcddec847ae5e05a1",
+      "soc": "Ascend910B3",
+      "parsed_core_ids": "0",
+      "results": [
+        {
+          "case": 1,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case1",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=1",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case1.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case1/OPPROF_20260916001559_GLPKMCJFYTOGDDPJ/_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7568004,
+              "sha256": "ba4dce9ee1b5ab6300511146cd1b27a6fdb4a290af0d820ad5c4a5b37b7141ca"
+            },
+            {
+              "path": "case1/OPPROF_20260916001559_GLPKMCJFYTOGDDPJ/_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7317820,
+              "sha256": "bbed30ee969a0b0b26c51e4caab4a702fdd9c9a165ff431ff8339a4e5599f362"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.39,
+              6.83
+            ],
+            "core0.veccore0": [
+              8.02,
+              6.46
+            ]
+          },
+          "log_sha256": "a02b04d6587b1d634cd5a82aa72e9a61593ef795534252110b6844c72cd3cff5",
+          "saved_log": "score/evidence/ca58e55-candidate-case1.txt",
+          "saved_log_sha256": "cec3d110c705743f6307492d64a89197d907ca088b669b09356ab432868467a5",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 2,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            true,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case2",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=2",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case2.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case2/OPPROF_20260916001613_BBQWMTIXRSIBEJXU/_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7551708,
+              "sha256": "7c76879ce24259a49c9ff600c44ab9681ac444c505bdd0bc48a2d8eeb3abaee6"
+            },
+            {
+              "path": "case2/OPPROF_20260916001613_BBQWMTIXRSIBEJXU/_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7303508,
+              "sha256": "e1cebc8d0630346c456868b35149302fb484a35819b94b4f3ae82a5b43d5adbc"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.38,
+              6.82
+            ],
+            "core0.veccore0": [
+              8.04,
+              6.47
+            ]
+          },
+          "log_sha256": "15e9b4d46dbf20e0a629a6761c364b61fef57ca99f1123a34b5363ee8a96f38d",
+          "saved_log": "score/evidence/ca58e55-candidate-case2.txt",
+          "saved_log_sha256": "bd69927d06602c56fe19c10acb09f277abb5b813a2ae74480acde577d9447ec1",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 3,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.1920928955078125e-07,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case3",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=3",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case3.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case3/OPPROF_20260916001626_JBHUDDOCMZVOUJBR/_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7598444,
+              "sha256": "e988d8cd91fa588f5f91329d601efedf38471a9b5e7ab101ad5213fe4002517f"
+            },
+            {
+              "path": "case3/OPPROF_20260916001626_JBHUDDOCMZVOUJBR/_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7350872,
+              "sha256": "4a47699e3542685524ecb83d46a26e6c7bb6e1befabc6616002ecccfaf1d52d9"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.39,
+              6.84
+            ],
+            "core0.veccore0": [
+              8.03,
+              6.46
+            ]
+          },
+          "log_sha256": "84b8a4fc7e25974088a72f58a016b352b7bee6de634f464aa3488d3b23b56bb6",
+          "saved_log": "score/evidence/ca58e55-candidate-case3.txt",
+          "saved_log_sha256": "252d7f802db9ac1e4f3bcca0a0e85888e7acb9d850036f1d8653e7f452494850",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 4,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case4",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=4",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case4.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case4/OPPROF_20260916001640_XPZKQTOZISWAFMFS/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7518032,
+              "sha256": "0c603836689f21ea8de6be241db645e3af70aed40ef6f23292cacffe5f89c8f0"
+            },
+            {
+              "path": "case4/OPPROF_20260916001640_XPZKQTOZISWAFMFS/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7267956,
+              "sha256": "4375bde3d6009568c773f19bbd16b59ba5b920f49cdde31bc5aa5df4846b2e72"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.39,
+              6.82
+            ],
+            "core0.veccore0": [
+              8.02,
+              6.45
+            ]
+          },
+          "log_sha256": "f9aafd32fdb7c1d191d70309050a4f01ea7362fd780e2fa31f59d22bb7c6b589",
+          "saved_log": "score/evidence/ca58e55-candidate-case4.txt",
+          "saved_log_sha256": "7aea14f0fbb3974f1222b67286deb9f2749599e88fc27d602a16b22f8bd81f9a",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 5,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            false,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case5",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=5",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case5.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case5/OPPROF_20260916001653_KUVMMVLYDMRDWSZG/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7566852,
+              "sha256": "2c39ef8ff18e65c19b91f4dc55c093cb0576c227562d3cc7b721398356352916"
+            },
+            {
+              "path": "case5/OPPROF_20260916001653_KUVMMVLYDMRDWSZG/_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7317832,
+              "sha256": "1d1e5265675d9a47a82ed4604182c11afe4a1f3c6b10702fbe57df6fbc99b8cb"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.39,
+              6.83
+            ],
+            "core0.veccore0": [
+              8.02,
+              6.45
+            ]
+          },
+          "log_sha256": "bee3d7b2acfa5e5f1f26c15465b343c51fc18167989b93cf73bc16087d18444a",
+          "saved_log": "score/evidence/ca58e55-candidate-case5.txt",
+          "saved_log_sha256": "0586f18b431e3cf498ca08bd76dec1de283b5aadf9c270b16f2df808c62578df",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 6,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case6",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=6",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case6.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case6/OPPROF_20260916001707_LOBZHGRUIENXPLJH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7556336,
+              "sha256": "227e66be9168d2e11abe46092865215a9ce5fe64b67a395c0a90d4a3eac43291"
+            },
+            {
+              "path": "case6/OPPROF_20260916001707_LOBZHGRUIENXPLJH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7304384,
+              "sha256": "08634114e0879c635882690a0ffcab1068b08ce6b2a8426b890dc470e4512402"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.39,
+              6.81
+            ],
+            "core0.veccore0": [
+              8.04,
+              6.46
+            ]
+          },
+          "log_sha256": "9f10a466507e9267369e416a690709172c668674e217169b499b35702958aed3",
+          "saved_log": "score/evidence/ca58e55-candidate-case6.txt",
+          "saved_log_sha256": "fedd185033ab5558acccb2c7aecad348021765234f633bddadda8ca3a4424349",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 7,
+          "label": "最小",
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case7",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=7",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case7.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case7/OPPROF_20260916001720_CYKENNXOBPOHJNXS/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 7600648,
+              "sha256": "5515b010bb78272ece6920db39e647cc3707edd3e04d8caaafcd003a97d4f638"
+            },
+            {
+              "path": "case7/OPPROF_20260916001720_CYKENNXOBPOHJNXS/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7350836,
+              "sha256": "941cb08a480bfb165527fc4ca0331d6891798a8221fe4758ba53e909d7446309"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.42,
+              6.85
+            ],
+            "core0.veccore0": [
+              8.03,
+              6.48
+            ]
+          },
+          "log_sha256": "e86cf4629d260894ceddd11021b385a73a1949af2fd07dcee9064fed2134687a",
+          "saved_log": "score/evidence/ca58e55-candidate-case7.txt",
+          "saved_log_sha256": "bbfed029874c4f450be68070410e42e629a856667b2aa0496eb86f4fb8426eef",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 15,
+          "label": "双维尾块",
+          "shape": [
+            2,
+            33,
+            129,
+            40
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case15",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=15",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case15.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case15/OPPROF_20260916001732_KINKMFDILWLXTKML/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10591168,
+              "sha256": "e72c65db676ed3c76147446b7aa75ab184266c57722d85691325c59aaac7ca17"
+            },
+            {
+              "path": "case15/OPPROF_20260916001732_KINKMFDILWLXTKML/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 10277500,
+              "sha256": "22d5e741cd15a9fbfaf8928f4a0f626ef2eed4d174d6b72c2071f46e07fee733"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              13.05,
+              10.57
+            ],
+            "core0.veccore0": [
+              13.02,
+              10.52
+            ]
+          },
+          "log_sha256": "e96271e5ae49429b82a42d1452e843e56723d4eb9b2c6909e21287b1dbab6ab2",
+          "saved_log": "score/evidence/ca58e55-candidate-case15.txt",
+          "saved_log_sha256": "f8b004e6b90e1db14f555247cb17c1a14231d43f53e4eeee29a64121728dbc10",
+          "host_n_parts": 1,
+          "host_cores": 4
+        },
+        {
+          "case": 120,
+          "label": "多核任务槽复用",
+          "shape": [
+            1,
+            641,
+            65,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case120",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=120",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case120.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case120/OPPROF_20260916001747_YXUWISKVDTDEUZWP/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 10533800,
+              "sha256": "8703cf07e0b513093e1c15923dace1ec7bd7c855aa12e440edccbe51762629f8"
+            },
+            {
+              "path": "case120/OPPROF_20260916001747_YXUWISKVDTDEUZWP/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 10284004,
+              "sha256": "233706c5eaf7afe340882e58dde11316a8c9d65f1386c751a1aa2e7f9f475271"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              12.66,
+              11.08
+            ],
+            "core0.veccore0": [
+              12.49,
+              10.77
+            ]
+          },
+          "log_sha256": "191871147ab0ecaf13585ea4f922b1800f1f82708910f49ab77bae40ce7e362c",
+          "saved_log": "score/evidence/ca58e55-candidate-case120.txt",
+          "saved_log_sha256": "e19359df6f68aae3f51c05582f2f26a0dea8f2d835b4fdf287056736c50b7dd4",
+          "host_n_parts": 1,
+          "host_cores": 20
+        },
+        {
+          "case": 136,
+          "label": "N分片五块尾行",
+          "shape": [
+            2,
+            33,
+            513,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case136",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=136",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case136.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case136/OPPROF_20260916001804_BWQECRBXXFTVGGJH/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 9434176,
+              "sha256": "0e9638878346f85c7ee9922f3ab3348e1bd1e6b120938fcc272e59ce66cb6210"
+            },
+            {
+              "path": "case136/OPPROF_20260916001804_BWQECRBXXFTVGGJH/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 9153192,
+              "sha256": "be9260c44230296f149b507e358fe0b41e300cf65ccadf2c370b51dfeaeb2d80"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              12.39,
+              10.45
+            ],
+            "core0.veccore0": [
+              12.27,
+              10.08
+            ]
+          },
+          "log_sha256": "8cd6d94243d09aff0f9ded8f518223f065105eb9eb28bc019ceec9baa1e325ed",
+          "saved_log": "score/evidence/ca58e55-candidate-case136.txt",
+          "saved_log_sha256": "f839146bac7f96daeca2147d40bd1996eeacfba9bec1d1a08a9e508c5d6d0fc5",
+          "host_n_parts": 5,
+          "host_cores": 20
+        },
+        {
+          "case": 144,
+          "label": "N分片长列流水",
+          "shape": [
+            1,
+            32,
+            1537,
+            128
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 3.0517578125e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case144",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=144",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case144.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case144/OPPROF_20260916001821_OUNEERWRGREOQQSY/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 8645880,
+              "sha256": "7c3318b901c5e864654f296f763efced38f1a8854da17463e7226c0e70bbc900"
+            },
+            {
+              "path": "case144/OPPROF_20260916001821_OUNEERWRGREOQQSY/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 8271624,
+              "sha256": "9a01df2572e73f95b91952beb6d45f27fb3bda4c7bb1075a5e261172892c4855"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              12.89,
+              9.41
+            ],
+            "core0.veccore0": [
+              12.41,
+              9.03
+            ]
+          },
+          "log_sha256": "628a4ba63edbe924dbce1e1cb5fd69bf63144803ff57a6c3eb73fdcf3339cf71",
+          "saved_log": "score/evidence/ca58e55-candidate-case144.txt",
+          "saved_log_sha256": "ad5af21f2829c7f2110de6e25af265261a52a5acd1a684e4edb3fad4dcc460a9",
+          "host_n_parts": 13,
+          "host_cores": 13
+        },
+        {
+          "case": 152,
+          "label": "N分片全负",
+          "shape": [
+            1,
+            31,
+            1025,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case152",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=152",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case152.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case152/OPPROF_20260916001838_WNJWBVDGFIOIRJVT/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 8490916,
+              "sha256": "39841bdd2ebbdd62a27980e409373c26eb02fbf864542166b39ae876b21cabbd"
+            },
+            {
+              "path": "case152/OPPROF_20260916001838_WNJWBVDGFIOIRJVT/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 8178256,
+              "sha256": "dafa05bbc7281074dfa48ed14e381df0d1ee0951f20d0d52a46bd5cdea4d95d1"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              10.97,
+              8.44
+            ],
+            "core0.veccore0": [
+              10.6,
+              8.32
+            ]
+          },
+          "log_sha256": "d2d28e0dcfdca873f2540fe55edafc99ac0d4053819c0e06cfa6135eb9fa92a0",
+          "saved_log": "score/evidence/ca58e55-candidate-case152.txt",
+          "saved_log_sha256": "9c420b216996a61c8befeb1ba83a3ae7f03ef388ead14fc2612ccee63438c2fd",
+          "host_n_parts": 9,
+          "host_cores": 9
+        },
+        {
+          "case": 159,
+          "label": "N分片全负",
+          "shape": [
+            1,
+            31,
+            1025,
+            40
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 1.52587890625e-05,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case159",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=159",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case159.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case159/OPPROF_20260916001850_UVKGXFXCRKSCQSSK/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 8637952,
+              "sha256": "17d5c746208d9c7641a4fde35be8889f35b3aa55f7a936f915907410f2f89730"
+            },
+            {
+              "path": "case159/OPPROF_20260916001850_UVKGXFXCRKSCQSSK/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 8293940,
+              "sha256": "b803d3f4b4352a27a2fad91e609553319e39061eb8429468cf8ad6a4171ee56a"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              11.93,
+              9.01
+            ],
+            "core0.veccore0": [
+              11.47,
+              8.57
+            ]
+          },
+          "log_sha256": "a207fb007b3079285336adb165c2205600a071d84b031263c4b9ff201a58998e",
+          "saved_log": "score/evidence/ca58e55-candidate-case159.txt",
+          "saved_log_sha256": "43dda8eb8eb60d83a1a86ead8a965aff42b41026c6c7541e916dfe221c34000f",
+          "host_n_parts": 9,
+          "host_cores": 9
+        },
+        {
+          "case": 160,
+          "label": "N分片全零",
+          "shape": [
+            1,
+            31,
+            1025,
+            40
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case160",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=160",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case160.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case160/OPPROF_20260916001905_FQDATDGANBUKYEPT/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 8488860,
+              "sha256": "3bdc120dbae0241caba9af91f06260990166e1327c39fdfbc87be46e1633dfe7"
+            },
+            {
+              "path": "case160/OPPROF_20260916001905_FQDATDGANBUKYEPT/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 8176852,
+              "sha256": "ecfec6b36002da6c6c49cef1ad7a234b61044f8dae89dc4ef13ef98fa938773f"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              11.02,
+              8.44
+            ],
+            "core0.veccore0": [
+              10.56,
+              8.32
+            ]
+          },
+          "log_sha256": "ce9f318a2b3e65bc44093edc5048984ab0872a9c758989c1feb2bbf65cec4777",
+          "saved_log": "score/evidence/ca58e55-candidate-case160.txt",
+          "saved_log_sha256": "6f6d780d29178357565790c1f47d966fff1f6f1df3ecfed4cfd04624d50f92f1",
+          "host_n_parts": 9,
+          "host_cores": 9
+        },
+        {
+          "case": 168,
+          "label": "N分片核数边界",
+          "shape": [
+            5,
+            1,
+            385,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 4.76837158203125e-07,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case168",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=168",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case168.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case168/OPPROF_20260916001919_ZFQDOKKDUGVQFPBX/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 9163760,
+              "sha256": "a69ca2599a0cad0f06f8e70302e7c14587ccdce59ac905c306415e79d8f12aac"
+            },
+            {
+              "path": "case168/OPPROF_20260916001919_ZFQDOKKDUGVQFPBX/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 8882488,
+              "sha256": "ed2d830297c7edc3334a7edcae9eaf499424f634eab09d387042898e9c0c2cab"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              11.44,
+              9.39
+            ],
+            "core0.veccore0": [
+              11.0,
+              9.0
+            ]
+          },
+          "log_sha256": "85c1c5ec2b50f6888e902c36df18771f431016f79bd69316e853cbf5cf691278",
+          "saved_log": "score/evidence/ca58e55-candidate-case168.txt",
+          "saved_log_sha256": "b8e39aa1dc2ea4790da2d28a6f9f31361d8999664247871ddac6b9c97285077b",
+          "host_n_parts": 4,
+          "host_cores": 20
+        },
+        {
+          "case": 176,
+          "label": "N分片核数回退",
+          "shape": [
+            6,
+            1,
+            385,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case176",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=176",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case176.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case176/OPPROF_20260916001936_ZYZEGZWKNZGYHBBC/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 15156160,
+              "sha256": "9982694a083d45b2d8987fbb2016a5b80f652b810244bd468b577b8611583539"
+            },
+            {
+              "path": "case176/OPPROF_20260916001936_ZYZEGZWKNZGYHBBC/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 14780564,
+              "sha256": "93249166048837abc5fe907031c13e99a90c406de0ab67ddcd740a82f427f009"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              19.04,
+              15.6
+            ],
+            "core0.veccore0": [
+              18.63,
+              15.16
+            ]
+          },
+          "log_sha256": "65291a49511452d17fd349aec81da1c0d45503adffac8f23047fb50496936eb5",
+          "saved_log": "score/evidence/ca58e55-candidate-case176.txt",
+          "saved_log_sha256": "28647b80fd1bef12a36126b91d67aa5b7b3456cb117340d5a77cca0c2b5920dc",
+          "host_n_parts": 1,
+          "host_cores": 6
+        },
+        {
+          "case": 184,
+          "label": "N分片列数回退",
+          "shape": [
+            1,
+            2,
+            384,
+            32
+          ],
+          "dtype": "<class 'numpy.float16'>",
+          "transpose": [
+            false,
+            false
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case184",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=184",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case184.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case184/OPPROF_20260916001954_RPYRMRQEUYUJHIET/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 12179152,
+              "sha256": "cbda01c2e7a03c59f1947b8a64c8b37257ee275826c2d60a6db08cd535c76be2"
+            },
+            {
+              "path": "case184/OPPROF_20260916001954_RPYRMRQEUYUJHIET/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 11928332,
+              "sha256": "c00914632e4ad5525bb6e491d0e4f654b3975801ae6b6a2ec7a49424365d0301"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              13.11,
+              11.59
+            ],
+            "core0.veccore0": [
+              13.05,
+              11.35
+            ]
+          },
+          "log_sha256": "29c5eb2de492c756a418990c023629a3504108af1f621237eb76f0674a5987f4",
+          "saved_log": "score/evidence/ca58e55-candidate-case184.txt",
+          "saved_log_sha256": "d3864f54a47ad4c83fd70fd9456adb7a6146fbb12fa23a9496b4736d0914b0a3",
+          "host_n_parts": 1,
+          "host_cores": 1
+        },
+        {
+          "case": 207,
+          "label": "N自适应十三片",
+          "shape": [
+            1,
+            2,
+            1537,
+            32
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case207",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=207",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case207.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case207/OPPROF_20260916002008_UXBDWXUPABWXNKDC/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 8108616,
+              "sha256": "057d8cba3fd0bd2dcf59277907fdb7e7d4cf6e13e44ca96d6d92566150c58996"
+            },
+            {
+              "path": "case207/OPPROF_20260916002008_UXBDWXUPABWXNKDC/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 7858940,
+              "sha256": "9c6dc4323f63cd28240dc8bf7fb5a5367d0aca73b31f6f23c3ac1fa534c086a7"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              8.58,
+              7.0
+            ],
+            "core0.veccore0": [
+              8.58,
+              6.94
+            ]
+          },
+          "log_sha256": "7f87d00ef973fb090212c7baa863456dcc07f7df457d7900cd43856678ac83de",
+          "saved_log": "score/evidence/ca58e55-candidate-case207.txt",
+          "saved_log_sha256": "7d18bc033b9bad32d72a6a65644cd191f59fa045f977e14a07b6859d89701d92",
+          "host_n_parts": 13,
+          "host_cores": 13
+        },
+        {
+          "case": 215,
+          "label": "N自适应二十片",
+          "shape": [
+            1,
+            2,
+            8192,
+            32
+          ],
+          "dtype": "<class 'ml_dtypes.bfloat16'>",
+          "transpose": [
+            true,
+            true
+          ],
+          "capture": false,
+          "execution": "simulator",
+          "passed": true,
+          "available_cores": 20,
+          "max_abs_error": 0.0,
+          "command": [
+            "msprof",
+            "op",
+            "simulator",
+            "--soc-version=Ascend910B3",
+            "--core-id=0",
+            "--launch-count=4",
+            "--timeout=2",
+            "--output=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case215",
+            "/usr/bin/python3",
+            "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+            "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+            "--case=215",
+            "--report=/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916/case215.json"
+          ],
+          "profiler_exitcode": 0,
+          "bins": [
+            {
+              "path": "case215/OPPROF_20260916002023_BGGXCPGGMXXSFNRS/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+              "size": 13228260,
+              "sha256": "121852f26c6ef051523d87a4314ce974f3d003e7e588bcadedba0f0ed8227f6b"
+            },
+            {
+              "path": "case215/OPPROF_20260916002023_BGGXCPGGMXXSFNRS/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+              "size": 12976392,
+              "sha256": "aef1e4a97ef6e08a79b4cf4977712d15c3b3038aa73e8a0fea2358373700a87a"
+            }
+          ],
+          "profiled_launches": [
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+            "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "model_core_duration_us": {
+            "core0.cubecore0": [
+              16.52,
+              14.94
+            ],
+            "core0.veccore0": [
+              16.31,
+              14.68
+            ]
+          },
+          "log_sha256": "a49fc18fa893d1d7a464653cee865fdad31141e4900eb36c77c4087e6b0a2451",
+          "saved_log": "score/evidence/ca58e55-candidate-case215.txt",
+          "saved_log_sha256": "81470c21c540a55a6ab4d05e52975aec59b31645e1be40ce03e350d9d632ea97",
+          "host_n_parts": 20,
+          "host_cores": 20
+        }
+      ],
+      "runner_git_commit": "ca58e55c0cf59c5fe33c47a158759574b4325f2c",
+      "kernel_source_commit": "ca58e55",
+      "raw_directory": "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiChecks20260916"
+    }
+  ],
+  "prior_evidence": "score/evidence/9f31802-adaptive-n.json",
+  "prior_evidence_sha256": "ebcc1892bbb9836dfdff51b1e70423b970fda7f9598bf7ef54690c45d02bc8e2",
+  "comparisons": [
+    {
+      "case": 0,
+      "old": [
+        8.38,
+        8.02,
+        6.83,
+        6.46
+      ],
+      "candidate": [
+        8.38,
+        8.02,
+        6.83,
+        6.46
+      ],
+      "reduction_percent": 0.0
+    },
+    {
+      "case": 8,
+      "old": [
+        13.05,
+        12.97,
+        10.53,
+        10.45
+      ],
+      "candidate": [
+        12.54,
+        12.48,
+        10.97,
+        10.52
+      ],
+      "reduction_percent": -4.17853751187085
+    },
+    {
+      "case": 136,
+      "old": [
+        12.38,
+        12.32,
+        10.44,
+        10.21
+      ],
+      "candidate": [
+        12.39,
+        12.27,
+        10.45,
+        10.08
+      ],
+      "reduction_percent": -0.09578544061301653
+    },
+    {
+      "case": 144,
+      "old": [
+        12.9,
+        12.45,
+        9.42,
+        9.05
+      ],
+      "candidate": [
+        12.89,
+        12.41,
+        9.41,
+        9.03
+      ],
+      "reduction_percent": 0.10615711252653925
+    },
+    {
+      "case": 152,
+      "old": [
+        10.96,
+        10.63,
+        8.44,
+        8.36
+      ],
+      "candidate": [
+        10.97,
+        10.6,
+        8.44,
+        8.32
+      ],
+      "reduction_percent": 0.0
+    },
+    {
+      "case": 168,
+      "old": [
+        10.96,
+        10.93,
+        8.92,
+        8.88
+      ],
+      "candidate": [
+        11.44,
+        11.0,
+        9.39,
+        9.0
+      ],
+      "reduction_percent": -5.269058295964135
+    },
+    {
+      "case": 176,
+      "old": [
+        19.03,
+        18.63,
+        15.6,
+        15.16
+      ],
+      "candidate": [
+        19.04,
+        18.63,
+        15.6,
+        15.16
+      ],
+      "reduction_percent": 0.0
+    },
+    {
+      "case": 200,
+      "old": [
+        9.52,
+        9.15,
+        7.48,
+        7.3
+      ],
+      "candidate": [
+        9.52,
+        9.14,
+        7.48,
+        7.3
+      ],
+      "reduction_percent": 0.0
+    },
+    {
+      "case": 208,
+      "old": [
+        17.42,
+        17.2,
+        14.93,
+        14.65
+      ],
+      "candidate": [
+        17.43,
+        17.12,
+        14.93,
+        14.63
+      ],
+      "reduction_percent": 0.0
+    }
+  ],
+  "layout_and_code": {
+    "说明": "来自本地 CANN 9.0.0 诊断产物及模型导出的设备 ELF；函数原始指令区间相同不等于整个 ELF 或平台重放行为相同。",
+    "records": {
+      "baseline": {
+        "library": "Build/SplitN20260915/libsimulator_bridge.so",
+        "library_sha256": "775fc8956b565e79b05f1a2d298afcbe683114473fb0415b1ead575e9b7b0360",
+        "dwarf_sha256": "7a1a2ee5a27d6985a511f8bf1ee3a52050dcd92105d950284dc83e5187eb8b8d",
+        "parameters": {
+          "size": 224,
+          "members": {
+            "batch": 0,
+            "m": 4,
+            "n": 8,
+            "k": 12,
+            "rowTiles": 16,
+            "cores": 20,
+            "cube": 24
+          }
+        },
+        "device_object": "Build/UbMaxBaseline20260915/case0/OPPROF_20260915234036_IPDQCNAQTHDNHIIF/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/dump/aicore_binary.o",
+        "device_object_sha256": "d028648066501d4bde1502951620da24b443e746aa61848300e0769de5bf7f68",
+        "fallback_functions": {
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "7561c64dd588a4a1b77d5d88060175f575f5d074311ecb037bdb013d9091ff66",
+            "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "5a0a1e383ce039d90a53f6b6b3a2efefff2b63fbeecd5ebdb9af1cbc031948ba",
+            "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "eac8fafc607ef0a43c02f18fe106182d4ce2d4436d0bab8ebfe1a294fefa2092",
+            "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "0c09687111884d9e45218941d0555340586c98e1ca34e821cb06747e1662abe9",
+            "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "7403b4b94ff6ee09409e96920ec9de0303e768a9599341c3b450981aaf0a3cc4",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "30d50c81e639b95802f710810277057ea7312bc8fbe7b30c8298879f13bd3840",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "b555cf6cd839286c6635cd6da8191395274e3a3ac858a6fdc3eb29c6e46cb5e4",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "ee6bd9a30a50b288116277fc02af0eb1558777c2c13ef15dbbd9a5195932f3f9",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7036,
+            "sha256": "02582d4379b4ee81cc4adac46d5acf9ae9c0ce0bba3e143acff172ac6235b239",
+            "relocation_normalized_sha256": "6e2da89cdd0a3703a2d404cedba70d9b90190e8eca2e4ae03d83159f052bd896",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5312,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5464,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6032,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7032,
+            "sha256": "1f85feabbf6af7fb6b53dcfda19132849bcb6e1cf14670f3449531a97bbe5163",
+            "relocation_normalized_sha256": "17a049031caecfd050a054d1ed30d1d630d689e6fc8f49fb91152517870a6b28",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5296,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5452,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6020,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7048,
+            "sha256": "02339433fcb930d9611fff2bf673d3e3c1b57ffa75f903facd4c5a8a57821a76",
+            "relocation_normalized_sha256": "eae59a5bd8eb78d339ce02ae5fd5de6191a7e81f7542a74c026978aea6223a78",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5324,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5476,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6044,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7024,
+            "sha256": "42e989299b1a5d9f4e64d600740b40f035488d81ae374efbb60f53a20132f0ae",
+            "relocation_normalized_sha256": "115faa062073dfdee3ad677f99cc63d0a98438e447c3e6ce7f8779bf1e676578",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5288,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5444,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6012,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7036,
+            "sha256": "6e821faa6357a5c15aa4fba09f6b03737d0b037965cff90fbc974d38a41f960b",
+            "relocation_normalized_sha256": "575ca801258de26cfea442db0637f4962f9cff51795b69cfa32756150495e4da",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5312,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5464,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6032,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7032,
+            "sha256": "8160f8a6db98427716d132c825fc5f4b11e9a6602b8df19786718309ea02f2ac",
+            "relocation_normalized_sha256": "e32a2595468ccf8a988709de4801819b5326a3c7b1ca7058194badbda3a9a2ea",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5296,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5452,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6020,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7048,
+            "sha256": "553b0839b23f047fbbbe3488bc4cd6c04298bb4e88d8ffaa25429bd2d8940d43",
+            "relocation_normalized_sha256": "e4a4525841d512d8c290e11d984a3b991bcdeca5e911b02f50f6b61c132955f4",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5324,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5476,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6044,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7024,
+            "sha256": "cd5ebc4cca32595c7ed92951ea16c4ab85978d1130ee2f269c70fcd787e7975f",
+            "relocation_normalized_sha256": "38792ee857113e6a6c6ce48a4a3cfeeec7b0b8d36f7202f95737c9de2895e8bb",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5288,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5444,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6012,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          }
+        },
+        "fallback_metadata": {
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100"
+        }
+      },
+      "failed": {
+        "library": "Build/AdaptiveN20260915/libsimulator_bridge.so",
+        "library_sha256": "1536acbe97547ce9b0fae91ceefa33dd00f9e568ce1862a9923bda555981627d",
+        "dwarf_sha256": "a37f2353ef235eb9298a3e7d16c17836b96088800b6626459b7bfa1bdcd91f23",
+        "parameters": {
+          "size": 228,
+          "members": {
+            "batch": 0,
+            "m": 4,
+            "n": 8,
+            "k": 12,
+            "rowTiles": 16,
+            "cores": 20,
+            "nParts": 24,
+            "cube": 28
+          }
+        },
+        "device_object": "Build/AdaptiveNSmoke20260915/case0/OPPROF_20260915234436_RMFFBWURGZCYONID/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/dump/aicore_binary.o",
+        "device_object_sha256": "11a59156f76576dd041f295ffe028c59a8e69c7fd725f3d0839c228f968f4f35",
+        "fallback_functions": {
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "466999fbb9b254e808fa34fd5636dd784e0539a354b98750b42d8dbb98e8e19d",
+            "relocation_normalized_sha256": "5706e56dbfa948029a2e76304c83a67f83c9d5d12fb82fccfb3ec1731542aceb",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "8ed99f62570c6b79db930616b0ad4d03e7010ae4e64215e99c7b501c67f1e74b",
+            "relocation_normalized_sha256": "5706e56dbfa948029a2e76304c83a67f83c9d5d12fb82fccfb3ec1731542aceb",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "39c4452f80cf69047be57a4bc567aac871c03be2567c0c8898bca3998b88a758",
+            "relocation_normalized_sha256": "5706e56dbfa948029a2e76304c83a67f83c9d5d12fb82fccfb3ec1731542aceb",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "182d2e3697b224b15ebc0a920f8be237e28ec9643248ffda830e43c4aadec636",
+            "relocation_normalized_sha256": "5706e56dbfa948029a2e76304c83a67f83c9d5d12fb82fccfb3ec1731542aceb",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "f2442f87676660196815d13f0f5e99ffc5e55a1bccf0621b2f501b802dd73e17",
+            "relocation_normalized_sha256": "df6077f021aa788d4a03832fb2d55f6db443f409c6fcd6aee44d3fa83d23b15e",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "f2c2a196109d77c185d441072c46aed6c08f71bb715648ba625da529fe10bc18",
+            "relocation_normalized_sha256": "df6077f021aa788d4a03832fb2d55f6db443f409c6fcd6aee44d3fa83d23b15e",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "5f997bb5939e566228c8e5fbbed612e657a52ae05bcea6d2f6f3bfb2006cdfb4",
+            "relocation_normalized_sha256": "df6077f021aa788d4a03832fb2d55f6db443f409c6fcd6aee44d3fa83d23b15e",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "9a16f94ba70251e2017969854d2e94492fbde12dbb7341d46dc84dcc3a38e8e1",
+            "relocation_normalized_sha256": "df6077f021aa788d4a03832fb2d55f6db443f409c6fcd6aee44d3fa83d23b15e",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7036,
+            "sha256": "9d9208a12b606906c3125c4511f6527b20839221bf14245a12a493c43ecaf7ed",
+            "relocation_normalized_sha256": "6e2da89cdd0a3703a2d404cedba70d9b90190e8eca2e4ae03d83159f052bd896",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5312,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5464,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6032,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7032,
+            "sha256": "8106d2d402a8958e4fa8e93812dd19e86e8a704735729cdcc1be7868664fa10d",
+            "relocation_normalized_sha256": "17a049031caecfd050a054d1ed30d1d630d689e6fc8f49fb91152517870a6b28",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5296,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5452,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6020,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7048,
+            "sha256": "738e7d045151ad4e29f261bdcad4468df13aaf5bb9be5ec111e4a40ada590500",
+            "relocation_normalized_sha256": "eae59a5bd8eb78d339ce02ae5fd5de6191a7e81f7542a74c026978aea6223a78",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5324,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5476,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6044,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7024,
+            "sha256": "44e9432442333b729976f584be539f95471699d8a6c8116f530cb191934b65c3",
+            "relocation_normalized_sha256": "115faa062073dfdee3ad677f99cc63d0a98438e447c3e6ce7f8779bf1e676578",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5288,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5444,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6012,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7036,
+            "sha256": "d1a034adf47a9f60e00ee2e53ed6deb173082e7d163560172bd6eee2fc9569b0",
+            "relocation_normalized_sha256": "575ca801258de26cfea442db0637f4962f9cff51795b69cfa32756150495e4da",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5312,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5464,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6032,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7032,
+            "sha256": "52ec7b908ee727b842c37544a937e6363e5b0a66e7dc4738c57d1779a0f480c7",
+            "relocation_normalized_sha256": "e32a2595468ccf8a988709de4801819b5326a3c7b1ca7058194badbda3a9a2ea",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5296,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5452,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6020,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7048,
+            "sha256": "42e581a420fcfb1be5a9fdad3037a1aa054d19aaecfe5530630df0e6a4ba78a9",
+            "relocation_normalized_sha256": "e4a4525841d512d8c290e11d984a3b991bcdeca5e911b02f50f6b61c132955f4",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5324,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5476,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6044,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7024,
+            "sha256": "b7842b20769c2a9ad7fb32ec6d911a0450dbb8ff0cf1d5c74db8bf1607cbe260",
+            "relocation_normalized_sha256": "38792ee857113e6a6c6ce48a4a3cfeeec7b0b8d36f7202f95737c9de2895e8bb",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5288,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5444,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6012,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          }
+        },
+        "fallback_metadata": {
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100"
+        }
+      },
+      "candidate": {
+        "library": "Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+        "library_sha256": "46bdb11607f0136ed5bdee045fffc54ee28fecb580fa3e1dcddec847ae5e05a1",
+        "dwarf_sha256": "1526763acbbbbea9aaa5225771896f2246b5eb5c491272c626568d75e7d024ca",
+        "parameters": {
+          "size": 224,
+          "members": {
+            "batch": 0,
+            "m": 4,
+            "n": 8,
+            "k": 12,
+            "rowTiles": 16,
+            "cores": 20,
+            "cube": 24
+          }
+        },
+        "device_object": "Build/AdaptiveNAbiSmoke20260916/case0/OPPROF_20260916001324_KVCZAHCTIBRDCBGN/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/dump/aicore_binary.o",
+        "device_object_sha256": "1829497943dca7b8661cf52c013936d517cf4974478af76efc2a3263b68f2bfe",
+        "fallback_functions": {
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "14ad683c275fc871f02adeb0e3036f33884bdb688c63e2ce503c484a582dbfef",
+            "relocation_normalized_sha256": "78292211e94047ae14352a78b8a7e9ee1858b1eaedf8e38d7f01fa150c9d99eb",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "67de3e0a2f3379685ececbcfd57e9faf933d5dec40f39b2a16d50dd6e8b92235",
+            "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "cf10cd371d1e095da1926aaef9fb047c63e25e4631f5bd002837e7a064338e7f",
+            "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "3b026970f494f58cabef1ace23201e08202dc9f5f7126ff047c1c5326cc1bbe3",
+            "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "e9c4a70d89f1daed466b756c6e61e2cfcda622983d7c62eee01dee8dbd3553ef",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "e0243875fe2a90b733b19a3b636caa3b08f84033f5534f69e7450c17e6311241",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "1f0786b35736cbe7b3f6cc8e62a3ea56bf561ac1aaf46f8325b3f2c9b39ead6c",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+            "bytes": 17364,
+            "sha256": "c5b39f2bccc11f096df1aa867caba826b14c7421339ee6b11025a7c62876290e",
+            "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+            "relocations": [
+              [
+                44,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                88,
+                "13a",
+                "__init_kfc_workspace_addr.cube + 0"
+              ],
+              [
+                300,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ],
+              [
+                2852,
+                "123",
+                "g_cubeTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7036,
+            "sha256": "1cb579a3dc59bae311d2770452f2c69656b223cdaccd8d256455eb12569381f2",
+            "relocation_normalized_sha256": "6e2da89cdd0a3703a2d404cedba70d9b90190e8eca2e4ae03d83159f052bd896",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5312,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5464,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6032,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7032,
+            "sha256": "15a96f0c52b5d87a4fa7c1ac923ddbf195e09f2f839df3386856bb967d7eee60",
+            "relocation_normalized_sha256": "17a049031caecfd050a054d1ed30d1d630d689e6fc8f49fb91152517870a6b28",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5296,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5452,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6020,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7048,
+            "sha256": "11a59a51e8094b71a5665c1e8ce608b2152d2e3eeadef187c5750f60d9fd0b48",
+            "relocation_normalized_sha256": "eae59a5bd8eb78d339ce02ae5fd5de6191a7e81f7542a74c026978aea6223a78",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5324,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5476,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6044,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7024,
+            "sha256": "149c4608bb3d06343b5eaa657aa85537fd31863b4ee45f543ec29006bfd7d345",
+            "relocation_normalized_sha256": "115faa062073dfdee3ad677f99cc63d0a98438e447c3e6ce7f8779bf1e676578",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5288,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5444,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6012,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7036,
+            "sha256": "d10feba4a7d59d2a4cf697763584a39efe2597af11b1ad36c0e54dcf3c689133",
+            "relocation_normalized_sha256": "575ca801258de26cfea442db0637f4962f9cff51795b69cfa32756150495e4da",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5312,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5464,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6032,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7032,
+            "sha256": "1dcb0fa8d4b10048a2b110463c3a2611547f49f06b2912189660ad5beded1cfd",
+            "relocation_normalized_sha256": "e32a2595468ccf8a988709de4801819b5326a3c7b1ca7058194badbda3a9a2ea",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5296,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5452,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6020,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7048,
+            "sha256": "2fe54fa344c5d441cfdbb36bda943e314f497a34285479d23bb218b92d2da0c5",
+            "relocation_normalized_sha256": "e4a4525841d512d8c290e11d984a3b991bcdeca5e911b02f50f6b61c132955f4",
+            "relocations": [
+              [
+                92,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                136,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                280,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                404,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5324,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5476,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6044,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          },
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+            "bytes": 7024,
+            "sha256": "a7ce7d23a8228c3c9d013b71809c6bb0ad9384c79236ce1df82991658989f269",
+            "relocation_normalized_sha256": "38792ee857113e6a6c6ce48a4a3cfeeec7b0b8d36f7202f95737c9de2895e8bb",
+            "relocations": [
+              [
+                76,
+                "15c",
+                "g_sysFftsAddr + 0"
+              ],
+              [
+                124,
+                "13a",
+                "__init_kfc_workspace_addr.vector + 0"
+              ],
+              [
+                268,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                392,
+                "123",
+                "_ZN7AscendC11g_kfcClientE + 0"
+              ],
+              [
+                5288,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                5444,
+                "123",
+                "g_vecTPipePtr + 0"
+              ],
+              [
+                6012,
+                "123",
+                "g_vecTPipePtr + 0"
+              ]
+            ]
+          }
+        },
+        "fallback_metadata": {
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+          ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100"
+        }
+      }
+    },
+    "comparisons": {
+      "failed": {
+        "functions_identical": {
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false
+        },
+        "normalized_identical": {
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true
+        },
+        "normalized_identical_count": 8,
+        "identical_count": 0,
+        "metadata_identical": true
+      },
+      "candidate": {
+        "functions_identical": {
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false
+        },
+        "normalized_identical": {
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+          "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true
+        },
+        "normalized_identical_count": 15,
+        "identical_count": 0,
+        "metadata_identical": true
+      }
+    }
+  },
+  "limits": [
+    "未运行完整矩阵、大 K 回归、真实 NPU 或设备图重放。",
+    "未重复已在上轮超时的正式模板独立入口；该限制尚未解决。",
+    "只对重定位指令字做 4B 屏蔽并比较目标符号和加数，未证明整个 ELF 一致。"
+  ]
+}
