@@ -52,7 +52,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 tests/run_simulator_matrix.py \
 
 输出目录必须尚不存在，以免覆盖已有证据。**默认只执行最小用例 0，每组模型运行上限为 2 分钟**；`--cases=0,8` 可指定定向场景，`--timeout-minutes` 可调整上限。完整 72 组需显式传入 `--all-cases`，大规模仿真须事先征得用户同意，不能默认启动。仿真应用复用上述量化输入、随机种子、FP64 golden 和误差判定，并使用模型报告的 Cube 核数。`--core-id=0` 仅限制解析核，不限制核函数只执行一个核。
 
-每组必须同时满足应用打印 `SIM_CORRECTNESS_PASS`、没有超时、工具正常退出，以及两次 Compute 和两次 Finish 对应的四份非空 `visualize_data.bin`。`summary.json` 保存库哈希、Git 版本、命令、逐组结果和 BIN 哈希。源码行映射由 `-g` 提供，正常编译优化保持启用。
+每组必须同时满足应用打印 `SIM_CORRECTNESS_PASS`、没有超时、工具正常退出，以及两次调用恰好对应两次 `Compute` 启动和两份非空 `visualize_data.bin`。最终求和在 `Compute` 内完成，不另启动 `Finish`，符合 OJ 每次迭代只能启动一个 kernel 的规则。采集上限保留为四，便于检测意外多启动。`summary.json` 保存库哈希、Git 版本、命令、逐组启动名称和 BIN 哈希。源码行映射由 `-g` 提供，正常编译优化保持启用。
 
 软件模型时间只用于定位指令与同步行为，不等于真实 NPU 的 Task Duration，也不用于计算比赛得分。`simulator_matrix.py` 默认拒绝脱离模型环境运行；显式 `--real-npu` 才进入上板验证流程。
 

@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -52,11 +53,15 @@ def main():
         record["bins"] = [dict(path=str(path.relative_to(folder)), size=path.stat().st_size,
                                sha256=hashlib.sha256(path.read_bytes()).hexdigest())
                           for path in bins]
-        # 两次调用各有 Compute / Finish，共四份 BIN；工具零退出码本身不足以证明成功。
+        launches = re.findall(r"Start profiling on kernel: (\S+)", text)
+        record["profiled_launches"] = launches
+        # 两次调用只能各启动一次 Compute；采集上限为四，能暴露旧实现多启动的问题。
         record["passed"] = bool(record.get("passed") and process.returncode == 0
                                 and "SIM_CORRECTNESS_PASS" in text
                                 and "timeout has reached" not in text
-                                and len(bins) == 4
+                                and len(launches) == 2
+                                and all("Compute" in name for name in launches)
+                                and len(bins) == 2
                                 and all(item["size"] > 0 for item in record["bins"]))
         records.append(record)
         (folder / "summary.json").write_text(

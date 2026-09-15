@@ -1,0 +1,167 @@
+{
+  "library": "/mnt/newdisk/code/CANN-challenge/Build/SingleLaunch20260915/libsimulator_bridge.so",
+  "library_sha256": "66613d382c207c226ceaff5b44429405e7eb8f12edc8885bddf8211519ae6ec6",
+  "git_commit": "b1eeb9f26a664a1b4e01fea21555addbfb05d4e6",
+  "soc": "Ascend910B3",
+  "results": [
+    {
+      "case": 0,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/SingleLaunchChecks20260915/case0",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/SingleLaunch20260915/libsimulator_bridge.so",
+        "--case=0",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/SingleLaunchChecks20260915/case0.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case0/OPPROF_20260915125856_OMDDSLCPATWJUGIY/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 7334176,
+          "sha256": "43a3330effc4f0340d0c5677e29c1ac228cc899308f7c5a16325e2ba38a578c7"
+        },
+        {
+          "path": "case0/OPPROF_20260915125856_OMDDSLCPATWJUGIY/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 7100924,
+          "sha256": "dffbee87bd7d34049b617b1ec458c59a55ca56cd7c1cb312d18ffea5e5c044f4"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ]
+    },
+    {
+      "case": 8,
+      "label": "双维尾块",
+      "shape": [
+        2,
+        33,
+        129,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 3.0517578125e-05,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/SingleLaunchChecks20260915/case8",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/SingleLaunch20260915/libsimulator_bridge.so",
+        "--case=8",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/SingleLaunchChecks20260915/case8.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case8/OPPROF_20260915125909_NWCJLMEGAATOOIOS/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 14276776,
+          "sha256": "8b14149f24d940125026283f654741b408d2885c9b2b31d91ade696e09f43dd8"
+        },
+        {
+          "path": "case8/OPPROF_20260915125909_NWCJLMEGAATOOIOS/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 14010600,
+          "sha256": "26be72154369f79e58f1d6b784d12e8d1d9d6972b941ecd9e72369edc5068a9a"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ]
+    },
+    {
+      "case": 15,
+      "label": "双维尾块",
+      "shape": [
+        2,
+        33,
+        129,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.52587890625e-05,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/SingleLaunchChecks20260915/case15",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/SingleLaunch20260915/libsimulator_bridge.so",
+        "--case=15",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/SingleLaunchChecks20260915/case15.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case15/OPPROF_20260915125926_WERLNILGTDAIFSJH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 14423616,
+          "sha256": "fe7a46c9d0a9b334a9ff7b5cc53bfa5da5782a5c382286999401e56a6479e6fe"
+        },
+        {
+          "path": "case15/OPPROF_20260915125926_WERLNILGTDAIFSJH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 14126416,
+          "sha256": "a9f1cbf044f4d1a9e4a0fe1bc3bb5b4e83c046e4f7b53817b52e5579a7ce4cd8"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ]
+    }
+  ],
+  "source_base_commit": "0e8321f7a6223ee1b14a3386e0bb9ffa84bc931d",
+  "source_commit_note": "测试时工作区源码随后原样提交；未在提交前后修改被测 kernel。",
+  "kernel_sha256": "2fcc7a87a869fa35458ff79c59e4f7d04ef71d51c96f5eefed12b2cd4fd58850"
+}
