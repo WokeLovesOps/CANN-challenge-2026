@@ -1,0 +1,60 @@
+{
+  "library": "/mnt/newdisk/code/CANN-challenge/Build/SingleCoreBarrier20260915/libsimulator_bridge.so",
+  "library_sha256": "2cf37ae175bb5b7d05db724ad5f69511b7c4103a123cef6a3b70460c6aaec127",
+  "git_commit": "a5421705174e68506e31be6f0e7052bccda75742",
+  "soc": "Ascend910B3",
+  "results": [
+    {
+      "case": 0,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/SingleCoreBarrierChecks20260915/case0",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/SingleCoreBarrier20260915/libsimulator_bridge.so",
+        "--case=0",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/SingleCoreBarrierChecks20260915/case0.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case0/OPPROF_20260915135749_MOULBDJOZEQNEQPD/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 7334764,
+          "sha256": "302a9eb408188bbcea09270b85c5c71fb88e45d993176eb7108816aa7a591dc0"
+        },
+        {
+          "path": "case0/OPPROF_20260915135749_MOULBDJOZEQNEQPD/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 7101484,
+          "sha256": "f31df24b5eb16ea8c8388235907b70d2fdb5f73f07cf020ca701b8da6d9641ff"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ]
+    }
+  ]
+}
