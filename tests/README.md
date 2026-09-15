@@ -50,8 +50,22 @@ PYTHONDONTWRITEBYTECODE=1 python3 tests/run_simulator_matrix.py \
     --output=Build/SimulatorValidationResults
 ```
 
-输出目录必须尚不存在，以免覆盖已有证据。运行器顺序执行全部 72 组，默认每组模型运行上限为 10 分钟，可用 `--timeout-minutes` 调整；`--cases=0,8` 可指定需要复现的场景。仿真应用复用上述量化输入、随机种子、FP64 golden 和误差判定，并使用模型报告的 Cube 核数。`--core-id=0` 仅限制解析核，不限制核函数只执行一个核。
+输出目录必须尚不存在，以免覆盖已有证据。**默认只执行最小用例 0，每组模型运行上限为 2 分钟**；`--cases=0,8` 可指定定向场景，`--timeout-minutes` 可调整上限。完整 72 组需显式传入 `--all-cases`，大规模仿真须事先征得用户同意，不能默认启动。仿真应用复用上述量化输入、随机种子、FP64 golden 和误差判定，并使用模型报告的 Cube 核数。`--core-id=0` 仅限制解析核，不限制核函数只执行一个核。
 
 每组必须同时满足应用打印 `SIM_CORRECTNESS_PASS`、没有超时、工具正常退出，以及两次 Compute 和两次 Finish 对应的四份非空 `visualize_data.bin`。`summary.json` 保存库哈希、Git 版本、命令、逐组结果和 BIN 哈希。源码行映射由 `-g` 提供，正常编译优化保持启用。
 
-软件模型时间只用于定位指令与同步行为，不等于真实 NPU 的 Task Duration，也不用于计算比赛得分。`simulator_matrix.py` 会拒绝脱离模型环境直接运行；普通 NPU 测试命令仍属于上板验证流程。
+软件模型时间只用于定位指令与同步行为，不等于真实 NPU 的 Task Duration，也不用于计算比赛得分。`simulator_matrix.py` 默认拒绝脱离模型环境运行；显式 `--real-npu` 才进入上板验证流程。
+
+## 计算图捕获检查
+
+`simulator_matrix.py --capture` 执行一次普通调用，再捕获一次并重放两次，逐次检查输出、保护区和逐字节重复一致性。工作区必须存活到图销毁；仅能结束捕获不算功能通过。
+
+本地 CANN 9.0 模型流程尚未通过图重放对照检查：独立常数写入核也未在重放后更新输出。真实 NPU 验证需在得到授权后，在目标机器本地构建共享库，再执行以下命令，不能把 x86_64 库复制给 aarch64 Host 使用：
+
+```bash
+OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 PYTHONDONTWRITEBYTECODE=1 \
+python3 tests/simulator_matrix.py Build/SimulatorValidation/libsimulator_bridge.so \
+    --case=0 --capture --real-npu --report=Build/capture-npu-case0.json
+```
+
+第 26 号场景可用 `--case=26` 复现大 K 转置输入保护检查；不加 `--capture` 时执行普通连续两次调用。若输入被修改，JSON 记录首批差异字节，报告旁保存对应输入的 `.before.bin` 和 `.after.bin`。

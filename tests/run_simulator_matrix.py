@@ -12,8 +12,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("library", type=Path)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--cases", default=",".join(map(str, range(72))))
-    parser.add_argument("--timeout-minutes", type=int, default=10)
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument("--cases", default="0", help="默认只运行最小用例 0")
+    selection.add_argument("--all-cases", action="store_true", help="显式运行完整 72 组矩阵，耗时较长")
+    parser.add_argument("--timeout-minutes", type=int, default=2)
     args = parser.parse_args()
     folder = args.output.resolve()
     folder.mkdir(parents=True, exist_ok=False, mode=0o700)
@@ -28,7 +30,8 @@ def main():
     environment.update(OPENBLAS_NUM_THREADS="2", OMP_NUM_THREADS="2",
                        PYTHONDONTWRITEBYTECODE="1")
     application = Path(__file__).with_name("simulator_matrix.py").resolve()
-    for index in map(int, args.cases.split(",")):
+    indices = range(72) if args.all_cases else map(int, args.cases.split(","))
+    for index in indices:
         report = folder / f"case{index}.json"
         log = folder / f"case{index}.log"
         output = folder / f"case{index}"

@@ -1,0 +1,91 @@
+2026-09-15 12:39:37 [INFO]  Op profiling analysis start.
+2026-09-15 12:39:37 [INFO]  Running simulation task: Binary Simulation Running, use simulator Ascend910B3 by --soc-version
+aclInit 0
+[INFO] Config file [config_stars.json] from environment variable [CAMODEL_CONFIG_PATH]. Path: /mnt/newdisk/code/CANN-challenge/Build/CaptureControlTrace20260915/OPPROF_20260915123937_ZBPJXUPNJKQVOFEK/device0/tmp_dump/config/config_stars.json
+[INFO] Config file is found, path is /mnt/newdisk/code/CANN-challenge/Build/CaptureControlTrace20260915/OPPROF_20260915123937_ZBPJXUPNJKQVOFEK/device0/tmp_dump/config/config_stars.json.
+[FuncCache]: size:0x20000, line_size:128, way_num:16, line_num:1024, idx_num:64
+             idx_lsb:7, idx_mask:0x3f, tag_lsb:13, tag_mask:0xffffffffffffffff, ofst_mask:0x7f
+
+[TmSim]: Run in parallel worker mode, core num is: 24
+
+[INFO] Config file [config.json] from environment variable [CAMODEL_CONFIG_PATH]. Path: /mnt/newdisk/code/CANN-challenge/Build/CaptureControlTrace20260915/OPPROF_20260915123937_ZBPJXUPNJKQVOFEK/device0/tmp_dump/config/config.json
+aclrtSetDevice 0
+aclrtCreateStream 0
+aclrtMalloc 0
+[INFO] AicWrapper attach AIC 0, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 1, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 2, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 3, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 4, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 5, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 6, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 7, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 8, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 9, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 10, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 11, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 12, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 13, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 14, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 15, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 16, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 17, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 18, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 19, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 20, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 21, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 22, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 23, num_vec_core=2, num_subcore=3
+[INFO] Chip 0 AIC / Scheduler / Soc periods: 200.0000 / 200.0000 / 105.0000
+[INFO] chip 0 die 0 device created
+>> Start ModelParsim with 16 threads for 25 thread units, mode is 0
+================================================================================
+>>>>                                                                        
+>>>>                             " PEM MODEL "                                
+>>>>             Total no. of 1 chip(s) Model Init Success!                
+>>>>                                                                        
+================================================================================
+[INFO] Model Start Time: 2026-09-15 12:39:38
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:0 swapbuf_addr:10000000
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:1 swapbuf_addr:10000040
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:2 swapbuf_addr:10000080
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:3 swapbuf_addr:100000c0
+2026-09-15 12:39:38 [INFO]  Kernel _Z4FillPhi skipped: not selected via --kernel-name.
+aclrtSynchronizeStream 0
+aclrtMemcpy 0
+NORMAL (42, 42, 42, 42, 42, 42, 42, 42)
+aclmdlRICaptureBegin 0
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:4 swapbuf_addr:10000100
+2026-09-15 12:39:38 [INFO]  Kernel _Z4FillPhi skipped: not selected via --kernel-name.
+aclmdlRICaptureEnd 0
+aclrtMemcpy 0
+aclmdlRIExecuteAsync 0
+aclrtSynchronizeStream 0
+aclrtMemcpy 0
+CAPTURE (77, 77, 77, 77, 77, 77, 77, 77)
+aclmdlRIDestroy 0
+aclrtFree 0
+aclrtDestroyStream 0
+[INFO] Model Stop Time: 2026-09-15 12:39:38
+Model RUN TIME: 468.133 ms
+aclrtResetDevice 0
+aclFinalize 0
+[INFO] Total tick: 1994
+[INFO] Model stopped successfully.
+Traceback (most recent call last):
+  File "/mnt/newdisk/code/CANN-challenge/Build/CaptureControl20260915/probe.py", line 44, in <module>
+    assert actual == (43,)*8, actual
+           ^^^^^^^^^^^^^^^^^
+AssertionError: (77, 77, 77, 77, 77, 77, 77, 77)
+2026-09-15 12:39:39 [WARN]  Child process exited with status 256
+2026-09-15 12:39:41 [WARN]  Profiling running finished. May cause generating performance files to fail.
+2026-09-15 12:39:41 [WARN]  Running task failed, data parsing start
+2026-09-15 12:39:41 [INFO]  Start parse dump file
+2026-09-15 12:39:41 [INFO]  Profiling results saved in /mnt/newdisk/code/CANN-challenge/Build/CaptureControlTrace20260915/OPPROF_20260915123937_ZBPJXUPNJKQVOFEK
+2026-09-15 12:39:41 [INFO]  Profiling data parse finished.
+2026-09-15 12:39:41 [INFO]  Op profiling finish. Welcome to next use.

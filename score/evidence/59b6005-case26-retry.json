@@ -1,0 +1,64 @@
+{
+  "library": "/mnt/newdisk/code/CANN-challenge/Build/ResumeFix20260915/libsimulator_bridge.so",
+  "library_sha256": "787a61f6fdbede56c60365cda1206844e19db76530d5769346db7ca2f3f87d6e",
+  "git_commit": "d998e309b8cdc5323dbcc172f281078f28bac6d2",
+  "soc": "Ascend910B3",
+  "results": [
+    {
+      "case": 26,
+      "label": "最大K",
+      "shape": [
+        1,
+        33,
+        129,
+        8192
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.00048828125,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=5",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/ResumeCase26Diagnostic20260915/case26",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/ResumeFix20260915/libsimulator_bridge.so",
+        "--case=26",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/ResumeCase26Diagnostic20260915/case26.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case26/OPPROF_20260915122604_HUMJRCWIFSZCOXUR/_ZN13batch_max_sum6FinishEPhS0_jj/0/simulator/visualize_data.bin",
+          "size": 914568,
+          "sha256": "7797a66f84704ebcfaf92c161df0d5be40b81edc490697e7234fbdfc85928ecb"
+        },
+        {
+          "path": "case26/OPPROF_20260915122604_HUMJRCWIFSZCOXUR/_ZN13batch_max_sum6FinishEPhS0_jj/1/simulator/visualize_data.bin",
+          "size": 904196,
+          "sha256": "37d5379782b65510ca6ae0755d66180089cc9fbb502d4c66895466f3b3147773"
+        },
+        {
+          "path": "case26/OPPROF_20260915122604_HUMJRCWIFSZCOXUR/_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 145139072,
+          "sha256": "fd0f7f135c0aeca3c9271d7e116cfce607cc6cb166dcf295cc987575525ccd13"
+        },
+        {
+          "path": "case26/OPPROF_20260915122604_HUMJRCWIFSZCOXUR/_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 146578916,
+          "sha256": "8cf2c7c435b461015a811867015016b8b09b84fadd853426dd52d1974d8062c7"
+        }
+      ]
+    }
+  ]
+}

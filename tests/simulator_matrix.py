@@ -33,9 +33,14 @@ def main():
     parser.add_argument("library", type=Path)
     parser.add_argument("--case", type=int, required=True, choices=range(72))
     parser.add_argument("--report", type=Path, required=True)
+    parser.add_argument("--capture", action="store_true", help="先普通调用，再捕获并重放两次")
+    parser.add_argument("--real-npu", action="store_true", help="明确选择真实 NPU 验证")
     args = parser.parse_args()
-    if os.environ.get("IS_SIMULATOR_ENV", "").lower() != "true":
-        raise RuntimeError("本入口必须由 msprof op simulator 启动")
+    simulated = os.environ.get("IS_SIMULATOR_ENV", "").lower() == "true"
+    if not simulated and not args.real_npu:
+        raise RuntimeError("本入口必须由 msprof op simulator 启动；上板需显式 --real-npu")
+    if simulated and args.real_npu:
+        raise RuntimeError("模型环境不能记为真实 NPU 运行")
 
     cases = list(itertools.product(SHAPES, (1, 2), (False, True), (False, True)))
     (label, batch, m, n, k), dtype_id, trans_a, trans_b = cases[args.case]
@@ -52,7 +57,8 @@ def main():
     stored_a = np.ascontiguousarray(a.swapaxes(-1, -2) if trans_a else a)
     stored_b = np.ascontiguousarray(b.swapaxes(-1, -2) if trans_b else b)
     record = dict(case=args.case, label=label, shape=[batch, m, n, k],
-                  dtype=str(dtype), transpose=[trans_a, trans_b], passed=False)
+                  dtype=str(dtype), transpose=[trans_a, trans_b], capture=args.capture,
+                  execution="simulator" if simulated else "npu", passed=False)
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n")
 
@@ -95,6 +101,7 @@ def main():
     guard = b"\xa5" * (batch * 4 + 128)
     buffers = originals + [guard]
     addresses = []
+    model = ptr()
     try:
         for raw in buffers:
             address = ptr()
@@ -107,12 +114,20 @@ def main():
                  for i, shape in enumerate(shapes)]
         groups = [TensorGroupInfo(c.pointer(info), 1) for info in infos]
         previous = None
-        for repeat in range(2):
+        for repeat in range(3 if args.capture else 2):
             check(memcpy, addresses[2], len(guard), c.c_char_p(guard), len(guard), 1)
             print(f"CASE_{args.case}_CALL_{repeat + 1}_BEGIN", flush=True)
-            run(addresses[0], c.byref(groups[0]), addresses[1], c.byref(groups[1]),
-                ptr(addresses[2].value + 64), c.byref(groups[2]), cores.value,
-                stream, trans_a, trans_b)
+            if args.capture and repeat == 1:
+                check(bind("aclmdlRICaptureBegin", [ptr, c.c_int]), stream, 0)
+            if repeat < 2:
+                run(addresses[0], c.byref(groups[0]), addresses[1], c.byref(groups[1]),
+                    ptr(addresses[2].value + 64), c.byref(groups[2]), cores.value,
+                    stream, trans_a, trans_b)
+            if args.capture and repeat == 1:
+                check(bind("aclmdlRICaptureEnd", [ptr, c.POINTER(ptr)]), stream, c.byref(model))
+                print("CAPTURE_END_PASS", flush=True)
+            if args.capture and repeat >= 1:
+                check(bind("aclmdlRIExecuteAsync", [ptr, ptr]), model, stream)
             check(bind("aclrtSynchronizeStream", [ptr]), stream)
             output = c.create_string_buffer(len(guard))
             check(memcpy, output, len(guard), addresses[2], len(guard), 2)
@@ -127,11 +142,21 @@ def main():
             previous = raw
             record["max_abs_error"] = float(np.max(np.abs(actual - expected)))
             print(f"CASE_{args.case}_CALL_{repeat + 1}_PASS", flush=True)
-        for address, original in zip(addresses, originals):
+        for input_index, (address, original) in enumerate(zip(addresses, originals)):
             output = c.create_string_buffer(len(original))
             check(memcpy, output, len(original), address, len(original), 2)
             if output.raw != original:
-                raise AssertionError("输入被修改")
+                actual_bytes = np.frombuffer(output.raw, dtype=np.uint8)
+                expected_bytes = np.frombuffer(original, dtype=np.uint8)
+                changed = np.flatnonzero(actual_bytes != expected_bytes)
+                record["input_corruption"] = dict(
+                    input=input_index + 1, changed_bytes=int(changed.size),
+                    first_offsets=changed[:32].tolist(),
+                    expected=expected_bytes[changed[:32]].tolist(),
+                    actual=actual_bytes[changed[:32]].tolist())
+                args.report.with_suffix(f".x{input_index + 1}.before.bin").write_bytes(original)
+                args.report.with_suffix(f".x{input_index + 1}.after.bin").write_bytes(output.raw)
+                raise AssertionError(f"输入 {input_index + 1} 被修改，共 {changed.size} 字节")
         record["passed"] = True
         print("SIM_CORRECTNESS_PASS", flush=True)
     except Exception as error:
@@ -139,6 +164,8 @@ def main():
         raise
     finally:
         args.report.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n")
+        if model.value:
+            check(bind("aclmdlRIDestroy", [ptr]), model)
         for address in addresses:
             check(free, address)
         check(bind("aclrtDestroyStream", [ptr]), stream)

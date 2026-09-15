@@ -1,0 +1,169 @@
+{
+  "library": "/mnt/newdisk/code/CANN-challenge/Build/CaptureFix20260915/libsimulator_bridge.so",
+  "library_sha256": "c46223d1129d10384b67d85a76206564676275c6eb4763fdcb2ffd4ca4e49e12",
+  "git_commit": "c4878abd7da0053062f8fa85c2ea57e7b941d9eb",
+  "soc": "Ascend910B3",
+  "results": [
+    {
+      "case": 0,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=10",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/CaptureFixRegression20260915/case0",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/CaptureFix20260915/libsimulator_bridge.so",
+        "--case=0",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/CaptureFixRegression20260915/case0.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case0/OPPROF_20260915124137_FTMBGEZMLPJKMJVK/_ZN13batch_max_sum6FinishEPhS0_jj/0/simulator/visualize_data.bin",
+          "size": 915416,
+          "sha256": "a6b487ca2fc88a8804797492c050386ed50af32012972efd0c3af67e8a791cac"
+        },
+        {
+          "path": "case0/OPPROF_20260915124137_FTMBGEZMLPJKMJVK/_ZN13batch_max_sum6FinishEPhS0_jj/1/simulator/visualize_data.bin",
+          "size": 905092,
+          "sha256": "f3efd9ecdb0a7ec1eccbc481abbb47bbd32378c2603d626fe036160482e82493"
+        },
+        {
+          "path": "case0/OPPROF_20260915124137_FTMBGEZMLPJKMJVK/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 6980244,
+          "sha256": "e9cc71f6a1564c4f9f4656766bfcf502c7219ccd6367219f3d50dc6915ae311a"
+        },
+        {
+          "path": "case0/OPPROF_20260915124137_FTMBGEZMLPJKMJVK/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 6746196,
+          "sha256": "1540b41f1f8b86e3ae6ca649e09e1084d174751ae6e8c9ed7191f6a209d606dc"
+        }
+      ]
+    },
+    {
+      "case": 8,
+      "label": "双维尾块",
+      "shape": [
+        2,
+        33,
+        129,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 3.0517578125e-05,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=10",
+        "--output=/mnt/newdisk/code/CANN-challenge/Build/CaptureFixRegression20260915/case8",
+        "/usr/bin/python3",
+        "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+        "/mnt/newdisk/code/CANN-challenge/Build/CaptureFix20260915/libsimulator_bridge.so",
+        "--case=8",
+        "--report=/mnt/newdisk/code/CANN-challenge/Build/CaptureFixRegression20260915/case8.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case8/OPPROF_20260915124154_TCWDUZFCHNLANHMJ/_ZN13batch_max_sum6FinishEPhS0_jj/0/simulator/visualize_data.bin",
+          "size": 990696,
+          "sha256": "92effacf29c238141148388057af80979252a529e93ebc4436e759ebf1cd22a4"
+        },
+        {
+          "path": "case8/OPPROF_20260915124154_TCWDUZFCHNLANHMJ/_ZN13batch_max_sum6FinishEPhS0_jj/1/simulator/visualize_data.bin",
+          "size": 980280,
+          "sha256": "3f8a761e4931ae777aac1e73ef266dc19d0823185e67fb01599f6fc3d5fc1544"
+        },
+        {
+          "path": "case8/OPPROF_20260915124154_TCWDUZFCHNLANHMJ/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 13939116,
+          "sha256": "04fba7d41a5a61d43e0559fb37348ba3356fae78457bea30bd6fe381dad16cf1"
+        },
+        {
+          "path": "case8/OPPROF_20260915124154_TCWDUZFCHNLANHMJ/_ZN13batch_max_sum7ComputeIDhLb0ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 13642988,
+          "sha256": "c8db5073891647d5d86da7575b8503199c8ab6df5fe3cbed0cb557da9bbeb743"
+        }
+      ]
+    },
+    {
+      "case": 26,
+      "label": "最大K",
+      "shape": [
+        1,
+        33,
+        129,
+        8192
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.00048828125,
+      "bins": [
+        {
+          "path": "case26/OPPROF_20260915124216_FTJDEWTHUGFWCWKJ/_ZN13batch_max_sum6FinishEPhS0_jj/0/simulator/visualize_data.bin",
+          "size": 915408,
+          "sha256": "512ff26b66b0fdb2f16428b11ed2c7a0d0f31dd49204ae417d9c25b9a3cdebe7"
+        },
+        {
+          "path": "case26/OPPROF_20260915124216_FTJDEWTHUGFWCWKJ/_ZN13batch_max_sum6FinishEPhS0_jj/1/simulator/visualize_data.bin",
+          "size": 905048,
+          "sha256": "dd54e9fd4cb5a7641b8868fbb77f69628d49392a1df3937c783047cfeb9de1c5"
+        },
+        {
+          "path": "case26/OPPROF_20260915124216_FTJDEWTHUGFWCWKJ/_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 145137912,
+          "sha256": "77f9a4ab325977c6279cbb21d9a3786ed38203776d8cd160879856fc202a6da4"
+        },
+        {
+          "path": "case26/OPPROF_20260915124216_FTJDEWTHUGFWCWKJ/_ZN13batch_max_sum7ComputeIDhLb1ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+          "size": 146579148,
+          "sha256": "33b3adb722b00e0294acfa96db18efb9e378774d67552dcd0f6dcee6553f8cdf"
+        }
+      ],
+      "recovered_after_stop": true,
+      "note": "停止请求后离线核验已有日志和四份 BIN，未重新运行仿真。"
+    }
+  ],
+  "not_run": [
+    48
+  ]
+}
