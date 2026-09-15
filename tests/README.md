@@ -141,3 +141,18 @@ python3 tests/simulator_matrix.py Build/SimulatorValidation/libsimulator_bridge.
 | 320–327 | 1,16,16,32 | 对齐小矩阵的替代假设 |
 
 每行的八个编号依次覆盖 FP16/BF16 和四种转置属性。单点积的四种实际存储布局均为连续 K 个元素，但仍检查属性不会影响正确性。隐藏点 1 的形状没有被确认；模板最小输入、历史用时和参考 TBest 只用于排列候选假设，不能把本地 case 0 等同于 OJ 点 1。
+
+
+### 同进程核函数切换诊断
+
+`simulator_sequence.py` 针对 `4d1aa53` 平台点 1 通过、点 2 首次 DeviceProf 预热失败补充普通调用诊断。同一进程、同一 ACL 上下文、同一共享库和 stream 内切换纯 Vector 点积与通用混合核，每段两次调用，保留逐段精度、输入保护、输出保护和重复一致性检查。只允许列出的随机输入用例，输入生成与矩阵入口相同；不覆盖其他特殊数值场景，不支持实际设备或图捕获模式。
+
+```bash
+source /mnt/newdisk/Ascend/cann-9.0.0/set_env.sh
+msprof op simulator --soc-version=Ascend910B3 --core-id=0 \
+  --launch-count=12 --timeout=2 --output=Build/新建序列输出目录 \
+  python3 tests/simulator_sequence.py Build/SmallDot20260916/libsimulator_bridge.so \
+  --cases=0,318,0,262,6,14 --report=Build/新建序列报告.json
+```
+
+完整序列需检查应用的 `SIM_SEQUENCE_PASS`、JSON passed=true，以及 12 次预期启动和 12 份非空 BIN。应用成功不替代 DeviceProf 预热重放成功；失败即保存已执行段和未通过状态。此次本地序列通过，尚未复现或修复平台 507015，详见 [测试记录](../score/BatchMatmulMaxSum.md)。

@@ -1,0 +1,1410 @@
+{
+  "library": "/mnt/newdisk/code/CANN-challenge/Build/SmallDot20260916/libsimulator_bridge.so",
+  "library_sha256": "b975c7402c433519416632cf8a50f9e712ac3c8fbf3f8cb22eb00080ff9b71d3",
+  "execution": "simulator",
+  "cases": [
+    0,
+    318,
+    0,
+    262,
+    6,
+    14
+  ],
+  "passed": true,
+  "results": [
+    {
+      "position": 0,
+      "case": 0,
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "passed": true,
+      "max_abs_error": 5.960464477539063e-08
+    },
+    {
+      "position": 1,
+      "case": 318,
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 2,
+      "case": 0,
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "passed": true,
+      "max_abs_error": 5.960464477539063e-08
+    },
+    {
+      "position": 3,
+      "case": 262,
+      "shape": [
+        1,
+        1,
+        1,
+        264
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "passed": true,
+      "max_abs_error": 5.960464477539063e-08
+    },
+    {
+      "position": 4,
+      "case": 6,
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 5,
+      "case": 14,
+      "shape": [
+        2,
+        33,
+        129,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "passed": true,
+      "max_abs_error": 3.0517578125e-05
+    }
+  ],
+  "available_cores": 20,
+  "source_commit": "4d1aa53",
+  "soc": "Ascend910B3",
+  "cann": "9.0.0",
+  "parsed_core_ids": "0",
+  "command": "msprof op simulator --soc-version=Ascend910B3 --core-id=0 --launch-count=12 --timeout=2 --output=Build/DotSwitch20260916/profile python3 tests/simulator_sequence.py Build/SmallDot20260916/libsimulator_bridge.so --cases=0,318,0,262,6,14 --report=Build/DotSwitch20260916/report.json",
+  "profiled_launches": [
+    "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+    "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+    "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+    "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+    "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+    "_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j",
+    "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+    "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+    "_ZN13batch_max_sum10ComputeDotIu6__bf16EEvPhS1_S1_j",
+    "_ZN13batch_max_sum10ComputeDotIu6__bf16EEvPhS1_S1_j",
+    "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE",
+    "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+  ],
+  "bins": [
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/3/simulator/visualize_data.bin",
+      "size": 9097796,
+      "sha256": "62c3cc697462a9b1b2e214ab6eaf0ba20a9b02268a3fc4e75493a5019b907ff6"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+      "size": 7548164,
+      "sha256": "891656b9c529f21bc5ca44d7a87396356c0fe84202d9ca1b177443172f31eae3"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/2/simulator/visualize_data.bin",
+      "size": 9098860,
+      "sha256": "7e8d6b7829b929163eea9f1ed58a275edc1798df0008a1987db529a19c7c3846"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/4/simulator/visualize_data.bin",
+      "size": 10349580,
+      "sha256": "4016f18a39aa5338cd22556c3a5ee0f14c307888ad2eb52dda2b6529f4788314"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+      "size": 7296528,
+      "sha256": "33d772745b2c81aff7bdeea3280d0b4ff5a347bea5bb88216a27ae0fd34e5d10"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/5/simulator/visualize_data.bin",
+      "size": 10193576,
+      "sha256": "e33f8179ea9519f8e37951e624b91101ecb2cf27cd1dba84cc35ab434259d1a5"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum10ComputeDotIu6__bf16EEvPhS1_S1_j/0/simulator/visualize_data.bin",
+      "size": 1188788,
+      "sha256": "23d3c64df82cd5d0cbd06de33c807bcc13d7f7682daee911f76cae3f44e97a1e"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum10ComputeDotIu6__bf16EEvPhS1_S1_j/1/simulator/visualize_data.bin",
+      "size": 1170616,
+      "sha256": "be4ad7a1e68da2dea877002893ab56c0991dce93c3f97b657342fc8bd57d0f27"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/3/simulator/visualize_data.bin",
+      "size": 1170252,
+      "sha256": "6a6231efc37f01a26f4e10322a5eddb2e50ed004ebc49b5f6ffd5458ad595fcb"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/simulator/visualize_data.bin",
+      "size": 1193136,
+      "sha256": "a2026a5f06580688dd5ab71d8b127b530bf1eefe6f52f44c7906105a18acd497"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/2/simulator/visualize_data.bin",
+      "size": 1170312,
+      "sha256": "b7651a4c38e0811927aeb6e5735d609ef792dd438e56ec46509f6a7c19650367"
+    },
+    {
+      "path": "Build/DotSwitch20260916/profile/OPPROF_20260916010347_EHZZHOZDZPZGULWZ/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/1/simulator/visualize_data.bin",
+      "size": 1170260,
+      "sha256": "d0ed01928e2c1ef6a226963fcd66c5f0ec7d3bda35c9d371ee246b071f81230f"
+    }
+  ],
+  "saved_log": "score/evidence/4d1aa53-dot-switch.txt",
+  "saved_log_sha256": "0a1f26d10ea61b54a7987ec94ae467f75d59b58f8a99471adc84a534e1e08c93",
+  "generator_sha256": "24acf15125f4f79cba72de7087bb7d2cab58138ad08c036bad4dc227cfd4d0db",
+  "binary_inspection": {
+    "baseline": {
+      "library": "Build/AdaptiveNAbi20260916/libsimulator_bridge.so",
+      "library_sha256": "46bdb11607f0136ed5bdee045fffc54ee28fecb580fa3e1dcddec847ae5e05a1",
+      "dwarf_sha256": "1526763acbbbbea9aaa5225771896f2246b5eb5c491272c626568d75e7d024ca",
+      "parameters": {
+        "size": 224,
+        "members": {
+          "batch": 0,
+          "m": 4,
+          "n": 8,
+          "k": 12,
+          "rowTiles": 16,
+          "cores": 20,
+          "cube": 24
+        }
+      },
+      "device_object": "Build/AdaptiveNAbiSmoke20260916/case0/OPPROF_20260916001324_KVCZAHCTIBRDCBGN/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/dump/aicore_binary.o",
+      "device_object_sha256": "1829497943dca7b8661cf52c013936d517cf4974478af76efc2a3263b68f2bfe",
+      "fallback_functions": {
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "14ad683c275fc871f02adeb0e3036f33884bdb688c63e2ce503c484a582dbfef",
+          "relocation_normalized_sha256": "78292211e94047ae14352a78b8a7e9ee1858b1eaedf8e38d7f01fa150c9d99eb",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "67de3e0a2f3379685ececbcfd57e9faf933d5dec40f39b2a16d50dd6e8b92235",
+          "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "cf10cd371d1e095da1926aaef9fb047c63e25e4631f5bd002837e7a064338e7f",
+          "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "3b026970f494f58cabef1ace23201e08202dc9f5f7126ff047c1c5326cc1bbe3",
+          "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "e9c4a70d89f1daed466b756c6e61e2cfcda622983d7c62eee01dee8dbd3553ef",
+          "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "e0243875fe2a90b733b19a3b636caa3b08f84033f5534f69e7450c17e6311241",
+          "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "1f0786b35736cbe7b3f6cc8e62a3ea56bf561ac1aaf46f8325b3f2c9b39ead6c",
+          "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "c5b39f2bccc11f096df1aa867caba826b14c7421339ee6b11025a7c62876290e",
+          "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7036,
+          "sha256": "1cb579a3dc59bae311d2770452f2c69656b223cdaccd8d256455eb12569381f2",
+          "relocation_normalized_sha256": "6e2da89cdd0a3703a2d404cedba70d9b90190e8eca2e4ae03d83159f052bd896",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5312,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5464,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6032,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7032,
+          "sha256": "15a96f0c52b5d87a4fa7c1ac923ddbf195e09f2f839df3386856bb967d7eee60",
+          "relocation_normalized_sha256": "17a049031caecfd050a054d1ed30d1d630d689e6fc8f49fb91152517870a6b28",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5296,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5452,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6020,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7048,
+          "sha256": "11a59a51e8094b71a5665c1e8ce608b2152d2e3eeadef187c5750f60d9fd0b48",
+          "relocation_normalized_sha256": "eae59a5bd8eb78d339ce02ae5fd5de6191a7e81f7542a74c026978aea6223a78",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5324,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5476,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6044,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7024,
+          "sha256": "149c4608bb3d06343b5eaa657aa85537fd31863b4ee45f543ec29006bfd7d345",
+          "relocation_normalized_sha256": "115faa062073dfdee3ad677f99cc63d0a98438e447c3e6ce7f8779bf1e676578",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5288,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5444,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6012,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7036,
+          "sha256": "d10feba4a7d59d2a4cf697763584a39efe2597af11b1ad36c0e54dcf3c689133",
+          "relocation_normalized_sha256": "575ca801258de26cfea442db0637f4962f9cff51795b69cfa32756150495e4da",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5312,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5464,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6032,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7032,
+          "sha256": "1dcb0fa8d4b10048a2b110463c3a2611547f49f06b2912189660ad5beded1cfd",
+          "relocation_normalized_sha256": "e32a2595468ccf8a988709de4801819b5326a3c7b1ca7058194badbda3a9a2ea",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5296,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5452,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6020,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7048,
+          "sha256": "2fe54fa344c5d441cfdbb36bda943e314f497a34285479d23bb218b92d2da0c5",
+          "relocation_normalized_sha256": "e4a4525841d512d8c290e11d984a3b991bcdeca5e911b02f50f6b61c132955f4",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5324,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5476,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6044,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7024,
+          "sha256": "a7ce7d23a8228c3c9d013b71809c6bb0ad9384c79236ce1df82991658989f269",
+          "relocation_normalized_sha256": "38792ee857113e6a6c6ce48a4a3cfeeec7b0b8d36f7202f95737c9de2895e8bb",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5288,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5444,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6012,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        }
+      },
+      "fallback_metadata": {
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100"
+      }
+    },
+    "candidate": {
+      "library": "Build/SmallDot20260916/libsimulator_bridge.so",
+      "library_sha256": "b975c7402c433519416632cf8a50f9e712ac3c8fbf3f8cb22eb00080ff9b71d3",
+      "dwarf_sha256": "c176041f5104ed96b8433b9774d60340afb3000218b44cbe1dea2c34c2f689c4",
+      "parameters": {
+        "size": 224,
+        "members": {
+          "batch": 0,
+          "m": 4,
+          "n": 8,
+          "k": 12,
+          "rowTiles": 16,
+          "cores": 20,
+          "cube": 24
+        }
+      },
+      "device_object": "Build/SmallDotSmoke20260916/case0/OPPROF_20260916004643_PRYAMCGDFQTWWZXF/_ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j/0/dump/aicore_binary.o",
+      "device_object_sha256": "ee4e7b33070901b497fdb0c1390d73d64dc943ba0d0516930a877c5e0cdd53a3",
+      "fallback_functions": {
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "93797d29ae4b96b1926bad30d3c1762ff13b8f69cdbcd950af8065b89913bb91",
+          "relocation_normalized_sha256": "78292211e94047ae14352a78b8a7e9ee1858b1eaedf8e38d7f01fa150c9d99eb",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "f9f6d8c0442fe2f37724a8308fbed150ca319ec49a8abe7529515bfc8207f3e9",
+          "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "55196a55be0d60d29cb2931f23b9d59223544111cebb374fb17f0a6e0b25d3d5",
+          "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "b0c65ae21073aba686cf7355fce99e617352e1b282f009d5675fe588583b2e7f",
+          "relocation_normalized_sha256": "7fa10d18c918e109e1228b582462364c0996ff1bd4fc1757369a7c8386f59f12",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "8ec260c9e16a8ff3d996bbfc6bc8e4b7c573e6d8cb7941283dd1a0182865ebba",
+          "relocation_normalized_sha256": "72f92e334112db7ccd2f238ef10cec10432c04453978d44ddc3541950586cd09",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "cf76e75d06975d48d8b73070493577e4fdd35e70d68dbee996a396a258744e2c",
+          "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "34326405d91e0e720f552ad627db79411814398e36879ff99652298b98f3d965",
+          "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+          "bytes": 17364,
+          "sha256": "ed6bcf1e12bd86d6556258c0c9312a6c0add2b0d91bab2095acea37cb0a94178",
+          "relocation_normalized_sha256": "a2816e7ca0134050d83fcab589414d81df7122f0c031c24af226c1dcd5438218",
+          "relocations": [
+            [
+              44,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              88,
+              "13a",
+              "__init_kfc_workspace_addr.cube + 0"
+            ],
+            [
+              300,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ],
+            [
+              2852,
+              "123",
+              "g_cubeTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7036,
+          "sha256": "01e23fb4da34ee202eb8e31435f02fb058afc7e533334bafc8257082df592598",
+          "relocation_normalized_sha256": "6e2da89cdd0a3703a2d404cedba70d9b90190e8eca2e4ae03d83159f052bd896",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5312,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5464,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6032,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7032,
+          "sha256": "be9d0a42358eeef423cc712c66bbc0ef5168ca2c7afe8cdffc323e12d540d47f",
+          "relocation_normalized_sha256": "17a049031caecfd050a054d1ed30d1d630d689e6fc8f49fb91152517870a6b28",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5296,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5452,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6020,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7048,
+          "sha256": "af292c1df08d992496e84ddba3a278a830988e77f9c38d5301f2d3d8a02991be",
+          "relocation_normalized_sha256": "eae59a5bd8eb78d339ce02ae5fd5de6191a7e81f7542a74c026978aea6223a78",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5324,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5476,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6044,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7024,
+          "sha256": "aa257b881f40cc6f6b16cf75c6d794db789eccda3697507fe68e3fa493b4b6f6",
+          "relocation_normalized_sha256": "115faa062073dfdee3ad677f99cc63d0a98438e447c3e6ce7f8779bf1e676578",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5288,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5444,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6012,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7036,
+          "sha256": "48535972d3f83cb2767e5be7a34335a9ae507d90e4996ee89e7b9cd6a8002045",
+          "relocation_normalized_sha256": "575ca801258de26cfea442db0637f4962f9cff51795b69cfa32756150495e4da",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5312,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5464,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6032,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7032,
+          "sha256": "b2e8450eb953c8ccff7f60f747d2ae72f59c46c0982652698f39f7321a234b9f",
+          "relocation_normalized_sha256": "e32a2595468ccf8a988709de4801819b5326a3c7b1ca7058194badbda3a9a2ea",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5296,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5452,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6020,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7048,
+          "sha256": "922724e0c0d61120800c82948012f89239f2c406d03ea1f3c7e1aec992697ba7",
+          "relocation_normalized_sha256": "e4a4525841d512d8c290e11d984a3b991bcdeca5e911b02f50f6b61c132955f4",
+          "relocations": [
+            [
+              92,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              136,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              280,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              404,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5324,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5476,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6044,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        },
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+          "bytes": 7024,
+          "sha256": "321bec3ea75fb76e25c1f266804ffe062063e174b1f40f5b6fa3623c21c24246",
+          "relocation_normalized_sha256": "38792ee857113e6a6c6ce48a4a3cfeeec7b0b8d36f7202f95737c9de2895e8bb",
+          "relocations": [
+            [
+              76,
+              "15c",
+              "g_sysFftsAddr + 0"
+            ],
+            [
+              124,
+              "13a",
+              "__init_kfc_workspace_addr.vector + 0"
+            ],
+            [
+              268,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              392,
+              "123",
+              "_ZN7AscendC11g_kfcClientE + 0"
+            ],
+            [
+              5288,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              5444,
+              "123",
+              "g_vecTPipePtr + 0"
+            ],
+            [
+              6012,
+              "123",
+              "g_vecTPipePtr + 0"
+            ]
+          ]
+        }
+      },
+      "fallback_metadata": {
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100",
+        ".ascend.meta._ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": "010004000400000002000400010000000300040001000100"
+      }
+    },
+    "comparison": {
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true
+    }
+  },
+  "limits": [
+    "同进程普通调用通过，不是 DeviceProf 预热重放。",
+    "未复现 OJ 的 507015，没有确认根因或修复。",
+    "本地核函数比较只覆盖不分片的 16 个 AIC/AIV 入口。"
+  ]
+}
