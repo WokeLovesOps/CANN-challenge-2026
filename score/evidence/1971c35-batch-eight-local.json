@@ -1,0 +1,115 @@
+{
+  "commit": "1971c35",
+  "previous_probe": "24ec294",
+  "说明": "仅将两个 batch 条件由 ==1 改为 <=8；本地边界副本不属于官方测试点。",
+  "hashes": {
+    "src/kernel.asc": "978fd3f42e035d83f9ad6cd805874943435650484878c3812a589212211deb38",
+    "Build/BatchEightSimulator20260921/libsimulator_bridge.so": "307400e67a44c1bb438472c1d665b2ad162afc07a01313e574a93349397f02a2",
+    "Build/BatchEightChecks20260921/boundary_matrix.py": "5f3ca05d0262b05731e54a96e2220f800890c2263cd3cea989bd5dcfe4a106c4",
+    "Build/BatchEightChecks20260921/run_case.py": "fcc62c340fdd2c91379fd7735fb27f45199533ca162a9d17b2e889fc91c16ac9"
+  },
+  "cases": [
+    {
+      "case": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 8.406658161999076,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/BatchEightChecks20260921/case0",
+        "python3",
+        "Build/BatchEightChecks20260921/boundary_matrix.py",
+        "Build/BatchEightSimulator20260921/libsimulator_bridge.so",
+        "--case=0",
+        "--report=Build/BatchEightChecks20260921/case0.json"
+      ],
+      "application": {
+        "case": 0,
+        "label": "B八边界",
+        "shape": [
+          8,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false,
+        "available_cores": 20,
+        "error": "精度失败: actual=[ 1.  1.  1. -1. -1. -1.  1.  1.], expected=[-0.3767425 -3.5272744 -3.5518334  3.9505372  3.6991131  1.7999823\n -2.6178336 -1.5682209]"
+      },
+      "bins": [
+        {
+          "path": "Build/BatchEightChecks20260921/case0/OPPROF_20260921010031_RXPZIQUHPZEAHYUT/simulator/visualize_data.bin",
+          "bytes": 8104316,
+          "sha256": "5e0c5b6ec766680c4e849ed2dac5b90e76523fcaac425c902700b40c79a3a57c"
+        }
+      ]
+    },
+    {
+      "case": 288,
+      "exit_code": 124,
+      "elapsed_seconds": 9.00515174300017,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/BatchEightChecks20260921/case288",
+        "python3",
+        "Build/BatchEightChecks20260921/boundary_matrix.py",
+        "Build/BatchEightSimulator20260921/libsimulator_bridge.so",
+        "--case=288",
+        "--report=Build/BatchEightChecks20260921/case288.json"
+      ],
+      "application": {
+        "case": 288,
+        "label": "B九边界",
+        "shape": [
+          9,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.4901161193847656e-08
+      },
+      "bins": [
+        {
+          "path": "Build/BatchEightChecks20260921/case288/OPPROF_20260921010050_SJFTAXOIRBZTSCQX/device0/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "bytes": 8219196,
+          "sha256": "71814d04852b623ee7477e9767139cec0e89226e0991cbdaffaf084b6ec842fd"
+        }
+      ]
+    }
+  ]
+}
