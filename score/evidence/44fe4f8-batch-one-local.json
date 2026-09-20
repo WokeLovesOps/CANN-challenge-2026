@@ -1,0 +1,69 @@
+{
+  "commit": "44fe4f8819f059e6b187e5961a5d2cf08ba61d71",
+  "source_sha256": "4c9c1cc8424dbd6df58b482aed30bae92b5ff9c963750a737ddf3da71301589e",
+  "library_sha256": "5df9aa85fda9b1a14c52883089e1586e8e82c7abdc66829eb4537c17076ed43b",
+  "cases": [
+    {
+      "case": 0,
+      "profiler_exit_code": 0,
+      "application": {
+        "case": 0,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false,
+        "available_cores": 20,
+        "error": "精度失败: actual=[1.e+30], expected=[-0.85979325]"
+      },
+      "bins": [
+        {
+          "path": "Build/BatchOneProbeChecks20260921/case0/OPPROF_20260921001948_RUBWIAFZQWCIDQJM/simulator/visualize_data.bin",
+          "bytes": 7367100,
+          "sha256": "d69717744a6ba85fcf0884f19683bea774c02981b224a0e958a478bc1469d93f"
+        }
+      ]
+    },
+    {
+      "case": 288,
+      "profiler_exit_code": 124,
+      "application": {
+        "case": 288,
+        "label": "单点积Batch回退",
+        "shape": [
+          2,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "bins": [
+        {
+          "path": "Build/BatchOneProbeChecks20260921/case288/OPPROF_20260921002007_ZEGXENZKGJTSPJSX/device0/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "bytes": 7488776,
+          "sha256": "aace45c82c6a149cd0827b7e7c1cba921afff48a1352ab9c23385f0797a8862e"
+        }
+      ]
+    }
+  ]
+}
