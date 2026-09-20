@@ -1,0 +1,1730 @@
+{
+  "说明": "仅本地 CANN 9.0.0 编译与既有普通调用轨迹，不代表 OJ 二进制或故障指令。",
+  "baseline_commit": "9905ef0",
+  "probe_commit": "44fe4f8",
+  "binary": {
+    "metadata_equal": true,
+    "metadata_differences": {},
+    "functions": {
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "e960e1f6882b323161dd2064654c8c79f249dbab531eb737b4219bf73baa255e",
+        "probe_sha256": "d770be458bd429f70c34a6bbdb674a5d3b0a2fa497662d4b9da1bf1a08e037d9"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "dfc358ef9e1259ee889214d8863fa582e4ed1daadd5f2a2bef7f8a94b939a165",
+        "probe_sha256": "89b2f248554f79ee407a3949bccbb4dc6a0ebd8f3bbb8d1187821eff769b9eba"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "07ad118a7f9838516005db0676fb5573f93188b296f81c08a080cfc9cadd8ea1",
+        "probe_sha256": "e7599af88706f75833d16d72659b2790a120332268f55af52bc1e5a1bf15d711"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "77f43e172af63b4c75c1e2922e6cb37e554fa5757b0d456c8ca6b5c7170fc80c",
+        "probe_sha256": "67b3a30f49f55d5da46966421802684cf2a21c46f55b1363fde6752ed76de479"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "00152f80e0d31490e452c7381e0cf1aa54448c519ab6459cb818a82d0b87f55f",
+        "probe_sha256": "e9b4abb0e6c4a414560783073d8b0059f8cc906b0bf5f1eb9a394d9fae51f22b"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "36c38ac876606e4083018a7dde9c76eea5e2a822490a316ac7628ffb923d7cc8",
+        "probe_sha256": "cf83b8c8fcf34e6ba8c89af970a53b496440e7476c666c2b5a5081955b7b1b55"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "a23cf94f4fb3572efcf938d49fa6f780e32e1032dbfcdb80758a93dcaddc9a04",
+        "probe_sha256": "7752db2cfef96d2c65b83f48194fea4f9839112737dbd55ed3facc28bbf44225"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "89e80236a4ca4780090074df9ab71d5b0c2759115e2d01836e2738b0a35bbe38",
+        "probe_sha256": "2b7f5f35ef40e67523dacaa2f84dda9f5fb81337f2884b62890e0d6d0b55524f",
+        "word_edits": [
+          [
+            "replace",
+            11,
+            12,
+            11,
+            12
+          ]
+        ]
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "5a3216466c6bd1ad76fd15bd499af24fa5d37df81ffd6980727a35f27795de7f",
+        "probe_sha256": "890b277d3382f3e8901704a588ca81dbc0ebea79f7b6e0051c90274d65722a75"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "06f3bba322d13076da6559d1fbcf0d6dee4e30b6099b20b4eeea4d0b201a6d60",
+        "probe_sha256": "a44a207444400e973ae6c13081cf1d8363f1c2eef6ab6969064594d13e91895b"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "cc449c8762b4b2fe342dee4e7dc8b5802865c991347accf947e69bd049873a4e",
+        "probe_sha256": "70902e691eaff31ca15a5d6d28d8c6a2055a499438ee43e9d03b1a92762c01cb"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "f483c6a7b179d239ebdda9bce015fcf3a5fd89264e8045bacc07139803a26bad",
+        "probe_sha256": "b96d21d37ff4341adbf85b5c8d0bee5bbc2ad994b757eb85809c0a65bc0cba21"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "cce3df32db90b8f7fe5e5c63682c70160e7cabbfe2abe625b59166d0de43ec42",
+        "probe_sha256": "279f453f45d518bea6a6b565e3215dcc0d85e6eedd16e47004adc7392162be47"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "205786277bec65d30ecebf9d3699adeffffd8095c9e41167b2c126d1b82d2eb4",
+        "probe_sha256": "2e38e98aef23e6628bf6f956ace3305bb780952323ca6b2bf5df590de99463a0"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "3f0732a089270edc75403b96f6412b9ca6b153bc7df822c2b8258a0a24137d88",
+        "probe_sha256": "6c248549da3a8491b3e05432db13c3a2bc26deb7e1aad63f9cd4b667b6765f37"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": {
+        "baseline_bytes": 17316,
+        "probe_bytes": 17316,
+        "raw_equal": false,
+        "baseline_sha256": "9482b69eda0a2fffafa75bc0a889c923e4bb1998766784e1b7f7e61026df4c3f",
+        "probe_sha256": "eb764ea8ee9360bf398784961f3f7c779beed6ad50b2205352e0a0f22cd7a4b1"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7936,
+        "probe_bytes": 7968,
+        "raw_equal": false,
+        "baseline_sha256": "ec55fd57632205d2d4d8f7c2285a69aad53cb6a9385352309d72a8d75e68ceb8",
+        "probe_sha256": "90f5a2832637acd2adc9aaaaff79e007bc0782223817632d93f35024f4abdd88"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7896,
+        "probe_bytes": 7928,
+        "raw_equal": false,
+        "baseline_sha256": "7c878768e91e94d5fc6224d7189a2a9ee8bde88dc5092e42e7da1eaf2776db1a",
+        "probe_sha256": "8f72d39f76842f049efbc815d638d623e20d4f92cb8e5df99164f8b490c5d1a2"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7952,
+        "probe_bytes": 7984,
+        "raw_equal": false,
+        "baseline_sha256": "63bb0d9c8b6a38124ea932daae0b77621ce0a18456345208251f318952357468",
+        "probe_sha256": "d46aabb368f8cc8eeea4a772a2b3dfae4afb81bec57ced4e99c0f1e977c1680a"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7892,
+        "probe_bytes": 7924,
+        "raw_equal": false,
+        "baseline_sha256": "eb2f5e892f644def58b1a527989ef7cbd1d6e6364291c0ad77868d61d80e0671",
+        "probe_sha256": "06d3ea9e659598e1fe6fe12e0ae4f4860ada55dde5907de1ac22832fe2d65897"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7020,
+        "probe_bytes": 7040,
+        "raw_equal": false,
+        "baseline_sha256": "1c08a7f198095a7d4c45527fa594c16ffd1db3eb41f7e89ced2ef15b3649d502",
+        "probe_sha256": "01de22b58ae3a3d7f8a2da44608d78d7628652fb8e630eb60a9e4c96fe061b4e"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7036,
+        "probe_bytes": 7048,
+        "raw_equal": false,
+        "baseline_sha256": "503d292cdc350a4385e8f8cea1c656ee821c185eb838f725a6a73beaf30a3c6b",
+        "probe_sha256": "d4287120f1bbc0b5e88ef07d4bd8316fd7727ebebecaffdf17d26d34cf172270"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7028,
+        "probe_bytes": 7056,
+        "raw_equal": false,
+        "baseline_sha256": "f8399424e50570fbfb69cb23eae03a8fc6460462658da1c0622b5553aa8e783c",
+        "probe_sha256": "7e8c888a0a9bef2387223869a251c6120cfd30f8bfea29bb0cd47ff5919c8a7d"
+      },
+      "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7016,
+        "probe_bytes": 7032,
+        "raw_equal": false,
+        "baseline_sha256": "ead767e20c5076eb4e25b4dc11dcf53fde91971b8636696e61d2d6c12d3cd98e",
+        "probe_sha256": "e2dd4375595faa8793598e23f1017cf16e6a0611646f6396069459a4af12b04b",
+        "word_edits": [
+          [
+            "replace",
+            22,
+            23,
+            22,
+            23
+          ],
+          [
+            "replace",
+            32,
+            33,
+            32,
+            33
+          ],
+          [
+            "replace",
+            128,
+            129,
+            128,
+            129
+          ],
+          [
+            "replace",
+            200,
+            201,
+            200,
+            201
+          ],
+          [
+            "replace",
+            205,
+            207,
+            205,
+            207
+          ],
+          [
+            "replace",
+            212,
+            213,
+            212,
+            213
+          ],
+          [
+            "replace",
+            220,
+            221,
+            220,
+            221
+          ],
+          [
+            "replace",
+            225,
+            226,
+            225,
+            226
+          ],
+          [
+            "replace",
+            247,
+            248,
+            247,
+            248
+          ],
+          [
+            "replace",
+            252,
+            254,
+            252,
+            254
+          ],
+          [
+            "replace",
+            257,
+            258,
+            257,
+            258
+          ],
+          [
+            "replace",
+            262,
+            263,
+            262,
+            263
+          ],
+          [
+            "replace",
+            265,
+            266,
+            265,
+            266
+          ],
+          [
+            "delete",
+            267,
+            268,
+            267,
+            267
+          ],
+          [
+            "insert",
+            270,
+            270,
+            269,
+            270
+          ],
+          [
+            "replace",
+            272,
+            274,
+            272,
+            274
+          ],
+          [
+            "replace",
+            275,
+            277,
+            275,
+            276
+          ],
+          [
+            "replace",
+            278,
+            279,
+            277,
+            278
+          ],
+          [
+            "replace",
+            280,
+            285,
+            279,
+            284
+          ],
+          [
+            "replace",
+            286,
+            288,
+            285,
+            287
+          ],
+          [
+            "replace",
+            290,
+            303,
+            289,
+            303
+          ],
+          [
+            "replace",
+            304,
+            310,
+            304,
+            310
+          ],
+          [
+            "replace",
+            313,
+            318,
+            313,
+            318
+          ],
+          [
+            "replace",
+            319,
+            329,
+            319,
+            324
+          ],
+          [
+            "replace",
+            330,
+            331,
+            325,
+            331
+          ],
+          [
+            "replace",
+            332,
+            338,
+            332,
+            338
+          ],
+          [
+            "replace",
+            339,
+            343,
+            339,
+            343
+          ],
+          [
+            "replace",
+            346,
+            349,
+            346,
+            349
+          ],
+          [
+            "replace",
+            350,
+            354,
+            350,
+            354
+          ],
+          [
+            "replace",
+            356,
+            359,
+            356,
+            359
+          ],
+          [
+            "replace",
+            360,
+            365,
+            360,
+            365
+          ],
+          [
+            "replace",
+            366,
+            368,
+            366,
+            368
+          ],
+          [
+            "replace",
+            369,
+            370,
+            369,
+            370
+          ],
+          [
+            "replace",
+            374,
+            376,
+            374,
+            376
+          ],
+          [
+            "replace",
+            377,
+            380,
+            377,
+            380
+          ],
+          [
+            "replace",
+            382,
+            385,
+            382,
+            384
+          ],
+          [
+            "replace",
+            386,
+            390,
+            385,
+            389
+          ],
+          [
+            "replace",
+            391,
+            398,
+            390,
+            398
+          ],
+          [
+            "replace",
+            437,
+            438,
+            437,
+            438
+          ],
+          [
+            "replace",
+            440,
+            441,
+            440,
+            441
+          ],
+          [
+            "replace",
+            448,
+            452,
+            448,
+            452
+          ],
+          [
+            "replace",
+            453,
+            454,
+            453,
+            454
+          ],
+          [
+            "replace",
+            456,
+            458,
+            456,
+            458
+          ],
+          [
+            "replace",
+            459,
+            460,
+            459,
+            460
+          ],
+          [
+            "replace",
+            461,
+            462,
+            461,
+            462
+          ],
+          [
+            "replace",
+            463,
+            466,
+            463,
+            465
+          ],
+          [
+            "replace",
+            467,
+            469,
+            466,
+            468
+          ],
+          [
+            "replace",
+            470,
+            471,
+            469,
+            470
+          ],
+          [
+            "replace",
+            472,
+            475,
+            471,
+            475
+          ],
+          [
+            "replace",
+            476,
+            481,
+            476,
+            482
+          ],
+          [
+            "replace",
+            482,
+            488,
+            483,
+            489
+          ],
+          [
+            "replace",
+            489,
+            494,
+            490,
+            496
+          ],
+          [
+            "replace",
+            495,
+            517,
+            497,
+            519
+          ],
+          [
+            "replace",
+            520,
+            521,
+            522,
+            523
+          ],
+          [
+            "replace",
+            522,
+            524,
+            524,
+            526
+          ],
+          [
+            "replace",
+            528,
+            530,
+            530,
+            532
+          ],
+          [
+            "replace",
+            531,
+            532,
+            533,
+            534
+          ],
+          [
+            "replace",
+            536,
+            540,
+            538,
+            542
+          ],
+          [
+            "replace",
+            541,
+            556,
+            543,
+            544
+          ],
+          [
+            "replace",
+            559,
+            565,
+            547,
+            567
+          ],
+          [
+            "replace",
+            566,
+            570,
+            568,
+            572
+          ],
+          [
+            "replace",
+            571,
+            575,
+            573,
+            577
+          ],
+          [
+            "replace",
+            576,
+            580,
+            578,
+            582
+          ],
+          [
+            "replace",
+            581,
+            586,
+            583,
+            588
+          ],
+          [
+            "replace",
+            587,
+            589,
+            589,
+            591
+          ],
+          [
+            "replace",
+            590,
+            591,
+            592,
+            593
+          ],
+          [
+            "replace",
+            595,
+            597,
+            597,
+            599
+          ],
+          [
+            "replace",
+            600,
+            601,
+            602,
+            603
+          ],
+          [
+            "replace",
+            602,
+            603,
+            604,
+            605
+          ],
+          [
+            "replace",
+            609,
+            610,
+            611,
+            612
+          ],
+          [
+            "replace",
+            613,
+            615,
+            615,
+            617
+          ],
+          [
+            "replace",
+            630,
+            632,
+            632,
+            711
+          ],
+          [
+            "delete",
+            633,
+            634,
+            712,
+            712
+          ],
+          [
+            "replace",
+            655,
+            656,
+            733,
+            734
+          ],
+          [
+            "replace",
+            657,
+            659,
+            735,
+            737
+          ],
+          [
+            "delete",
+            666,
+            668,
+            744,
+            744
+          ],
+          [
+            "replace",
+            669,
+            670,
+            745,
+            751
+          ],
+          [
+            "replace",
+            672,
+            681,
+            753,
+            760
+          ],
+          [
+            "replace",
+            682,
+            768,
+            761,
+            769
+          ],
+          [
+            "replace",
+            770,
+            772,
+            771,
+            773
+          ],
+          [
+            "replace",
+            773,
+            777,
+            774,
+            778
+          ],
+          [
+            "replace",
+            778,
+            784,
+            779,
+            785
+          ],
+          [
+            "replace",
+            785,
+            786,
+            786,
+            787
+          ],
+          [
+            "replace",
+            788,
+            789,
+            789,
+            790
+          ],
+          [
+            "replace",
+            792,
+            793,
+            793,
+            794
+          ],
+          [
+            "replace",
+            795,
+            796,
+            796,
+            797
+          ],
+          [
+            "replace",
+            801,
+            803,
+            802,
+            804
+          ],
+          [
+            "replace",
+            822,
+            823,
+            823,
+            824
+          ],
+          [
+            "replace",
+            839,
+            840,
+            840,
+            841
+          ],
+          [
+            "replace",
+            843,
+            844,
+            844,
+            845
+          ],
+          [
+            "replace",
+            847,
+            848,
+            848,
+            849
+          ],
+          [
+            "replace",
+            849,
+            851,
+            850,
+            852
+          ],
+          [
+            "replace",
+            859,
+            861,
+            860,
+            862
+          ],
+          [
+            "replace",
+            869,
+            870,
+            870,
+            871
+          ],
+          [
+            "replace",
+            872,
+            873,
+            873,
+            874
+          ],
+          [
+            "replace",
+            880,
+            881,
+            881,
+            882
+          ],
+          [
+            "insert",
+            883,
+            883,
+            884,
+            890
+          ],
+          [
+            "delete",
+            884,
+            886,
+            891,
+            891
+          ],
+          [
+            "delete",
+            887,
+            888,
+            892,
+            892
+          ],
+          [
+            "delete",
+            889,
+            892,
+            893,
+            893
+          ],
+          [
+            "insert",
+            894,
+            894,
+            895,
+            897
+          ],
+          [
+            "replace",
+            896,
+            902,
+            899,
+            902
+          ],
+          [
+            "replace",
+            914,
+            916,
+            914,
+            916
+          ],
+          [
+            "replace",
+            917,
+            918,
+            917,
+            918
+          ],
+          [
+            "replace",
+            920,
+            923,
+            920,
+            923
+          ],
+          [
+            "replace",
+            924,
+            928,
+            924,
+            928
+          ],
+          [
+            "replace",
+            930,
+            933,
+            930,
+            933
+          ],
+          [
+            "replace",
+            934,
+            944,
+            934,
+            944
+          ],
+          [
+            "replace",
+            948,
+            959,
+            948,
+            960
+          ],
+          [
+            "replace",
+            960,
+            962,
+            961,
+            970
+          ],
+          [
+            "replace",
+            963,
+            974,
+            971,
+            973
+          ],
+          [
+            "delete",
+            978,
+            979,
+            977,
+            977
+          ],
+          [
+            "insert",
+            982,
+            982,
+            980,
+            981
+          ],
+          [
+            "replace",
+            985,
+            987,
+            984,
+            986
+          ],
+          [
+            "replace",
+            1093,
+            1094,
+            1092,
+            1093
+          ],
+          [
+            "replace",
+            1111,
+            1112,
+            1110,
+            1111
+          ],
+          [
+            "replace",
+            1115,
+            1116,
+            1114,
+            1115
+          ],
+          [
+            "replace",
+            1118,
+            1119,
+            1117,
+            1118
+          ],
+          [
+            "delete",
+            1128,
+            1129,
+            1127,
+            1127
+          ],
+          [
+            "replace",
+            1130,
+            1131,
+            1128,
+            1129
+          ],
+          [
+            "replace",
+            1132,
+            1153,
+            1130,
+            1151
+          ],
+          [
+            "replace",
+            1156,
+            1157,
+            1154,
+            1155
+          ],
+          [
+            "replace",
+            1158,
+            1160,
+            1156,
+            1158
+          ],
+          [
+            "replace",
+            1162,
+            1166,
+            1160,
+            1164
+          ],
+          [
+            "replace",
+            1171,
+            1172,
+            1169,
+            1170
+          ],
+          [
+            "replace",
+            1174,
+            1175,
+            1172,
+            1173
+          ],
+          [
+            "replace",
+            1179,
+            1191,
+            1177,
+            1189
+          ],
+          [
+            "replace",
+            1193,
+            1194,
+            1191,
+            1192
+          ],
+          [
+            "replace",
+            1195,
+            1197,
+            1193,
+            1195
+          ],
+          [
+            "replace",
+            1198,
+            1202,
+            1196,
+            1200
+          ],
+          [
+            "replace",
+            1203,
+            1204,
+            1201,
+            1202
+          ],
+          [
+            "replace",
+            1206,
+            1207,
+            1204,
+            1205
+          ],
+          [
+            "replace",
+            1210,
+            1214,
+            1208,
+            1212
+          ],
+          [
+            "replace",
+            1215,
+            1219,
+            1213,
+            1217
+          ],
+          [
+            "replace",
+            1222,
+            1224,
+            1220,
+            1222
+          ],
+          [
+            "insert",
+            1236,
+            1236,
+            1234,
+            1235
+          ],
+          [
+            "replace",
+            1241,
+            1242,
+            1240,
+            1241
+          ],
+          [
+            "replace",
+            1244,
+            1245,
+            1243,
+            1244
+          ],
+          [
+            "replace",
+            1335,
+            1336,
+            1334,
+            1335
+          ],
+          [
+            "replace",
+            1337,
+            1339,
+            1336,
+            1337
+          ],
+          [
+            "replace",
+            1340,
+            1341,
+            1338,
+            1339
+          ],
+          [
+            "replace",
+            1344,
+            1345,
+            1342,
+            1343
+          ],
+          [
+            "replace",
+            1350,
+            1351,
+            1348,
+            1349
+          ],
+          [
+            "replace",
+            1356,
+            1358,
+            1354,
+            1356
+          ],
+          [
+            "replace",
+            1366,
+            1368,
+            1364,
+            1366
+          ],
+          [
+            "replace",
+            1370,
+            1374,
+            1368,
+            1370
+          ],
+          [
+            "replace",
+            1375,
+            1388,
+            1371,
+            1376
+          ],
+          [
+            "delete",
+            1389,
+            1411,
+            1377,
+            1377
+          ],
+          [
+            "insert",
+            1423,
+            1423,
+            1389,
+            1390
+          ],
+          [
+            "delete",
+            1427,
+            1428,
+            1394,
+            1394
+          ],
+          [
+            "replace",
+            1429,
+            1431,
+            1395,
+            1397
+          ],
+          [
+            "replace",
+            1480,
+            1481,
+            1446,
+            1447
+          ],
+          [
+            "insert",
+            1488,
+            1488,
+            1454,
+            1455
+          ],
+          [
+            "replace",
+            1495,
+            1496,
+            1462,
+            1466
+          ],
+          [
+            "insert",
+            1497,
+            1497,
+            1467,
+            1503
+          ],
+          [
+            "replace",
+            1498,
+            1499,
+            1504,
+            1505
+          ],
+          [
+            "delete",
+            1525,
+            1526,
+            1531,
+            1531
+          ],
+          [
+            "replace",
+            1528,
+            1529,
+            1533,
+            1535
+          ],
+          [
+            "delete",
+            1530,
+            1533,
+            1536,
+            1536
+          ],
+          [
+            "insert",
+            1534,
+            1534,
+            1537,
+            1538
+          ],
+          [
+            "replace",
+            1548,
+            1549,
+            1552,
+            1553
+          ],
+          [
+            "replace",
+            1596,
+            1597,
+            1600,
+            1601
+          ]
+        ]
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7936,
+        "probe_bytes": 7968,
+        "raw_equal": false,
+        "baseline_sha256": "9d048b5d8e709487372890659186d1ca0242ac1e0febfc0b08d624085b79fe67",
+        "probe_sha256": "2c0be346dbb17f62f781260ab49ee48ec97fcfe361be22dc5cff78b69f927575"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7896,
+        "probe_bytes": 7928,
+        "raw_equal": false,
+        "baseline_sha256": "2fcfc9916d1101acf1e4770575e7bea39f077157f244ebfdc66e47f9502ee3fc",
+        "probe_sha256": "f8b8c43562941834d53a4c6e50c861b45c4cf2e9c2f8f7d9bd2ec1a797c12af8"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7952,
+        "probe_bytes": 7984,
+        "raw_equal": false,
+        "baseline_sha256": "4d8eaa01103bfcbc37e13bd94b2dffb5f1468f4d659bb6e24b239bd4b792c420",
+        "probe_sha256": "d6a61baa89a4dcfcf9f3eb98acd313b9762da27f0108b3771d6234260e696d10"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7892,
+        "probe_bytes": 7924,
+        "raw_equal": false,
+        "baseline_sha256": "b021f5a4fea1afa5359b0f5d22c6992eeba91e562e5c86c8e19720e9a4f34d87",
+        "probe_sha256": "7cb10c7c746b0325433bb3751caa89f17f900e0f84f02226e4a28ba4288224a1"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7020,
+        "probe_bytes": 7040,
+        "raw_equal": false,
+        "baseline_sha256": "ec2449483f80e2cabfbadcaaa59cca795a1ba55ae542e9de5c659110932fe105",
+        "probe_sha256": "99c6733b1fa000e2e399cd9163536336eaf4ad0c81975cef46b4784c19371f5e"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7036,
+        "probe_bytes": 7048,
+        "raw_equal": false,
+        "baseline_sha256": "ef972761d7c0e4ad78f19a367e7db861d5219b686e7b3f8a110981e2633d8124",
+        "probe_sha256": "fa0c6751380c66b10a99063d2bd49c695d6baa02fc609ff29466f677f99381db"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7028,
+        "probe_bytes": 7056,
+        "raw_equal": false,
+        "baseline_sha256": "007dbdab11546b7c6abbbb20dcc72fb38ed47b7766a17ab18849b2b841f8151e",
+        "probe_sha256": "ad489d652a3c32b6fb6684273b00a8ccf184c6ff9bc657e4f4f7ac8f5a3c28bf"
+      },
+      "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": {
+        "baseline_bytes": 7016,
+        "probe_bytes": 7032,
+        "raw_equal": false,
+        "baseline_sha256": "8342be088eedd5a21d03fba7f4bbd1ede096ff0e031cc510179d358c2b55eaa2",
+        "probe_sha256": "c753f9f374d4e541adaaedd91d2829cf4bf255185d8e1fa612cf664b7c98ba14"
+      }
+    }
+  },
+  "normalized": {
+    "baseline vs probe": {
+      "functions": {
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false
+      },
+      "metadata_equal": true
+    },
+    "baseline vs baseline_trace": {
+      "functions": {
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false
+      },
+      "metadata_equal": true
+    },
+    "probe vs probe_trace": {
+      "functions": {
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": false
+      },
+      "metadata_equal": true
+    }
+  },
+  "trace_provenance": {
+    "baseline-diag": {
+      "functions": {
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true
+      },
+      "metadata_equal": true
+    },
+    "probe-diag": {
+      "functions": {
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aic": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true,
+        "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE_mix_aiv": true
+      },
+      "metadata_equal": true
+    }
+  },
+  "writeback_trace": {
+    "baseline": {
+      "path": "Build/AdaptiveNAbiSmoke20260916/case0/OPPROF_20260916001324_KVCZAHCTIBRDCBGN/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/core0.veccore0/trace.json",
+      "sha256": "35111a3c45757d3a748938ca00562ffa104a504184e411db472a31016440226b",
+      "events": [
+        {
+          "name": "WAIT_FLAG",
+          "pc": "0x1236d350",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,",
+          "time": 23.834999084472656,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:332\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:1145\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:101\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:54\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "SET_FLAG",
+          "pc": "0x1236d34c",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,",
+          "time": 23.843334197998047,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:312\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:921\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:76\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:53\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "SET_FLAG",
+          "pc": "0x1236d354",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:7,",
+          "time": 23.844999313354492,
+          "code": "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "WAIT_FLAG",
+          "pc": "0x1236d358",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:7,",
+          "time": 23.845556259155273,
+          "code": "/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "ZEROEXT",
+          "pc": "0x1236d360",
+          "detail": "dtype:U32,XD:X26=0,XN:X20=0,",
+          "time": 23.847000122070312,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "LD_XD_XN",
+          "pc": "0x1236d35c",
+          "detail": "dtype:B32,XD:X25=0,XN:X25=0x4440,XM:X24=0x20000,#POST:0,",
+          "time": 23.847000122070312,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:741\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "SHL",
+          "pc": "0x1236d364",
+          "detail": "dtype:B64,XD:X26=0,DATA_SRC:IMM,IMM:0x2,",
+          "time": 23.847999572753906,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "ADD",
+          "pc": "0x1236d368",
+          "detail": "dtype:S64,XD:X26=0x4300,XN:X9=0x4300,XM:X26=0,",
+          "time": 23.847999572753906,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "ST_XD_XN",
+          "pc": "0x1236d370",
+          "detail": "dtype:B32,XD:X25=0xbf5c1b69,XN:X26=0x4300,XM:X24=0x20000,#POST:0,",
+          "time": 23.854000091552734,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "SET_FLAG",
+          "pc": "0x1236d37c",
+          "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,",
+          "time": 23.86055564880371,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:312\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:918\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:76\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:56\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "WAIT_FLAG",
+          "pc": "0x1236d384",
+          "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,",
+          "time": 23.862777709960938,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:332\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:1142\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:101\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:57\n/mnt/newdisk/code/CANN-challenge/Build/AdaptiveNAbiSource20260916/tests/../src/kernel.asc:312"
+        }
+      ]
+    },
+    "probe": {
+      "path": "Build/BatchOneProbeChecks20260921/case0/OPPROF_20260921001948_RUBWIAFZQWCIDQJM/simulator/core0.veccore0/trace.json",
+      "sha256": "a3fb3f0a457f0e4a15db6db9cfb2b8151f06d656164649925dd6a5fd7b0c356e",
+      "events": [
+        {
+          "name": "SET_FLAG",
+          "pc": "0x1236d594",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,",
+          "time": 22.599445343017578,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:312\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:921\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:76\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:53\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "WAIT_FLAG",
+          "pc": "0x1236d598",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,",
+          "time": 22.600000381469727,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:332\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:1145\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:101\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:54\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "JUMPC",
+          "pc": "0x1236d59c",
+          "detail": "TargetPC:0x1236d5a0,cond_flag:0",
+          "time": 22.60099983215332,
+          "code": "/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "ZEROEXT",
+          "pc": "0x1236d3ac",
+          "detail": "dtype:U32,XD:X26=0,XN:X20=0,",
+          "time": 22.60300064086914,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "SHL",
+          "pc": "0x1236d3b0",
+          "detail": "dtype:B64,XD:X26=0,DATA_SRC:IMM,IMM:0x2,",
+          "time": 22.604000091552734,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "ADD",
+          "pc": "0x1236d3b4",
+          "detail": "dtype:S64,XD:X26=0x4300,XN:X9=0x4300,XM:X26=0,",
+          "time": 22.604000091552734,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "ST_XD_XN",
+          "pc": "0x1236d3bc",
+          "detail": "dtype:B32,XD:X25=0x7149f2ca,XN:X26=0x4300,XM:X24=0x20000,#POST:0,",
+          "time": 22.604999542236328,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "SET_FLAG",
+          "pc": "0x1236d3c8",
+          "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,",
+          "time": 22.611665725708008,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:312\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:918\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:76\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:56\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        },
+        {
+          "name": "WAIT_FLAG",
+          "pc": "0x1236d3d0",
+          "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,",
+          "time": 22.613889694213867,
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:332\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:1142\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:101\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:57\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:312"
+        }
+      ]
+    }
+  },
+  "hashes": {
+    "src/kernel.asc": "d52677027d22bfabaaa7ef8365fd09d0ebda32c6176c3e7bd29a6c41fdea1d7d",
+    "Build/UserConfirmedBaseline20260920/batch_matmul_max_sum_custom": "2605fd7d21a47a26def95f1616f50a9e460561ad3742240a00aa55f9f0381298",
+    "Build/BatchOneProbeRelease20260921/batch_matmul_max_sum_custom": "e408d3135da543caa259e2ff2f240cb544dd6d4d65a0b4bf924fa0ca99642c20",
+    "Build/ProbeFailureBaselineDiag20260921/libsimulator_bridge.so": "2ffb012ab4b795cc5673c6931aa1c4c0bcf010e1b84241ffbca5258d9fa32a24",
+    "Build/BatchOneProbeSimulator20260921/libsimulator_bridge.so": "84f9e8c4863c82358b37d9ab5a4c342f0d600cd00760bc0b39cde68fba67be24"
+  }
+}
