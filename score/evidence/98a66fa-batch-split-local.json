@@ -1,0 +1,213 @@
+{
+  "commit": "98a66fa",
+  "previous_probe": "1971c35",
+  "说明": "分段条件 B<=5 或 8<B<=36；本地边界副本不是官方测试点。",
+  "hashes": {
+    "src/kernel.asc": "173a96aea7e5fa991b7f9ef9c9f1bb540dbd1621fc0abb88dce0e02891c39344",
+    "Build/BatchSplitSimulator20260921/libsimulator_bridge.so": "ec5592f90ddc87054f3d01111a5e064d903e6e546a6d5763d1b84419e7fd4170",
+    "Build/BatchSplitChecks20260921/boundary_matrix.py": "198a0d45f2223236edc068ecc8eedad5a6030502041fdc09fe9a765fd6d2958e",
+    "Build/BatchSplitChecks20260921/run_case.py": "af92f6c0099bd286b544b62897321e692de7ca3a729598a749dbf0726c8a3dfa"
+  },
+  "cases": [
+    {
+      "case": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 8.396961198999634,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/BatchSplitChecks20260921/case0",
+        "python3",
+        "Build/BatchSplitChecks20260921/boundary_matrix.py",
+        "Build/BatchSplitSimulator20260921/libsimulator_bridge.so",
+        "--case=0",
+        "--report=Build/BatchSplitChecks20260921/case0.json"
+      ],
+      "application": {
+        "case": 0,
+        "label": "B5边界",
+        "shape": [
+          5,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false,
+        "available_cores": 20,
+        "error": "精度失败: actual=[-1.  1.  1. -1.  1.], expected=[ 0.16461813 -1.3355454  -3.8030097   4.4244604  -0.36786383]"
+      },
+      "bins": [
+        {
+          "path": "Build/BatchSplitChecks20260921/case0/OPPROF_20260921011541_WCIDHYOLCOSZPNHW/simulator/visualize_data.bin",
+          "bytes": 7785112,
+          "sha256": "3f79dd4a521d07b31b7e119f1bbee783954ab8789f1b9a345fb91995342a83e8"
+        }
+      ],
+      "call_markers": [
+        "CASE_0_CALL_1_BEGIN"
+      ]
+    },
+    {
+      "case": 8,
+      "exit_code": 124,
+      "elapsed_seconds": 9.00625585400121,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/BatchSplitChecks20260921/case8",
+        "python3",
+        "Build/BatchSplitChecks20260921/boundary_matrix.py",
+        "Build/BatchSplitSimulator20260921/libsimulator_bridge.so",
+        "--case=8",
+        "--report=Build/BatchSplitChecks20260921/case8.json"
+      ],
+      "application": {
+        "case": 8,
+        "label": "B6边界",
+        "shape": [
+          6,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false
+      },
+      "bins": [
+        {
+          "path": "Build/BatchSplitChecks20260921/case8/OPPROF_20260921011602_ELFEWUOUETIICLZF/device0/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "bytes": 7898724,
+          "sha256": "e671d6d66d94ffe787016203aff94b86ef192ef13040e122105b8a7fa85802eb"
+        }
+      ],
+      "call_markers": [
+        "CASE_8_CALL_1_BEGIN",
+        "CASE_8_CALL_1_PASS",
+        "CASE_8_CALL_2_BEGIN"
+      ]
+    },
+    {
+      "case": 16,
+      "exit_code": 124,
+      "elapsed_seconds": 9.005577497999184,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/BatchSplitChecks20260921/case16",
+        "python3",
+        "Build/BatchSplitChecks20260921/boundary_matrix.py",
+        "Build/BatchSplitSimulator20260921/libsimulator_bridge.so",
+        "--case=16",
+        "--report=Build/BatchSplitChecks20260921/case16.json"
+      ],
+      "application": {
+        "case": 16,
+        "label": "B36边界",
+        "shape": [
+          36,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false
+      },
+      "bins": [],
+      "call_markers": [
+        "CASE_16_CALL_1_BEGIN"
+      ]
+    },
+    {
+      "case": 24,
+      "exit_code": 124,
+      "elapsed_seconds": 9.00479094199909,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/BatchSplitChecks20260921/case24",
+        "python3",
+        "Build/BatchSplitChecks20260921/boundary_matrix.py",
+        "Build/BatchSplitSimulator20260921/libsimulator_bridge.so",
+        "--case=24",
+        "--report=Build/BatchSplitChecks20260921/case24.json"
+      ],
+      "application": {
+        "case": 24,
+        "label": "B37边界",
+        "shape": [
+          37,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false
+      },
+      "bins": [],
+      "call_markers": [
+        "CASE_24_CALL_1_BEGIN"
+      ]
+    }
+  ]
+}
