@@ -1,0 +1,386 @@
+{
+  "代码版本": "24ec294",
+  "基线": "9905ef0",
+  "说明": "B=1 按真实归约结果符号改写输出；本地应用结果不代表 OJ 重放。",
+  "source_sha256": "0f0f89ec50d2749a60492886df2d4c3060eabca467da0d638a972bdc001806ce",
+  "library_sha256": "d362437aa67e3e8c8ae1c262ef0bf5cbc31ad954595578d1870d1c89e3a055f4",
+  "cases": [
+    {
+      "case": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 7.303753849999339,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/SignProbeChecks20260921/case0",
+        "python3",
+        "tests/simulator_matrix.py",
+        "Build/SignProbeSimulator20260921/libsimulator_bridge.so",
+        "--case=0",
+        "--report=Build/SignProbeChecks20260921/case0.json"
+      ],
+      "application": {
+        "case": 0,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false,
+        "available_cores": 20,
+        "error": "精度失败: actual=[1.], expected=[-0.85979325]"
+      },
+      "bins": [
+        {
+          "path": "Build/SignProbeChecks20260921/case0/OPPROF_20260921005014_WVHDVOKVHDUNBYXY/simulator/visualize_data.bin",
+          "size": 7379060,
+          "sha256": "92fe7d72b4dfa40d01662ef08a6161c0487818065ce842ca0074d93f9c5ea544"
+        }
+      ]
+    },
+    {
+      "case": 272,
+      "exit_code": 0,
+      "elapsed_seconds": 7.360385084997688,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/SignProbeChecks20260921/case272",
+        "python3",
+        "tests/simulator_matrix.py",
+        "Build/SignProbeSimulator20260921/libsimulator_bridge.so",
+        "--case=272",
+        "--report=Build/SignProbeChecks20260921/case272.json"
+      ],
+      "application": {
+        "case": 272,
+        "label": "单点积全零",
+        "shape": [
+          1,
+          1,
+          1,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false,
+        "available_cores": 20,
+        "error": "精度失败: actual=[1.], expected=[0.]"
+      },
+      "bins": [
+        {
+          "path": "Build/SignProbeChecks20260921/case272/OPPROF_20260921005032_BBRFRWZUMPYAUTDW/simulator/visualize_data.bin",
+          "size": 7379008,
+          "sha256": "8bf3480405355bc3adb27df2d62e123d9a9f6dec49a586294540b80256c24116"
+        }
+      ]
+    },
+    {
+      "case": 128,
+      "exit_code": 0,
+      "elapsed_seconds": 7.362766719998035,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/SignProbeChecks20260921/case128",
+        "python3",
+        "tests/simulator_matrix.py",
+        "Build/SignProbeSimulator20260921/libsimulator_bridge.so",
+        "--case=128",
+        "--report=Build/SignProbeChecks20260921/case128.json"
+      ],
+      "application": {
+        "case": 128,
+        "label": "N分片四块边界",
+        "shape": [
+          1,
+          2,
+          385,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": false,
+        "available_cores": 20,
+        "error": "精度失败: actual=[-1.], expected=[23.]"
+      },
+      "bins": [
+        {
+          "path": "Build/SignProbeChecks20260921/case128/OPPROF_20260921005039_EZAFTWSBJPFTXVRA/simulator/visualize_data.bin",
+          "size": 7763360,
+          "sha256": "f511319523d1931da9809c170e7d47c90b18dafa99ae96b150ffa3202c0e73ed"
+        }
+      ]
+    },
+    {
+      "case": 288,
+      "exit_code": 124,
+      "elapsed_seconds": 9.004277137999452,
+      "command": [
+        "timeout",
+        "-k",
+        "1s",
+        "9s",
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=2",
+        "--timeout=1",
+        "--output=Build/SignProbeChecks20260921/case288",
+        "python3",
+        "tests/simulator_matrix.py",
+        "Build/SignProbeSimulator20260921/libsimulator_bridge.so",
+        "--case=288",
+        "--report=Build/SignProbeChecks20260921/case288.json"
+      ],
+      "application": {
+        "case": 288,
+        "label": "单点积Batch回退",
+        "shape": [
+          2,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "bins": [
+        {
+          "path": "Build/SignProbeChecks20260921/case288/OPPROF_20260921005046_QVKDQYPTVTLYSVBN/device0/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+          "size": 7469500,
+          "sha256": "b823e0886a29f8c4a086fdc5db6db49ec1504c6a359454350d2ebebb0a911788"
+        }
+      ]
+    }
+  ],
+  "writeback_trace": {
+    "path": "Build/SignProbeChecks20260921/case0/OPPROF_20260921005014_WVHDVOKVHDUNBYXY/simulator/core0.veccore0/trace.json",
+    "events": [
+      {
+        "name": "SET_FLAG",
+        "time": 23.344444274902344,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:312\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:921\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:76\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:53\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,",
+          "pc_addr": "0x1236d49c"
+        }
+      },
+      {
+        "name": "WAIT_FLAG",
+        "time": 23.344999313354492,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:332\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:1145\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:101\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:54\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,",
+          "pc_addr": "0x1236d4a0"
+        }
+      },
+      {
+        "name": "SET_FLAG",
+        "time": 23.346111297607422,
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:7,",
+          "pc_addr": "0x1236d4a4"
+        }
+      },
+      {
+        "name": "WAIT_FLAG",
+        "time": 23.34666633605957,
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:7,",
+          "pc_addr": "0x1236d4a8"
+        }
+      },
+      {
+        "name": "LD_XD_XN_IMM",
+        "time": 23.347999572753906,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:0\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:B64,XD:X28=0,XN:X30=0x1c7fb0,IMM:0x8a0,",
+          "pc_addr": "0x1236d4b0"
+        }
+      },
+      {
+        "name": "LD_XD_XN",
+        "time": 23.347999572753906,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:741\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:55\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:B32,XD:X6=0,XN:X28=0x4440,XM:X27=0x20000,#POST:0,",
+          "pc_addr": "0x1236d4ac"
+        }
+      },
+      {
+        "name": "CMP",
+        "time": 23.354999542236328,
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:56\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:F32,XN:X6=0xbf5c1b69,XM:X17=0,cond_op:GT,",
+          "pc_addr": "0x1236d4b4"
+        }
+      },
+      {
+        "name": "SEL",
+        "time": 23.354999542236328,
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:56\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:B64,XD:X20=0x3f800000,XN:X19=0xbf800000,XM:X18=0x3f800000,",
+          "pc_addr": "0x1236d4b8"
+        }
+      },
+      {
+        "name": "CMP_IMM",
+        "time": 23.356000900268555,
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:56\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:S64,XN:X28=0x1,IMM:0x1,cond_op:EQ,",
+          "pc_addr": "0x1236d4bc"
+        }
+      },
+      {
+        "name": "SEL",
+        "time": 23.356000900268555,
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:56\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:B64,XD:X6=0x3f800000,XN:X20=0x3f800000,XM:X6=0xbf5c1b69,",
+          "pc_addr": "0x1236d4c0"
+        }
+      },
+      {
+        "name": "ZEROEXT",
+        "time": 23.356000900268555,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:59\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:U32,XD:X20=0,XN:X23=0,",
+          "pc_addr": "0x1236d4c4"
+        }
+      },
+      {
+        "name": "SHL",
+        "time": 23.35700035095215,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:59\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:B64,XD:X20=0,DATA_SRC:IMM,IMM:0x2,",
+          "pc_addr": "0x1236d4c8"
+        }
+      },
+      {
+        "name": "ADD",
+        "time": 23.35700035095215,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:59\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:S64,XD:X20=0x4300,XN:X9=0x4300,XM:X20=0,",
+          "pc_addr": "0x1236d4cc"
+        }
+      },
+      {
+        "name": "ST_XD_XN",
+        "time": 23.357999801635742,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_tensor_impl.h:846\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:59\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "dtype:B32,XD:X6=0x3f800000,XN:X20=0x4300,XM:X27=0x20000,#POST:0,",
+          "pc_addr": "0x1236d4d4"
+        }
+      },
+      {
+        "name": "SET_FLAG",
+        "time": 23.364444732666016,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:312\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:918\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:76\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:60\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,",
+          "pc_addr": "0x1236d4e0"
+        }
+      },
+      {
+        "name": "WAIT_FLAG",
+        "time": 23.366666793823242,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:332\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_event.h:1142\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:101\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:61\n/mnt/newdisk/code/CANN-challenge/tests/../src/kernel.asc:320",
+          "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,",
+          "pc_addr": "0x1236d4e8"
+        }
+      }
+    ]
+  },
+  "initial_permission_rejection": {
+    "case": 0,
+    "exit_code": 0,
+    "elapsed_seconds": 0.09337373000016669,
+    "command": [
+      "timeout",
+      "-k",
+      "1s",
+      "9s",
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=1",
+      "--output=Build/SignProbeChecks20260921/case0",
+      "python3",
+      "tests/simulator_matrix.py",
+      "Build/SignProbeSimulator20260921/libsimulator_bridge.so",
+      "--case=0",
+      "--report=Build/SignProbeChecks20260921/case0.json"
+    ]
+  }
+}
