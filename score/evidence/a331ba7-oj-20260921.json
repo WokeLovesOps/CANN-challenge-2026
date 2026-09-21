@@ -1,0 +1,27 @@
+{
+  "commit": "a331ba7",
+  "date": "2026-09-21",
+  "exact_run_time": null,
+  "score": null,
+  "source_sha256": "723574325997f76f4e8185b8bf71efe8343b90d384eec43c09c775b22b0e9420",
+  "source": "用户反馈的十五点平台结果，按当前提交上下文归属",
+  "probe_condition": "M <= 3 or (M > 5 and M <= 7) or (M > 12 and M <= 14) or (M > 20 and M <= 22) or (M > 28 and M <= 30) or (M > 56 and M <= 60) or (M > 256 and M <= 512)",
+  "interpretation": "结合此前探针：点1为1；点2为2..3；点3为6..7；点4至5为15..16；点6为23..24；点7为31..32；点8至13为至少513；点14至15为61..64",
+  "cases": [
+    {"case": 1, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 11.19, "best_time_us": 1.22, "inferred_m": "1"},
+    {"case": 2, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 11.96, "best_time_us": 1.58, "inferred_m": "2..3"},
+    {"case": 3, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 10.74, "best_time_us": 2.16, "inferred_m": "6..7"},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 12.96, "best_time_us": 2.92, "inferred_m": "15..16"},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 11.16, "best_time_us": 2.96, "inferred_m": "15..16"},
+    {"case": 6, "result": "Pass", "error_percent": 0.0, "time_us": 17.31, "best_time_us": 3.82, "inferred_m": "23..24"},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 15.93, "best_time_us": 5.68, "inferred_m": "31..32"},
+    {"case": 8, "result": "Pass", "error_percent": 0.0, "time_us": 298.19, "best_time_us": 17.32, "inferred_m": ">=513"},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 319.79, "best_time_us": 52.43, "inferred_m": ">=513"},
+    {"case": 10, "result": "Pass", "error_percent": 0.0, "time_us": 415.89, "best_time_us": 72.47, "inferred_m": ">=513"},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 585.51, "best_time_us": 45.65, "inferred_m": ">=513"},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 620.29, "best_time_us": 33.62, "inferred_m": ">=513"},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 56.53, "best_time_us": 1.40, "inferred_m": ">=513"},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 30.68, "best_time_us": 10.11, "inferred_m": "61..64"},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 80.98, "best_time_us": 9.87, "inferred_m": "61..64"}
+  ]
+}
