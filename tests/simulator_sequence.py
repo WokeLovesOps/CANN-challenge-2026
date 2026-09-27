@@ -21,16 +21,22 @@ def main():
     parser.add_argument('library', type=Path)
     parser.add_argument('--cases', required=True, help='按顺序执行，允许重复编号')
     parser.add_argument('--report', required=True, type=Path)
+    parser.add_argument('--real-npu', action='store_true', help='明确选择真实 NPU 验证')
     args = parser.parse_args()
-    if os.environ.get('IS_SIMULATOR_ENV', '').lower() != 'true':
-        raise RuntimeError('必须由 msprof op simulator 启动')
+    simulated = os.environ.get('IS_SIMULATOR_ENV', '').lower() == 'true'
+    if not simulated and not args.real_npu:
+        raise RuntimeError('本入口必须由 msprof op simulator 启动；上板需显式 --real-npu')
+    if simulated and args.real_npu:
+        raise RuntimeError('模型环境不能记为真实 NPU 运行')
     indices = list(map(int, args.cases.split(',')))
     # 仅接收本次排查使用的随机输入场景，避免遗漏原矩阵的特殊数值生成器。
-    if any(index not in (0, 6, 8, 14, 262, 318) for index in indices):
-        raise ValueError('本入口仅支持 0、6、8、14、262、318')
+    allowed_cases = {0, 6, 8, 14, 262, 318, 440, 453} | set(range(408, 416))
+    if any(index not in allowed_cases for index in indices):
+        raise ValueError('本入口仅支持既有切换用例及点4的408至415')
     report = dict(library=str(args.library.resolve()),
                   library_sha256=hashlib.sha256(args.library.read_bytes()).hexdigest(),
-                  execution='simulator', cases=indices, passed=False, results=[])
+                  execution='simulator' if simulated else 'real_npu',
+                  cases=indices, passed=False, results=[])
     args.report.parent.mkdir(parents=True, exist_ok=True)
 
     def save():

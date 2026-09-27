@@ -1,0 +1,37 @@
+{
+  "说明": "点3 SMALL_BATCH_VECTOR 候选的OJ完整结果，由用户提供。",
+  "日期": "2026-09-23",
+  "源码_sha256": "9c860c6e2edf27fe751179d49f4ecd777fdb3870b9c670e44a507a7885cc936b",
+  "结果": "15/15 Pass",
+  "测试点": [
+    {"case": 1, "result": "Pass", "error_percent": 0.0, "time_us": 2.55, "best_time_us": 1.21},
+    {"case": 2, "result": "Pass", "error_percent": 0.0, "time_us": 4.10, "best_time_us": 1.58},
+    {"case": 3, "result": "Pass", "error_percent": 0.0, "time_us": 3.34, "best_time_us": 2.16},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 13.27, "best_time_us": 2.92},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 10.77, "best_time_us": 2.96},
+    {"case": 6, "result": "Pass", "error_percent": 0.0, "time_us": 17.46, "best_time_us": 3.82},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 16.28, "best_time_us": 2.69},
+    {"case": 8, "result": "Pass", "error_percent": 0.0, "time_us": 164.78, "best_time_us": 17.32},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 196.33, "best_time_us": 52.01},
+    {"case": 10, "result": "Pass", "error_percent": 0.0, "time_us": 270.66, "best_time_us": 72.47},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 428.33, "best_time_us": 45.65},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 361.03, "best_time_us": 33.62},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 40.58, "best_time_us": 1.40},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 24.56, "best_time_us": 10.11},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 32.08, "best_time_us": 9.87}
+  ],
+  "点3优化": {
+    "shape": [2, 7, 13, 48],
+    "分支": "SMALL_BATCH_VECTOR",
+    "上一稳定用时_us": 10.63,
+    "本轮用时_us": 3.34,
+    "降低_percent": 68.58,
+    "加速倍数": 3.183,
+    "平台最优_us": 2.16,
+    "与最优差值_us": 1.18
+  },
+  "归因": {
+    "本次修改分支": "SMALL_BATCH_VECTOR中的ComputeSmallBatchDots",
+    "点1点2及点4至15": "执行分支未修改，时间变化按平台波动记录"
+  }
+}

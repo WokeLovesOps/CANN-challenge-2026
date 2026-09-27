@@ -1,0 +1,36 @@
+{
+  "说明": "点4按4行分片的纯Vector并行版本OJ完整结果，由用户提供；提交包哈希未由平台独立核验。",
+  "日期": "2026-09-24",
+  "平台": "Ascend 910C A3，CANN 9.0.0",
+  "工作区源码_sha256": "b1291441aa7b03c4132552e252525399c16aabb060bd38d908083760acbf0c00",
+  "结果": "15/15 Pass",
+  "测试点": [
+    {"case": 1, "result": "Pass", "error_percent": 0.0, "time_us": 2.26, "best_time_us": 1.22},
+    {"case": 2, "result": "Pass", "error_percent": 0.0, "time_us": 4.22, "best_time_us": 1.58},
+    {"case": 3, "result": "Pass", "error_percent": 0.0, "time_us": 3.02, "best_time_us": 2.16},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 5.85, "best_time_us": 2.92},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 11.39, "best_time_us": 3.53},
+    {"case": 6, "result": "Pass", "error_percent": 0.0, "time_us": 17.44, "best_time_us": 7.23},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 16.00, "best_time_us": 5.68},
+    {"case": 8, "result": "Pass", "error_percent": 0.0, "time_us": 162.34, "best_time_us": 17.32},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 196.92, "best_time_us": 52.01},
+    {"case": 10, "result": "Pass", "error_percent": 0.0, "time_us": 271.48, "best_time_us": 72.47},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 428.62, "best_time_us": 74.82},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 359.52, "best_time_us": 91.20},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 40.50, "best_time_us": 8.88},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 24.38, "best_time_us": 10.11},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 32.19, "best_time_us": 9.04}
+  ],
+  "点4优化": {
+    "上一稳定暂存版_us": 8.64,
+    "本轮_us": 5.85,
+    "单轮降低_us": 2.79,
+    "单轮降低_percent": 32.29,
+    "单轮加速倍数": 1.477,
+    "紧凑Cube基线_us": 12.56,
+    "累计降低_percent": 53.42,
+    "累计加速倍数": 2.147,
+    "平台最优_us": 2.92
+  },
+  "观察": "点5至点7均通过，未出现点4Vector执行后切换Cube路径的异常；点1至3及点5至15未修改，其用时变化按平台波动记录。"
+}

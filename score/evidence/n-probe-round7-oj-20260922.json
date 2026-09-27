@@ -1,0 +1,26 @@
+{
+  "source_sha256": "0bf44c423707a90537503afab4654e06cfdf6deb67520c39337dc787b691f0a9",
+  "date": "2026-09-22",
+  "exact_run_time": null,
+  "score": null,
+  "source": "用户反馈的十五点平台结果，按提交前记录的源码 SHA256 归属",
+  "probe_condition": "N in {1,5,13,15,31,63} || (64 < N && N <= 287) || (1025 <= N && N <= 1280) || (1600 <= N && N <= 1792) || (3648 <= N && N <= 3840) || (7744 <= N && N <= 7936)",
+  "interpretation": "点1至5的N分别确定为1、5、13、16、32，点13、15均确定为64；各大N点继续收窄",
+  "cases": [
+    {"case": 1, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 11.30, "best_time_us": 1.21, "inferred_n": "1"},
+    {"case": 2, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 12.01, "best_time_us": 1.58, "inferred_n": "5"},
+    {"case": 3, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 10.68, "best_time_us": 2.16, "inferred_n": "13"},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 13.32, "best_time_us": 2.92, "inferred_n": "16"},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 11.02, "best_time_us": 2.96, "inferred_n": "32"},
+    {"case": 6, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 17.60, "best_time_us": 3.82, "inferred_n": "65-287且不是64的倍数"},
+    {"case": 7, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 16.02, "best_time_us": 5.68, "inferred_n": "128、192或256"},
+    {"case": 8, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 302.01, "best_time_us": 17.32, "inferred_n": "1025-1280且不是64的倍数"},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 319.62, "best_time_us": 52.01, "inferred_n": "1344、1408、1472或1536"},
+    {"case": 10, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 413.60, "best_time_us": 72.47, "inferred_n": "1088、1152、1216或1280"},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 584.21, "best_time_us": 45.65, "inferred_n": "1856、1920、1984或2048"},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 615.77, "best_time_us": 33.62, "inferred_n": "3904、3968、4032或4096"},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 56.24, "best_time_us": 1.40, "inferred_n": "64"},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 30.70, "best_time_us": 10.11, "inferred_n": "8000、8064、8128或8192"},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 81.13, "best_time_us": 9.87, "inferred_n": "64"}
+  ]
+}

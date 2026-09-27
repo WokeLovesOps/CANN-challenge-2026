@@ -1,0 +1,44 @@
+{
+  "说明": "点4按4行分片的纯Vector并行候选；软件模型结果不代表真实910C A3性能。",
+  "日期": "2026-09-24",
+  "目标平台": "Ascend 910C A3，CANN 9.0.0",
+  "实现": {
+    "分类": "2<=B<=4，M<=16，N<=16，K为64或128",
+    "行分片": 4,
+    "点4任务数": 16,
+    "局部结果": "每个任务写入独立32字节GM暂存槽",
+    "最终归并": "一次跨任务同步后，由0号任务按batch Gather局部和、执行第二级WholeReduceSum并连续写回",
+    "保持不变": "MIX核类型、单kernel启动、图捕获内存生命周期以及点5至点7入口"
+  },
+  "构建": {
+    "环境": "/home/ye/Ascend-9.0.0/cann-9.0.0/set_env.sh",
+    "架构": "dav-2201",
+    "目录": "Build/CompactCubeRelease20260923",
+    "结果": "正式构建通过，仅有既有Host侧cce_global属性警告"
+  },
+  "软件模型": {
+    "SoC": "Ascend910_9391",
+    "点4完整组合": "case 408至415，FP16/BF16和四种转置，每例连续两次通过",
+    "跨路径序列": "case 408至415后依次执行点5 case 440和点6 case 453，共20次kernel启动全部通过",
+    "尾行分片": "shape 3,15,16,128；case 464与471连续两次通过",
+    "全负输入": "case 439连续两次通过，最大绝对误差0",
+    "总体最大绝对误差": 0.00000762939453125,
+    "点4_BF16双转置模型核时间_us": "2.26至2.32",
+    "旧暂存版模型核时间_us": "4.54至4.58",
+    "限制": "模型计时仅用于比较实现方向，必须以真实910C A3/OJ结果决定保留或回退"
+  },
+  "证据": [
+    "Build/MediumRowSplitCase415/report.json",
+    "Build/MediumRowSplitSequence/report.json",
+    "Build/MediumRowSplitTail464/report.json",
+    "Build/MediumRowSplitTail471/report.json",
+    "Build/MediumRowSplitNegative439/report.json"
+  ],
+  "哈希": {
+    "src/kernel.asc": "b1291441aa7b03c4132552e252525399c16aabb060bd38d908083760acbf0c00",
+    "libsimulator_bridge.so": "65c311a1c4345f3905275dbbe390feb206e5d588b02752c3c3f137dda2dca14e",
+    "tests/simulator_matrix.py": "dde92a774a2b8994c05fde069aae99eb290bb301978b8894ca30faee02ba6d5c",
+    "tests/simulator_sequence.py": "8177356728a401dbd70873a01ef10b7435e08b27428bf76e7994c2eb33f148f3"
+  },
+  "OJ状态": "真实910C A3已验证15/15 Pass，点4为5.85 us；完整结果见medium-batch-row-split-oj-20260924.json"
+}

@@ -1,0 +1,40 @@
+{
+  "说明": "点3紧凑K与整体Cast候选的OJ完整结果，由用户提供。",
+  "日期": "2026-09-23",
+  "源码_sha256": "d2700ed5ed23a354697b21409e3219dcb346a5f4b24ddaf2b639c22ddf5fea83",
+  "结果": "15/15 Pass",
+  "测试点": [
+    {"case": 1, "result": "Pass", "error_percent": 0.0, "time_us": 2.53, "best_time_us": 1.21},
+    {"case": 2, "result": "Pass", "error_percent": 0.0, "time_us": 4.15, "best_time_us": 1.58},
+    {"case": 3, "result": "Pass", "error_percent": 0.0, "time_us": 2.95, "best_time_us": 2.16},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 12.76, "best_time_us": 2.92},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 10.93, "best_time_us": 2.96},
+    {"case": 6, "result": "Pass", "error_percent": 0.0, "time_us": 17.85, "best_time_us": 3.82},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 16.44, "best_time_us": 2.69},
+    {"case": 8, "result": "Pass", "error_percent": 0.0, "time_us": 163.66, "best_time_us": 17.32},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 195.32, "best_time_us": 52.01},
+    {"case": 10, "result": "Pass", "error_percent": 0.0, "time_us": 274.04, "best_time_us": 72.47},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 426.40, "best_time_us": 45.65},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 356.94, "best_time_us": 33.62},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 41.35, "best_time_us": 1.40},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 24.32, "best_time_us": 10.11},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 31.71, "best_time_us": 9.87}
+  ],
+  "点3优化": {
+    "shape": [2, 7, 13, 48],
+    "分支": "SMALL_BATCH_VECTOR_COMPACT_K",
+    "上一稳定用时_us": 3.34,
+    "本轮用时_us": 2.95,
+    "单步降低_percent": 11.68,
+    "单步加速倍数": 1.132,
+    "纯Vector优化前_us": 10.63,
+    "累计降低_percent": 72.25,
+    "累计加速倍数": 3.603,
+    "平台最优_us": 2.16,
+    "与最优差值_us": 0.79
+  },
+  "归因": {
+    "本次修改分支": "ComputeSmallBatchDots的COMPACT_K子路径",
+    "点1点2及点4至15": "执行分支未修改，时间变化按平台波动记录"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "source_sha256": "1cc3024e9d381a084620a92357b12cf8de8105c8302b948fc34a6ca432b7e98a",
+  "date": "2026-09-22",
+  "exact_run_time": null,
+  "score": null,
+  "source": "用户反馈的十五点平台结果，按提交前记录的源码 SHA256 归属",
+  "probe_condition": "K in {1000,1008,1152,1160}",
+  "interpretation": "点8未命中并收窄为1016或1032；点10命中并收窄为1152或1160；其余13点结果与预期一致",
+  "cases": [
+    {"case": 1, "result": "Pass", "error_percent": 0.0, "time_us": 11.30, "best_time_us": 1.21, "inferred_k": "32"},
+    {"case": 2, "result": "Pass", "error_percent": 0.0, "time_us": 11.61, "best_time_us": 1.58, "inferred_k": "40"},
+    {"case": 3, "result": "Pass", "error_percent": 0.0, "time_us": 10.39, "best_time_us": 2.16, "inferred_k": "48"},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 13.35, "best_time_us": 2.92, "inferred_k": "128"},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 10.99, "best_time_us": 2.96, "inferred_k": "128"},
+    {"case": 6, "result": "Pass", "error_percent": 0.0, "time_us": 17.16, "best_time_us": 3.82, "inferred_k": "192"},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 16.12, "best_time_us": 2.69, "inferred_k": "256"},
+    {"case": 8, "result": "Pass", "error_percent": 0.0, "time_us": 297.62, "best_time_us": 17.32, "inferred_k": "1016或1032"},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 317.99, "best_time_us": 52.01, "inferred_k": "1280"},
+    {"case": 10, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 409.34, "best_time_us": 72.47, "inferred_k": "1152或1160"},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 579.36, "best_time_us": 45.65, "inferred_k": "2048"},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 623.47, "best_time_us": 33.62, "inferred_k": "1536"},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 56.82, "best_time_us": 1.40, "inferred_k": "128"},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 30.60, "best_time_us": 10.11, "inferred_k": "128"},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 80.84, "best_time_us": 9.87, "inferred_k": "8192"}
+  ]
+}

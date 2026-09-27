@@ -13,7 +13,7 @@ OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 python3 tests/correctness.py \
     Build/Correctness/correctness --report Build/correctness.json
 ```
 
-本地 CANN 9.0 环境脚本为 `/mnt/newdisk/Ascend/cann-9.0.0/set_env.sh`；本次远端测试使用 `/home/developer/Ascend/cann-8.5.2/set_env.sh`，设备为 Ascend 910B3。两者的验证结果必须区分。
+当前本地 CANN 9.0.0 环境脚本为 `/home/ye/Ascend-9.0.0/cann-9.0.0/set_env.sh`；CANN 8.5.2 仍独立保存在 `/home/ye/Ascend/cann-8.5.2/set_env.sh`。两个版本必须在独立 shell 中加载，编译和测试记录必须标明实际版本。历史远端测试使用 `/home/developer/Ascend/cann-8.5.2/set_env.sh`，设备为 Ascend 910B3。
 
 ## 覆盖范围
 
@@ -40,7 +40,7 @@ Golden 使用量化后的实际输入存储值，FP64 点积、Max、Sum 后转�
 无 NPU 主机使用 CANN 的 Ascend910B3 软件模型。先初始化模型 ACL，再动态加载共享库；`simulator_bridge.asc` 直接包含正式 `src/kernel.asc`，不另写计算实现。
 
 ```bash
-source /mnt/newdisk/Ascend/cann-9.0.0/set_env.sh
+source /home/ye/Ascend-9.0.0/cann-9.0.0/set_env.sh
 umask 077
 cmake -S tests -B Build/SimulatorValidation \
     -DNPU_ARCH=dav-2201 -DBUILD_SIMULATOR_BRIDGE=ON -DCMAKE_ASC_FLAGS=-g
@@ -141,20 +141,39 @@ python3 tests/simulator_matrix.py Build/SimulatorValidation/libsimulator_bridge.
 | 304–311 | 1,1,2,32 | N 不为 1 时回退 |
 | 312–319 | 1,2,3,32 | 基础小矩阵的替代假设 |
 | 320–327 | 1,16,16,32 | 对齐小矩阵的替代假设 |
+| 328–335 | 1,1024,512,32 | `LARGE_BALANCED` 的64×128分块边界 |
+| 336–343 | 1,64,64,32 | `TALL_NARROW` 的64×64单任务直接写回 |
+| 344–351 | 1,3,5,40 | `SMALL_VECTOR` 打包点积矩阵及转置/BF16覆盖 |
+| 352–359 | 1,4,4,64 | `SMALL_VECTOR` 的 `M×N=16` 与 `K=64` 双阈值边界 |
+| 360–367 | 1,3,6,40 | `M×N` 超过16后回退Cube路径 |
+| 368–375 | 2,7,13,48 | `SMALL_BATCH_VECTOR` 实际小批量矩阵及转置/BF16覆盖 |
+| 376–383 | 2,9,13,48 | M超过8后回退Cube路径 |
+| 384–391 | 4,8,16,64 | `SMALL_BATCH_VECTOR` 的B/M/N/K联合上界 |
+| 392–399 | 2,7,13,48 | 全负点积不读取16列对齐槽中的填充值 |
+| 400–407 | 2,7,13,40 | K不是16倍数时保留64元素对齐槽路径 |
+| 408–415 | 4,16,16,128 | `MEDIUM_BATCH_VECTOR` 点4形状及转置/BF16覆盖 |
+| 416–423 | 5,16,16,128 | `MEDIUM_BATCH_VECTOR` 的中间批量场景 |
+| 424–431 | 4,16,16,80 | `MEDIUM_BATCH_VECTOR` 的K下界内部场景 |
+| 432–439 | 4,16,16,128 | 全负点积覆盖分块最大值与最终求和 |
+| 440–447 | 8,16,32,128 | `MEDIUM_BATCH_VECTOR` 点5形状及两轮16列分块覆盖 |
+| 448–455 | 13,23,73,192 | `MEDIUM_BATCH_VECTOR` 点6形状及M/N/K尾块覆盖 |
+| 456–463 | 16,32,128,256 | `MEDIUM_BATCH_VECTOR` 点7形状及B/M/N/K联合上界 |
 
 每行的八个编号依次覆盖 FP16/BF16 和四种转置属性。单点积的四种实际存储布局均为连续 K 个元素，但仍检查属性不会影响正确性。隐藏点 1 的形状没有被确认；模板最小输入、历史用时和参考 TBest 只用于排列候选假设，不能把本地 case 0 等同于 OJ 点 1。
+
+追加点6、点7的中等批量Vector边界后共有464个可选用例。默认仍只执行用例0，完整矩阵必须显式开启。
 
 
 ### 同进程核函数切换诊断
 
-`simulator_sequence.py` 针对 `4d1aa53` 平台点 1 通过、点 2 首次 DeviceProf 预热失败补充普通调用诊断。同一进程、同一 ACL 上下文、同一共享库和 stream 内切换纯 Vector 点积与通用混合核，每段两次调用，保留逐段精度、输入保护、输出保护和重复一致性检查。只允许列出的随机输入用例，输入生成与矩阵入口相同；不覆盖其他特殊数值场景，不支持实际设备或图捕获模式。
+`simulator_sequence.py` 针对 `4d1aa53` 平台点 1 通过、点 2 首次 DeviceProf 预热失败补充普通调用诊断。同一进程、同一 ACL 上下文、同一共享库和 stream 内切换纯 Vector 点积与通用混合核，每段两次调用，保留逐段精度、输入保护、输出保护和重复一致性检查。只允许列出的随机输入用例，输入生成与矩阵入口相同；不覆盖其他特殊数值场景。默认仅接受软件模型环境，真实设备必须显式传入 `--real-npu`，两种模式均不覆盖图捕获。
 
 ```bash
-source /mnt/newdisk/Ascend/cann-9.0.0/set_env.sh
+source /home/ye/Ascend-9.0.0/cann-9.0.0/set_env.sh
 msprof op simulator --soc-version=Ascend910B3 --core-id=0 \
   --launch-count=12 --timeout=2 --output=Build/新建序列输出目录 \
   python3 tests/simulator_sequence.py Build/SmallDot20260916/libsimulator_bridge.so \
   --cases=0,318,0,262,6,14 --report=Build/新建序列报告.json
 ```
 
-完整序列需检查应用的 `SIM_SEQUENCE_PASS`、JSON passed=true，以及 12 次预期启动和 12 份非空 BIN。应用成功不替代 DeviceProf 预热重放成功；失败即保存已执行段和未通过状态。此次本地序列通过，尚未复现或修复平台 507015，详见 [测试记录](../score/BatchMatmulMaxSum.md)。
+完整序列需检查应用的 `SIM_SEQUENCE_PASS`、JSON passed=true，以及预期启动数和同等数量的非空 BIN。入口另允许用例408至415、440、453，用于按点4混合任务Vector、点5紧凑纯AIV、点6默认Cube的顺序检查连续切换。真实设备可运行 `python3 tests/simulator_sequence.py <库> --cases=408,440,453,440,408 --report=<报告> --real-npu`。应用成功不替代DeviceProf预热重放成功；失败即保存已执行段和未通过状态。详见 [测试记录](../score/BatchMatmulMaxSum.md)。

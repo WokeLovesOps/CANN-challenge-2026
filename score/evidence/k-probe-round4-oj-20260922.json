@@ -1,0 +1,26 @@
+{
+  "source_sha256": "0efcc58221132cc63ff4b1fd75a24cb3dad0b7ccc9093a1cf9433a38c68e93f2",
+  "date": "2026-09-22",
+  "exact_run_time": null,
+  "score": null,
+  "source": "用户反馈的十五点平台结果，按提交前记录的源码 SHA256 归属",
+  "probe_condition": "32 <= K <= 80 || 152 <= K <= 200 || (512 <= K <= 2048 && K % 256 == 0) || (4352 <= K <= 6144 && K % 256 == 0) || (264 <= K <= 1208 && K % 256 != 0)",
+  "interpretation": "形成七组候选范围并继续二分",
+  "cases": [
+    {"case": 1, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 11.13, "best_time_us": 1.21, "inferred_k": "32-80"},
+    {"case": 2, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 11.70, "best_time_us": 1.58, "inferred_k": "32-80"},
+    {"case": 3, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 10.67, "best_time_us": 2.16, "inferred_k": "32-80"},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 13.08, "best_time_us": 2.92, "inferred_k": "88-144"},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 10.80, "best_time_us": 2.96, "inferred_k": "88-144"},
+    {"case": 6, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 17.14, "best_time_us": 3.82, "inferred_k": "152-200"},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 15.69, "best_time_us": 2.69, "inferred_k": "208-256"},
+    {"case": 8, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 298.00, "best_time_us": 17.32, "inferred_k": "264-1208且不是256的倍数"},
+    {"case": 9, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 320.71, "best_time_us": 52.01, "inferred_k": "512-2048且为256的倍数"},
+    {"case": 10, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 416.01, "best_time_us": 72.47, "inferred_k": "264-1208且不是256的倍数"},
+    {"case": 11, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 584.36, "best_time_us": 45.65, "inferred_k": "512-2048且为256的倍数"},
+    {"case": 12, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 619.20, "best_time_us": 33.62, "inferred_k": "512-2048且为256的倍数"},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 56.00, "best_time_us": 1.40, "inferred_k": "88-144"},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 30.34, "best_time_us": 10.11, "inferred_k": "88-144"},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 81.23, "best_time_us": 9.87, "inferred_k": "6400-8192且为256的倍数"}
+  ]
+}

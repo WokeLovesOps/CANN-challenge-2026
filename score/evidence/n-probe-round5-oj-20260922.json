@@ -1,0 +1,26 @@
+{
+  "source_sha256": "e9b11cb8adf64cf2a793989735f5dc95aa3d9f130e27aa913ca373cba1e8b0c3",
+  "date": "2026-09-22",
+  "exact_run_time": null,
+  "score": null,
+  "source": "用户反馈的十五点平台结果，按提交前记录的源码 SHA256 归属",
+  "probe_condition": "N <= 4 || (9 <= N && N <= 12) || (25 <= N && N <= 28) || (57 <= N && N <= 60) || (64 < N && N <= 1024) || (2112 <= N && N <= 3072) || (6208 <= N && N <= 7168)",
+  "interpretation": "点1为1至4，点2为5至8，点3、4为13至16，点5为29至32，点13、15为61至64；点6、7不超过1024，点8至12及点14分别进入各自候选范围的高半区",
+  "cases": [
+    {"case": 1, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 11.15, "best_time_us": 1.21, "inferred_n": "1-4"},
+    {"case": 2, "result": "Pass", "error_percent": 0.0, "time_us": 11.76, "best_time_us": 1.58, "inferred_n": "5-8"},
+    {"case": 3, "result": "Pass", "error_percent": 0.0, "time_us": 10.42, "best_time_us": 2.16, "inferred_n": "13-16"},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 12.56, "best_time_us": 2.92, "inferred_n": "13-16"},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 10.94, "best_time_us": 2.96, "inferred_n": "29-32"},
+    {"case": 6, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 17.48, "best_time_us": 3.82, "inferred_n": "65-1024且不是64的倍数"},
+    {"case": 7, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 15.84, "best_time_us": 5.68, "inferred_n": "128-1024且是64的倍数"},
+    {"case": 8, "result": "Pass", "error_percent": 0.0, "time_us": 304.09, "best_time_us": 17.32, "inferred_n": "1025-2048且不是64的倍数"},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 314.97, "best_time_us": 52.01, "inferred_n": "1088-2048且是64的倍数"},
+    {"case": 10, "result": "Pass", "error_percent": 0.0, "time_us": 410.67, "best_time_us": 72.47, "inferred_n": "1088-2048且是64的倍数"},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 577.12, "best_time_us": 45.65, "inferred_n": "1088-2048且是64的倍数"},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 614.38, "best_time_us": 33.62, "inferred_n": "3136-4096且是64的倍数"},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 55.95, "best_time_us": 1.40, "inferred_n": "61-64"},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 30.64, "best_time_us": 10.11, "inferred_n": "7232-8192且是64的倍数"},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 80.78, "best_time_us": 9.87, "inferred_n": "61-64"}
+  ]
+}

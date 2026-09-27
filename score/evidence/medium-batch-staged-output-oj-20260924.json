@@ -1,0 +1,33 @@
+{
+  "说明": "点4纯Vector独立暂存槽并统一写回候选的OJ完整结果，由用户提供；提交源码哈希未由平台独立核验。",
+  "日期": "2026-09-24",
+  "实际平台": "Ascend 910C A3，CANN 9.0.0",
+  "平台信息更正": "此前未及时识别比赛实际设备为910C A3，部分排查按910B3软件模型解释，造成平台前提错配；后续以910C A3为准，历史910B3结果仅作模型参考。",
+  "工作区源码_sha256": "517e60b401cda6f4b8e07a63f0247cf2e6243d5924031f392b43d22cd31a5c91",
+  "结果": "15/15 Pass",
+  "测试点": [
+    {"case": 1, "result": "Pass", "error_percent": 0.0, "time_us": 2.28, "best_time_us": 1.22},
+    {"case": 2, "result": "Pass", "error_percent": 0.0, "time_us": 4.36, "best_time_us": 1.58},
+    {"case": 3, "result": "Pass", "error_percent": 0.0, "time_us": 3.03, "best_time_us": 2.16},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 8.64, "best_time_us": 2.92},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 11.27, "best_time_us": 3.53},
+    {"case": 6, "result": "Pass", "error_percent": 0.0, "time_us": 17.37, "best_time_us": 7.23},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 15.62, "best_time_us": 5.68},
+    {"case": 8, "result": "Pass", "error_percent": 0.0, "time_us": 163.24, "best_time_us": 17.32},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 196.93, "best_time_us": 52.01},
+    {"case": 10, "result": "Pass", "error_percent": 0.0, "time_us": 273.41, "best_time_us": 72.47},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 430.13, "best_time_us": 74.82},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 355.66, "best_time_us": 91.20},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 40.91, "best_time_us": 8.88},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 24.44, "best_time_us": 10.11},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 32.41, "best_time_us": 9.04}
+  ],
+  "点4优化": {
+    "上一稳定用时_us": 12.56,
+    "本轮用时_us": 8.64,
+    "降低_us": 3.92,
+    "降低_percent": 31.21,
+    "平台最优_us": 2.92
+  },
+  "观察": "本轮点5通过且未报告507015；单次运行不能确认历史异常的根因或排除复现可能。"
+}

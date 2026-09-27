@@ -1,0 +1,26 @@
+{
+  "source_sha256": "da94a74d26b061d8854190bbbe8a79bd8c5ffbb44a546815ecb20f000398e8ec",
+  "date": "2026-09-22",
+  "exact_run_time": null,
+  "score": null,
+  "source": "用户反馈的十五点平台结果，按提交前记录的源码 SHA256 归属",
+  "probe_condition": "K <= 256 || (256 < K <= 4096 && K % 256 != 0)",
+  "interpretation": "点1至7、13、14的K不超过256；点9、11、12、15为大于256的256倍数；点8、10为264至4096且不是256倍数",
+  "cases": [
+    {"case": 1, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 10.76, "best_time_us": 1.21, "inferred_k": "32-256"},
+    {"case": 2, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 11.56, "best_time_us": 1.58, "inferred_k": "32-256"},
+    {"case": 3, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 10.66, "best_time_us": 2.16, "inferred_k": "32-256"},
+    {"case": 4, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 13.02, "best_time_us": 2.92, "inferred_k": "32-256"},
+    {"case": 5, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 10.96, "best_time_us": 2.96, "inferred_k": "32-256"},
+    {"case": 6, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 17.37, "best_time_us": 3.82, "inferred_k": "32-256"},
+    {"case": 7, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 15.64, "best_time_us": 2.69, "inferred_k": "32-256"},
+    {"case": 8, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 296.68, "best_time_us": 17.32, "inferred_k": "264-4096且不是256的倍数"},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 321.27, "best_time_us": 52.01, "inferred_k": "512-8192且为256的倍数"},
+    {"case": 10, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 415.00, "best_time_us": 72.47, "inferred_k": "264-4096且不是256的倍数"},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 587.08, "best_time_us": 45.65, "inferred_k": "512-8192且为256的倍数"},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 614.48, "best_time_us": 33.62, "inferred_k": "512-8192且为256的倍数"},
+    {"case": 13, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 56.07, "best_time_us": 1.40, "inferred_k": "32-256"},
+    {"case": 14, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 30.18, "best_time_us": 10.11, "inferred_k": "32-256"},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 81.01, "best_time_us": 9.87, "inferred_k": "512-8192且为256的倍数"}
+  ]
+}

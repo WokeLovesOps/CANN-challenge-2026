@@ -1,0 +1,26 @@
+{
+  "source_sha256": "45e37b1f85f03503dcd4cf68455b178536b142d71a3e761472a828cf7fd63f53",
+  "date": "2026-09-23",
+  "exact_run_time": null,
+  "score": null,
+  "source": "用户反馈的十五点平台结果；用户补充确认15/15全部Pass",
+  "interpretation": "Shape key分类版本15/15通过；按用户要求暂不修改效果较好的分支",
+  "baseline_sha256": "e13c3f7dde8cee74a5aff531e67690ba0552e61d029d45ae0d6bc3987957aa55",
+  "cases": [
+    {"case": 1, "key": "DOT", "result": "Pass", "time_us": 2.46, "baseline_time_us": 10.74, "improvement_percent": 77.09},
+    {"case": 2, "key": "MICRO", "result": "Pass", "time_us": 10.54, "baseline_time_us": 11.71, "improvement_percent": 9.99},
+    {"case": 3, "key": "DEFAULT", "result": "Pass", "time_us": 10.31, "baseline_time_us": 10.70, "improvement_percent": 3.64},
+    {"case": 4, "key": "DEFAULT", "result": "Pass", "time_us": 12.64, "baseline_time_us": 13.03, "improvement_percent": 2.99},
+    {"case": 5, "key": "DEFAULT", "result": "Pass", "time_us": 10.76, "baseline_time_us": 10.73, "improvement_percent": -0.28},
+    {"case": 6, "key": "DEFAULT", "result": "Pass", "time_us": 17.30, "baseline_time_us": 17.28, "improvement_percent": -0.12},
+    {"case": 7, "key": "DEFAULT", "result": "Pass", "time_us": 15.38, "baseline_time_us": 15.85, "improvement_percent": 2.97},
+    {"case": 8, "key": "LARGE_BALANCED", "result": "Pass", "time_us": 159.30, "baseline_time_us": 297.24, "improvement_percent": 46.41},
+    {"case": 9, "key": "LARGE_BALANCED", "result": "Pass", "time_us": 200.05, "baseline_time_us": 315.33, "improvement_percent": 36.56},
+    {"case": 10, "key": "LARGE_BALANCED", "result": "Pass", "time_us": 270.40, "baseline_time_us": 408.27, "improvement_percent": 33.77},
+    {"case": 11, "key": "LARGE_BALANCED", "result": "Pass", "time_us": 434.34, "baseline_time_us": 578.90, "improvement_percent": 24.97},
+    {"case": 12, "key": "LARGE_BALANCED", "result": "Pass", "time_us": 360.58, "baseline_time_us": 615.27, "improvement_percent": 41.39},
+    {"case": 13, "key": "TALL_NARROW", "result": "Pass", "time_us": 40.22, "baseline_time_us": 56.09, "improvement_percent": 28.29},
+    {"case": 14, "key": "WIDE_SHALLOW", "result": "Pass", "time_us": 24.11, "baseline_time_us": 30.54, "improvement_percent": 21.05},
+    {"case": 15, "key": "TALL_NARROW", "result": "Pass", "time_us": 32.35, "baseline_time_us": 80.30, "improvement_percent": 59.71}
+  ]
+}

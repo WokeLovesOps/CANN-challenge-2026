@@ -1,0 +1,26 @@
+{
+  "source_sha256": "7a9b99a9812272c5fe29dae0e3ce23ed0a97899f6104e1f9485369977918a303",
+  "date": "2026-09-21",
+  "exact_run_time": null,
+  "score": null,
+  "source": "用户反馈的十五点平台结果，按提交前记录的源码 SHA256 归属",
+  "probe_condition": "(1025 <= M <= 1055) or M == 7936",
+  "interpretation": "点8为1025至1055；点13为8192",
+  "cases": [
+    {"case": 1, "result": "Pass", "error_percent": 0.0, "time_us": 10.88, "best_time_us": 1.21},
+    {"case": 2, "result": "Pass", "error_percent": 0.0, "time_us": 11.44, "best_time_us": 1.58},
+    {"case": 3, "result": "Pass", "error_percent": 0.0, "time_us": 10.52, "best_time_us": 2.16},
+    {"case": 4, "result": "Pass", "error_percent": 0.0, "time_us": 12.92, "best_time_us": 2.92},
+    {"case": 5, "result": "Pass", "error_percent": 0.0, "time_us": 10.70, "best_time_us": 2.96},
+    {"case": 6, "result": "Pass", "error_percent": 0.0, "time_us": 17.07, "best_time_us": 3.82},
+    {"case": 7, "result": "Pass", "error_percent": 0.0, "time_us": 15.90, "best_time_us": 5.68},
+    {"case": 8, "result": "Wrong Answer", "error_percent": 100.0, "time_us": 295.23, "best_time_us": 17.32, "inferred_m": "1025..1055"},
+    {"case": 9, "result": "Pass", "error_percent": 0.0, "time_us": 313.27, "best_time_us": 52.01},
+    {"case": 10, "result": "Pass", "error_percent": 0.0, "time_us": 409.54, "best_time_us": 72.47, "inferred_m": "4096"},
+    {"case": 11, "result": "Pass", "error_percent": 0.0, "time_us": 581.78, "best_time_us": 45.65},
+    {"case": 12, "result": "Pass", "error_percent": 0.0, "time_us": 621.63, "best_time_us": 33.62},
+    {"case": 13, "result": "Pass", "error_percent": 0.0, "time_us": 56.63, "best_time_us": 1.40, "inferred_m": "8192"},
+    {"case": 14, "result": "Pass", "error_percent": 0.0, "time_us": 30.38, "best_time_us": 10.11},
+    {"case": 15, "result": "Pass", "error_percent": 0.0, "time_us": 81.47, "best_time_us": 9.87}
+  ]
+}
