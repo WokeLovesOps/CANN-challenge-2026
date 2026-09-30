@@ -1,0 +1,29 @@
+{
+  "case": 791,
+  "label": "K分片八元素尾",
+  "shape": [
+    1,
+    63,
+    63,
+    4184
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "available_cores": 20,
+  "max_abs_error": 0.000244140625,
+  "commit": "826bc20",
+  "library_sha256": "ceaa187f4904966af71bcf5dd7c0bbe36d87db486a3b258d475b7c78761a542c",
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e16-tail-bf16-tt/OPPROF_20261001021653_KUXKCWQJVKEUQMJD/simulator/visualize_data.bin",
+      "size": 11204396,
+      "sha256": "c01d383911592d9f37108318f3e60b4f3044cabb296a7d9e0bc8d61acfe123b8"
+    }
+  ]
+}
