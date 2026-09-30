@@ -1,0 +1,964 @@
+[mssanitizer] Start initcheck sanitizer on kernel "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081200000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1ce61c (serialNo:165)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081220000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1ce61c (serialNo:437)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 2048
+======    at 0x12c0c005d000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:1679)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c005dc00 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:1828)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c005e800 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:1977)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c005f400 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:2126)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c0060000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:2275)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c0060c00 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:2424)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081240000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(1) on device 0
+======    code in pc current 0x1ce61c (serialNo:2813)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081260000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(1) on device 0
+======    code in pc current 0x1ce61c (serialNo:3085)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 4096
+======    at 0x0 on L1 in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(0-17) on device 0
+======    code in pc current 0xf8a34 (serialNo:5337)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x57198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(0) on device 0
+======    code in pc current 0xf5458 (serialNo:5440)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x571c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(0) on device 0
+======    code in pc current 0xf5ee8 (serialNo:5469)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081280000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(2) on device 0
+======    code in pc current 0x1ce61c (serialNo:9741)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0812a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(2) on device 0
+======    code in pc current 0x1ce61c (serialNo:10013)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0812c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(3) on device 0
+======    code in pc current 0x1ce61c (serialNo:11502)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0812e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(3) on device 0
+======    code in pc current 0x1ce61c (serialNo:11774)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x5f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(1) on device 0
+======    code in pc current 0xf5458 (serialNo:13852)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x5f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(1) on device 0
+======    code in pc current 0xf5ee8 (serialNo:13881)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081300000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(4) on device 0
+======    code in pc current 0x1ce61c (serialNo:16951)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081320000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(4) on device 0
+======    code in pc current 0x1ce61c (serialNo:17223)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081340000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(5) on device 0
+======    code in pc current 0x1ce61c (serialNo:18811)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081360000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(5) on device 0
+======    code in pc current 0x1ce61c (serialNo:19083)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x6f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(2) on device 0
+======    code in pc current 0xf5458 (serialNo:21339)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x6f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(2) on device 0
+======    code in pc current 0xf5ee8 (serialNo:21368)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081380000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(6) on device 0
+======    code in pc current 0x1ce61c (serialNo:24466)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0813a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(6) on device 0
+======    code in pc current 0x1ce61c (serialNo:24738)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0813c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(7) on device 0
+======    code in pc current 0x1ce61c (serialNo:26049)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0813e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(7) on device 0
+======    code in pc current 0x1ce61c (serialNo:26321)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x77198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(3) on device 0
+======    code in pc current 0xf5458 (serialNo:28676)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x771c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(3) on device 0
+======    code in pc current 0xf5ee8 (serialNo:28705)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081400000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(8) on device 0
+======    code in pc current 0x1ce61c (serialNo:31872)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081420000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(8) on device 0
+======    code in pc current 0x1ce61c (serialNo:32144)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081440000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(9) on device 0
+======    code in pc current 0x1ce61c (serialNo:33633)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081460000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(9) on device 0
+======    code in pc current 0x1ce61c (serialNo:33905)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x87198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(4) on device 0
+======    code in pc current 0xf5458 (serialNo:35983)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x871c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(4) on device 0
+======    code in pc current 0xf5ee8 (serialNo:36012)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081480000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(10) on device 0
+======    code in pc current 0x1ce61c (serialNo:39133)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0814a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(10) on device 0
+======    code in pc current 0x1ce61c (serialNo:39405)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0814c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(11) on device 0
+======    code in pc current 0x1ce61c (serialNo:40993)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0814e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(11) on device 0
+======    code in pc current 0x1ce61c (serialNo:41265)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x8f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(5) on device 0
+======    code in pc current 0xf5458 (serialNo:43521)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x8f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(5) on device 0
+======    code in pc current 0xf5ee8 (serialNo:43550)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081500000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(12) on device 0
+======    code in pc current 0x1ce61c (serialNo:46580)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081520000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(12) on device 0
+======    code in pc current 0x1ce61c (serialNo:46852)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081540000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(13) on device 0
+======    code in pc current 0x1ce61c (serialNo:48163)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081560000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(13) on device 0
+======    code in pc current 0x1ce61c (serialNo:48435)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x97198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(6) on device 0
+======    code in pc current 0xf5458 (serialNo:50790)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x971c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(6) on device 0
+======    code in pc current 0xf5ee8 (serialNo:50819)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081580000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(14) on device 0
+======    code in pc current 0x1ce61c (serialNo:53952)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0815a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(14) on device 0
+======    code in pc current 0x1ce61c (serialNo:54224)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c0815c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(15) on device 0
+======    code in pc current 0x1ce61c (serialNo:55713)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c0815e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(15) on device 0
+======    code in pc current 0x1ce61c (serialNo:55985)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x9f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(7) on device 0
+======    code in pc current 0xf5458 (serialNo:58063)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x9f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(7) on device 0
+======    code in pc current 0xf5ee8 (serialNo:58092)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081600000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(16) on device 0
+======    code in pc current 0x1ce61c (serialNo:61077)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081620000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(16) on device 0
+======    code in pc current 0x1ce61c (serialNo:61349)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081640000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(17) on device 0
+======    code in pc current 0x1ce61c (serialNo:62937)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081660000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(17) on device 0
+======    code in pc current 0x1ce61c (serialNo:63209)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0xa7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(8) on device 0
+======    code in pc current 0xf5458 (serialNo:65465)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xa71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(8) on device 0
+======    code in pc current 0xf5ee8 (serialNo:65494)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xaf198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(9) on device 0
+======    code in pc current 0xf5458 (serialNo:69378)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xaf1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(9) on device 0
+======    code in pc current 0xf5ee8 (serialNo:69407)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xb7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(10) on device 0
+======    code in pc current 0xf5458 (serialNo:73275)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xb71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(10) on device 0
+======    code in pc current 0xf5ee8 (serialNo:73304)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xbf198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(11) on device 0
+======    code in pc current 0xf5458 (serialNo:77194)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xbf1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(11) on device 0
+======    code in pc current 0xf5ee8 (serialNo:77223)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xc7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(12) on device 0
+======    code in pc current 0xf5458 (serialNo:80954)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xc71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(12) on device 0
+======    code in pc current 0xf5ee8 (serialNo:80983)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(13) on device 0
+======    code in pc current 0xf5458 (serialNo:84783)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(13) on device 0
+======    code in pc current 0xf5ee8 (serialNo:84812)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xf198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(14) on device 0
+======    code in pc current 0xf5458 (serialNo:88753)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xf1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(14) on device 0
+======    code in pc current 0xf5ee8 (serialNo:88782)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x1f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(15) on device 0
+======    code in pc current 0xf5458 (serialNo:92677)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x1f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(15) on device 0
+======    code in pc current 0xf5ee8 (serialNo:92706)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x27198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(16) on device 0
+======    code in pc current 0xf5458 (serialNo:96534)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x271c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(16) on device 0
+======    code in pc current 0xf5ee8 (serialNo:96563)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x2f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(17) on device 0
+======    code in pc current 0xf5458 (serialNo:100532)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x2f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(17) on device 0
+======    code in pc current 0xf5ee8 (serialNo:100561)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+[mssanitizer] Sanitizer finished on kernel "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)". See all detected errors above.
+[mssanitizer] Start initcheck sanitizer on kernel "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081200000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1ce61c (serialNo:103738)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081220000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1ce61c (serialNo:104010)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 2048
+======    at 0x12c0c005d000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:105252)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c005dc00 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:105401)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c005e800 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:105550)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c005f400 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:105699)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c0060000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:105848)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 3072
+======    at 0x12c0c0060c00 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(0) on device 0
+======    code in pc current 0x1d5bc0 (serialNo:105997)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:861:13
+======    #1 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1117:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081240000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(1) on device 0
+======    code in pc current 0x1ce61c (serialNo:106386)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081260000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(1) on device 0
+======    code in pc current 0x1ce61c (serialNo:106658)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 4096
+======    at 0x0 on L1 in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(0-17) on device 0
+======    code in pc current 0xf8a34 (serialNo:108910)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x37198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(0) on device 0
+======    code in pc current 0xf5458 (serialNo:109013)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x371c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(0) on device 0
+======    code in pc current 0xf5ee8 (serialNo:109042)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081280000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(2) on device 0
+======    code in pc current 0x1ce61c (serialNo:113620)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0812a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(2) on device 0
+======    code in pc current 0x1ce61c (serialNo:113892)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0812c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(3) on device 0
+======    code in pc current 0x1ce61c (serialNo:115381)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0812e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(3) on device 0
+======    code in pc current 0x1ce61c (serialNo:115653)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x3f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(1) on device 0
+======    code in pc current 0xf5458 (serialNo:117731)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x3f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(1) on device 0
+======    code in pc current 0xf5ee8 (serialNo:117760)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081300000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(4) on device 0
+======    code in pc current 0x1ce61c (serialNo:121034)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081320000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(4) on device 0
+======    code in pc current 0x1ce61c (serialNo:121306)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081340000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(5) on device 0
+======    code in pc current 0x1ce61c (serialNo:122894)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081360000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(5) on device 0
+======    code in pc current 0x1ce61c (serialNo:123166)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x57198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(2) on device 0
+======    code in pc current 0xf5458 (serialNo:125422)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x571c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(2) on device 0
+======    code in pc current 0xf5ee8 (serialNo:125451)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081380000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(6) on device 0
+======    code in pc current 0x1ce61c (serialNo:128668)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0813a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(6) on device 0
+======    code in pc current 0x1ce61c (serialNo:128940)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0813c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(7) on device 0
+======    code in pc current 0x1ce61c (serialNo:130251)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0813e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(7) on device 0
+======    code in pc current 0x1ce61c (serialNo:130523)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x5f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(3) on device 0
+======    code in pc current 0xf5458 (serialNo:132878)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x5f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(3) on device 0
+======    code in pc current 0xf5ee8 (serialNo:132907)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081400000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(8) on device 0
+======    code in pc current 0x1ce61c (serialNo:136074)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081420000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(8) on device 0
+======    code in pc current 0x1ce61c (serialNo:136346)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081440000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(9) on device 0
+======    code in pc current 0x1ce61c (serialNo:137835)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081460000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(9) on device 0
+======    code in pc current 0x1ce61c (serialNo:138107)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x6f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(4) on device 0
+======    code in pc current 0xf5458 (serialNo:140185)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x6f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(4) on device 0
+======    code in pc current 0xf5ee8 (serialNo:140214)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081480000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(10) on device 0
+======    code in pc current 0x1ce61c (serialNo:143437)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0814a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(10) on device 0
+======    code in pc current 0x1ce61c (serialNo:143709)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0814c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(11) on device 0
+======    code in pc current 0x1ce61c (serialNo:145297)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0814e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(11) on device 0
+======    code in pc current 0x1ce61c (serialNo:145569)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x77198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(5) on device 0
+======    code in pc current 0xf5458 (serialNo:147825)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x771c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(5) on device 0
+======    code in pc current 0xf5ee8 (serialNo:147854)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081500000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(12) on device 0
+======    code in pc current 0x1ce61c (serialNo:151105)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081520000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(12) on device 0
+======    code in pc current 0x1ce61c (serialNo:151377)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081540000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(13) on device 0
+======    code in pc current 0x1ce61c (serialNo:152688)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081560000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(13) on device 0
+======    code in pc current 0x1ce61c (serialNo:152960)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x87198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(6) on device 0
+======    code in pc current 0xf5458 (serialNo:155315)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x871c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(6) on device 0
+======    code in pc current 0xf5ee8 (serialNo:155344)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c081580000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(14) on device 0
+======    code in pc current 0x1ce61c (serialNo:158494)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 131072
+======    at 0x12c0815a0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(14) on device 0
+======    code in pc current 0x1ce61c (serialNo:158766)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c0815c0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(15) on device 0
+======    code in pc current 0x1ce61c (serialNo:160255)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c0815e0000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(15) on device 0
+======    code in pc current 0x1ce61c (serialNo:160527)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x8f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(7) on device 0
+======    code in pc current 0xf5458 (serialNo:162605)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x8f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(7) on device 0
+======    code in pc current 0xf5ee8 (serialNo:162634)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081600000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(16) on device 0
+======    code in pc current 0x1ce61c (serialNo:165772)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081620000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(16) on device 0
+======    code in pc current 0x1ce61c (serialNo:166044)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081640000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(17) on device 0
+======    code in pc current 0x1ce61c (serialNo:167632)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 130560
+======    at 0x12c081660000 on GM in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aiv(17) on device 0
+======    code in pc current 0x1ce61c (serialNo:167904)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:1003:13
+
+====== ERROR: uninitialized read of size 8
+======    at 0x97198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(8) on device 0
+======    code in pc current 0xf5458 (serialNo:170160)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x971c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(8) on device 0
+======    code in pc current 0xf5ee8 (serialNo:170189)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x9f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(9) on device 0
+======    code in pc current 0xf5458 (serialNo:174175)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x9f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(9) on device 0
+======    code in pc current 0xf5ee8 (serialNo:174204)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xa7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(10) on device 0
+======    code in pc current 0xf5458 (serialNo:178208)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xa71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(10) on device 0
+======    code in pc current 0xf5ee8 (serialNo:178237)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xaf198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(11) on device 0
+======    code in pc current 0xf5458 (serialNo:182229)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xaf1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(11) on device 0
+======    code in pc current 0xf5ee8 (serialNo:182258)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xb7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(12) on device 0
+======    code in pc current 0xf5458 (serialNo:186176)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xb71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(12) on device 0
+======    code in pc current 0xf5ee8 (serialNo:186205)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xbf198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(13) on device 0
+======    code in pc current 0xf5458 (serialNo:190158)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xbf1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(13) on device 0
+======    code in pc current 0xf5ee8 (serialNo:190187)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xc7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(14) on device 0
+======    code in pc current 0xf5458 (serialNo:194043)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xc71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(14) on device 0
+======    code in pc current 0xf5ee8 (serialNo:194072)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x7198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(15) on device 0
+======    code in pc current 0xf5458 (serialNo:197967)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x71c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(15) on device 0
+======    code in pc current 0xf5ee8 (serialNo:197996)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xf198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(16) on device 0
+======    code in pc current 0xf5458 (serialNo:202045)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0xf1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(16) on device 0
+======    code in pc current 0xf5ee8 (serialNo:202074)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x1f198 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(17) on device 0
+======    code in pc current 0xf5458 (serialNo:206145)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+====== ERROR: uninitialized read of size 8
+======    at 0x1f1c8 on PRIVATE in "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)"
+======    in block aic(17) on device 0
+======    code in pc current 0xf5ee8 (serialNo:206174)
+======    #0 /home/developer/cann-explore-20260930/e24-tn-sanitizer/tests/../src/kernel.asc:936:5
+
+[mssanitizer] Sanitizer finished on kernel "void batch_max_sum::Compute<half, true, false, true, 256u, 128u, false>(unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, unsigned char*, batch_max_sum::Parameters, unsigned char*)". See all detected errors above.
