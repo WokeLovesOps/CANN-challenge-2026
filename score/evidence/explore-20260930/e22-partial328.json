@@ -1,0 +1,29 @@
+{
+  "case": 328,
+  "label": "ShapeKey大矩阵边界",
+  "shape": [
+    1,
+    1024,
+    512,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "available_cores": 20,
+  "max_abs_error": 0.0,
+  "commit": "16cb81d",
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e22-partial328/OPPROF_20261001032919_TRVHBDPBQRMGHZWC/simulator/visualize_data.bin",
+      "size": 15784348,
+      "sha256": "fb488d2104fe3bb205cc2b33b7c91cef336435291dea0acc46bd2493e3ffdbdc"
+    }
+  ],
+  "说明": "部分规模诊断：K缩为32，仅覆盖本场景；不是完整点8或点11仿真，也不作为真实NPU性能。"
+}
