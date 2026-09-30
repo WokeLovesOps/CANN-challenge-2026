@@ -52,7 +52,7 @@ text = text[:body_start] + body + text[end:]
 (args.output / "src").mkdir(parents=True)
 (args.output / "tests").mkdir()
 (args.output / "src/kernel.asc").write_text(text)
-for path in ["tests/CMakeLists.txt", "tests/simulator_bridge.asc", "tests/simulator_matrix.py",
+for path in ["tests/CMakeLists.txt", "tests/main.asc", "tests/simulator_bridge.asc", "tests/simulator_matrix.py",
              "tests/correctness.py", "tests/simulator.py", "tests/benchmark.py"]:
     (args.output / path).write_text(source(path))
 manifest = dict(源码提交=commit, 原始核SHA256=hashlib.sha256(original.encode()).hexdigest(),
