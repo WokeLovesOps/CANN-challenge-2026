@@ -1,0 +1,20 @@
+{
+  "case": 834,
+  "label": "自适应大矩阵256行尾块",
+  "shape": [
+    1,
+    1281,
+    2049,
+    40
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": false,
+  "available_cores": 20,
+  "error": "精度失败: actual=[9073.165], expected=[9110.467]"
+}

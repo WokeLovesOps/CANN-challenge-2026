@@ -1,0 +1,29 @@
+{
+  "case": 834,
+  "label": "自适应大矩阵256行尾块",
+  "shape": [
+    1,
+    1281,
+    2049,
+    40
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "available_cores": 20,
+  "max_abs_error": 0.0,
+  "commit": "48fa05a",
+  "说明": "仅部分规模模型，真机其他边界失败，不是全面正确性结论",
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e23-partial834/OPPROF_20261001033821_MEFEDWVZVIYHXYPD/simulator/visualize_data.bin",
+      "size": 35556536,
+      "sha256": "82d211887c7697e48376e9a0b6d8f2a9a0294c6fe2f5cd1b333ed793dfb0582f"
+    }
+  ]
+}
