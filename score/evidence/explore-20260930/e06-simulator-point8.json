@@ -1,0 +1,58 @@
+{
+  "commit": "08b4d8a",
+  "execution": "simulator",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e06-sim/libsimulator_bridge.so",
+  "library_sha256": "0c67e4b547269cfe2bbb7ec10113716b442eaeb964c4410358d9ff4569f81161",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": true,
+  "results": [
+    {
+      "case": 8,
+      "shape": [
+        1,
+        1025,
+        1031,
+        1032
+      ],
+      "passed": true,
+      "input_sha256": [
+        "585c0483c6b90c7fbf34656553391e96af37ded58550c89a78b208059cad434a",
+        "a053bc26b3e58f76715dadc1dbb4b7a49cbb5b65d7cbda3c5a788fe984724315"
+      ],
+      "launch_begin": 0,
+      "seed": 20260938,
+      "max_abs_error": 0.0,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 8,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 8,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 8,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20,
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e06-point8-r2/OPPROF_20261001003427_EAYGTYKEJGVXGYJH/simulator/visualize_data.bin",
+      "size": 103578200,
+      "sha256": "20bd443e21a300751312a8a0394fe3958b7f1cdb8f823e32af89d5c9ff4e078e"
+    }
+  ],
+  "首次失败": "repeat=1被应用参数校验拒绝，未执行算子；失败日志保留Build/profiles/sim-e06-point8.log"
+}
