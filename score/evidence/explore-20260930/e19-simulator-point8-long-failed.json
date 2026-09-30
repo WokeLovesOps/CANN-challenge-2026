@@ -1,0 +1,14 @@
+{
+  "commit": "c854d11",
+  "execution": "simulator",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e19-sim/libsimulator_bridge.so",
+  "library_sha256": "071b6c562d5dde5b913f7b99ddae827acfd99519cb0b5ad9b688acbf0e180e63",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": false,
+  "results": [],
+  "launches": [],
+  "说明": "完整点8 NN延长至15分钟仍超时，工具强制终止；旧报告无法区分具体调用阶段，不能使用部分模型时间作为通过证据。"
+}
