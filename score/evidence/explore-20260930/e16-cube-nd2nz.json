@@ -1,0 +1,25 @@
+{
+  "commit": "826bc20",
+  "说明": "第二次调用核0仿真指令，分开的两个源搬运调用点各执行4次；时间可能重叠，不作求和",
+  "source": "Build/profiles/sim-e16-point15/OPPROF_20261001021427_FQDZHSBHMFQYROON/_ZN13batch_max_sum13ComputeSplitKIDhLb0ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/1/simulator/core0.cubecore0/core0.cubecore0_instr_exe_20261001021443077.csv",
+  "instructions": [
+    {
+      "instr": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+      "addr": "307518952",
+      "pipe": "MTE2",
+      "call_count": "4",
+      "cycles": "2380",
+      "running_time(us)": "1.290000",
+      "detail": "Src:OUT,Dst:L1,XD:X13=0x20000,XN:X3=0x11415a00,XM:X7=0x4001000010,XT:X4=0x101000040,Dtype:B16,id:97"
+    },
+    {
+      "instr": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+      "addr": "307517832",
+      "pipe": "MTE2",
+      "call_count": "4",
+      "cycles": "2244",
+      "running_time(us)": "1.210000",
+      "detail": "Src:OUT,Dst:L1,XD:X10=0,XN:X3=0x11315800,XM:X7=0x10000400010,XT:X4=0x100402000,Dtype:B16,id:96"
+    }
+  ]
+}
