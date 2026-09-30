@@ -1,0 +1,62 @@
+{
+  "commit": "b6bcc7a",
+  "execution": "simulator",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e03-sim/libsimulator_bridge.so",
+  "library_sha256": "8abc551591bf58a434f032e7b098ce12b9be0bf10fbe14ec5cd7161ffe9a0245",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": true,
+  "results": [
+    {
+      "case": 14,
+      "shape": [
+        1,
+        64,
+        8192,
+        128
+      ],
+      "passed": true,
+      "input_sha256": [
+        "a59d171e4f8caf723ad1b317eed4692d8c76ed1553895478d893b70733d18e04",
+        "2964ed3a0a13f21c229e92f224c78773e3e598f423bf64b4d00d9ca8372f046f"
+      ],
+      "launch_begin": 0,
+      "seed": 20260944,
+      "max_abs_error": 0.0,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 14,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 14,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 14,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20,
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e03-point14/OPPROF_20261001000521_HMKHPBJBJCMZLPXQ/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj64ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+      "size": 12392344,
+      "sha256": "fcbd56b798f15c19c347b6444d6d5674f9fb0e51f0eec0851bf7554472fe1eff"
+    },
+    {
+      "path": "Build/profiles/sim-e03-point14/OPPROF_20261001000521_HMKHPBJBJCMZLPXQ/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj64ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+      "size": 12145304,
+      "sha256": "d3a79fea1f1e48c314501185387417ae03e72c6a0c5167a994e2490d62a17e23"
+    }
+  ]
+}
