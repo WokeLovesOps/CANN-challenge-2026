@@ -1,0 +1,24 @@
+{
+  "说明": "仅软件模型核0，不能相加源码行或各流水时间充当总时间",
+  "提交": "9821db0",
+  "库SHA256": "aaf9735b334556500d405e9822a90a07d086b2dae7acd23e93e94537a0ce6c50",
+  "BIN": [
+    {
+      "路径": "Build/profiles/sim-baseline-case14/OPPROF_20260930234439_VICZUWTWNEDPTPRA/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj64ELj128ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+      "字节数": 13148884,
+      "SHA256": "6a953c00245fe0c925f4afd8fc6f7894120b587c269865373f1e3f3a8c24c6c2"
+    },
+    {
+      "路径": "Build/profiles/sim-baseline-case14/OPPROF_20260930234439_VICZUWTWNEDPTPRA/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj64ELj128ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+      "字节数": 12740272,
+      "SHA256": "79ac2aa78dfb5ef4b73747d40bf693805fe7a2f64578d14cf0628acb85621572"
+    }
+  ],
+  "观测": {
+    "core0.cube首调用_us": 20.27,
+    "core0.vector首调用_us": 20.19,
+    "WaitIterateAll源码962关联等待_us": 9.87,
+    "SyncAll源码1034关联等待_us": 3.34,
+    "限制": "源码区间可能交叠；不是完整端到端或最慢核时间。"
+  }
+}
