@@ -1,0 +1,339 @@
+{
+  "说明": "E35默认块双主模式的同场景模型对照。模型流水及源码映射可重叠，不相加，不替代真机l0。",
+  "父版": "f7834c9",
+  "候选": "b7423b9",
+  "结果": {
+    "448": {
+      "父版": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "14.6",
+              "12.82"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 4,
+            "MOV_L1_TO_OUT": 17,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 16,
+            "WAIT_FLAG": 16,
+            "SET_CROSS_CORE": 2,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 2,
+            "VCADD": 0
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "14.49",
+              "13.91"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+            "MOV_L1_TO_OUT": 0,
+            "MOV_UB_TO_OUT": 4,
+            "SET_FLAG": 132,
+            "WAIT_FLAG": 132,
+            "SET_CROSS_CORE": 1,
+            "WAIT_FLAG_DEV": 1,
+            "MMAD": 0,
+            "VCADD": 14
+          }
+        },
+        "core12.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "11.34",
+              "9.64"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 4,
+            "MOV_L1_TO_OUT": 17,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 16,
+            "WAIT_FLAG": 16,
+            "SET_CROSS_CORE": 2,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 2,
+            "VCADD": 0
+          }
+        },
+        "core12.veccore0": {
+          "模型duration_running_us": [
+            [
+              "10.98",
+              "10.5"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+            "MOV_L1_TO_OUT": 0,
+            "MOV_UB_TO_OUT": 4,
+            "SET_FLAG": 11,
+            "WAIT_FLAG": 11,
+            "SET_CROSS_CORE": 1,
+            "WAIT_FLAG_DEV": 1,
+            "MMAD": 0,
+            "VCADD": 1
+          }
+        }
+      },
+      "候选": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "6.8",
+              "5.66"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 4,
+            "MOV_L1_TO_OUT": 17,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "SET_CROSS_CORE": 2,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 2,
+            "VCADD": 0
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "11.51",
+              "11.32"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+            "MOV_L1_TO_OUT": 0,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 125,
+            "WAIT_FLAG": 125,
+            "SET_CROSS_CORE": 2,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 0,
+            "VCADD": 14
+          }
+        },
+        "core12.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "6.79",
+              "5.64"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 4,
+            "MOV_L1_TO_OUT": 17,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "SET_CROSS_CORE": 2,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 2,
+            "VCADD": 0
+          }
+        },
+        "core12.veccore0": {
+          "模型duration_running_us": [
+            [
+              "7.85",
+              "7.75"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+            "MOV_L1_TO_OUT": 0,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 4,
+            "WAIT_FLAG": 4,
+            "SET_CROSS_CORE": 2,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 0,
+            "VCADD": 1
+          }
+        }
+      }
+    },
+    "16": {
+      "父版": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "18.16",
+              "16.38"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 6,
+            "MOV_L1_TO_OUT": 17,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 25,
+            "WAIT_FLAG": 25,
+            "SET_CROSS_CORE": 4,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 3,
+            "VCADD": 0
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "18.05",
+              "17.5"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+            "MOV_L1_TO_OUT": 0,
+            "MOV_UB_TO_OUT": 5,
+            "SET_FLAG": 48,
+            "WAIT_FLAG": 48,
+            "SET_CROSS_CORE": 1,
+            "WAIT_FLAG_DEV": 3,
+            "MMAD": 0,
+            "VCADD": 4
+          }
+        }
+      },
+      "候选": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "10.35",
+              "9.2"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 6,
+            "MOV_L1_TO_OUT": 17,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 25,
+            "WAIT_FLAG": 25,
+            "SET_CROSS_CORE": 4,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 3,
+            "VCADD": 0
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "12.22",
+              "12.09"
+            ]
+          ],
+          "指令次数": {
+            "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+            "MOV_L1_TO_OUT": 0,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 39,
+            "WAIT_FLAG": 39,
+            "SET_CROSS_CORE": 4,
+            "WAIT_FLAG_DEV": 0,
+            "MMAD": 0,
+            "VCADD": 4
+          }
+        }
+      }
+    }
+  },
+  "点6最终归约循环指令": [
+    {
+      "instr": "MOV_OUT_TO_UB",
+      "addr": "309002416",
+      "pipe": "MTE2",
+      "call_count": "13",
+      "cycles": "3614",
+      "running_time(us)": "1.950000",
+      "detail": "Src:OUT,Dst:UB,XD:X25=0x4340,XN:X26=0x113bee00,XM:X13=0x20010,id:51"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002476",
+      "pipe": "VECTOR",
+      "call_count": "13",
+      "cycles": "3367",
+      "running_time(us)": "1.820000",
+      "detail": "PIPE:MTE2,TRIGGERPIPE:VEC,FLAGID:0,"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002072",
+      "pipe": "SCALAR",
+      "call_count": "13",
+      "cycles": "3339",
+      "running_time(us)": "1.800000",
+      "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,"
+    },
+    {
+      "instr": "VCADD",
+      "addr": "309002036",
+      "pipe": "VECTOR",
+      "call_count": "13",
+      "cycles": "468",
+      "running_time(us)": "0.250000",
+      "detail": "XD:X25=0x44c0,XN:X24=0x4340,XT:X17=0x100000800010001,Dtype:F32,Id:1184"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002156",
+      "pipe": "SCALAR",
+      "call_count": "13",
+      "cycles": "221",
+      "running_time(us)": "0.120000",
+      "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:0,"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002164",
+      "pipe": "SCALAR",
+      "call_count": "13",
+      "cycles": "13",
+      "running_time(us)": "0.010000",
+      "detail": "PIPE:VEC,TRIGGERPIPE:SCALAR,FLAGID:7,"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002208",
+      "pipe": "VECTOR",
+      "call_count": "13",
+      "cycles": "0",
+      "running_time(us)": "0.000000",
+      "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002132",
+      "pipe": "MTE3",
+      "call_count": "13",
+      "cycles": "0",
+      "running_time(us)": "0.000000",
+      "detail": "PIPE:SCALAR,TRIGGERPIPE:MTE3,FLAGID:0,"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002124",
+      "pipe": "VECTOR",
+      "call_count": "13",
+      "cycles": "0",
+      "running_time(us)": "0.000000",
+      "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:0,"
+    },
+    {
+      "instr": "WAIT_FLAG",
+      "addr": "309002512",
+      "pipe": "VECTOR",
+      "call_count": "13",
+      "cycles": "0",
+      "running_time(us)": "0.000000",
+      "detail": "PIPE:SCALAR,TRIGGERPIPE:VEC,FLAGID:7,"
+    }
+  ]
+}
