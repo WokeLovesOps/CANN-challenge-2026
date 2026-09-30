@@ -174,3 +174,13 @@ E09通用回归补充：`(1,513,33,8192)`、`(64,512,64,40)`、`(1,513,1,40)` �
 - 两轮候选目标点均改善，点10也转为明显下降；32组边界图捕获已全部通过。大矩阵双类型四布局40组全部通过，每组20预热＋50采样；另见 `e10b-capture-correctness.json` 和 `e10b-large-layout-correctness.json`。
 - 本地仿真异常：点8子进程退出139，应用报告passed=false，尚未完成任何结果校验。虽然解析器输出了核0时间，不能将其作为通过的模型证据。原始失败目录保留，正在相同完整规模开启Python崩溃追踪重试，没有替换为缩小规模。性能证据是普通l0真机实测，模型验证仍未完成。
 - 证据：`e10b-abba-20-50.json`、`e10b-simulator-point8-failed.json`、`e10b-simulator-point8-failure.txt`。
+
+### E10模型崩溃与PMU补充
+
+相同NN完整规模重试仍退出139。Python追踪停在benchmark.py调用run_kernel处；原生GDB栈定位 `libpem_davinci.so` 的 `Isa::get_mte_isa_para()` → `PemMteNd2NzUegn::push_biu_data` → `PemMteBiuIntf::push_data_to_ndnz` → 模型工作线程。说明段错误位于模型ND→NZ搬运处理内；尚未证明其触发条件，不能据此认定核代码毫无问题。保留完整失败目录与 `e10b-simulator-native-stack.txt`。将增加同一完整shape的NT布局对照来定位方向相关性；即使NT通过，也不替代NN验证。
+
+板上点10 PMU，512列NORM（`08b4d8a`，与E09大矩阵算法相同）→MDL（`0411b90`）：核0 MTE2活跃151.950→98.418µs，Scalar178.074→124.849µs，Cube总时197.528→159.431µs。与普通l0下降18.11%方向一致；仍分别报告两种采集口径。
+
+### 大K小矩阵下一轮依据
+
+点15当前仅1个Cube核；PMU核0 MTE2活跃21.765µs，Cube计算5.799µs，Vector等待24.963µs，GM到L1约2064KB。PMU总时31.259µs，不能与普通l0约17.5µs混用。后续考虑减少列块宽度以利用空闲核进行N分片，保持各行先合并Max再Sum，不切断K的完整FP32累加。证据为 `e09-point15-*.csv`。

@@ -1,0 +1,16 @@
+核代码0411b90；CANN9.0.0；Ascend910_9362；完整点8 FP16/NN。
+Thread 22 "python3" received signal SIGSEGV, Segmentation fault.
+[Switching to Thread 0x7fffad7fa6c0 (LWP 685967)]
+0x00007ffff4d7f180 in Isa::get_mte_isa_para() () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#0  0x00007ffff4d7f180 in Isa::get_mte_isa_para() () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#1  0x00007ffff4ef49e9 in PemMteNd2NzUegn::push_biu_data(std::shared_ptr<mte_uop_t>&) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#2  0x00007ffff4e971b3 in PemMteBiuIntf::push_biu_data(std::shared_ptr<mte_uop_t>&) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#3  0x00007ffff4e996b0 in PemMteBiuIntf::push_data_to_ndnz() () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#4  0x00007ffff4d16600 in tm_engine::TmSim::work(unsigned int) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#5  0x00007ffff4fda2df in pem_aic_core::work() () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#6  0x00007ffff6ecb8e6 in AicParsimWrapper::work() () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libmodel_top.so
+#7  0x00007ffff6ec81ed in ModelParsim::SimThreadContainer::Work() () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libmodel_top.so
+#8  0x00007ffff6ec7fe1 in ModelParsim::AiCoreThreadEntry_TickSync(ModelParsim::SimThreadContainer*) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libmodel_top.so
+#9  0x00007ffff6c9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#10 0x00007ffff6d29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
