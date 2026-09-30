@@ -542,3 +542,5 @@ E31反向BAAB全15点通过：点9–12下降0.85%/0.95%/0.77%/0.76%，与首轮
 - 以E31为父版，唯一变量是Compute中的SetOrgShape调用位置：从StartColumn的每列块调用移到REGIST_MATMUL_OBJ后一次调用。该核调用期间params.m/n/k和TILE_COLS恒定；SetTail仍逐块处理有效尾部，SetTensor地址仍逐块设置。Cube配置、屏障和归约均不变。
 - 官方接口手册1136–1137页要求SetOrgShape在SetTensor/SetSingleShape前；移动后满足此顺序。9.0.0 SDK对dav-2201使用USE_WORKSPACE，该接口每次发送MMFUN_SET_ORG_SHAPE消息；scheduler_base.h的End释放资源但不重置MatmulShapeInfo。仍需模型和真机验证，不以静态阅读替代复用正确性。
 - E31场景834核0的源码映射确认重复形状设置进入KFC发送路径；内联行耗时不可累加当作预计收益。扩展覆盖普通Matmul、多行任务、N分片、大矩阵、双类型四布局及图重放。先提交后编译。
+
+E31点8/11对照PMU均收齐18个Cube及18个Vector，频率1650MHz、应用正确、BIN非空。点11核0Cube计时50.334→50.264µs、Scalar等待Cube48.896→46.707µs；FIXPIPE计时4.075→20.927µs。结合模型中FIXPIPE提前发射、驻留区间覆盖MMAD，不能把该计时增大直接解释为写回带宽退化或把不同流水时间相加；普通l0仍为两轮小幅改善。证据`e31-vs-e28-pmu.json`及CSV。
