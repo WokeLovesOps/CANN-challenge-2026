@@ -1,0 +1,340 @@
+2026-10-01 02:57:38 [INFO]  Op profiling analysis start.
+2026-10-01 02:57:38 [INFO]  Running simulation task: Binary Simulation Running, use simulator Ascend910 9362 by --soc-version
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[INFO] Config file [config_stars.json] from environment variable [CAMODEL_CONFIG_PATH]. Path: /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/profiles/sim-e19-point8-gdb-r2/OPPROF_20261001025738_DTMJAFGENZSXNJFC/device0/tmp_dump/config/config_stars.json
+[INFO] Config file is found, path is /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/profiles/sim-e19-point8-gdb-r2/OPPROF_20261001025738_DTMJAFGENZSXNJFC/device0/tmp_dump/config/config_stars.json.
+[FuncCache]: size:0x20000, line_size:128, way_num:16, line_num:1024, idx_num:64
+             idx_lsb:7, idx_mask:0x3f, tag_lsb:13, tag_mask:0xffffffffffffffff, ofst_mask:0x7f
+
+[TmSim]: Run in parallel worker mode, core num is: 24
+
+[INFO] Config file [config.json] from environment variable [CAMODEL_CONFIG_PATH]. Path: /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/profiles/sim-e19-point8-gdb-r2/OPPROF_20261001025738_DTMJAFGENZSXNJFC/device0/tmp_dump/config/config.json
+[Detaching after fork from child process 11263]
+[Detaching after fork from child process 11267]
+[Detaching after fork from child process 11269]
+[INFO] AicWrapper attach AIC 0, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 1, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 2, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 3, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 4, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 5, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 6, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 7, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 8, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 9, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 10, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 11, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 12, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 13, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 14, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 15, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 16, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 17, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 18, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 19, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 20, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 21, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 22, num_vec_core=2, num_subcore=3
+[INFO] AicWrapper attach AIC 23, num_vec_core=2, num_subcore=3
+[INFO] Chip 0 AIC / Scheduler / Soc periods: 200.0000 / 200.0000 / 105.0000
+[INFO] chip 0 die 0 device created
+>> Start ModelParsim with 16 threads for 25 thread units, mode is 0
+================================================================================
+>>>>                                                                        
+>>>>                             " PEM MODEL "                                
+>>>>             Total no. of 1 chip(s) Model Init Success!                
+>>>>                                                                        
+================================================================================
+[INFO] Model Start Time: 2026-10-01 02:57:40
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:0 swapbuf_addr:10000000
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:1 swapbuf_addr:10000040
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:2 swapbuf_addr:10000080
+[DRVSTUB_LOG] driver_api.c:556 sendSwapBuf:swapbuf_base_addr:10000000
+[DRVSTUB_LOG] driver_api.c:557 sendSwapBuf:sq:3 swapbuf_addr:100000c0
+[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+2026-10-01 02:57:51 [INFO]  Extract 7112 relations from kernel
+2026-10-01 02:57:51 [INFO]  Parse 59876 addr2line relations
+
+Thread 1 "python3" received signal SIGINT, Interrupt.
+0x00007ffff7fc3e81 in ?? ()
+#0  0x00007ffff7fc3e81 in ?? ()
+#1  0x00007ffff7b5548e in mmGetTimeOfDay () from /mnt/newdisk/Ascend/cann-9.0.0/lib64/libmmpa.so
+#2  0x00007ffff76db79c in ?? () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#3  0x00007ffff76e4d0d in cce::runtime::Stream::SynchronizeDelayTime(unsigned short, unsigned short, unsigned short) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#4  0x00007ffff76e5285 in cce::runtime::Stream::SynchronizeExecutedTask(unsigned int, mmTimespec const&, int) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#5  0x00007ffff76e5604 in cce::runtime::Stream::SynchronizeImpl(unsigned int, unsigned short, int) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#6  0x00007ffff76e590d in cce::runtime::Stream::Synchronize(bool, int) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#7  0x00007ffff74b4820 in cce::runtime::ApiImpl::StreamSynchronize(cce::runtime::Stream*, int) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#8  0x00007ffff748c783 in cce::runtime::ApiErrorDecorator::StreamSynchronize(cce::runtime::Stream*, int) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#9  0x00007ffff77f6137 in rtStreamSynchronize () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#10 0x00007ffff025cb0b in aclrtSynchronizeStreamImpl () from /mnt/newdisk/Ascend/cann-9.0.0/lib64/libacl_rt_impl.so
+#11 0x00007ffff7e08cf6 in aclrtSynchronizeStreamImplOrigin(void*) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/msopprof/lib64/libmsopprof_injection.so
+#12 0x00007ffff7e2cab4 in HijackedFuncOfAclrtLaunchKernelWithHostArgsImpl::Post(int) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/msopprof/lib64/libmsopprof_injection.so
+#13 0x00007ffff7d42a8b in aclrtLaunchKernelWithHostArgsImpl () from /mnt/newdisk/Ascend/cann-9.0.0/tools/msopprof/lib64/libmsopprof_injection.so
+#14 0x00007fff1e6ac8ed in AscendLaunchKernelWithHostArgs () from /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e19-sim/libsimulator_bridge.so
+#15 0x00007fff1e6819b7 in __asc_LaunchAndProfiling () from /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e19-sim/libsimulator_bridge.so
+#16 0x00007fff1e684bd4 in batch_max_sum::Launch<half, true, 128u, 256u, false> (x1=x1@entry=0x11315800 <error: Cannot access memory at address 0x11315800>, x2=x2@entry=0x1151a200 <error: Cannot access memory at address 0x1151a200>, scratch=scratch@entry=0x11721e00 <error: Cannot access memory at address 0x11721e00>, partial=0x11ba2000 <error: Cannot access memory at address 0x11ba2000>, y=y@entry=0x11721c40 <error: Cannot access memory at address 0x11721c40>, workspace=0x11ba4600 <error: Cannot access memory at address 0x11ba4600>, params=..., stream=0x60752a0, transA=<optimized out>, transB=<optimized out>) at /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/tests/../src/kernel.asc:924
+#17 0x00007fff1e683745 in batch_max_sum::LaunchByShapeKey<half> (x1=x1@entry=0x11315800 <error: Cannot access memory at address 0x11315800>, x2=x2@entry=0x1151a200 <error: Cannot access memory at address 0x1151a200>, scratch=scratch@entry=0x11721e00 <error: Cannot access memory at address 0x11721e00>, partial=0xf <error: Cannot access memory at address 0xf>, partial@entry=0x11ba2000 <error: Cannot access memory at address 0x11ba2000>, y=y@entry=0x11721c40 <error: Cannot access memory at address 0x11721c40>, workspace=0x0, workspace@entry=0x11ba4600 <error: Cannot access memory at address 0x11ba4600>, params=..., stream=0x60752a0, transA=<optimized out>, transB=<optimized out>, key=batch_max_sum::ShapeKey::LARGE_BALANCED, splitN=<optimized out>) at /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/tests/../src/kernel.asc:1276
+#18 0x00007fff1e682a51 in run_kernel (x1=0x11315800 <error: Cannot access memory at address 0x11315800>, info_x1=..., x2=0x1151a200 <error: Cannot access memory at address 0x1151a200>, info_x2=..., y=0x11721c40 <error: Cannot access memory at address 0x11721c40>, info_y=..., availableCoreNum=<optimized out>, stream=0x60752a0, transposeX1=<optimized out>, transposeX2=<optimized out>) at /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/tests/../src/kernel.asc:1658
+#19 0x00007ffff6a8bb16 in ?? () from /lib/x86_64-linux-gnu/libffi.so.8
+
+Thread 43 (Thread 0x7fff927ff6c0 (LWP 11271) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=32766, cancel=true, abstime=0x7fff927fd2d0, op=393, expected=0, futex_word=0x7ffff7f23230 <CamodelHelper::Instance()::inst+176>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=32766, abstime=0x7fff927fd2d0, clockid=32766, expected=0, futex_word=0x7ffff7f23230 <CamodelHelper::Instance()::inst+176>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7ffff7f23230 <CamodelHelper::Instance()::inst+176>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x7fff927fd2d0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6c9bd6e in __pthread_cond_wait_common (abstime=0x7fff927fd2d0, clockid=0, mutex=0x7ffff7f23190 <CamodelHelper::Instance()::inst+16>, cond=0x7ffff7f23208 <CamodelHelper::Instance()::inst+136>) at ./nptl/pthread_cond_wait.c:503
+
+Thread 39 (Thread 0x7fff937fe6c0 (LWP 11262) "RT_RECYCLE_0"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x5266278) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x5266278) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5266278, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x5266278, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 38 (Thread 0x7fff93fff6c0 (LWP 11261) "MONITOR_0"):
+#0  0x00007ffff6cecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fff93ffd1e0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff6cf9b27 in __GI___nanosleep (req=req@entry=0x7fff93ffd1e0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+#2  0x00007ffff6d299bc in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:31
+#3  0x00007ffff7b55461 in mmSleep () from /mnt/newdisk/Ascend/cann-9.0.0/lib64/libmmpa.so
+
+Thread 37 (Thread 0x7fff997f26c0 (LWP 11260) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526c798) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526c798, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526c798) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526c798) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 36 (Thread 0x7fff99ff36c0 (LWP 11259) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526d990) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526d990, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526d990) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526d990) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 35 (Thread 0x7fff9a7f46c0 (LWP 11258) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526d3a0) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526d3a0, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526d3a0) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526d3a0) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 34 (Thread 0x7fff9aff56c0 (LWP 11257) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526cdb0) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526cdb0, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526cdb0) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526cdb0) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 33 (Thread 0x7fff9b7f66c0 (LWP 11256) "python3"):
+#0  0x00007ffff6cab2a5 in _int_free (av=0x7fff40000030, p=0x7fff4051ff80, have_lock=0) at ./malloc/malloc.c:4518
+#1  0x00007ffff6cadeae in __GI___libc_free (mem=0x7fff4051ff90) at ./malloc/malloc.c:3398
+#2  0x00007ffff4de30ce in cube_calculate_execute_mmad(std::shared_ptr<CubeIsaPara>&, std::shared_ptr<Isa>&, std::shared_ptr<PemReg>) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+#3  0x00007ffff4de8963 in void cube_mmad<std::shared_ptr<TmPvMem<std::shared_ptr<PemBuf>, std::shared_ptr<PvBiu> > > >(std::shared_ptr<CubeIsaPara>&, std::shared_ptr<TmPvMem<std::shared_ptr<PemBuf>, std::shared_ptr<PvBiu> > >, std::shared_ptr<Isa>&, std::shared_ptr<PemReg>, std::shared_ptr<cfg::Cfg>) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libpem_davinci.so
+
+Thread 32 (Thread 0x7fff9bff76c0 (LWP 11255) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526c1d0) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526c1d0, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526c1d0) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526c1d0) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 31 (Thread 0x7fff9c7f86c0 (LWP 11254) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526bbe0) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526bbe0, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526bbe0) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526bbe0) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 30 (Thread 0x7fff9cff96c0 (LWP 11253) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526b5f0) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526b5f0, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526b5f0) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526b5f0) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 29 (Thread 0x7fff9d7fa6c0 (LWP 11252) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526b000) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526b000, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526b000) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526b000) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 28 (Thread 0x7fff9dffb6c0 (LWP 11251) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526aa10) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526aa10, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526aa10) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526aa10) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 27 (Thread 0x7fff9e7fc6c0 (LWP 11250) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x526a420) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x526a420, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x526a420) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x526a420) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 26 (Thread 0x7fff9effd6c0 (LWP 11249) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x5269e30) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x5269e30, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x5269e30) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x5269e30) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 25 (Thread 0x7fff9f7fe6c0 (LWP 11248) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x5269840) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x5269840, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x5269840) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x5269840) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 24 (Thread 0x7fff9ffff6c0 (LWP 11247) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x5269250) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x5269250, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x5269250) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x5269250) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 23 (Thread 0x7fffb4ff96c0 (LWP 11246) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x5268c60) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x5268c60, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x5268c60) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x5268c60) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 22 (Thread 0x7fffb57fa6c0 (LWP 11245) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x5268670) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x5268670, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x5268670) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x5268670) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 21 (Thread 0x7fffb5ffb6c0 (LWP 11244) "python3"):
+#0  futex_wait (private=0, expected=2, futex_word=0x5268080) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x5268080, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007ffff6ca01e1 in lll_mutex_lock_optimized (mutex=0x5268080) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x5268080) at ./nptl/pthread_mutex_lock.c:93
+
+Thread 20 (Thread 0x7fffb67fc6c0 (LWP 11243) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x5263ed0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x5263ed0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5263ed0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x5263ed0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 19 (Thread 0x7fffb6ffd6c0 (LWP 11242) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x52630c0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x52630c0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x52630c0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x52630c0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 18 (Thread 0x7fffb77fe6c0 (LWP 11241) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x52622b0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x52622b0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x52622b0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x52622b0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 17 (Thread 0x7fffb7fff6c0 (LWP 11240) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x52614a0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x52614a0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x52614a0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x52614a0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 16 (Thread 0x7fffd8ff96c0 (LWP 11239) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x5260690) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x5260690) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5260690, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x5260690, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 15 (Thread 0x7fffd97fa6c0 (LWP 11238) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x525f880) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x525f880) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x525f880, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x525f880, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 14 (Thread 0x7fffd9ffb6c0 (LWP 11237) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x525ea70) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x525ea70) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x525ea70, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x525ea70, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 13 (Thread 0x7fffda7fc6c0 (LWP 11236) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x525dc60) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x525dc60) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x525dc60, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x525dc60, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 12 (Thread 0x7fffdaffd6c0 (LWP 11235) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x525ce50) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x525ce50) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x525ce50, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x525ce50, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 11 (Thread 0x7fffdb7fe6c0 (LWP 11234) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x525c040) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x525c040) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x525c040, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x525c040, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 10 (Thread 0x7fffdbfff6c0 (LWP 11233) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x525b230) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x525b230) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x525b230, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x525b230, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 9 (Thread 0x7fffe8bfa6c0 (LWP 11232) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x525a420) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x525a420) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x525a420, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x525a420, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 8 (Thread 0x7fffe93fb6c0 (LWP 11231) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x5259610) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x5259610) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5259610, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x5259610, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 7 (Thread 0x7fffe9bfc6c0 (LWP 11230) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x5258800) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x5258800) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5258800, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x5258800, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 6 (Thread 0x7fffea3fd6c0 (LWP 11229) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x52579f0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x52579f0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x52579f0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x52579f0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 5 (Thread 0x7fffeabfe6c0 (LWP 11228) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x5256c30) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x5256c30) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5256c30, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x5256c30, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 4 (Thread 0x7fffeb3ff6c0 (LWP 11227) "python3"):
+#0  0x00007ffff6c98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1960408) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x1960408) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x1960408, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007ffff6ca4fff in do_futex_wait (sem=sem@entry=0x1960408, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+
+Thread 3 (Thread 0x7ffff3dfc6c0 (LWP 11224) "PlogFlush"):
+#0  0x00007ffff6cecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7ffff3dfa2e0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff6cf9b27 in __GI___nanosleep (req=req@entry=0x7ffff3dfa2e0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+#2  0x00007ffff6d299bc in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:31
+#3  0x00007ffff7b650fa in ?? () from /mnt/newdisk/Ascend/cann-9.0.0/lib64/libunified_dlog.so
+
+Thread 2 (Thread 0x7ffff45fd6c0 (LWP 11223) "WatchdogMonitor"):
+#0  0x00007ffff6cecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7ffff45fb2f0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff6cf9b27 in __GI___nanosleep (req=req@entry=0x7ffff45fb2f0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+#2  0x00007ffff6d299bc in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:31
+#3  0x00007ffff7f2da42 in ?? () from /mnt/newdisk/Ascend/cann-9.0.0/lib64/libascend_watchdog.so
+
+Thread 1 (Thread 0x7ffff6e712c0 (LWP 11217) "python3"):
+#0  0x00007ffff7fc3e81 in ?? ()
+#1  0x00007ffff7b5548e in mmGetTimeOfDay () from /mnt/newdisk/Ascend/cann-9.0.0/lib64/libmmpa.so
+#2  0x00007ffff76db79c in ?? () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+#3  0x00007ffff76e4d0d in cce::runtime::Stream::SynchronizeDelayTime(unsigned short, unsigned short, unsigned short) () from /mnt/newdisk/Ascend/cann-9.0.0/tools/simulator/Ascend910_9362/lib/libruntime_camodel.so
+2026-10-01 02:58:24 [WARN]  Child process exited with status 31744
+2026-10-01 02:58:25 [WARN]  Profiling running finished. May cause generating performance files to fail.
+2026-10-01 02:58:26 [INFO]  Core operator results run in simulator as follow:
+core_name           duration_time(us)   running_time(us)    
+core0.cubecore0     61.65               58.49               
+core0.veccore0      52.8                52.42               
+2026-10-01 02:58:26 [WARN]  Running task failed, data parsing start
+2026-10-01 02:58:26 [INFO]  Start parse dump file
+2026-10-01 02:58:26 [INFO]  Profiling results saved in /home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/profiles/sim-e19-point8-gdb-r2/OPPROF_20261001025738_DTMJAFGENZSXNJFC
+2026-10-01 02:58:26 [INFO]  Profiling data parse finished.
+2026-10-01 02:58:26 [INFO]  Op profiling finish. Welcome to next use.
