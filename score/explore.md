@@ -489,3 +489,5 @@ E28首轮全15规模ABBA全部通过：点5为5.3895→5.2595µs，下降2.41%�
 - 基于E28，唯一变量为Mul/MulAddDst循环的mask配置方式：循环外设置Normal模式的64个float掩码，循环内使用isSetMask=false及MASK_PLACEHOLDER，结束后恢复Normal与默认Mask。保留计算顺序、所有显式PIPE_V屏障和分发。
 - 官方开发指南印刷74–76页明确推荐对相同Mask的重复计算采用外部配置，并要求结束后ResetMask；9.0.0 SDK确认Mul/MulAddDst高维接口均支持该模板参数。模型仍有每行乘加关联的重复屏障/设置，尝试是否能减少冗余配置，不先认定自动同步必然减少。
 - 代码先提交，两端完整编译中；E28回归在其独立正式库上继续。
+
+E28全部104组图重放与16组点4/5双类型四布局回归通过（后者各20＋50），含完整列快路径和尾列回退。证据`e28-capture-correctness.json`、`e28-layout-correctness.json`。反向BAAB正在收齐。
