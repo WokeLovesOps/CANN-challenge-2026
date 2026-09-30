@@ -1,0 +1,15 @@
+{
+  "commit": "c854d11",
+  "execution": "simulator",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e19-sim/libsimulator_bridge.so",
+  "library_sha256": "071b6c562d5dde5b913f7b99ddae827acfd99519cb0b5ad9b688acbf0e180e63",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": false,
+  "results": [],
+  "launches": [],
+  "说明": "同一完整点8 NN，核0与17解析，5分钟超时被msprof强制终止；未完成输出校验，解析时间不作通过的模型性能。",
+  "日志": "Build/profiles/sim-e19-point8.log"
+}
