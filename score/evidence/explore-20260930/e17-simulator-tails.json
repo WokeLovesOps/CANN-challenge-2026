@@ -1,0 +1,60 @@
+[
+  {
+    "case": 784,
+    "label": "K分片八元素尾",
+    "shape": [
+      1,
+      63,
+      63,
+      4184
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "commit": "d722bd0",
+    "library_sha256": "e522f42f0e67ad8df6dba568218a61765bc606ff8c9f8027a5a8f0a27ff50819",
+    "bins": [
+      {
+        "path": "Build/profiles/sim-e17-tail-784/OPPROF_20261001022550_CIQPTJWLMIOFTLNR/simulator/visualize_data.bin",
+        "size": 10781604,
+        "sha256": "a8d0907a7dae3b965d626376bc0339869d1f31f691e166581432e85e25747831"
+      }
+    ]
+  },
+  {
+    "case": 791,
+    "label": "K分片八元素尾",
+    "shape": [
+      1,
+      63,
+      63,
+      4184
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "available_cores": 20,
+    "max_abs_error": 0.000244140625,
+    "commit": "d722bd0",
+    "library_sha256": "e522f42f0e67ad8df6dba568218a61765bc606ff8c9f8027a5a8f0a27ff50819",
+    "bins": [
+      {
+        "path": "Build/profiles/sim-e17-tail-791/OPPROF_20261001022604_UIIIVREJOXLUBMWB/simulator/visualize_data.bin",
+        "size": 10937480,
+        "sha256": "58bbd15cb8c9ed1c866dd7763bb97b7d8b6dc73fbaabd81296af2cd55a4394cb"
+      }
+    ]
+  }
+]
