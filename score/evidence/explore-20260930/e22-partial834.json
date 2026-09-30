@@ -1,0 +1,29 @@
+{
+  "case": 834,
+  "label": "自适应大矩阵256行尾块",
+  "shape": [
+    1,
+    1281,
+    2049,
+    40
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "available_cores": 20,
+  "max_abs_error": 0.0,
+  "commit": "16cb81d",
+  "说明": "此部分规模模型通过，但同输入真机失败；不得以模型替代真机正确性。",
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e22-partial834/OPPROF_20261001033224_UTEYXVUZAFGIJQXE/simulator/visualize_data.bin",
+      "size": 46224796,
+      "sha256": "6129f59f50b5f5f776471ef4a0a3a0d429129350dd751ad10a08b4edae72c4e3"
+    }
+  ]
+}
