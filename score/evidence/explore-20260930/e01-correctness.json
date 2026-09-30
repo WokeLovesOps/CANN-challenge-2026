@@ -1,0 +1,477 @@
+{
+  "说明": "真实NPU，现有用例生成器；图捕获后两次重放，独立检查保护区、输入与重复一致性",
+  "类型布局": [
+    {
+      "报告": "Build/npu-e01/layout-bf16-NN.json",
+      "dtype": "bf16",
+      "layout": "NN",
+      "通过": true
+    },
+    {
+      "报告": "Build/npu-e01/layout-bf16-NT.json",
+      "dtype": "bf16",
+      "layout": "NT",
+      "通过": true
+    },
+    {
+      "报告": "Build/npu-e01/layout-bf16-TN.json",
+      "dtype": "bf16",
+      "layout": "TN",
+      "通过": true
+    },
+    {
+      "报告": "Build/npu-e01/layout-bf16-TT.json",
+      "dtype": "bf16",
+      "layout": "TT",
+      "通过": true
+    },
+    {
+      "报告": "Build/npu-e01/layout-fp16-NN.json",
+      "dtype": "fp16",
+      "layout": "NN",
+      "通过": true
+    },
+    {
+      "报告": "Build/npu-e01/layout-fp16-NT.json",
+      "dtype": "fp16",
+      "layout": "NT",
+      "通过": true
+    },
+    {
+      "报告": "Build/npu-e01/layout-fp16-TN.json",
+      "dtype": "fp16",
+      "layout": "TN",
+      "通过": true
+    },
+    {
+      "报告": "Build/npu-e01/layout-fp16-TT.json",
+      "dtype": "fp16",
+      "layout": "TT",
+      "通过": true
+    }
+  ],
+  "图捕获": [
+    {
+      "case": 344,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 345,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 346,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 347,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 348,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 349,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 350,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 351,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 352,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 355,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 356,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 359,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    }
+  ],
+  "TN单次对照": {
+    "npu-baseline": {
+      "commit": "9821db0",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "TN",
+      "library_sha256": "f1cfcdcd2d1a2752258364bb25c1bf3927fece8d8c89a0f0826b7dd4d1fda226",
+      "application_report": "Build/npu-baseline/l0-baseline-point2-tn-app.json",
+      "csv": "Build/npu-baseline/l0-baseline-point2-tn/PROF_000001_20260930235208183_00009822RHOLGMLQ/mindstudio_profiler_output/op_summary_20260930235213.csv",
+      "csv_sha256": "38ae54d901765bbad12b702c5fa53c89030dd363d29458a3292f2d473d3258d9",
+      "results": {
+        "2": {
+          "samples_us": [
+            3.199,
+            4.42,
+            2.88,
+            4.28,
+            2.96,
+            4.58,
+            3.04,
+            4.72,
+            3.1,
+            4.88,
+            3.16,
+            4.44,
+            2.88,
+            4.32,
+            2.82,
+            4.72,
+            2.96,
+            4.82,
+            3.18,
+            4.48,
+            2.86,
+            4.62,
+            2.9,
+            4.8,
+            2.98,
+            4.96,
+            3.079,
+            4.68,
+            3.08,
+            2.22,
+            2.24,
+            2.24,
+            2.26,
+            2.259,
+            2.26,
+            2.26,
+            2.5,
+            2.3,
+            2.34,
+            2.18,
+            2.22,
+            2.16,
+            2.14,
+            2.18,
+            2.12,
+            2.16,
+            2.14,
+            2.18,
+            2.16,
+            2.2
+          ],
+          "warmup_us": [
+            3.18,
+            4.68,
+            3.14,
+            4.76,
+            3.02,
+            4.699,
+            3.06,
+            4.78,
+            3.08,
+            4.66
+          ],
+          "validation_us": [
+            5.34
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum17ComputePackedDotsIDhLb1ELb0EEEvPhS1_S1_jjj"
+          ],
+          "median_us": 2.8899999999999997,
+          "mean_us": 3.13034,
+          "min_us": 2.12,
+          "max_us": 4.96,
+          "count": 50
+        }
+      }
+    },
+    "npu-e01": {
+      "commit": "b87e612",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "TN",
+      "library_sha256": "95523b3c3f939d13d16a7a6cd8ac331499721c836ac9434ba60c5e16a3f67579",
+      "application_report": "Build/npu-e01/l0-e01-point2-tn-app.json",
+      "csv": "Build/npu-e01/l0-e01-point2-tn/PROF_000001_20260930235557228_00010561JCRDGKCJ/mindstudio_profiler_output/op_summary_20260930235602.csv",
+      "csv_sha256": "d4ece94a39b43118f72361accd452b415bfdeab46cdf49ac061444cbe9018af6",
+      "results": {
+        "2": {
+          "samples_us": [
+            4.8,
+            3.36,
+            4.639,
+            3.18,
+            4.58,
+            3.72,
+            4.7,
+            3.38,
+            4.82,
+            3.52,
+            4.92,
+            3.42,
+            4.56,
+            3.859,
+            4.66,
+            3.18,
+            4.64,
+            3.42,
+            4.619,
+            3.42,
+            4.96,
+            3.56,
+            4.74,
+            3.279,
+            4.62,
+            3.18,
+            4.5,
+            3.16,
+            3.32,
+            2.16,
+            2.2,
+            2.18,
+            2.2,
+            2.18,
+            2.16,
+            2.14,
+            2.139,
+            2.16,
+            2.2,
+            2.16,
+            2.18,
+            2.18,
+            2.22,
+            2.24,
+            2.24,
+            2.22,
+            2.22,
+            2.22,
+            2.26,
+            2.26
+          ],
+          "warmup_us": [
+            4.64,
+            3.299,
+            4.78,
+            3.4,
+            4.58,
+            3.18,
+            4.82,
+            3.16,
+            4.66,
+            3.24
+          ],
+          "validation_us": [
+            5.239
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum17ComputePackedDotsIDhLb1ELb0EEEvPhS1_S1_jjj"
+          ],
+          "median_us": 3.2295,
+          "mean_us": 3.2567,
+          "min_us": 2.139,
+          "max_us": 4.96,
+          "count": 50
+        }
+      }
+    }
+  }
+}
