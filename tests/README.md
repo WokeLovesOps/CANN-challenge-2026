@@ -194,3 +194,23 @@ msprof op simulator --soc-version=Ascend910B3 --core-id=0 \
 | 528–535 | 1,63,767,40 | 256列块中最后一段只有63个有效float |
 
 这些是自主补充用例，不能称为OJ输入。计算图检查可用既有 `--capture --real-npu`；少量软件模型调用用于指令诊断，不作为20＋50的真实NPU性能测量。
+
+## 部分仿真与真机中间结果诊断
+
+完整大矩阵模型耗时过长时，可以用较小K且命中相同分发路径的自主场景定位流水。例如编号328为`(1,1024,512,32)`，832和834为`(1,1281,2049,40)`的FP16/NN和TN。必须记录实际规模、代码hash、库hash和BIN，不能将部分场景通过写成完整测试点通过。真实正确性和正式性能仍上板验证，正式计时始终20轮预热＋50轮采样。
+
+`diagnostic_alloc_dump.cpp`仅用于错误定位。它用`LD_PRELOAD`拦截算子工作区的分配/释放，在释放前回读不超过8MiB的缓冲，不修改设备内容。回读会改变执行时序，因此不能加载此库测性能。原始转储是内部数据，需与相同版本、相同输入、分块规则一起解释；未转储的较早GM槽不能被视为正确。
+
+在远端NPU环境加载CANN后执行：
+
+```bash
+g++ -shared -fPIC tests/diagnostic_alloc_dump.cpp -ldl -pthread \
+  -o Build/diagnostic_alloc_dump.so
+mkdir -p Build/诊断输出
+BMM_DUMP_DIR=Build/诊断输出 \
+LD_PRELOAD="$PWD/Build/diagnostic_alloc_dump.so" \
+python3 tests/simulator_matrix.py Build/npu/libsimulator_bridge.so \
+  --case=834 --real-npu --report=Build/诊断输出/app.json
+```
+
+`allocation-序号-字节数.bin`包含该工作区释放前的字节。系统通信区超过8MiB，默认不保存。普通调用在算子内同步后回读；计算图场景仅在图销毁释放工作区时回读，不能据此区分每次重放的中间值。
