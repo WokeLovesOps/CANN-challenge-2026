@@ -36,10 +36,14 @@ def main():
     parser.add_argument("--warmup", type=int, default=20)
     parser.add_argument("--repeat", type=int, default=50)
     parser.add_argument("--real-npu", action="store_true")
+    parser.add_argument("--progress", action="store_true",
+                        help="仅模型诊断：逐次记录已完成同步和首次输出校验")
     args = parser.parse_args()
     simulated = os.environ.get("IS_SIMULATOR_ENV", "").lower() == "true"
     if simulated == args.real_npu:
         parser.error("必须选择 msprof 软件模型或显式 --real-npu，不能混用")
+    if args.progress and not simulated:
+        parser.error("逐次进度落盘仅用于模型诊断，不能混入真实NPU性能采样")
     if args.warmup < 0 or args.repeat < 2:
         parser.error("预热次数非负，正式采样至少两次")
     indices = [int(value) for value in args.cases.split(",")]
@@ -145,6 +149,10 @@ def main():
                 phases = ["validation"] + ["warmup"] * args.warmup + ["sample"] * args.repeat
                 for position, phase in enumerate(phases):
                     report["launches"].append(dict(case=index, phase=phase, position=position))
+                    if args.progress:
+                        record["inflight_launch"] = position
+                        save()
+                        print(f"CASE_{index}_LAUNCH_{position}_{phase}_BEGIN", flush=True)
                     run(addresses[0], c.byref(groups[0]), addresses[1], c.byref(groups[1]),
                         ptr(addresses[2].value + 64), c.byref(groups[2]), cores.value,
                         stream, trans_a, trans_b)
@@ -153,6 +161,13 @@ def main():
                         validate()
                         # 再次填哨兵，防止后续调用未写输出仍通过校验。
                         check(copy, addresses[2], len(guard), c.c_char_p(guard), len(guard), 1)
+                        if args.progress:
+                            record["first_output_validated"] = True
+                    if args.progress:
+                        record["completed_launches"] = position + 1
+                        record["inflight_launch"] = None
+                        save()
+                        print(f"CASE_{index}_LAUNCH_{position}_SYNC_DONE", flush=True)
                 validate()
                 for address, original in zip(addresses[:2], originals):
                     output = c.create_string_buffer(len(original))
