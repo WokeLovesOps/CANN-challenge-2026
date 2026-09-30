@@ -33,8 +33,8 @@ def main():
     parser.add_argument("--cases", default="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15")
     parser.add_argument("--dtype", choices=("fp16", "bf16"), default="fp16")
     parser.add_argument("--layout", choices=("NN", "NT", "TN", "TT"), default="NN")
-    parser.add_argument("--warmup", type=int, default=10)
-    parser.add_argument("--repeat", type=int, default=30)
+    parser.add_argument("--warmup", type=int, default=20)
+    parser.add_argument("--repeat", type=int, default=50)
     parser.add_argument("--real-npu", action="store_true")
     args = parser.parse_args()
     simulated = os.environ.get("IS_SIMULATOR_ENV", "").lower() == "true"
