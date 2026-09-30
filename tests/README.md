@@ -177,3 +177,20 @@ msprof op simulator --soc-version=Ascend910B3 --core-id=0 \
 ```
 
 完整序列需检查应用的 `SIM_SEQUENCE_PASS`、JSON passed=true，以及预期启动数和同等数量的非空 BIN。入口另允许用例408至415、440、453，用于按点4混合任务Vector、点5紧凑纯AIV、点6默认Cube的顺序检查连续切换。真实设备可运行 `python3 tests/simulator_sequence.py <库> --cases=408,440,453,440,408 --report=<报告> --real-npu`。应用成功不替代DeviceProf预热重放成功；失败即保存已执行段和未通过状态。详见 [测试记录](../score/BatchMatmulMaxSum.md)。
+
+
+## 2026-10-01 列块加宽回归
+
+`benchmark.py` 默认且正式性能测试统一采用20次预热＋50次采样；预热前另有一次正确性校验，`summarize_profile.py` 按启动序列排除它与预热。只以 msprof 的 Task Duration 计时，不使用 Python 墙钟。普通计时、PMU和软件模型分开采集。
+
+`simulator_matrix.py` 补齐472–495的点13至15规模，并追加以下边界，每项覆盖两种类型与四种布局，原有编号不变。
+
+| 编号 | B,M,N,K | 输入 |
+| --- | --- | --- |
+| 496–503 | 1,1025,513,40 | 随机，M/N双尾块 |
+| 504–511 | 1,1025,513,40 | 全负相似度 |
+| 512–519 | 1,1025,513,40 | 全零 |
+| 520–527 | 1,63,513,40 | 矮宽尾块 |
+| 528–535 | 1,63,767,40 | 256列块中最后一段只有63个有效float |
+
+这些是自主补充用例，不能称为OJ输入。计算图检查可用既有 `--capture --real-npu`；少量软件模型调用用于指令诊断，不作为20＋50的真实NPU性能测量。
