@@ -1,0 +1,31 @@
+{
+  "case": 834,
+  "label": "自适应大矩阵256行尾块",
+  "shape": [
+    1,
+    1281,
+    2049,
+    40
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "available_cores": 20,
+  "max_abs_error": 0.0,
+  "commit": "c576d27",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e24-sim/libsimulator_bridge.so",
+  "library_sha256": "3daef7bc6d7b5b38d7bd8d6ba61d39d9011871c202e9315ba6174e1eff177d81",
+  "说明": "部分规模诊断，实际正确性以真机为准",
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e24-partial834/OPPROF_20261001034608_QUJQLFLYLVMPSTDR/simulator/visualize_data.bin",
+      "size": 45871324,
+      "sha256": "0d84315efe3f30683f115ccd502782fc927864ae087af317e5ecabdd5a974b58"
+    }
+  ]
+}
