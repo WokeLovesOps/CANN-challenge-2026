@@ -213,3 +213,5 @@ E11代码回退提交为 `c8840c6`，保留88组合法规模测试。PMU显示�
 - 证据：`e12-abba-20-50.json`、`e12-simulator-point15.json`。
 
 E12图捕获补证：488–495、784–831共56组全部通过，含K尾片、全负、全零、先和后Max、正负抵消和batch回退；每组执行普通调用及两次图重放。证据为 `e12-capture-correctness.json`。下一候选E13（`6233e19`）只将K分片目标长度512→1024，点15由16片变8片，正在两端编译。
+
+E12点15板上PMU：Block Dim=16、1650MHz；核0 Cube MTE2活跃1.738µs，Vector MTE2活跃2.916µs、Vector计算2.030µs，Vector从GM读256KB。核0 Vector总时12.949µs，其他Vector核约8µs，支持最终集中合并是下一瓶颈的判断。PMU Task Duration为15.700µs，不能混作普通l0的12.050µs。原始证据 `e12-point15-OpBasicInfo.csv`、`e12-point15-PipeUtilization.csv`、`e12-point15-Memory.csv`。
