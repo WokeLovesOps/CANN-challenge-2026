@@ -438,3 +438,5 @@ E24/E25点8/11/12全参与核PMU均采集完成（18/18/20个Cube及对应Vector
 - 基于E25，唯一变量为四块K搬运的启用条件：`singleCoreK % baseK == 0`，存在基础K块尾部时保留官方默认tiling。分块、核数、同步和归约全部不变。
 - 依据六组独立对齐探针，区分K块尾部与单纯32字节行宽；这是性能策略，不将尾K误称为硬件不支持。继续保留官方L1容量和MDL迭代约束。
 - 代码先提交后两端完整编译，后续整版ABBA/反向复测与正确性回归；不把E24点8和E25点9–12拼成整版结果。
+
+E24使用`--full-backtrace=yes`成功取得内部栈，应用仍通过、158条未初始化读计数不变。L1读定位到MDL `scheduler_mdl_base.h:233` 的LoadToA2；PRIVATE读定位到 `cube_in_buffer_double_buffer.h:110` 的缓存释放路径；GM仍为工作区DataCopy。该定位已超出REGIST宏，尚未判定是否为尾块填充读取、检查器跨核跟踪或真实未初始化依赖。完整栈保留`e24-initcheck-842-full-backtrace.txt`。
