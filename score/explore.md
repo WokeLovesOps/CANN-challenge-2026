@@ -260,4 +260,6 @@ E15板上PMU：Block Dim=8、1650MHz；核0 Vector GM→UB仍为128KB，MTE2活�
 
 E16两端完整编译及点15仿真通过，第二次核0 Cube/Vector 7.52/8.29µs，2份非空BIN及源码映射。真机ABBA各组20＋50，六规模全部通过，输入hash一致；点15 8.8395→8.7395µs（-1.13%），候选8.740/8.720µs、基线两组均8.8395µs。收益小，待反向BAAB复测；56组图重放与BF16/TT尾片本地仿真进行中。证据 `e16-abba-20-50.json`、`e16-simulator-point15.json`。
 
-E16额外完整边界仿真：编号791，BF16/TT、B/M/N/K=1/63/63/4184，连续两次调用通过且输入不变，1份非空BIN及源码映射；核0 Cube/Vector 24.54/24.83µs，仅用于模型诊断。此例覆盖源搬运stride、5份K片一次读回和尾K=8元素。证据 `e16-simulator-tail-bf16-tt.json`。
+E16额外完整边界仿真：编号791，BF16/TT、B/M/N/K=1/63/63/4184，连续两次调用通过且输入不变，1份非空BIN及源码映射；核0 Cube/Vector 24.54/24.83µs，仅用于模型诊断。此例覆盖源搬运stride、5份K片一次读回和末片K长度792（模16尾为8元素）。证据 `e16-simulator-tail-bf16-tt.json`。
+
+E16的56组真实NPU图重放全部通过，证据 `e16-capture-correctness.json`。反向BAAB复测已启动，每组仍为20预热＋50采样。
