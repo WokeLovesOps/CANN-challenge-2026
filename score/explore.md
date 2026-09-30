@@ -536,3 +536,9 @@ E31六组部分模型1000/834/1007/928/912/920均完成双调用并通过；每�
 E31扩展真机回归收齐：144组普通调用＋图重放全部通过（328–335、496–519、832–935、1000–1007）；点8–12×双类型×四布局40组全部通过，各20＋50。证据`e31-capture-correctness.json`、`e31-layout-correctness.json`。反向BAAB继续进行。
 
 E31反向BAAB全15点通过：点9–12下降0.85%/0.95%/0.77%/0.76%，与首轮同向但幅度更小；点8由首轮-1.18%变为+0.43%，没有稳定收益。结合全部边界正确性，保留UnitFlag为后续父版，只宣称点9–12小幅改善，不以控制点变化充当收益。证据`e31-vs-e28-baab-20-50.json`。
+
+## E32：原始形状设置移出列块循环（源码提交见结果，2026-10-01）
+
+- 以E31为父版，唯一变量是Compute中的SetOrgShape调用位置：从StartColumn的每列块调用移到REGIST_MATMUL_OBJ后一次调用。该核调用期间params.m/n/k和TILE_COLS恒定；SetTail仍逐块处理有效尾部，SetTensor地址仍逐块设置。Cube配置、屏障和归约均不变。
+- 官方接口手册1136–1137页要求SetOrgShape在SetTensor/SetSingleShape前；移动后满足此顺序。9.0.0 SDK对dav-2201使用USE_WORKSPACE，该接口每次发送MMFUN_SET_ORG_SHAPE消息；scheduler_base.h的End释放资源但不重置MatmulShapeInfo。仍需模型和真机验证，不以静态阅读替代复用正确性。
+- E31场景834核0的源码映射确认重复形状设置进入KFC发送路径；内联行耗时不可累加当作预计收益。扩展覆盖普通Matmul、多行任务、N分片、大矩阵、双类型四布局及图重放。先提交后编译。
