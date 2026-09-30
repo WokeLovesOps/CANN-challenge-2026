@@ -1,0 +1,487 @@
+{
+  "commit": "64d3e40",
+  "test_commit": "9a4326d",
+  "library_sha256": "2177f02bfc693e1f82658c15cd5df5d29a61f8884a52abc8fc68bde26411a64d",
+  "results": [
+    {
+      "case": 680,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.001953125
+    },
+    {
+      "case": 681,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.001953125
+    },
+    {
+      "case": 682,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 683,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.001953125
+    },
+    {
+      "case": 684,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.001953125
+    },
+    {
+      "case": 685,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.001953125
+    },
+    {
+      "case": 686,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 687,
+      "label": "高窄大K行尾",
+      "shape": [
+        1,
+        513,
+        33,
+        8192
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.001953125
+    },
+    {
+      "case": 688,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.00048828125
+    },
+    {
+      "case": 689,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.000244140625
+    },
+    {
+      "case": 690,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.000244140625
+    },
+    {
+      "case": 691,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.000244140625
+    },
+    {
+      "case": 692,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.000244140625
+    },
+    {
+      "case": 693,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.000244140625
+    },
+    {
+      "case": 694,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.000244140625
+    },
+    {
+      "case": 695,
+      "label": "高窄最大批量",
+      "shape": [
+        64,
+        512,
+        64,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.000244140625
+    },
+    {
+      "case": 696,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 697,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 698,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "case": 699,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 700,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 701,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 702,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-06
+    },
+    {
+      "case": 703,
+      "label": "高窄单列行尾",
+      "shape": [
+        1,
+        513,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1444091796875e-05
+    }
+  ]
+}
