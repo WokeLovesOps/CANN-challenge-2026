@@ -1,0 +1,39 @@
+{
+  "说明": "从远端正式库下载，SHA256与此前性能应用报告逐一匹配；ELF节表解析提取设备二进制，三个aicore节逐字节相等。排除设备指令内容改变，不能据此排除运行时tiling或外部状态差异。",
+  "结果": {
+    "e24": {
+      "library_sha256": "4610a0d54f446a96d436b0aafdd58db40d532d192a6b41b3d7e119de1a0e1bfd",
+      "sections": {
+        "__aicore_rel_binary": {
+          "bytes": 4123769,
+          "sha256": "880d562c58dd320327593c9439869a4c759bfe77c1af63af94bab1cdab95ba67"
+        },
+        ".aicore_binary": {
+          "bytes": 3973392,
+          "sha256": "5353efbf063a548e71777ef96e636fb6bb5c8de90cd1d125cbb1442a5814cebd"
+        },
+        "__aicore_rel_rec": {
+          "bytes": 24,
+          "sha256": "99c147d89382b51945f9014e2a2c4dc16a960c9be497b7b43d74353a1e5a62d5"
+        }
+      }
+    },
+    "e26": {
+      "library_sha256": "19895ef20dacb7680e65a153f8ba81ad42172399de89767c3c61e32b104d6c1c",
+      "sections": {
+        "__aicore_rel_binary": {
+          "bytes": 4123769,
+          "sha256": "880d562c58dd320327593c9439869a4c759bfe77c1af63af94bab1cdab95ba67"
+        },
+        ".aicore_binary": {
+          "bytes": 3973392,
+          "sha256": "5353efbf063a548e71777ef96e636fb6bb5c8de90cd1d125cbb1442a5814cebd"
+        },
+        "__aicore_rel_rec": {
+          "bytes": 24,
+          "sha256": "99c147d89382b51945f9014e2a2c4dc16a960c9be497b7b43d74353a1e5a62d5"
+        }
+      }
+    }
+  }
+}
