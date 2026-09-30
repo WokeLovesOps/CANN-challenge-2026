@@ -417,3 +417,5 @@ E24扩展验证收齐：88组图重放全部通过，40组完整点8–12双类�
 - mssanitizer初次诊断因裁剪漏main.asc配置失败，脚本修正`dcde5e0`；后续分别因不接受full-backtrace参数、日志目录0775而拒绝执行。不能把退出0当作检查通过，原日志保留；新建0700目录继续重试。
 
 Sanitizer诊断补充：第三次仍因缺少参数分隔符，把应用`--case`当成工具参数而拒绝执行。第四次使用0700目录并加`--`后，E22裁剪TN副本（目标核与16cb81d逐字节相同，额外-g/--cce-enable-sanitizer插桩）在834的两次调用正确，racecheck明确报告两次目标核检查No error detected。插桩会改变时序，且未复现原错误，因此不能用这个结果否认未插桩真机失败；继续synccheck和initcheck。
+
+E22插桩诊断完整统计：synccheck为436条冗余wait_flag警告；initcheck为158条未初始化读报告，其中GM 84、PRIVATE 72、L1 2，不能仅描述为PRIVATE。GM报告对应Cube结果回读和跨核partial回读，包含尾列未初始化填充的可能；PRIVATE/L1映射到REGIST_MATMUL_OBJ。应用精度仍通过，尚未判明哪些是实际数据依赖问题、哪些与检查覆盖或不参与归约的填充有关。E24同等裁剪/插桩对照编译中。证据`e22-sanitizer-summary.json`及三份完整检查日志。

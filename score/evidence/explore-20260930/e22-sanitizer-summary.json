@@ -1,0 +1,96 @@
+{
+  "源码提交": "16cb81d",
+  "诊断脚本提交": "dcde5e0",
+  "编译选项": "-g --cce-enable-sanitizer",
+  "说明": "裁剪到大矩阵TN，插桩可能改变时序；不能抵消原始版本真机失败",
+  "检查": {
+    "racecheck-834-r4": {
+      "应用": {
+        "case": 834,
+        "label": "自适应大矩阵256行尾块",
+        "shape": [
+          1,
+          1281,
+          2049,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "npu",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "问题计数": {},
+      "地址空间计数": {},
+      "原始日志": "Build/e22-sanitizer-results/Build/san-private/racecheck-834-r4.log"
+    },
+    "synccheck-834": {
+      "应用": {
+        "case": 834,
+        "label": "自适应大矩阵256行尾块",
+        "shape": [
+          1,
+          1281,
+          2049,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "npu",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "问题计数": {
+        "Redundant wait_flag instructions detected": 436
+      },
+      "地址空间计数": {},
+      "原始日志": "Build/e22-sanitizer-results/Build/san-private/synccheck-834.log"
+    },
+    "initcheck-842": {
+      "应用": {
+        "case": 842,
+        "label": "自适应大矩阵256行全负",
+        "shape": [
+          1,
+          1535,
+          2049,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": false,
+        "execution": "npu",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "问题计数": {
+        "uninitialized read of size 131072": 60,
+        "uninitialized read of size 2048": 2,
+        "uninitialized read of size 3072": 10,
+        "uninitialized read of size 4096": 2,
+        "uninitialized read of size 8": 72,
+        "uninitialized read of size 130560": 12
+      },
+      "地址空间计数": {
+        "GM": 84,
+        "L1": 2,
+        "PRIVATE": 72
+      },
+      "原始日志": "Build/e22-sanitizer-results/Build/san-private/initcheck-842.log"
+    }
+  }
+}
