@@ -1,0 +1,62 @@
+{
+  "commit": "2aa693b",
+  "execution": "simulator",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e15-sim/libsimulator_bridge.so",
+  "library_sha256": "12c749f3e6dff836f71543dd703d8061973bb125762dce767583732cb6d1ce55",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": true,
+  "results": [
+    {
+      "case": 15,
+      "shape": [
+        1,
+        64,
+        64,
+        8192
+      ],
+      "passed": true,
+      "input_sha256": [
+        "1870c97ccb4286134ebb17581ade628f25107b5993b343fb846b80a8f87a8d1b",
+        "3e54b548e57ce2d34bb249ed21538ac44a6d948d1819c733d57ec6f860b3a4cf"
+      ],
+      "launch_begin": 0,
+      "seed": 20260945,
+      "max_abs_error": 0.00048828125,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 15,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 15,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 15,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20,
+  "bins": [
+    {
+      "path": "Build/profiles/sim-e15-point15/OPPROF_20261001020746_XAYQDRAWYYXLVGJT/_ZN13batch_max_sum13ComputeSplitKIDhLb0ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+      "size": 9979384,
+      "sha256": "8a1199bbb3e3fbaa793bc194faf057f982f2736c63f51f685dd415ff84cc8c99"
+    },
+    {
+      "path": "Build/profiles/sim-e15-point15/OPPROF_20261001020746_XAYQDRAWYYXLVGJT/_ZN13batch_max_sum13ComputeSplitKIDhLb0ELb0EEEvPhS1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+      "size": 9721064,
+      "sha256": "fa0bffb4bd9245d7fad61ade4802ba428367652ac90e2106db8713aae089789b"
+    }
+  ]
+}
