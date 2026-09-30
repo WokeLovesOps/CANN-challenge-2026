@@ -1,0 +1,15 @@
+{
+  "commit": "772d569",
+  "execution": "simulator",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e18-sim/libsimulator_bridge.so",
+  "library_sha256": "a1ae1aa319b6b1480766a61e61b2feb20e904a601a66274972218af0dcf5ccc0",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": false,
+  "results": [],
+  "launches": [],
+  "说明": "5分钟超时被msprof强制终止，日志随后显示子进程139；不是自然SIGSEGV的证据。外层退出0不代表成功；未完成输出校验，解析时间不作通过的模型性能。",
+  "日志": "Build/profiles/sim-e18-point8.log"
+}
