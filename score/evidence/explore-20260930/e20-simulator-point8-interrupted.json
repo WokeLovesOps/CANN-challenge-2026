@@ -1,0 +1,39 @@
+{
+  "commit": "6fdb1b5",
+  "execution": "simulator",
+  "library": "/home/user/.codex/worktrees/bmm-npu-explore/CANN-challenge/Build/e20-sim/libsimulator_bridge.so",
+  "library_sha256": "4717bb9c773282401c95231571ccb38989933670eff2c0ea4021ce9af2be2646",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": false,
+  "results": [
+    {
+      "case": 8,
+      "shape": [
+        1,
+        1025,
+        1031,
+        1032
+      ],
+      "passed": false,
+      "input_sha256": [
+        "585c0483c6b90c7fbf34656553391e96af37ded58550c89a78b208059cad434a",
+        "a053bc26b3e58f76715dadc1dbb4b7a49cbb5b65d7cbda3c5a788fe984724315"
+      ],
+      "launch_begin": 0,
+      "seed": 20260938,
+      "inflight_launch": 0
+    }
+  ],
+  "launches": [
+    {
+      "case": 8,
+      "phase": "validation",
+      "position": 0
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}
