@@ -1,0 +1,137 @@
+{
+  "源码提交": "5304f30",
+  "测试提交": "6bae578",
+  "说明": "三个部分模型均通过双调用、核0/15解析及源码映射；不替代完整规模真机。",
+  "库SHA256": "ccbcdc8161eb7fd21a537c30eef8ebd3d22661e69adb94092c64d4b76e5f28ec",
+  "结果": {
+    "912": {
+      "应用": {
+        "case": 912,
+        "label": "大矩阵L1步长最小模型",
+        "shape": [
+          1,
+          1024,
+          512,
+          264
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "BIN": "Build/profiles/sim-e26-partial912/OPPROF_20261001042255_UVLQASEAFXOAZSGP/simulator/visualize_data.bin",
+      "BIN字节数": 19028916,
+      "BIN_SHA256": "8809361045b6fe83f6f723305a2071ea9508d122cce305b5e2182d2cb689a640",
+      "核": {
+        "core0.cubecore0": {
+          "trace": "Build/profiles/sim-e26-partial912/OPPROF_20261001042255_UVLQASEAFXOAZSGP/simulator/core0.cubecore0/trace.json",
+          "源码映射行数": 820
+        },
+        "core0.veccore0": {
+          "trace": "Build/profiles/sim-e26-partial912/OPPROF_20261001042255_UVLQASEAFXOAZSGP/simulator/core0.veccore0/trace.json",
+          "源码映射行数": 349
+        },
+        "core15.cubecore0": {
+          "trace": "Build/profiles/sim-e26-partial912/OPPROF_20261001042255_UVLQASEAFXOAZSGP/simulator/core15.cubecore0/trace.json",
+          "源码映射行数": 820
+        },
+        "core15.veccore0": {
+          "trace": "Build/profiles/sim-e26-partial912/OPPROF_20261001042255_UVLQASEAFXOAZSGP/simulator/core15.veccore0/trace.json",
+          "源码映射行数": 268
+        }
+      }
+    },
+    "920": {
+      "应用": {
+        "case": 920,
+        "label": "大矩阵L1完整四块模型",
+        "shape": [
+          1,
+          1024,
+          512,
+          256
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "BIN": "Build/profiles/sim-e26-partial920/OPPROF_20261001042318_UMGZTPQJVYWZERER/simulator/visualize_data.bin",
+      "BIN字节数": 18430452,
+      "BIN_SHA256": "de829b38f9e99338d473312c561af0e5b7b4edf1b7b77e227bc2167934cae058",
+      "核": {
+        "core0.cubecore0": {
+          "trace": "Build/profiles/sim-e26-partial920/OPPROF_20261001042318_UMGZTPQJVYWZERER/simulator/core0.cubecore0/trace.json",
+          "源码映射行数": 822
+        },
+        "core0.veccore0": {
+          "trace": "Build/profiles/sim-e26-partial920/OPPROF_20261001042318_UMGZTPQJVYWZERER/simulator/core0.veccore0/trace.json",
+          "源码映射行数": 349
+        },
+        "core15.cubecore0": {
+          "trace": "Build/profiles/sim-e26-partial920/OPPROF_20261001042318_UMGZTPQJVYWZERER/simulator/core15.cubecore0/trace.json",
+          "源码映射行数": 822
+        },
+        "core15.veccore0": {
+          "trace": "Build/profiles/sim-e26-partial920/OPPROF_20261001042318_UMGZTPQJVYWZERER/simulator/core15.veccore0/trace.json",
+          "源码映射行数": 268
+        }
+      }
+    },
+    "928": {
+      "应用": {
+        "case": 928,
+        "label": "大矩阵L1搬运批次尾部模型",
+        "shape": [
+          1,
+          1024,
+          512,
+          384
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      "BIN": "Build/profiles/sim-e26-partial928/OPPROF_20261001042340_BHNAHYSWTQVCBHYX/simulator/visualize_data.bin",
+      "BIN字节数": 22561588,
+      "BIN_SHA256": "048d7679753c14bd3dfcedd9774b37f2c25aa39d57cdd406820896f9ac84676f",
+      "核": {
+        "core0.cubecore0": {
+          "trace": "Build/profiles/sim-e26-partial928/OPPROF_20261001042340_BHNAHYSWTQVCBHYX/simulator/core0.cubecore0/trace.json",
+          "源码映射行数": 835
+        },
+        "core0.veccore0": {
+          "trace": "Build/profiles/sim-e26-partial928/OPPROF_20261001042340_BHNAHYSWTQVCBHYX/simulator/core0.veccore0/trace.json",
+          "源码映射行数": 349
+        },
+        "core15.cubecore0": {
+          "trace": "Build/profiles/sim-e26-partial928/OPPROF_20261001042340_BHNAHYSWTQVCBHYX/simulator/core15.cubecore0/trace.json",
+          "源码映射行数": 835
+        },
+        "core15.veccore0": {
+          "trace": "Build/profiles/sim-e26-partial928/OPPROF_20261001042340_BHNAHYSWTQVCBHYX/simulator/core15.veccore0/trace.json",
+          "源码映射行数": 268
+        }
+      }
+    }
+  }
+}
