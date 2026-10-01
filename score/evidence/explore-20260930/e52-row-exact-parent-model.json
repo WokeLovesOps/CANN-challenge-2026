@@ -1,0 +1,119 @@
+{
+  "源码提交": "fae8516",
+  "测试生成器提交": "7d24a1a",
+  "说明": "每项双调用、输入不变和输出校验通过；只统计实际请求解析的核，模型时间不是NPU时间。",
+  "库SHA256": "200ca31966ff1bc7e675b9b5cdb90c69e42c4663d0f09c045c65c1c862bce989",
+  "结果": {
+    "sim-e52-exact-parent408": {
+      "应用": {
+        "case": 408,
+        "label": "中等批量向量点4",
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "input_sha256": [
+          "5d6e544ee83528c3ec5bfeb887edc6cb4ef3184fa0e1d2ef7955923047adfb56",
+          "8417138cd2eb508c1920ce2e4a08933375e75da11e13d4146e16f2dbfc9f4bb7"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          112.1342544555664,
+          126.57598114013672
+        ],
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      },
+      "BIN": "Build/profiles/sim-e52-exact-parent408/OPPROF_20261001112646_RUGWOHOIIODLOBLS/simulator/visualize_data.bin",
+      "BIN字节数": 2576472,
+      "BIN_SHA256": "a1ece948bcfbb24785f4aaaf5699868cf4d1cb8ce84c87f9b6acff99a19c24bb",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum22ComputeMediumBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+      ],
+      "核": {
+        "core0.veccore0": {
+          "源码映射行数": 310,
+          "指令次数": {
+            "BAR": 57,
+            "WAIT_FLAG": 12,
+            "VGATHER": 20,
+            "MOVEMASK": 90,
+            "VCADD": 3,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "SET_FLAG": 12,
+            "LDP_XI_XJ_XN": 3,
+            "LD_XD_XN_IMM": 82,
+            "VMLA": 4,
+            "STI_XN_IMM": 30,
+            "ST_XD_XN_IMM": 59,
+            "STP_XI_XJ_XN": 13,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "VMUL": 4,
+            "VADDS": 9,
+            "VCONV": 2,
+            "VCMAX": 1,
+            "MADD": 31,
+            "STI_XN_XM": 8,
+            "WAIT_FLAG_DEVI": 1,
+            "VMULS": 2,
+            "DIV": 1,
+            "ADD_IMM": 90,
+            "ZEROEXT": 171,
+            "INSERT_XD": 31,
+            "OR": 31,
+            "ADD": 88,
+            "MOVEV": 1,
+            "CMP_IMM": 52,
+            "SHL": 97,
+            "MOV_XD_XN": 87,
+            "CONV": 8,
+            "CMP": 28,
+            "SIGNEXT": 35,
+            "DCCI": 1,
+            "LD_XD_XN": 4,
+            "SET_CROSS_CORE": 1,
+            "MUL": 9,
+            "MOVK": 69,
+            "MOV_XD_IMM": 125,
+            "NEG": 19,
+            "NOT": 7,
+            "SEL": 8,
+            "SHR": 16,
+            "SUB_IMM": 26,
+            "MOV_XD_SPR": 21,
+            "SBITSET": 14,
+            "SFF": 10,
+            "AND": 19,
+            "MOVX8_XD_IMM": 8,
+            "SUB": 3,
+            "MIN": 2,
+            "INSERT_XD_XN": 1,
+            "MOV_SPR_XN": 13,
+            "END": 1,
+            "NOP": 2,
+            "JUMPCMP": 68,
+            "JUMP": 27,
+            "JUMPC": 74
+          },
+          "模型duration_running_us": [
+            [
+              "3.79",
+              "2.84"
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
