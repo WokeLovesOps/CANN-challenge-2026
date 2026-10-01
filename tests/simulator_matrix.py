@@ -2,6 +2,7 @@
 import argparse
 import ctypes as c
 import itertools
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -219,11 +220,10 @@ def main():
     rng = np.random.default_rng(20260915 + args.case)
     a = rng.uniform(-1, 1, (batch, m, k)).astype(dtype)
     b = rng.uniform(-1, 1, (batch, k, n)).astype(dtype)
-    if label in ("全负", "N分片全负", "单点积全负", "小批量向量全负",
-                 "中等批量向量全负", "大矩阵列块全负", "高窄行块全负", "高窄256行全负", "高窄512行全负", "大K分片全负", "K分片全负", "自适应大矩阵256行全负", "自适应大矩阵转置长K全负", "大矩阵L1步长全负", "紧凑批量合并全负", "批量最终归约全负", "默认块直写全负", "大矩阵A全载B三块全负"):
+    if label.endswith("全负"):
         a = np.abs(a).astype(dtype)
         b = -np.abs(b).astype(dtype)
-    elif label in ("全零", "N分片全零", "单点积全零", "大矩阵列块全零", "高窄行块全零", "高窄256行全零", "高窄512行全零", "大K分片全零", "K分片全零", "自适应大矩阵256行全零", "大矩阵L1步长全零", "紧凑批量合并全零", "批量最终归约全零", "默认块直写全零", "大矩阵A全载B三块全零"):
+    elif label.endswith("全零"):
         a.fill(0)
     elif label == "单点积正负抵消":
         # 大小不同的正负乘积抵消，FP64 golden 应为 4；检查归约精度与全 K 覆盖。
@@ -252,11 +252,20 @@ def main():
         b[0, 1, 128] = 10
         b[0, 0, -1] = 13
     expected = golden(a, b)
+    if label.endswith("全负"):
+        assert np.all(a >= 0) and np.all(b <= 0) and np.all(expected < 0)
+    elif label.endswith("全零"):
+        assert np.all(a == 0) and np.all(expected == 0)
     stored_a = np.ascontiguousarray(a.swapaxes(-1, -2) if trans_a else a)
     stored_b = np.ascontiguousarray(b.swapaxes(-1, -2) if trans_b else b)
     record = dict(case=args.case, label=label, shape=[batch, m, n, k],
                   dtype=str(dtype), transpose=[trans_a, trans_b], capture=args.capture,
                   execution="simulator" if simulated else "npu", passed=False)
+    record["input_sha256"] = [hashlib.sha256(x.tobytes()).hexdigest()
+                              for x in (stored_a, stored_b)]
+    record["input_pattern"] = ("全负" if label.endswith("全负") else
+                               "全零" if label.endswith("全零") else "随机或独立构造")
+    record["expected_range"] = [float(expected.min()), float(expected.max())]
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n")
 
