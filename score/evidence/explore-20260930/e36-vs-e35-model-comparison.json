@@ -1,0 +1,275 @@
+{
+  "父版": "b7423b9",
+  "候选": "de4eaf7",
+  "说明": "同场景软件模型，支持定位批量最终Sum的指令变化，不替代真机l0；指令驻留时间不可相加。",
+  "结果": {
+    "448": {
+      "父版": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "6.8",
+              "5.66"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "11.51",
+              "11.32"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 14,
+            "MOV_OUT_TO_UB": 14,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 125,
+            "WAIT_FLAG": 125,
+            "MMAD": 0
+          }
+        },
+        "core12.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "6.79",
+              "5.64"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core12.veccore0": {
+          "模型duration_running_us": [
+            [
+              "7.85",
+              "7.75"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 1,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 4,
+            "WAIT_FLAG": 4,
+            "MMAD": 0
+          }
+        }
+      },
+      "候选": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "6.44",
+              "5.3"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "7.81",
+              "7.59"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 2,
+            "MOV_OUT_TO_UB": 2,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 8,
+            "WAIT_FLAG": 8,
+            "MMAD": 0
+          }
+        },
+        "core12.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "6.44",
+              "5.28"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core12.veccore0": {
+          "模型duration_running_us": [
+            [
+              "7.51",
+              "7.25"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 1,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 4,
+            "WAIT_FLAG": 4,
+            "MMAD": 0
+          }
+        }
+      }
+    },
+    "463": {
+      "父版": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "4.54",
+              "3.41"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "9.9",
+              "9.69"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 17,
+            "MOV_OUT_TO_UB": 17,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 152,
+            "WAIT_FLAG": 152,
+            "MMAD": 0
+          }
+        },
+        "core15.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "4.55",
+              "3.41"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core15.veccore0": {
+          "模型duration_running_us": [
+            [
+              "5.47",
+              "5.38"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 1,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 4,
+            "WAIT_FLAG": 4,
+            "MMAD": 0
+          }
+        }
+      },
+      "候选": {
+        "core0.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "4.55",
+              "3.42"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core0.veccore0": {
+          "模型duration_running_us": [
+            [
+              "5.8",
+              "5.58"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 2,
+            "MOV_OUT_TO_UB": 2,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 8,
+            "WAIT_FLAG": 8,
+            "MMAD": 0
+          }
+        },
+        "core15.cubecore0": {
+          "模型duration_running_us": [
+            [
+              "4.55",
+              "3.4"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 0,
+            "MOV_OUT_TO_UB": 0,
+            "MOV_UB_TO_OUT": 0,
+            "SET_FLAG": 15,
+            "WAIT_FLAG": 15,
+            "MMAD": 2
+          }
+        },
+        "core15.veccore0": {
+          "模型duration_running_us": [
+            [
+              "5.47",
+              "5.22"
+            ]
+          ],
+          "指令次数": {
+            "VCADD": 1,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "SET_FLAG": 4,
+            "WAIT_FLAG": 4,
+            "MMAD": 0
+          }
+        }
+      }
+    }
+  }
+}
