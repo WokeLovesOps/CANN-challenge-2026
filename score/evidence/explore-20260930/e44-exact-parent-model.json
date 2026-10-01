@@ -1,0 +1,92 @@
+{
+  "源码提交": "7b6b36f",
+  "测试生成器提交": "7b6b36f",
+  "说明": "每项双调用、输入不变和输出校验通过；只统计实际请求解析的核，模型时间不是NPU时间。",
+  "库SHA256": "c77efdb5508e5d465050a3aa77d6210b9af87911c8f5618635f37ab361320e50",
+  "结果": {
+    "sim-e44-exact-parent0": {
+      "应用": {
+        "case": 0,
+        "label": "最小",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 5.960464477539063e-08
+      },
+      "BIN": "Build/profiles/sim-e44-exact-parent0/OPPROF_20261001105058_DLEYRXCFQAICOWXF/simulator/visualize_data.bin",
+      "BIN字节数": 1254988,
+      "BIN_SHA256": "38c1533013dbf754f4040d60e5f7367ac24c90d4c0759ac2a5ce6d99357c3b15",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum10ComputeDotIDhEEvPhS1_S1_j"
+      ],
+      "核": {
+        "core0.veccore0": {
+          "源码映射行数": 157,
+          "指令次数": {
+            "BAR": 6,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "SET_FLAG": 7,
+            "WAIT_FLAG": 7,
+            "LD_XD_XN_IMM": 37,
+            "LDP_XI_XJ_XN": 1,
+            "ST_XD_XN_IMM": 21,
+            "STI_XN_IMM": 16,
+            "STP_XI_XJ_XN": 9,
+            "LD_XD_XN": 2,
+            "STI_XN_XM": 4,
+            "VCADD": 1,
+            "MOVEMASK": 13,
+            "VMUL": 1,
+            "VCONV": 2,
+            "DCCI": 1,
+            "ADD_IMM": 18,
+            "ZEROEXT": 15,
+            "CMP_IMM": 15,
+            "MADD": 1,
+            "SBITSET": 6,
+            "MOVK": 22,
+            "SHL": 7,
+            "SIGNEXT": 12,
+            "MOV_XD_IMM": 35,
+            "ADD": 7,
+            "SFF": 7,
+            "SEL": 2,
+            "MOVX8_XD_IMM": 2,
+            "SHR": 4,
+            "SUB_IMM": 13,
+            "INSERT_XD": 6,
+            "MOV_XD_SPR": 11,
+            "NEG": 5,
+            "AND": 3,
+            "INSERT_XD_XN": 1,
+            "MOV_XD_XN": 1,
+            "JUMP": 9,
+            "JUMPCMP": 15,
+            "JUMPC": 13,
+            "END": 1,
+            "NOP": 1,
+            "MOV_SPR_XN": 6
+          },
+          "模型duration_running_us": [
+            [
+              "0.86",
+              "0.7"
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
