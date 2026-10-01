@@ -1,0 +1,518 @@
+{
+  "源码提交": "2379f9a",
+  "测试生成器提交": "2379f9a",
+  "说明": "每项双调用、输入不变和输出校验通过；只统计实际请求解析的核，模型时间不是NPU时间。",
+  "库SHA256": "1d1250486b44e4179d9b6be604184a18ab79ae331b4b967d9b9e537f4aa2f56b",
+  "结果": {
+    "sim-e48-case408": {
+      "应用": {
+        "case": 408,
+        "label": "中等批量向量点4",
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      },
+      "BIN": "Build/profiles/sim-e48-case408/OPPROF_20261001104423_NUGAATKNKLLEGBWR/simulator/visualize_data.bin",
+      "BIN字节数": 2560096,
+      "BIN_SHA256": "9de4e572005479b5344db2bcc8dff747a4fbaf7ae1a6ba7dd1217b293a71cc98",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum22ComputeMediumBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+      ],
+      "核": {
+        "core0.veccore0": {
+          "源码映射行数": 310,
+          "指令次数": {
+            "BAR": 57,
+            "VGATHER": 20,
+            "WAIT_FLAG": 12,
+            "MOVEMASK": 90,
+            "VCADD": 3,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "SET_FLAG": 12,
+            "LD_XD_XN_IMM": 82,
+            "LDP_XI_XJ_XN": 3,
+            "VMLA": 4,
+            "STI_XN_IMM": 30,
+            "STP_XI_XJ_XN": 13,
+            "ST_XD_XN_IMM": 59,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "VMUL": 4,
+            "VADDS": 9,
+            "VCONV": 2,
+            "VCMAX": 1,
+            "MADD": 31,
+            "STI_XN_XM": 8,
+            "VMULS": 2,
+            "DIV": 1,
+            "WAIT_FLAG_DEVI": 1,
+            "ZEROEXT": 171,
+            "ADD_IMM": 90,
+            "MOV_XD_XN": 87,
+            "INSERT_XD": 31,
+            "OR": 31,
+            "ADD": 88,
+            "CMP_IMM": 52,
+            "SHL": 97,
+            "MOVEV": 1,
+            "CONV": 8,
+            "CMP": 28,
+            "SIGNEXT": 35,
+            "LD_XD_XN": 4,
+            "DCCI": 1,
+            "SET_CROSS_CORE": 1,
+            "MUL": 9,
+            "MOVK": 69,
+            "MOV_XD_IMM": 125,
+            "NEG": 19,
+            "NOT": 7,
+            "SEL": 8,
+            "SHR": 16,
+            "SUB_IMM": 26,
+            "MOV_XD_SPR": 21,
+            "SBITSET": 14,
+            "SFF": 10,
+            "AND": 19,
+            "MOVX8_XD_IMM": 8,
+            "SUB": 3,
+            "MIN": 2,
+            "INSERT_XD_XN": 1,
+            "MOV_SPR_XN": 13,
+            "END": 1,
+            "NOP": 2,
+            "JUMPCMP": 68,
+            "JUMP": 27,
+            "JUMPC": 74
+          },
+          "模型duration_running_us": [
+            [
+              "3.65",
+              "2.87"
+            ]
+          ]
+        }
+      }
+    },
+    "sim-e48-case415": {
+      "应用": {
+        "case": 415,
+        "label": "中等批量向量点4",
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      },
+      "BIN": "Build/profiles/sim-e48-case415/OPPROF_20261001104434_OBKJUBYYONGGTWBH/simulator/visualize_data.bin",
+      "BIN字节数": 2433356,
+      "BIN_SHA256": "d687504ee33ddd0ecdde2ad24a0b2a44090973b90897efa7fb40361acd7e4fb8",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum22ComputeMediumBatchDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+      ],
+      "核": {
+        "core0.veccore0": {
+          "源码映射行数": 310,
+          "指令次数": {
+            "BAR": 45,
+            "WAIT_FLAG": 12,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "VCADD": 3,
+            "MOVEMASK": 66,
+            "SET_FLAG": 12,
+            "LD_XD_XN_IMM": 80,
+            "LDP_XI_XJ_XN": 4,
+            "VMLA": 4,
+            "STI_XN_IMM": 30,
+            "STP_XI_XJ_XN": 13,
+            "ST_XD_XN_IMM": 59,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "VGATHER": 8,
+            "VMUL": 4,
+            "VADDS": 9,
+            "VCONV": 2,
+            "VCMAX": 1,
+            "STI_XN_XM": 8,
+            "VMULS": 2,
+            "WAIT_FLAG_DEVI": 1,
+            "DIV": 1,
+            "MOVEV": 1,
+            "MADD": 18,
+            "ADD_IMM": 77,
+            "CMP_IMM": 40,
+            "ZEROEXT": 133,
+            "CONV": 8,
+            "SIGNEXT": 35,
+            "SHL": 85,
+            "ADD": 80,
+            "MOV_XD_XN": 54,
+            "CMP": 28,
+            "DCCI": 1,
+            "LD_XD_XN": 4,
+            "OR": 19,
+            "SET_CROSS_CORE": 1,
+            "INSERT_XD": 19,
+            "MUL": 9,
+            "SBITSET": 14,
+            "SFF": 10,
+            "MOVK": 70,
+            "SUB_IMM": 27,
+            "MOV_XD_IMM": 126,
+            "MOV_XD_SPR": 21,
+            "SHR": 16,
+            "NOT": 7,
+            "NEG": 19,
+            "SEL": 8,
+            "AND": 19,
+            "MOVX8_XD_IMM": 8,
+            "INSERT_XD_XN": 1,
+            "SUB": 3,
+            "MIN": 2,
+            "MOV_SPR_XN": 13,
+            "JUMP": 27,
+            "NOP": 2,
+            "JUMPC": 62,
+            "JUMPCMP": 44,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "3.38",
+              "2.38"
+            ]
+          ]
+        }
+      }
+    },
+    "sim-e48-case432": {
+      "应用": {
+        "case": 432,
+        "label": "中等批量向量全负",
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05
+      },
+      "BIN": "Build/profiles/sim-e48-case432/OPPROF_20261001104446_RDDEFREWEXTWAEPM/simulator/visualize_data.bin",
+      "BIN字节数": 2560068,
+      "BIN_SHA256": "2a128f7fd122073bdbf4c97b34f70e0e43edda40b651a4d0df22229d00bf8ec6",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum22ComputeMediumBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+      ],
+      "核": {
+        "core0.veccore0": {
+          "源码映射行数": 310,
+          "指令次数": {
+            "BAR": 57,
+            "VGATHER": 20,
+            "WAIT_FLAG": 12,
+            "VCADD": 3,
+            "MOVEMASK": 90,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "SET_FLAG": 12,
+            "LD_XD_XN_IMM": 82,
+            "LDP_XI_XJ_XN": 3,
+            "VMLA": 4,
+            "STI_XN_IMM": 30,
+            "STP_XI_XJ_XN": 13,
+            "ST_XD_XN_IMM": 59,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "VMUL": 4,
+            "VADDS": 9,
+            "VCONV": 2,
+            "VCMAX": 1,
+            "MADD": 31,
+            "STI_XN_XM": 8,
+            "WAIT_FLAG_DEVI": 1,
+            "VMULS": 2,
+            "DIV": 1,
+            "MOV_XD_XN": 87,
+            "CMP_IMM": 52,
+            "SHL": 97,
+            "MOVEV": 1,
+            "ADD": 88,
+            "ZEROEXT": 171,
+            "OR": 31,
+            "INSERT_XD": 31,
+            "ADD_IMM": 90,
+            "CONV": 8,
+            "CMP": 28,
+            "SIGNEXT": 35,
+            "LD_XD_XN": 4,
+            "DCCI": 1,
+            "SET_CROSS_CORE": 1,
+            "MUL": 9,
+            "MOVK": 69,
+            "MOV_XD_IMM": 125,
+            "NEG": 19,
+            "NOT": 7,
+            "SEL": 8,
+            "SHR": 16,
+            "SUB_IMM": 26,
+            "MOV_XD_SPR": 21,
+            "SBITSET": 14,
+            "SFF": 10,
+            "AND": 19,
+            "MOVX8_XD_IMM": 8,
+            "SUB": 3,
+            "MIN": 2,
+            "INSERT_XD_XN": 1,
+            "MOV_SPR_XN": 13,
+            "END": 1,
+            "NOP": 2,
+            "JUMPCMP": 68,
+            "JUMP": 27,
+            "JUMPC": 74
+          },
+          "模型duration_running_us": [
+            [
+              "3.65",
+              "2.88"
+            ]
+          ]
+        }
+      }
+    },
+    "sim-e48-case464": {
+      "应用": {
+        "case": 464,
+        "label": "中等批量向量行尾块",
+        "shape": [
+          3,
+          15,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      },
+      "BIN": "Build/profiles/sim-e48-case464/OPPROF_20261001104457_NOWNWFJNDKDNBPVD/simulator/visualize_data.bin",
+      "BIN字节数": 2548108,
+      "BIN_SHA256": "7d5f1756900d41eb84d3ef8e10a4299b8abec633465eea5949c96943e768e930",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum22ComputeMediumBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+      ],
+      "核": {
+        "core0.veccore0": {
+          "源码映射行数": 310,
+          "指令次数": {
+            "BAR": 56,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "VGATHER": 19,
+            "SET_FLAG": 12,
+            "WAIT_FLAG": 12,
+            "MOVEMASK": 88,
+            "VCADD": 3,
+            "LD_XD_XN_IMM": 82,
+            "LDP_XI_XJ_XN": 3,
+            "VMLA": 4,
+            "STI_XN_IMM": 30,
+            "STP_XI_XJ_XN": 13,
+            "ST_XD_XN_IMM": 59,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "VMUL": 4,
+            "VADDS": 9,
+            "VCONV": 2,
+            "VCMAX": 1,
+            "MADD": 30,
+            "STI_XN_XM": 8,
+            "VMULS": 2,
+            "DIV": 1,
+            "OR": 30,
+            "INSERT_XD": 31,
+            "ZEROEXT": 167,
+            "ADD": 85,
+            "CMP_IMM": 51,
+            "SHL": 96,
+            "MOV_XD_XN": 85,
+            "ADD_IMM": 89,
+            "MOVEV": 1,
+            "WAIT_FLAG_DEVI": 1,
+            "CONV": 8,
+            "CMP": 28,
+            "SIGNEXT": 35,
+            "LD_XD_XN": 4,
+            "DCCI": 1,
+            "SET_CROSS_CORE": 1,
+            "MUL": 9,
+            "MOVK": 69,
+            "NEG": 19,
+            "MOV_XD_IMM": 125,
+            "NOT": 7,
+            "SEL": 8,
+            "SHR": 16,
+            "SUB_IMM": 26,
+            "MOV_XD_SPR": 21,
+            "SBITSET": 14,
+            "SFF": 10,
+            "AND": 19,
+            "MOVX8_XD_IMM": 8,
+            "SUB": 3,
+            "MIN": 2,
+            "INSERT_XD_XN": 1,
+            "MOV_SPR_XN": 13,
+            "END": 1,
+            "NOP": 2,
+            "JUMPCMP": 66,
+            "JUMP": 26,
+            "JUMPC": 73
+          },
+          "模型duration_running_us": [
+            [
+              "3.65",
+              "2.97"
+            ]
+          ]
+        }
+      }
+    },
+    "sim-e48-case471": {
+      "应用": {
+        "case": 471,
+        "label": "中等批量向量行尾块",
+        "shape": [
+          3,
+          15,
+          16,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      },
+      "BIN": "Build/profiles/sim-e48-case471/OPPROF_20261001104508_KNAVKDVIMESIDTJN/simulator/visualize_data.bin",
+      "BIN字节数": 2421456,
+      "BIN_SHA256": "db27f286d49f19bbdc3b8e9c8a49a4bea40a1adc6e2fa254dc39ae2325511ead",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum22ComputeMediumBatchDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+      ],
+      "核": {
+        "core0.veccore0": {
+          "源码映射行数": 310,
+          "指令次数": {
+            "BAR": 44,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "SET_FLAG": 12,
+            "WAIT_FLAG": 12,
+            "VCADD": 3,
+            "MOVEMASK": 64,
+            "LDP_XI_XJ_XN": 4,
+            "LD_XD_XN_IMM": 80,
+            "VMLA": 4,
+            "STI_XN_IMM": 30,
+            "ST_XD_XN_IMM": 59,
+            "STP_XI_XJ_XN": 13,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "VGATHER": 7,
+            "VMUL": 4,
+            "VADDS": 9,
+            "VCONV": 2,
+            "VCMAX": 1,
+            "STI_XN_XM": 8,
+            "VMULS": 2,
+            "WAIT_FLAG_DEVI": 1,
+            "DIV": 1,
+            "MOVEV": 1,
+            "MADD": 17,
+            "CMP_IMM": 39,
+            "ADD_IMM": 76,
+            "ZEROEXT": 129,
+            "CONV": 8,
+            "ADD": 77,
+            "SHL": 84,
+            "SIGNEXT": 35,
+            "CMP": 28,
+            "MOV_XD_XN": 52,
+            "DCCI": 1,
+            "LD_XD_XN": 4,
+            "OR": 18,
+            "SET_CROSS_CORE": 1,
+            "INSERT_XD": 19,
+            "MUL": 9,
+            "MOV_XD_IMM": 126,
+            "MOVK": 70,
+            "MOV_XD_SPR": 21,
+            "SHR": 16,
+            "NOT": 7,
+            "NEG": 19,
+            "SBITSET": 14,
+            "SEL": 8,
+            "SUB_IMM": 27,
+            "SFF": 10,
+            "AND": 19,
+            "MOVX8_XD_IMM": 8,
+            "INSERT_XD_XN": 1,
+            "SUB": 3,
+            "MIN": 2,
+            "MOV_SPR_XN": 13,
+            "JUMP": 26,
+            "NOP": 2,
+            "JUMPC": 61,
+            "JUMPCMP": 42,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "3.35",
+              "2.46"
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

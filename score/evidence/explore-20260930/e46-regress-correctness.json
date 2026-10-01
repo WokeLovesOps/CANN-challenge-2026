@@ -1,0 +1,9152 @@
+{
+  "源码提交": "ff78f88",
+  "说明": "152组普通调用和图重放及16组双类型四布局20＋50全部通过；本记录只表示正确性",
+  "图重放": [
+    {
+      "case": 0,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 5.960464477539063e-08
+    },
+    {
+      "case": 1,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 2,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 3,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "case": 4,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 5,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 6,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 7,
+      "label": "最小",
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 216,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 217,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 218,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 219,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 5.960464477539063e-08
+    },
+    {
+      "case": 220,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 5.960464477539063e-08
+    },
+    {
+      "case": 221,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 222,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 223,
+      "label": "单点积搬运尾块",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 224,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "case": 225,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 226,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 227,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 228,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 229,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 230,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 231,
+      "label": "单点积六十四",
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 272,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 273,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 274,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 275,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 276,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 277,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 278,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 279,
+      "label": "单点积全零",
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 288,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 289,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 290,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 291,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 292,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 293,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 294,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 295,
+      "label": "单点积Batch回退",
+      "shape": [
+        2,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 296,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "case": 297,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 298,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 299,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 300,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 301,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 302,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 303,
+      "label": "单点积M回退",
+      "shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 304,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 305,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 306,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "case": 307,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "case": 308,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 309,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 310,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 311,
+      "label": "单点积N回退",
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 312,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 313,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 314,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 315,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 316,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 317,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 318,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 319,
+      "label": "基础小矩阵假设",
+      "shape": [
+        1,
+        2,
+        3,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 344,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 345,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 346,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 347,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 348,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 349,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 350,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 351,
+      "label": "打包点积矩阵",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 352,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 353,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 354,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 355,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 356,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 357,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 358,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 359,
+      "label": "打包点积输出边界",
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 360,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 361,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 362,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 363,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 364,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 365,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 366,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 367,
+      "label": "打包点积超限回退",
+      "shape": [
+        1,
+        3,
+        6,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1304,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 7.450580596923828e-09
+    },
+    {
+      "case": 1305,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "case": 1306,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "case": 1307,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1308,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1309,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1310,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1311,
+      "label": "单点积合并Cast中间K48",
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1312,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.470348358154297e-08
+    },
+    {
+      "case": 1313,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1314,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "case": 1315,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1316,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 1317,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.9802322387695312e-08
+    },
+    {
+      "case": 1318,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1319,
+      "label": "单点积合并Cast中间K56",
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1320,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.980232238769531e-07
+    },
+    {
+      "case": 1321,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1322,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1323,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1324,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 1325,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 3.5762786865234375e-07
+    },
+    {
+      "case": 1326,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1327,
+      "label": "打包Cast最大行数",
+      "shape": [
+        1,
+        16,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1328,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1329,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1330,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1331,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1332,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1333,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1334,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1335,
+      "label": "打包Cast最大列数",
+      "shape": [
+        1,
+        1,
+        16,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1336,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1337,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1338,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1339,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1340,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1341,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1342,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1343,
+      "label": "打包Cast短K尾列",
+      "shape": [
+        1,
+        2,
+        7,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1344,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1345,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1346,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1347,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1348,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1349,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 1350,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1351,
+      "label": "打包Cast中K上界",
+      "shape": [
+        1,
+        4,
+        4,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1352,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1353,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1354,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1355,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1356,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1357,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 1358,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1359,
+      "label": "打包Cast全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1360,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1361,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1362,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 1363,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1364,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1365,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1366,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1367,
+      "label": "打包Cast全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    }
+  ],
+  "布局": [
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "fp16",
+      "layout": "NN",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f5c96587e411c96561d55199296524ef6c6ac72cdb81b961d7ea83a84ff5f787",
+            "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 2.384185791015625e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "03d90da3f117141c793608e2b6c85d92f6bfc28e1e89ebb8e3706e28da0a3cc6",
+            "6a3f7ca13d7ccf293328db566e52d8ba2b151ecfaabf553519a098fcf3009e19"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "fp16",
+      "layout": "NT",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f5c96587e411c96561d55199296524ef6c6ac72cdb81b961d7ea83a84ff5f787",
+            "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 2.384185791015625e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "03d90da3f117141c793608e2b6c85d92f6bfc28e1e89ebb8e3706e28da0a3cc6",
+            "51ae569c8b6f163ff0cd5b35437ef4a4b63c8e4694bddaec408df72ed957bc26"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "fp16",
+      "layout": "TN",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f5c96587e411c96561d55199296524ef6c6ac72cdb81b961d7ea83a84ff5f787",
+            "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 2.384185791015625e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "b3f6b6e4fa9ed35ec5be67c8695e4d6423fd9fd1ded180f990796de868cefce3",
+            "6a3f7ca13d7ccf293328db566e52d8ba2b151ecfaabf553519a098fcf3009e19"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "fp16",
+      "layout": "TT",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f5c96587e411c96561d55199296524ef6c6ac72cdb81b961d7ea83a84ff5f787",
+            "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 2.384185791015625e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "b3f6b6e4fa9ed35ec5be67c8695e4d6423fd9fd1ded180f990796de868cefce3",
+            "51ae569c8b6f163ff0cd5b35437ef4a4b63c8e4694bddaec408df72ed957bc26"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "bf16",
+      "layout": "NN",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f1c45c2abcd376e0e9e313d08f5a795a2b5386b3c064923e980a7947b7016a5c",
+            "bf30bbed0972022c15715dda1103e39d5fac75634d98c6bdc53a59556456e153"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 1.1920928955078125e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "35317ddf80bc001013c3fe75ec6eb6977dd6c930cb9e7bb4393b8b2c8316fddb",
+            "1c28efa03d79307085f35e750bb9b812df4973c8996d9ffdf6fc5a087d1b03d3"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "bf16",
+      "layout": "NT",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f1c45c2abcd376e0e9e313d08f5a795a2b5386b3c064923e980a7947b7016a5c",
+            "bf30bbed0972022c15715dda1103e39d5fac75634d98c6bdc53a59556456e153"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 1.1920928955078125e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "35317ddf80bc001013c3fe75ec6eb6977dd6c930cb9e7bb4393b8b2c8316fddb",
+            "ddb79c121fde5d9159166133c0385dfd8a1a2afde006672ce51e02e15213a81f"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "bf16",
+      "layout": "TN",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f1c45c2abcd376e0e9e313d08f5a795a2b5386b3c064923e980a7947b7016a5c",
+            "bf30bbed0972022c15715dda1103e39d5fac75634d98c6bdc53a59556456e153"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 1.1920928955078125e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "b919e510af83b3916f5b51d2e547204f81e66aa066088c182ab149976df24636",
+            "1c28efa03d79307085f35e750bb9b812df4973c8996d9ffdf6fc5a087d1b03d3"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "ff78f88",
+      "execution": "real_npu",
+      "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+      "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+      "dtype": "bf16",
+      "layout": "TT",
+      "warmup": 20,
+      "repeat": 50,
+      "passed": true,
+      "results": [
+        {
+          "case": 1,
+          "shape": [
+            1,
+            1,
+            1,
+            32
+          ],
+          "passed": true,
+          "input_sha256": [
+            "f1c45c2abcd376e0e9e313d08f5a795a2b5386b3c064923e980a7947b7016a5c",
+            "bf30bbed0972022c15715dda1103e39d5fac75634d98c6bdc53a59556456e153"
+          ],
+          "launch_begin": 0,
+          "seed": 20260931,
+          "max_abs_error": 1.1920928955078125e-07,
+          "launch_end": 71
+        },
+        {
+          "case": 2,
+          "shape": [
+            1,
+            3,
+            5,
+            40
+          ],
+          "passed": true,
+          "input_sha256": [
+            "b919e510af83b3916f5b51d2e547204f81e66aa066088c182ab149976df24636",
+            "ddb79c121fde5d9159166133c0385dfd8a1a2afde006672ce51e02e15213a81f"
+          ],
+          "launch_begin": 71,
+          "seed": 20260932,
+          "max_abs_error": 0.0,
+          "launch_end": 142
+        }
+      ],
+      "launches": [
+        {
+          "case": 1,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 1,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 1,
+          "phase": "sample",
+          "position": 70
+        },
+        {
+          "case": 2,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 3
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 4
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 5
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 6
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 7
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 8
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 9
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 10
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 11
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 12
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 13
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 14
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 15
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 16
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 17
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 18
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 19
+        },
+        {
+          "case": 2,
+          "phase": "warmup",
+          "position": 20
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 21
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 22
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 23
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 24
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 25
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 26
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 27
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 28
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 29
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 30
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 31
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 32
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 33
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 34
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 35
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 36
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 37
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 38
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 39
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 40
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 41
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 42
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 43
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 44
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 45
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 46
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 47
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 48
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 49
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 50
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 51
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 52
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 53
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 54
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 55
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 56
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 57
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 58
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 59
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 60
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 61
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 62
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 63
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 64
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 65
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 66
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 67
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 68
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 69
+        },
+        {
+          "case": 2,
+          "phase": "sample",
+          "position": 70
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    }
+  ]
+}

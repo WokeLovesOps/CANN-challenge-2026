@@ -1,0 +1,1019 @@
+{
+  "说明": "全参与核PMU，必须结合普通l0判断性能；配置改变可改变流水指令驻留时间，不将各流水时间相加。",
+  "结果": {
+    "e45-dotcast-2": {
+      "应用": {
+        "commit": "d8ce462",
+        "execution": "real_npu",
+        "library": "/home/developer/cann-explore-20260930/e45-dotcast/Build/npu/libsimulator_bridge.so",
+        "library_sha256": "6f05b602c4801db3a0b60e64d232ce15d6cecc5c70324ef8465fceb81c1589ea",
+        "dtype": "fp16",
+        "layout": "NN",
+        "warmup": 20,
+        "repeat": 50,
+        "passed": true,
+        "results": [
+          {
+            "case": 2,
+            "shape": [
+              1,
+              3,
+              5,
+              40
+            ],
+            "passed": true,
+            "input_sha256": [
+              "03d90da3f117141c793608e2b6c85d92f6bfc28e1e89ebb8e3706e28da0a3cc6",
+              "6a3f7ca13d7ccf293328db566e52d8ba2b151ecfaabf553519a098fcf3009e19"
+            ],
+            "launch_begin": 0,
+            "seed": 20260932,
+            "max_abs_error": 0.0,
+            "launch_end": 71
+          }
+        ],
+        "launches": [
+          {
+            "case": 2,
+            "phase": "validation",
+            "position": 0
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 1
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 2
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 3
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 4
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 5
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 6
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 7
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 8
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 9
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 10
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 11
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 12
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 13
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 14
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 15
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 16
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 17
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 18
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 19
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 20
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 21
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 22
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 23
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 24
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 25
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 26
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 27
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 28
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 29
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 30
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 31
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 32
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 33
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 34
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 35
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 36
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 37
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 38
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 39
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 40
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 41
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 42
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 43
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 44
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 45
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 46
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 47
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 48
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 49
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 50
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 51
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 52
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 53
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 54
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 55
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 56
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 57
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 58
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 59
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 60
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 61
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 62
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 63
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 64
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 65
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 66
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 67
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 68
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 69
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 70
+          }
+        ],
+        "soc": "Ascend910_9362",
+        "cube_cores": 20
+      },
+      "BIN": "Build/pmu-e46-vs-e45/e45-dotcast-2/OPPROF_20261001104421_SUJKBPMVMTRSOMWS/visualize_data.bin",
+      "BIN字节数": 1571348,
+      "BIN_SHA256": "20ec1f14a2ca9f4414fefc43d10fbe904a5465c85b6064944670c4982819ee73",
+      "数据": {
+        "OpBasicInfo": [
+          {
+            "Op Name": "_ZN13batch_max_sum17ComputePackedDotsIDhLb0ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "3.719926",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "177992",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "3.190909",
+            "aiv_total_cycles": "5265",
+            "aiv_vec_time(us)": "0.453939",
+            "aiv_vec_ratio": "0.142260",
+            "aiv_mte2_time(us)": "0.349697",
+            "aiv_mte2_ratio": "0.109592",
+            "aiv_mte2_active_bw(GB/s)": "2.386252",
+            "aiv_mte3_time(us)": "0.144848",
+            "aiv_mte3_ratio": "0.045394",
+            "aiv_mte3_active_bw(GB/s)": "0.822993",
+            "aiv_icache_miss_rate": "0.102167",
+            "aiv_scalar_time(us)": "1.307879",
+            "aiv_scalar_ratio": "0.409877",
+            "aiv_scalar_single_time(us)": "0.156364",
+            "aiv_scalar_dual_time(us)": "0.303030",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "1.773333",
+            "aiv_scalar_wait_time(us)": "0.128485",
+            "": ""
+          }
+        ],
+        "Memory": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "3.190909",
+            "aiv_total_cycles": "5265",
+            "aiv_ub_to_gm_bw(GB/s)": "0.037359",
+            "aiv_gm_to_ub_bw(GB/s)": "0.261513",
+            "aiv_main_mem_read_bw(GB/s)": "1.643798",
+            "aiv_main_mem_write_bw(GB/s)": "0.074718",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.109592",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.045394",
+            "read_main_memory_datas(KB)": "5.500000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.875000",
+            "GM_to_UB_bw_usage_rate(%)": "0.118837",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.019999",
+            "": ""
+          }
+        ]
+      }
+    },
+    "e46-packedcast-2": {
+      "应用": {
+        "commit": "ff78f88",
+        "execution": "real_npu",
+        "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+        "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+        "dtype": "fp16",
+        "layout": "NN",
+        "warmup": 20,
+        "repeat": 50,
+        "passed": true,
+        "results": [
+          {
+            "case": 2,
+            "shape": [
+              1,
+              3,
+              5,
+              40
+            ],
+            "passed": true,
+            "input_sha256": [
+              "03d90da3f117141c793608e2b6c85d92f6bfc28e1e89ebb8e3706e28da0a3cc6",
+              "6a3f7ca13d7ccf293328db566e52d8ba2b151ecfaabf553519a098fcf3009e19"
+            ],
+            "launch_begin": 0,
+            "seed": 20260932,
+            "max_abs_error": 0.0,
+            "launch_end": 71
+          }
+        ],
+        "launches": [
+          {
+            "case": 2,
+            "phase": "validation",
+            "position": 0
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 1
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 2
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 3
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 4
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 5
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 6
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 7
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 8
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 9
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 10
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 11
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 12
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 13
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 14
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 15
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 16
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 17
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 18
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 19
+          },
+          {
+            "case": 2,
+            "phase": "warmup",
+            "position": 20
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 21
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 22
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 23
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 24
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 25
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 26
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 27
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 28
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 29
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 30
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 31
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 32
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 33
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 34
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 35
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 36
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 37
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 38
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 39
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 40
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 41
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 42
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 43
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 44
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 45
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 46
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 47
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 48
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 49
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 50
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 51
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 52
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 53
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 54
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 55
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 56
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 57
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 58
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 59
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 60
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 61
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 62
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 63
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 64
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 65
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 66
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 67
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 68
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 69
+          },
+          {
+            "case": 2,
+            "phase": "sample",
+            "position": 70
+          }
+        ],
+        "soc": "Ascend910_9362",
+        "cube_cores": 20
+      },
+      "BIN": "Build/pmu-e46-vs-e45/e46-packedcast-2/OPPROF_20261001104427_FAJPNXOGQBSNKOWX/visualize_data.bin",
+      "BIN字节数": 1571352,
+      "BIN_SHA256": "32da700204d8141a44d997e7a647da8666922139755a621b33b7567d360638a0",
+      "数据": {
+        "OpBasicInfo": [
+          {
+            "Op Name": "_ZN13batch_max_sum17ComputePackedDotsIDhLb0ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "3.479930",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "178057",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "2.953939",
+            "aiv_total_cycles": "4874",
+            "aiv_vec_time(us)": "0.389091",
+            "aiv_vec_ratio": "0.131719",
+            "aiv_mte2_time(us)": "0.360000",
+            "aiv_mte2_ratio": "0.121871",
+            "aiv_mte2_active_bw(GB/s)": "2.317958",
+            "aiv_mte3_time(us)": "0.156364",
+            "aiv_mte3_ratio": "0.052934",
+            "aiv_mte3_active_bw(GB/s)": "0.762385",
+            "aiv_icache_miss_rate": "0.126866",
+            "aiv_scalar_time(us)": "1.423636",
+            "aiv_scalar_ratio": "0.481945",
+            "aiv_scalar_single_time(us)": "0.126061",
+            "aiv_scalar_dual_time(us)": "0.272727",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "1.988485",
+            "aiv_scalar_wait_time(us)": "0.129091",
+            "": ""
+          }
+        ],
+        "Memory": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "2.953939",
+            "aiv_total_cycles": "4874",
+            "aiv_ub_to_gm_bw(GB/s)": "0.040356",
+            "aiv_gm_to_ub_bw(GB/s)": "0.282492",
+            "aiv_main_mem_read_bw(GB/s)": "1.775666",
+            "aiv_main_mem_write_bw(GB/s)": "0.080712",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.121871",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.052934",
+            "read_main_memory_datas(KB)": "5.500000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.875000",
+            "GM_to_UB_bw_usage_rate(%)": "0.128371",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.021604",
+            "": ""
+          }
+        ]
+      }
+    }
+  }
+}
