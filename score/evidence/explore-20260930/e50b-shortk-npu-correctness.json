@@ -1,0 +1,1399 @@
+{
+  "源码提交": "1be6348",
+  "生成器提交": "3277368",
+  "说明": "48组短K普通调用及图重放全部通过，含实际全负/全零及FP16/BF16四布局，原507035对齐错误已在这些用例消失",
+  "结果": [
+    {
+      "case": 400,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "939b37bb8d37ba3725d2a996d6380ff56a1ce6d885fbb82f68f3ff47f84da48d",
+        "3f76adc554e89df5b747ba3e46d8a82901054a6f139f4ddfa8b2bb08d630b5a2"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        20.804410934448242,
+        28.76492691040039
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 401,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "484ac32b7880830641c003f4f66e152f54b6ef25c37e10ccabd3b2c49a139159",
+        "3165a43aeae71da9eb25c8bc49eb5f21c6dec24fd28991bd07d2f93f11240e7e"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        22.021787643432617,
+        23.102054595947266
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 402,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "d859ccc7bca7c0c2086347af84d0557f61a027b75ef14515b791657aec21e666",
+        "e9000e60d2befb13268ffcba6b7e0430d576793dd6b0acc4dd6eea3d41038fbc"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        28.344303131103516,
+        31.980539321899414
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 403,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "2187d0e472aaf8d96fe2d8d543aeeeaaccf0968f9759c59fe519ddbd7b033161",
+        "9cf6f95326728d9ca71e496c89f581b46224a777e810fa60f72331d00045add4"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        22.237945556640625,
+        26.970487594604492
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 404,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "777fc5feb37368f9bda361f0ef32bb2f7f3e369fde201bfc4730b598254a43e4",
+        "499c0006d02453ee3d29fb5275a4ede44afdfa1c207c6cb0c9a1892286136bfc"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        20.962656021118164,
+        22.356067657470703
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 405,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "411568035d1d284db729148da0b364eceb925b923e330269045c7d3ddb96ea86",
+        "60edc16120e7b73e409ad79d2290edb8b7d463a33e3559373e8299e0cfdd0c29"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        22.111474990844727,
+        24.60274314880371
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 406,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "fe5f47529b311b7f869a52b8e7a57b7123e43b08bfa7ee7b9e2b99d854c3f147",
+        "f17721174c4d2316f45da6892d1f5b284cf81de4af4a2f412ed24eebb64eeeeb"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        21.491943359375,
+        26.98434066772461
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 407,
+      "label": "小批量向量非紧凑K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "f6692252d5e4cb226adf150e121133d37f1a4743836fcfacaa5990486eb773ee",
+        "d94aee8a979013dac6f9caec9cb9676cbefa062a73389941170d3499f20eaea0"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        19.98301887512207,
+        22.93882942199707
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 1400,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "0c464dbde5c778dd848a7bf4b2c14c94829befba841931b9831dcf6ff71544ec",
+        "90403f6074d774ac21d37ad99018d5553e3dae34208bb52343d74670a8ea7a73"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        30.99884796142578,
+        31.883392333984375
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 1401,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "a8e0b6f40e51ed2dde1d2378f7184ccf9ab93b1e10fa08ac53d4ee241b868b56",
+        "3b23875eb7432a71a36481a1a232b9bd38153d0b4285275b32a07fff5c8f104f"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        30.041893005371094,
+        32.16066360473633
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 1402,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "b32821e55f5106eb0dbe05657005232f23c1fc65d15c56b6bb8720e10623b435",
+        "4656744269d0c2fe3ee70bfedba69708aeafd67e641514129e76a846350704dd"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        25.939712524414062,
+        28.34808921813965
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1403,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "3f54462d6224c29812bdfb14a626fd461f03a9c3a017f9e47b418afd2f460014",
+        "02c5c00c2141de3584a2cb1c8ba741dd9f4ed6a78dec13247da67839c04a29d1"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        27.08817481994629,
+        33.95821762084961
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1404,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "17b4c6131ce9780afdb8644bfbf192c4d09e1521b6569ac00587d2dd29439f2a",
+        "2e2e5b7720e18737997b1a7a98181596f9ed99ea7343be5ea04055ab8419827d"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        27.06558609008789,
+        35.86795425415039
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1405,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "085205a24c365f799fd8565ca4d3e5c4ebbdef84ce0b5cc1fb1b4aa3be553e40",
+        "8341c01190da79f1ee452d5a9af4a1ff4dc9771e9b6ed4a8c9f1443e6d5e6933"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        28.04423713684082,
+        29.561384201049805
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 1406,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "b402b99c2603b4e4af5066e292ae7e52f736682532ee57fcf04134c2550e039b",
+        "53b46c5cacad2265383859f9f860fe53abe09cc4727ec0aa52db89ff734b801c"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        31.885860443115234,
+        39.97969436645508
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 1407,
+      "label": "小批量硬件转置K56回退",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "e76cbaf796b314df1a14632aeb970aad47bde0201c561042c369426636b41422",
+        "9d888ea074bbdc78b24a8c77030e70b41994a1a770a8d34526c0f217d4d16f57"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        24.995214462280273,
+        26.33024024963379
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 1408,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "a3dc35ba81e07bbcaccd17f528084f86dd33b31aa4a53985a670f13c17ef845a",
+        "19c1c27381951a95d91d70e8e94c26c8acf2d0850d1ea893d833a2e24bb5d1cc"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        2.784870147705078,
+        4.156116962432861
+      ],
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 1409,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "35b1e3e828d8ab74215ac0a81e5febc78cf960f63fe28c4cd19371d00b910db6",
+        "8f9dd8a5e7be7a7dc3263e6fb163ebb85cc776ff3113f852f1763d6a8e56bc20"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        4.188704013824463,
+        5.572783470153809
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1410,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "1b65a1ad5fe86380e6b60635d278f9672f2626732a6e286cb22693b61918ac87",
+        "ee82ab812d1c53f63a255d07e25ac08f5d512ce0d62e06a653374037b2d78706"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        3.028333902359009,
+        3.224085807800293
+      ],
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 1411,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5113d9e3415b7880b081a1d5d5a5466c1ba05089256e05c167bc765130b883c6",
+        "18094b455d71237e348f46d7f30c7b84e11d97ee643b44c24fbf395e589ef1c7"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        3.3348584175109863,
+        3.5178351402282715
+      ],
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "case": 1412,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "48d0ea27c2870c1f6a7d71713a14b8f6265b0126d3ea63588777a8acec6f729a",
+        "b3795ace4b35adf01374721222780cd7812430f5ac89bef99d889f2c114c6fd2"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        3.267894744873047,
+        3.9261679649353027
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1413,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "b463f6ae42de083bf30cb2e9c031e081a7e04cae6e7f336738bdc21f3f979dc8",
+        "bf8a6cea35a7471515013efadfb7f1adee821957f63b61f25c40ee2e4e7a6911"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        2.1461668014526367,
+        2.909420967102051
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1414,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "2b8c262668b73815264c8111bdc642fd28bede25d25d88e2bac6894d45de2b4d",
+        "1c1ae31017082f1b35fca742d56f3a8c762ff04c770f7119625d436db642a00b"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        2.188417673110962,
+        6.212041854858398
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1415,
+      "label": "小批量短K对齐单行",
+      "shape": [
+        2,
+        1,
+        16,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "6151a754c21b455ecf506be4e240aacda36e334028089bcbc9df771a27b136a3",
+        "45b7404958efe85b2fc5fb3bd74b49dd46d951740b8746d2855c6d40330c461a"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        3.1983091831207275,
+        4.944305419921875
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1416,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "24ab9762288a994f3c5cceab2c72868b5d66515bc5da209aa597b969bcd9149a",
+        "fa35d88b973a06380a39ef768da7360c751ad180cc7b0ec12d93f633d0a5ea25"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -8.709659576416016,
+        5.183610439300537
+      ],
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 1417,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "1a4621bc3f133e26e4c46811ccd8bb2031e07aa7b4ad4fc9b71ee9afb6385e1e",
+        "1f1761f23acb760159370f12b31b98472a977b9fe16c95f383b8871f26d53e2b"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -16.09587860107422,
+        7.9995222091674805
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.9073486328125e-06
+    },
+    {
+      "case": 1418,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "aba9c37055280a5914494c5a0d0b0abec37f4eecbfd108a1482a50a5c98c7243",
+        "180d68e95d6d596b4d53a1450116f2b2d3f4ad75607c57082749afafa281fadb"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -6.747387409210205,
+        4.94704008102417
+      ],
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1419,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "92921c5fa3faca7c60b5fd96f30bf676e09b348acfcabfd8e0c5f7f720885076",
+        "11cc3b278abb5cb6f8d88a5a2e3aceb48e18978f0e79c401171cd2d98959ac5f"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -8.36771011352539,
+        3.0389888286590576
+      ],
+      "available_cores": 20,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "case": 1420,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "6230e88c3c67900833622f43841ca8d54e085f69e03f0ade92420adcef3706a9",
+        "ec961a7c386c944fb96f790134f5907ae2ed1be7d886417419e744ddedd44bc7"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -3.3413848876953125,
+        1.2888047695159912
+      ],
+      "available_cores": 20,
+      "max_abs_error": 8.344650268554688e-07
+    },
+    {
+      "case": 1421,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "858011ed568942690701115c206331dcad0eec8c621ea46a0078608885662404",
+        "7f4712bfe73e96e4629deb0ae7e5ad2066ef7032f4b563f0eca3c15b20514e55"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -7.8964667320251465,
+        -2.9191439151763916
+      ],
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1422,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "88f95244cedd36988fbab5ca5736aeaf1ebfcc3241643b99daa993d1a49bb27c",
+        "3d7bc56fd505932db03478fbb99a414b69d79ac76d63767d68e8def54055a5b9"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -8.507320404052734,
+        -0.5114436745643616
+      ],
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1423,
+      "label": "小批量短K对齐单列",
+      "shape": [
+        4,
+        8,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "9e4ce2eaf7dec24d6d7ed151e33664d0c4e6e14d6fa181cea72609a849642e56",
+        "49cde590e3774bfb6d294eee18a26bc823725e6534c256b8f8dc03fe84ca57ca"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -3.307300090789795,
+        7.268413543701172
+      ],
+      "available_cores": 20,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "case": 1424,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "4866a2a61d7317904138ab4e8979811df503237559a4555950bf92f8bfa5137b",
+        "a76e914d7f12ec7fce6603b102021803698cb1a0c416c16df11afb1141be6819"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -80.14993286132812,
+        -79.43065643310547
+      ],
+      "available_cores": 20,
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "case": 1425,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "a4b391b7b7aacfcda13c2ea613b52a748eca17970f44d788094ef0ea50e1330f",
+        "47dbabd6415d8c33ced196227e320dc068789cac506ca4480396c8903ecc24fb"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -83.72824096679688,
+        -80.81178283691406
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1426,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "708dfc3b590f6513f7454f823a749624bdd3f7664ed0ca0c3047bd3191b22e3b",
+        "b8e60a645a6d4c93b7b90b0988d2af21589b1e56a6d4ea0cd27780d2c2061bb4"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -87.08143615722656,
+        -80.54177856445312
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1427,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "03390c7ddfa017f1dd102983b85c61d44177ed12ded3a3eee46dc7a327ee5203",
+        "bed36eadb888a9081478bb556e5de6653cf118e3c2bd6c2e39741db850002c4a"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -83.07330322265625,
+        -79.629150390625
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1428,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "eb4d1aefb47555cad1352cfcbb3f64f93d388cc65b4315ce6f1be2e756581c98",
+        "0d95fb173207860247bf0ff1a87ca84735046f29035f72de657e01086c8b82fb"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -85.81385803222656,
+        -83.14540100097656
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1429,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "efa9c10465d170dc69c4fb94354ead5bf835252fa07e9a20b7b6c60d44afd1c0",
+        "06c182a34cb08a66aa06d78541e09e37eb750adcdac74d2f27d6464ecb230046"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -88.81661224365234,
+        -84.9979019165039
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1430,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5685290fb6befb86d2e17f15cc1e069409b83c278c46804c4ea901fe21f5cc35",
+        "cdf6ff829bca969cfb7a8a0742c32d0160f8cd51fe28c22b48de8485c85dacbd"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -87.72225189208984,
+        -81.80143737792969
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1431,
+      "label": "小批量短K对齐全负",
+      "shape": [
+        2,
+        7,
+        13,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "a65c8b2f87efe1fc139894bb884309b5b7c1927d74d8143c0f948120af8a8c46",
+        "04aab81a318b4c8b4af2638162adf980558edbaf32423f03d02da74b21da8d29"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -79.12828063964844,
+        -78.7994155883789
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1432,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "e156ca1f269626dc2c20e818c652da3b76e44287798a515a49d3ec9f86041d80"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1433,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "f52d240fec7b939225c941467c9a634d73e774b572d250c6bc709e212fefe4aa"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1434,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "376063252be37b53d1c35d2ebbbe06996095e3e6b112fe5c593b1513e37a2f99"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1435,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "2572eccf55d718e47af669cef1b57633c2541ce216e7e1e2984aa91922876f56"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1436,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "2ed4d8aa5e9824f7d362927bf7d0db49561b136c2b558bc2fcfbd032b4a215b2"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1437,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "baa71a5fde3c19811ffd3201fcff1e51b8e5a8fc28ccabeea733d28bb9b5f353"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1438,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "f7becd28aa0266692c72c50898a6d0229bd96d2158cd27e0e11b0bef633e5296"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 1439,
+      "label": "小批量短K对齐全零",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+        "fb3c6ac422a2c9149497f3445d6be4537c0f05627e83729e2453d0ba4a11a8d0"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    }
+  ]
+}
