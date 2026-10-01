@@ -1,0 +1,195 @@
+{
+  "源码提交": "2379f9a",
+  "说明": "同ACL上下文10项核类型切换，每项双调用、输入及保护区检查通过；不能替代短K对齐边界回归",
+  "结果": {
+    "library": "/home/developer/cann-explore-20260930/e48-vectorsync/Build/npu/libsimulator_bridge.so",
+    "library_sha256": "d1ec3b11bb7f98c4724201f9ceb6b2dda14c210be8dd542c7fd6340c08eb4503",
+    "execution": "real_npu",
+    "cases": [
+      408,
+      440,
+      453,
+      415,
+      8,
+      408,
+      14,
+      415,
+      440,
+      408
+    ],
+    "passed": true,
+    "results": [
+      {
+        "position": 0,
+        "case": 408,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 1,
+        "case": 440,
+        "shape": [
+          8,
+          16,
+          32,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 2,
+        "case": 453,
+        "shape": [
+          13,
+          23,
+          73,
+          192
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "passed": true,
+        "max_abs_error": 3.0517578125e-05
+      },
+      {
+        "position": 3,
+        "case": 415,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 4,
+        "case": 8,
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 5,
+        "case": 408,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 6,
+        "case": 14,
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 7,
+        "case": 415,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 8,
+        "case": 440,
+        "shape": [
+          8,
+          16,
+          32,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 9,
+        "case": 408,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      }
+    ],
+    "available_cores": 20
+  }
+}

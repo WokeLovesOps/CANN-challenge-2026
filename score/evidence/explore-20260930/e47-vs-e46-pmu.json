@@ -1,0 +1,1203 @@
+{
+  "说明": "全参与核PMU，必须结合普通l0判断性能；配置改变可改变流水指令驻留时间，不将各流水时间相加。",
+  "结果": {
+    "e46-packedcast-3": {
+      "应用": {
+        "commit": "ff78f88",
+        "execution": "real_npu",
+        "library": "/home/developer/cann-explore-20260930/e46-packedcast/Build/npu/libsimulator_bridge.so",
+        "library_sha256": "d799932e01763f9f5c099731f91295f784c218f0e964f9032d8bc01e1d9a9669",
+        "dtype": "fp16",
+        "layout": "NN",
+        "warmup": 20,
+        "repeat": 50,
+        "passed": true,
+        "results": [
+          {
+            "case": 3,
+            "shape": [
+              2,
+              7,
+              13,
+              48
+            ],
+            "passed": true,
+            "input_sha256": [
+              "4ca619e305a36f783ba6e0cf9e7a6c2b152efefb863fa70608c1517a7dd4c720",
+              "317ff119f4d3b03744a61d91768617834b4bfad7b08acfc0bf456561e71fabc6"
+            ],
+            "launch_begin": 0,
+            "seed": 20260933,
+            "max_abs_error": 1.9073486328125e-06,
+            "launch_end": 71
+          }
+        ],
+        "launches": [
+          {
+            "case": 3,
+            "phase": "validation",
+            "position": 0
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 1
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 2
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 3
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 4
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 5
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 6
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 7
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 8
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 9
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 10
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 11
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 12
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 13
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 14
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 15
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 16
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 17
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 18
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 19
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 20
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 21
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 22
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 23
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 24
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 25
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 26
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 27
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 28
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 29
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 30
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 31
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 32
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 33
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 34
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 35
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 36
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 37
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 38
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 39
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 40
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 41
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 42
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 43
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 44
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 45
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 46
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 47
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 48
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 49
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 50
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 51
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 52
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 53
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 54
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 55
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 56
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 57
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 58
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 59
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 60
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 61
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 62
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 63
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 64
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 65
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 66
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 67
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 68
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 69
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 70
+          }
+        ],
+        "soc": "Ascend910_9362",
+        "cube_cores": 20
+      },
+      "BIN": "Build/pmu-e47-vs-e46/e46-packedcast-3/OPPROF_20261001105303_DZSCXXTWSWETVXHE/visualize_data.bin",
+      "BIN字节数": 1576248,
+      "BIN_SHA256": "d83106ce0e5d8a9f0a1b9f7fd1d9de8eab1bc449371f33c989c84b2865309fee",
+      "数据": {
+        "OpBasicInfo": [
+          {
+            "Op Name": "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb0ELb1EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "3.939921",
+            "Block Dim": "2",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "181167",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "3.264848",
+            "aiv_total_cycles": "5387",
+            "aiv_vec_time(us)": "1.191515",
+            "aiv_vec_ratio": "0.364953",
+            "aiv_mte2_time(us)": "0.486667",
+            "aiv_mte2_ratio": "0.149063",
+            "aiv_mte2_active_bw(GB/s)": "3.919209",
+            "aiv_mte3_time(us)": "0.187879",
+            "aiv_mte3_ratio": "0.057546",
+            "aiv_mte3_active_bw(GB/s)": "0.634501",
+            "aiv_icache_miss_rate": "0.085992",
+            "aiv_scalar_time(us)": "1.886061",
+            "aiv_scalar_ratio": "0.577687",
+            "aiv_scalar_single_time(us)": "0.125455",
+            "aiv_scalar_dual_time(us)": "0.408485",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "2.355757",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          },
+          {
+            "block_id": "1",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "3.409697",
+            "aiv_total_cycles": "5626",
+            "aiv_vec_time(us)": "1.191515",
+            "aiv_vec_ratio": "0.349449",
+            "aiv_mte2_time(us)": "0.465455",
+            "aiv_mte2_ratio": "0.136509",
+            "aiv_mte2_active_bw(GB/s)": "4.353933",
+            "aiv_mte3_time(us)": "0.151515",
+            "aiv_mte3_ratio": "0.044437",
+            "aiv_mte3_active_bw(GB/s)": "0.786781",
+            "aiv_icache_miss_rate": "0.088435",
+            "aiv_scalar_time(us)": "2.035758",
+            "aiv_scalar_ratio": "0.597049",
+            "aiv_scalar_single_time(us)": "0.127273",
+            "aiv_scalar_dual_time(us)": "0.407879",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "2.222424",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ],
+        "Memory": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "3.264848",
+            "aiv_total_cycles": "5387",
+            "aiv_ub_to_gm_bw(GB/s)": "0.036513",
+            "aiv_gm_to_ub_bw(GB/s)": "0.584207",
+            "aiv_main_mem_read_bw(GB/s)": "1.898674",
+            "aiv_main_mem_write_bw(GB/s)": "0.073026",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.149063",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.057546",
+            "read_main_memory_datas(KB)": "6.500000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "2.000000",
+            "GM_to_UB_bw_usage_rate(%)": "0.265476",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.019547",
+            "": ""
+          },
+          {
+            "block_id": "1",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "3.409697",
+            "aiv_total_cycles": "5626",
+            "aiv_ub_to_gm_bw(GB/s)": "0.034962",
+            "aiv_gm_to_ub_bw(GB/s)": "0.594351",
+            "aiv_main_mem_read_bw(GB/s)": "1.852978",
+            "aiv_main_mem_write_bw(GB/s)": "0.069924",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.136509",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.044437",
+            "read_main_memory_datas(KB)": "6.625000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "2.125000",
+            "GM_to_UB_bw_usage_rate(%)": "0.270086",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.018716",
+            "": ""
+          }
+        ]
+      }
+    },
+    "e47-btranspose-3": {
+      "应用": {
+        "commit": "3ce8a89",
+        "execution": "real_npu",
+        "library": "/home/developer/cann-explore-20260930/e47-btranspose/Build/npu/libsimulator_bridge.so",
+        "library_sha256": "4feb6561abe0970a40ab4104cf45f5ee2acfdf0769af5b95d80230ba3ebe64f2",
+        "dtype": "fp16",
+        "layout": "NN",
+        "warmup": 20,
+        "repeat": 50,
+        "passed": true,
+        "results": [
+          {
+            "case": 3,
+            "shape": [
+              2,
+              7,
+              13,
+              48
+            ],
+            "passed": true,
+            "input_sha256": [
+              "4ca619e305a36f783ba6e0cf9e7a6c2b152efefb863fa70608c1517a7dd4c720",
+              "317ff119f4d3b03744a61d91768617834b4bfad7b08acfc0bf456561e71fabc6"
+            ],
+            "launch_begin": 0,
+            "seed": 20260933,
+            "max_abs_error": 1.9073486328125e-06,
+            "launch_end": 71
+          }
+        ],
+        "launches": [
+          {
+            "case": 3,
+            "phase": "validation",
+            "position": 0
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 1
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 2
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 3
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 4
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 5
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 6
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 7
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 8
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 9
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 10
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 11
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 12
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 13
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 14
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 15
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 16
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 17
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 18
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 19
+          },
+          {
+            "case": 3,
+            "phase": "warmup",
+            "position": 20
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 21
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 22
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 23
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 24
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 25
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 26
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 27
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 28
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 29
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 30
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 31
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 32
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 33
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 34
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 35
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 36
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 37
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 38
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 39
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 40
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 41
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 42
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 43
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 44
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 45
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 46
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 47
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 48
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 49
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 50
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 51
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 52
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 53
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 54
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 55
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 56
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 57
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 58
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 59
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 60
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 61
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 62
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 63
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 64
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 65
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 66
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 67
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 68
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 69
+          },
+          {
+            "case": 3,
+            "phase": "sample",
+            "position": 70
+          }
+        ],
+        "soc": "Ascend910_9362",
+        "cube_cores": 20
+      },
+      "BIN": "Build/pmu-e47-vs-e46/e47-btranspose-3/OPPROF_20261001105311_HSQMELJLMCWRWKOR/visualize_data.bin",
+      "BIN字节数": 1576256,
+      "BIN_SHA256": "c0be7b231e1184b2575347d7152dbfc387133d2e985f304c56bc54c037eb0356",
+      "数据": {
+        "OpBasicInfo": [
+          {
+            "Op Name": "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb0ELb1EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "4.219915",
+            "Block Dim": "2",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "181254",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "3.348485",
+            "aiv_total_cycles": "5525",
+            "aiv_vec_time(us)": "0.818182",
+            "aiv_vec_ratio": "0.244344",
+            "aiv_mte2_time(us)": "1.405455",
+            "aiv_mte2_ratio": "0.419729",
+            "aiv_mte2_active_bw(GB/s)": "4.580228",
+            "aiv_mte3_time(us)": "0.115152",
+            "aiv_mte3_ratio": "0.034389",
+            "aiv_mte3_active_bw(GB/s)": "1.035239",
+            "aiv_icache_miss_rate": "0.087912",
+            "aiv_scalar_time(us)": "1.196970",
+            "aiv_scalar_ratio": "0.357466",
+            "aiv_scalar_single_time(us)": "0.097576",
+            "aiv_scalar_dual_time(us)": "0.303030",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.267879",
+            "aiv_scalar_wait_ib_time(us)": "2.056970",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          },
+          {
+            "block_id": "1",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "3.646667",
+            "aiv_total_cycles": "6017",
+            "aiv_vec_time(us)": "0.818182",
+            "aiv_vec_ratio": "0.224364",
+            "aiv_mte2_time(us)": "1.562424",
+            "aiv_mte2_ratio": "0.428453",
+            "aiv_mte2_active_bw(GB/s)": "4.120073",
+            "aiv_mte3_time(us)": "0.136970",
+            "aiv_mte3_ratio": "0.037560",
+            "aiv_mte3_active_bw(GB/s)": "0.870333",
+            "aiv_icache_miss_rate": "0.081331",
+            "aiv_scalar_time(us)": "1.733939",
+            "aiv_scalar_ratio": "0.475486",
+            "aiv_scalar_single_time(us)": "0.101212",
+            "aiv_scalar_dual_time(us)": "0.300606",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.677576",
+            "aiv_scalar_wait_ib_time(us)": "1.833939",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ],
+        "Memory": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "3.348485",
+            "aiv_total_cycles": "5525",
+            "aiv_ub_to_gm_bw(GB/s)": "0.035601",
+            "aiv_gm_to_ub_bw(GB/s)": "1.922452",
+            "aiv_main_mem_read_bw(GB/s)": "3.239688",
+            "aiv_main_mem_write_bw(GB/s)": "0.071202",
+            "aiv_mte2_instructions": "4",
+            "aiv_mte2_ratio": "0.419729",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.034389",
+            "read_main_memory_datas(KB)": "11.375000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "6.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.873604",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.019058",
+            "": ""
+          },
+          {
+            "block_id": "1",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "3.646667",
+            "aiv_total_cycles": "6017",
+            "aiv_ub_to_gm_bw(GB/s)": "0.032690",
+            "aiv_gm_to_ub_bw(GB/s)": "1.765256",
+            "aiv_main_mem_read_bw(GB/s)": "2.942094",
+            "aiv_main_mem_write_bw(GB/s)": "0.065380",
+            "aiv_mte2_instructions": "4",
+            "aiv_mte2_ratio": "0.428453",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.037560",
+            "read_main_memory_datas(KB)": "11.250000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "6.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.802170",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.017500",
+            "": ""
+          }
+        ]
+      }
+    }
+  }
+}
