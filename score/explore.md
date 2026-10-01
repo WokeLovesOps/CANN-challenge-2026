@@ -758,3 +758,7 @@ E42反向BAAB全15点正确，点8为45.919→45.089µs（-1.81%），两组候�
 - 暂以E42为父版，E42独立库继续边界回归。唯一性能变量是默认块的Matmul部分Tiling常量化。保持NORM、双主、K加载、任务划分、归约、直接batch输出及E24屏障；仍传入TCubeTiling，singleCoreM/N/K保持动态。
 - 官方开发指南527–530、1706–1707页允许Norm/MDL部分常量化，但静态参数必须与Host tiling一致。SDK公共GetMatmulApiTiling在singleCore形状为0时会固定baseM/N/K、dbL0A/B和isBias。因此Host仅在base=(32,128,128)、dbL0A/B=2/2且isBias=0时分发静态模板，其他情况动态回退。复制现有配置并显式enableSetBias=false，与本算子无Bias一致，不采用会改变算法模式的GetBasicConfig。
 - 点6/7 PMU仍以Cube Scalar控制时间为主，手册指出常量化可减少初始化和迭代的Scalar计算；是否收益必须由真实NPU20＋50判断。计划沿用E41的368组默认路径回归、16组布局及点6/7全核PMU，模型覆盖448/463/48/168/176/1072/1087/1088/1112/1120，并增加短K动态回退模型。先提交后两端完整构建。
+
+E43首版b372d0e本地编译失败，未生成可测库，远端未开始编译。SDK公共constant_tiling.h:38的GetMatmulApiTiling声明为__aicore__ constexpr，普通Host包装函数调用被编译器拒绝。修正包装函数的执行域标记后另行提交再构建；该失败不属于算子正确性或性能结论。证据e43-initial-build-failure.json。
+
+E42剩余1176/1184/1191部分模型全部通过，现共有8个通过项；1160保留超时，1167按部分仿真计划不执行，清单不称十项全通过。原始BIN、库hash及源码映射均已核验。
