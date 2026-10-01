@@ -1,0 +1,446 @@
+{
+  "源码提交": "3ce8a89",
+  "测试生成器提交": "3ce8a89",
+  "说明": "每项双调用、输入不变和输出校验通过；只统计实际请求解析的核，模型时间不是NPU时间。",
+  "库SHA256": "549cf057847225a2956be64cb6f65deb4b4bb45a4b483bd77dfe7a9cd517cc85",
+  "结果": {
+    "sim-e47-exact-parent408": {
+      "应用": {
+        "case": 408,
+        "label": "中等批量向量点4",
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      },
+      "BIN": "Build/profiles/sim-e47-exact-parent408/OPPROF_20261001104219_VIJGRXVFWWICXLYQ/simulator/visualize_data.bin",
+      "BIN字节数": 3099652,
+      "BIN_SHA256": "8c93eef1f66617699731b6502f14ba82a27585590de101e6f3bcfb2715b0bd25",
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum22ComputeMediumBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+      ],
+      "核": {
+        "core0.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core0.veccore0": {
+          "源码映射行数": 310,
+          "指令次数": {
+            "BAR": 57,
+            "WAIT_FLAG": 12,
+            "VGATHER": 20,
+            "VCADD": 3,
+            "MOVEMASK": 90,
+            "MOV_SRC_TO_DST_ALIGN": 3,
+            "SET_FLAG": 12,
+            "LD_XD_XN_IMM": 82,
+            "LDP_XI_XJ_XN": 3,
+            "VMLA": 4,
+            "STI_XN_IMM": 30,
+            "STP_XI_XJ_XN": 13,
+            "ST_XD_XN_IMM": 59,
+            "MOV_OUT_TO_UB": 1,
+            "MOV_UB_TO_OUT": 1,
+            "VMUL": 4,
+            "VADDS": 9,
+            "WAIT_FLAG_DEVI": 1,
+            "VCONV": 2,
+            "VCMAX": 1,
+            "MADD": 31,
+            "STI_XN_XM": 8,
+            "VMULS": 2,
+            "DIV": 1,
+            "ZEROEXT": 171,
+            "OR": 31,
+            "ADD": 88,
+            "CMP_IMM": 52,
+            "SHL": 97,
+            "MOV_XD_XN": 87,
+            "INSERT_XD": 31,
+            "ADD_IMM": 90,
+            "MOVEV": 1,
+            "CONV": 8,
+            "CMP": 28,
+            "SIGNEXT": 35,
+            "DCCI": 1,
+            "LD_XD_XN": 4,
+            "SET_CROSS_CORE": 1,
+            "MUL": 9,
+            "NOT": 7,
+            "SEL": 8,
+            "MOV_XD_IMM": 125,
+            "NEG": 19,
+            "MOVK": 69,
+            "SBITSET": 14,
+            "SHR": 16,
+            "SUB_IMM": 26,
+            "SFF": 10,
+            "MOV_XD_SPR": 21,
+            "AND": 19,
+            "MOVX8_XD_IMM": 8,
+            "MOV_SPR_XN": 13,
+            "INSERT_XD_XN": 1,
+            "SUB": 3,
+            "MIN": 2,
+            "JUMPC": 74,
+            "JUMPCMP": 68,
+            "JUMP": 27,
+            "NOP": 2,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "2.79",
+              "2.76"
+            ]
+          ]
+        },
+        "core1.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core10.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.02",
+              "0.01"
+            ]
+          ]
+        },
+        "core11.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.02",
+              "0.01"
+            ]
+          ]
+        },
+        "core12.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.02",
+              "0.01"
+            ]
+          ]
+        },
+        "core13.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core14.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.02",
+              "0.01"
+            ]
+          ]
+        },
+        "core15.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.02",
+              "0.01"
+            ]
+          ]
+        },
+        "core2.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core3.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core4.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core5.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core6.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core7.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.01",
+              "0.01"
+            ]
+          ]
+        },
+        "core8.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.02",
+              "0.01"
+            ]
+          ]
+        },
+        "core9.cubecore0": {
+          "源码映射行数": 2,
+          "指令次数": {
+            "DCCI": 1,
+            "MADD": 1,
+            "MOV_XD_IMM": 4,
+            "MOVK": 1,
+            "MOV_XD_SPR": 2,
+            "ADD": 1,
+            "AND": 1,
+            "ADD_IMM": 1,
+            "NOP": 1,
+            "END": 1
+          },
+          "模型duration_running_us": [
+            [
+              "0.02",
+              "0.01"
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
