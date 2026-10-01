@@ -1,0 +1,106 @@
+{
+  "算子源码提交": "f18de84",
+  "测试生成器提交": "2ed5e2c",
+  "说明": "当前SDK Host tiling查询，不是性能证据；模型1200 K112核名末尾Lb0、1208 K120末尾Lb1，验证动态回退与静态分发均实际执行。",
+  "文件": {
+    "Build/inspect-e43.cpp": {
+      "SHA256": "6b847ade2c8a8f06f70f6050e68dbc959c6e6f132b6dd9744919cd5e0c57acfa",
+      "内容": "#include <iostream>\n#include \"adv_api/matmul/matmul_tiling.h\"\n#include \"utils/tiling/platform/platform_ascendc.h\"\nint main() {\n auto *platform = platform_ascendc::PlatformAscendCManager::GetInstance(\"Ascend910_9362\");\n if (!platform) return 1; uint64_t l1 = 0; platform->GetCoreMemSize(platform_ascendc::CoreMemType::L1, l1); std::cout << \"L1 bytes=\" << l1 << \"\\n\";\n for (auto rows : {32}) for (auto k : {32, 40, 120, 128, 136, 192, 256, 8192}) for (auto fixedK : {-1}) {\n  const int cols = 128;\n  matmul_tiling::MatmulApiTiling t(*platform);\n  t.SetAType(matmul_tiling::TPosition::GM, matmul_tiling::CubeFormat::ND, matmul_tiling::DataType::DT_FLOAT16, false);\n  t.SetBType(matmul_tiling::TPosition::GM, matmul_tiling::CubeFormat::ND, matmul_tiling::DataType::DT_FLOAT16, false);\n  t.SetCType(matmul_tiling::TPosition::GM, matmul_tiling::CubeFormat::ND, matmul_tiling::DataType::DT_FLOAT);\n  t.SetShape(rows, cols, k); t.SetOrgShape(33, 129, k); t.SetFixSplit(rows, cols, fixedK);\n  t.SetBias(false); t.SetBufferSpace(-1,-1,-1);\n  TCubeTiling data{}; int result=t.GetTiling(data);\n  std::cout << rows << \"x\" << cols << \" K=\" << k << \" fixed=\" << fixedK << \" ret=\" << result\n  << \" base=\" << data.baseM << \",\" << data.baseN << \",\" << data.baseK\n  << \" depth=\" << data.depthA1 << \",\" << data.depthB1\n  << \" step=\" << data.stepKa << \",\" << data.stepKb\n  << \" db=\" << data.dbL0A << \",\" << data.dbL0B << \",\" << data.dbL0C << \"\\n\";\n }\n}\n"
+    },
+    "Build/inspect-e43.txt": {
+      "SHA256": "be27f522c0295c6a0c7cf3d8e3ad891f6e675c1f1cfeda7d9d9c97b8e87aed78",
+      "内容": "L1 bytes=524032\n32x128 K=32 fixed=-1 ret=0 base=32,128,32 depth=1,1 step=1,1 db=2,2,1\n32x128 K=40 fixed=-1 ret=0 base=32,128,48 depth=1,1 step=1,1 db=2,2,1\n32x128 K=120 fixed=-1 ret=0 base=32,128,128 depth=1,1 step=1,1 db=2,2,1\n32x128 K=128 fixed=-1 ret=0 base=32,128,128 depth=1,1 step=1,1 db=2,2,1\n32x128 K=136 fixed=-1 ret=0 base=32,128,128 depth=2,2 step=2,2 db=2,2,1\n32x128 K=192 fixed=-1 ret=0 base=32,128,128 depth=2,2 step=2,2 db=2,2,1\n32x128 K=256 fixed=-1 ret=0 base=32,128,128 depth=2,2 step=2,2 db=2,2,1\n32x128 K=8192 fixed=-1 ret=0 base=32,128,128 depth=32,4 step=16,2 db=2,2,1\n"
+    },
+    "Build/inspect-e43-build.log": {
+      "SHA256": "8d0e8321c6a1d50af480260b54f7589e2d71a4111dd30a9d335b3e69c4baff7e",
+      "内容": "Build/inspect-e43.cpp:2:10: fatal error: 'adv_api/matmul/matmul_tiling.h' file not found\n#include \"adv_api/matmul/matmul_tiling.h\"\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    "Build/inspect-e43-build2.log": {
+      "SHA256": "05c2bc163e897eb773b56e83c6dcf1ab7d2879db099b72013347cc0e0a12e6bf",
+      "内容": "In file included from Build/inspect-e43.cpp:2:\nIn file included from /mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/include/adv_api/matmul/matmul_tiling.h:21:\nIn file included from /mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/include/adv_api/matmul/matmul_tiling_base.h:19:\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/include/adv_api/matmul/matmul_tilingdata.h:18:10: fatal error: 'register/tilingdata_base.h' file not found\n#include \"register/tilingdata_base.h\"\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    "Build/inspect-e43-build3.log": {
+      "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "内容": ""
+    }
+  },
+  "本地库SHA256": "091cf97ec8f00be1015dd5420ec2c114c78363f65430d92decff7e6b6d4395c2",
+  "源码SHA256": "70065c7ec1227434963a75943629a8c05ac5b4ff854b70ab6651c4dabedfe021",
+  "模型分发": {
+    "1200": {
+      "应用": {
+        "case": 1200,
+        "label": "默认块部分常量化K112",
+        "shape": [
+          13,
+          23,
+          73,
+          112
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05
+      },
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj32ELj128ELb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ]
+    },
+    "1208": {
+      "应用": {
+        "case": 1208,
+        "label": "默认块部分常量化K120",
+        "shape": [
+          13,
+          23,
+          73,
+          120
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05
+      },
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj32ELj128ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ]
+    },
+    "1239": {
+      "应用": {
+        "case": 1239,
+        "label": "默认块部分常量化K264",
+        "shape": [
+          13,
+          23,
+          73,
+          264
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": false,
+        "execution": "simulator",
+        "passed": true,
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05
+      },
+      "核名": [
+        "[INFO] <ProfInit> Start profiling on kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0ELj32ELj128ELb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+      ]
+    }
+  }
+}
