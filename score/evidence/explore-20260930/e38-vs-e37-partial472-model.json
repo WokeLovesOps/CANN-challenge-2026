@@ -1,0 +1,147 @@
+{
+  "父版": "fa1d40c",
+  "候选": "2c8e0e8",
+  "说明": "点13完整规模核0/15模型对照，不替代真实NPU性能，不相加流水或源码映射时间。",
+  "结果": {
+    "父版": {
+      "core0.cubecore0": {
+        "模型duration_running_us": [
+          [
+            "13.55",
+            "11.44"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+          "MMAD": 4,
+          "MOV_UB_TO_OUT": 0,
+          "SET_FLAG": 18,
+          "WAIT_FLAG": 18,
+          "SET_CROSS_CORE": 2,
+          "WAIT_FLAG_DEV": 0
+        }
+      },
+      "core0.veccore0": {
+        "模型duration_running_us": [
+          [
+            "13.38",
+            "12.87"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+          "MMAD": 0,
+          "MOV_UB_TO_OUT": 4,
+          "SET_FLAG": 27,
+          "WAIT_FLAG": 27,
+          "SET_CROSS_CORE": 1,
+          "WAIT_FLAG_DEV": 1
+        }
+      },
+      "core15.cubecore0": {
+        "模型duration_running_us": [
+          [
+            "13.06",
+            "10.96"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+          "MMAD": 4,
+          "MOV_UB_TO_OUT": 0,
+          "SET_FLAG": 18,
+          "WAIT_FLAG": 18,
+          "SET_CROSS_CORE": 2,
+          "WAIT_FLAG_DEV": 0
+        }
+      },
+      "core15.veccore0": {
+        "模型duration_running_us": [
+          [
+            "12.8",
+            "12.33"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+          "MMAD": 0,
+          "MOV_UB_TO_OUT": 4,
+          "SET_FLAG": 14,
+          "WAIT_FLAG": 14,
+          "SET_CROSS_CORE": 1,
+          "WAIT_FLAG_DEV": 1
+        }
+      }
+    },
+    "候选": {
+      "core0.cubecore0": {
+        "模型duration_running_us": [
+          [
+            "6.02",
+            "4.5"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+          "MMAD": 4,
+          "MOV_UB_TO_OUT": 0,
+          "SET_FLAG": 17,
+          "WAIT_FLAG": 17,
+          "SET_CROSS_CORE": 2,
+          "WAIT_FLAG_DEV": 0
+        }
+      },
+      "core0.veccore0": {
+        "模型duration_running_us": [
+          [
+            "10.28",
+            "10.02"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+          "MMAD": 0,
+          "MOV_UB_TO_OUT": 1,
+          "SET_FLAG": 20,
+          "WAIT_FLAG": 20,
+          "SET_CROSS_CORE": 2,
+          "WAIT_FLAG_DEV": 0
+        }
+      },
+      "core15.cubecore0": {
+        "模型duration_running_us": [
+          [
+            "6.02",
+            "4.48"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+          "MMAD": 4,
+          "MOV_UB_TO_OUT": 0,
+          "SET_FLAG": 17,
+          "WAIT_FLAG": 17,
+          "SET_CROSS_CORE": 2,
+          "WAIT_FLAG_DEV": 0
+        }
+      },
+      "core15.veccore0": {
+        "模型duration_running_us": [
+          [
+            "9.69",
+            "9.43"
+          ]
+        ],
+        "指令次数": {
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 0,
+          "MMAD": 0,
+          "MOV_UB_TO_OUT": 1,
+          "SET_FLAG": 7,
+          "WAIT_FLAG": 7,
+          "SET_CROSS_CORE": 2,
+          "WAIT_FLAG_DEV": 0
+        }
+      }
+    }
+  }
+}
