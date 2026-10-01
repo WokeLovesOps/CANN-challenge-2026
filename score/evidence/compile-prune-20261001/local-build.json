@@ -1,0 +1,32 @@
+{
+  "基线提交": "3acbe89a43bcc407266542c7d0814b9f0f1348c7",
+  "候选提交": "1e4fcee7d9b7076cd6ef332f5acddcba72816f1e",
+  "本地CPU": "AMD Ryzen 7 8745HS",
+  "本地SDK": "CANN 9.0.0 x86_64",
+  "编译参数": [
+    "-DNPU_ARCH=dav-2201",
+    "-DBUILD_SIMULATOR_BRIDGE=ON",
+    "-DCMAKE_ASC_FLAGS=-g",
+    "--target simulator_bridge",
+    "-j4"
+  ],
+  "构建范围": "完整算子共享测试入口，无分支裁剪宏，两个独立干净目录，双方同机串行计时",
+  "产物": {
+    "base": {
+      "path": "/mnt/newdisk/cann-explore-artifacts-20260930/compile-prune/base-build/libsimulator_bridge.so",
+      "bytes": 442033112,
+      "sha256": "3c03b6e26b3dacaed80af10be966efe4cf8cfb913fd8c1fe116899947e66f2c0"
+    },
+    "candidate": {
+      "path": "/mnt/newdisk/cann-explore-artifacts-20260930/compile-prune/candidate-build/libsimulator_bridge.so",
+      "bytes": 185537088,
+      "sha256": "682f39409886689349d8eed068c9922052678d662cbcf9316decd038d10668b9"
+    }
+  },
+  "原始入口": {
+    "说明": "原src/CMakeLists.txt，无CMake修改，无显式-g，-DNPU_ARCH=dav-2201，干净-j4；先候选再原版，串行执行。",
+    "原版秒": 188.62,
+    "候选秒": 79.47,
+    "减少百分比": 57.86767044852083
+  }
+}

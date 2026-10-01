@@ -1,0 +1,149 @@
+{
+  "说明": "完整ABBA＋BAAB每版每点合计200个采样，各组20预热＋50采样且输入hash一致。定向复测保持独立，不替换首轮数据。",
+  "源码": "1e4fcee",
+  "基线": "3acbe89",
+  "完整合并": {
+    "1": {
+      "baseline_us": 1.28,
+      "candidate_us": 1.28,
+      "change_percent": 0.0
+    },
+    "2": {
+      "baseline_us": 2.02,
+      "candidate_us": 2.02,
+      "change_percent": 0.0
+    },
+    "3": {
+      "baseline_us": 2.62,
+      "candidate_us": 2.62,
+      "change_percent": 0.0
+    },
+    "4": {
+      "baseline_us": 4.18,
+      "candidate_us": 4.2105,
+      "change_percent": 0.7296650717703246
+    },
+    "5": {
+      "baseline_us": 4.6,
+      "candidate_us": 4.62,
+      "change_percent": 0.43478260869567187
+    },
+    "6": {
+      "baseline_us": 7.82,
+      "candidate_us": 7.84,
+      "change_percent": 0.2557544757033181
+    },
+    "7": {
+      "baseline_us": 6.6605,
+      "candidate_us": 6.74,
+      "change_percent": 1.1936040837774886
+    },
+    "8": {
+      "baseline_us": 44.561,
+      "candidate_us": 44.541,
+      "change_percent": -0.04488229617828354
+    },
+    "9": {
+      "baseline_us": 64.441,
+      "candidate_us": 64.471,
+      "change_percent": 0.04655421238031199
+    },
+    "10": {
+      "baseline_us": 99.762,
+      "candidate_us": 99.842,
+      "change_percent": 0.08019085423307537
+    },
+    "11": {
+      "baseline_us": 88.302,
+      "candidate_us": 88.362,
+      "change_percent": 0.06794863083507963
+    },
+    "12": {
+      "baseline_us": 95.982,
+      "candidate_us": 95.962,
+      "change_percent": -0.020837240315885186
+    },
+    "13": {
+      "baseline_us": 11.9,
+      "candidate_us": 12.02,
+      "change_percent": 1.0084033613445342
+    },
+    "14": {
+      "baseline_us": 12.0805,
+      "candidate_us": 12.1105,
+      "change_percent": 0.24833409213194102
+    },
+    "15": {
+      "baseline_us": 8.7,
+      "candidate_us": 8.7,
+      "change_percent": 0.0
+    }
+  },
+  "定向复测": {
+    "focused-abba": {
+      "1": {
+        "baseline_us": 1.26,
+        "candidate_us": 1.27,
+        "change_percent": 0.7936507936507908
+      },
+      "4": {
+        "baseline_us": 4.18,
+        "candidate_us": 4.18,
+        "change_percent": 0.0
+      },
+      "6": {
+        "baseline_us": 7.4205000000000005,
+        "candidate_us": 7.7,
+        "change_percent": 3.7665925476719764
+      },
+      "7": {
+        "baseline_us": 6.38,
+        "candidate_us": 6.34,
+        "change_percent": -0.6269592476489061
+      },
+      "13": {
+        "baseline_us": 11.52,
+        "candidate_us": 11.7105,
+        "change_percent": 1.6536458333333393
+      },
+      "14": {
+        "baseline_us": 11.5805,
+        "candidate_us": 11.72,
+        "change_percent": 1.204611199861838
+      }
+    },
+    "focused-baab": {
+      "1": {
+        "baseline_us": 1.26,
+        "candidate_us": 1.26,
+        "change_percent": 0.0
+      },
+      "4": {
+        "baseline_us": 4.18,
+        "candidate_us": 4.2,
+        "change_percent": 0.4784688995215447
+      },
+      "6": {
+        "baseline_us": 7.79,
+        "candidate_us": 7.7305,
+        "change_percent": -0.7637997432605848
+      },
+      "7": {
+        "baseline_us": 6.6805,
+        "candidate_us": 6.58,
+        "change_percent": -1.5043784147893202
+      },
+      "13": {
+        "baseline_us": 11.96,
+        "candidate_us": 11.841,
+        "change_percent": -0.9949832775919876
+      },
+      "14": {
+        "baseline_us": 12.02,
+        "candidate_us": 11.91,
+        "change_percent": -0.9151414309484185
+      }
+    }
+  },
+  "结论": "编译目标达成，15点性能整体接近，未复现稳定的明显退化；不能保证逐点耗时严格相等。"
+}
