@@ -1,0 +1,7 @@
+{
+  "说明": "E42前置父版模型首次因输出目录组可写被msprof拒绝；未启动算子，未生成应用报告。已改用新建0700的profiles-private-e42目录，保留首次日志，不批量更改共享父目录权限。",
+  "原始日志": "2026-10-01 09:29:13 [ERROR] /mnt/newdisk/cann-explore-artifacts-20260930/profiles/ is writable by any other users or group users.\n2026-10-01 09:29:13 [INFO]  Use msprof op --help or msprof op simulator --help for more details\n",
+  "新输出父目录": "/mnt/newdisk/cann-explore-artifacts-20260930/profiles-private-e42",
+  "父版源码提交": "c953aab",
+  "测试生成器提交": "e5efe6b"
+}
