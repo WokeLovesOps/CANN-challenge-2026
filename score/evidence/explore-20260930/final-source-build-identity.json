@@ -1,0 +1,28 @@
+{
+  "状态": "冻结收尾候选，最终回归待完成",
+  "源码提交": "3acbe89a43bcc407266542c7d0814b9f0f1348c7",
+  "实际构建提交": "fae8516c4b0594da3470d92c7a6dbbdac8e0978c",
+  "说明": "E53回退后所有项目编译输入与E52一致，复用已完成的本地及远端完整构建库，不伪称新增构建。Python测试使用3acbe89快照，含7d24a1a追加边界。",
+  "构建输入": [
+    {
+      "文件": "src/kernel.asc",
+      "SHA256": "9941ac3d7a0c3b4068c55312e43f0c60f7396561408660ef05c6195d52cbc226",
+      "逐字节一致": true
+    },
+    {
+      "文件": "tests/simulator_bridge.asc",
+      "SHA256": "498df13b56b768c31df4d937b3fc2e0461d5a1536cd9fb6514e1626ec17c5b05",
+      "逐字节一致": true
+    },
+    {
+      "文件": "tests/CMakeLists.txt",
+      "SHA256": "f872538a1197dcfefdd09ade51ffa588d4d8866c7e3fee2cee3e4ac8b1f21c08",
+      "逐字节一致": true
+    }
+  ],
+  "本地库SHA256": "200ca31966ff1bc7e675b9b5cdb90c69e42c4663d0f09c045c65c1c862bce989",
+  "远端库SHA256": "c80aa7023b819af642403528188be6d943e6b84d34dae99f2334e4b8e677029a",
+  "测试生成器SHA256": "d82813fdab78a58140eab40b9941fc2196fc7335d3d71d58adf0697c207fa589",
+  "设备": "Ascend910_9362",
+  "CANN": "9.0.0"
+}
