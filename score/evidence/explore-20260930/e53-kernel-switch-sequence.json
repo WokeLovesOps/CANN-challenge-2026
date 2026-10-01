@@ -1,0 +1,195 @@
+{
+  "源码提交": "bdee417",
+  "说明": "同ACL上下文10项跨核序列，各双调用通过",
+  "结果": {
+    "library": "/home/developer/cann-explore-20260930/e53-two-rows/Build/npu/libsimulator_bridge.so",
+    "library_sha256": "e10a40797502f276003efaf4cf5ef7bf424b0ebe0d97a87ca341de5b09a60c03",
+    "execution": "real_npu",
+    "cases": [
+      408,
+      440,
+      453,
+      415,
+      8,
+      408,
+      14,
+      415,
+      440,
+      408
+    ],
+    "passed": true,
+    "results": [
+      {
+        "position": 0,
+        "case": 408,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 1,
+        "case": 440,
+        "shape": [
+          8,
+          16,
+          32,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 2,
+        "case": 453,
+        "shape": [
+          13,
+          23,
+          73,
+          192
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "passed": true,
+        "max_abs_error": 3.0517578125e-05
+      },
+      {
+        "position": 3,
+        "case": 415,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 4,
+        "case": 8,
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 5,
+        "case": 408,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 6,
+        "case": 14,
+        "shape": [
+          2,
+          33,
+          129,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 7,
+        "case": 415,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      },
+      {
+        "position": 8,
+        "case": 440,
+        "shape": [
+          8,
+          16,
+          32,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 1.52587890625e-05
+      },
+      {
+        "position": 9,
+        "case": 408,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "passed": true,
+        "max_abs_error": 7.62939453125e-06
+      }
+    ],
+    "available_cores": 20
+  }
+}
