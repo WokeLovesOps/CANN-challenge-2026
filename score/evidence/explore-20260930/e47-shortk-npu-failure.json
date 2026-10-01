@@ -1,0 +1,68 @@
+{
+  "说明": "候选与父版同case1400首次调用均507035，设备明确报VEC访问UB地址不对齐；候选前五组通过不能视为全套通过，E50独立修复。",
+  "候选源码": "3ce8a89",
+  "父版源码": "ff78f88",
+  "生成器源码": "3ce8a89",
+  "候选报告": {
+    "case": 1400,
+    "label": "小批量硬件转置K56回退",
+    "shape": [
+      2,
+      7,
+      13,
+      56
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": true,
+    "execution": "npu",
+    "passed": false
+  },
+  "父版报告": {
+    "case": 1400,
+    "label": "小批量硬件转置K56回退",
+    "shape": [
+      2,
+      7,
+      13,
+      56
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": true,
+    "execution": "npu",
+    "passed": false
+  },
+  "失败日志": {
+    "候选": "CASE_1400_CALL_1_BEGIN\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  aclrtSynchronizeStream: 507035\n",
+    "父版": "CASE_1400_CALL_1_BEGIN\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  aclrtSynchronizeStream: 507035\n"
+  },
+  "设备错误": {
+    "e46": {
+      "路径": "Build/e47-failure-control/e46-device-error.log",
+      "SHA256": "8b181b7dd1fd99c60eb847faee55025e7180c71e1ebeb66ac21d505d179dc115",
+      "关键行": [
+        "[ERROR] RUNTIME(178591,python3):2026-10-01-10:48:37.024.353 [device_error_core_proc.cc:658]178609 PrintCoreInfo:The extend info: errcode:(0, 0x800, 0) errorStr: The UB address accessed by the VEC instruction is not aligned. fixp_error0 info: 0x60000f7, fixp_error1 info: 0x20, fsmId:1, tslot:0, thread:0, ctxid:0, blk:0, sublk:0, subErrType:4.",
+        "[ERROR] RUNTIME(178591,python3):2026-10-01-10:48:37.024.375 [device_error_core_proc.cc:658]178609 PrintCoreInfo:The extend info: errcode:(0, 0x800, 0) errorStr: The UB address accessed by the VEC instruction is not aligned. fixp_error0 info: 0x60000f7, fixp_error1 info: 0x20, fsmId:1, tslot:0, thread:0, ctxid:0, blk:1, sublk:0, subErrType:4.",
+        "[ERROR] RUNTIME(178591,python3):2026-10-01-10:48:37.028.995 [davinci_kernel_task.cc:1639]178609 PrintErrorInfoForDavinciTask:[DFX_INFO]Aicore kernel execute failed, device_id=0, stream_id=46, report_stream_id=46, task_id=0, flip_num=0, fault kernel_name=_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb0ELb0EEEvPhS1_S1_jjj, fault kernel info ext=none, program id=0, hash=2871312171977841008.",
+        "[ERROR] RUNTIME(178591,python3):2026-10-01-10:48:37.029.059 [stream.cc:1475]178591 GetError:[DFX_INFO]Aicore kernel execute failed, device_id=0, stream_id=46, report_stream_id=46, task_id=0, flip_num=0, fault kernel_name=_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb0ELb0EEEvPhS1_S1_jjj, fault kernel info ext=none, program id=0, hash=2871312171977841008."
+      ]
+    },
+    "e47": {
+      "路径": "Build/e47-failure-control/e47-device-error.log",
+      "SHA256": "ce135765cde60c4471384056dbc0ea34237e48deeff5625aeee8b5a69374e0f3",
+      "关键行": [
+        "[ERROR] RUNTIME(178318,python3):2026-10-01-10:46:23.509.034 [device_error_core_proc.cc:658]178327 PrintCoreInfo:The extend info: errcode:(0, 0x800, 0) errorStr: The UB address accessed by the VEC instruction is not aligned. fixp_error0 info: 0x60000f7, fixp_error1 info: 0x20, fsmId:1, tslot:0, thread:0, ctxid:0, blk:0, sublk:0, subErrType:4.",
+        "[ERROR] RUNTIME(178318,python3):2026-10-01-10:46:23.509.055 [device_error_core_proc.cc:658]178327 PrintCoreInfo:The extend info: errcode:(0, 0x800, 0) errorStr: The UB address accessed by the VEC instruction is not aligned. fixp_error0 info: 0x60000f7, fixp_error1 info: 0x20, fsmId:1, tslot:0, thread:0, ctxid:0, blk:1, sublk:0, subErrType:4.",
+        "[ERROR] RUNTIME(178318,python3):2026-10-01-10:46:23.513.645 [davinci_kernel_task.cc:1639]178327 PrintErrorInfoForDavinciTask:[DFX_INFO]Aicore kernel execute failed, device_id=0, stream_id=46, report_stream_id=46, task_id=0, flip_num=0, fault kernel_name=_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb0ELb0EEEvPhS1_S1_jjj, fault kernel info ext=none, program id=0, hash=12135356921180706425.",
+        "[ERROR] RUNTIME(178318,python3):2026-10-01-10:46:23.513.711 [stream.cc:1475]178318 GetError:[DFX_INFO]Aicore kernel execute failed, device_id=0, stream_id=46, report_stream_id=46, task_id=0, flip_num=0, fault kernel_name=_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb0ELb0EEEvPhS1_S1_jjj, fault kernel info ext=none, program id=0, hash=12135356921180706425."
+      ]
+    }
+  }
+}
