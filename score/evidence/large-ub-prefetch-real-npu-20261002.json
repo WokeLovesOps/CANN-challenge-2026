@@ -1,0 +1,7215 @@
+{
+  "日期": "2026-10-02",
+  "方案": "宽块128列段UB双缓冲预取，保留列块末尾屏障",
+  "源码SHA256": {
+    "baseline": "31ef8a6434c177fe10611dca6c164aaf85a9113176f1aa3b051280db2f300a79",
+    "candidate": "83588275dc08590242e79bc6c648d08aa682f572191c9778d386526e63463d99"
+  },
+  "动态库SHA256": {
+    "baseline": "6932940dce155fdcaacb41e07f314b49885dcbc077aa1be33751f6487ce24dd0",
+    "candidate": "b660c66edf4622b3cdac574536907a6c195262395df4305a210df3b04e6a70bc"
+  },
+  "环境": {
+    "CANN": "9.0.0",
+    "架构": "dav-2201",
+    "设备": "Ascend910_9362",
+    "口径": "真实NPU普通msprof task-time=l0，每组预热20次、采样50次"
+  },
+  "远端构建": "BUILD_SECONDS=136\nBUILD_STATUS=0",
+  "构建说明": "候选修复依赖模板调用的template限定符后，两目标完整编译136秒；首次语法失败11秒，上传失败后旧源码重试12秒。基线源码与桥接源码核对一致，复用点5候选136秒产物。OJ编译时间未提供。",
+  "正确性": {
+    "说明": "80组，FP16/BF16四布局，普通调用与图重放；验证输入、保护区及重复一致性",
+    "计划组数": 80,
+    "通过": true,
+    "结果": [
+      {
+        "case": 0,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "6ae05f64adb901f8665514e669c482654b8bd681b7ecf054204cf5baa4163c5f",
+          "372bb3b4c85e8fbd85e6cc7f387cf77ee4787733f59dabc06517e347aae53f04"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16425.255859375,
+          16425.255859375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 1,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "7727332346085a994f9498b1b90646ef0cc44114697708b55c3d169dc5a5e40d",
+          "6b841bca4dbee66ee8ccbff5d1d18db62564c22f49e89154e926356e7edf5926"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16504.16015625,
+          16504.16015625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 2,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "b6a9f33b234a00499a9af84a1638c034342f57a625bba8aee89342c3e9d56b58",
+          "0f1082ec301e4702b41c55573c33805f0a59fb1c1bd6a3a26f9efc9537da2690"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16497.416015625,
+          16497.416015625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 3,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "1686a7b71a6811792bb0fcd1aff4aecf3c6e85d93642a763d8a2ffcf7c5489e7",
+          "37fb8a4a9eba8e9075e2a9ea4f270f1ee4c777b75cfab0db5b22c1c8de6b51b3"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16362.3046875,
+          16362.3046875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 4,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "d4b6f3185fc34a65c92e949ae1c1c0a766ad093ac1c5a131acb24fd99e63759c",
+          "0ae7e0e46ed592d837befb672b329bcb187d129b698a5929f8269316866068e0"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16370.873046875,
+          16370.873046875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 5,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "20ed859c1d7032789d2a99f3685d5f3682dc585c1641feecdd23091e5ad624f8",
+          "af2bb865b3a2789574c95bab1d08e762f8921b898dee918a3e2735ce961abb14"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16399.779296875,
+          16399.779296875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 6,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "717710ccbfccad728a193ec53a8f447c1f51f27f6c0af7857c47104f9776a9c7",
+          "28df9117aba99d32e976c674e5f452c2203110bd8aad9c48970a48b4a6ac9c7a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16402.724609375,
+          16402.724609375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 7,
+        "label": "预取完整宽块",
+        "shape": [
+          1,
+          2048,
+          512,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "c0e84b7a1acda52b237a8fad91cc3dc21b8b6f2c6d130f6e3c966049119d319f",
+          "a1be863f173977d1ecbbac3bc02a248547d611bb4fb16820a30193c9d10b1c02"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16401.267578125,
+          16401.267578125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 8,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "4fa402a1a01f085cc8c90de65910728232cb25c47c56df0e746549c8014dd9d2",
+          "0fb79d1367f833c5e14c5c215f3b24dfeb58ecf18d86fc1dd05b95267b86a85d"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17491.578125,
+          17491.578125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 9,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "07023e9bb9dc386f4ba672625f456903ec42a22ed63df7a4f2cf4bd3a7f0bb67",
+          "60ff70d794dc73be44426d8998eb1238f7ae325586463510d5bdca3e91a4319a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17559.994140625,
+          17559.994140625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 10,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "026871551bc22fbc6e7ec1f205c207c55430ea750e959ec3bfde434f4ecd72ad",
+          "438628472e2d4665150b45ead446814760567e1ae854da236b256e607c31190a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17328.25,
+          17328.25
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 11,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "531a43a19c462cdf8364c0510a0276e88aba73f766cc8621902224702a4c5cae",
+          "f71dd577020aee74b6130bdbeb852b7c7f5cb471c262fcee5c579da1f0670288"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17530.927734375,
+          17530.927734375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 12,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "29c586de3e43697d8c9a441bd5eceb5f13ec7fc6594fadeef04be5e7e07aaead",
+          "8335958d8e8d887f487b40e6253b824b801aa11ac7fba04181c74fed562c7cbf"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17465.31640625,
+          17465.31640625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 13,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "99d3f00bf03974b754b3462254363ca9865ae0099091cf9a9ee691697cd58d36",
+          "03f2fbefc5edc60ff291e943f7179b6c6616a3212f21102be1c10e517ee615e9"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17504.400390625,
+          17504.400390625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 14,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "8d0d298c6964feccab8e79fbd46d15e33152c423b490b762f69fb7e6a38cb68f",
+          "b7d3a2a174fcd8fefc29ad818fab24d63c2aa0dc1c1cadf2cbc784853c136dc9"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17328.234375,
+          17328.234375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 15,
+        "label": "预取单列尾段",
+        "shape": [
+          1,
+          2049,
+          513,
+          72
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "dfbf820799f202a0cabd20aa502631ed6be6ba20d57232d5998155ab3ebb0cb1",
+          "1f3b9a5b77b91780aa1ae04ba7cc6f68e147403553219cc88e4623907c1e3c24"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          17483.37890625,
+          17483.37890625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 16,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "e29c11de04b74a5b53d64d362f5b78c077df23a2da9aa281769c00fc2f427f8e",
+          "ab5ef6c69977bcc1b16980fbee3ac1e0278e54e0e9d6646278dc5b31cc9413be"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16621.740234375,
+          16621.740234375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 17,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "78749282ea73ac3c586f5a913759ee549cc4a50d224ab89987655ba509d9030e",
+          "32a6eb1d42b1756ac9790a8a65d3c5ca718f43337ea6176fb54bc16dbafde8e9"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16687.947265625,
+          16687.947265625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 18,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "e295490996664833d614412cfb1045696890f66ea1c0aa3411f71e02008b832b",
+          "0b2c9b33ef1f41bf18f929ec5e8eef9faaeefc6f78cafd92849f711eb63f51e1"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16587.15234375,
+          16587.15234375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 19,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "76355cc782c8a17f4d093d2220405fe615f5f64df5e71e3bc452614b3fe82884",
+          "a1d7e83b83d458f4522efcdab9b3d8ddc40d73dbb990bf42e0a75f6383a36b4a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16636.744140625,
+          16636.744140625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 20,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "935f5a16b5acb6e39b194eb79ed34d747a5eb1f778fa207596e12f8964d660ee",
+          "7202b17510716f8f069c9c236bea938b731e6ee473740f7d00bf420ab43f8bcf"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16565.40234375,
+          16565.40234375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 21,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "ac10d18bda1019051b323f14b8377af5ad6b05408cdc60d2a6ee9616e8c14026",
+          "11b78e015bc88da69da2764751a99e46a10dd0e3e360ad92f05c3c402bbf1b2a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16630.34765625,
+          16630.34765625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 22,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "df68f6601135a1d06a191c4cb99a0ab9603edaef4bec42b48d3f9262d23a31e8",
+          "4c32f1debbb11642a513bfdfe75603798b421cc7b1900f675d2b1fbabbaa6c66"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16636.1015625,
+          16636.1015625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 23,
+        "label": "预取半段尾",
+        "shape": [
+          1,
+          2049,
+          575,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "5f42509d7388806ec8f4da3d1ff0cb152034e1d2c655acd5d95568a892ab2d1a",
+          "c664eaa8f3ad27cbf440a38867151d35b0ea142ce173cfc391f8b94ba80cc05b"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16624.2890625,
+          16624.2890625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 24,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "b487bdca191dcad516992fb23ad5f8871186ffbc3d975ce9dde51d81279caee1",
+          "814fed4fc6889463fc5680651469ad344f67c3d8d3289e74638bb203dea1c4f8"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16820.646484375,
+          16820.646484375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 25,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "52906c0bce8112095b9a91a5cfe564944c7864fd0b2724aa210aa59588d6ca7e",
+          "bdf0e729398977ec9d06ace28ff7f222e0ffcf16a4ac7bd0486e9cd6c76f4faf"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16830.400390625,
+          16830.400390625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 26,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "efff02c24fb744820abfa6656f70bc9d2ff6e5c4f4b3f31095108dacb00ff3bc",
+          "597ed5b20bb8ffef8b0c3333a8d7c7e786214350ecf66843b5bcbf8a95f40ff5"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16740.658203125,
+          16740.658203125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 27,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "b4cca7e3308397335a5fd71e11a3ebd050cca199fa8e6f43bf50112399e1ea68",
+          "bc6d822199cafca3c41582fdbf8cc72f33aaa7e130ad15e45342f36dc62dae6a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16765.40234375,
+          16765.40234375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 28,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "8373312ce6e1aa3e0c1cd522bc4208594f4a7a5eb94b81c7832256bb1bebe63a",
+          "a1a09529c5f017474e7ad678e33a094621a2d0aaccc869951ccf9e8692c5ad80"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16868.728515625,
+          16868.728515625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 29,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "0a484554dc3b7e20046989800f84e9b2763d8e47d96c60ff81345c7a16d1c06c",
+          "cab411d2046dabb0728081f1aefc9c9980d2a9bae7293798d4d2657bd936b9d9"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16802.560546875,
+          16802.560546875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 30,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "1a119a35341dceb394dfd08bdda3f1a14863886b9a8628287714f4a7cc32b038",
+          "80ffa7420c111266518b757a5b3fbe8f9edcbeae2e1e4867d4bcabc3b749271f"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16770.994140625,
+          16770.994140625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 31,
+        "label": "预取段前尾",
+        "shape": [
+          1,
+          2049,
+          639,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "48c3ad12d5323ab71da7f7cdb970bec58c846d41842acb56ae141fae9781946c",
+          "2783f76e165e71e7a0887b6af91736fe786389e2616db6c65c42c43666b5ccb4"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16911.912109375,
+          16911.912109375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 32,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "7ec3fec2e87ff403ee6565a88c883ff9d324e96f84b6d001064f5a4e9f968587",
+          "5f4034a1b860d8061d24c7da7c5003d9cb84159a1c290d68ac2635476fad850c"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16778.671875,
+          16778.671875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 33,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "fd5aa8cd091f3db71f1314fd3503aa8b38da5786d66bc623ddc267d0cd8b7f72",
+          "9a49baea1c2cceb0ccf73aa18735ddaafcf3928f338a8af096f1227b380fc04d"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16788.72265625,
+          16788.72265625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 34,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "28ce5804d628f2bc23aa07000eec043ae0938f26084e7896a9f1339cdc2305be",
+          "ababcfcde6d8edbed4afcfff17442db14853e67c641464b6b6af706994333ea3"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16827.693359375,
+          16827.693359375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 35,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "dbecf49a1236d1e008ddf14a70cf28c8fa438e1bcec43c18dd730730cbe07cd6",
+          "3ff842e6cdd8cef20ebdcf54b5cdb2118eca4bf7ac104030af4c3bd67a54ded6"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16922.03125,
+          16922.03125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 36,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "fa9dfa6185096b323abe67cbd4a44f595741254f3750d90ac80885cd90222098",
+          "793a6244c980e8944918644eb0a02ac8038cf7638b517ab35cc06b0afe4bef08"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16755.013671875,
+          16755.013671875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 37,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "ca571cbb9547cab28f066083a81a53b2fd46d9ab6b17320aab879d5ec31a87c1",
+          "3d477094ec580473a46b21645903f6c85c8357de4bf8763de88106fc3d8ca5da"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16795.017578125,
+          16795.017578125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 38,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "3bb2f49415be69da2a7f84a6dc203887df8123c93b5aa960e3749a3f50d8cde4",
+          "c0a8fa508ea762aa92c3d43950d55842d0c21a0543fd6b1dbd88a0d591ca26e6"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16770.943359375,
+          16770.943359375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 39,
+        "label": "预取整段尾",
+        "shape": [
+          1,
+          2049,
+          640,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "4129f00459e0ba711515a06398d6a0ff297eabb34d1480000498d3b199132f0c",
+          "461cd9fa37317eb8f8c629c7a99a4f997750b727f368493ed7460c5f022859f6"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16724.119140625,
+          16724.119140625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 40,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "040be84f874eb7b38cc9c8c3d45777cc7bb3e1a29bcdcd5675e832aeebc51f00",
+          "0178908149ebdf4244be73549410b656c685d209d353faf472a6b4d7edf9c853"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16812.080078125,
+          16812.080078125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 41,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "ada81d8b37bcb90c3034972289c2b25ec64a225598bfba45361543c5ac06c255",
+          "d7ba05e710776f7bcb4ae934572d9f6e5342911315915456bd843684fa670c8b"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16964.80078125,
+          16964.80078125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 42,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "b833eb60296877a2cb02a8844a8e9100dfc752f4b49554e223257d6e916515f1",
+          "a14aa5a5ca9ba84b805b08f27af2f184c48b8efc08e4236278130c50ce6588b0"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16795.75390625,
+          16795.75390625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 43,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "00fc980660b5d8dcf58d4abdaf231ae7535d6df4e1067eb0e5c028635c578876",
+          "7253b458925d8ad0f764c59d3bbb2764ccff9f9ef1a149a1e7215a44715d4f94"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16762.228515625,
+          16762.228515625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 44,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "ead4a9b150e339d12c9caa75973575a57210fe15b68a1b54dd2cf0ba5c1ec479",
+          "3a05cdc88aa348ddee47e6048982822ab5075c37b6baf292ce1a06c709332d12"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16871.814453125,
+          16871.814453125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 45,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "f75788fd583a6da340f1cf3bd31d55eff459112fedf8515f377e0060a5a449bc",
+          "fd4a0b76661e561510e25cb8410df25e051403dad4a92c756f204c79ecedeeae"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16898.568359375,
+          16898.568359375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 46,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "535a67c6e1d1a4dc9f67311f05dbcc7a727ce7db0020e75bc6fa36f93ee0ccc0",
+          "035d912519c62367648e867e03c6224fede8be93780ad2aef66718fb6fd86555"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16845.552734375,
+          16845.552734375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 47,
+        "label": "预取段后尾",
+        "shape": [
+          1,
+          2049,
+          641,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "56ba91d1e7b560c6acd6c8d70526f3831315c4d20d0514d262b166851a616d37",
+          "6e228143920b6dbf55c89bd0a23c4929c06bb1b47653f393c9d2bfca88339c00"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          16883.2265625,
+          16883.2265625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 48,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "44ecce7ef1eaf4a0e6895d1aa38d39529a979d74859360e32476bcca20cd37d2",
+          "1293cef8906ff51a14645d40202f254d63495f2c163b969ce7e02cbe0ed5f118"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18078.212890625,
+          18078.212890625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 49,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "c7c864d4b727e2847f25319e6d23c603537b802d6de080a00d7d7354413adbac",
+          "c8e4b653c00b0cd0e337c989564404a13a56b2905049a43c45597c95c96f767a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18114.109375,
+          18114.109375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 50,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "941e6ad0676c27f20cdc94e243c3f2003c3e63768fe70d71ba728e7fcb4551e2",
+          "220aa6ce183e64ea99e3dfe84c2a8d823aae3e93b628233311d56980c922ae76"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18104.755859375,
+          18104.755859375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 51,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "5d41506056eab88e7fbf4fd9039324393fb7cfdd378e504113d58ed89a6c1d1e",
+          "bfe838f470e729a07ad10207fd9c2ab21f28a8d546e6250317d5abffaaa02c15"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18159.498046875,
+          18159.498046875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 52,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "d8fdfb562bd5075c1b070afcd2cdb4062856004b71dc87554b7beaf0c7e71fe2",
+          "b4887031416c8d33e63789d7a151cb8c2981ff6f116ea2e0a3134ea423bdec4a"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18103.47265625,
+          18103.47265625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 53,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "c9a231646a2ea1bd7c71050ba643b40e4fa9417df9445cb7dd1e85cbeb4de56e",
+          "809f7a3a2617e64ab342688868617820a300c50a3a522858221a9974de7cc484"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18076.5234375,
+          18076.5234375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 54,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "61873fec6836fdeb048b3a8613db99af4a6ebaff83ac305b2bbea7dae2c958f5",
+          "be2cabc053d0f4a09db8e93afac756f0e594d48e9f1e2e5288e2b8b3b86150f4"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18158.7265625,
+          18158.7265625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 55,
+        "label": "预取三列块槽复用",
+        "shape": [
+          1,
+          2049,
+          1537,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "069ffae9ef2edf005f087bef279f715e6259dc165e7bfbf66876ecf0e043e49a",
+          "1597894195bddd18af055bc117928ae3e3b9d411dc7ce836ddbfc90d11d215f1"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          18034.9453125,
+          18034.9453125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 56,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "acb38ed36a0c31ad3f17eee59b0813d17dd61b04bd81535032749e02cad349bf",
+          "b64854fa746b19377576bf376c4d3c355d6ff1cab549e6f3d6fbb6e80b4968b2"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -24218.34765625,
+          -24218.34765625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 57,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "09b87e1c92e88385d8f3c44988e25207846992c5d8719c3f0b7efe2cb13d9c40",
+          "f197801167b3c4be48e99f9e4043a845333f744f2c3944e50c50fd1fee0d416b"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -24094.974609375,
+          -24094.974609375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 58,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "1759d03729f1975ef0a9df586c6e20e1091a42a2e2a0866d59d191503c1e1926",
+          "9de7286c1fdeec757c6ba76b95974aed81b754b06bd221fc0837c01e2753d4a2"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -23971.03515625,
+          -23971.03515625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 59,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "c44577e1373afddcbdd101066cabbbd9b2fa794446fdef9c749cd1fabe066bb2",
+          "71c08406685dd83d0103d321ddba9323d7f52fa6f0b5cf865cce85b866fc30c6"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -24669.994140625,
+          -24669.994140625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 60,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "7cbcb25c874f95bef3c434c87cbd50873859fca95a072ef89971b918ef7e3a76",
+          "d2c71820fc584628a6247bf26dff7e2d6ffec9b283286c4b1bcb6e19e24ab7a0"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -24896.94921875,
+          -24896.94921875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 61,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "1bcdee5437688f9102d5530f3be66f26511c0a620307d923e1d607513fae7154",
+          "0c93a1be0f5bb87f3f0abd9843a0318281083a74fdd86ba8ed78f6f7bea4d348"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -24011.7734375,
+          -24011.7734375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 62,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "0179a174bc947fe47a215dc7c2ba8e136cf42db5737d47a7f74091a39133c69d",
+          "f472c05d48e14da17fd5350fc347e3e3df9a33845bf1730ea968bf47bf709c86"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -23842.869140625,
+          -23842.869140625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 63,
+        "label": "预取全负",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "52f75e58958e1bd1e958132b57ae10ca49e9aa671d76a62d8402e4b4dd3bfe06",
+          "bfaeea31ea7e9072438d800be95279202d84edd9b0ed27c462fbbff5b7a32c05"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -24464.9296875,
+          -24464.9296875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.001953125
+      },
+      {
+        "case": 64,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "e0e483fc3545a52968271e7d500bd67eb36db4ce53aad2fd8a54aff56d93a336"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 65,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "44082a6e540a8cf89c80e7a2609aa2d21c36129c45ecc5d37a79eb0ef33f7b5b"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 66,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "823791f0c36c9665f088ef8921248a7c5a97f8b0491ca90c1d4e9b54de7696a5"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 67,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "b80e0a2ddba4f107c1b1ea564fd4fdb587d3eb103b19e80529875dc8f870f0c8"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 68,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "e02b952ad4a08e1844838186d9a8f6e53aca8b8bc7d87f8d01599e545ce5023d"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 69,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "4b1c643759044298aceb316f6172a0cd1af8356ac6218deb7a22afb9c43e7276"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 70,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "bdfc451924abed80937b312119b7b7435247beebcb3abcda4cee7863da8febb4"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 71,
+        "label": "预取全零",
+        "shape": [
+          1,
+          2049,
+          1025,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "934341f98a434dbd59442685a2442f132da30c1111fc7669436010ec908ee979",
+          "d2afc4c0a63c4353ca3f4346798e8b3b5ac17ee823cdc9ef2ce4bac79e737d16"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 72,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "43353d1e9f227354785f8c3236cd039ce01e955eadf4c155362c293a4ce21568",
+          "0be0369767282f9ac4b30c9d7dac6700d4b85ee3ac0918710fbb3799d6757877"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12127.0166015625,
+          12127.0166015625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0009765625
+      },
+      {
+        "case": 73,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "19abd0cdfb1aff08b950656493643e21a40a2fbd22e4ea5fc63a9970361a6fdd",
+          "92569c1b09f55bf5ac1d8c08f759b71152d3d99bbe983b03716a06de9694a868"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12195.712890625,
+          12195.712890625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 74,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "f03ccd3e4deeceea8a8486f0878f5bcc76ea35428308e343414a2603166a3a17",
+          "cd6c44bfbfb92a8d3f47441d78740f2f85e5c09890be20047ab0b97f25c272f7"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12184.359375,
+          12184.359375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 75,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "a254e140d29957c4817c0426d093d3040c6f51d9a4fcf9a2a7cf0435109abe93",
+          "59c4794336c0872874d54542b6875fac84e518a6f80a224ee11fbb69bb66f979"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12198.5283203125,
+          12198.5283203125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 76,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "0b64bd9b577971a2063776fd51a7aff672ea72d0838ad4917c79c30a3aac5eca",
+          "9e08da79428ae57cd77e58aa7dfa090eb31e8eec6e3446c99a2826e092a5730f"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12194.7744140625,
+          12194.7744140625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 77,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "487d12005206dbbbf706198c68720606bb3b88a1048efa3f3c280f9f0519fd3d",
+          "eebab52134886be05c1ddf95742fa19f27f4e0f89a38a0efb01c7f3a725fc73f"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12206.3330078125,
+          12206.3330078125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 78,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "197b8cd656368b9707899c210bf7a3e57d960fde1e612859e1fd300a74ee358c",
+          "a4ba20ba04791de6fa3d6d61c1843eeb3b6c70392576f5a21a2d763828cde9cf"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12210.7998046875,
+          12210.7998046875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      },
+      {
+        "case": 79,
+        "label": "预取N分片",
+        "shape": [
+          1,
+          1280,
+          4096,
+          64
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "b4f5067a22db5e7e00f526dad3a7cf17250c4e508c92a916e898884f270af7d5",
+          "8ef814ff24bfcebdfb4aa717997d97b008a24975a9bdd0995642e26bff386119"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          12216.3359375,
+          12216.3359375
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0009765625
+      }
+    ],
+    "源码SHA256": "83588275dc08590242e79bc6c648d08aa682f572191c9778d386526e63463d99"
+  },
+  "十五形状": {
+    "commit": "83588275dc08590242e79bc6c648d08aa682f572191c9778d386526e63463d99",
+    "execution": "real_npu",
+    "library": "/home/developer/large-ub-prefetch-20261002-v1/candidate/build/libsimulator_bridge.so",
+    "library_sha256": "b660c66edf4622b3cdac574536907a6c195262395df4305a210df3b04e6a70bc",
+    "dtype": "fp16",
+    "layout": "NN",
+    "warmup": 0,
+    "repeat": 2,
+    "passed": true,
+    "results": [
+      {
+        "case": 1,
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "passed": true,
+        "input_sha256": [
+          "f5c96587e411c96561d55199296524ef6c6ac72cdb81b961d7ea83a84ff5f787",
+          "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+        ],
+        "launch_begin": 0,
+        "seed": 20260931,
+        "max_abs_error": 2.384185791015625e-07,
+        "launch_end": 3
+      },
+      {
+        "case": 2,
+        "shape": [
+          1,
+          3,
+          5,
+          40
+        ],
+        "passed": true,
+        "input_sha256": [
+          "03d90da3f117141c793608e2b6c85d92f6bfc28e1e89ebb8e3706e28da0a3cc6",
+          "6a3f7ca13d7ccf293328db566e52d8ba2b151ecfaabf553519a098fcf3009e19"
+        ],
+        "launch_begin": 3,
+        "seed": 20260932,
+        "max_abs_error": 0.0,
+        "launch_end": 6
+      },
+      {
+        "case": 3,
+        "shape": [
+          2,
+          7,
+          13,
+          48
+        ],
+        "passed": true,
+        "input_sha256": [
+          "4ca619e305a36f783ba6e0cf9e7a6c2b152efefb863fa70608c1517a7dd4c720",
+          "317ff119f4d3b03744a61d91768617834b4bfad7b08acfc0bf456561e71fabc6"
+        ],
+        "launch_begin": 6,
+        "seed": 20260933,
+        "max_abs_error": 1.9073486328125e-06,
+        "launch_end": 9
+      },
+      {
+        "case": 4,
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "passed": true,
+        "input_sha256": [
+          "fe913df7d6548bfa87b3ca1d8d759f9906439cb958ae71295f35a2f3a7ac570e",
+          "b893933137683b4f5fcdf52665c478d98180fadbdecc842c5c18513211a6d7ec"
+        ],
+        "launch_begin": 9,
+        "seed": 20260934,
+        "max_abs_error": 0.0,
+        "launch_end": 12
+      },
+      {
+        "case": 5,
+        "shape": [
+          8,
+          16,
+          32,
+          128
+        ],
+        "passed": true,
+        "input_sha256": [
+          "94d6decdc750525b62ce4d46dfe4cb331a2afab4655dbd916c51e35733f61be5",
+          "addb74d2aead6a8dbe3be2256e6a943cb3fe3e96170cf7d5735376495db60a97"
+        ],
+        "launch_begin": 12,
+        "seed": 20260935,
+        "max_abs_error": 7.62939453125e-06,
+        "launch_end": 15
+      },
+      {
+        "case": 6,
+        "shape": [
+          13,
+          23,
+          73,
+          192
+        ],
+        "passed": true,
+        "input_sha256": [
+          "f2c62f555fadb6533107da9e82adc681688b4961a8d3a96b1e9cc96434c173e4",
+          "178d96f27d4a39505f735dbacb8718b0ce0135f6c9f0ede2325c74991cb362ea"
+        ],
+        "launch_begin": 15,
+        "seed": 20260936,
+        "max_abs_error": 3.0517578125e-05,
+        "launch_end": 18
+      },
+      {
+        "case": 7,
+        "shape": [
+          16,
+          32,
+          128,
+          256
+        ],
+        "passed": true,
+        "input_sha256": [
+          "641a0406ee17aed332cd91cbc7215e428190c0b70bc806bde78c88ba08323780",
+          "071fa644d9c4e38a7619ea6604f5c3779f20b5d554bb47887e2f53e2feeeb712"
+        ],
+        "launch_begin": 18,
+        "seed": 20260937,
+        "max_abs_error": 3.0517578125e-05,
+        "launch_end": 21
+      },
+      {
+        "case": 8,
+        "shape": [
+          1,
+          1025,
+          1031,
+          1032
+        ],
+        "passed": true,
+        "input_sha256": [
+          "585c0483c6b90c7fbf34656553391e96af37ded58550c89a78b208059cad434a",
+          "a053bc26b3e58f76715dadc1dbb4b7a49cbb5b65d7cbda3c5a788fe984724315"
+        ],
+        "launch_begin": 21,
+        "seed": 20260938,
+        "max_abs_error": 0.0,
+        "launch_end": 24
+      },
+      {
+        "case": 9,
+        "shape": [
+          1,
+          2048,
+          1536,
+          1280
+        ],
+        "passed": true,
+        "input_sha256": [
+          "dd9ba30672485fa9eb57d51cbc46d0f354cfd6a2750602127b1324661e4b7287",
+          "a05e37d32eef8d562c8c09960cf6191f60462ee84df20ffdf4d02edae61cfb19"
+        ],
+        "launch_begin": 24,
+        "seed": 20260939,
+        "max_abs_error": 0.0,
+        "launch_end": 27
+      },
+      {
+        "case": 10,
+        "shape": [
+          1,
+          4096,
+          1280,
+          1152
+        ],
+        "passed": true,
+        "input_sha256": [
+          "e3161f8cb96d27c5ee40904f53f82d8b87c9d35ad6d66cd4eeb47a898a62fe88",
+          "124e1ef5c2ea89fbf195679f663a3c4ce3c8578bf76ae2ee2a9c417212c6367e"
+        ],
+        "launch_begin": 27,
+        "seed": 20260940,
+        "max_abs_error": 0.015625,
+        "launch_end": 30
+      },
+      {
+        "case": 11,
+        "shape": [
+          1,
+          1536,
+          2048,
+          2048
+        ],
+        "passed": true,
+        "input_sha256": [
+          "dd67230db9347605f9c2c790cbd006fd16ee1cc1fbea3fa20dbada0e67c95704",
+          "fda73b19e930a1bb6f697b43276fb74e38b1ef22f3a5fd589386640a3174409c"
+        ],
+        "launch_begin": 30,
+        "seed": 20260941,
+        "max_abs_error": 0.0,
+        "launch_end": 33
+      },
+      {
+        "case": 12,
+        "shape": [
+          1,
+          1280,
+          4096,
+          1536
+        ],
+        "passed": true,
+        "input_sha256": [
+          "8a34f1bb380e36fc2731d99d40587e8e8e1f2d449fe5b3ebd7ba2e155ec269c1",
+          "6989a0ff90e1bb5bbe150bd1498dd9bb94b67515e6cb45da0287f228dd553069"
+        ],
+        "launch_begin": 33,
+        "seed": 20260942,
+        "max_abs_error": 0.0,
+        "launch_end": 36
+      },
+      {
+        "case": 13,
+        "shape": [
+          1,
+          8192,
+          64,
+          128
+        ],
+        "passed": true,
+        "input_sha256": [
+          "c1fd8825487fd523043357f954f27ac8b22c44a4ff60a9dfdbacb3fb8d9c2dae",
+          "7e1ffe22f5e4aa09ae330bee73932d543cf88a833d0648afad37c7ffc90d063b"
+        ],
+        "launch_begin": 36,
+        "seed": 20260943,
+        "max_abs_error": 0.0,
+        "launch_end": 39
+      },
+      {
+        "case": 14,
+        "shape": [
+          1,
+          64,
+          8192,
+          128
+        ],
+        "passed": true,
+        "input_sha256": [
+          "a59d171e4f8caf723ad1b317eed4692d8c76ed1553895478d893b70733d18e04",
+          "2964ed3a0a13f21c229e92f224c78773e3e598f423bf64b4d00d9ca8372f046f"
+        ],
+        "launch_begin": 39,
+        "seed": 20260944,
+        "max_abs_error": 0.0,
+        "launch_end": 42
+      },
+      {
+        "case": 15,
+        "shape": [
+          1,
+          64,
+          64,
+          8192
+        ],
+        "passed": true,
+        "input_sha256": [
+          "1870c97ccb4286134ebb17581ade628f25107b5993b343fb846b80a8f87a8d1b",
+          "3e54b548e57ce2d34bb249ed21538ac44a6d948d1819c733d57ec6f860b3a4cf"
+        ],
+        "launch_begin": 42,
+        "seed": 20260945,
+        "max_abs_error": 0.00048828125,
+        "launch_end": 45
+      }
+    ],
+    "launches": [
+      {
+        "case": 1,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 1,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 1,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 2,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 2,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 2,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 3,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 3,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 3,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 4,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 4,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 4,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 5,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 5,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 5,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 6,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 6,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 6,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 7,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 7,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 7,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 8,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 8,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 8,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 9,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 9,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 9,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 10,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 10,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 10,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 11,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 11,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 11,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 12,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 12,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 12,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 13,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 13,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 13,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 14,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 14,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 14,
+        "phase": "sample",
+        "position": 2
+      },
+      {
+        "case": 15,
+        "phase": "validation",
+        "position": 0
+      },
+      {
+        "case": 15,
+        "phase": "sample",
+        "position": 1
+      },
+      {
+        "case": 15,
+        "phase": "sample",
+        "position": 2
+      }
+    ],
+    "soc": "Ascend910_9362",
+    "cube_cores": 20
+  },
+  "性能": [
+    {
+      "顺序": "ABBA",
+      "测试点": {
+        "5": {
+          "基线_us": 4.74,
+          "候选_us": 4.7,
+          "耗时下降百分比": 0.8438818565400852
+        },
+        "8": {
+          "基线_us": 40.7505,
+          "候选_us": 40.08,
+          "耗时下降百分比": 1.645378584311863
+        },
+        "9": {
+          "基线_us": 60.1515,
+          "候选_us": 59.2415,
+          "耗时下降百分比": 1.5128467286767533
+        },
+        "10": {
+          "基线_us": 90.22149999999999,
+          "候选_us": 90.142,
+          "耗时下降百分比": 0.08811646891261349
+        },
+        "11": {
+          "基线_us": 88.452,
+          "候选_us": 88.47149999999999,
+          "耗时下降百分比": -0.022045855379171364
+        },
+        "12": {
+          "基线_us": 89.102,
+          "候选_us": 88.3715,
+          "耗时下降百分比": 0.8198469170164646
+        }
+      }
+    },
+    {
+      "顺序": "BAAB",
+      "测试点": {
+        "5": {
+          "基线_us": 4.7,
+          "候选_us": 4.72,
+          "耗时下降百分比": -0.42553191489360653
+        },
+        "8": {
+          "基线_us": 40.3605,
+          "候选_us": 39.900999999999996,
+          "耗时下降百分比": 1.138489364601547
+        },
+        "9": {
+          "基线_us": 59.911500000000004,
+          "候选_us": 59.081,
+          "耗时下降百分比": 1.3862113283760191
+        },
+        "10": {
+          "基线_us": 89.792,
+          "候选_us": 89.6015,
+          "耗时下降百分比": 0.2121569850320748
+        },
+        "11": {
+          "基线_us": 88.17150000000001,
+          "候选_us": 88.2815,
+          "耗时下降百分比": -0.12475686588067081
+        },
+        "12": {
+          "基线_us": 88.842,
+          "候选_us": 88.002,
+          "耗时下降百分比": 0.9454987505909451
+        }
+      }
+    }
+  ],
+  "逐组性能": [
+    {
+      "commit": "31ef8a6434c177fe10611dca6c164aaf85a9113176f1aa3b051280db2f300a79",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "6932940dce155fdcaacb41e07f314b49885dcbc077aa1be33751f6487ce24dd0",
+      "application_report": "performance/app-0.json",
+      "csv": "performance/profile-0/PROF_000001_20261002095655050_00036052DHFLEOFI/mindstudio_profiler_output/op_summary_20261002095703.csv",
+      "csv_sha256": "33604ce9c4b3f5dc4754750135d153d1aa2c2c39dfe0ffdc8c7cda886389a0dd",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.76,
+            5.24,
+            4.78,
+            4.74,
+            4.66,
+            4.781,
+            4.76,
+            4.8,
+            4.76,
+            4.66,
+            4.78,
+            4.84,
+            4.76,
+            4.76,
+            4.66,
+            4.78,
+            4.761,
+            4.8,
+            4.74,
+            4.86,
+            4.78,
+            5.001,
+            4.82,
+            4.74,
+            4.66,
+            4.98,
+            4.761,
+            4.78,
+            5.16,
+            4.64,
+            4.94,
+            4.861,
+            4.76,
+            4.74,
+            4.66,
+            4.92,
+            4.76,
+            4.78,
+            4.76,
+            4.66,
+            4.84,
+            4.76,
+            4.8,
+            4.74,
+            4.68,
+            4.78,
+            4.781,
+            4.8,
+            4.82,
+            4.68
+          ],
+          "warmup_us": [
+            9.36,
+            8.64,
+            8.26,
+            6.96,
+            4.66,
+            4.78,
+            4.76,
+            4.78,
+            4.74,
+            4.641,
+            4.78,
+            4.82,
+            4.8,
+            4.74,
+            4.861,
+            5.1,
+            4.8,
+            4.82,
+            4.74,
+            4.66
+          ],
+          "validation_us": [
+            18.341
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.7705,
+          "mean_us": 4.79052,
+          "min_us": 4.64,
+          "max_us": 5.24,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            41.74,
+            41.201,
+            42.201,
+            40.801,
+            40.22,
+            41.041,
+            41.081,
+            42.321,
+            39.94,
+            41.861,
+            41.021,
+            41.601,
+            40.741,
+            40.76,
+            39.421,
+            41.121,
+            40.701,
+            40.281,
+            40.281,
+            40.801,
+            41.74,
+            40.9,
+            41.1,
+            42.341,
+            41.441,
+            43.121,
+            39.461,
+            41.201,
+            40.041,
+            41.18,
+            41.26,
+            41.321,
+            40.921,
+            43.061,
+            43.281,
+            39.881,
+            39.721,
+            40.461,
+            41.501,
+            39.501,
+            40.82,
+            42.201,
+            41.781,
+            40.961,
+            40.721,
+            39.42,
+            40.001,
+            42.841,
+            40.66,
+            40.521
+          ],
+          "warmup_us": [
+            42.681,
+            41.461,
+            41.361,
+            42.42,
+            43.441,
+            41.5,
+            40.441,
+            40.101,
+            39.981,
+            40.121,
+            40.661,
+            40.701,
+            40.06,
+            41.341,
+            40.881,
+            39.761,
+            39.221,
+            41.461,
+            40.021,
+            40.56
+          ],
+          "validation_us": [
+            66.701
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 40.991,
+          "mean_us": 41.04996,
+          "min_us": 39.42,
+          "max_us": 43.281,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            60.661,
+            60.002,
+            60.561,
+            60.121,
+            59.781,
+            60.601,
+            60.202,
+            60.402,
+            60.141,
+            60.622,
+            60.742,
+            60.122,
+            60.182,
+            60.261,
+            60.221,
+            60.461,
+            60.481,
+            60.081,
+            59.561,
+            60.101,
+            60.461,
+            59.701,
+            60.501,
+            60.161,
+            60.261,
+            60.301,
+            60.261,
+            60.202,
+            59.801,
+            59.961,
+            60.642,
+            59.921,
+            60.382,
+            60.041,
+            60.001,
+            60.521,
+            59.901,
+            60.481,
+            60.042,
+            60.301,
+            60.422,
+            60.081,
+            60.221,
+            60.021,
+            60.202,
+            61.001,
+            59.962,
+            59.942,
+            60.461,
+            60.781
+          ],
+          "warmup_us": [
+            61.261,
+            60.541,
+            60.221,
+            60.122,
+            59.721,
+            60.501,
+            60.621,
+            60.401,
+            60.261,
+            60.261,
+            60.542,
+            60.161,
+            59.861,
+            59.942,
+            60.341,
+            60.661,
+            60.041,
+            59.642,
+            59.962,
+            60.001
+          ],
+          "validation_us": [
+            84.162
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 60.2115,
+          "mean_us": 60.2449,
+          "min_us": 59.561,
+          "max_us": 61.001,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            89.202,
+            92.022,
+            89.442,
+            90.022,
+            89.582,
+            91.162,
+            89.721,
+            91.101,
+            89.502,
+            91.442,
+            88.922,
+            91.942,
+            89.022,
+            91.542,
+            89.321,
+            90.202,
+            89.822,
+            91.842,
+            89.802,
+            91.462,
+            89.462,
+            91.142,
+            89.262,
+            92.141,
+            89.502,
+            91.402,
+            89.542,
+            91.222,
+            89.202,
+            91.902,
+            88.721,
+            91.401,
+            89.282,
+            91.342,
+            89.382,
+            91.442,
+            89.322,
+            91.482,
+            88.901,
+            90.282,
+            88.902,
+            91.542,
+            89.462,
+            91.722,
+            89.581,
+            90.802,
+            89.262,
+            91.202,
+            89.042,
+            91.661
+          ],
+          "warmup_us": [
+            89.522,
+            91.082,
+            89.242,
+            91.341,
+            89.081,
+            89.742,
+            89.462,
+            91.642,
+            89.542,
+            91.521,
+            89.222,
+            91.482,
+            89.402,
+            91.242,
+            89.862,
+            91.762,
+            88.902,
+            91.482,
+            89.241,
+            91.662
+          ],
+          "validation_us": [
+            113.383
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 89.922,
+          "mean_us": 90.33182,
+          "min_us": 88.721,
+          "max_us": 92.141,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            89.661,
+            88.562,
+            88.302,
+            88.982,
+            88.822,
+            88.501,
+            88.001,
+            88.582,
+            88.681,
+            88.582,
+            87.882,
+            88.842,
+            88.582,
+            88.762,
+            88.242,
+            88.561,
+            87.941,
+            88.702,
+            88.962,
+            87.822,
+            89.302,
+            88.381,
+            88.502,
+            88.702,
+            88.842,
+            88.801,
+            88.002,
+            88.382,
+            88.301,
+            87.942,
+            88.261,
+            88.802,
+            88.862,
+            88.802,
+            88.282,
+            88.361,
+            88.162,
+            88.662,
+            89.322,
+            88.002,
+            89.222,
+            88.642,
+            88.441,
+            88.942,
+            88.841,
+            88.482,
+            88.082,
+            88.702,
+            88.182,
+            87.842
+          ],
+          "warmup_us": [
+            91.942,
+            88.982,
+            88.962,
+            88.962,
+            88.822,
+            88.482,
+            87.702,
+            88.601,
+            88.542,
+            88.601,
+            87.961,
+            88.542,
+            88.842,
+            88.742,
+            88.422,
+            88.782,
+            88.262,
+            88.701,
+            88.962,
+            88.102
+          ],
+          "validation_us": [
+            109.802
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.572,
+          "mean_us": 88.54054,
+          "min_us": 87.822,
+          "max_us": 89.661,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            88.962,
+            89.501,
+            89.762,
+            89.342,
+            89.602,
+            89.442,
+            89.182,
+            89.162,
+            89.322,
+            89.522,
+            88.662,
+            89.622,
+            89.122,
+            89.202,
+            88.881,
+            89.561,
+            89.242,
+            88.201,
+            89.602,
+            89.262,
+            88.982,
+            89.422,
+            89.481,
+            89.162,
+            89.442,
+            89.362,
+            89.002,
+            89.142,
+            89.001,
+            89.602,
+            89.362,
+            89.382,
+            89.762,
+            89.081,
+            89.542,
+            89.722,
+            89.002,
+            89.202,
+            89.222,
+            89.621,
+            89.582,
+            89.662,
+            89.322,
+            89.322,
+            89.022,
+            89.302,
+            89.182,
+            88.981,
+            89.581,
+            89.322
+          ],
+          "warmup_us": [
+            90.242,
+            89.482,
+            89.181,
+            89.362,
+            89.622,
+            88.982,
+            89.161,
+            89.102,
+            89.621,
+            89.262,
+            89.162,
+            89.522,
+            89.122,
+            89.242,
+            89.242,
+            89.201,
+            89.182,
+            89.042,
+            88.962,
+            88.941
+          ],
+          "validation_us": [
+            116.942
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 89.322,
+          "mean_us": 89.2986,
+          "min_us": 88.201,
+          "max_us": 89.762,
+          "count": 50
+        }
+      }
+    },
+    {
+      "commit": "83588275dc08590242e79bc6c648d08aa682f572191c9778d386526e63463d99",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "b660c66edf4622b3cdac574536907a6c195262395df4305a210df3b04e6a70bc",
+      "application_report": "performance/app-1.json",
+      "csv": "performance/profile-1/PROF_000001_20261002095705120_00036330BFPFANQG/mindstudio_profiler_output/op_summary_20261002095713.csv",
+      "csv_sha256": "f795cb5476e8d0390d543b1e8b61cc1f1d54a4cb1dc7123249ea08eb9dc85b15",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.68,
+            4.66,
+            5.0,
+            4.76,
+            4.721,
+            4.74,
+            4.64,
+            4.74,
+            4.72,
+            4.74,
+            5.04,
+            4.66,
+            4.74,
+            4.681,
+            4.7,
+            4.7,
+            4.66,
+            5.12,
+            4.68,
+            4.72,
+            4.7,
+            4.86,
+            4.721,
+            4.76,
+            4.7,
+            4.68,
+            4.661,
+            4.76,
+            4.7,
+            4.76,
+            4.98,
+            4.66,
+            4.74,
+            4.8,
+            4.76,
+            5.0,
+            4.64,
+            5.12,
+            4.7,
+            4.72,
+            4.681,
+            4.64,
+            4.72,
+            4.88,
+            4.7,
+            4.7,
+            4.98,
+            4.76,
+            4.78,
+            5.14
+          ],
+          "warmup_us": [
+            10.3,
+            8.1,
+            8.42,
+            7.32,
+            4.72,
+            4.7,
+            4.66,
+            4.98,
+            4.72,
+            4.7,
+            4.7,
+            4.64,
+            4.72,
+            4.7,
+            4.74,
+            5.04,
+            4.64,
+            4.72,
+            4.7,
+            4.72
+          ],
+          "validation_us": [
+            20.501
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.7204999999999995,
+          "mean_us": 4.7701,
+          "min_us": 4.64,
+          "max_us": 5.14,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            41.581,
+            39.181,
+            40.541,
+            39.741,
+            39.56,
+            39.221,
+            39.701,
+            39.301,
+            40.521,
+            40.08,
+            40.261,
+            39.341,
+            40.561,
+            40.821,
+            39.801,
+            39.881,
+            39.5,
+            41.901,
+            41.201,
+            41.921,
+            40.281,
+            41.241,
+            39.8,
+            39.641,
+            40.161,
+            40.621,
+            39.061,
+            39.681,
+            39.741,
+            40.76,
+            40.08,
+            38.901,
+            40.301,
+            39.221,
+            40.001,
+            39.061,
+            39.68,
+            40.161,
+            40.801,
+            40.9,
+            39.8,
+            39.261,
+            39.121,
+            39.4,
+            39.38,
+            39.681,
+            38.621,
+            41.341,
+            40.321,
+            41.721
+          ],
+          "warmup_us": [
+            41.921,
+            41.021,
+            41.141,
+            40.881,
+            39.061,
+            40.06,
+            39.36,
+            40.701,
+            40.101,
+            41.08,
+            40.901,
+            38.821,
+            39.881,
+            40.261,
+            40.941,
+            38.701,
+            40.681,
+            39.301,
+            41.281,
+            40.301
+          ],
+          "validation_us": [
+            60.602
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 39.841,
+          "mean_us": 40.06718,
+          "min_us": 38.621,
+          "max_us": 41.921,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            59.301,
+            59.481,
+            58.622,
+            59.462,
+            59.242,
+            59.202,
+            59.341,
+            58.601,
+            59.681,
+            59.102,
+            59.222,
+            59.342,
+            59.021,
+            59.281,
+            59.282,
+            59.362,
+            59.481,
+            58.461,
+            59.461,
+            59.061,
+            59.401,
+            59.542,
+            58.581,
+            59.101,
+            58.981,
+            59.541,
+            59.521,
+            58.721,
+            59.221,
+            59.682,
+            59.181,
+            59.261,
+            58.621,
+            59.501,
+            59.222,
+            59.321,
+            59.421,
+            58.421,
+            59.422,
+            58.861,
+            59.521,
+            59.661,
+            58.902,
+            59.261,
+            59.221,
+            59.241,
+            59.421,
+            58.681,
+            59.281,
+            59.061
+          ],
+          "warmup_us": [
+            61.621,
+            59.982,
+            58.581,
+            60.021,
+            58.962,
+            59.642,
+            59.421,
+            58.681,
+            59.701,
+            59.161,
+            59.681,
+            59.341,
+            58.662,
+            59.401,
+            59.002,
+            59.181,
+            59.401,
+            58.661,
+            59.641,
+            58.981
+          ],
+          "validation_us": [
+            79.421
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 59.261,
+          "mean_us": 59.19568,
+          "min_us": 58.421,
+          "max_us": 59.682,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            91.362,
+            88.602,
+            91.582,
+            88.942,
+            91.342,
+            88.642,
+            91.322,
+            88.002,
+            91.521,
+            88.641,
+            91.262,
+            88.261,
+            91.442,
+            87.762,
+            91.202,
+            89.442,
+            91.562,
+            88.422,
+            91.382,
+            88.962,
+            91.062,
+            89.042,
+            91.382,
+            88.602,
+            91.502,
+            88.542,
+            91.202,
+            88.702,
+            91.222,
+            88.821,
+            91.182,
+            89.042,
+            91.202,
+            88.442,
+            91.382,
+            88.642,
+            91.722,
+            89.261,
+            91.602,
+            88.662,
+            91.742,
+            89.162,
+            91.502,
+            89.062,
+            91.202,
+            88.182,
+            91.181,
+            89.122,
+            91.341,
+            88.921
+          ],
+          "warmup_us": [
+            91.441,
+            88.302,
+            91.622,
+            88.962,
+            91.441,
+            89.402,
+            91.422,
+            89.442,
+            91.542,
+            88.702,
+            90.501,
+            88.682,
+            91.362,
+            88.461,
+            91.662,
+            88.821,
+            91.342,
+            88.582,
+            91.161,
+            88.642
+          ],
+          "validation_us": [
+            112.162
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 90.252,
+          "mean_us": 90.04584,
+          "min_us": 87.762,
+          "max_us": 91.742,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            88.182,
+            88.262,
+            89.242,
+            88.401,
+            88.062,
+            88.601,
+            88.102,
+            88.462,
+            88.542,
+            88.682,
+            88.502,
+            88.901,
+            88.562,
+            88.382,
+            88.762,
+            87.962,
+            88.402,
+            87.902,
+            88.602,
+            88.042,
+            88.222,
+            88.582,
+            88.822,
+            88.582,
+            87.941,
+            88.702,
+            87.901,
+            88.442,
+            88.242,
+            88.462,
+            88.502,
+            88.762,
+            88.702,
+            88.481,
+            88.422,
+            88.202,
+            88.582,
+            88.082,
+            88.542,
+            88.642,
+            88.421,
+            88.322,
+            88.862,
+            88.402,
+            88.122,
+            88.641,
+            87.682,
+            88.541,
+            88.461,
+            88.342
+          ],
+          "warmup_us": [
+            89.282,
+            88.542,
+            89.022,
+            88.702,
+            88.202,
+            88.721,
+            87.782,
+            88.342,
+            88.681,
+            88.502,
+            88.662,
+            88.842,
+            88.782,
+            88.522,
+            89.321,
+            87.502,
+            88.622,
+            88.222,
+            88.582,
+            87.922
+          ],
+          "validation_us": [
+            108.882
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.4615,
+          "mean_us": 88.4234,
+          "min_us": 87.682,
+          "max_us": 89.242,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            88.302,
+            88.542,
+            88.281,
+            88.702,
+            88.502,
+            88.542,
+            88.182,
+            88.682,
+            87.942,
+            88.142,
+            88.342,
+            88.162,
+            88.322,
+            88.742,
+            88.162,
+            88.781,
+            88.342,
+            88.362,
+            88.182,
+            88.602,
+            88.141,
+            88.662,
+            88.422,
+            88.422,
+            88.302,
+            88.582,
+            88.642,
+            88.841,
+            88.262,
+            88.362,
+            88.262,
+            88.542,
+            88.182,
+            88.441,
+            88.102,
+            88.622,
+            88.482,
+            88.722,
+            88.122,
+            88.322,
+            88.282,
+            88.742,
+            88.342,
+            88.282,
+            88.081,
+            88.462,
+            88.302,
+            88.721,
+            88.342,
+            88.321
+          ],
+          "warmup_us": [
+            89.162,
+            88.302,
+            88.442,
+            88.562,
+            88.241,
+            88.502,
+            88.262,
+            88.402,
+            88.182,
+            88.882,
+            88.622,
+            88.562,
+            88.402,
+            88.482,
+            88.262,
+            88.582,
+            88.162,
+            88.522,
+            88.321,
+            88.621
+          ],
+          "validation_us": [
+            116.483
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.342,
+          "mean_us": 88.40264,
+          "min_us": 87.942,
+          "max_us": 88.841,
+          "count": 50
+        }
+      }
+    },
+    {
+      "commit": "83588275dc08590242e79bc6c648d08aa682f572191c9778d386526e63463d99",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "b660c66edf4622b3cdac574536907a6c195262395df4305a210df3b04e6a70bc",
+      "application_report": "performance/app-2.json",
+      "csv": "performance/profile-2/PROF_000001_20261002095715186_00036587PJNMBLIE/mindstudio_profiler_output/op_summary_20261002095723.csv",
+      "csv_sha256": "fbae784f4eee36ab7785a41612fa35bc1898b5767890778f156719605983167a",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.58,
+            4.66,
+            5.16,
+            4.74,
+            4.64,
+            4.58,
+            4.66,
+            5.12,
+            4.741,
+            4.68,
+            4.56,
+            4.68,
+            4.72,
+            4.72,
+            4.64,
+            4.58,
+            4.681,
+            4.68,
+            4.74,
+            4.64,
+            4.581,
+            4.68,
+            4.72,
+            4.74,
+            4.641,
+            4.9,
+            4.68,
+            4.68,
+            5.121,
+            4.64,
+            4.58,
+            4.66,
+            4.7,
+            4.74,
+            4.62,
+            4.58,
+            4.66,
+            4.74,
+            5.0,
+            4.64,
+            4.86,
+            4.66,
+            5.16,
+            4.72,
+            4.64,
+            4.58,
+            4.66,
+            5.0,
+            4.72,
+            4.7
+          ],
+          "warmup_us": [
+            9.181,
+            8.341,
+            8.32,
+            8.04,
+            4.64,
+            4.6,
+            4.66,
+            4.74,
+            4.74,
+            4.64,
+            4.58,
+            4.68,
+            5.141,
+            4.74,
+            4.64,
+            4.58,
+            4.661,
+            4.86,
+            4.76,
+            4.66
+          ],
+          "validation_us": [
+            16.301
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.68,
+          "mean_us": 4.7241,
+          "min_us": 4.56,
+          "max_us": 5.16,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            40.361,
+            39.701,
+            39.7,
+            39.661,
+            40.801,
+            41.501,
+            40.221,
+            40.081,
+            41.161,
+            39.421,
+            39.921,
+            40.501,
+            40.381,
+            41.8,
+            39.78,
+            40.461,
+            39.681,
+            41.521,
+            39.46,
+            39.341,
+            39.38,
+            39.601,
+            40.6,
+            40.341,
+            41.141,
+            39.2,
+            39.941,
+            40.101,
+            40.481,
+            40.56,
+            40.261,
+            40.661,
+            39.321,
+            41.6,
+            40.601,
+            41.601,
+            40.581,
+            42.341,
+            39.441,
+            39.901,
+            39.621,
+            38.861,
+            41.061,
+            40.241,
+            40.26,
+            40.04,
+            39.92,
+            39.141,
+            40.06,
+            40.321
+          ],
+          "warmup_us": [
+            44.701,
+            41.741,
+            40.3,
+            40.281,
+            41.08,
+            39.901,
+            40.62,
+            39.301,
+            40.461,
+            40.641,
+            40.221,
+            39.54,
+            39.861,
+            40.7,
+            41.56,
+            40.541,
+            39.721,
+            40.001,
+            40.3,
+            40.301
+          ],
+          "validation_us": [
+            60.502
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 40.230999999999995,
+          "mean_us": 40.25274,
+          "min_us": 38.861,
+          "max_us": 42.341,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            59.501,
+            58.782,
+            59.701,
+            59.041,
+            59.041,
+            59.422,
+            58.842,
+            59.322,
+            58.941,
+            59.201,
+            59.582,
+            59.161,
+            59.321,
+            59.201,
+            59.201,
+            59.341,
+            58.841,
+            59.562,
+            58.941,
+            58.922,
+            59.522,
+            58.541,
+            59.381,
+            59.001,
+            58.921,
+            59.542,
+            58.461,
+            59.642,
+            59.101,
+            59.441,
+            59.502,
+            58.461,
+            59.301,
+            59.101,
+            58.961,
+            59.481,
+            58.941,
+            59.401,
+            59.042,
+            59.021,
+            59.261,
+            58.821,
+            59.541,
+            59.221,
+            59.382,
+            59.621,
+            58.861,
+            59.841,
+            59.141,
+            59.402
+          ],
+          "warmup_us": [
+            61.961,
+            59.801,
+            59.181,
+            58.842,
+            59.161,
+            59.681,
+            58.601,
+            59.541,
+            59.181,
+            59.241,
+            59.321,
+            58.922,
+            59.301,
+            58.841,
+            59.542,
+            59.282,
+            59.041,
+            59.681,
+            59.101,
+            59.361
+          ],
+          "validation_us": [
+            81.581
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 59.201,
+          "mean_us": 59.19448,
+          "min_us": 58.461,
+          "max_us": 59.841,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            88.941,
+            91.722,
+            89.082,
+            91.601,
+            88.682,
+            91.601,
+            88.422,
+            91.242,
+            88.521,
+            91.582,
+            89.262,
+            91.382,
+            88.362,
+            91.621,
+            88.441,
+            91.802,
+            88.582,
+            91.462,
+            88.662,
+            91.222,
+            89.022,
+            91.462,
+            88.542,
+            91.801,
+            88.521,
+            91.622,
+            88.882,
+            91.282,
+            88.441,
+            91.422,
+            88.962,
+            91.702,
+            88.502,
+            91.482,
+            89.282,
+            91.381,
+            88.782,
+            90.842,
+            87.782,
+            91.822,
+            89.141,
+            91.722,
+            88.982,
+            91.322,
+            89.102,
+            91.562,
+            88.902,
+            90.982,
+            88.822,
+            91.121
+          ],
+          "warmup_us": [
+            88.782,
+            91.762,
+            88.802,
+            91.482,
+            88.882,
+            91.502,
+            88.801,
+            91.582,
+            88.522,
+            91.561,
+            89.062,
+            91.621,
+            88.782,
+            91.342,
+            88.741,
+            91.562,
+            88.762,
+            91.662,
+            89.122,
+            91.702
+          ],
+          "validation_us": [
+            113.283
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 90.062,
+          "mean_us": 90.10776,
+          "min_us": 87.782,
+          "max_us": 91.822,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            88.722,
+            88.542,
+            88.762,
+            88.302,
+            88.922,
+            87.682,
+            88.682,
+            88.102,
+            88.202,
+            88.801,
+            88.042,
+            88.202,
+            88.562,
+            89.062,
+            87.502,
+            88.202,
+            88.242,
+            88.422,
+            88.941,
+            88.142,
+            88.942,
+            88.261,
+            88.562,
+            88.482,
+            88.622,
+            87.902,
+            88.482,
+            88.142,
+            88.122,
+            88.862,
+            88.122,
+            88.842,
+            88.902,
+            88.921,
+            87.702,
+            88.562,
+            88.301,
+            88.242,
+            88.942,
+            88.121,
+            89.142,
+            88.682,
+            88.802,
+            88.562,
+            88.522,
+            87.761,
+            88.722,
+            88.142,
+            88.242,
+            88.662
+          ],
+          "warmup_us": [
+            90.862,
+            88.922,
+            88.962,
+            88.342,
+            88.842,
+            87.742,
+            88.481,
+            88.242,
+            88.082,
+            88.881,
+            88.482,
+            88.402,
+            88.822,
+            88.782,
+            87.622,
+            88.842,
+            88.142,
+            88.222,
+            88.941,
+            88.202
+          ],
+          "validation_us": [
+            109.442
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.50200000000001,
+          "mean_us": 88.44626,
+          "min_us": 87.502,
+          "max_us": 89.142,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            88.482,
+            88.402,
+            88.662,
+            88.422,
+            88.402,
+            88.402,
+            88.461,
+            88.022,
+            88.662,
+            88.042,
+            88.542,
+            88.262,
+            88.621,
+            88.282,
+            88.261,
+            88.181,
+            88.522,
+            88.382,
+            88.482,
+            88.362,
+            88.522,
+            88.262,
+            88.362,
+            87.902,
+            88.622,
+            88.262,
+            88.442,
+            88.221,
+            88.402,
+            88.182,
+            88.461,
+            88.062,
+            88.702,
+            88.262,
+            88.302,
+            88.582,
+            88.242,
+            87.982,
+            88.401,
+            88.422,
+            88.562,
+            88.242,
+            88.362,
+            88.322,
+            88.381,
+            88.342,
+            88.461,
+            88.402,
+            88.462,
+            88.382
+          ],
+          "warmup_us": [
+            89.741,
+            88.262,
+            88.502,
+            87.942,
+            88.781,
+            88.162,
+            88.562,
+            88.181,
+            88.402,
+            88.262,
+            88.562,
+            88.502,
+            88.342,
+            88.021,
+            88.501,
+            88.322,
+            88.462,
+            88.321,
+            88.562,
+            88.441
+          ],
+          "validation_us": [
+            114.102
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.39150000000001,
+          "mean_us": 88.36742,
+          "min_us": 87.902,
+          "max_us": 88.702,
+          "count": 50
+        }
+      }
+    },
+    {
+      "commit": "31ef8a6434c177fe10611dca6c164aaf85a9113176f1aa3b051280db2f300a79",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "6932940dce155fdcaacb41e07f314b49885dcbc077aa1be33751f6487ce24dd0",
+      "application_report": "performance/app-3.json",
+      "csv": "performance/profile-3/PROF_000001_20261002095725261_00036843ARAOEPJO/mindstudio_profiler_output/op_summary_20261002095733.csv",
+      "csv_sha256": "1d3a0e47f6d33dea031dce40caae34e6fe475986574c205e7560e52983a2ed20",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.68,
+            4.68,
+            4.82,
+            4.761,
+            4.76,
+            4.66,
+            4.68,
+            4.62,
+            4.72,
+            4.66,
+            4.66,
+            4.66,
+            4.62,
+            4.76,
+            4.74,
+            4.64,
+            4.68,
+            4.62,
+            4.66,
+            4.74,
+            4.68,
+            4.68,
+            4.62,
+            4.94,
+            4.72,
+            4.66,
+            4.66,
+            4.62,
+            4.78,
+            4.74,
+            4.641,
+            4.66,
+            4.64,
+            4.72,
+            4.76,
+            4.66,
+            5.02,
+            4.82,
+            4.68,
+            4.84,
+            4.64,
+            4.68,
+            4.621,
+            4.76,
+            4.76,
+            4.64,
+            4.66,
+            4.64,
+            4.76,
+            4.66
+          ],
+          "warmup_us": [
+            9.02,
+            9.02,
+            8.52,
+            7.94,
+            4.68,
+            4.661,
+            4.76,
+            4.62,
+            4.7,
+            4.66,
+            4.68,
+            4.68,
+            4.64,
+            4.68,
+            4.74,
+            4.66,
+            4.68,
+            4.64,
+            4.68,
+            4.72
+          ],
+          "validation_us": [
+            14.42
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.68,
+          "mean_us": 4.70366,
+          "min_us": 4.62,
+          "max_us": 5.02,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            40.261,
+            42.56,
+            43.38,
+            41.041,
+            40.601,
+            40.4,
+            39.54,
+            39.661,
+            40.601,
+            41.141,
+            42.52,
+            41.501,
+            41.301,
+            40.4,
+            40.48,
+            41.141,
+            41.761,
+            39.821,
+            40.041,
+            40.7,
+            41.121,
+            40.141,
+            41.281,
+            42.221,
+            40.501,
+            40.261,
+            40.281,
+            40.62,
+            39.04,
+            40.081,
+            40.841,
+            41.101,
+            39.541,
+            40.161,
+            42.081,
+            38.721,
+            39.361,
+            40.1,
+            39.381,
+            41.061,
+            40.101,
+            40.721,
+            40.861,
+            39.641,
+            39.48,
+            41.241,
+            40.561,
+            39.141,
+            39.641,
+            40.341
+          ],
+          "warmup_us": [
+            41.501,
+            41.441,
+            40.341,
+            39.321,
+            41.381,
+            42.441,
+            39.101,
+            40.561,
+            39.861,
+            40.621,
+            39.281,
+            39.801,
+            39.781,
+            39.701,
+            39.681,
+            39.641,
+            39.461,
+            40.52,
+            41.001,
+            40.561
+          ],
+          "validation_us": [
+            62.341
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 40.4905,
+          "mean_us": 40.56956,
+          "min_us": 38.721,
+          "max_us": 43.38,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            60.362,
+            59.742,
+            59.681,
+            59.481,
+            60.081,
+            60.241,
+            60.281,
+            60.222,
+            60.141,
+            60.222,
+            60.141,
+            60.121,
+            59.681,
+            60.021,
+            60.441,
+            60.202,
+            60.302,
+            60.182,
+            59.961,
+            59.941,
+            60.261,
+            60.381,
+            59.921,
+            60.061,
+            60.121,
+            60.382,
+            60.341,
+            60.121,
+            59.781,
+            60.421,
+            60.181,
+            59.882,
+            60.262,
+            59.621,
+            60.222,
+            59.781,
+            59.981,
+            59.941,
+            60.162,
+            60.181,
+            60.142,
+            59.801,
+            60.141,
+            60.002,
+            59.881,
+            60.221,
+            60.042,
+            59.921,
+            59.741,
+            59.961
+          ],
+          "warmup_us": [
+            60.722,
+            60.061,
+            59.801,
+            60.141,
+            59.981,
+            60.241,
+            59.981,
+            60.141,
+            60.322,
+            60.141,
+            59.981,
+            60.122,
+            60.021,
+            59.741,
+            60.042,
+            60.001,
+            60.161,
+            59.841,
+            59.662,
+            60.081
+          ],
+          "validation_us": [
+            80.401
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 60.121,
+          "mean_us": 60.0661,
+          "min_us": 59.481,
+          "max_us": 60.441,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            90.442,
+            89.861,
+            90.742,
+            89.282,
+            90.122,
+            89.102,
+            90.402,
+            89.561,
+            91.062,
+            90.041,
+            90.642,
+            89.342,
+            90.441,
+            89.221,
+            90.761,
+            89.181,
+            90.582,
+            89.642,
+            90.342,
+            89.762,
+            91.122,
+            90.662,
+            90.241,
+            89.681,
+            90.361,
+            90.122,
+            90.361,
+            90.682,
+            90.682,
+            90.342,
+            90.202,
+            89.022,
+            90.641,
+            90.162,
+            90.302,
+            89.602,
+            90.302,
+            89.141,
+            90.862,
+            89.382,
+            90.842,
+            90.062,
+            90.902,
+            89.582,
+            90.402,
+            89.462,
+            90.282,
+            90.582,
+            90.762,
+            89.402
+          ],
+          "warmup_us": [
+            90.441,
+            89.362,
+            89.442,
+            89.122,
+            90.602,
+            89.521,
+            90.742,
+            90.121,
+            90.542,
+            89.222,
+            90.342,
+            88.922,
+            90.721,
+            89.742,
+            90.982,
+            89.342,
+            90.802,
+            89.922,
+            90.502,
+            89.242
+          ],
+          "validation_us": [
+            112.302
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 90.292,
+          "mean_us": 90.13374,
+          "min_us": 89.022,
+          "max_us": 91.122,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            87.922,
+            88.302,
+            88.562,
+            88.542,
+            88.021,
+            88.321,
+            88.422,
+            88.482,
+            88.422,
+            88.382,
+            88.481,
+            88.401,
+            88.462,
+            88.581,
+            88.442,
+            88.582,
+            88.842,
+            87.862,
+            87.902,
+            88.442,
+            87.541,
+            88.481,
+            88.462,
+            87.802,
+            87.922,
+            88.802,
+            88.042,
+            88.462,
+            89.102,
+            88.462,
+            88.522,
+            88.261,
+            88.201,
+            88.202,
+            88.261,
+            88.622,
+            88.241,
+            87.902,
+            88.321,
+            88.722,
+            87.802,
+            88.082,
+            88.602,
+            88.062,
+            88.102,
+            88.322,
+            88.342,
+            88.662,
+            88.622,
+            88.101
+          ],
+          "warmup_us": [
+            90.382,
+            89.101,
+            88.682,
+            88.222,
+            88.022,
+            88.481,
+            88.402,
+            88.642,
+            88.461,
+            88.882,
+            88.761,
+            88.241,
+            88.222,
+            88.321,
+            88.461,
+            88.702,
+            88.902,
+            88.542,
+            88.082,
+            88.302
+          ],
+          "validation_us": [
+            110.302
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.39150000000001,
+          "mean_us": 88.32814,
+          "min_us": 87.541,
+          "max_us": 89.102,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            89.142,
+            88.742,
+            88.901,
+            88.482,
+            88.702,
+            89.102,
+            88.701,
+            88.562,
+            88.962,
+            88.782,
+            89.022,
+            88.542,
+            88.522,
+            89.162,
+            88.882,
+            89.382,
+            88.582,
+            89.302,
+            88.462,
+            88.842,
+            88.722,
+            89.181,
+            88.942,
+            89.122,
+            88.442,
+            88.982,
+            88.802,
+            89.262,
+            89.082,
+            88.721,
+            88.442,
+            88.942,
+            88.762,
+            88.782,
+            88.661,
+            89.082,
+            88.842,
+            89.282,
+            88.142,
+            89.342,
+            89.002,
+            89.162,
+            88.541,
+            89.042,
+            88.582,
+            88.822,
+            88.621,
+            88.942,
+            88.601,
+            89.102
+          ],
+          "warmup_us": [
+            89.602,
+            88.982,
+            88.922,
+            88.622,
+            88.561,
+            88.902,
+            88.662,
+            88.761,
+            89.142,
+            88.782,
+            88.882,
+            89.002,
+            89.022,
+            88.662,
+            88.942,
+            88.662,
+            88.562,
+            88.742,
+            88.702,
+            88.882
+          ],
+          "validation_us": [
+            115.303
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.842,
+          "mean_us": 88.85464,
+          "min_us": 88.142,
+          "max_us": 89.382,
+          "count": 50
+        }
+      }
+    },
+    {
+      "commit": "83588275dc08590242e79bc6c648d08aa682f572191c9778d386526e63463d99",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "b660c66edf4622b3cdac574536907a6c195262395df4305a210df3b04e6a70bc",
+      "application_report": "performance/app-4.json",
+      "csv": "performance/profile-4/PROF_000001_20261002095735332_00037099HAEMDOAO/mindstudio_profiler_output/op_summary_20261002095743.csv",
+      "csv_sha256": "37149f9aeac70db8cbf90f4008412f6f2ea0c1684ff8a19f2f447b4167dbc8b3",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.68,
+            4.56,
+            4.64,
+            4.7,
+            4.76,
+            4.72,
+            4.54,
+            4.64,
+            4.72,
+            4.76,
+            4.821,
+            4.54,
+            4.7,
+            4.74,
+            5.06,
+            4.7,
+            4.56,
+            4.64,
+            4.74,
+            5.06,
+            4.7,
+            4.92,
+            4.641,
+            4.74,
+            4.76,
+            4.68,
+            4.581,
+            4.66,
+            4.72,
+            4.76,
+            4.82,
+            4.56,
+            4.66,
+            4.7,
+            4.76,
+            4.68,
+            4.58,
+            4.74,
+            4.74,
+            4.76,
+            4.66,
+            4.781,
+            4.66,
+            4.96,
+            4.76,
+            4.7,
+            4.58,
+            4.64,
+            4.72,
+            4.72
+          ],
+          "warmup_us": [
+            10.74,
+            8.22,
+            8.14,
+            8.28,
+            4.8,
+            4.7,
+            4.561,
+            4.7,
+            4.74,
+            4.76,
+            4.68,
+            4.561,
+            4.64,
+            4.74,
+            4.76,
+            4.701,
+            4.56,
+            4.7,
+            4.92,
+            4.74
+          ],
+          "validation_us": [
+            21.24
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.7,
+          "mean_us": 4.71248,
+          "min_us": 4.54,
+          "max_us": 5.06,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            41.64,
+            39.741,
+            39.821,
+            38.26,
+            41.581,
+            40.261,
+            40.301,
+            39.741,
+            40.341,
+            40.281,
+            41.041,
+            40.001,
+            39.12,
+            41.761,
+            39.98,
+            40.381,
+            39.941,
+            40.28,
+            40.201,
+            40.321,
+            39.241,
+            39.881,
+            40.001,
+            40.281,
+            40.401,
+            40.42,
+            40.581,
+            40.301,
+            39.321,
+            40.261,
+            39.06,
+            39.281,
+            38.701,
+            38.941,
+            39.16,
+            41.041,
+            38.841,
+            39.941,
+            42.82,
+            39.161,
+            40.401,
+            39.421,
+            39.441,
+            38.661,
+            40.961,
+            40.521,
+            40.481,
+            41.101,
+            40.421,
+            40.741
+          ],
+          "warmup_us": [
+            41.441,
+            40.76,
+            40.82,
+            39.441,
+            39.901,
+            41.241,
+            40.681,
+            39.961,
+            40.18,
+            40.781,
+            39.501,
+            39.761,
+            39.4,
+            39.62,
+            39.601,
+            40.581,
+            39.341,
+            40.101,
+            40.541,
+            40.18
+          ],
+          "validation_us": [
+            59.581
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 40.261,
+          "mean_us": 40.09562,
+          "min_us": 38.26,
+          "max_us": 42.82,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            59.561,
+            59.041,
+            59.681,
+            59.161,
+            59.761,
+            59.242,
+            59.021,
+            59.601,
+            59.001,
+            59.182,
+            59.622,
+            59.262,
+            59.722,
+            59.441,
+            59.381,
+            59.041,
+            58.821,
+            59.521,
+            59.221,
+            59.641,
+            59.201,
+            58.861,
+            59.602,
+            59.402,
+            59.401,
+            59.121,
+            58.561,
+            59.521,
+            59.321,
+            59.161,
+            59.242,
+            59.081,
+            60.041,
+            59.221,
+            59.481,
+            59.402,
+            58.261,
+            59.361,
+            59.501,
+            59.262,
+            59.081,
+            59.002,
+            59.201,
+            59.321,
+            58.841,
+            59.121,
+            58.542,
+            59.301,
+            59.361,
+            59.182
+          ],
+          "warmup_us": [
+            63.121,
+            59.302,
+            59.922,
+            59.441,
+            59.201,
+            59.201,
+            58.721,
+            59.662,
+            58.721,
+            59.321,
+            59.241,
+            59.021,
+            59.262,
+            59.342,
+            59.682,
+            59.041,
+            59.061,
+            59.842,
+            59.301,
+            59.582
+          ],
+          "validation_us": [
+            83.601
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 59.251999999999995,
+          "mean_us": 59.25766,
+          "min_us": 58.261,
+          "max_us": 60.041,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            88.722,
+            90.842,
+            88.562,
+            90.361,
+            88.562,
+            90.782,
+            88.781,
+            90.422,
+            88.302,
+            90.202,
+            88.422,
+            90.542,
+            88.302,
+            90.582,
+            88.681,
+            90.582,
+            88.702,
+            90.482,
+            88.842,
+            90.581,
+            88.242,
+            90.942,
+            89.141,
+            90.642,
+            88.362,
+            90.062,
+            88.442,
+            90.681,
+            88.501,
+            90.882,
+            88.321,
+            90.662,
+            87.882,
+            90.662,
+            88.482,
+            90.821,
+            88.362,
+            90.521,
+            88.441,
+            90.441,
+            88.541,
+            90.502,
+            88.442,
+            90.522,
+            88.482,
+            90.322,
+            88.161,
+            90.662,
+            87.802,
+            90.581
+          ],
+          "warmup_us": [
+            88.462,
+            91.022,
+            88.582,
+            90.962,
+            88.722,
+            91.182,
+            88.601,
+            90.422,
+            88.481,
+            90.382,
+            88.602,
+            90.502,
+            88.682,
+            90.641,
+            88.442,
+            90.661,
+            88.022,
+            90.141,
+            88.622,
+            90.782
+          ],
+          "validation_us": [
+            112.642
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 89.6015,
+          "mean_us": 89.5153,
+          "min_us": 87.802,
+          "max_us": 90.942,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            88.362,
+            88.622,
+            89.682,
+            88.621,
+            88.742,
+            88.381,
+            88.401,
+            88.201,
+            88.901,
+            88.682,
+            88.462,
+            88.661,
+            88.761,
+            88.322,
+            88.542,
+            89.122,
+            88.502,
+            89.041,
+            88.642,
+            88.141,
+            88.422,
+            88.342,
+            89.502,
+            88.402,
+            89.101,
+            88.302,
+            88.882,
+            87.922,
+            88.381,
+            88.862,
+            88.542,
+            88.141,
+            88.682,
+            88.402,
+            88.422,
+            89.102,
+            88.642,
+            88.562,
+            88.402,
+            87.942,
+            88.522,
+            88.062,
+            89.262,
+            88.502,
+            88.902,
+            88.042,
+            88.482,
+            88.202,
+            88.662,
+            88.601
+          ],
+          "warmup_us": [
+            90.322,
+            88.601,
+            89.262,
+            88.722,
+            89.302,
+            88.262,
+            88.442,
+            87.942,
+            88.721,
+            88.941,
+            88.582,
+            88.662,
+            88.682,
+            88.622,
+            88.561,
+            89.181,
+            87.921,
+            88.582,
+            88.501,
+            88.241
+          ],
+          "validation_us": [
+            111.082
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.53200000000001,
+          "mean_us": 88.57974,
+          "min_us": 87.922,
+          "max_us": 89.682,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            88.522,
+            87.842,
+            88.482,
+            88.002,
+            88.642,
+            87.982,
+            88.621,
+            88.362,
+            88.322,
+            88.402,
+            88.882,
+            87.841,
+            88.742,
+            87.982,
+            88.662,
+            87.862,
+            88.502,
+            88.302,
+            88.562,
+            88.261,
+            88.681,
+            87.942,
+            88.602,
+            87.982,
+            88.601,
+            88.102,
+            88.722,
+            88.422,
+            88.902,
+            87.842,
+            88.622,
+            87.782,
+            88.782,
+            88.162,
+            88.642,
+            87.761,
+            88.662,
+            87.962,
+            88.682,
+            88.242,
+            88.622,
+            88.121,
+            88.881,
+            88.021,
+            88.602,
+            88.101,
+            88.322,
+            88.022,
+            88.902,
+            88.102
+          ],
+          "warmup_us": [
+            89.462,
+            87.662,
+            89.021,
+            88.021,
+            88.941,
+            87.782,
+            88.822,
+            88.001,
+            88.961,
+            88.041,
+            88.022,
+            88.102,
+            88.661,
+            87.842,
+            89.202,
+            88.022,
+            88.322,
+            87.902,
+            88.562,
+            87.962
+          ],
+          "validation_us": [
+            119.322
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.382,
+          "mean_us": 88.3514,
+          "min_us": 87.761,
+          "max_us": 88.902,
+          "count": 50
+        }
+      }
+    },
+    {
+      "commit": "31ef8a6434c177fe10611dca6c164aaf85a9113176f1aa3b051280db2f300a79",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "6932940dce155fdcaacb41e07f314b49885dcbc077aa1be33751f6487ce24dd0",
+      "application_report": "performance/app-5.json",
+      "csv": "performance/profile-5/PROF_000001_20261002095745400_00037355BCFDDLII/mindstudio_profiler_output/op_summary_20261002095752.csv",
+      "csv_sha256": "f7da5d6855e2b4804d737c723bad3dd5273f8027d34661a0797848958b345f9a",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.74,
+            4.68,
+            4.8,
+            4.6,
+            4.66,
+            4.74,
+            4.68,
+            4.66,
+            4.561,
+            4.66,
+            4.72,
+            4.7,
+            4.661,
+            4.56,
+            4.74,
+            4.72,
+            4.681,
+            4.66,
+            4.58,
+            4.66,
+            4.741,
+            4.7,
+            4.66,
+            4.56,
+            4.761,
+            4.72,
+            4.66,
+            4.66,
+            4.821,
+            4.76,
+            4.72,
+            4.7,
+            4.66,
+            4.56,
+            4.7,
+            4.68,
+            4.66,
+            4.66,
+            4.58,
+            4.661,
+            4.74,
+            4.68,
+            4.68,
+            4.581,
+            4.64,
+            4.72,
+            4.66,
+            4.7,
+            4.58,
+            4.66
+          ],
+          "warmup_us": [
+            9.4,
+            7.74,
+            8.6,
+            8.04,
+            4.64,
+            4.72,
+            4.68,
+            4.761,
+            4.56,
+            4.66,
+            4.74,
+            4.701,
+            4.98,
+            4.56,
+            4.7,
+            4.681,
+            4.68,
+            4.66,
+            4.7,
+            4.68
+          ],
+          "validation_us": [
+            15.18
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.6705,
+          "mean_us": 4.67456,
+          "min_us": 4.56,
+          "max_us": 4.821,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            40.621,
+            40.981,
+            40.0,
+            39.881,
+            39.94,
+            39.361,
+            40.021,
+            40.101,
+            39.801,
+            41.08,
+            39.781,
+            39.841,
+            40.4,
+            39.6,
+            39.661,
+            39.881,
+            40.041,
+            39.781,
+            39.221,
+            41.681,
+            40.3,
+            39.261,
+            39.981,
+            39.121,
+            40.461,
+            39.421,
+            39.92,
+            40.321,
+            40.121,
+            40.321,
+            39.361,
+            41.98,
+            40.42,
+            39.701,
+            39.341,
+            39.161,
+            39.46,
+            40.741,
+            40.741,
+            40.161,
+            39.861,
+            41.161,
+            40.421,
+            40.641,
+            39.301,
+            40.061,
+            39.64,
+            40.401,
+            40.061,
+            39.781
+          ],
+          "warmup_us": [
+            40.4,
+            40.281,
+            40.921,
+            41.801,
+            39.621,
+            41.881,
+            40.021,
+            39.121,
+            40.981,
+            39.821,
+            40.521,
+            39.321,
+            40.741,
+            42.68,
+            40.581,
+            40.001,
+            40.781,
+            38.901,
+            39.4,
+            39.28
+          ],
+          "validation_us": [
+            62.001
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 39.9905,
+          "mean_us": 40.06598,
+          "min_us": 39.121,
+          "max_us": 41.98,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            59.401,
+            59.821,
+            59.482,
+            59.461,
+            59.961,
+            59.341,
+            60.042,
+            59.941,
+            59.301,
+            59.922,
+            59.421,
+            59.761,
+            59.701,
+            59.522,
+            60.341,
+            59.301,
+            59.642,
+            59.561,
+            59.481,
+            60.041,
+            59.581,
+            59.741,
+            59.681,
+            59.601,
+            59.841,
+            59.441,
+            59.961,
+            59.661,
+            59.742,
+            59.801,
+            59.521,
+            60.101,
+            59.741,
+            59.621,
+            60.561,
+            59.341,
+            59.901,
+            59.541,
+            59.681,
+            59.621,
+            59.241,
+            60.122,
+            59.801,
+            59.341,
+            59.681,
+            59.421,
+            60.061,
+            59.701,
+            59.641,
+            59.881
+          ],
+          "warmup_us": [
+            60.401,
+            60.461,
+            59.682,
+            59.621,
+            59.982,
+            59.461,
+            59.821,
+            60.162,
+            59.681,
+            60.121,
+            59.461,
+            59.881,
+            59.701,
+            60.122,
+            60.082,
+            59.521,
+            59.901,
+            59.722,
+            59.281,
+            59.961
+          ],
+          "validation_us": [
+            82.362
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 59.681,
+          "mean_us": 59.70034,
+          "min_us": 59.241,
+          "max_us": 60.561,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            90.742,
+            88.462,
+            91.001,
+            88.902,
+            90.881,
+            88.701,
+            91.202,
+            89.042,
+            90.821,
+            88.482,
+            90.722,
+            88.461,
+            90.582,
+            88.622,
+            90.602,
+            89.222,
+            90.602,
+            88.362,
+            90.602,
+            88.621,
+            91.061,
+            88.282,
+            90.542,
+            88.162,
+            91.022,
+            89.182,
+            90.502,
+            88.402,
+            91.142,
+            88.382,
+            90.402,
+            88.642,
+            90.922,
+            88.802,
+            90.861,
+            88.662,
+            90.822,
+            88.382,
+            91.102,
+            88.242,
+            90.302,
+            88.362,
+            90.922,
+            88.622,
+            90.742,
+            88.421,
+            90.462,
+            88.842,
+            90.562,
+            88.622
+          ],
+          "warmup_us": [
+            91.082,
+            88.561,
+            90.662,
+            88.442,
+            90.602,
+            89.002,
+            90.462,
+            88.482,
+            90.462,
+            88.662,
+            90.802,
+            88.862,
+            90.722,
+            88.402,
+            90.601,
+            88.221,
+            90.481,
+            88.282,
+            90.262,
+            88.482
+          ],
+          "validation_us": [
+            109.442
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 89.762,
+          "mean_us": 89.68022,
+          "min_us": 88.162,
+          "max_us": 91.202,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            87.282,
+            88.002,
+            88.182,
+            88.242,
+            87.602,
+            88.141,
+            87.441,
+            87.842,
+            88.462,
+            87.441,
+            88.641,
+            88.122,
+            87.982,
+            88.402,
+            88.382,
+            87.661,
+            87.482,
+            88.022,
+            87.602,
+            87.642,
+            86.982,
+            88.182,
+            88.102,
+            88.122,
+            87.522,
+            87.962,
+            87.522,
+            87.842,
+            88.201,
+            87.262,
+            88.782,
+            87.881,
+            88.202,
+            88.502,
+            88.062,
+            88.002,
+            87.482,
+            87.901,
+            87.621,
+            87.342,
+            87.782,
+            88.161,
+            87.861,
+            88.201,
+            87.702,
+            88.122,
+            87.361,
+            87.902,
+            88.262,
+            87.742
+          ],
+          "warmup_us": [
+            89.742,
+            88.561,
+            87.902,
+            87.922,
+            87.721,
+            88.162,
+            87.621,
+            87.941,
+            87.981,
+            87.522,
+            88.542,
+            87.982,
+            88.122,
+            88.482,
+            88.082,
+            87.562,
+            87.502,
+            88.082,
+            87.682,
+            87.802
+          ],
+          "validation_us": [
+            110.242
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 87.932,
+          "mean_us": 87.90294,
+          "min_us": 86.982,
+          "max_us": 88.782,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            89.201,
+            88.601,
+            88.961,
+            89.002,
+            88.582,
+            88.342,
+            88.222,
+            88.602,
+            88.622,
+            88.941,
+            88.801,
+            88.261,
+            88.802,
+            88.521,
+            88.082,
+            88.802,
+            88.502,
+            88.682,
+            88.402,
+            88.642,
+            88.702,
+            88.802,
+            88.882,
+            88.521,
+            88.762,
+            88.502,
+            89.022,
+            88.682,
+            88.461,
+            88.942,
+            88.502,
+            88.122,
+            88.842,
+            87.922,
+            88.622,
+            89.122,
+            88.881,
+            89.122,
+            88.202,
+            88.542,
+            88.562,
+            88.602,
+            88.422,
+            88.481,
+            88.442,
+            89.042,
+            88.521,
+            88.322,
+            88.602,
+            88.481
+          ],
+          "warmup_us": [
+            90.042,
+            89.061,
+            88.642,
+            88.441,
+            89.182,
+            88.722,
+            88.542,
+            88.662,
+            88.582,
+            88.802,
+            88.722,
+            88.582,
+            88.242,
+            88.902,
+            88.862,
+            88.342,
+            88.542,
+            88.741,
+            88.682,
+            88.442
+          ],
+          "validation_us": [
+            113.922
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.602,
+          "mean_us": 88.62414,
+          "min_us": 87.922,
+          "max_us": 89.201,
+          "count": 50
+        }
+      }
+    },
+    {
+      "commit": "31ef8a6434c177fe10611dca6c164aaf85a9113176f1aa3b051280db2f300a79",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "6932940dce155fdcaacb41e07f314b49885dcbc077aa1be33751f6487ce24dd0",
+      "application_report": "performance/app-6.json",
+      "csv": "performance/profile-6/PROF_000001_20261002095754468_00037611EIBNPNPB/mindstudio_profiler_output/op_summary_20261002095801.csv",
+      "csv_sha256": "a9697c0ab50c1474a2d3f94aea90eafbfc038b91400e7706af02b5edd2c2f5ee",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.76,
+            4.68,
+            4.64,
+            4.74,
+            4.76,
+            4.78,
+            4.68,
+            4.76,
+            4.7,
+            4.801,
+            4.78,
+            5.02,
+            4.64,
+            4.68,
+            4.82,
+            4.76,
+            4.68,
+            4.64,
+            4.74,
+            4.76,
+            4.76,
+            4.72,
+            4.9,
+            4.72,
+            4.88,
+            4.78,
+            4.68,
+            4.64,
+            4.94,
+            4.8,
+            4.76,
+            4.66,
+            4.8,
+            4.92,
+            5.26,
+            4.78,
+            4.68,
+            4.62,
+            4.72,
+            4.82,
+            4.761,
+            4.7,
+            4.64,
+            4.7,
+            4.761,
+            4.78,
+            4.66,
+            4.72,
+            4.701,
+            4.76
+          ],
+          "warmup_us": [
+            10.74,
+            7.82,
+            8.52,
+            7.42,
+            4.82,
+            4.78,
+            4.96,
+            4.6,
+            4.72,
+            4.78,
+            4.74,
+            4.68,
+            4.64,
+            4.721,
+            4.84,
+            4.86,
+            4.7,
+            4.64,
+            4.7,
+            4.76
+          ],
+          "validation_us": [
+            21.061
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.76,
+          "mean_us": 4.75688,
+          "min_us": 4.62,
+          "max_us": 5.26,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            40.78,
+            39.801,
+            40.961,
+            39.841,
+            40.62,
+            39.9,
+            40.121,
+            43.401,
+            41.101,
+            41.22,
+            40.321,
+            40.421,
+            40.181,
+            41.42,
+            40.14,
+            41.081,
+            40.581,
+            41.921,
+            40.201,
+            40.821,
+            41.821,
+            43.001,
+            40.3,
+            40.101,
+            41.821,
+            39.74,
+            43.001,
+            41.821,
+            40.821,
+            40.721,
+            40.521,
+            41.041,
+            42.58,
+            40.021,
+            40.521,
+            40.441,
+            40.281,
+            40.42,
+            41.681,
+            41.801,
+            42.821,
+            40.481,
+            41.601,
+            41.001,
+            39.781,
+            40.781,
+            41.601,
+            40.721,
+            41.04,
+            41.201
+          ],
+          "warmup_us": [
+            41.981,
+            42.08,
+            40.961,
+            41.601,
+            40.84,
+            39.861,
+            42.401,
+            42.921,
+            40.981,
+            41.381,
+            40.401,
+            40.421,
+            42.881,
+            41.281,
+            40.881,
+            40.921,
+            40.821,
+            41.801,
+            42.961,
+            41.12
+          ],
+          "validation_us": [
+            60.341
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 40.7805,
+          "mean_us": 40.96638,
+          "min_us": 39.74,
+          "max_us": 43.401,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            60.461,
+            59.722,
+            60.162,
+            59.981,
+            59.922,
+            60.542,
+            59.801,
+            60.101,
+            59.881,
+            60.561,
+            60.181,
+            59.861,
+            60.322,
+            60.281,
+            60.041,
+            60.441,
+            59.961,
+            60.002,
+            60.241,
+            60.421,
+            59.822,
+            59.662,
+            60.181,
+            60.021,
+            60.441,
+            60.441,
+            59.561,
+            60.442,
+            60.181,
+            60.381,
+            60.201,
+            59.781,
+            59.941,
+            60.062,
+            59.941,
+            60.441,
+            59.882,
+            59.981,
+            59.802,
+            60.242,
+            60.582,
+            59.562,
+            60.021,
+            60.021,
+            60.181,
+            60.401,
+            59.961,
+            60.161,
+            60.202,
+            60.182
+          ],
+          "warmup_us": [
+            61.741,
+            60.281,
+            60.262,
+            60.161,
+            60.321,
+            60.561,
+            59.701,
+            60.262,
+            60.221,
+            60.521,
+            60.202,
+            60.061,
+            60.081,
+            59.801,
+            60.121,
+            60.301,
+            59.862,
+            59.961,
+            60.241,
+            60.081
+          ],
+          "validation_us": [
+            78.002
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 60.131,
+          "mean_us": 60.11134,
+          "min_us": 59.561,
+          "max_us": 60.582,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            89.262,
+            90.941,
+            89.322,
+            90.722,
+            88.622,
+            91.522,
+            89.341,
+            91.302,
+            88.762,
+            90.742,
+            88.962,
+            90.862,
+            89.041,
+            90.422,
+            89.522,
+            90.722,
+            89.262,
+            91.042,
+            89.281,
+            90.481,
+            89.242,
+            90.862,
+            89.281,
+            90.682,
+            88.762,
+            90.722,
+            88.942,
+            91.662,
+            89.122,
+            90.762,
+            89.562,
+            90.782,
+            89.662,
+            91.122,
+            88.942,
+            90.682,
+            89.141,
+            90.682,
+            89.342,
+            91.021,
+            89.301,
+            91.221,
+            89.242,
+            89.922,
+            89.002,
+            91.362,
+            89.342,
+            90.781,
+            89.082,
+            91.462
+          ],
+          "warmup_us": [
+            88.782,
+            91.182,
+            89.001,
+            91.201,
+            89.202,
+            91.021,
+            88.982,
+            90.722,
+            89.222,
+            91.541,
+            89.002,
+            91.602,
+            89.182,
+            91.842,
+            89.362,
+            90.682,
+            89.002,
+            90.582,
+            89.082,
+            90.482
+          ],
+          "validation_us": [
+            111.443
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 89.792,
+          "mean_us": 90.03658,
+          "min_us": 88.622,
+          "max_us": 91.662,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            88.802,
+            88.562,
+            88.801,
+            88.102,
+            88.542,
+            87.882,
+            88.182,
+            88.582,
+            88.382,
+            88.262,
+            88.342,
+            87.982,
+            88.722,
+            88.662,
+            87.802,
+            88.942,
+            87.781,
+            88.422,
+            88.301,
+            88.282,
+            88.842,
+            88.282,
+            88.802,
+            87.981,
+            88.602,
+            87.922,
+            88.142,
+            88.142,
+            88.782,
+            87.921,
+            88.501,
+            88.221,
+            88.762,
+            88.461,
+            87.902,
+            88.781,
+            87.982,
+            88.262,
+            88.302,
+            88.402,
+            88.922,
+            88.262,
+            88.782,
+            88.202,
+            88.642,
+            87.982,
+            88.282,
+            88.242,
+            88.462,
+            88.542
+          ],
+          "warmup_us": [
+            90.982,
+            89.002,
+            88.902,
+            87.982,
+            88.502,
+            88.022,
+            88.282,
+            88.002,
+            88.361,
+            88.162,
+            88.382,
+            88.621,
+            88.781,
+            88.462,
+            88.442,
+            89.002,
+            88.061,
+            88.502,
+            88.562,
+            88.242
+          ],
+          "validation_us": [
+            111.562
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.322,
+          "mean_us": 88.37302,
+          "min_us": 87.781,
+          "max_us": 88.942,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            88.982,
+            89.081,
+            88.881,
+            89.482,
+            88.982,
+            89.442,
+            89.322,
+            88.542,
+            88.762,
+            89.241,
+            89.322,
+            89.462,
+            88.862,
+            89.042,
+            89.122,
+            89.002,
+            89.521,
+            89.022,
+            88.841,
+            89.301,
+            88.882,
+            88.922,
+            88.562,
+            89.262,
+            88.942,
+            89.122,
+            88.502,
+            88.842,
+            89.162,
+            89.082,
+            89.382,
+            89.361,
+            89.002,
+            88.381,
+            89.301,
+            89.102,
+            88.862,
+            89.042,
+            88.822,
+            88.222,
+            88.722,
+            89.542,
+            88.702,
+            89.002,
+            88.722,
+            89.822,
+            89.662,
+            89.002,
+            89.022,
+            88.902
+          ],
+          "warmup_us": [
+            90.802,
+            88.822,
+            88.561,
+            89.001,
+            89.262,
+            89.062,
+            89.522,
+            89.162,
+            88.642,
+            89.021,
+            89.361,
+            89.482,
+            89.082,
+            89.022,
+            89.462,
+            88.461,
+            89.042,
+            88.902,
+            89.182,
+            88.741
+          ],
+          "validation_us": [
+            116.603
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 89.012,
+          "mean_us": 89.04142,
+          "min_us": 88.222,
+          "max_us": 89.822,
+          "count": 50
+        }
+      }
+    },
+    {
+      "commit": "83588275dc08590242e79bc6c648d08aa682f572191c9778d386526e63463d99",
+      "mode": "真实NPU普通msprof task-time=l0",
+      "soc": "Ascend910_9362",
+      "dtype": "fp16",
+      "layout": "NN",
+      "library_sha256": "b660c66edf4622b3cdac574536907a6c195262395df4305a210df3b04e6a70bc",
+      "application_report": "performance/app-7.json",
+      "csv": "performance/profile-7/PROF_000001_20261002095803534_00037865DLQMBRJR/mindstudio_profiler_output/op_summary_20261002095810.csv",
+      "csv_sha256": "d64423e69d1d96495a05aeceb3e70b2c3676d6ca236e134cfbc00a87f5df03e4",
+      "results": {
+        "5": {
+          "samples_us": [
+            4.64,
+            4.821,
+            4.76,
+            4.74,
+            4.54,
+            4.661,
+            4.88,
+            5.08,
+            4.72,
+            4.7,
+            4.62,
+            4.82,
+            4.76,
+            4.78,
+            4.56,
+            4.7,
+            4.82,
+            4.8,
+            4.76,
+            4.56,
+            4.66,
+            4.9,
+            4.721,
+            4.98,
+            4.6,
+            4.64,
+            4.881,
+            4.78,
+            4.72,
+            4.6,
+            4.641,
+            4.78,
+            4.78,
+            4.76,
+            4.561,
+            4.64,
+            4.84,
+            5.02,
+            4.781,
+            4.56,
+            4.62,
+            4.86,
+            4.721,
+            4.94,
+            4.58,
+            4.62,
+            4.781,
+            4.78,
+            4.72,
+            4.86
+          ],
+          "warmup_us": [
+            10.46,
+            8.24,
+            8.58,
+            7.8,
+            4.54,
+            4.82,
+            4.84,
+            4.7,
+            4.76,
+            4.56,
+            4.92,
+            4.78,
+            4.82,
+            4.721,
+            4.58,
+            4.64,
+            4.84,
+            4.781,
+            4.74,
+            4.56
+          ],
+          "validation_us": [
+            19.96
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum21ComputeLargeBatchDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj"
+          ],
+          "median_us": 4.75,
+          "mean_us": 4.74098,
+          "min_us": 4.54,
+          "max_us": 5.08,
+          "count": 50
+        },
+        "8": {
+          "samples_us": [
+            38.76,
+            39.4,
+            39.441,
+            38.821,
+            39.781,
+            40.42,
+            38.961,
+            39.4,
+            40.301,
+            39.94,
+            39.821,
+            39.321,
+            39.721,
+            40.181,
+            40.02,
+            38.921,
+            39.921,
+            37.901,
+            40.421,
+            42.08,
+            38.661,
+            39.941,
+            39.02,
+            40.341,
+            40.481,
+            39.381,
+            39.461,
+            39.0,
+            38.561,
+            38.761,
+            38.7,
+            39.021,
+            40.381,
+            38.801,
+            39.681,
+            39.561,
+            39.581,
+            40.14,
+            39.161,
+            40.901,
+            38.701,
+            39.981,
+            39.981,
+            40.98,
+            37.68,
+            39.401,
+            39.801,
+            40.641,
+            39.641,
+            39.301
+          ],
+          "warmup_us": [
+            41.68,
+            39.9,
+            39.96,
+            39.241,
+            41.621,
+            40.761,
+            39.001,
+            38.881,
+            39.54,
+            38.621,
+            38.78,
+            40.041,
+            39.8,
+            40.141,
+            39.38,
+            40.301,
+            39.461,
+            41.121,
+            40.101,
+            39.021
+          ],
+          "validation_us": [
+            59.961
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 39.571,
+          "mean_us": 39.58354,
+          "min_us": 37.68,
+          "max_us": 42.08,
+          "count": 50
+        },
+        "9": {
+          "samples_us": [
+            58.302,
+            59.141,
+            58.481,
+            59.021,
+            58.941,
+            58.361,
+            59.302,
+            58.521,
+            58.801,
+            59.081,
+            58.562,
+            59.081,
+            58.261,
+            59.021,
+            58.741,
+            58.201,
+            59.441,
+            58.401,
+            59.081,
+            58.821,
+            58.222,
+            59.221,
+            58.481,
+            59.121,
+            58.761,
+            58.581,
+            59.301,
+            58.081,
+            58.842,
+            59.142,
+            58.561,
+            59.061,
+            58.222,
+            58.921,
+            58.781,
+            58.762,
+            59.201,
+            58.421,
+            58.882,
+            58.641,
+            58.321,
+            59.141,
+            58.121,
+            58.821,
+            59.001,
+            58.581,
+            59.161,
+            58.461,
+            59.161,
+            58.842
+          ],
+          "warmup_us": [
+            61.641,
+            59.542,
+            58.261,
+            59.081,
+            59.042,
+            58.442,
+            59.561,
+            58.261,
+            58.841,
+            58.681,
+            58.521,
+            59.421,
+            58.181,
+            58.921,
+            59.081,
+            58.421,
+            59.141,
+            58.141,
+            59.021,
+            58.781
+          ],
+          "validation_us": [
+            84.521
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 58.811,
+          "mean_us": 58.7676,
+          "min_us": 58.081,
+          "max_us": 59.441,
+          "count": 50
+        },
+        "10": {
+          "samples_us": [
+            90.981,
+            88.862,
+            91.302,
+            88.021,
+            91.662,
+            88.662,
+            90.762,
+            88.422,
+            91.282,
+            88.562,
+            91.041,
+            88.562,
+            90.962,
+            88.382,
+            90.962,
+            88.641,
+            91.102,
+            88.662,
+            91.142,
+            88.582,
+            91.142,
+            88.722,
+            91.102,
+            88.122,
+            91.342,
+            88.941,
+            91.002,
+            88.541,
+            91.082,
+            88.341,
+            91.102,
+            88.462,
+            91.462,
+            88.742,
+            90.681,
+            88.362,
+            90.942,
+            87.622,
+            90.822,
+            88.822,
+            91.102,
+            88.381,
+            91.162,
+            88.522,
+            91.001,
+            88.342,
+            90.462,
+            88.582,
+            91.201,
+            88.362
+          ],
+          "warmup_us": [
+            91.141,
+            88.281,
+            90.822,
+            88.582,
+            91.222,
+            88.162,
+            91.302,
+            88.421,
+            91.162,
+            88.382,
+            90.982,
+            88.981,
+            90.842,
+            88.502,
+            91.382,
+            88.942,
+            91.062,
+            88.682,
+            90.842,
+            88.582
+          ],
+          "validation_us": [
+            109.323
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 89.70150000000001,
+          "mean_us": 89.78058,
+          "min_us": 87.622,
+          "max_us": 91.662,
+          "count": 50
+        },
+        "11": {
+          "samples_us": [
+            87.482,
+            87.902,
+            88.061,
+            88.182,
+            87.922,
+            88.242,
+            87.722,
+            87.862,
+            87.982,
+            87.861,
+            88.762,
+            87.942,
+            88.342,
+            88.002,
+            88.442,
+            87.481,
+            88.362,
+            88.062,
+            87.662,
+            88.081,
+            87.301,
+            88.142,
+            88.121,
+            88.602,
+            87.302,
+            88.162,
+            87.542,
+            88.021,
+            88.082,
+            87.742,
+            88.602,
+            87.381,
+            88.142,
+            88.002,
+            88.342,
+            87.421,
+            87.901,
+            87.561,
+            87.742,
+            87.882,
+            87.261,
+            88.002,
+            88.042,
+            88.261,
+            87.362,
+            88.302,
+            87.741,
+            88.002,
+            87.901,
+            88.101
+          ],
+          "warmup_us": [
+            88.341,
+            88.602,
+            87.982,
+            88.582,
+            87.562,
+            88.382,
+            87.762,
+            88.062,
+            88.102,
+            87.682,
+            88.842,
+            87.862,
+            88.182,
+            88.041,
+            88.282,
+            87.402,
+            87.822,
+            87.942,
+            87.502,
+            87.802
+          ],
+          "validation_us": [
+            107.943
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj256ELj128ELb0ELb1ELj128ELj256EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 88.002,
+          "mean_us": 87.94648,
+          "min_us": 87.261,
+          "max_us": 88.762,
+          "count": 50
+        },
+        "12": {
+          "samples_us": [
+            87.922,
+            88.002,
+            87.622,
+            87.702,
+            88.202,
+            87.902,
+            87.662,
+            88.082,
+            87.722,
+            87.861,
+            87.962,
+            88.022,
+            88.022,
+            88.042,
+            87.562,
+            87.682,
+            87.821,
+            88.002,
+            87.702,
+            87.842,
+            87.542,
+            87.761,
+            87.422,
+            87.901,
+            88.042,
+            88.122,
+            87.802,
+            87.782,
+            87.642,
+            88.122,
+            87.842,
+            87.901,
+            87.282,
+            87.662,
+            88.142,
+            87.882,
+            87.922,
+            88.161,
+            87.842,
+            87.781,
+            87.802,
+            88.002,
+            87.682,
+            87.842,
+            87.541,
+            88.142,
+            87.841,
+            87.622,
+            87.982,
+            88.002
+          ],
+          "warmup_us": [
+            89.182,
+            88.182,
+            88.122,
+            87.881,
+            87.942,
+            87.942,
+            88.222,
+            87.901,
+            88.122,
+            87.722,
+            88.042,
+            87.942,
+            87.642,
+            88.081,
+            87.962,
+            88.062,
+            87.541,
+            87.561,
+            88.041,
+            88.021
+          ],
+          "validation_us": [
+            114.702
+          ],
+          "kernels": [
+            "_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb1ELj128ELj512ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+          ],
+          "median_us": 87.842,
+          "mean_us": 87.84702,
+          "min_us": 87.282,
+          "max_us": 88.202,
+          "count": 50
+        }
+      }
+    }
+  ],
+  "OJ状态": "待用户官方OJ全点验证；开发卡结果不能替代OJ"
+}
