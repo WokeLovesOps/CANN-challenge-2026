@@ -1,0 +1,51 @@
+{
+  "说明": "最终版本只组合已有OJ全通过的函数及调度，未加入新算法。另有独立代理只读审查。",
+  "源码sha256": "8c9594a408f45d834393435b29e63766efb6e6bfd10a3871ba01e84c9f58bc0c",
+  "核验": [
+    {
+      "区段": "__global__ __aicore__ void Compute(",
+      "参考提交": "67387c4",
+      "逐字相同": true
+    },
+    {
+      "区段": "__aicore__ constexpr auto MakeKernelMatmulConfig()",
+      "参考提交": "67387c4",
+      "逐字相同": true
+    },
+    {
+      "区段": "void LaunchExploration(",
+      "参考提交": "67387c4",
+      "逐字相同": true
+    },
+    {
+      "区段": "extern \"C\" void run_kernel(",
+      "参考提交": "67387c4",
+      "逐字相同": true
+    },
+    {
+      "区段": "ComputePoint6ManualCube",
+      "参考提交": "7f0cad1",
+      "逐字相同": true
+    },
+    {
+      "区段": "ComputePoint8ManualCube",
+      "参考提交": "7f0cad1",
+      "逐字相同": true
+    },
+    {
+      "区段": "ComputePoint13ManualCube",
+      "参考提交": "7f0cad1",
+      "逐字相同": true
+    },
+    {
+      "区段": "ComputePoint14ManualCube",
+      "参考提交": "7f0cad1",
+      "逐字相同": true
+    },
+    {
+      "区段": "ComputePoint15ManualCube",
+      "参考提交": "7f0cad1",
+      "逐字相同": true
+    }
+  ]
+}

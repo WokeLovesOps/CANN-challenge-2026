@@ -16,5 +16,13 @@
       "L0C": 131072
     }
   },
-  "源码": "Build/opt-20261005b/cube/memory_capacity.cpp"
+  "源码": "Build/opt-20261005b/cube/memory_capacity.cpp",
+  "R27显式UB峰值及收尾合计字节": {
+    "点9": 176160,
+    "点10": 165152,
+    "点11": 174688,
+    "点12": 141920,
+    "点8": 62368
+  },
+  "KFC说明": "KfcCommClient的ubMsg位于TOTAL_UB_SIZE-sizeof(KfcMsg)；AllocUB返回GM_ADDR，位于系统工作区。平台GetCoreMemSize已较物理192KiB扣256字节。仍保留上述显式分配之外的余量，不以shareUb=0断言所有SDK内部均不占用UB。"
 }
