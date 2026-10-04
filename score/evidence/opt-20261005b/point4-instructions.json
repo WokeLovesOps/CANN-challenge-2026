@@ -1,0 +1,176 @@
+{
+  "point104-baseline": {
+    "instruction_counts": {
+      "BAR": 42,
+      "WAIT_FLAG": 4,
+      "VCADD": 3,
+      "VMLA": 15,
+      "MOVEMASK": 77,
+      "VMUL": 15,
+      "MOV_SRC_TO_DST_ALIGN": 3,
+      "SET_FLAG": 4,
+      "LDP_XI_XJ_XN": 2,
+      "LD_XD_XN_IMM": 46,
+      "ST_XD_XN_IMM": 45,
+      "STI_XN_IMM": 26,
+      "STP_XI_XJ_XN": 9,
+      "VCMAX": 1,
+      "VNCHWCONV": 1,
+      "VCONV": 2,
+      "MADD": 32,
+      "STI_XN_XM": 4,
+      "ADD_IMM": 104,
+      "ZEROEXT": 193,
+      "ADD": 91,
+      "SHL": 88,
+      "MOV_XD_XN": 101,
+      "CMP": 34,
+      "OR": 35,
+      "AND": 19,
+      "CMP_IMM": 26,
+      "MOVEVA": 16,
+      "DCCI": 1,
+      "LD_XD_XN": 2,
+      "MUL": 6,
+      "SUB": 3,
+      "MIN": 3,
+      "MOVK": 30,
+      "MOV_XD_IMM": 62,
+      "SIGNEXT": 9,
+      "MOVX8_XD_IMM": 7,
+      "SUB_IMM": 18,
+      "SFF": 4,
+      "INSERT_XD": 6,
+      "SBITSET": 6,
+      "SEL": 5,
+      "NOT": 3,
+      "NEG": 8,
+      "SHR": 4,
+      "MOV_XD_SPR": 10,
+      "INSERT_XD_XN": 1,
+      "JUMP": 15,
+      "JUMPC": 57,
+      "JUMPCMP": 23,
+      "MOV_SPR_XN": 4,
+      "NOP": 1,
+      "END": 1
+    },
+    "windows_us": {
+      "VCADD": {
+        "count": 3,
+        "first": 1.6510009765625,
+        "end": 2.7230007629841566
+      },
+      "VCMAX": {
+        "count": 1,
+        "first": 2.6270008087158203,
+        "end": 2.6980008110404015
+      },
+      "VMUL": {
+        "count": 15,
+        "first": 0.6149997711181641,
+        "end": 0.9640003889799118
+      },
+      "VMLA": {
+        "count": 15,
+        "first": 0.9650001525878906,
+        "end": 1.650000900030136
+      },
+      "VCONV": {
+        "count": 2,
+        "first": 0.5399999618530273,
+        "end": 0.6030001007020473
+      }
+    }
+  },
+  "point104-reduce-block2": {
+    "instruction_counts": {
+      "BAR": 44,
+      "WAIT_FLAG": 4,
+      "VMLA": 15,
+      "VMUL": 15,
+      "MOV_SRC_TO_DST_ALIGN": 3,
+      "SET_FLAG": 4,
+      "LD_XD_XN_IMM": 47,
+      "LDP_XI_XJ_XN": 2,
+      "ST_XD_XN_IMM": 47,
+      "STI_XN_IMM": 26,
+      "STP_XI_XJ_XN": 9,
+      "VCGADD": 4,
+      "MOVEMASK": 77,
+      "VCMAX": 1,
+      "VNCHWCONV": 1,
+      "VCONV": 2,
+      "MADD": 32,
+      "VCADD": 1,
+      "STI_XN_XM": 4,
+      "ZEROEXT": 195,
+      "CMP": 34,
+      "ADD_IMM": 104,
+      "ADD": 93,
+      "SHL": 92,
+      "MOV_XD_XN": 105,
+      "OR": 37,
+      "AND": 19,
+      "CMP_IMM": 26,
+      "MOVEVA": 16,
+      "DCCI": 1,
+      "LD_XD_XN": 2,
+      "MUL": 6,
+      "MIN": 3,
+      "SUB": 3,
+      "MOV_XD_IMM": 63,
+      "MOVK": 30,
+      "SFF": 4,
+      "SIGNEXT": 9,
+      "INSERT_XD": 6,
+      "SBITSET": 6,
+      "MOVX8_XD_IMM": 7,
+      "SEL": 5,
+      "SUB_IMM": 18,
+      "NOT": 3,
+      "NEG": 8,
+      "SHR": 4,
+      "MOV_XD_SPR": 10,
+      "INSERT_XD_XN": 1,
+      "END": 1,
+      "JUMPC": 57,
+      "JUMPCMP": 23,
+      "JUMP": 15,
+      "MOV_SPR_XN": 4,
+      "NOP": 1
+    },
+    "windows_us": {
+      "VCADD": {
+        "count": 1,
+        "first": 1.9390010833740234,
+        "end": 1.962001083418727
+      },
+      "VCGADD": {
+        "count": 4,
+        "first": 1.6490001678466797,
+        "end": 1.8650009613484144
+      },
+      "VCMAX": {
+        "count": 1,
+        "first": 1.8660011291503906,
+        "end": 1.9370011314749718
+      },
+      "VMUL": {
+        "count": 15,
+        "first": 0.6130008697509766,
+        "end": 0.9620005339384079
+      },
+      "VMLA": {
+        "count": 15,
+        "first": 0.9629993438720703,
+        "end": 1.6480000913143158
+      },
+      "VCONV": {
+        "count": 2,
+        "first": 0.5380001068115234,
+        "end": 0.6010002456605434
+      }
+    }
+  }
+}
