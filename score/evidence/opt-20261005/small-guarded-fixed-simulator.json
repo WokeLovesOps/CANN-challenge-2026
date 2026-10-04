@@ -1,0 +1,294 @@
+[
+  {
+    "case": 350,
+    "label": "打包点积矩阵",
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "19e3dbeacff8d3630bf24bf3e75280c454eff704acb23cd10a99ca4d07dd9a75",
+      "3be3ef1c1b342885c665e586b4bec824ca25028be75edb2db1c576584dd549d0"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      4.745638370513916,
+      4.745638370513916
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 2,
+    "variant": "guarded-fixed",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point2-guarded-fixed",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libguarded-fixed.so",
+      "--case=350",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point2-guarded-fixed.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "560c3c5762b7abb75058d75dea59bc94ba7d61588aa5586df2e60f43cbffc1e9",
+    "source_sha256": "f8e526e6a8b1fce0a34d500efee58f0650f04da40ee1f5e8cc2d3d28f9018229",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.64,
+        "running_us": 1.48
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.18,
+        "running_us": 1.17
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point2-guarded-fixed/OPPROF_20261005033436_ALOYIBYLMHZHGEIG/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1808476,
+        "sha256": "332411fa0f258d30718f336fd1abec24663f56b350707629041e4711b76bef68"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point2-guarded-fixed/OPPROF_20261005033436_ALOYIBYLMHZHGEIG/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1782712,
+        "sha256": "c7192d768382f60a8e8d46e4affbef80ce1d9a4d617b2eec18e5ed8c62629d5d"
+      }
+    ]
+  },
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "guarded-fixed",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point4-guarded-fixed",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libguarded-fixed.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point4-guarded-fixed.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "560c3c5762b7abb75058d75dea59bc94ba7d61588aa5586df2e60f43cbffc1e9",
+    "source_sha256": "f8e526e6a8b1fce0a34d500efee58f0650f04da40ee1f5e8cc2d3d28f9018229",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.77,
+        "running_us": 3.77
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.69,
+        "running_us": 3.69
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point4-guarded-fixed/OPPROF_20261005033441_KHAAOIAXZANYDFXN/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2071344,
+        "sha256": "ad918d16ff0de56720a17e63e8b74be461e52a958293c159c0f82ff89aadcdb9"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point4-guarded-fixed/OPPROF_20261005033441_KHAAOIAXZANYDFXN/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2051328,
+        "sha256": "735d17aa8c7767583ccd8b50655ccf430de23e5ba2be7df4b35e0ff345e8f412"
+      }
+    ]
+  },
+  {
+    "case": 358,
+    "label": "打包点积输出边界",
+    "shape": [
+      1,
+      4,
+      4,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "6346f6d2760a0b317444aa3e4145e0597320dacc8a76bc09a6d17deb75406bb0",
+      "d01aac9b96d2091c843d9f655c51092337e8696f2c6d93f2c2b26117162b544c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      19.360700607299805,
+      19.360700607299805
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.9073486328125e-06,
+    "point": 102,
+    "variant": "guarded-fixed",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point102-guarded-fixed",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libguarded-fixed.so",
+      "--case=358",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point102-guarded-fixed.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "560c3c5762b7abb75058d75dea59bc94ba7d61588aa5586df2e60f43cbffc1e9",
+    "source_sha256": "f8e526e6a8b1fce0a34d500efee58f0650f04da40ee1f5e8cc2d3d28f9018229",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.27,
+        "running_us": 1.51
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.3,
+        "running_us": 1.29
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point102-guarded-fixed/OPPROF_20261005033447_RZLEWSILYPGBAFQI/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2191396,
+        "sha256": "379dfac8fe974988127b3dc6147c3149b6d5dcc1823370da3b43b328becbb358"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point102-guarded-fixed/OPPROF_20261005033447_RZLEWSILYPGBAFQI/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2139352,
+        "sha256": "bfbb9c403686e4b5cda4c0e4328933526fe148acc9747f61285006ce715de3ef"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "guarded-fixed",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point104-guarded-fixed",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libguarded-fixed.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point104-guarded-fixed.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "560c3c5762b7abb75058d75dea59bc94ba7d61588aa5586df2e60f43cbffc1e9",
+    "source_sha256": "f8e526e6a8b1fce0a34d500efee58f0650f04da40ee1f5e8cc2d3d28f9018229",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 4.07,
+        "running_us": 4.06
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.81,
+        "running_us": 3.81
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point104-guarded-fixed/OPPROF_20261005033452_WIGOTZHHZBSNSCRV/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2508460,
+        "sha256": "45e0853693d994ed098fe2b8ef9032352f3e60a85f1a808749b621c3fa1400d3"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/guarded-fixed/point104-guarded-fixed/OPPROF_20261005033452_WIGOTZHHZBSNSCRV/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2444380,
+        "sha256": "b4751ef2cacbceb03ac17bac1024eabe7e222be22964f3696498b2f609ccec0e"
+      }
+    ]
+  }
+]
