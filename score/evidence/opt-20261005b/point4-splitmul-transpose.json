@@ -1,0 +1,414 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 4,
+    "variant": "splitmul-transpose",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-splitmul-transpose",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libsplitmul-transpose.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-splitmul-transpose.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "d61bf03c3e9f54d1a74ffa8799727178f51e7c30629e6c98cf87f72f45317d44",
+    "source_sha256": "04e29ac383f6cb3bf02dc9327637f7125bf32b842c3d3f53207931ddefb99f5b",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-splitmul-transpose/OPPROF_20261005051426_EPOMCRMQTBWGXOON/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3549796,
+        "sha256": "528cb099b45b1aabc027491906bfdabdc9ab81a522dd9327c94f6d11b94a83d9"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-splitmul-transpose/OPPROF_20261005051426_EPOMCRMQTBWGXOON/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3499404,
+        "sha256": "9b7b8cc70725b305b7ac2be178248270ea7ebbe5ca9f4866ed0f4dba765bc60d"
+      }
+    ]
+  },
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "fixed-transpose",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-fixed-transpose",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libfixed-transpose.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-fixed-transpose.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e3caf163d170451604efa4f7ca78009e8a54340ec6b04ed9f565b7308dc65203",
+    "source_sha256": "35f9cc9c6a96d4f444506215197c118d36fb69ff4495b9a5a4d801b3cab6739f",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.2
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.2
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-fixed-transpose/OPPROF_20261005051432_RFPKNVJYYDDBSUBT/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3351912,
+        "sha256": "ceb31dd67c2178cb5b8ce02238afaaccfdb09ef86188520ecff4d1a5ea63d436"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point4-fixed-transpose/OPPROF_20261005051432_RFPKNVJYYDDBSUBT/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3275252,
+        "sha256": "f746088d5d194bfec8fad11f5f27b1c6cb4a8e8994fdbe418db8fb4934693b73"
+      }
+    ]
+  },
+  {
+    "case": 439,
+    "label": "中等批量向量全负",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "86c8a3f7791dd69e798c6ae9317f1a40c7354f34ccc85b8e9d65bf8d02dd8750",
+      "82bb365d22568b10acfa6efe1b4517cc11eade353ba208bb34a5f291a585474c"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -477.6055908203125,
+      -446.9752197265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "point": 404,
+    "variant": "splitmul-transpose",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-splitmul-transpose",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libsplitmul-transpose.so",
+      "--case=439",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-splitmul-transpose.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "d61bf03c3e9f54d1a74ffa8799727178f51e7c30629e6c98cf87f72f45317d44",
+    "source_sha256": "04e29ac383f6cb3bf02dc9327637f7125bf32b842c3d3f53207931ddefb99f5b",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.01,
+        "running_us": 2.01
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-splitmul-transpose/OPPROF_20261005051438_VRQNPZREYEEFFEVM/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3547380,
+        "sha256": "b46da9a40077e6e3a01570bb8ce82a1abda208ee7c3f5a74edd67d66cc29fb46"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-splitmul-transpose/OPPROF_20261005051438_VRQNPZREYEEFFEVM/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3499772,
+        "sha256": "62b64ae1c38e318cf1bd2db711c0c80a1c9377c21d77cc662d37bad65864dc0f"
+      }
+    ]
+  },
+  {
+    "case": 439,
+    "label": "中等批量向量全负",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "86c8a3f7791dd69e798c6ae9317f1a40c7354f34ccc85b8e9d65bf8d02dd8750",
+      "82bb365d22568b10acfa6efe1b4517cc11eade353ba208bb34a5f291a585474c"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -477.6055908203125,
+      -446.9752197265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 404,
+    "variant": "fixed-transpose",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-fixed-transpose",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libfixed-transpose.so",
+      "--case=439",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-fixed-transpose.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e3caf163d170451604efa4f7ca78009e8a54340ec6b04ed9f565b7308dc65203",
+    "source_sha256": "35f9cc9c6a96d4f444506215197c118d36fb69ff4495b9a5a4d801b3cab6739f",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.2
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.13
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-fixed-transpose/OPPROF_20261005051444_GCLMPAQMZUFXVRKI/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3351100,
+        "sha256": "c9c15f674d01ca5d52c4f88dbb6531d37523cd6df7dd096768981001a9092844"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-transpose/point404-fixed-transpose/OPPROF_20261005051444_GCLMPAQMZUFXVRKI/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3275616,
+        "sha256": "eaef82021853215a8a1cc8548a1752b1de1347eac3cbbb1d7c9369d2d10e4cb5"
+      }
+    ]
+  }
+]
