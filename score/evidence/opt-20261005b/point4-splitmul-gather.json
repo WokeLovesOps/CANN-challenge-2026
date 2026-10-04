@@ -1,0 +1,600 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 4,
+    "variant": "splitmul",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-splitmul",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libsplitmul.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-splitmul.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e187267f03d4cd22e780389ad2075d96296f90c27376a3c6e5016d951982fc7f",
+    "source_sha256": "ffec96f5b2ddc43d4d6acec44b45c5e8406963a536535c20c3a6da0303e22a4d",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.52,
+        "running_us": 2.52
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.53,
+        "running_us": 2.53
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.53,
+        "running_us": 2.53
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.53,
+        "running_us": 2.53
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.45,
+        "running_us": 2.45
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-splitmul/OPPROF_20261005051314_CDJNQOFLWBBDCEWR/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 4101056,
+        "sha256": "1def45d809a896e401bc1312500f2cb8879e520384f414689121e2b6a69d158a"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-splitmul/OPPROF_20261005051314_CDJNQOFLWBBDCEWR/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3880336,
+        "sha256": "221af2c163e2998d342b5f2f91c44151d2df2a187f6d442cb5383df586de18c3"
+      }
+    ]
+  },
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "reduce-tail8",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-reduce-tail8",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libreduce-tail8.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-reduce-tail8.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "be4f90fae525a63a6b64a5a4e03287a9d5d3308c7b2ebe12f8627b174f89919b",
+    "source_sha256": "59df2590f6468d8082fe2a4c8a7951afe937c8bc11af80412e6931dca317dfd1",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.66,
+        "running_us": 2.65
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-reduce-tail8/OPPROF_20261005051321_WXRHBXENRRDROXCT/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3822788,
+        "sha256": "e5ea66df182ae55985c1f64cc4963795cb9f6c988704043ed0dc47ebf4d7e334"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point4-reduce-tail8/OPPROF_20261005051321_WXRHBXENRRDROXCT/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3707280,
+        "sha256": "1af6a67cab6842f4ac9c77727f0c31641ef200e6101c525135338f29bd2a1e5d"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "splitmul",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-splitmul",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libsplitmul.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-splitmul.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e187267f03d4cd22e780389ad2075d96296f90c27376a3c6e5016d951982fc7f",
+    "source_sha256": "ffec96f5b2ddc43d4d6acec44b45c5e8406963a536535c20c3a6da0303e22a4d",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.3,
+        "running_us": 2.24
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.3,
+        "running_us": 2.25
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.3,
+        "running_us": 2.24
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.98,
+        "running_us": 1.98
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.0,
+        "running_us": 1.99
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.98,
+        "running_us": 1.98
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-splitmul/OPPROF_20261005051329_LFLUEBVKFKTWUWXX/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3519232,
+        "sha256": "20ef7acce62b69d9b01d028abf5f7adc73c7daa01eb143989381c53de80a97ef"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-splitmul/OPPROF_20261005051329_LFLUEBVKFKTWUWXX/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3430028,
+        "sha256": "d55eb1337e30398fd3d637b56b5fbb9a7bff45066125d255fc9ad75c84466728"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "reduce-tail8",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-reduce-tail8",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libreduce-tail8.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-reduce-tail8.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "be4f90fae525a63a6b64a5a4e03287a9d5d3308c7b2ebe12f8627b174f89919b",
+    "source_sha256": "59df2590f6468d8082fe2a4c8a7951afe937c8bc11af80412e6931dca317dfd1",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.33,
+        "running_us": 2.33
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.32,
+        "running_us": 2.32
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.33,
+        "running_us": 2.32
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.1,
+        "running_us": 2.1
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.12
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.1,
+        "running_us": 2.1
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-reduce-tail8/OPPROF_20261005051334_BFYOEJJUWYCSKMET/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3861460,
+        "sha256": "dee1e317654b141f08cce6a34d12db516673dcba8a787dc3dbfcb36fc719aaae"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point104-reduce-tail8/OPPROF_20261005051334_BFYOEJJUWYCSKMET/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3732088,
+        "sha256": "3cfcce4f732d9744de636d45978f68380694c9c58b1955b419595795c771fa85"
+      }
+    ]
+  },
+  {
+    "case": 439,
+    "label": "中等批量向量全负",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "86c8a3f7791dd69e798c6ae9317f1a40c7354f34ccc85b8e9d65bf8d02dd8750",
+      "82bb365d22568b10acfa6efe1b4517cc11eade353ba208bb34a5f291a585474c"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -477.6055908203125,
+      -446.9752197265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "point": 404,
+    "variant": "splitmul",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-splitmul",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libsplitmul.so",
+      "--case=439",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-splitmul.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e187267f03d4cd22e780389ad2075d96296f90c27376a3c6e5016d951982fc7f",
+    "source_sha256": "ffec96f5b2ddc43d4d6acec44b45c5e8406963a536535c20c3a6da0303e22a4d",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.53,
+        "running_us": 2.52
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.52,
+        "running_us": 2.52
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.52,
+        "running_us": 2.52
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.53,
+        "running_us": 2.53
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-splitmul/OPPROF_20261005051341_EWSXAFIPWWQSTRWA/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 4104576,
+        "sha256": "8e9de75733e48e7726edcc23414727f2b9346dde2fe13762d8350417af13ba68"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-splitmul/OPPROF_20261005051341_EWSXAFIPWWQSTRWA/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3880384,
+        "sha256": "0a6fd0876c820ee9f7545ce75c53ac32fd1c520900a73b4a5cda7082cc9783d6"
+      }
+    ]
+  },
+  {
+    "case": 439,
+    "label": "中等批量向量全负",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "86c8a3f7791dd69e798c6ae9317f1a40c7354f34ccc85b8e9d65bf8d02dd8750",
+      "82bb365d22568b10acfa6efe1b4517cc11eade353ba208bb34a5f291a585474c"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -477.6055908203125,
+      -446.9752197265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 404,
+    "variant": "reduce-tail8",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-reduce-tail8",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libreduce-tail8.so",
+      "--case=439",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-reduce-tail8.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "be4f90fae525a63a6b64a5a4e03287a9d5d3308c7b2ebe12f8627b174f89919b",
+    "source_sha256": "59df2590f6468d8082fe2a4c8a7951afe937c8bc11af80412e6931dca317dfd1",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.66,
+        "running_us": 2.65
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.66,
+        "running_us": 2.65
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-reduce-tail8/OPPROF_20261005051347_XJAVJDJPAETVHTOJ/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3823952,
+        "sha256": "28d31b01f873790f9f1a5a05941dea2acae41e697d6648d8ad24045e314c0c39"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-splitmul-final/point404-reduce-tail8/OPPROF_20261005051347_XJAVJDJPAETVHTOJ/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3706684,
+        "sha256": "a34765af99e4b1e9103c96da5204ce9606015f46c1f69bbefb5b6d6708a8b412"
+      }
+    ]
+  }
+]
