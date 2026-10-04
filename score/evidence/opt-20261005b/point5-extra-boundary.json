@@ -1,0 +1,332 @@
+[
+  {
+    "case": 1504,
+    "label": "点5M1N1边界",
+    "shape": [
+      5,
+      1,
+      1,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "6c24d1215dca5540a7578eb0a6b45860170e7f589fea53e513f347cfa6ca039e",
+      "76a2bfc6671db84e09d05f0304fe83334cb558f60cfe3cb8701ad8a402569af6"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      1.0249205827713013,
+      3.2000327110290527
+    ],
+    "available_cores": 20,
+    "max_abs_error": 2.384185791015625e-07,
+    "second_input_sha256": "7be1dcb3f7dc5b3098d1145548b82290625b2d3e49702ec2f29c34d624cb5c77",
+    "alternating_input": true,
+    "point": 305,
+    "variant": "point5-m1-fix",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3|4",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point305-point5-m1-fix",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/screen_point5_m1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/build/libpoint5-m1-fix.so",
+      "--case=1504",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point305-point5-m1-fix.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "c053ae875ff6bb793a6719a5ee1347daa153cc34a20c54a642f137ec8db7f9a0",
+    "source_sha256": "85471ea6c2cfa36af38385689e2b88cb4c5e587aacfcecb22269136b2e92c84d",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.33,
+        "running_us": 1.33
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.68,
+        "running_us": 1.68
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 1.11,
+        "running_us": 1.11
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.56,
+        "running_us": 1.55
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 1.33,
+        "running_us": 1.33
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.68,
+        "running_us": 1.67
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 1.11,
+        "running_us": 1.1
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.56,
+        "running_us": 1.55
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 1.33,
+        "running_us": 1.32
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 1.68,
+        "running_us": 1.67
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 0.98,
+        "running_us": 0.98
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.33,
+        "running_us": 1.33
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 0.98,
+        "running_us": 0.98
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.33,
+        "running_us": 1.32
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 0.98,
+        "running_us": 0.98
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.33,
+        "running_us": 1.33
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 0.98,
+        "running_us": 0.98
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.33,
+        "running_us": 1.33
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 0.98,
+        "running_us": 0.98
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 1.33,
+        "running_us": 1.32
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point305-point5-m1-fix/OPPROF_20261005045553_HQJDLUIIVMUAAPOD/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/0/simulator/visualize_data.bin",
+        "size": 4576592,
+        "sha256": "231556ebc20cded892bb95f84141577cad0a3dace607f35d61bd1b96aedf1450"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point305-point5-m1-fix/OPPROF_20261005045553_HQJDLUIIVMUAAPOD/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/1/simulator/visualize_data.bin",
+        "size": 4427596,
+        "sha256": "30c0f669aa8a1e712f9f6e6df0e3d6d0f94e2a732b12efe5fff05993a3943046"
+      }
+    ]
+  },
+  {
+    "case": 1512,
+    "label": "点5M9N17双尾",
+    "shape": [
+      5,
+      9,
+      17,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "80aaff1531fe0ca56885a6dd17fea80db5fa8413136d60fdf3b01ff45ba753e0",
+      "dd52af9c65699a69282bff607b78b334dad6c2987cfb9aa9f758330cc9b4db88"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      56.58158874511719,
+      62.34365463256836
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.814697265625e-06,
+    "second_input_sha256": "922d98adf459a4b775a577728b8c129a1ffa5eb1e4b27ec6d2ff78effd9e4743",
+    "alternating_input": true,
+    "point": 405,
+    "variant": "point5-m1-fix",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3|4",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point405-point5-m1-fix",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/screen_point5_m1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/build/libpoint5-m1-fix.so",
+      "--case=1512",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point405-point5-m1-fix.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "c053ae875ff6bb793a6719a5ee1347daa153cc34a20c54a642f137ec8db7f9a0",
+    "source_sha256": "85471ea6c2cfa36af38385689e2b88cb4c5e587aacfcecb22269136b2e92c84d",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.72,
+        "running_us": 1.72
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.1,
+        "running_us": 2.1
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 1.73,
+        "running_us": 1.73
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.11,
+        "running_us": 2.11
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 1.73,
+        "running_us": 1.73
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.11,
+        "running_us": 2.11
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 1.73,
+        "running_us": 1.72
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.12,
+        "running_us": 2.11
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 1.73,
+        "running_us": 1.72
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 2.11,
+        "running_us": 2.11
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.02,
+        "running_us": 1.02
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 1.03,
+        "running_us": 1.02
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 1.02,
+        "running_us": 1.02
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 1.02,
+        "running_us": 1.02
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 1.02,
+        "running_us": 1.02
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point405-point5-m1-fix/OPPROF_20261005045600_WRNTVUASECSITIWC/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/0/simulator/visualize_data.bin",
+        "size": 4580164,
+        "sha256": "8c7f81acd4b9ae3a2085c4dd6dc5cbd4660495f0747d5ee03b2c3c020e254ce5"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/point5-m1-more/point405-point5-m1-fix/OPPROF_20261005045600_WRNTVUASECSITIWC/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/1/simulator/visualize_data.bin",
+        "size": 4427112,
+        "sha256": "29c2095f87603db3f92be3ec5391379c2a45de285dd55a57cfa3f8f2e1dd9908"
+      }
+    ]
+  }
+]

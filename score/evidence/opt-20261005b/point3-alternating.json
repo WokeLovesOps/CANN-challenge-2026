@@ -1,0 +1,192 @@
+[
+  {
+    "case": 369,
+    "label": "小批量向量矩阵",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ed064640600412e328793115cef35042733b75ae5fb7f3bbc52fe0d1a77b9b4b",
+      "65db762b76bef2245b7eada44ac3f4da10c26b2f457acae66e3358b1876cc02a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      26.504154205322266,
+      27.80176544189453
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.9073486328125e-06,
+    "second_input_sha256": "d9b98cdbe48eba54747e84da07a2938750f0bef590c68936f7c30b3093402c14",
+    "alternating_input": true,
+    "point": 3,
+    "variant": "point3-block",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point3-point3-block",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libpoint3-block.so",
+      "--case=369",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point3-point3-block.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "45c2e161639bcaf0ab0d8a415d3bb51fc42ed0d2a43e0660c0805d5c7e3160de",
+    "source_sha256": "f518d9632046746b74e50bd7a22f5496870ae143a14baa6a56e2483dbb8dae86",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.15,
+        "running_us": 1.15
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.15,
+        "running_us": 1.15
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.96,
+        "running_us": 0.95
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.96,
+        "running_us": 0.96
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point3-point3-block/OPPROF_20261005045507_MFIGARPSMMTPUZWZ/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1605248,
+        "sha256": "0fb02eb1a90d60d7919a9ddcc973e047e224f8cc9c230015663530fe7186cae0"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point3-point3-block/OPPROF_20261005045507_MFIGARPSMMTPUZWZ/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1595584,
+        "sha256": "706b26a2079d035888fbe9e10ae1d288b8193725cd66c17c2344075ff2091e0b"
+      }
+    ]
+  },
+  {
+    "case": 385,
+    "label": "小批量向量上界",
+    "shape": [
+      4,
+      8,
+      16,
+      64
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "20dd02808a1c7c432b4572dcf2703859e8be186cc6c1e15dd5fb1cb899907983",
+      "3419116e52387bf656fa16b15e397f7d5d1fd8bab9af3b2425a66a0c95ddb4b0"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      33.010868072509766,
+      42.33194351196289
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "9e244820bab2b4c3824572b16e9f89fa4b7933eeb8e238cddcad808d33c149b2",
+    "alternating_input": true,
+    "point": 103,
+    "variant": "point3-block",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point103-point3-block",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libpoint3-block.so",
+      "--case=385",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point103-point3-block.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "45c2e161639bcaf0ab0d8a415d3bb51fc42ed0d2a43e0660c0805d5c7e3160de",
+    "source_sha256": "f518d9632046746b74e50bd7a22f5496870ae143a14baa6a56e2483dbb8dae86",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.0,
+        "running_us": 0.99
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.0,
+        "running_us": 1.0
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 0.99,
+        "running_us": 0.99
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.0,
+        "running_us": 1.0
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.94,
+        "running_us": 0.94
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.94,
+        "running_us": 0.94
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 0.94,
+        "running_us": 0.94
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 0.94,
+        "running_us": 0.94
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point103-point3-block/OPPROF_20261005045512_SELQQFWKOVRXSUSA/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1920052,
+        "sha256": "ea8c412eeb472db1b72f8875172a696dca332806955d50bd7ea336db39911999"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-point3-alternating/point103-point3-block/OPPROF_20261005045512_SELQQFWKOVRXSUSA/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1894476,
+        "sha256": "a4f4e2171125f3e2d4f531452116ada6f7f0c0b699091e54338f08fa84fa246d"
+      }
+    ]
+  }
+]
