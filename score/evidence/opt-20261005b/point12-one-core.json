@@ -1,0 +1,29 @@
+{
+  "case": 6,
+  "label": "点12单核完整K诊断",
+  "shape": [
+    1,
+    1280,
+    4096,
+    1536
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "504a418ea87261b34c3cefa20ce1e9e291311ca80a69bc407a3df00ffc617fd4",
+    "9dbb9c9c391545879c1cd34e3a3d294d88aa5c75f72dc10231c5a5626b858768"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    5768.720703125,
+    5768.720703125
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}
