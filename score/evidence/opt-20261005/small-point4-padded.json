@@ -1,0 +1,367 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "padded-tail",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point4-padded-tail",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/build/libpadded-tail.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point4-padded-tail.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "96d2f83cbd08ccbc4432f7943f19473ba40977803d7702432c3c138b60bb5da0",
+    "source_sha256": "2b483d7e97844e6e20c8614c0bcd821bf80ab3860bd7b67e7bd1251676bc39cf",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.46,
+        "running_us": 3.46
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.39,
+        "running_us": 3.39
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point4-padded-tail/OPPROF_20261005041304_MBYBWLKUGJGGBUEO/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2034832,
+        "sha256": "1daa7be637e46e509c2cc636c55b95e81fbb53049e8a1081e8ba6ff1018d79b9"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point4-padded-tail/OPPROF_20261005041304_MBYBWLKUGJGGBUEO/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2000048,
+        "sha256": "88bdc4fe869bdf875fe2af0f03bedd76901e91a1de73c3612787b22b0eab61be"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "padded-tail",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point104-padded-tail",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/build/libpadded-tail.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point104-padded-tail.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "96d2f83cbd08ccbc4432f7943f19473ba40977803d7702432c3c138b60bb5da0",
+    "source_sha256": "2b483d7e97844e6e20c8614c0bcd821bf80ab3860bd7b67e7bd1251676bc39cf",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.17,
+        "running_us": 3.13
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point104-padded-tail/OPPROF_20261005041310_QKKJKRHJWKYIYAYW/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2329164,
+        "sha256": "c8d90cf098ceec2528a9e9f9eabd4ab13d463a5fe49dda395b9d00617fbb72ac"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point104-padded-tail/OPPROF_20261005041310_QKKJKRHJWKYIYAYW/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2306320,
+        "sha256": "94b181dc42e64e873e858e9585cb9cfac509781e20b2c9c3a4e9a28bac4b907d"
+      }
+    ]
+  },
+  {
+    "case": 1503,
+    "label": "点4动态M15N9",
+    "shape": [
+      3,
+      15,
+      9,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ca3da90c768018d2cb90dc2331117dbb77fd74fdaf77957de49d9aedb1aba509",
+      "3e0e5f5c8b2313b0f8d7fe6b8956d74604eb0ffbe94fea0b1c3e4ba18cd72d54"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      83.2717056274414,
+      99.70420837402344
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 204,
+    "variant": "padded-tail",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point204-padded-tail",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/build/libpadded-tail.so",
+      "--case=1503",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point204-padded-tail.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "96d2f83cbd08ccbc4432f7943f19473ba40977803d7702432c3c138b60bb5da0",
+    "source_sha256": "2b483d7e97844e6e20c8614c0bcd821bf80ab3860bd7b67e7bd1251676bc39cf",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.76,
+        "running_us": 2.74
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point204-padded-tail/OPPROF_20261005041317_WDOKDXLUMXDAQCQX/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2460220,
+        "sha256": "b441606749720cfa3bc9640cb55c36121753bdbc6bb58534104996c3faccf2b6"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point204-padded-tail/OPPROF_20261005041317_WDOKDXLUMXDAQCQX/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2432736,
+        "sha256": "107b1dfb87dc982e944ef8d6242fab8f18e83120bfc461bffd304e3134e7fd8b"
+      }
+    ]
+  },
+  {
+    "case": 1511,
+    "label": "点4动态M1N9",
+    "shape": [
+      3,
+      1,
+      9,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "a1600ec7b51fe010ed94e4b4f7f9e344874d1d9c08c13db7c4d0cec411a1f7c2",
+      "e532959471a9743e71e6db493da3bba0bd0362a9d94f61fa4fb57f78c134dbe2"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      3.0818772315979004,
+      6.127536773681641
+    ],
+    "available_cores": 20,
+    "max_abs_error": 2.384185791015625e-07,
+    "point": 205,
+    "variant": "padded-tail",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point205-padded-tail",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/build/libpadded-tail.so",
+      "--case=1511",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point205-padded-tail.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "96d2f83cbd08ccbc4432f7943f19473ba40977803d7702432c3c138b60bb5da0",
+    "source_sha256": "2b483d7e97844e6e20c8614c0bcd821bf80ab3860bd7b67e7bd1251676bc39cf",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.73,
+        "running_us": 1.29
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.86,
+        "running_us": 0.86
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point205-padded-tail/OPPROF_20261005041322_RURCGIGUJRWPBWTQ/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2017656,
+        "sha256": "c2d1a93b04969e1c5f7e06053a1fabddeff291bca9095c1435269d47a2f11f5f"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point205-padded-tail/OPPROF_20261005041322_RURCGIGUJRWPBWTQ/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 1993596,
+        "sha256": "f8922ac4cf0d88807dd15da6ca5530f0de1528534bc0a6958265a28480af9372"
+      }
+    ]
+  },
+  {
+    "case": 1519,
+    "label": "点4动态M15K64",
+    "shape": [
+      3,
+      15,
+      9,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "757f947bc87f95893aa523df9211d4c09aa9b55624d910ad95f231a3caed84d0",
+      "7270a308ef50bc9bc6966ffa681cfac02bfa23acaf698b36ccbfb214f331607d"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      50.7625846862793,
+      54.49367141723633
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.814697265625e-06,
+    "point": 206,
+    "variant": "padded-tail",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point206-padded-tail",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/build/libpadded-tail.so",
+      "--case=1519",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point206-padded-tail.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "96d2f83cbd08ccbc4432f7943f19473ba40977803d7702432c3c138b60bb5da0",
+    "source_sha256": "2b483d7e97844e6e20c8614c0bcd821bf80ab3860bd7b67e7bd1251676bc39cf",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.29,
+        "running_us": 2.24
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.87,
+        "running_us": 1.87
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point206-padded-tail/OPPROF_20261005041327_OJJAZDYUCIKREVOJ/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2353808,
+        "sha256": "64f56828ce206f5369da5e7c61c34cdcb917cba995515e3f582c1deef0ddc0be"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail/point206-padded-tail/OPPROF_20261005041327_OJJAZDYUCIKREVOJ/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2291528,
+        "sha256": "0573ced75adc34cabf67200ce459e6a8cd77cb81fd829e8b0134c80e208ca4c6"
+      }
+    ]
+  }
+]
