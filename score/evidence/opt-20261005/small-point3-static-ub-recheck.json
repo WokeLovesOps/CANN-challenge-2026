@@ -1,0 +1,168 @@
+[
+  {
+    "case": 369,
+    "label": "小批量向量矩阵",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ed064640600412e328793115cef35042733b75ae5fb7f3bbc52fe0d1a77b9b4b",
+      "65db762b76bef2245b7eada44ac3f4da10c26b2f457acae66e3358b1876cc02a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      26.504154205322266,
+      27.80176544189453
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.9073486328125e-06,
+    "point": 3,
+    "variant": "candidate",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-candidate",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/build/libcandidate.so",
+      "--case=369",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-candidate.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e1af137e3e7e6d070cdb99a2a66f3b73dc08289733b560d6093cad43b008b90b",
+    "source_sha256": "c27bdb1864779ddb47e60109a3ba5d1bb4f31f7e3047e2275716a6c678ea30ed",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.43,
+        "running_us": 1.42
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.43,
+        "running_us": 1.42
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.23,
+        "running_us": 1.23
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.24,
+        "running_us": 1.23
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-candidate/OPPROF_20261005040709_ITFGVITFHXOXSAEZ/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1560696,
+        "sha256": "5eacd1d47a44e3d255505a04880855942f1b1826f80ef6e519c4c3fbf973f33c"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-candidate/OPPROF_20261005040709_ITFGVITFHXOXSAEZ/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1542524,
+        "sha256": "a400f1781a88fe8595b8574b06095ceee0452da27681a75bb76a2beb7cc0bbc5"
+      }
+    ]
+  },
+  {
+    "case": 369,
+    "label": "小批量向量矩阵",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ed064640600412e328793115cef35042733b75ae5fb7f3bbc52fe0d1a77b9b4b",
+      "65db762b76bef2245b7eada44ac3f4da10c26b2f457acae66e3358b1876cc02a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      26.504154205322266,
+      27.80176544189453
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.9073486328125e-06,
+    "point": 3,
+    "variant": "baseline",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-baseline",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/build/libbaseline.so",
+      "--case=369",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-baseline.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "84e1972878231a5671e361f92bfc020e610589b24c6f93ce6971511c0ad10c87",
+    "source_sha256": "cbb91096d8ca387d28316c6ff63de25b23168f7a99ca750bc438e6ff2a75ec9a",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.48,
+        "running_us": 1.47
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.48,
+        "running_us": 1.48
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.26,
+        "running_us": 1.26
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.26,
+        "running_us": 1.26
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-baseline/OPPROF_20261005040715_CPJDBSKIKZYUOFRD/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2103024,
+        "sha256": "4981ddbde5eacbe8836235ad7987c5d2d79398aab7684a9838d903bb267a7496"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-static/sim-point3-recheck/point3-baseline/OPPROF_20261005040715_CPJDBSKIKZYUOFRD/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2062392,
+        "sha256": "f7d75bf4f176f416cc2825fbe8cad6b43f57e7b98e8294e39a255c1c94189d99"
+      }
+    ]
+  }
+]
