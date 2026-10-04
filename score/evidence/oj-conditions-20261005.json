@@ -1,0 +1,541 @@
+{
+  "说明": "条件成立执行原核，条件不成立输出NaN；仅Pass和Wrong Answer用于解码。形状来自历史表，本轮探测类型与转置。",
+  "rounds": [
+    {
+      "round": 1,
+      "field": "dtype==FP16",
+      "commit": "01200cb",
+      "submissionId": 596924,
+      "url": "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ac29e37694b590c3c102307",
+      "localCompileSeconds": 82.05,
+      "table": "测试点\t结果\t输出错误占比\t用时\t最优用时\n1\tPass\t0.00%\t2.09μs\t1.13μs\n2\tWrong Answer\t100.00%\t2.01μs\t0.60μs\n3\tPass\t0.00%\t3.16μs\t0.58μs\n4\tWrong Answer\t100.00%\t1.50μs\t0.58μs\n5\tPass\t0.00%\t7.73μs\t0.61μs\n6\tWrong Answer\t100.00%\t1.50μs\t0.60μs\n7\tPass\t0.00%\t8.91μs\t0.56μs\n8\tWrong Answer\t100.00%\t1.44μs\t13.88μs\n9\tPass\t0.00%\t79.09μs\t48.98μs\n10\tWrong Answer\t100.00%\t1.46μs\t65.00μs\n11\tPass\t0.00%\t98.10μs\t68.59μs\n12\tWrong Answer\t100.00%\t1.46μs\t80.80μs\n13\tPass\t0.00%\t14.71μs\t8.80μs\n14\tWrong Answer\t100.00%\t1.35μs\t9.42μs\n15\tPass\t0.00%\t12.32μs\t8.11μs",
+      "status": "提交状态：Wrong Answer",
+      "sha256": "1b647aa0794c78d3862407513fa0af4ecb82706eea30136275d3525c54ebab41",
+      "results": [
+        {
+          "case": "1",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "2.09μs",
+          "best": "1.13μs"
+        },
+        {
+          "case": "2",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "2.01μs",
+          "best": "0.60μs"
+        },
+        {
+          "case": "3",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "3.16μs",
+          "best": "0.58μs"
+        },
+        {
+          "case": "4",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.50μs",
+          "best": "0.58μs"
+        },
+        {
+          "case": "5",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "7.73μs",
+          "best": "0.61μs"
+        },
+        {
+          "case": "6",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.50μs",
+          "best": "0.60μs"
+        },
+        {
+          "case": "7",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "8.91μs",
+          "best": "0.56μs"
+        },
+        {
+          "case": "8",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.44μs",
+          "best": "13.88μs"
+        },
+        {
+          "case": "9",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "79.09μs",
+          "best": "48.98μs"
+        },
+        {
+          "case": "10",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.46μs",
+          "best": "65.00μs"
+        },
+        {
+          "case": "11",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "98.10μs",
+          "best": "68.59μs"
+        },
+        {
+          "case": "12",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.46μs",
+          "best": "80.80μs"
+        },
+        {
+          "case": "13",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "14.71μs",
+          "best": "8.80μs"
+        },
+        {
+          "case": "14",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.35μs",
+          "best": "9.42μs"
+        },
+        {
+          "case": "15",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "12.32μs",
+          "best": "8.11μs"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "field": "transposeX1==true",
+      "commit": "4519dce",
+      "submissionId": 596998,
+      "url": "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ac29f11694b590c3c109c57",
+      "localCompileSeconds": 78.96,
+      "table": "测试点\t结果\t输出错误占比\t用时\t最优用时\n1\tWrong Answer\t100.00%\t1.95μs\t1.13μs\n2\tPass\t0.00%\t4.40μs\t0.60μs\n3\tWrong Answer\t100.00%\t1.55μs\t0.58μs\n4\tPass\t0.00%\t5.78μs\t0.58μs\n5\tWrong Answer\t100.00%\t1.56μs\t0.61μs\n6\tWrong Answer\t100.00%\t1.54μs\t0.60μs\n7\tPass\t0.00%\t9.17μs\t0.56μs\n8\tPass\t0.00%\t69.11μs\t13.88μs\n9\tWrong Answer\t100.00%\t1.69μs\t48.98μs\n10\tWrong Answer\t100.00%\t1.49μs\t65.00μs\n11\tPass\t0.00%\t98.60μs\t68.59μs\n12\tPass\t0.00%\t126.01μs\t80.80μs\n13\tWrong Answer\t100.00%\t1.62μs\t8.80μs\n14\tWrong Answer\t100.00%\t1.53μs\t9.42μs\n15\tPass\t0.00%\t12.43μs\t8.11μs",
+      "status": "提交状态：Wrong Answer",
+      "sha256": "69129eb9c3c6a60816bac4bae1ce463d0824837a13b66ea91845003438712e9c",
+      "results": [
+        {
+          "case": "1",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.95μs",
+          "best": "1.13μs"
+        },
+        {
+          "case": "2",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "4.40μs",
+          "best": "0.60μs"
+        },
+        {
+          "case": "3",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.55μs",
+          "best": "0.58μs"
+        },
+        {
+          "case": "4",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "5.78μs",
+          "best": "0.58μs"
+        },
+        {
+          "case": "5",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.56μs",
+          "best": "0.61μs"
+        },
+        {
+          "case": "6",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.54μs",
+          "best": "0.60μs"
+        },
+        {
+          "case": "7",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "9.17μs",
+          "best": "0.56μs"
+        },
+        {
+          "case": "8",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "69.11μs",
+          "best": "13.88μs"
+        },
+        {
+          "case": "9",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.69μs",
+          "best": "48.98μs"
+        },
+        {
+          "case": "10",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.49μs",
+          "best": "65.00μs"
+        },
+        {
+          "case": "11",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "98.60μs",
+          "best": "68.59μs"
+        },
+        {
+          "case": "12",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "126.01μs",
+          "best": "80.80μs"
+        },
+        {
+          "case": "13",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.62μs",
+          "best": "8.80μs"
+        },
+        {
+          "case": "14",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.53μs",
+          "best": "9.42μs"
+        },
+        {
+          "case": "15",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "12.43μs",
+          "best": "8.11μs"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "field": "transposeX2==true",
+      "commit": "57b11b3",
+      "submissionId": 597072,
+      "url": "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ac29fff694b590c3c1116d9",
+      "localCompileSeconds": 80.69,
+      "table": "测试点\t结果\t输出错误占比\t用时\t最优用时\n1\tWrong Answer\t100.00%\t1.98μs\t1.13μs\n2\tWrong Answer\t100.00%\t1.50μs\t0.60μs\n3\tPass\t0.00%\t3.14μs\t0.58μs\n4\tPass\t0.00%\t5.70μs\t0.58μs\n5\tWrong Answer\t100.00%\t1.40μs\t0.61μs\n6\tPass\t0.00%\t11.68μs\t0.60μs\n7\tWrong Answer\t100.00%\t1.42μs\t0.56μs\n8\tPass\t0.00%\t66.38μs\t13.88μs\n9\tPass\t0.00%\t79.42μs\t48.98μs\n10\tWrong Answer\t100.00%\t1.68μs\t65.00μs\n11\tPass\t0.00%\t97.78μs\t68.59μs\n12\tWrong Answer\t100.00%\t1.43μs\t80.80μs\n13\tWrong Answer\t100.00%\t1.47μs\t8.80μs\n14\tPass\t0.00%\t14.51μs\t9.42μs\n15\tPass\t0.00%\t12.65μs\t8.11μs",
+      "status": "提交状态：Wrong Answer",
+      "sha256": "65da6125395a50f1b3c755c4893e9509e707007573c17335802637c13f321a63",
+      "results": [
+        {
+          "case": "1",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.98μs",
+          "best": "1.13μs"
+        },
+        {
+          "case": "2",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.50μs",
+          "best": "0.60μs"
+        },
+        {
+          "case": "3",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "3.14μs",
+          "best": "0.58μs"
+        },
+        {
+          "case": "4",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "5.70μs",
+          "best": "0.58μs"
+        },
+        {
+          "case": "5",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.40μs",
+          "best": "0.61μs"
+        },
+        {
+          "case": "6",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "11.68μs",
+          "best": "0.60μs"
+        },
+        {
+          "case": "7",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.42μs",
+          "best": "0.56μs"
+        },
+        {
+          "case": "8",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "66.38μs",
+          "best": "13.88μs"
+        },
+        {
+          "case": "9",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "79.42μs",
+          "best": "48.98μs"
+        },
+        {
+          "case": "10",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.68μs",
+          "best": "65.00μs"
+        },
+        {
+          "case": "11",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "97.78μs",
+          "best": "68.59μs"
+        },
+        {
+          "case": "12",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.43μs",
+          "best": "80.80μs"
+        },
+        {
+          "case": "13",
+          "result": "Wrong Answer",
+          "error": "100.00%",
+          "time": "1.47μs",
+          "best": "8.80μs"
+        },
+        {
+          "case": "14",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "14.51μs",
+          "best": "9.42μs"
+        },
+        {
+          "case": "15",
+          "result": "Pass",
+          "error": "0.00%",
+          "time": "12.65μs",
+          "best": "8.11μs"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "case": 1,
+      "shape_BMNK": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "FP16",
+      "transposeX1": false,
+      "transposeX2": false
+    },
+    {
+      "case": 2,
+      "shape_BMNK": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "BF16",
+      "transposeX1": true,
+      "transposeX2": false
+    },
+    {
+      "case": 3,
+      "shape_BMNK": [
+        2,
+        7,
+        13,
+        48
+      ],
+      "dtype": "FP16",
+      "transposeX1": false,
+      "transposeX2": true
+    },
+    {
+      "case": 4,
+      "shape_BMNK": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "BF16",
+      "transposeX1": true,
+      "transposeX2": true
+    },
+    {
+      "case": 5,
+      "shape_BMNK": [
+        8,
+        16,
+        32,
+        128
+      ],
+      "dtype": "FP16",
+      "transposeX1": false,
+      "transposeX2": false
+    },
+    {
+      "case": 6,
+      "shape_BMNK": [
+        13,
+        23,
+        73,
+        192
+      ],
+      "dtype": "BF16",
+      "transposeX1": false,
+      "transposeX2": true
+    },
+    {
+      "case": 7,
+      "shape_BMNK": [
+        16,
+        32,
+        128,
+        256
+      ],
+      "dtype": "FP16",
+      "transposeX1": true,
+      "transposeX2": false
+    },
+    {
+      "case": 8,
+      "shape_BMNK": [
+        1,
+        1025,
+        1031,
+        1032
+      ],
+      "dtype": "BF16",
+      "transposeX1": true,
+      "transposeX2": true
+    },
+    {
+      "case": 9,
+      "shape_BMNK": [
+        1,
+        2048,
+        1536,
+        1280
+      ],
+      "dtype": "FP16",
+      "transposeX1": false,
+      "transposeX2": true
+    },
+    {
+      "case": 10,
+      "shape_BMNK": [
+        1,
+        4096,
+        1280,
+        1152
+      ],
+      "dtype": "BF16",
+      "transposeX1": false,
+      "transposeX2": false
+    },
+    {
+      "case": 11,
+      "shape_BMNK": [
+        1,
+        1536,
+        2048,
+        2048
+      ],
+      "dtype": "FP16",
+      "transposeX1": true,
+      "transposeX2": true
+    },
+    {
+      "case": 12,
+      "shape_BMNK": [
+        1,
+        1280,
+        4096,
+        1536
+      ],
+      "dtype": "BF16",
+      "transposeX1": true,
+      "transposeX2": false
+    },
+    {
+      "case": 13,
+      "shape_BMNK": [
+        1,
+        8192,
+        64,
+        128
+      ],
+      "dtype": "FP16",
+      "transposeX1": false,
+      "transposeX2": false
+    },
+    {
+      "case": 14,
+      "shape_BMNK": [
+        1,
+        64,
+        8192,
+        128
+      ],
+      "dtype": "BF16",
+      "transposeX1": false,
+      "transposeX2": true
+    },
+    {
+      "case": 15,
+      "shape_BMNK": [
+        1,
+        64,
+        64,
+        8192
+      ],
+      "dtype": "FP16",
+      "transposeX1": true,
+      "transposeX2": true
+    }
+  ]
+}

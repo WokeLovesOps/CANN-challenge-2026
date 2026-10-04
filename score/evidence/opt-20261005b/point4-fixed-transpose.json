@@ -1,0 +1,414 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "fixed-transpose",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-fixed-transpose",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libfixed-transpose.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-fixed-transpose.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e3caf163d170451604efa4f7ca78009e8a54340ec6b04ed9f565b7308dc65203",
+    "source_sha256": "35f9cc9c6a96d4f444506215197c118d36fb69ff4495b9a5a4d801b3cab6739f",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.2
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.13
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-fixed-transpose/OPPROF_20261005050745_XMARSIVJDSGQZPDY/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3351200,
+        "sha256": "f1d1702d7bc90930fd4aed0456730161d71c40275345f052d636f92f8a771d60"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-fixed-transpose/OPPROF_20261005050745_XMARSIVJDSGQZPDY/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3275664,
+        "sha256": "0b8e67ed068fd24d856d27e9d7aa1b685b472de0779a180ed27b701543086fd8"
+      }
+    ]
+  },
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "reduce-tail8",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-reduce-tail8",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libreduce-tail8.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-reduce-tail8.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "be4f90fae525a63a6b64a5a4e03287a9d5d3308c7b2ebe12f8627b174f89919b",
+    "source_sha256": "59df2590f6468d8082fe2a4c8a7951afe937c8bc11af80412e6931dca317dfd1",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.66,
+        "running_us": 2.65
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-reduce-tail8/OPPROF_20261005050753_CMJABGHCBBJLDBBH/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3823364,
+        "sha256": "32973476b99d2b63399013506991cb633deb0b4dc138cacd079d7a52de08f0f4"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point4-reduce-tail8/OPPROF_20261005050753_CMJABGHCBBJLDBBH/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3704272,
+        "sha256": "5819cdd9438ebd5e7e8ddba422d4bba2d276146ab7430164e518c7bf185cb3fe"
+      }
+    ]
+  },
+  {
+    "case": 439,
+    "label": "中等批量向量全负",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "86c8a3f7791dd69e798c6ae9317f1a40c7354f34ccc85b8e9d65bf8d02dd8750",
+      "82bb365d22568b10acfa6efe1b4517cc11eade353ba208bb34a5f291a585474c"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -477.6055908203125,
+      -446.9752197265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 404,
+    "variant": "fixed-transpose",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-fixed-transpose",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libfixed-transpose.so",
+      "--case=439",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-fixed-transpose.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "e3caf163d170451604efa4f7ca78009e8a54340ec6b04ed9f565b7308dc65203",
+    "source_sha256": "35f9cc9c6a96d4f444506215197c118d36fb69ff4495b9a5a4d801b3cab6739f",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.28,
+        "running_us": 2.21
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.2
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.27,
+        "running_us": 2.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.13
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.14,
+        "running_us": 2.14
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-fixed-transpose/OPPROF_20261005050801_SGHFTTOXUGNMFRKO/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3352336,
+        "sha256": "6dc9f6e235be70dbb4d05fb49a1d8fa8204dd98b5ad0024898698dcbed869f4a"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-fixed-transpose/OPPROF_20261005050801_SGHFTTOXUGNMFRKO/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3273388,
+        "sha256": "fa9a51cad9a509753747a6f2ccebbbcfb2e547d5cd61b5fdf4e18b43f30a1b1f"
+      }
+    ]
+  },
+  {
+    "case": 439,
+    "label": "中等批量向量全负",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "86c8a3f7791dd69e798c6ae9317f1a40c7354f34ccc85b8e9d65bf8d02dd8750",
+      "82bb365d22568b10acfa6efe1b4517cc11eade353ba208bb34a5f291a585474c"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -477.6055908203125,
+      -446.9752197265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 404,
+    "variant": "reduce-tail8",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-reduce-tail8",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/build/libreduce-tail8.so",
+      "--case=439",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-reduce-tail8.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "be4f90fae525a63a6b64a5a4e03287a9d5d3308c7b2ebe12f8627b174f89919b",
+    "source_sha256": "59df2590f6468d8082fe2a4c8a7951afe937c8bc11af80412e6931dca317dfd1",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.65
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.66,
+        "running_us": 2.65
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-reduce-tail8/OPPROF_20261005050809_CYDUJYCICUHQCNWR/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3824100,
+        "sha256": "76f852761d715b0624ea717c5d9fde132ccd85e1b07ad20aeb531b701f939145"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/vector/sim-fixed-transpose/point404-reduce-tail8/OPPROF_20261005050809_CYDUJYCICUHQCNWR/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3704276,
+        "sha256": "90e169fedbcfed3ce79c30db18a15f38e7bf2861e1b832de4512e77d4ccc01f1"
+      }
+    ]
+  }
+]

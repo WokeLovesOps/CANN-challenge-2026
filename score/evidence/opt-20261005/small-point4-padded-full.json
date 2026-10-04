@@ -1,0 +1,188 @@
+[
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "padded-tail",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-padded-tail",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/build/libpadded-tail.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-padded-tail.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "96d2f83cbd08ccbc4432f7943f19473ba40977803d7702432c3c138b60bb5da0",
+    "source_sha256": "2b483d7e97844e6e20c8614c0bcd821bf80ab3860bd7b67e7bd1251676bc39cf",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.18,
+        "running_us": 3.14
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 3.18,
+        "running_us": 3.14
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 3.17,
+        "running_us": 3.13
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.88,
+        "running_us": 2.87
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-padded-tail/OPPROF_20261005041351_PGLZRGAHDMPKTOOU/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3780540,
+        "sha256": "5670fe8e35f658d8e247766ca17e458baf5ed5679c3cce3e70793c7ce48c6975"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-padded-tail/OPPROF_20261005041351_PGLZRGAHDMPKTOOU/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3707760,
+        "sha256": "4057907dfa00005c1be60ca70cfc329ff44b1957964d365e9560ff1faa68bc2a"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "baseline",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-baseline",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/build/libbaseline.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-baseline.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "606aad10763447adefb0373a0f6584f998bf00f8336ebd42df99c85d805186e0",
+    "source_sha256": "89317b150139dd941f1392b7a456376b3e3048621c9862316e04445d7bf7c6f1",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.75,
+        "running_us": 3.75
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 3.75,
+        "running_us": 3.75
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 3.75,
+        "running_us": 3.75
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.52,
+        "running_us": 3.52
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 3.52,
+        "running_us": 3.52
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 3.49,
+        "running_us": 3.49
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-baseline/OPPROF_20261005041358_DBLBFACEENIBJFWE/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 4382300,
+        "sha256": "faa5efe388e12b0ed3c527fb3c77bec6ed238fe106d7eb4b051fd4750fb3c005"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-point4-r9/sim-padded-tail-full/point104-baseline/OPPROF_20261005041358_DBLBFACEENIBJFWE/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 4198256,
+        "sha256": "226666bc4b8a5b2b357e02452b04addd251f592c837496b1279af4b218b1f05e"
+      }
+    ]
+  }
+]

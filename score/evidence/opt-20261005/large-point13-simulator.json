@@ -1,0 +1,29 @@
+{
+  "case": 472,
+  "label": "点13高窄矩阵",
+  "shape": [
+    1,
+    8192,
+    64,
+    128
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "a36f7db2f0a165b4dfaf24a3ac8d446af2ee7cbdbec4aeef324c4da7c3e56ca5",
+    "c3dfd65b344d984d9eaf049fe608f982dd5c3ba7a3516780916132ffb8f4528c"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    72035.515625,
+    72035.515625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

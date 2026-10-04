@@ -1,0 +1,467 @@
+[
+  {
+    "case": 472,
+    "label": "点13高窄矩阵",
+    "shape": [
+      1,
+      8192,
+      64,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "a36f7db2f0a165b4dfaf24a3ac8d446af2ee7cbdbec4aeef324c4da7c3e56ca5",
+      "c3dfd65b344d984d9eaf049fe608f982dd5c3ba7a3516780916132ffb8f4528c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      72035.515625,
+      72035.515625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "5314b6f3ad76fd21191468b2260ef86eaf05f0ef2c04978b1b4e23789a196009",
+    "alternating_input": true,
+    "point": 13,
+    "variant": "pipeline13-db",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/pipeline13-db-all20/point13-pipeline13-db",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/build/libpipeline13-db.so",
+      "--case=472",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/pipeline13-db-all20/point13-pipeline13-db.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "55a3d366ef8261f73de895654e5d258973fe7242a786ef0af344c13b17776618",
+    "source_sha256": "b7765939b4e61e8aaacfa6376a03658231f996ccd94ebfd356f458f0306bdd25",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.93
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 5.37,
+        "running_us": 5.31
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 2.94,
+        "running_us": 2.93
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.73
+      },
+      {
+        "core": "core10.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.92
+      },
+      {
+        "core": "core10.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.72
+      },
+      {
+        "core": "core11.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core11.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.72
+      },
+      {
+        "core": "core12.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core12.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.72
+      },
+      {
+        "core": "core13.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core13.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.72
+      },
+      {
+        "core": "core14.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core14.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.71
+      },
+      {
+        "core": "core15.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core15.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.72
+      },
+      {
+        "core": "core16.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core16.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.71
+      },
+      {
+        "core": "core17.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core17.veccore0",
+        "duration_us": 4.76,
+        "running_us": 4.71
+      },
+      {
+        "core": "core18.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core18.veccore0",
+        "duration_us": 4.76,
+        "running_us": 4.7
+      },
+      {
+        "core": "core19.cubecore0",
+        "duration_us": 2.6,
+        "running_us": 2.59
+      },
+      {
+        "core": "core19.veccore0",
+        "duration_us": 4.76,
+        "running_us": 4.7
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.93
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.73
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.93
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.73
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.93
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.73
+      },
+      {
+        "core": "core5.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.92
+      },
+      {
+        "core": "core5.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.73
+      },
+      {
+        "core": "core6.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.92
+      },
+      {
+        "core": "core6.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.72
+      },
+      {
+        "core": "core7.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.92
+      },
+      {
+        "core": "core7.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.72
+      },
+      {
+        "core": "core8.cubecore0",
+        "duration_us": 2.93,
+        "running_us": 2.92
+      },
+      {
+        "core": "core8.veccore0",
+        "duration_us": 4.78,
+        "running_us": 4.72
+      },
+      {
+        "core": "core9.cubecore0",
+        "duration_us": 2.92,
+        "running_us": 2.91
+      },
+      {
+        "core": "core9.veccore0",
+        "duration_us": 4.77,
+        "running_us": 4.72
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 2.88,
+        "running_us": 2.88
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 5.32,
+        "running_us": 5.25
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 2.88,
+        "running_us": 2.88
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 4.73,
+        "running_us": 4.68
+      },
+      {
+        "core": "core10.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.87
+      },
+      {
+        "core": "core10.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      },
+      {
+        "core": "core11.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.87
+      },
+      {
+        "core": "core11.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      },
+      {
+        "core": "core12.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.86
+      },
+      {
+        "core": "core12.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.66
+      },
+      {
+        "core": "core13.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.86
+      },
+      {
+        "core": "core13.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.66
+      },
+      {
+        "core": "core14.cubecore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      },
+      {
+        "core": "core14.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.66
+      },
+      {
+        "core": "core15.cubecore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      },
+      {
+        "core": "core15.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.66
+      },
+      {
+        "core": "core16.cubecore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      },
+      {
+        "core": "core16.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.66
+      },
+      {
+        "core": "core17.cubecore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      },
+      {
+        "core": "core17.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.66
+      },
+      {
+        "core": "core18.cubecore0",
+        "duration_us": 2.86,
+        "running_us": 2.86
+      },
+      {
+        "core": "core18.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.66
+      },
+      {
+        "core": "core19.cubecore0",
+        "duration_us": 2.54,
+        "running_us": 2.54
+      },
+      {
+        "core": "core19.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.66
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 2.88,
+        "running_us": 2.88
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 4.73,
+        "running_us": 4.68
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 2.88,
+        "running_us": 2.88
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 4.73,
+        "running_us": 4.67
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 2.88,
+        "running_us": 2.87
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      },
+      {
+        "core": "core5.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.87
+      },
+      {
+        "core": "core5.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      },
+      {
+        "core": "core6.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.87
+      },
+      {
+        "core": "core6.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      },
+      {
+        "core": "core7.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.87
+      },
+      {
+        "core": "core7.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      },
+      {
+        "core": "core8.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.87
+      },
+      {
+        "core": "core8.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      },
+      {
+        "core": "core9.cubecore0",
+        "duration_us": 2.87,
+        "running_us": 2.87
+      },
+      {
+        "core": "core9.veccore0",
+        "duration_us": 4.72,
+        "running_us": 4.67
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/pipeline13-db-all20/point13-pipeline13-db/OPPROF_20261005050407_LXWPWOMDQFUYQXVN/_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE/0/simulator/visualize_data.bin",
+        "size": 22697840,
+        "sha256": "e116d4392c71e58a1a1bee1dc7c4357904c8631ae61355e9972381f725411cb4"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/pipeline13-db-all20/point13-pipeline13-db/OPPROF_20261005050407_LXWPWOMDQFUYQXVN/_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE/1/simulator/visualize_data.bin",
+        "size": 21781120,
+        "sha256": "cb12e8602e31ae7f22c020ed32aa2a9283bec42d87d421a5c7331185499e146f"
+      }
+    ]
+  }
+]

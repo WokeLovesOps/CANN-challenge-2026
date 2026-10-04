@@ -1,0 +1,294 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "reduce-groups",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point4-reduce-groups",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libreduce-groups.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point4-reduce-groups.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "3bef3d66a09775b4f25aef0c1ed7e283ce39d134028f75acc4e64e0217ad4e7f",
+    "source_sha256": "cf2a2b34130af77282e317d2a8548a44e600a203ce0b68132b39b0f4435367e5",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 4.02,
+        "running_us": 3.71
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.63,
+        "running_us": 3.63
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point4-reduce-groups/OPPROF_20261005033703_DEVREQVCAUVKYBGN/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2399040,
+        "sha256": "7eacba1e0b78f23fe7ebac54f96b451cac56cf9d348ce1ef6ecfa6ee301a6637"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point4-reduce-groups/OPPROF_20261005033703_DEVREQVCAUVKYBGN/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2363884,
+        "sha256": "3731e68d0d2db2923d24ce3a4594e4c1b2c076b57c0749b3f0caabb20ffb9a64"
+      }
+    ]
+  },
+  {
+    "case": 440,
+    "label": "中等批量向量点5",
+    "shape": [
+      8,
+      16,
+      32,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "83e7682ea310355ed669b9bea06a87a2e275990b638244a44e2967c55a441c3c",
+      "e4c2efdc6d300269176782c9fc0fa719f1e533f39c025f8a38e8e503251ff593"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      111.06105041503906,
+      134.29998779296875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.52587890625e-05,
+    "point": 5,
+    "variant": "reduce-groups",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point5-reduce-groups",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libreduce-groups.so",
+      "--case=440",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point5-reduce-groups.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "3bef3d66a09775b4f25aef0c1ed7e283ce39d134028f75acc4e64e0217ad4e7f",
+    "source_sha256": "cf2a2b34130af77282e317d2a8548a44e600a203ce0b68132b39b0f4435367e5",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 5.62,
+        "running_us": 5.56
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 5.52,
+        "running_us": 5.52
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point5-reduce-groups/OPPROF_20261005033710_IPUYQSCQLBULXILX/_ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2766164,
+        "sha256": "05fe703121eddba800f47a24d71a9629cf11b87ac26509c260d7ac72510dffc1"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point5-reduce-groups/OPPROF_20261005033710_IPUYQSCQLBULXILX/_ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2708372,
+        "sha256": "c871a5f89b6121a5bcc646538a4ca1b98985c316da808ded21efec858237e167"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "reduce-groups",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point104-reduce-groups",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libreduce-groups.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point104-reduce-groups.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "3bef3d66a09775b4f25aef0c1ed7e283ce39d134028f75acc4e64e0217ad4e7f",
+    "source_sha256": "cf2a2b34130af77282e317d2a8548a44e600a203ce0b68132b39b0f4435367e5",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.91,
+        "running_us": 3.73
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.52,
+        "running_us": 3.52
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point104-reduce-groups/OPPROF_20261005033718_ZMQCTPOJRRUOBKVM/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2369896,
+        "sha256": "82191e1679d2f147f7913f9e331890562c87a82f03c659c305814731160c5094"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point104-reduce-groups/OPPROF_20261005033718_ZMQCTPOJRRUOBKVM/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2334308,
+        "sha256": "6ba014ae1d15bb943037f696554419587da2989e27ba7afb7aa8144baa5e65e9"
+      }
+    ]
+  },
+  {
+    "case": 1503,
+    "label": "动态点4尾列",
+    "shape": [
+      3,
+      15,
+      9,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ca3da90c768018d2cb90dc2331117dbb77fd74fdaf77957de49d9aedb1aba509",
+      "3e0e5f5c8b2313b0f8d7fe6b8956d74604eb0ffbe94fea0b1c3e4ba18cd72d54"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      83.2717056274414,
+      99.70420837402344
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 204,
+    "variant": "reduce-groups",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point204-reduce-groups",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libreduce-groups.so",
+      "--case=1503",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point204-reduce-groups.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "3bef3d66a09775b4f25aef0c1ed7e283ce39d134028f75acc4e64e0217ad4e7f",
+    "source_sha256": "cf2a2b34130af77282e317d2a8548a44e600a203ce0b68132b39b0f4435367e5",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.51,
+        "running_us": 3.31
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.1,
+        "running_us": 3.1
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point204-reduce-groups/OPPROF_20261005033724_XNMPVUIPEJMLYGZV/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 2509404,
+        "sha256": "8f9ed53be43344fba5d513cb12daa40290b06134acf6210bf932952d08c2b825"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/reduce-groups/point204-reduce-groups/OPPROF_20261005033724_XNMPVUIPEJMLYGZV/_ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 2452604,
+        "sha256": "33fb041bf622432862a48a970cb8956f2bd4db78a2f0d40e30157ee064f1cc31"
+      }
+    ]
+  }
+]

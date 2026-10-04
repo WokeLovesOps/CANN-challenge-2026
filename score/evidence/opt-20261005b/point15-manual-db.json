@@ -1,0 +1,227 @@
+[
+  {
+    "case": 491,
+    "label": "点15大K矩阵",
+    "shape": [
+      1,
+      64,
+      64,
+      8192
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ece5d2ff7e4773e2fb61b83832709e296c8409843bc0d50bce092daae01de483",
+      "3e3ae88681895b0343047e55ee3803d2a0c2dc7cbeb1ce07e1eac8b04e362b1a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      4466.66162109375,
+      4466.66162109375
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "60ad4835aee3a9e76672b6f860cd6413cabbc5264cd29cd15782a991aff452f5",
+    "alternating_input": true,
+    "point": 15,
+    "variant": "manual15-db",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0|1|2|3|4|5|6|7",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/manual15-db-all8/point15-manual15-db",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/build/libmanual15-db.so",
+      "--case=491",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/manual15-db-all8/point15-manual15-db.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "b2aadb1063fd794081f5bee74496d9858642772b6b6e8bdcebae00e28d7bf759",
+    "source_sha256": "03db1a4e958a4427e878edb82877eb2e30a5b727dc082eb50d3d6260d311b8ff",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 3.52,
+        "running_us": 3.52
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 4.8,
+        "running_us": 4.79
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 3.52,
+        "running_us": 3.52
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 4.56,
+        "running_us": 4.52
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 3.53,
+        "running_us": 3.53
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 4.56,
+        "running_us": 4.52
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 3.53,
+        "running_us": 3.53
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 4.56,
+        "running_us": 4.52
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 3.51,
+        "running_us": 3.51
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 4.56,
+        "running_us": 4.52
+      },
+      {
+        "core": "core5.cubecore0",
+        "duration_us": 3.52,
+        "running_us": 3.51
+      },
+      {
+        "core": "core5.veccore0",
+        "duration_us": 4.56,
+        "running_us": 4.52
+      },
+      {
+        "core": "core6.cubecore0",
+        "duration_us": 3.51,
+        "running_us": 3.51
+      },
+      {
+        "core": "core6.veccore0",
+        "duration_us": 4.56,
+        "running_us": 4.52
+      },
+      {
+        "core": "core7.cubecore0",
+        "duration_us": 3.52,
+        "running_us": 3.51
+      },
+      {
+        "core": "core7.veccore0",
+        "duration_us": 4.56,
+        "running_us": 4.52
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 4.32,
+        "running_us": 4.31
+      },
+      {
+        "core": "core1.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 4.08,
+        "running_us": 4.04
+      },
+      {
+        "core": "core2.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 4.08,
+        "running_us": 4.04
+      },
+      {
+        "core": "core3.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 4.08,
+        "running_us": 4.04
+      },
+      {
+        "core": "core4.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core4.veccore0",
+        "duration_us": 4.08,
+        "running_us": 4.04
+      },
+      {
+        "core": "core5.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core5.veccore0",
+        "duration_us": 4.08,
+        "running_us": 4.04
+      },
+      {
+        "core": "core6.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core6.veccore0",
+        "duration_us": 4.08,
+        "running_us": 4.04
+      },
+      {
+        "core": "core7.cubecore0",
+        "duration_us": 3.05,
+        "running_us": 3.05
+      },
+      {
+        "core": "core7.veccore0",
+        "duration_us": 4.08,
+        "running_us": 4.04
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/manual15-db-all8/point15-manual15-db/OPPROF_20261005044824_IECZECDFSWOBHWTM/_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE/0/simulator/visualize_data.bin",
+        "size": 11636472,
+        "sha256": "a825a89ca1cd7e3384d3f3aca732db7d352acd5a8861666fb6f60b410559a81e"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005b/reduce/sim-private/manual15-db-all8/point15-manual15-db/OPPROF_20261005044824_IECZECDFSWOBHWTM/_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE/1/simulator/visualize_data.bin",
+        "size": 11352324,
+        "sha256": "0086dda5c71af64302f3232ad4a5c2134b89cf7253469df8e53dc282c111547d"
+      }
+    ]
+  }
+]

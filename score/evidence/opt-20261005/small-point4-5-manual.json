@@ -1,0 +1,417 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "small-manual",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point4-small-manual",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libsmall-manual.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point4-small-manual.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "332ce5db7da55ffd1acf6b2083acb230093883c6b582451bf29eaecffd34a41f",
+    "source_sha256": "f1605eed099e708c90759a91391a78f61d5ad65fbaa4f80d8319057af599ddbd",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.52,
+        "running_us": 1.52
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.94,
+        "running_us": 1.93
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.1,
+        "running_us": 1.1
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.52,
+        "running_us": 1.51
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point4-small-manual/OPPROF_20261005041131_GBDDCVHWBTADJWSQ/_ZN13batch_max_sum22ComputeSmallManualCubeIu6__bf16Lb1ELb1ELj16EEEvPhS1_S1_S1_jj/0/simulator/visualize_data.bin",
+        "size": 1911224,
+        "sha256": "803bd3c86b57f55850d389097f8face21f12f13d22d0dd6243ff9ab128b48015"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point4-small-manual/OPPROF_20261005041131_GBDDCVHWBTADJWSQ/_ZN13batch_max_sum22ComputeSmallManualCubeIu6__bf16Lb1ELb1ELj16EEEvPhS1_S1_S1_jj/1/simulator/visualize_data.bin",
+        "size": 1881016,
+        "sha256": "5110d46fedc4fcf6cbaf23ccf8cd106a35512099a86dcf9cabcca22369e0da54"
+      }
+    ]
+  },
+  {
+    "case": 440,
+    "label": "中等批量向量点5",
+    "shape": [
+      8,
+      16,
+      32,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "83e7682ea310355ed669b9bea06a87a2e275990b638244a44e2967c55a441c3c",
+      "e4c2efdc6d300269176782c9fc0fa719f1e533f39c025f8a38e8e503251ff593"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      111.06105041503906,
+      134.29998779296875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 5,
+    "variant": "small-manual",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point5-small-manual",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libsmall-manual.so",
+      "--case=440",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point5-small-manual.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "332ce5db7da55ffd1acf6b2083acb230093883c6b582451bf29eaecffd34a41f",
+    "source_sha256": "f1605eed099e708c90759a91391a78f61d5ad65fbaa4f80d8319057af599ddbd",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 0.81,
+        "running_us": 0.8
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.23,
+        "running_us": 1.23
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 0.8,
+        "running_us": 0.79
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.16,
+        "running_us": 1.16
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point5-small-manual/OPPROF_20261005041136_CQCOPQEKZRYVFNKF/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/0/simulator/visualize_data.bin",
+        "size": 1957136,
+        "sha256": "294c9af91f1a9676575a05312a04fdead0ff6f0cb28519bb5063b6f66dcfd84f"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point5-small-manual/OPPROF_20261005041136_CQCOPQEKZRYVFNKF/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/1/simulator/visualize_data.bin",
+        "size": 1926852,
+        "sha256": "712a23738d04854b8c924a895b10aa160ea97b77faae968c8fbb58256c2940dd"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "small-manual",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point104-small-manual",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libsmall-manual.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point104-small-manual.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "332ce5db7da55ffd1acf6b2083acb230093883c6b582451bf29eaecffd34a41f",
+    "source_sha256": "f1605eed099e708c90759a91391a78f61d5ad65fbaa4f80d8319057af599ddbd",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.8,
+        "running_us": 1.8
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.26,
+        "running_us": 2.26
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.12,
+        "running_us": 1.11
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.53,
+        "running_us": 1.52
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point104-small-manual/OPPROF_20261005041142_JNPBCCCECIRSMCRF/_ZN13batch_max_sum22ComputeSmallManualCubeIu6__bf16Lb1ELb1ELj16EEEvPhS1_S1_S1_jj/0/simulator/visualize_data.bin",
+        "size": 1911200,
+        "sha256": "b2558a98bc2383a31d6c65d9dd25379b38a1986e439d2a6c79f0b1290aa9fb69"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point104-small-manual/OPPROF_20261005041142_JNPBCCCECIRSMCRF/_ZN13batch_max_sum22ComputeSmallManualCubeIu6__bf16Lb1ELb1ELj16EEEvPhS1_S1_S1_jj/1/simulator/visualize_data.bin",
+        "size": 1880952,
+        "sha256": "1b04863f395ab6d652711cfec02c26e81322ad408ce9cbc8538fa9e6783deb2d"
+      }
+    ]
+  },
+  {
+    "case": 1503,
+    "label": "动态点4尾列",
+    "shape": [
+      3,
+      15,
+      9,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ca3da90c768018d2cb90dc2331117dbb77fd74fdaf77957de49d9aedb1aba509",
+      "3e0e5f5c8b2313b0f8d7fe6b8956d74604eb0ffbe94fea0b1c3e4ba18cd72d54"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      83.2717056274414,
+      99.70420837402344
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 204,
+    "variant": "small-manual",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point204-small-manual",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libsmall-manual.so",
+      "--case=1503",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point204-small-manual.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "332ce5db7da55ffd1acf6b2083acb230093883c6b582451bf29eaecffd34a41f",
+    "source_sha256": "f1605eed099e708c90759a91391a78f61d5ad65fbaa4f80d8319057af599ddbd",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.79,
+        "running_us": 1.79
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.26,
+        "running_us": 2.26
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.11,
+        "running_us": 1.11
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.52,
+        "running_us": 1.51
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point204-small-manual/OPPROF_20261005041147_ZDMMEJBSAVMMXOKQ/_ZN13batch_max_sum22ComputeSmallManualCubeIu6__bf16Lb1ELb1ELj16EEEvPhS1_S1_S1_jj/0/simulator/visualize_data.bin",
+        "size": 1911748,
+        "sha256": "d00b93319455a9c142e01ee30c3cafe7a360d3c46ec82554840a590bdec0fa18"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point204-small-manual/OPPROF_20261005041147_ZDMMEJBSAVMMXOKQ/_ZN13batch_max_sum22ComputeSmallManualCubeIu6__bf16Lb1ELb1ELj16EEEvPhS1_S1_S1_jj/1/simulator/visualize_data.bin",
+        "size": 1880944,
+        "sha256": "de1945b3a2026eda3a0c3dd65d7f6246645998eac14b8100afe1b935e1cba9da"
+      }
+    ]
+  },
+  {
+    "case": 416,
+    "label": "中等批量向量中间批量",
+    "shape": [
+      5,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "875fa19d2176354c48cbc6a5fbf8d6fd278ef544b36a34e3a3efbb32cc6d5c8a",
+      "229cb23769a9cb75724e5c5638496ca447fa3d6b80f723b66a5e7c2156ed9517"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      91.40203857421875,
+      111.26532745361328
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 105,
+    "variant": "small-manual",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point105-small-manual",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libsmall-manual.so",
+      "--case=416",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point105-small-manual.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "332ce5db7da55ffd1acf6b2083acb230093883c6b582451bf29eaecffd34a41f",
+    "source_sha256": "f1605eed099e708c90759a91391a78f61d5ad65fbaa4f80d8319057af599ddbd",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.3,
+        "running_us": 1.3
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.73,
+        "running_us": 1.73
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.01,
+        "running_us": 1.01
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.43,
+        "running_us": 1.43
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point105-small-manual/OPPROF_20261005041152_RWVYUXRXAYICURFG/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/0/simulator/visualize_data.bin",
+        "size": 1957464,
+        "sha256": "9b34bd1211ae0fa0a65dca8fee9ba0b04d16ee1cf53c5d74a9b84e892ccdfd3f"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/small-manual-fixed/point105-small-manual/OPPROF_20261005041152_RWVYUXRXAYICURFG/_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj/1/simulator/visualize_data.bin",
+        "size": 1926772,
+        "sha256": "a9cbe5e8098f85ffe4529978c55bbefc58cd295caed1f2a204e85419d0f36c24"
+      }
+    ]
+  }
+]

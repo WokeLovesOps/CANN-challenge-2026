@@ -1,0 +1,85 @@
+[
+  {
+    "case": 458,
+    "label": "中等批量向量点7",
+    "shape": [
+      16,
+      32,
+      128,
+      256
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "f3fc9432e2afd5ec55e171e778e5d92e82b2a0c48b0bad9700e02d604b4e8428",
+      "7644f38e1247cb74480070820cf520a439947c8860b3d90eb306bf2040b3df5a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      416.2867126464844,
+      466.1575012207031
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "point": 7,
+    "variant": "manual-cube7",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube7/point7-manual-cube7",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libmanual-cube7.so",
+      "--case=458",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube7/point7-manual-cube7.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "5fbf950fabeb4454259dac7e214f529db284273739e9743d1040db4e2314fb1c",
+    "source_sha256": "273d9c216fe65794472d3e7eb5cb0907fac1db7df50c19529db8ee108ac4e8ef",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.87,
+        "running_us": 1.86
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.64,
+        "running_us": 2.63
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.69,
+        "running_us": 1.69
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube7/point7-manual-cube7/OPPROF_20261005040132_NDHLRWWPAFXJTYBA/_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_/0/simulator/visualize_data.bin",
+        "size": 2095024,
+        "sha256": "74111042cd66d536cf22cbfd6fedb069b5263f02037c16aa544ab21e84f0716f"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube7/point7-manual-cube7/OPPROF_20261005040132_NDHLRWWPAFXJTYBA/_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_/1/simulator/visualize_data.bin",
+        "size": 2063076,
+        "sha256": "7fea614d8c8042fedfcb21b1577aa8ee691072b0d838c55efb9984feebf786d7"
+      }
+    ]
+  }
+]

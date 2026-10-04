@@ -1,0 +1,251 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 4,
+    "variant": "point4-cube",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point4-point4-cube",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libpoint4-cube.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point4-point4-cube.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "4500fc21dd335549eadd2b447a9686fa70f414915b036452ca452025ed1f3772",
+    "source_sha256": "4d801757c9c2efd1305407b39f415d3d2c7f2ed9cf37217ae5deba33c8b6adc5",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 3.53,
+        "running_us": 2.57
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 4.05,
+        "running_us": 3.83
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 2.26,
+        "running_us": 2.25
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.81,
+        "running_us": 2.79
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point4-point4-cube/OPPROF_20261005034443_DZTQZLGOJKRGXKDJ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+        "size": 4904100,
+        "sha256": "c8ba531e52e03e14dc5ad144d5ac0d7199b44892bad9286d692c9e2beea1f169"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point4-point4-cube/OPPROF_20261005034443_DZTQZLGOJKRGXKDJ/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+        "size": 4715584,
+        "sha256": "6e2b31ea6ed354684e3a474acec8db523bae6c574c93015c464929841b530ad1"
+      }
+    ]
+  },
+  {
+    "case": 471,
+    "label": "中等批量向量行尾块",
+    "shape": [
+      3,
+      15,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5d1005960141a44f4196bd0061168004728dc0c99c4ba66a1b25a3cb1b308e41",
+      "71ee4ee67c8e5c23c3b07de1f7c1b9cf19be48758b62f33b77c42e833c13c178"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      79.91558074951172,
+      104.0506591796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 104,
+    "variant": "point4-cube",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point104-point4-cube",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libpoint4-cube.so",
+      "--case=471",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point104-point4-cube.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "4500fc21dd335549eadd2b447a9686fa70f414915b036452ca452025ed1f3772",
+    "source_sha256": "4d801757c9c2efd1305407b39f415d3d2c7f2ed9cf37217ae5deba33c8b6adc5",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 3.92,
+        "running_us": 2.95
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 4.47,
+        "running_us": 4.24
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 2.27,
+        "running_us": 2.26
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.82,
+        "running_us": 2.8
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point104-point4-cube/OPPROF_20261005034452_SZDZTGPFKLEFIGYH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+        "size": 4906152,
+        "sha256": "b60dfe7835a331098c6727af17315e03d2edf6c4c134dd3a07cf6e94a3e187a8"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point104-point4-cube/OPPROF_20261005034452_SZDZTGPFKLEFIGYH/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+        "size": 4715540,
+        "sha256": "52ab544c5c11d7fa56b2a52a3e2ee014674c9212041c14b4037df21e5fbfebff"
+      }
+    ]
+  },
+  {
+    "case": 1503,
+    "label": "动态点4尾列",
+    "shape": [
+      3,
+      15,
+      9,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ca3da90c768018d2cb90dc2331117dbb77fd74fdaf77957de49d9aedb1aba509",
+      "3e0e5f5c8b2313b0f8d7fe6b8956d74604eb0ffbe94fea0b1c3e4ba18cd72d54"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      83.2717056274414,
+      99.70420837402344
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 204,
+    "variant": "point4-cube",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point204-point4-cube",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_extra.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libpoint4-cube.so",
+      "--case=1503",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point204-point4-cube.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "4500fc21dd335549eadd2b447a9686fa70f414915b036452ca452025ed1f3772",
+    "source_sha256": "4d801757c9c2efd1305407b39f415d3d2c7f2ed9cf37217ae5deba33c8b6adc5",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 4.16,
+        "running_us": 3.19
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 4.71,
+        "running_us": 4.48
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 2.26,
+        "running_us": 2.26
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.81,
+        "running_us": 2.8
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point204-point4-cube/OPPROF_20261005034500_ZCTNUYXWRIGDOWSV/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+        "size": 4903908,
+        "sha256": "d1d054a76a449c6ad099ad2a2a5a98e2cd4eaaf2ea194054e6bd32e96b9d967c"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point4-cube/point204-point4-cube/OPPROF_20261005034500_ZCTNUYXWRIGDOWSV/_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+        "size": 4715356,
+        "sha256": "b27a26bc757eaab3573f3e1eb96bf1b301aa0c4bf21e1bab28f324713f6d3f07"
+      }
+    ]
+  }
+]

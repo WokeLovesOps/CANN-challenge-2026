@@ -1,0 +1,85 @@
+[
+  {
+    "case": 440,
+    "label": "中等批量向量点5",
+    "shape": [
+      8,
+      16,
+      32,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "83e7682ea310355ed669b9bea06a87a2e275990b638244a44e2967c55a441c3c",
+      "e4c2efdc6d300269176782c9fc0fa719f1e533f39c025f8a38e8e503251ff593"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      111.06105041503906,
+      134.29998779296875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "point": 5,
+    "variant": "point5-cube",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point5-cube/point5-point5-cube",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libpoint5-cube.so",
+      "--case=440",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point5-cube/point5-point5-cube.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "fe474c5acecec6b25e0fc1ab95d1e66e1f749961623759984086cc0660d4d4b3",
+    "source_sha256": "e1e393aab07059b12a1125e0f0b79e5dc505361ee03212794d22605935843994",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 3.13,
+        "running_us": 2.17
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 3.68,
+        "running_us": 3.46
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 2.16,
+        "running_us": 2.14
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.66,
+        "running_us": 2.65
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point5-cube/point5-point5-cube/OPPROF_20261005033943_PWGPJYTQWXFBNDVN/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/0/simulator/visualize_data.bin",
+        "size": 4871152,
+        "sha256": "4022af5e1c7614a613b1eef9e4a7dd8d4a2e85924d7697025ec6d910d9ced5cf"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/point5-cube/point5-point5-cube/OPPROF_20261005033943_PWGPJYTQWXFBNDVN/_ZN13batch_max_sum7ComputeIDhLb0ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE/1/simulator/visualize_data.bin",
+        "size": 4683596,
+        "sha256": "cd86174f1f0e79baf1ef1d4941608fa7799d1a79e5d44d4563c0044efda28acf"
+      }
+    ]
+  }
+]

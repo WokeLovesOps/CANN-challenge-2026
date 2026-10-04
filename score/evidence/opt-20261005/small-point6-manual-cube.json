@@ -1,0 +1,85 @@
+[
+  {
+    "case": 453,
+    "label": "中等批量向量点6",
+    "shape": [
+      13,
+      23,
+      73,
+      192
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "0973d5842ccefb9fccf2198395170a27f26de4b8c51b0eb6bd28bea19cc740e6",
+      "0f3d74961709998858c93fd2c4f929e15e476e78bc224493625bf034a974b811"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      242.34765625,
+      275.0809020996094
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "point": 6,
+    "variant": "manual-cube",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube/point6-manual-cube",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/tests/simulator_matrix.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screening-build/libmanual-cube.so",
+      "--case=453",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube/point6-manual-cube.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "9fab2bdebfccf22b4f46a0511569869775aad8c25f0e83929330258ed081652f",
+    "source_sha256": "cc8a88ff74b66e58096341bbdfb52c1b1e80b46e522acb7f54727897923f5c6a",
+    "timings": [
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 2.3,
+        "running_us": 2.3
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.93,
+        "running_us": 2.93
+      },
+      {
+        "core": "core0.cubecore0",
+        "duration_us": 1.46,
+        "running_us": 1.46
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.09,
+        "running_us": 2.09
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube/point6-manual-cube/OPPROF_20261005035720_PRLPGDTYLPTEOPXG/_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_/0/simulator/visualize_data.bin",
+        "size": 2002112,
+        "sha256": "a5e0f8004d2230ff0d8e4fcfc6d0b6d60ee234fd2cfcdc41082c0b6bfa3da394"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/sim-private/manual-cube/point6-manual-cube/OPPROF_20261005035720_PRLPGDTYLPTEOPXG/_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_/1/simulator/visualize_data.bin",
+        "size": 1969856,
+        "sha256": "d062de5e15f97d6d4bc8f4e3db3be137ced96b7a63e99c19b481efd93f73fd1c"
+      }
+    ]
+  }
+]

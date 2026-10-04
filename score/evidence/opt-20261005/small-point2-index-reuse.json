@@ -1,0 +1,586 @@
+[
+  {
+    "case": 350,
+    "label": "打包点积矩阵",
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "19e3dbeacff8d3630bf24bf3e75280c454eff704acb23cd10a99ca4d07dd9a75",
+      "3be3ef1c1b342885c665e586b4bec824ca25028be75edb2db1c576584dd549d0"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      4.745638370513916,
+      4.745638370513916
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 2,
+    "variant": "early-reuse",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-early-reuse",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libearly-reuse.so",
+      "--case=350",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-early-reuse.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "a223a1eae3c0df2684253852bf517046f3cc0a6690ea386fe7be075f6358a0c8",
+    "source_sha256": "14cccff0ba670e3b2376311124473f9ccf22a34aa65f92975bbfd07015592268",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.3,
+        "running_us": 1.29
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.09,
+        "running_us": 1.09
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-early-reuse/OPPROF_20261005042015_TGHVIOLHAKFYDXNJ/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1732396,
+        "sha256": "cee32971592cbfca568f439b275cd5c38de5c3808425c3b769eabe75f4fd9ede"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-early-reuse/OPPROF_20261005042015_TGHVIOLHAKFYDXNJ/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1708496,
+        "sha256": "25116edef357266d91ae21431dae3b4000a01f4d0101d44cd9340fc17f67e70c"
+      }
+    ]
+  },
+  {
+    "case": 350,
+    "label": "打包点积矩阵",
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "19e3dbeacff8d3630bf24bf3e75280c454eff704acb23cd10a99ca4d07dd9a75",
+      "3be3ef1c1b342885c665e586b4bec824ca25028be75edb2db1c576584dd549d0"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      4.745638370513916,
+      4.745638370513916
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 2,
+    "variant": "baseline",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-baseline",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libbaseline.so",
+      "--case=350",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-baseline.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "b521d5f1f532a1ccd5c74951c6f7af39ebd7a3219301005f0ab83fdfab3440fc",
+    "source_sha256": "8b02991e9d26c5c3eefa8f40284ee498ae047f541c3cb28f815e449c88535c68",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.63,
+        "running_us": 1.47
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.18,
+        "running_us": 1.17
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-baseline/OPPROF_20261005042021_JETAMMOECVSSULNQ/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1824796,
+        "sha256": "234ae107897b83b249001eef0d481725d2cb9daf1c4371b4fbe301e885dae222"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point2-baseline/OPPROF_20261005042021_JETAMMOECVSSULNQ/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1803708,
+        "sha256": "084d48013f5001b22e6c36c2ea095616ae15d60f400220b5083fe3c71f35c8ae"
+      }
+    ]
+  },
+  {
+    "case": 1502,
+    "label": "点2M16N1K64",
+    "shape": [
+      1,
+      16,
+      1,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "b5550f49a890a4417395a24f76ff23536dfaa17a91db9be7355ec651a583cfed",
+      "cff25d482e864fc9c8dca3305a463bc7c8a4315cdc938fc98d78400d71445984"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      22.27337646484375,
+      22.27337646484375
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 202,
+    "variant": "baseline",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-baseline",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libbaseline.so",
+      "--case=1502",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-baseline.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "b521d5f1f532a1ccd5c74951c6f7af39ebd7a3219301005f0ab83fdfab3440fc",
+    "source_sha256": "8b02991e9d26c5c3eefa8f40284ee498ae047f541c3cb28f815e449c88535c68",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.93,
+        "running_us": 2.16
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.0,
+        "running_us": 1.99
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-baseline/OPPROF_20261005042028_NXLUVRWRQBGWWWTO/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2581136,
+        "sha256": "38182a99530b8fb37f9011d042de4da2a21ecdf81ff67baa8d0cc2022ff85052"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-baseline/OPPROF_20261005042028_NXLUVRWRQBGWWWTO/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2461176,
+        "sha256": "017628477705b7eba93ce6aa5f2298687ed666658b48200b6379bcc9f0cf5f51"
+      }
+    ]
+  },
+  {
+    "case": 1502,
+    "label": "点2M16N1K64",
+    "shape": [
+      1,
+      16,
+      1,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "b5550f49a890a4417395a24f76ff23536dfaa17a91db9be7355ec651a583cfed",
+      "cff25d482e864fc9c8dca3305a463bc7c8a4315cdc938fc98d78400d71445984"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      22.27337646484375,
+      22.27337646484375
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 202,
+    "variant": "early-reuse",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-early-reuse",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libearly-reuse.so",
+      "--case=1502",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-early-reuse.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "a223a1eae3c0df2684253852bf517046f3cc0a6690ea386fe7be075f6358a0c8",
+    "source_sha256": "14cccff0ba670e3b2376311124473f9ccf22a34aa65f92975bbfd07015592268",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.05
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.85,
+        "running_us": 1.85
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-early-reuse/OPPROF_20261005042034_HJPKVOJPORWMXUZS/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2352488,
+        "sha256": "1e740ebefdcd2e47c520002940913e605108df86ed4c25e05791f6fe580d847a"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point202-early-reuse/OPPROF_20261005042034_HJPKVOJPORWMXUZS/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2318544,
+        "sha256": "c48b9e22ab7ce8862e8cc712733bb098bbda5b4b759a016dfe3dceb417b25d10"
+      }
+    ]
+  },
+  {
+    "case": 1510,
+    "label": "点2M1N16K32",
+    "shape": [
+      1,
+      1,
+      16,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "8542b580b2c57298fd7d8681b9cdd3a2ef3599a4437c87dff54c89f137a973df",
+      "c30d6a43ce47ccfd3ec72cdda3daf34fc931b1bc8165f266f8e7308019101465"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      2.564990520477295,
+      2.564990520477295
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 203,
+    "variant": "baseline",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-baseline",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libbaseline.so",
+      "--case=1510",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-baseline.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "b521d5f1f532a1ccd5c74951c6f7af39ebd7a3219301005f0ab83fdfab3440fc",
+    "source_sha256": "8b02991e9d26c5c3eefa8f40284ee498ae047f541c3cb28f815e449c88535c68",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.55,
+        "running_us": 1.48
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.3,
+        "running_us": 1.28
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-baseline/OPPROF_20261005042040_KXDQVTLVCMUCBVQM/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2300548,
+        "sha256": "9f2e20eb16d9f595a55d606103835c9d1a52d86fb8b129f0e8829210538cc4cd"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-baseline/OPPROF_20261005042040_KXDQVTLVCMUCBVQM/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2258524,
+        "sha256": "d3538617ffdc24f5a471841dbfed7f2468feb870c71792cad6a7097095bfe1d4"
+      }
+    ]
+  },
+  {
+    "case": 1510,
+    "label": "点2M1N16K32",
+    "shape": [
+      1,
+      1,
+      16,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "8542b580b2c57298fd7d8681b9cdd3a2ef3599a4437c87dff54c89f137a973df",
+      "c30d6a43ce47ccfd3ec72cdda3daf34fc931b1bc8165f266f8e7308019101465"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      2.564990520477295,
+      2.564990520477295
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "point": 203,
+    "variant": "early-reuse",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-early-reuse",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libearly-reuse.so",
+      "--case=1510",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-early-reuse.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "a223a1eae3c0df2684253852bf517046f3cc0a6690ea386fe7be075f6358a0c8",
+    "source_sha256": "14cccff0ba670e3b2376311124473f9ccf22a34aa65f92975bbfd07015592268",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.14,
+        "running_us": 1.42
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.2,
+        "running_us": 1.2
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-early-reuse/OPPROF_20261005042045_DABOAAZQWQADUGQM/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2182008,
+        "sha256": "f7f56fb68d633d92fbf98539983d3d569d37e640c5b12123d1324fb6bb98c87d"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point203-early-reuse/OPPROF_20261005042045_DABOAAZQWQADUGQM/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2151932,
+        "sha256": "aa7d09a2dff3f19ab47fdbab287587c3e4fb261660e7b73d9a35066adb863055"
+      }
+    ]
+  },
+  {
+    "case": 1518,
+    "label": "点2M2N7K56",
+    "shape": [
+      1,
+      2,
+      7,
+      56
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "a01f1c72da298346bb6d5338f44de00e6adba69e417e60d3d1839e0d3de6f816",
+      "e6977734cb50abe98cdedd358e4d96a85d0ae763626babe397d2882b66d10d7d"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      8.114336967468262,
+      8.114336967468262
+    ],
+    "available_cores": 20,
+    "max_abs_error": 9.5367431640625e-07,
+    "point": 204,
+    "variant": "baseline",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-baseline",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libbaseline.so",
+      "--case=1518",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-baseline.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "b521d5f1f532a1ccd5c74951c6f7af39ebd7a3219301005f0ab83fdfab3440fc",
+    "source_sha256": "8b02991e9d26c5c3eefa8f40284ee498ae047f541c3cb28f815e449c88535c68",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.46,
+        "running_us": 1.55
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.23,
+        "running_us": 1.22
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-baseline/OPPROF_20261005042051_GHBPEOQMRFVRRIFU/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2276452,
+        "sha256": "01fa564571b23793a7e8481c44ad51e850869e7ccb2a68cc1623dcae6ff3c402"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-baseline/OPPROF_20261005042051_GHBPEOQMRFVRRIFU/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2231404,
+        "sha256": "75ff05cd17265601d9d43e92c078b5bc1c99d06333bb25786c32074cf8f918f8"
+      }
+    ]
+  },
+  {
+    "case": 1518,
+    "label": "点2M2N7K56",
+    "shape": [
+      1,
+      2,
+      7,
+      56
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "a01f1c72da298346bb6d5338f44de00e6adba69e417e60d3d1839e0d3de6f816",
+      "e6977734cb50abe98cdedd358e4d96a85d0ae763626babe397d2882b66d10d7d"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      8.114336967468262,
+      8.114336967468262
+    ],
+    "available_cores": 20,
+    "max_abs_error": 9.5367431640625e-07,
+    "point": 204,
+    "variant": "early-reuse",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--core-id=0",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-early-reuse",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/extra_cases.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/build/libearly-reuse.so",
+      "--case=1518",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-early-reuse.json"
+    ],
+    "process_exit": 0,
+    "library_sha256": "a223a1eae3c0df2684253852bf517046f3cc0a6690ea386fe7be075f6358a0c8",
+    "source_sha256": "14cccff0ba670e3b2376311124473f9ccf22a34aa65f92975bbfd07015592268",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.06,
+        "running_us": 1.33
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.1,
+        "running_us": 1.1
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-early-reuse/OPPROF_20261005042057_RTEGQYJULXURIXAA/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 2125016,
+        "sha256": "f9e7048b50dd6f586f85f9c4209bcbba99f06727c14c83f745f90cc91a26f378"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/xingchen-small-r13/sim-point2-recheck/point204-early-reuse/OPPROF_20261005042057_RTEGQYJULXURIXAA/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 2094712,
+        "sha256": "b41901960ff140a69897d79cca1d89910714916df93d1a9b3e8b53ad396e560c"
+      }
+    ]
+  }
+]

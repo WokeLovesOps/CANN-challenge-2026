@@ -1,0 +1,538 @@
+测试点 8：Runtime Error
+×
+2026-10-05 03:18:20 [INFO]  Op profiling analysis start.
+2026-10-05 03:18:20 [INFO]  Running device task: DeviceProf
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+[INFO] <WarmUp> Warm Up enabled. times:5
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  BatchMatmulMaxSum: generic path not compiled in exploration branch
+2026-10-05 03:18:23 [WARN]  Child process exited with status 134
+2026-10-05 03:18:25 [ERROR] Get profiling data failed.
+2026-10-05 03:18:25 [WARN]  Profiling running finished. May cause generating performance files to fail.
+2026-10-05 03:18:25 [WARN]  Running task failed, data parsing start
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_, name is: 0
+2026-10-05 03:18:25 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+	Op Type: vector
+	Task Duration(us): 1.960039
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_, name is: 1
+2026-10-05 03:18:25 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+	Op Type: vector
+	Task Duration(us): 2.080042
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_, name is: 2
+2026-10-05 03:18:25 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+	Op Type: vector
+	Task Duration(us): 1.940039
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_, name is: 3
+2026-10-05 03:18:25 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+	Op Type: vector
+	Task Duration(us): 2.280046
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_, name is: 4
+2026-10-05 03:18:25 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_
+	Op Type: vector
+	Task Duration(us): 1.940039
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj, name is: 0
+2026-10-05 03:18:25 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 3.760075
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj, name is: 1
+2026-10-05 03:18:25 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 3.600072
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:25 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj, name is: 2
+2026-10-05 03:18:26 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 3.620072
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:26 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj, name is: 3
+2026-10-05 03:18:26 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 3.720074
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:26 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj, name is: 4
+2026-10-05 03:18:26 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 3.580072
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:26 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj, name is: 0
+2026-10-05 03:18:26 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 2.900058
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:26 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj, name is: 1
+2026-10-05 03:18:26 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 2.920058
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:26 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj, name is: 2
+2026-10-05 03:18:26 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 3.000060
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:26 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj, name is: 3
+2026-10-05 03:18:26 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 3.060061
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:26 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj, name is: 4
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj
+	Op Type: vector
+	Task Duration(us): 2.600052
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj, name is: 0
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 7.740155
+	Block Dim: 8
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj, name is: 1
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 7.720154
+	Block Dim: 8
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj, name is: 2
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 7.780156
+	Block Dim: 8
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj, name is: 3
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 7.700154
+	Block Dim: 8
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj, name is: 4
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIDhLb0ELb0EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 7.700154
+	Block Dim: 8
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj, name is: 0
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 4.880097
+	Block Dim: 4
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj, name is: 1
+2026-10-05 03:18:27 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 4.180084
+	Block Dim: 4
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:27 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj, name is: 2
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 4.160083
+	Block Dim: 4
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj, name is: 3
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 4.120082
+	Block Dim: 4
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj, name is: 4
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum22ComputeBatchDirectDotsIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj
+	Op Type: vector
+	Task Duration(us): 4.240085
+	Block Dim: 4
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 0
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 9.120182
+	Block Dim: 16
+	Mix Block Dim: 16
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 1
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 8.720175
+	Block Dim: 16
+	Mix Block Dim: 16
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 2
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 9.080182
+	Block Dim: 16
+	Mix Block Dim: 16
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 3
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 8.880177
+	Block Dim: 16
+	Mix Block Dim: 16
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 4
+2026-10-05 03:18:28 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIDhLb1ELb0ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 8.460169
+	Block Dim: 16
+	Mix Block Dim: 16
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:28 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 0
+2026-10-05 03:18:29 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 11.340227
+	Block Dim: 13
+	Mix Block Dim: 13
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:29 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 1
+2026-10-05 03:18:29 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 11.640233
+	Block Dim: 13
+	Mix Block Dim: 13
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:29 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 2
+2026-10-05 03:18:29 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 11.220224
+	Block Dim: 13
+	Mix Block Dim: 13
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:29 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 3
+2026-10-05 03:18:29 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 12.140243
+	Block Dim: 13
+	Mix Block Dim: 13
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:29 [INFO]  Start analyze kernel on device: device4, kernel: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE, name is: 4
+2026-10-05 03:18:29 [INFO]  Operator Basic Information:
+
+	Op Name: _ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb1ELb0ELj32ELj128ELb0ELb1ELj128ELj32EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE
+	Op Type: mix
+	Task Duration(us): 11.580232
+	Block Dim: 13
+	Mix Block Dim: 13
+	Device Id: 4
+	Pid: 3444658
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-05 03:18:29 [INFO]  Profiling results saved in /<path>/OPPROF_20261005031820_WXFQKDIHTPECGDIN
+2026-10-05 03:18:29 [INFO]  Profiling data parse finished.
+2026-10-05 03:18:29 [INFO]  Op profiling finish. Welcome to next use.
