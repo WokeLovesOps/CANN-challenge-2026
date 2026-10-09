@@ -1,0 +1,105 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "dbfabaf816e14d415ef536e52f1ccf6afd54ee34b8a7ff8c9015161eb5f3589a",
+    "alternating_input": true,
+    "variant": "baseline4",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/baseline4-case415/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libbaseline4.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/baseline4-case415/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "8c9594a408f45d834393435b29e63766efb6e6bfd10a3871ba01e84c9f58bc0c",
+    "library_sha256": "b3f4a5cbf54241059c6e173692a8be7d0ec064dc96a2e4039d73aee4d64e8c74",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.66,
+        "running_us": 2.63
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.64,
+        "running_us": 2.63
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.63,
+        "running_us": 2.63
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.65,
+        "running_us": 2.63
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.57,
+        "running_us": 2.57
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.58,
+        "running_us": 2.58
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/baseline4-case415/profile/OPPROF_20261009222925_DTSLIJRGVGOXUAPX/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3892364,
+        "sha256": "556dc0907e409c29ed71695d8add772eab90b486f1ccbc00655a0160b89c4f6d"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/baseline4-case415/profile/OPPROF_20261009222925_DTSLIJRGVGOXUAPX/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3721332,
+        "sha256": "e171dc0467965640756e64ff464f11d01ea390abce2f189287509a1cbb26bc24"
+      }
+    ]
+  }
+]

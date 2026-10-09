@@ -1,0 +1,113 @@
+{
+  "commit": "845af05",
+  "submission": 687803,
+  "url": "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ac8f76c694b590c3cbe4de1",
+  "submitToResultUpperBoundSeconds": 163.4,
+  "diagnostic": true,
+  "expected": "WA",
+  "coreCounts": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    1,
+    2,
+    4,
+    8,
+    16,
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "table": "测试点\t结果\t输出错误占比\t用时\t最优用时\n1\tWrong Answer\t100.00%\t1.11μs\t1.20μs\n2\tWrong Answer\t100.00%\t0.64μs\t1.55μs\n3\tWrong Answer\t100.00%\t0.68μs\t2.22μs\n4\tWrong Answer\t100.00%\t0.86μs\t2.40μs\n5\tWrong Answer\t100.00%\t1.19μs\t3.57μs\n6\tWrong Answer\t100.00%\t0.60μs\t5.94μs\n7\tWrong Answer\t100.00%\t0.66μs\t6.38μs\n8\tWrong Answer\t100.00%\t0.68μs\t13.88μs\n9\tWrong Answer\t100.00%\t0.84μs\t48.48μs\n10\tWrong Answer\t100.00%\t1.19μs\t64.85μs\n11\tWrong Answer\t100.00%\t0.60μs\t68.51μs\n12\tWrong Answer\t100.00%\t0.62μs\t80.85μs\n13\tWrong Answer\t100.00%\t0.67μs\t7.28μs\n14\tWrong Answer\t100.00%\t0.85μs\t7.51μs\n15\tWrong Answer\t100.00%\t1.21μs\t8.18μs",
+  "groups": {
+    "1": {
+      "samples": [
+        {
+          "point": 1,
+          "duration_us": 1.11
+        },
+        {
+          "point": 6,
+          "duration_us": 0.6
+        },
+        {
+          "point": 11,
+          "duration_us": 0.6
+        }
+      ],
+      "median_us": 0.6
+    },
+    "2": {
+      "samples": [
+        {
+          "point": 2,
+          "duration_us": 0.64
+        },
+        {
+          "point": 7,
+          "duration_us": 0.66
+        },
+        {
+          "point": 12,
+          "duration_us": 0.62
+        }
+      ],
+      "median_us": 0.64
+    },
+    "4": {
+      "samples": [
+        {
+          "point": 3,
+          "duration_us": 0.68
+        },
+        {
+          "point": 8,
+          "duration_us": 0.68
+        },
+        {
+          "point": 13,
+          "duration_us": 0.67
+        }
+      ],
+      "median_us": 0.68
+    },
+    "8": {
+      "samples": [
+        {
+          "point": 4,
+          "duration_us": 0.86
+        },
+        {
+          "point": 9,
+          "duration_us": 0.84
+        },
+        {
+          "point": 14,
+          "duration_us": 0.85
+        }
+      ],
+      "median_us": 0.85
+    },
+    "16": {
+      "samples": [
+        {
+          "point": 5,
+          "duration_us": 1.19
+        },
+        {
+          "point": 10,
+          "duration_us": 1.19
+        },
+        {
+          "point": 15,
+          "duration_us": 1.21
+        }
+      ],
+      "median_us": 1.19
+    }
+  }
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "case": 350,
+    "label": "打包点积矩阵",
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "19e3dbeacff8d3630bf24bf3e75280c454eff704acb23cd10a99ca4d07dd9a75",
+      "3be3ef1c1b342885c665e586b4bec824ca25028be75edb2db1c576584dd549d0"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      4.745638370513916,
+      4.745638370513916
+    ],
+    "available_cores": 20,
+    "max_abs_error": 9.5367431640625e-07,
+    "second_input_sha256": "e7ba57f6197b3c8d4005cd9130d2ad3d7ae783e8b9c84a7fbceb6c8631d1db7f",
+    "alternating_input": true,
+    "variant": "compact2",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/compact2-case350/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libcompact2.so",
+      "--case=350",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/compact2-case350/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3e730f0069468edae68ebbac2ab74569c77eda3a25153210572b48f181ec3f80",
+    "library_sha256": "7c1a3df490b0641603c4b330cdb00315d00dbea7c745e782cea313ad0c6168bd",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.34,
+        "running_us": 1.29
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.09,
+        "running_us": 1.09
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/compact2-case350/profile/OPPROF_20261009222600_ESUYIZOKUTHGBEVD/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1772100,
+        "sha256": "86b298f63f8ddaa0a7fb98c09f7c7b834631f77ef8c558923130bf2197b474e8"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/compact2-case350/profile/OPPROF_20261009222600_ESUYIZOKUTHGBEVD/_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1754216,
+        "sha256": "e22126e774454760a96f4e9259fc4c849d20397ecc1882fb842fa6f7b012ab81"
+      }
+    ]
+  }
+]
