@@ -47,7 +47,7 @@ def main():
     elif label.endswith("全零"):
         a.fill(0)
     elif label == "单点积正负抵消":
-        # 大小不同的正负乘积抵消，FP64 golden 应为 4；检查归约精度与全 K 覆盖。
+        # 大小不同的正负乘积抵消，FP64 golden 应为 0.5；检查归约精度与全 K 覆盖。
         a.fill(1)
         b[0, :, 0] = np.tile([32.0, -32.0, 0.125, -0.0625], k // 4).astype(dtype)
     elif label == "K分片先和后Max":

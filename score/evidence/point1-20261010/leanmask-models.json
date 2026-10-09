@@ -1,0 +1,294 @@
+[
+  {
+    "case": 0,
+    "label": "点1随机",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "leanmask",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libleanmask.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e892c0fd78c5bd4df5df89033a2bc6279d0ef616dd39545919e154feac55fe66",
+    "library_sha256": "13d39b46d855e16d9cc06fabb74922193389c1fc84dd39d5cafcf1405530ed7c",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case0/profile/OPPROF_20261010023842_TNNOKSZXCTACVCOH/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 908144,
+        "sha256": "51456b9a9a96b82fe26d08d818e3996f181b064ed34a6a36d145812267e7df4a"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case0/profile/OPPROF_20261010023842_TNNOKSZXCTACVCOH/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 906300,
+        "sha256": "9273afe7bd74b9987ea747956b3061635a65ee2f105efc7ec52846439f14411d"
+      }
+    ]
+  },
+  {
+    "case": 8,
+    "label": "点1全负",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "691a25c84c250873d65f8833bdedcb3d88685bb2bcffa4a4b67ff7eb8c408076",
+      "70c0425a7899f95f4e3fdd1be4a42e4c97cede7cecbb29afd033fa37b7d8fb7f"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -6.986304759979248,
+      -6.986304759979248
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cb557fb9dd15495d2fe97cfd9a4d919fa1a96302a29f0fd8a8bb1ba8a9a1ab6e",
+    "alternating_input": true,
+    "variant": "leanmask",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case8/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libleanmask.so",
+      "--case=8",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case8/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e892c0fd78c5bd4df5df89033a2bc6279d0ef616dd39545919e154feac55fe66",
+    "library_sha256": "13d39b46d855e16d9cc06fabb74922193389c1fc84dd39d5cafcf1405530ed7c",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case8/profile/OPPROF_20261010023847_XKVFTSNUHSDLWQGX/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 908140,
+        "sha256": "ad61b43af444f9493b8a90337a4ecf7431e878923713b45ffab5aeb1566e0e90"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case8/profile/OPPROF_20261010023847_XKVFTSNUHSDLWQGX/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 906300,
+        "sha256": "4ac24c0027c024192877f5ff777a1f94efa3cbae4ae391a3dc688c220ae8fcfd"
+      }
+    ]
+  },
+  {
+    "case": 16,
+    "label": "点1全零",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+    ],
+    "input_pattern": "全零",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "8e34f641cdca82fc7f0537df067d08a5f4c6c183bda893f12caf0b321a15be90",
+    "alternating_input": true,
+    "variant": "leanmask",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case16/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libleanmask.so",
+      "--case=16",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case16/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e892c0fd78c5bd4df5df89033a2bc6279d0ef616dd39545919e154feac55fe66",
+    "library_sha256": "13d39b46d855e16d9cc06fabb74922193389c1fc84dd39d5cafcf1405530ed7c",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case16/profile/OPPROF_20261010023852_DVREGMMXHPGIOOXM/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 908208,
+        "sha256": "1134688d6281e7adb76340ff962657522de4684c5183b03c6af74c508b462dac"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case16/profile/OPPROF_20261010023852_DVREGMMXHPGIOOXM/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 906304,
+        "sha256": "4fa5e99c4f21b05519ee905c93e184e495a914110ba6daccafac22397f77de58"
+      }
+    ]
+  },
+  {
+    "case": 24,
+    "label": "单点积正负抵消",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "cf291829a08fd433380a44efecde63fd60567375039ae9f57691587afbdef276",
+      "37ea9ac3386141dad07601138697e9dbd53d6e54f659b37dad09f4a1cbd6c96f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.5,
+      0.5
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cbf1ce96c3e1185c379e63ff49bfea2558ced0ac2c24b1dc9f1e37959ef13245",
+    "alternating_input": true,
+    "variant": "leanmask",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case24/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libleanmask.so",
+      "--case=24",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case24/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e892c0fd78c5bd4df5df89033a2bc6279d0ef616dd39545919e154feac55fe66",
+    "library_sha256": "13d39b46d855e16d9cc06fabb74922193389c1fc84dd39d5cafcf1405530ed7c",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case24/profile/OPPROF_20261010023858_NYMYZXDWOEYHGWOA/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 908156,
+        "sha256": "1a194ae232a2bf1ba20b6f6a46818f447b2ca0d4d4eb8c8a4b5e4c920ad7dc87"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/leanmask-case24/profile/OPPROF_20261010023858_NYMYZXDWOEYHGWOA/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 906292,
+        "sha256": "dd5df17a65a49d63c58b4e405d9ab6c879d191ba1e5f898b461ae2a3687ed55c"
+      }
+    ]
+  }
+]
