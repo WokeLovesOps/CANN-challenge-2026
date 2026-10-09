@@ -1,0 +1,21 @@
+--- baseline.asc
++++ overlap.asc
+@@ -164,10 +164,16 @@
+     auto bFloat = aFloat[K];
+     auto result = LocalTensor<float>(TPosition::VECCALC, outputBufferOffset, outputBufferBytes / sizeof(float));
+     DataCopy(input, a, K);
++    SetFlag<HardEvent::MTE2_V>(EVENT_ID0);
+     DataCopy(input[K], b, K);
+-    SetFlag<HardEvent::MTE2_V>(EVENT_ID0);
++    SetFlag<HardEvent::MTE2_V>(EVENT_ID1);
+     WaitFlag<HardEvent::MTE2_V>(EVENT_ID0);
+-    Cast(aFloat, input, RoundMode::CAST_NONE, 2 * K);
++    // A的转换与B搬运独立，保留两次输入事件对应关系。
++    Cast(aFloat, input, RoundMode::CAST_NONE, static_cast<uint64_t>(K),
++        static_cast<uint8_t>(1), UnaryRepeatParams{1, 1, 4, 2});
++    WaitFlag<HardEvent::MTE2_V>(EVENT_ID1);
++    Cast(bFloat, input[K], RoundMode::CAST_NONE, static_cast<uint64_t>(K),
++        static_cast<uint8_t>(1), UnaryRepeatParams{1, 1, 4, 2});
+     PipeBarrier<PIPE_V>();
+     Mul(aFloat, aFloat, bFloat, K);
+     PipeBarrier<PIPE_V>();

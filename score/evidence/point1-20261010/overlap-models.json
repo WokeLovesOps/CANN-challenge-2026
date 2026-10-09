@@ -1,0 +1,294 @@
+[
+  {
+    "case": 0,
+    "label": "点1随机",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "overlap",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/liboverlap.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3abf5ddd4a01668df02d5f7dcc2a27ad177027abe73cf249091ff6f49dbe0f15",
+    "library_sha256": "e8e8246be2eb07384ccad83eb42f0da16acb2a7c924b546f6fcf87085e5f0ff9",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.63,
+        "running_us": 0.62
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.56,
+        "running_us": 0.56
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case0/profile/OPPROF_20261010023031_WZAIUCTTULDKALWB/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 919504,
+        "sha256": "35a724202414bdaa764d7647beba640bc693cc6887f04c5585748458c8273682"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case0/profile/OPPROF_20261010023031_WZAIUCTTULDKALWB/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 917624,
+        "sha256": "49e36fe3cef9f20b3759cfe0384d738cc4745985c9f01ed04a977ad00cfacdb9"
+      }
+    ]
+  },
+  {
+    "case": 8,
+    "label": "点1全负",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "691a25c84c250873d65f8833bdedcb3d88685bb2bcffa4a4b67ff7eb8c408076",
+      "70c0425a7899f95f4e3fdd1be4a42e4c97cede7cecbb29afd033fa37b7d8fb7f"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -6.986304759979248,
+      -6.986304759979248
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cb557fb9dd15495d2fe97cfd9a4d919fa1a96302a29f0fd8a8bb1ba8a9a1ab6e",
+    "alternating_input": true,
+    "variant": "overlap",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case8/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/liboverlap.so",
+      "--case=8",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case8/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3abf5ddd4a01668df02d5f7dcc2a27ad177027abe73cf249091ff6f49dbe0f15",
+    "library_sha256": "e8e8246be2eb07384ccad83eb42f0da16acb2a7c924b546f6fcf87085e5f0ff9",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.63,
+        "running_us": 0.62
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.56,
+        "running_us": 0.56
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case8/profile/OPPROF_20261010023036_BAPSGNZYNRUZTJOH/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 919476,
+        "sha256": "0a2ea7698fe49fa2b05109f02688f9d64e0fd69e89ae4a5a76a1ad2ddba45b2f"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case8/profile/OPPROF_20261010023036_BAPSGNZYNRUZTJOH/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 917620,
+        "sha256": "922a9e8e065da1086baddca877f9e307bae4da6f71bd3dadfec2395ff509808d"
+      }
+    ]
+  },
+  {
+    "case": 16,
+    "label": "点1全零",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+    ],
+    "input_pattern": "全零",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "8e34f641cdca82fc7f0537df067d08a5f4c6c183bda893f12caf0b321a15be90",
+    "alternating_input": true,
+    "variant": "overlap",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case16/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/liboverlap.so",
+      "--case=16",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case16/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3abf5ddd4a01668df02d5f7dcc2a27ad177027abe73cf249091ff6f49dbe0f15",
+    "library_sha256": "e8e8246be2eb07384ccad83eb42f0da16acb2a7c924b546f6fcf87085e5f0ff9",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.63,
+        "running_us": 0.62
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.56,
+        "running_us": 0.56
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case16/profile/OPPROF_20261010023041_ZMSGHSOXDASNZXHH/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 919460,
+        "sha256": "aefc8a6dc7caba9ce2c7074ec7367ab1e89bf9de34c84553f15a75e17096995b"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case16/profile/OPPROF_20261010023041_ZMSGHSOXDASNZXHH/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 917624,
+        "sha256": "1b3fea9f21599fe4808c94661979075960622db002a2338b9f7aa156b121a37a"
+      }
+    ]
+  },
+  {
+    "case": 24,
+    "label": "单点积正负抵消",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "cf291829a08fd433380a44efecde63fd60567375039ae9f57691587afbdef276",
+      "37ea9ac3386141dad07601138697e9dbd53d6e54f659b37dad09f4a1cbd6c96f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.5,
+      0.5
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cbf1ce96c3e1185c379e63ff49bfea2558ced0ac2c24b1dc9f1e37959ef13245",
+    "alternating_input": true,
+    "variant": "overlap",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case24/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/liboverlap.so",
+      "--case=24",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case24/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3abf5ddd4a01668df02d5f7dcc2a27ad177027abe73cf249091ff6f49dbe0f15",
+    "library_sha256": "e8e8246be2eb07384ccad83eb42f0da16acb2a7c924b546f6fcf87085e5f0ff9",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.63,
+        "running_us": 0.62
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.56,
+        "running_us": 0.56
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case24/profile/OPPROF_20261010023047_HOFMMBOFRULGSYVN/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 919560,
+        "sha256": "ff7d854d8ccfe4dc7c5e8a09fa06d389af5d428a0baea4023ed8cf8b6fb43b7b"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/overlap-case24/profile/OPPROF_20261010023047_HOFMMBOFRULGSYVN/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 917624,
+        "sha256": "3a8d997867f004ae7dd3e05d4fad7b621bef157c923f386eb8f532a9bd6605a7"
+      }
+    ]
+  }
+]
