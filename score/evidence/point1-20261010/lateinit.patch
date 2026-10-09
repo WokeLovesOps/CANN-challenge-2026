@@ -1,0 +1,22 @@
+--- baseline.asc
++++ lateinit.asc
+@@ -144,9 +144,6 @@
+     using namespace AscendC;
+     constexpr uint32_t K = 32;
+     // 单任务固定UB布局，保留必要硬件状态设置，省去TPipe资源登记。
+-    SetAtomicNone();
+-    SetMaskNorm();
+-    ResetMask();
+     constexpr uint32_t inputBufferOffset = 0;
+     constexpr uint32_t inputBufferBytes = 2 * K * sizeof(T);
+     constexpr uint32_t convertedBufferOffset = (inputBufferOffset + inputBufferBytes + 31) / 32 * 32;
+@@ -166,6 +163,9 @@
+     DataCopy(input, a, K);
+     DataCopy(input[K], b, K);
+     SetFlag<HardEvent::MTE2_V>(EVENT_ID0);
++    SetAtomicNone();
++    SetMaskNorm();
++    ResetMask();
+     WaitFlag<HardEvent::MTE2_V>(EVENT_ID0);
+     Cast(aFloat, input, RoundMode::CAST_NONE, 2 * K);
+     PipeBarrier<PIPE_V>();
