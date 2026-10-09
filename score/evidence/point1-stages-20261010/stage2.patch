@@ -1,0 +1,13 @@
+--- baseline.asc
++++ stage2.asc
+@@ -174,8 +174,8 @@
+     WholeReduceSum(result, aFloat, static_cast<int32_t>(K), 1, 1, 1, 4);
+     SetFlag<HardEvent::V_MTE3>(EVENT_ID0);
+     WaitFlag<HardEvent::V_MTE3>(EVENT_ID0);
+-    DataCopyExtParams outputCopy{1, sizeof(float), 0, 0, 0};
+-    DataCopyPad(output, result, outputCopy);
++    // 阶段2诊断：排空已发出的流水，随后结束。
++    PipeBarrier<PIPE_ALL>();
+ }
+ 
+ // 点6精确形状：手动GM->L1->L0->FP32 MMAD->GM，随后同一个混合核完成Vector归约。

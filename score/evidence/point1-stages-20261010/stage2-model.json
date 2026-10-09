@@ -1,0 +1,101 @@
+{
+  "case": 0,
+  "label": "点1随机",
+  "shape": [
+    1,
+    1,
+    1,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+    "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.8597932457923889,
+    -0.8597932457923889
+  ],
+  "available_cores": 20,
+  "numerical_correctness_checked": false,
+  "max_abs_error": 0.8597932457923889,
+  "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+  "alternating_input": true,
+  "variant": "stage2",
+  "command": [
+    "msprof",
+    "op",
+    "simulator",
+    "--soc-version=Ascend910B3",
+    "--launch-count=2",
+    "--timeout=2",
+    "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage2/profile",
+    "python3",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/diagnose.py",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/libstage2.so",
+    "--case=0",
+    "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage2/execution.json"
+  ],
+  "exit_code": 0,
+  "source_sha256": "ac24d01f5b83e12211a197551c8ea98b095eceb42cb6e17857ebdb6f1bac0848",
+  "library_sha256": "02e4b4f91df428ec406bdd23b1632d6ea0f36548a244af5edab76f414d2ff897",
+  "bins": [
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage2/profile/OPPROF_20261010025919_NKOUAMNJCZGAIRTF/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+      "size": 895276,
+      "sha256": "2861bd95abe08a974defb6b0c2a867aec8186602365c0342cb2c7d004d7c408a"
+    },
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage2/profile/OPPROF_20261010025919_NKOUAMNJCZGAIRTF/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+      "size": 893516,
+      "sha256": "b2cc362516acf45e3da6aaaa7351430c5522548e0d873da3673146ce3c761e8c"
+    }
+  ],
+  "timings": [
+    {
+      "core": "core0.veccore0",
+      "duration_us": 0.48,
+      "running_us": 0.48
+    },
+    {
+      "core": "core0.veccore0",
+      "duration_us": 0.42,
+      "running_us": 0.42
+    }
+  ],
+  "instructions": {
+    "LDP_XI_XJ_XN": 1,
+    "BAR": 4,
+    "WAIT_FLAG": 2,
+    "MOV_OUT_TO_UB": 2,
+    "SET_FLAG": 2,
+    "VCADD": 1,
+    "VMUL": 1,
+    "MOVEMASK": 6,
+    "VCONV": 1,
+    "DCCI": 1,
+    "MADD": 1,
+    "MOVK": 11,
+    "MOV_XD_IMM": 16,
+    "MOV_XD_SPR": 6,
+    "INSERT_XD": 2,
+    "ADD": 1,
+    "AND": 1,
+    "NEG": 1,
+    "ADD_IMM": 1,
+    "INSERT_XD_XN": 1,
+    "MOVX8_XD_IMM": 1,
+    "NOP": 1,
+    "END": 1,
+    "MOV_SPR_XN": 3
+  },
+  "execution_passed": true
+}

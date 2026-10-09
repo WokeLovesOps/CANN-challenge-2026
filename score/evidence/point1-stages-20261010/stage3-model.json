@@ -1,0 +1,102 @@
+{
+  "case": 0,
+  "label": "点1随机",
+  "shape": [
+    1,
+    1,
+    1,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+    "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.8597932457923889,
+    -0.8597932457923889
+  ],
+  "available_cores": 20,
+  "max_abs_error": 5.960464477539063e-08,
+  "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+  "alternating_input": true,
+  "variant": "stage3",
+  "command": [
+    "msprof",
+    "op",
+    "simulator",
+    "--soc-version=Ascend910B3",
+    "--launch-count=2",
+    "--timeout=2",
+    "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage3/profile",
+    "python3",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/libstage3.so",
+    "--case=0",
+    "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage3/execution.json"
+  ],
+  "exit_code": 0,
+  "source_sha256": "7b7ffa3957e9c2859a2a0d6c489aa0b667251763d925bd366321fd7478e6a820",
+  "library_sha256": "4292f00efde250cb34092600c55dbd8410c1bc48610af18f4b256f6cb5260b53",
+  "bins": [
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage3/profile/OPPROF_20261010025924_IXQKIREOWDEIPZXN/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+      "size": 899280,
+      "sha256": "05a8ebf667bd637f2f2b719074b7484e8458e0efe3a3537af71c57ea2e8c8d44"
+    },
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage3/profile/OPPROF_20261010025924_IXQKIREOWDEIPZXN/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+      "size": 897472,
+      "sha256": "0e26ef9af8876a73334bb053c53177412b175422a238ec38a8eb0334361e1837"
+    }
+  ],
+  "timings": [
+    {
+      "core": "core0.veccore0",
+      "duration_us": 0.61,
+      "running_us": 0.61
+    },
+    {
+      "core": "core0.veccore0",
+      "duration_us": 0.55,
+      "running_us": 0.55
+    }
+  ],
+  "instructions": {
+    "BAR": 4,
+    "LD_XD_XN_IMM": 1,
+    "LDP_XI_XJ_XN": 1,
+    "WAIT_FLAG": 2,
+    "MOV_OUT_TO_UB": 2,
+    "SET_FLAG": 2,
+    "MOV_SRC_TO_DST_ALIGN": 1,
+    "VCADD": 1,
+    "VMUL": 1,
+    "MOVEMASK": 6,
+    "VCONV": 1,
+    "DCCI": 1,
+    "MADD": 1,
+    "INSERT_XD": 2,
+    "MOV_XD_IMM": 16,
+    "MOVK": 11,
+    "MOVX8_XD_IMM": 2,
+    "MOV_XD_SPR": 6,
+    "ADD": 1,
+    "AND": 1,
+    "NEG": 1,
+    "ADD_IMM": 1,
+    "INSERT_XD_XN": 1,
+    "NOP": 1,
+    "END": 1,
+    "MOV_SPR_XN": 3
+  },
+  "execution_passed": true
+}

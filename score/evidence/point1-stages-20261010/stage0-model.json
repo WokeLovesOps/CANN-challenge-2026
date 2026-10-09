@@ -1,0 +1,93 @@
+{
+  "case": 0,
+  "label": "点1随机",
+  "shape": [
+    1,
+    1,
+    1,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+    "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.8597932457923889,
+    -0.8597932457923889
+  ],
+  "available_cores": 20,
+  "numerical_correctness_checked": false,
+  "max_abs_error": 0.8597932457923889,
+  "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+  "alternating_input": true,
+  "variant": "stage0",
+  "command": [
+    "msprof",
+    "op",
+    "simulator",
+    "--soc-version=Ascend910B3",
+    "--launch-count=2",
+    "--timeout=2",
+    "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage0/profile",
+    "python3",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/diagnose.py",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/libstage0.so",
+    "--case=0",
+    "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage0/execution.json"
+  ],
+  "exit_code": 0,
+  "source_sha256": "38f1e99fae3309c6573aba716bd6c44fe9973b4fd411251b5791c2d4f3b4b48d",
+  "library_sha256": "37b974e5bbe0fce44d884d9c91289235449df44151e8d5bb200dc9f30dd28cab",
+  "bins": [
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage0/profile/OPPROF_20261010025910_HXJFAMILYSUYIKKK/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+      "size": 323272,
+      "sha256": "272b38aff2d2c5891ecbaec3523966822113279700a961bd5a83000e4c997d6c"
+    },
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-stages-20261010/sim/stage0/profile/OPPROF_20261010025910_HXJFAMILYSUYIKKK/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+      "size": 321772,
+      "sha256": "e5e3a947dcd36caa2a4c22a408b3d02f43f5957bcea97bf173dbf61efc618529"
+    }
+  ],
+  "timings": [
+    {
+      "core": "core0.veccore0",
+      "duration_us": 0.02,
+      "running_us": 0.02
+    },
+    {
+      "core": "core0.veccore0",
+      "duration_us": 0.02,
+      "running_us": 0.02
+    }
+  ],
+  "instructions": {
+    "BAR": 1,
+    "MOVEMASK": 4,
+    "DCCI": 1,
+    "MADD": 1,
+    "MOVK": 1,
+    "MOV_XD_IMM": 7,
+    "NEG": 2,
+    "INSERT_XD": 1,
+    "MOV_XD_SPR": 4,
+    "INSERT_XD_XN": 1,
+    "ADD_IMM": 1,
+    "AND": 1,
+    "ADD": 1,
+    "MOV_SPR_XN": 2,
+    "NOP": 1,
+    "END": 1
+  },
+  "execution_passed": true
+}
