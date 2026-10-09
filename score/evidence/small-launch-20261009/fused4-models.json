@@ -1,0 +1,105 @@
+[
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "dbfabaf816e14d415ef536e52f1ccf6afd54ee34b8a7ff8c9015161eb5f3589a",
+    "alternating_input": true,
+    "variant": "fused4",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/fused4-case415/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libfused4.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/fused4-case415/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f520f11a12a0fafe4d937bc72e54890ebfe4f398123d839dfc9d74fd0bff2ba3",
+    "library_sha256": "33a1d6e31f5a2e106d58f174c125ee61f6363d8b43c7dbf33a9534a636e6f1c3",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.61,
+        "running_us": 2.6
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.6,
+        "running_us": 2.6
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.6,
+        "running_us": 2.6
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.6,
+        "running_us": 2.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.46,
+        "running_us": 2.46
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/fused4-case415/profile/OPPROF_20261009225446_EYHMMLVIUZFNZIUR/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3816708,
+        "sha256": "c187f63fafe8ec5893917fed972631d6e584853aec9402237227eff67e56a6c0"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/fused4-case415/profile/OPPROF_20261009225446_EYHMMLVIUZFNZIUR/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3716812,
+        "sha256": "fc309345d7791a546d0aebe8304f8ab5a5ce90cf8d1c4bea505381517f1b1725"
+      }
+    ]
+  }
+]
