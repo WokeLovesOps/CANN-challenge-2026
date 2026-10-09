@@ -1,0 +1,75 @@
+[
+  {
+    "case": 0,
+    "label": "最小",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "dotinplace",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/dotinplace-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libdotinplace.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/dotinplace-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "5429a3aabea24df70c92aaf24a8df014a222587700d90b1a02f958f22666ee7a",
+    "library_sha256": "5f237346bf1272ecf7f4a6694b9d8de27e826b6b523a7563cc7296d0e47e6223",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.66,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.55
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/dotinplace-case0/profile/OPPROF_20261009224203_OFVMDCEGFZYMTOTT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1014984,
+        "sha256": "d4e316d8814373a3788030faf07df8955d0aa697b4d1467dff3e6af64eb49804"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/dotinplace-case0/profile/OPPROF_20261009224203_OFVMDCEGFZYMTOTT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1008720,
+        "sha256": "2d2a7fec186ecdd9347cdff882351e1514bf9dcebe2819923bf666371f6623b9"
+      }
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "baseline3": {
+    "events": [
+      {
+        "instruction": "VCONV",
+        "pipe_id": 30,
+        "relative_start_us": 0.385,
+        "duration_us": 0.01899999938905239,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_vconv_impl.h:115\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_vconv_impl.h:829\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_vconv_intf_impl.h:156\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/baseline.asc:932",
+          "detail": "XD:X8=0x1a20,XN:X12=0,XT:X5=0x100040800010001,Conv_type:F16_F32,Id:928",
+          "pc_addr": "0x1136ae28"
+        }
+      },
+      {
+        "instruction": "MOVEV",
+        "pipe_id": 30,
+        "relative_start_us": 0.416,
+        "duration_us": 0.07100000232458115,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_duplicate_impl.h:37\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_duplicate_impl.h:66\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_duplicate_intf_impl.h:113\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/baseline.asc:953",
+          "detail": "XD:X10=0x3220,XN:X9=0,XT:X5=0x100000800010001,Dtype:B32,Id:962",
+          "pc_addr": "0x1136aeb0"
+        }
+      },
+      {
+        "instruction": "MOV_SRC_TO_DST_ALIGN",
+        "pipe_id": 60,
+        "relative_start_us": 0.215,
+        "duration_us": 0.16099999845027924,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:485\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1399\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/baseline.asc:883",
+          "detail": "Src:OUT,Dst:UB,XD:X12=0,XN:X6=0x11315800,XM:X10=0x2a00010,XT:X12=0,Dtype:B16,id:7",
+          "pc_addr": "0x1136addc",
+          "process_bytes": "672"
+        }
+      },
+      {
+        "instruction": "MOV_SRC_TO_DST_ALIGN",
+        "pipe_id": 60,
+        "relative_start_us": 0.215,
+        "duration_us": 0.1679999977350235,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:485\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1399\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/baseline.asc:890",
+          "detail": "Src:OUT,Dst:UB,XD:X8=0x2a0,XN:X5=0x11315e00,XM:X9=0x4e00010,XT:X12=0,Dtype:B16,id:8",
+          "pc_addr": "0x1136ade0",
+          "process_bytes": "1248"
+        }
+      },
+      {
+        "instruction": "MOV_SRC_TO_DST_ALIGN",
+        "pipe_id": 70,
+        "relative_start_us": 0.822,
+        "duration_us": 0.12800000607967377,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:562\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1491\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/baseline.asc:992",
+          "detail": "Src:UB,Dst:OUT,XD:X0=0x11316840,XN:X4=0xc00,XM:X1=0x40010,XT:X2=0,Dtype:B32,id:11",
+          "pc_addr": "0x1136b25c",
+          "process_bytes": "32"
+        }
+      }
+    ],
+    "trace_path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/baseline3-case369/profile/OPPROF_20261009223602_GRRJJNIJKCXDGDBS/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/core0.veccore0/trace.json"
+  },
+  "earlyzero3": {
+    "events": [
+      {
+        "instruction": "MOVEV",
+        "pipe_id": 30,
+        "relative_start_us": 0.231999,
+        "duration_us": 0.07100000232458115,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_duplicate_impl.h:37\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_duplicate_impl.h:66\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_duplicate_intf_impl.h:113\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/earlyzero3.asc:898",
+          "detail": "XD:X12=0x3220,XN:X11=0,XT:X8=0x100000800010001,Dtype:B32,Id:757",
+          "pc_addr": "0x1136ae6c"
+        }
+      },
+      {
+        "instruction": "VCONV",
+        "pipe_id": 30,
+        "relative_start_us": 0.387,
+        "duration_us": 0.01899999938905239,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_vconv_impl.h:115\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_vconv_impl.h:829\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_vconv_intf_impl.h:156\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/earlyzero3.asc:940",
+          "detail": "XD:X8=0x1a20,XN:X10=0,XT:X11=0x100040800010001,Conv_type:F16_F32,Id:782",
+          "pc_addr": "0x1136aed0"
+        }
+      },
+      {
+        "instruction": "MOV_SRC_TO_DST_ALIGN",
+        "pipe_id": 60,
+        "relative_start_us": 0.216,
+        "duration_us": 0.16099999845027924,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:485\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1399\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/earlyzero3.asc:883",
+          "detail": "Src:OUT,Dst:UB,XD:X10=0,XN:X9=0x11315800,XM:X13=0x2a00010,XT:X10=0,Dtype:B16,id:7",
+          "pc_addr": "0x1136ade8",
+          "process_bytes": "672"
+        }
+      },
+      {
+        "instruction": "MOV_SRC_TO_DST_ALIGN",
+        "pipe_id": 60,
+        "relative_start_us": 0.216,
+        "duration_us": 0.1679999977350235,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:485\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1399\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/earlyzero3.asc:890",
+          "detail": "Src:OUT,Dst:UB,XD:X14=0x2a0,XN:X8=0x11315e00,XM:X11=0x4e00010,XT:X10=0,Dtype:B16,id:8",
+          "pc_addr": "0x1136adec",
+          "process_bytes": "1248"
+        }
+      },
+      {
+        "instruction": "MOV_SRC_TO_DST_ALIGN",
+        "pipe_id": 70,
+        "relative_start_us": 0.742,
+        "duration_us": 0.12800000607967377,
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:562\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1491\n/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/earlyzero3.asc:993",
+          "detail": "Src:UB,Dst:OUT,XD:X0=0x11316840,XN:X4=0xc00,XM:X1=0x40010,XT:X2=0,Dtype:B32,id:11",
+          "pc_addr": "0x1136b270",
+          "process_bytes": "32"
+        }
+      }
+    ],
+    "trace_path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/earlyzero3-case369/profile/OPPROF_20261009224518_WEAWQBXDIDNERERV/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/core0.veccore0/trace.json"
+  }
+}

@@ -1,0 +1,168 @@
+[
+  {
+    "case": 369,
+    "label": "小批量向量矩阵",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ed064640600412e328793115cef35042733b75ae5fb7f3bbc52fe0d1a77b9b4b",
+      "65db762b76bef2245b7eada44ac3f4da10c26b2f457acae66e3358b1876cc02a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      26.504154205322266,
+      27.80176544189453
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.9073486328125e-06,
+    "second_input_sha256": "d9b98cdbe48eba54747e84da07a2938750f0bef590c68936f7c30b3093402c14",
+    "alternating_input": true,
+    "variant": "sum3",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case369/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libsum3.so",
+      "--case=369",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case369/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "879d10e7cef6462491674c6538ca266c0cd6bc9df6bbb62f3fd62be5e712a80f",
+    "library_sha256": "cd071d5b3dd53424314f6c50ff807d80d6cb65673849a797c85a9029ff35fc52",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.21,
+        "running_us": 1.21
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.22,
+        "running_us": 1.22
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case369/profile/OPPROF_20261009223816_ROHQOAFNXCCZDFFZ/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1615204,
+        "sha256": "2adad19e08b54a5cf4885909b6f34423d304eacbec7a1e7935c7fb54bd18951e"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case369/profile/OPPROF_20261009223816_ROHQOAFNXCCZDFFZ/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1599096,
+        "sha256": "455ff9126ac10c9ce9b5f54fdeb612e8fc1aac9a13bbfd128290800008ed23bc"
+      }
+    ]
+  },
+  {
+    "case": 393,
+    "label": "小批量向量全负",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5ec9b0a8c6e3b91570e15a93b0bd8796b50876aa4e711fd3cf23e3c49ac8e14f",
+      "26f713a7c000ec74f04cee23ad41b37777bf8a0c951cec4beebb5a5abe13ec95"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -70.44444274902344,
+      -68.17902374267578
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "9315dac39124c48e941a675d72eb650c7acc429e2f68d8824f4af522cd05ec16",
+    "alternating_input": true,
+    "variant": "sum3",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case393/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libsum3.so",
+      "--case=393",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case393/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "879d10e7cef6462491674c6538ca266c0cd6bc9df6bbb62f3fd62be5e712a80f",
+    "library_sha256": "cd071d5b3dd53424314f6c50ff807d80d6cb65673849a797c85a9029ff35fc52",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.41,
+        "running_us": 1.41
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.21,
+        "running_us": 1.21
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.22,
+        "running_us": 1.22
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case393/profile/OPPROF_20261009223821_AFLXJXYTRYJFGLUY/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1615396,
+        "sha256": "b17ea4c07f333f17c33f34efb693e7d7050414fd4f4d0054fd83e1873438d3fc"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/sum3-case393/profile/OPPROF_20261009223821_AFLXJXYTRYJFGLUY/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1599012,
+        "sha256": "81a4cf9d01ca06e653c65fc91743b5fac263c3e7221d75662f22f4bdeb867da4"
+      }
+    ]
+  }
+]

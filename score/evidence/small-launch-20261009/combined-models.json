@@ -1,0 +1,344 @@
+[
+  {
+    "case": 0,
+    "label": "最小",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "combined",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libcombined.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3e3b8f69f0907c167e4dc90c94ee7877d77a5f47e1314982241904c03ce813ce",
+    "library_sha256": "755b4df9f3715cc258107cad3e75cb227bf3d84c382819dead71c03eee0036c4",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case0/profile/OPPROF_20261009224851_IYBIIXKRHIMXEBFF/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 897012,
+        "sha256": "29885b86d81f5b07fd6a24a87e29cb7e0842b0ac19049421f988ad56d12a1656"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case0/profile/OPPROF_20261009224851_IYBIIXKRHIMXEBFF/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 895176,
+        "sha256": "dc6a541408d59dae3bf792bb4ebb41d2642bcfff4e6657a3fb6a4db88659a9ab"
+      }
+    ]
+  },
+  {
+    "case": 369,
+    "label": "小批量向量矩阵",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ed064640600412e328793115cef35042733b75ae5fb7f3bbc52fe0d1a77b9b4b",
+      "65db762b76bef2245b7eada44ac3f4da10c26b2f457acae66e3358b1876cc02a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      26.504154205322266,
+      27.80176544189453
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.9073486328125e-06,
+    "second_input_sha256": "d9b98cdbe48eba54747e84da07a2938750f0bef590c68936f7c30b3093402c14",
+    "alternating_input": true,
+    "variant": "combined",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case369/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libcombined.so",
+      "--case=369",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case369/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3e3b8f69f0907c167e4dc90c94ee7877d77a5f47e1314982241904c03ce813ce",
+    "library_sha256": "755b4df9f3715cc258107cad3e75cb227bf3d84c382819dead71c03eee0036c4",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.07
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.07
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case369/profile/OPPROF_20261009224856_YSBYPFYSEAJTPIFV/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1635424,
+        "sha256": "1ee37d9bddab152325b8dabf8b0beaa9e16ca88a63823298a3fc2ec3fa684f5d"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case369/profile/OPPROF_20261009224856_YSBYPFYSEAJTPIFV/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1622172,
+        "sha256": "439e885889ac09b92a06934cd024976f45ee71f99395b0ba35bdca1aaf4a4696"
+      }
+    ]
+  },
+  {
+    "case": 393,
+    "label": "小批量向量全负",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5ec9b0a8c6e3b91570e15a93b0bd8796b50876aa4e711fd3cf23e3c49ac8e14f",
+      "26f713a7c000ec74f04cee23ad41b37777bf8a0c951cec4beebb5a5abe13ec95"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -70.44444274902344,
+      -68.17902374267578
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "9315dac39124c48e941a675d72eb650c7acc429e2f68d8824f4af522cd05ec16",
+    "alternating_input": true,
+    "variant": "combined",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case393/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libcombined.so",
+      "--case=393",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case393/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3e3b8f69f0907c167e4dc90c94ee7877d77a5f47e1314982241904c03ce813ce",
+    "library_sha256": "755b4df9f3715cc258107cad3e75cb227bf3d84c382819dead71c03eee0036c4",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.07
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.07
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case393/profile/OPPROF_20261009224901_BKYLFAMUEEPHYXOV/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1635340,
+        "sha256": "9863a02f5c0e6d630f44fe1c8a8523c0ae3c03290eaa6a6a07157f7de97e48c8"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case393/profile/OPPROF_20261009224901_BKYLFAMUEEPHYXOV/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1622156,
+        "sha256": "1d7b666ab7d6ad16bfe606f9ddf03322a4eded11075109013ca557a1e5251a12"
+      }
+    ]
+  },
+  {
+    "case": 415,
+    "label": "中等批量向量点4",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "93c931f460cb3cd79244d2b4454cd471daa93775e6e96da7cd830816eb52d87d",
+      "905cee2da28717176afb5d3ab61fe954bea9e947925acc030ad0f5d6535aa8fd"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      102.33648681640625,
+      113.689453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "dbfabaf816e14d415ef536e52f1ccf6afd54ee34b8a7ff8c9015161eb5f3589a",
+    "alternating_input": true,
+    "variant": "combined",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case415/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libcombined.so",
+      "--case=415",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case415/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "3e3b8f69f0907c167e4dc90c94ee7877d77a5f47e1314982241904c03ce813ce",
+    "library_sha256": "755b4df9f3715cc258107cad3e75cb227bf3d84c382819dead71c03eee0036c4",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.62,
+        "running_us": 2.61
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.62,
+        "running_us": 2.61
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.55,
+        "running_us": 2.55
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.63,
+        "running_us": 2.62
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 2.48,
+        "running_us": 2.48
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 2.48,
+        "running_us": 2.48
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 2.48,
+        "running_us": 2.48
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 2.48,
+        "running_us": 2.48
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case415/profile/OPPROF_20261009224907_NSRLJTNHMCDTNLKC/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/visualize_data.bin",
+        "size": 3863892,
+        "sha256": "01505f46ca8128e986d60379ea8c7f929dc89efd439f2c172d5558ba24527a30"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/combined-case415/profile/OPPROF_20261009224907_NSRLJTNHMCDTNLKC/_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/visualize_data.bin",
+        "size": 3735808,
+        "sha256": "a80de4de70d9407129dcbd8246c83826840765326294af77e13830e768c50b78"
+      }
+    ]
+  }
+]

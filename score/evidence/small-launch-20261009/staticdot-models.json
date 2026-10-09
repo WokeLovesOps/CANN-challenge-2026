@@ -1,0 +1,75 @@
+[
+  {
+    "case": 0,
+    "label": "最小",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "staticdot",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/staticdot-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/libstaticdot.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/staticdot-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "7048b83756f6e5deb40740a3c28083c1f22d72017f03f67557ce8fcc8782f8cd",
+    "library_sha256": "7c9de00b99d29af4adbae2db5015efd96e520659afc76978241a4321a422ebfa",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/staticdot-case0/profile/OPPROF_20261009224651_EGHQWKIPEDXULPAG/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 896896,
+        "sha256": "e5d4d539b73dacd72e2fa9bddb9f8e191df3261ad9c1c7fb67a78a204cab6157"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-launch-20261009/sim/staticdot-case0/profile/OPPROF_20261009224651_EGHQWKIPEDXULPAG/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 895060,
+        "sha256": "a547af19c8951b8e79cf35a522121f21c057f13ead342c705e6c1ca1cb3b47c8"
+      }
+    ]
+  }
+]
