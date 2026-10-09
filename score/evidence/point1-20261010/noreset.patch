@@ -1,0 +1,10 @@
+--- baseline.asc
++++ noreset.asc
+@@ -146,7 +146,6 @@
+     // 单任务固定UB布局，保留必要硬件状态设置，省去TPipe资源登记。
+     SetAtomicNone();
+     SetMaskNorm();
+-    ResetMask();
+     constexpr uint32_t inputBufferOffset = 0;
+     constexpr uint32_t inputBufferBytes = 2 * K * sizeof(T);
+     constexpr uint32_t convertedBufferOffset = (inputBufferOffset + inputBufferBytes + 31) / 32 * 32;
