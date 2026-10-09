@@ -1,0 +1,1507 @@
+{
+  "说明": "当前GitHub版本点2先Cast后Gather候选；普通msprof l0；性能不是OJ结果。",
+  "baseline_sha256": "3322574f27c2dcb5de6c5bbef20fb579460a402338c9e19bf6710952d4cf1e75",
+  "candidate_sha256": "9a438d5f79850e474b82e1c71c3e67b2b64952aa460e73b76ebbd2473d51647e",
+  "build": "BUILD_SECONDS=134\nBUILD_STATUS=0\n",
+  "source_scope_check": "仅修改ComputePackedDotsFixed及其说明注释",
+  "comparisons": {
+    "point2": {
+      "2": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.75,
+            "mean_us": 1.74678,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.74,
+            "mean_us": 1.74758,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b3",
+            "median_us": 1.76,
+            "mean_us": 1.76516,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b4",
+            "median_us": 1.76,
+            "mean_us": 1.76076,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.68,
+            "mean_us": 1.6723999999999999,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.66,
+            "mean_us": 1.6796,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a3",
+            "median_us": 1.64,
+            "mean_us": 1.6524,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a4",
+            "median_us": 1.65,
+            "mean_us": 1.66436,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "baseline_us": 1.7525,
+        "candidate_us": 1.6575,
+        "change_percent": -5.42082738944365
+      }
+    },
+    "all": {
+      "10": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 73.2385,
+            "mean_us": 73.25294,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 72.9785,
+            "mean_us": 73.02908,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 72.758,
+            "mean_us": 72.7465,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 72.78800000000001,
+            "mean_us": 72.81056,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 73.10849999999999,
+        "candidate_us": 72.773,
+        "change_percent": -0.4589069670421275
+      },
+      "6": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 3.94,
+            "mean_us": 3.96596,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 4.05,
+            "mean_us": 4.06592,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 3.9695,
+            "mean_us": 3.98466,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 3.91,
+            "mean_us": 3.95272,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "baseline_us": 3.995,
+        "candidate_us": 3.93975,
+        "change_percent": -1.38297872340426
+      },
+      "14": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 7.16,
+            "mean_us": 7.17944,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 7.2595,
+            "mean_us": 7.24466,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 7.2,
+            "mean_us": 7.20344,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 7.02,
+            "mean_us": 7.05304,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 7.20975,
+        "candidate_us": 7.109999999999999,
+        "change_percent": -1.3835431186934422
+      },
+      "2": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.7694999999999999,
+            "mean_us": 1.77558,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.76,
+            "mean_us": 1.7596,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.67,
+            "mean_us": 1.6748,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.64,
+            "mean_us": 1.6492,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "baseline_us": 1.7647499999999998,
+        "candidate_us": 1.6549999999999998,
+        "change_percent": -6.219011191386881
+      },
+      "12": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 91.798,
+            "mean_us": 91.74894,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 91.518,
+            "mean_us": 91.50578,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 91.44800000000001,
+            "mean_us": 91.49736,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 91.739,
+            "mean_us": 91.73854,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 91.658,
+        "candidate_us": 91.5935,
+        "change_percent": -0.0703702895546443
+      },
+      "4": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 3.51,
+            "mean_us": 3.52156,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 3.54,
+            "mean_us": 3.5364,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 3.5,
+            "mean_us": 3.5107,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 3.54,
+            "mean_us": 3.5492,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          }
+        ],
+        "baseline_us": 3.525,
+        "candidate_us": 3.52,
+        "change_percent": -0.14184397163120588
+      },
+      "8": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 42.0595,
+            "mean_us": 41.70596,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint8ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 41.839,
+            "mean_us": 41.68558,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint8ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 42.0595,
+        "candidate_us": 41.839,
+        "change_percent": -0.5242573021552843
+      },
+      "1": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.08,
+            "mean_us": 1.10156,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.09,
+            "mean_us": 1.1016,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.08,
+            "mean_us": 1.09798,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.12,
+            "mean_us": 1.12036,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          }
+        ],
+        "baseline_us": 1.085,
+        "candidate_us": 1.1,
+        "change_percent": 1.382488479262678
+      },
+      "5": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 2.72,
+            "mean_us": 2.71236,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 2.76,
+            "mean_us": 2.77156,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 2.72,
+            "mean_us": 2.71314,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 2.64,
+            "mean_us": 2.67436,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          }
+        ],
+        "baseline_us": 2.74,
+        "candidate_us": 2.68,
+        "change_percent": -2.1897810218978075
+      },
+      "13": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 7.28,
+            "mean_us": 7.28866,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 7.48,
+            "mean_us": 7.49306,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 7.4,
+            "mean_us": 7.39664,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 7.22,
+            "mean_us": 7.23708,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 7.380000000000001,
+        "candidate_us": 7.3100000000000005,
+        "change_percent": -0.9485094850948506
+      },
+      "3": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.66,
+            "mean_us": 1.67478,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.66,
+            "mean_us": 1.672,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.66,
+            "mean_us": 1.67278,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.66,
+            "mean_us": 1.67318,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "baseline_us": 1.66,
+        "candidate_us": 1.66,
+        "change_percent": 0.0
+      },
+      "9": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 51.479,
+            "mean_us": 51.49898,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 51.699,
+            "mean_us": 51.72854,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 51.979,
+            "mean_us": 51.9882,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 52.309,
+            "mean_us": 52.3606,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 51.589,
+        "candidate_us": 52.144,
+        "change_percent": 1.0758107348465717
+      },
+      "7": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 4.44,
+            "mean_us": 4.45956,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 4.34,
+            "mean_us": 4.37036,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 4.359500000000001,
+            "mean_us": 4.36022,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 4.4495000000000005,
+            "mean_us": 4.45232,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "baseline_us": 4.390000000000001,
+        "candidate_us": 4.4045000000000005,
+        "change_percent": 0.3302961275626348
+      },
+      "11": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 73.439,
+            "mean_us": 73.46214,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 72.9585,
+            "mean_us": 72.96758,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 73.05850000000001,
+            "mean_us": 73.1134,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 72.5685,
+            "mean_us": 72.57576,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 73.19874999999999,
+        "candidate_us": 72.8135,
+        "change_percent": -0.5263068016871708
+      },
+      "15": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 6.4,
+            "mean_us": 6.40468,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 6.2795000000000005,
+            "mean_us": 6.27572,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 6.38,
+            "mean_us": 6.3782,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 6.34,
+            "mean_us": 6.3311,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 6.33975,
+        "candidate_us": 6.359999999999999,
+        "change_percent": 0.3194132260735616
+      }
+    }
+  },
+  "pmu": [
+    {
+      "ArithmeticUtilization.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_cube_ratio": "NA",
+          "aic_cube_fp16_ratio": "NA",
+          "aic_cube_int8_ratio": "NA",
+          "aic_cube_fops": "NA",
+          "aic_cube_total_instr_number": "NA",
+          "aic_cube_fp_instr_number": "NA",
+          "aic_cube_int_instr_number": "NA",
+          "aiv_time(us)": "1.154545",
+          "aiv_total_cycles": "1905",
+          "aiv_vec_ratio": "0.427297",
+          "aiv_vec_fp32_ratio": "0.179528",
+          "aiv_vec_fp16_ratio": "0.000000",
+          "aiv_vec_int32_ratio": "0.026772",
+          "aiv_vec_int16_ratio": "0.000000",
+          "aiv_vec_misc_ratio": "0.219948",
+          "aiv_vec_fops": "4512",
+          "": ""
+        }
+      ],
+      "L2Cache.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_write_cache_hit": "NA",
+          "aic_write_cache_miss_allocate": "NA",
+          "aic_r0_read_cache_hit": "NA",
+          "aic_r0_read_cache_miss_allocate": "NA",
+          "aic_r1_read_cache_hit": "NA",
+          "aic_r1_read_cache_miss_allocate": "NA",
+          "aic_write_hit_rate(%)": "NA",
+          "aic_read_hit_rate(%)": "NA",
+          "aic_total_hit_rate(%)": "NA",
+          "aiv_time(us)": "1.154545",
+          "aiv_total_cycles": "1905",
+          "aiv_write_cache_hit": "1",
+          "aiv_write_cache_miss_allocate": "1",
+          "aiv_r0_read_cache_hit": "1",
+          "aiv_r0_read_cache_miss_allocate": "3",
+          "aiv_r1_read_cache_hit": "2",
+          "aiv_r1_read_cache_miss_allocate": "2",
+          "aiv_write_hit_rate(%)": "50.000000",
+          "aiv_read_hit_rate(%)": "37.500000",
+          "aiv_total_hit_rate(%)": "40.000000",
+          "": ""
+        }
+      ],
+      "Memory.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_l1_read_bw(GB/s)": "NA",
+          "aic_l1_write_bw(GB/s)": "NA",
+          "aic_main_mem_read_bw(GB/s)": "NA",
+          "aic_main_mem_write_bw(GB/s)": "NA",
+          "aic_mte1_instructions": "NA",
+          "aic_mte1_ratio": "NA",
+          "aic_mte2_instructions": "NA",
+          "aic_mte2_ratio": "NA",
+          "aic_mte3_instructions": "NA",
+          "aic_mte3_ratio": "NA",
+          "aiv_time(us)": "1.154545",
+          "aiv_total_cycles": "1905",
+          "aiv_ub_to_gm_bw(GB/s)": "0.103252",
+          "aiv_gm_to_ub_bw(GB/s)": "0.619513",
+          "aiv_main_mem_read_bw(GB/s)": "0.826017",
+          "aiv_main_mem_write_bw(GB/s)": "0.206504",
+          "aiv_mte2_instructions": "3",
+          "aiv_mte2_ratio": "0.256168",
+          "aiv_mte3_instructions": "2",
+          "aiv_mte3_ratio": "0.093438",
+          "read_main_memory_datas(KB)": "1.000000",
+          "write_main_memory_datas(KB)": "0.250000",
+          "GM_to_L1_datas(KB)": "NA",
+          "GM_to_L1_bw_usage_rate(%)": "NA",
+          "L1_to_GM_datas(KB)(estimate)": "NA",
+          "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+          "L0C_to_L1_datas(KB)": "NA",
+          "L0C_to_L1_bw_usage_rate(%)": "NA",
+          "L0C_to_GM_datas(KB)": "NA",
+          "L0C_to_GM_bw_usage_rate(%)": "NA",
+          "GM_to_UB_datas(KB)": "0.750000",
+          "GM_to_UB_bw_usage_rate(%)": "0.281520",
+          "UB_to_GM_datas(KB)": "0.125000",
+          "UB_to_GM_bw_usage_rate(%)": "0.055274",
+          "": ""
+        }
+      ],
+      "MemoryL0.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_l0a_read_bw(GB/s)": "NA",
+          "aic_l0a_write_bw(GB/s)": "NA",
+          "aic_l0b_read_bw(GB/s)": "NA",
+          "aic_l0b_write_bw(GB/s)": "NA",
+          "aic_l0c_read_bw_cube(GB/s)": "NA",
+          "aic_l0c_write_bw_cube(GB/s)": "NA",
+          "aiv_time(us)": "1.154545",
+          "aiv_total_cycles": "1905",
+          "": ""
+        }
+      ],
+      "OpBasicInfo.csv": [
+        {
+          "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+          "Op Type": "vector",
+          "Task Duration(us)": "1.679966",
+          "Block Dim": "1",
+          "Mix Block Dim": "NA",
+          "Device Id": "0",
+          "Pid": "20927",
+          "Current Freq": "1650",
+          "Rated Freq": "1650",
+          "": ""
+        }
+      ],
+      "PipeUtilization.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_cube_time(us)": "NA",
+          "aic_cube_ratio": "NA",
+          "aic_mte1_time(us)": "NA",
+          "aic_mte1_ratio": "NA",
+          "aic_mte2_time(us)": "NA",
+          "aic_mte2_ratio": "NA",
+          "aic_mte3_time(us)": "NA",
+          "aic_mte3_ratio": "NA",
+          "aic_mte3_active_bw(GB/s)": "NA",
+          "aic_fixpipe_time(us)": "NA",
+          "aic_fixpipe_ratio": "NA",
+          "aic_fixpipe_active_bw(GB/s)": "NA",
+          "aic_icache_miss_rate": "NA",
+          "aic_scalar_time(us)": "NA",
+          "aic_scalar_ratio": "NA",
+          "aic_scalar_single_time(us)": "NA",
+          "aic_scalar_dual_time(us)": "NA",
+          "aic_scalar_mte1_stall_time(us)": "NA",
+          "aic_scalar_mte2_stall_time(us)": "NA",
+          "aic_scalar_mte3_stall_time(us)": "NA",
+          "aic_scalar_cube_stall_time(us)": "NA",
+          "aic_scalar_wait_ib_time(us)": "NA",
+          "aic_scalar_wait_time(us)": "NA",
+          "aiv_time(us)": "1.154545",
+          "aiv_total_cycles": "1905",
+          "aiv_vec_time(us)": "0.493333",
+          "aiv_vec_ratio": "0.427297",
+          "aiv_mte2_time(us)": "0.295758",
+          "aiv_mte2_ratio": "0.256168",
+          "aiv_mte2_active_bw(GB/s)": "2.418385",
+          "aiv_mte3_time(us)": "0.107879",
+          "aiv_mte3_ratio": "0.093438",
+          "aiv_mte3_active_bw(GB/s)": "1.105030",
+          "aiv_icache_miss_rate": "0.000000",
+          "aiv_scalar_time(us)": "0.501818",
+          "aiv_scalar_ratio": "0.434646",
+          "aiv_scalar_single_time(us)": "0.072727",
+          "aiv_scalar_dual_time(us)": "0.152121",
+          "aiv_scalar_mte2_stall_time(us)": "0.000000",
+          "aiv_scalar_mte3_stall_time(us)": "0.000000",
+          "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+          "aiv_scalar_vector_stall_time(us)": "0.000000",
+          "aiv_scalar_wait_ib_time(us)": "0.119394",
+          "aiv_scalar_wait_time(us)": "0.000000",
+          "": ""
+        }
+      ]
+    },
+    {
+      "ArithmeticUtilization.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_cube_ratio": "NA",
+          "aic_cube_fp16_ratio": "NA",
+          "aic_cube_int8_ratio": "NA",
+          "aic_cube_fops": "NA",
+          "aic_cube_total_instr_number": "NA",
+          "aic_cube_fp_instr_number": "NA",
+          "aic_cube_int_instr_number": "NA",
+          "aiv_time(us)": "1.171515",
+          "aiv_total_cycles": "1933",
+          "aiv_vec_ratio": "0.421107",
+          "aiv_vec_fp32_ratio": "0.176927",
+          "aiv_vec_fp16_ratio": "0.000000",
+          "aiv_vec_int32_ratio": "0.026384",
+          "aiv_vec_int16_ratio": "0.000000",
+          "aiv_vec_misc_ratio": "0.216762",
+          "aiv_vec_fops": "4512",
+          "": ""
+        }
+      ],
+      "L2Cache.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_write_cache_hit": "NA",
+          "aic_write_cache_miss_allocate": "NA",
+          "aic_r0_read_cache_hit": "NA",
+          "aic_r0_read_cache_miss_allocate": "NA",
+          "aic_r1_read_cache_hit": "NA",
+          "aic_r1_read_cache_miss_allocate": "NA",
+          "aic_write_hit_rate(%)": "NA",
+          "aic_read_hit_rate(%)": "NA",
+          "aic_total_hit_rate(%)": "NA",
+          "aiv_time(us)": "1.171515",
+          "aiv_total_cycles": "1933",
+          "aiv_write_cache_hit": "1",
+          "aiv_write_cache_miss_allocate": "1",
+          "aiv_r0_read_cache_hit": "1",
+          "aiv_r0_read_cache_miss_allocate": "3",
+          "aiv_r1_read_cache_hit": "2",
+          "aiv_r1_read_cache_miss_allocate": "2",
+          "aiv_write_hit_rate(%)": "50.000000",
+          "aiv_read_hit_rate(%)": "37.500000",
+          "aiv_total_hit_rate(%)": "40.000000",
+          "": ""
+        }
+      ],
+      "Memory.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_l1_read_bw(GB/s)": "NA",
+          "aic_l1_write_bw(GB/s)": "NA",
+          "aic_main_mem_read_bw(GB/s)": "NA",
+          "aic_main_mem_write_bw(GB/s)": "NA",
+          "aic_mte1_instructions": "NA",
+          "aic_mte1_ratio": "NA",
+          "aic_mte2_instructions": "NA",
+          "aic_mte2_ratio": "NA",
+          "aic_mte3_instructions": "NA",
+          "aic_mte3_ratio": "NA",
+          "aiv_time(us)": "1.171515",
+          "aiv_total_cycles": "1933",
+          "aiv_ub_to_gm_bw(GB/s)": "0.101757",
+          "aiv_gm_to_ub_bw(GB/s)": "0.610539",
+          "aiv_main_mem_read_bw(GB/s)": "0.814052",
+          "aiv_main_mem_write_bw(GB/s)": "0.203513",
+          "aiv_mte2_instructions": "3",
+          "aiv_mte2_ratio": "0.246767",
+          "aiv_mte3_instructions": "2",
+          "aiv_mte3_ratio": "0.094671",
+          "read_main_memory_datas(KB)": "1.000000",
+          "write_main_memory_datas(KB)": "0.250000",
+          "GM_to_L1_datas(KB)": "NA",
+          "GM_to_L1_bw_usage_rate(%)": "NA",
+          "L1_to_GM_datas(KB)(estimate)": "NA",
+          "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+          "L0C_to_L1_datas(KB)": "NA",
+          "L0C_to_L1_bw_usage_rate(%)": "NA",
+          "L0C_to_GM_datas(KB)": "NA",
+          "L0C_to_GM_bw_usage_rate(%)": "NA",
+          "GM_to_UB_datas(KB)": "0.750000",
+          "GM_to_UB_bw_usage_rate(%)": "0.277442",
+          "UB_to_GM_datas(KB)": "0.125000",
+          "UB_to_GM_bw_usage_rate(%)": "0.054474",
+          "": ""
+        }
+      ],
+      "MemoryL0.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_l0a_read_bw(GB/s)": "NA",
+          "aic_l0a_write_bw(GB/s)": "NA",
+          "aic_l0b_read_bw(GB/s)": "NA",
+          "aic_l0b_write_bw(GB/s)": "NA",
+          "aic_l0c_read_bw_cube(GB/s)": "NA",
+          "aic_l0c_write_bw_cube(GB/s)": "NA",
+          "aiv_time(us)": "1.171515",
+          "aiv_total_cycles": "1933",
+          "": ""
+        }
+      ],
+      "OpBasicInfo.csv": [
+        {
+          "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+          "Op Type": "vector",
+          "Task Duration(us)": "1.679966",
+          "Block Dim": "1",
+          "Mix Block Dim": "NA",
+          "Device Id": "0",
+          "Pid": "20996",
+          "Current Freq": "1650",
+          "Rated Freq": "1650",
+          "": ""
+        }
+      ],
+      "PipeUtilization.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_cube_time(us)": "NA",
+          "aic_cube_ratio": "NA",
+          "aic_mte1_time(us)": "NA",
+          "aic_mte1_ratio": "NA",
+          "aic_mte2_time(us)": "NA",
+          "aic_mte2_ratio": "NA",
+          "aic_mte3_time(us)": "NA",
+          "aic_mte3_ratio": "NA",
+          "aic_mte3_active_bw(GB/s)": "NA",
+          "aic_fixpipe_time(us)": "NA",
+          "aic_fixpipe_ratio": "NA",
+          "aic_fixpipe_active_bw(GB/s)": "NA",
+          "aic_icache_miss_rate": "NA",
+          "aic_scalar_time(us)": "NA",
+          "aic_scalar_ratio": "NA",
+          "aic_scalar_single_time(us)": "NA",
+          "aic_scalar_dual_time(us)": "NA",
+          "aic_scalar_mte1_stall_time(us)": "NA",
+          "aic_scalar_mte2_stall_time(us)": "NA",
+          "aic_scalar_mte3_stall_time(us)": "NA",
+          "aic_scalar_cube_stall_time(us)": "NA",
+          "aic_scalar_wait_ib_time(us)": "NA",
+          "aic_scalar_wait_time(us)": "NA",
+          "aiv_time(us)": "1.171515",
+          "aiv_total_cycles": "1933",
+          "aiv_vec_time(us)": "0.493333",
+          "aiv_vec_ratio": "0.421107",
+          "aiv_mte2_time(us)": "0.289091",
+          "aiv_mte2_ratio": "0.246767",
+          "aiv_mte2_active_bw(GB/s)": "2.474155",
+          "aiv_mte3_time(us)": "0.110909",
+          "aiv_mte3_ratio": "0.094671",
+          "aiv_mte3_active_bw(GB/s)": "1.074838",
+          "aiv_icache_miss_rate": "0.000000",
+          "aiv_scalar_time(us)": "0.523636",
+          "aiv_scalar_ratio": "0.446974",
+          "aiv_scalar_single_time(us)": "0.072121",
+          "aiv_scalar_dual_time(us)": "0.152121",
+          "aiv_scalar_mte2_stall_time(us)": "0.000000",
+          "aiv_scalar_mte3_stall_time(us)": "0.000000",
+          "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+          "aiv_scalar_vector_stall_time(us)": "0.000000",
+          "aiv_scalar_wait_ib_time(us)": "0.148485",
+          "aiv_scalar_wait_time(us)": "0.000000",
+          "": ""
+        }
+      ]
+    },
+    {
+      "ArithmeticUtilization.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_cube_ratio": "NA",
+          "aic_cube_fp16_ratio": "NA",
+          "aic_cube_int8_ratio": "NA",
+          "aic_cube_fops": "NA",
+          "aic_cube_total_instr_number": "NA",
+          "aic_cube_fp_instr_number": "NA",
+          "aic_cube_int_instr_number": "NA",
+          "aiv_time(us)": "1.170909",
+          "aiv_total_cycles": "1932",
+          "aiv_vec_ratio": "0.421325",
+          "aiv_vec_fp32_ratio": "0.177019",
+          "aiv_vec_fp16_ratio": "0.000000",
+          "aiv_vec_int32_ratio": "0.026398",
+          "aiv_vec_int16_ratio": "0.000000",
+          "aiv_vec_misc_ratio": "0.216874",
+          "aiv_vec_fops": "4512",
+          "": ""
+        }
+      ],
+      "L2Cache.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_write_cache_hit": "NA",
+          "aic_write_cache_miss_allocate": "NA",
+          "aic_r0_read_cache_hit": "NA",
+          "aic_r0_read_cache_miss_allocate": "NA",
+          "aic_r1_read_cache_hit": "NA",
+          "aic_r1_read_cache_miss_allocate": "NA",
+          "aic_write_hit_rate(%)": "NA",
+          "aic_read_hit_rate(%)": "NA",
+          "aic_total_hit_rate(%)": "NA",
+          "aiv_time(us)": "1.170909",
+          "aiv_total_cycles": "1932",
+          "aiv_write_cache_hit": "1",
+          "aiv_write_cache_miss_allocate": "1",
+          "aiv_r0_read_cache_hit": "1",
+          "aiv_r0_read_cache_miss_allocate": "3",
+          "aiv_r1_read_cache_hit": "2",
+          "aiv_r1_read_cache_miss_allocate": "2",
+          "aiv_write_hit_rate(%)": "50.000000",
+          "aiv_read_hit_rate(%)": "37.500000",
+          "aiv_total_hit_rate(%)": "40.000000",
+          "": ""
+        }
+      ],
+      "Memory.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_l1_read_bw(GB/s)": "NA",
+          "aic_l1_write_bw(GB/s)": "NA",
+          "aic_main_mem_read_bw(GB/s)": "NA",
+          "aic_main_mem_write_bw(GB/s)": "NA",
+          "aic_mte1_instructions": "NA",
+          "aic_mte1_ratio": "NA",
+          "aic_mte2_instructions": "NA",
+          "aic_mte2_ratio": "NA",
+          "aic_mte3_instructions": "NA",
+          "aic_mte3_ratio": "NA",
+          "aiv_time(us)": "1.170909",
+          "aiv_total_cycles": "1932",
+          "aiv_ub_to_gm_bw(GB/s)": "0.101809",
+          "aiv_gm_to_ub_bw(GB/s)": "0.610855",
+          "aiv_main_mem_read_bw(GB/s)": "0.814473",
+          "aiv_main_mem_write_bw(GB/s)": "0.203618",
+          "aiv_mte2_instructions": "3",
+          "aiv_mte2_ratio": "0.245859",
+          "aiv_mte3_instructions": "2",
+          "aiv_mte3_ratio": "0.094203",
+          "read_main_memory_datas(KB)": "1.000000",
+          "write_main_memory_datas(KB)": "0.250000",
+          "GM_to_L1_datas(KB)": "NA",
+          "GM_to_L1_bw_usage_rate(%)": "NA",
+          "L1_to_GM_datas(KB)(estimate)": "NA",
+          "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+          "L0C_to_L1_datas(KB)": "NA",
+          "L0C_to_L1_bw_usage_rate(%)": "NA",
+          "L0C_to_GM_datas(KB)": "NA",
+          "L0C_to_GM_bw_usage_rate(%)": "NA",
+          "GM_to_UB_datas(KB)": "0.750000",
+          "GM_to_UB_bw_usage_rate(%)": "0.277586",
+          "UB_to_GM_datas(KB)": "0.125000",
+          "UB_to_GM_bw_usage_rate(%)": "0.054502",
+          "": ""
+        }
+      ],
+      "MemoryL0.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_l0a_read_bw(GB/s)": "NA",
+          "aic_l0a_write_bw(GB/s)": "NA",
+          "aic_l0b_read_bw(GB/s)": "NA",
+          "aic_l0b_write_bw(GB/s)": "NA",
+          "aic_l0c_read_bw_cube(GB/s)": "NA",
+          "aic_l0c_write_bw_cube(GB/s)": "NA",
+          "aiv_time(us)": "1.170909",
+          "aiv_total_cycles": "1932",
+          "": ""
+        }
+      ],
+      "OpBasicInfo.csv": [
+        {
+          "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+          "Op Type": "vector",
+          "Task Duration(us)": "1.699966",
+          "Block Dim": "1",
+          "Mix Block Dim": "NA",
+          "Device Id": "0",
+          "Pid": "21063",
+          "Current Freq": "1650",
+          "Rated Freq": "1650",
+          "": ""
+        }
+      ],
+      "PipeUtilization.csv": [
+        {
+          "block_id": "0",
+          "sub_block_id": "vector0",
+          "aic_time(us)": "NA",
+          "aic_total_cycles": "NA",
+          "aic_cube_time(us)": "NA",
+          "aic_cube_ratio": "NA",
+          "aic_mte1_time(us)": "NA",
+          "aic_mte1_ratio": "NA",
+          "aic_mte2_time(us)": "NA",
+          "aic_mte2_ratio": "NA",
+          "aic_mte3_time(us)": "NA",
+          "aic_mte3_ratio": "NA",
+          "aic_mte3_active_bw(GB/s)": "NA",
+          "aic_fixpipe_time(us)": "NA",
+          "aic_fixpipe_ratio": "NA",
+          "aic_fixpipe_active_bw(GB/s)": "NA",
+          "aic_icache_miss_rate": "NA",
+          "aic_scalar_time(us)": "NA",
+          "aic_scalar_ratio": "NA",
+          "aic_scalar_single_time(us)": "NA",
+          "aic_scalar_dual_time(us)": "NA",
+          "aic_scalar_mte1_stall_time(us)": "NA",
+          "aic_scalar_mte2_stall_time(us)": "NA",
+          "aic_scalar_mte3_stall_time(us)": "NA",
+          "aic_scalar_cube_stall_time(us)": "NA",
+          "aic_scalar_wait_ib_time(us)": "NA",
+          "aic_scalar_wait_time(us)": "NA",
+          "aiv_time(us)": "1.170909",
+          "aiv_total_cycles": "1932",
+          "aiv_vec_time(us)": "0.493333",
+          "aiv_vec_ratio": "0.421325",
+          "aiv_mte2_time(us)": "0.287879",
+          "aiv_mte2_ratio": "0.245859",
+          "aiv_mte2_active_bw(GB/s)": "2.484573",
+          "aiv_mte3_time(us)": "0.110303",
+          "aiv_mte3_ratio": "0.094203",
+          "aiv_mte3_active_bw(GB/s)": "1.080744",
+          "aiv_icache_miss_rate": "0.000000",
+          "aiv_scalar_time(us)": "0.523636",
+          "aiv_scalar_ratio": "0.447205",
+          "aiv_scalar_single_time(us)": "0.072121",
+          "aiv_scalar_dual_time(us)": "0.152121",
+          "aiv_scalar_mte2_stall_time(us)": "0.000000",
+          "aiv_scalar_mte3_stall_time(us)": "0.000000",
+          "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+          "aiv_scalar_vector_stall_time(us)": "0.000000",
+          "aiv_scalar_wait_ib_time(us)": "0.100000",
+          "aiv_scalar_wait_time(us)": "0.000000",
+          "": ""
+        }
+      ]
+    }
+  ],
+  "regression": [
+    {
+      "case": 14,
+      "label": "点2全负",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "c7fa6fb7f9419d3a29f497ffb76380e314cec1903e1e0ec47794e653f5263c05",
+        "5c62d2792dc60671c4493d7db46e4ab2fa8a46ce977abcc59e7857d63bf75f03"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -24.88414192199707,
+        -24.88414192199707
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 22,
+      "label": "点2全零",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
+        "f50525b416afbb87bbabf6e49c94d107f5fefd7f2f37b976002cff4b0a711c7d"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 30,
+      "label": "相邻行列",
+      "shape": [
+        1,
+        2,
+        7,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "a46a667f20dd79c01c49c62e58343f8812a522bbc31f83ea6d2145dbd7011421",
+        "3063cb06121c0e9616516bcc7b29b2aec9a93d7d012f5979f36ff67129a7fd39"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        5.407249450683594,
+        5.407249450683594
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 38,
+      "label": "相邻K",
+      "shape": [
+        1,
+        3,
+        5,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "95e0ef39e9080707338a95179dc54528eb0a39a8af9293f471f4766871445931",
+        "af01520323ed14defef97f6a64899d67989127ecdddf90d5f4bcfb12c0504595"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        3.9412713050842285,
+        3.9412713050842285
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    },
+    {
+      "case": 6,
+      "label": "点2随机",
+      "shape": [
+        1,
+        3,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": true,
+      "execution": "npu",
+      "passed": true,
+      "input_sha256": [
+        "fb207ae7522a2e9ca22fb2472b1e6c28f08ebb39a9590c7752608ce5c7810f13",
+        "c24d2e0da4fe31675763a906feaacf3ff679fdc5712547155e8418d308eb61eb"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        5.382268905639648,
+        5.382268905639648
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0
+    }
+  ],
+  "point8_retries": [
+    {
+      "commit": "baseline",
+      "execution": "real_npu",
+      "library": "/home/developer/point2-cast-gather-20261008/baseline/build/libsimulator_bridge.so",
+      "library_sha256": "321f5efbc633ebb2d4712404e2120461cb0d25b780dee08f377f6fcf51027142",
+      "dtype": "bf16",
+      "layout": "TT",
+      "warmup": 2,
+      "repeat": 2,
+      "passed": true,
+      "results": [
+        {
+          "case": 8,
+          "shape": [
+            1,
+            1025,
+            1031,
+            1032
+          ],
+          "passed": true,
+          "input_sha256": [
+            "0c4a752596d7659127c1f6ff7c310f428c366d472e11818312aa5d26c805e62f",
+            "f88ea83b8c6d897cf64cf745399d4eaf8cde1aa577deb7d4d8130345885611b2"
+          ],
+          "launch_begin": 0,
+          "seed": 20260938,
+          "max_abs_error": 0.0,
+          "launch_end": 5
+        }
+      ],
+      "launches": [
+        {
+          "case": 8,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 8,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 8,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 8,
+          "phase": "sample",
+          "position": 3
+        },
+        {
+          "case": 8,
+          "phase": "sample",
+          "position": 4
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    },
+    {
+      "commit": "candidate",
+      "execution": "real_npu",
+      "library": "/home/developer/point2-cast-gather-20261008/build/libsimulator_bridge.so",
+      "library_sha256": "77d50dc6b7154fa68fd7fd5ac311774f3a17b09528606cee49a945d5633b3790",
+      "dtype": "bf16",
+      "layout": "TT",
+      "warmup": 2,
+      "repeat": 2,
+      "passed": true,
+      "results": [
+        {
+          "case": 8,
+          "shape": [
+            1,
+            1025,
+            1031,
+            1032
+          ],
+          "passed": true,
+          "input_sha256": [
+            "0c4a752596d7659127c1f6ff7c310f428c366d472e11818312aa5d26c805e62f",
+            "f88ea83b8c6d897cf64cf745399d4eaf8cde1aa577deb7d4d8130345885611b2"
+          ],
+          "launch_begin": 0,
+          "seed": 20260938,
+          "max_abs_error": 0.0,
+          "launch_end": 5
+        }
+      ],
+      "launches": [
+        {
+          "case": 8,
+          "phase": "validation",
+          "position": 0
+        },
+        {
+          "case": 8,
+          "phase": "warmup",
+          "position": 1
+        },
+        {
+          "case": 8,
+          "phase": "warmup",
+          "position": 2
+        },
+        {
+          "case": 8,
+          "phase": "sample",
+          "position": 3
+        },
+        {
+          "case": 8,
+          "phase": "sample",
+          "position": 4
+        }
+      ],
+      "soc": "Ascend910_9362",
+      "cube_cores": 20
+    }
+  ],
+  "point8_limitation": "两版点8出现间歇同步超时，点8性能对照仅各一轮成功采样，不构成完整BAAB；其余14点完成BAAB。",
+  "archive_sha256": "75585757673dfb0f8108ad72ecd5a12b4d4b3043116ff261c54a72d401fdcd5d"
+}

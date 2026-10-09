@@ -1,0 +1,2820 @@
+{
+  "说明": "设备msprof l0与端到端墙钟计时分别统计；非OJ计时。",
+  "源码": {
+    "baseline": "95d545b5643ca87a91007bd751180a20d9002ac4d2db295e655e36fb37f66b36",
+    "candidate": "78597ffe37897ef1c93338317e8925ef4bde078bee9c5f26bb8764b2b9240e21"
+  },
+  "远端编译": "BUILD_SECONDS=67\nBUILD_STATUS=0\n",
+  "对照": {
+    "all": {
+      "10": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 72.989
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 72.51849999999999
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 73.05850000000001
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 72.7385
+          }
+        ],
+        "父版微秒": 72.75375,
+        "候选微秒": 72.89850000000001,
+        "变化百分比": 0.198958816555872
+      },
+      "6": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 3.92
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 4.0
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4.24
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4.36
+          }
+        ],
+        "父版微秒": 3.96,
+        "候选微秒": 4.300000000000001,
+        "变化百分比": 8.585858585858608
+      },
+      "14": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 7.08
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 7.24
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 7.2
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 7.1995000000000005
+          }
+        ],
+        "父版微秒": 7.16,
+        "候选微秒": 7.19975,
+        "变化百分比": 0.5551675977653492
+      },
+      "2": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 1.62
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 1.64
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 1.62
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 1.62
+          }
+        ],
+        "父版微秒": 1.63,
+        "候选微秒": 1.62,
+        "变化百分比": -0.6134969325153228
+      },
+      "12": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 91.538
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 91.819
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 92.048
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 91.358
+          }
+        ],
+        "父版微秒": 91.6785,
+        "候选微秒": 91.703,
+        "变化百分比": 0.02672382292467912
+      },
+      "4": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 3.5095
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 3.54
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 3.54
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 3.56
+          }
+        ],
+        "父版微秒": 3.52475,
+        "候选微秒": 3.55,
+        "变化百分比": 0.7163628626143614
+      },
+      "1": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 1.1
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 1.09
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 1.09
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 1.12
+          }
+        ],
+        "父版微秒": 1.0950000000000002,
+        "候选微秒": 1.105,
+        "变化百分比": 0.9132420091324089
+      },
+      "5": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2.67
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2.68
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 2.68
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 2.74
+          }
+        ],
+        "父版微秒": 2.675,
+        "候选微秒": 2.71,
+        "变化百分比": 1.3084112149532867
+      },
+      "13": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 7.22
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 7.23
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 7.34
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 7.48
+          }
+        ],
+        "父版微秒": 7.225,
+        "候选微秒": 7.41,
+        "变化百分比": 2.56055363321801
+      },
+      "3": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 1.68
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 1.68
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 1.6695
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 1.66
+          }
+        ],
+        "父版微秒": 1.68,
+        "候选微秒": 1.66475,
+        "变化百分比": -0.9077380952380976
+      },
+      "9": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 51.879
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 51.539
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 51.998999999999995
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 51.998999999999995
+          }
+        ],
+        "父版微秒": 51.709,
+        "候选微秒": 51.998999999999995,
+        "变化百分比": 0.5608308031483711
+      },
+      "7": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 4.4
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 4.32
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4.62
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4.56
+          }
+        ],
+        "父版微秒": 4.36,
+        "候选微秒": 4.59,
+        "变化百分比": 5.275229357798161
+      },
+      "11": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 73.07900000000001
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 72.8185
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 72.9885
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 72.899
+          }
+        ],
+        "父版微秒": 72.94875,
+        "候选微秒": 72.94375,
+        "变化百分比": -0.006854127041255875
+      },
+      "15": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 6.3695
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 6.3
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 6.3100000000000005
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 6.3095
+          }
+        ],
+        "父版微秒": 6.33475,
+        "候选微秒": 6.30975,
+        "变化百分比": -0.3946485654524601
+      }
+    },
+    "end-to-end": {
+      "10": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2320.746
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2312.64
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4703.0345
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4740.1505
+          }
+        ],
+        "父版微秒": 2316.693,
+        "候选微秒": 4721.5925,
+        "变化百分比": 103.8074315414256
+      },
+      "6": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2139.2839999999997
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2146.364
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4704.0195
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4632.316000000001
+          }
+        ],
+        "父版微秒": 2142.8239999999996,
+        "候选微秒": 4668.1677500000005,
+        "变化百分比": 117.85119776519215
+      },
+      "14": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2152.3145
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2131.918
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4647.442999999999
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4629.4055
+          }
+        ],
+        "父版微秒": 2142.11625,
+        "候选微秒": 4638.42425,
+        "变化百分比": 116.53466519382411
+      },
+      "2": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 22.016
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 25.070999999999998
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 25.881
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 23.756
+          }
+        ],
+        "父版微秒": 23.543499999999998,
+        "候选微秒": 24.8185,
+        "变化百分比": 5.4155074649054
+      },
+      "12": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2319.2960000000003
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2331.9815
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4763.352
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4698.593000000001
+          }
+        ],
+        "父版微秒": 2325.63875,
+        "候选微秒": 4730.9725,
+        "变化百分比": 103.42680048653298
+      },
+      "4": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 29.591
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 29.561
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 26.2515
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 21.171
+          }
+        ],
+        "父版微秒": 29.576,
+        "候选微秒": 23.71125,
+        "变化百分比": -19.829422504733575
+      },
+      "1": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 24.451
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 22.3955
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 26.016
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 21.6455
+          }
+        ],
+        "父版微秒": 23.42325,
+        "候选微秒": 23.83075,
+        "变化百分比": 1.7397244191134753
+      },
+      "5": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 31.301000000000002
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 31.601
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 32.8615
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 30.791
+          }
+        ],
+        "父版微秒": 31.451,
+        "候选微秒": 31.82625,
+        "变化百分比": 1.193125814759477
+      },
+      "13": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2143.049
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2126.298
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4672.362999999999
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4637.5470000000005
+          }
+        ],
+        "父版微秒": 2134.6735,
+        "候选微秒": 4654.955,
+        "变化百分比": 118.06402712171207
+      },
+      "3": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 23.070999999999998
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 24.555999999999997
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 25.291
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 21.481
+          }
+        ],
+        "父版微秒": 23.813499999999998,
+        "候选微秒": 23.386000000000003,
+        "变化百分比": -1.795200201566316
+      },
+      "9": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2286.1445000000003
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2276.174
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4728.7605
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4685.8330000000005
+          }
+        ],
+        "父版微秒": 2281.15925,
+        "候选微秒": 4707.29675,
+        "变化百分比": 106.35546378447711
+      },
+      "7": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2133.179
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2133.7535
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4632.937
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4627.6759999999995
+          }
+        ],
+        "父版微秒": 2133.46625,
+        "候选微秒": 4630.3065,
+        "变化百分比": 117.03209507063916
+      },
+      "11": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2283.474
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2304.5200000000004
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4706.955
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4674.188
+          }
+        ],
+        "父版微秒": 2293.9970000000003,
+        "候选微秒": 4690.5715,
+        "变化百分比": 104.47156208138023
+      },
+      "15": {
+        "baseline": [
+          {
+            "轮次": "b1",
+            "中位数微秒": 2134.3239999999996
+          },
+          {
+            "轮次": "b2",
+            "中位数微秒": 2127.6279999999997
+          }
+        ],
+        "candidate": [
+          {
+            "轮次": "a1",
+            "中位数微秒": 4653.5225
+          },
+          {
+            "轮次": "a2",
+            "中位数微秒": 4609.87
+          }
+        ],
+        "父版微秒": 2130.9759999999997,
+        "候选微秒": 4631.69625,
+        "变化百分比": 117.35093450137404
+      }
+    }
+  },
+  "捕获精度": [
+    {
+      "文件": "case-0.json",
+      "结果": {
+        "case": 0,
+        "label": "点1",
+        "shape": [
+          1,
+          1,
+          1,
+          32
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+          "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          -0.8597932457923889,
+          -0.8597932457923889
+        ],
+        "available_cores": 20,
+        "max_abs_error": 5.960464477539063e-08
+      }
+    },
+    {
+      "文件": "case-109.json",
+      "结果": {
+        "case": 109,
+        "label": "点14",
+        "shape": [
+          1,
+          64,
+          8192,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "f5bca83f26c53042ef243f400bf3672f9b392ae975f6b28d88fc5dfbde58b777",
+          "8a5c243a4b76399b4f72d40adeadd812dcd575931deac99cb74a5a57bed34c66"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          895.7830810546875,
+          895.7830810546875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-115.json",
+      "结果": {
+        "case": 115,
+        "label": "点15",
+        "shape": [
+          1,
+          64,
+          64,
+          8192
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "b5c0f7ebd3723fd7d61f5e6227360ede74ac8305b8498740a2e1647aad81d93b",
+          "0c34c3ff5bcb08d26e66b08b9eec4c9b8c61ee97ff5350500ff69e3668d134d1"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          4561.7607421875,
+          4561.7607421875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-127.json",
+      "结果": {
+        "case": 127,
+        "label": "动态批量直写TT",
+        "shape": [
+          3,
+          12,
+          13,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "76f1686265fb921ea13e6f918d69b1d92d5a3edd7c160703c63d5360558b9e37",
+          "7e47a039688b8b0254e5006cc6dd47c4679f2c02755a75c96074a8a2763a0a42"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          65.09984588623047,
+          83.03121948242188
+        ],
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      }
+    },
+    {
+      "文件": "case-128.json",
+      "结果": {
+        "case": 128,
+        "label": "动态批量直写NN",
+        "shape": [
+          6,
+          12,
+          20,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "5801a63592b03b36e43dd4e1b1e1b101fc9d6379740c3b32bc9257a6dd00b282",
+          "8689527227964a13124b9822e45038caed29c391e341be7d3ef1d65fa66baf81"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          82.47166442871094,
+          103.18494415283203
+        ],
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      }
+    },
+    {
+      "文件": "case-136.json",
+      "结果": {
+        "case": 136,
+        "label": "默认单批量多行块",
+        "shape": [
+          1,
+          65,
+          65,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "ea4e76ad57d97d2807ac42d9b2e180fb667e0190209d76df0e4f44fcd589bdf6",
+          "54450ffdf37f9916210ab511193e4204e2affefc5bacbeb007e5c99a797dd265"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          579.5584716796875,
+          579.5584716796875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-14.json",
+      "结果": {
+        "case": 14,
+        "label": "点2",
+        "shape": [
+          1,
+          3,
+          5,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "e297dccf00615d0404a246857a558dd1df4e33a0661374832cbbc7d00968f7d1",
+          "647e9d0f8d58dd43d834141f6323e24754ec08b73928272973c617fe1519bfa4"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          5.719674587249756,
+          5.719674587249756
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-17.json",
+      "结果": {
+        "case": 17,
+        "label": "点3",
+        "shape": [
+          2,
+          7,
+          13,
+          48
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "1543d89188b77b2da1a1162bed69a689d42c0eebb095fac66d56790c5db8a88a",
+          "38e607c3bf583a23ebbf1a8e53a40ad2acbbc7f31268b689a98d39fae2c9370c"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          25.913915634155273,
+          28.356876373291016
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-31.json",
+      "结果": {
+        "case": 31,
+        "label": "点4",
+        "shape": [
+          4,
+          16,
+          16,
+          128
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "922a7688a7a4929e8d95e97059a045f5992d72cf497271ab1284fdf6083b3b5b",
+          "82a971d0ff16ee755c8ab6cf6647918a05f48c8ee58a10ce8381a8cb6733bcb0"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          86.61486053466797,
+          110.29898071289062
+        ],
+        "available_cores": 20,
+        "max_abs_error": 7.62939453125e-06
+      }
+    },
+    {
+      "文件": "case-32.json",
+      "结果": {
+        "case": 32,
+        "label": "点5",
+        "shape": [
+          8,
+          16,
+          32,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "16f6480c0206f689696ad277d4f0bff31e230d4f96c36ceb912dee1dd73dbdc6",
+          "23fb9c950cb633fe8d904639d10e6f38d0de339ffc59f2d55eb61bbf4bbc3784"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          115.43539428710938,
+          131.02146911621094
+        ],
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05
+      }
+    },
+    {
+      "文件": "case-45.json",
+      "结果": {
+        "case": 45,
+        "label": "点6",
+        "shape": [
+          13,
+          23,
+          73,
+          192
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "abe52d74f67a5f7e3a26d04eef30ec47a6dd3b856146ee4f3ea58c6a53ff7cc3",
+          "b9368697782dbd0d3bc5f711890de7edbbd7dd2fae7d2bdc0fcd208580974c36"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          231.82215881347656,
+          268.6055908203125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 1.52587890625e-05
+      }
+    },
+    {
+      "文件": "case-50.json",
+      "结果": {
+        "case": 50,
+        "label": "点7",
+        "shape": [
+          16,
+          32,
+          128,
+          256
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "8aa091e4a8a4e654fb314d9b1f3d07fac031812072c2e036f34cbe310f845638",
+          "9be99ccd7cf38ff54813cabd5ca3df019214bcf02c46ce1ddf352edddb976ba2"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          424.1570739746094,
+          468.2001647949219
+        ],
+        "available_cores": 20,
+        "max_abs_error": 3.0517578125e-05
+      }
+    },
+    {
+      "文件": "case-63.json",
+      "结果": {
+        "case": 63,
+        "label": "点8",
+        "shape": [
+          1,
+          1025,
+          1031,
+          1032
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "abb06e9deac84b6f2a641b1294250dd7eb85846bb93b7d21990f4693c8b75359",
+          "8d4e9a46b0bfcfe8f5ce5acc2f9a58a0f807d45f8ddb9a678729deb74e3ba5f6"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          35462.73828125,
+          35462.73828125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-65.json",
+      "结果": {
+        "case": 65,
+        "label": "点9",
+        "shape": [
+          1,
+          2048,
+          1536,
+          1280
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "7654531b14361fc18b0971398e747f13bc30d04a0271445a82518056aa265664",
+          "05dd7ee6c7420a5ec742a7a5a904b480920567baae3ff8787600cdf6dfe60b2b"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          82143.3671875,
+          82143.3671875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-76.json",
+      "结果": {
+        "case": 76,
+        "label": "点10",
+        "shape": [
+          1,
+          4096,
+          1280,
+          1152
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "6565226cf5bf80fc10abf0b9b2af3c77908ace48eab41614a0951dc146150b83",
+          "796ff2f2161f314a7ccd664cf1b6db8cb55912c555b2985d76d30ba08f7c4204"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          153236.875,
+          153236.875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-83.json",
+      "结果": {
+        "case": 83,
+        "label": "点11",
+        "shape": [
+          1,
+          1536,
+          2048,
+          2048
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          true,
+          true
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "5e3d31062a2058ac3e33311d58b0d0c5d478c775a8c51356975c626a0469d7a9",
+          "935611e379734544e9ade806e078becaecef8ecc62c85de6056b842a78eb9257"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          79857.8515625,
+          79857.8515625
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "case-94.json",
+      "结果": {
+        "case": 94,
+        "label": "点12",
+        "shape": [
+          1,
+          1280,
+          4096,
+          1536
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "2eddc4ecc9d82f73cb215a6410c2789e2686017715acae8f12ee59b89dffb57a",
+          "5686212181bf0008ec9c6b539f937ac80bc87b6390053e3e3e786238c6d53d51"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          60546.67578125,
+          60546.67578125
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.00390625
+      }
+    },
+    {
+      "文件": "case-96.json",
+      "结果": {
+        "case": 96,
+        "label": "点13",
+        "shape": [
+          1,
+          8192,
+          64,
+          128
+        ],
+        "dtype": "<class 'numpy.float16'>",
+        "transpose": [
+          false,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "6a19ceea0988ffc67b7bbc4a48bea592446f24bdb2e2ad69c9fa602a4f67d335",
+          "07472d003e599dc77d2c423925243b394331ffeae6825081e55b7507f9f0d625"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          72472.96875,
+          72472.96875
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    }
+  ],
+  "点8限制": "完成捕获精度检查；因既有间歇同步超时未进行点8长性能采样。",
+  "API统计": [
+    {
+      "文件": "all\\a1-bf16-NN-profile\\PROF_000001_20261008130844793_00059365RJHKIGED\\mindstudio_profiler_output\\api_statistic_20261008130850.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "666.33",
+          "Count": "305",
+          "Avg(us)": "2.185",
+          "Min(us)": "1.37",
+          "Max(us)": "7.11",
+          "Variance": "0.495"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "943.24",
+          "Count": "305",
+          "Avg(us)": "3.093",
+          "Min(us)": "1.35",
+          "Max(us)": "111.6",
+          "Variance": "70.704"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "94292.02",
+          "Count": "151",
+          "Avg(us)": "624.45",
+          "Min(us)": "579.89",
+          "Max(us)": "842.35",
+          "Variance": "3920.874"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "621660.91",
+          "Count": "302",
+          "Avg(us)": "2058.48",
+          "Min(us)": "0.97",
+          "Max(us)": "6542.17",
+          "Variance": "4256412.257"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a1-bf16-NT-profile\\PROF_000001_20261008130828520_00058861PCMGIALJ\\mindstudio_profiler_output\\api_statistic_20261008130834.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1396.8",
+          "Count": "610",
+          "Avg(us)": "2.29",
+          "Min(us)": "1.29",
+          "Max(us)": "8.15",
+          "Variance": "0.722"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1606.14",
+          "Count": "610",
+          "Avg(us)": "2.633",
+          "Min(us)": "1.28",
+          "Max(us)": "86.66",
+          "Variance": "23.871"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "194118.53",
+          "Count": "302",
+          "Avg(us)": "642.777",
+          "Min(us)": "575.47",
+          "Max(us)": "930.84",
+          "Variance": "6548.707"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "1233572.91",
+          "Count": "604",
+          "Avg(us)": "2042.339",
+          "Min(us)": "0.82",
+          "Max(us)": "8033.55",
+          "Variance": "4240545.323"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a1-bf16-TN-profile\\PROF_000001_20261008130807114_00058107LFMQDEFB\\mindstudio_profiler_output\\api_statistic_20261008130813.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "693.15",
+          "Count": "308",
+          "Avg(us)": "2.25",
+          "Min(us)": "1.35",
+          "Max(us)": "11.22",
+          "Variance": "0.904"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "936.91",
+          "Count": "308",
+          "Avg(us)": "3.042",
+          "Min(us)": "1.31",
+          "Max(us)": "112.55",
+          "Variance": "69.072"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "91011.12",
+          "Count": "151",
+          "Avg(us)": "602.723",
+          "Min(us)": "567.23",
+          "Max(us)": "948.82",
+          "Variance": "2522.054"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "627260",
+          "Count": "604",
+          "Avg(us)": "1038.51",
+          "Min(us)": "0.62",
+          "Max(us)": "4793.96",
+          "Variance": "3208300.241"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a1-bf16-TT-4-profile\\PROF_000001_20261008130822386_00058611NADLORLC\\mindstudio_profiler_output\\api_statistic_20261008130826.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "12.16",
+          "Count": "3",
+          "Avg(us)": "4.053",
+          "Min(us)": "1.63",
+          "Max(us)": "8.21",
+          "Variance": "8.718"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "21.2",
+          "Count": "3",
+          "Avg(us)": "7.067",
+          "Min(us)": "2.87",
+          "Max(us)": "14.23",
+          "Variance": "25.909"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "2434.78",
+          "Count": "302",
+          "Avg(us)": "8.062",
+          "Min(us)": "0.62",
+          "Max(us)": "23.01",
+          "Variance": "57.764"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a1-fp16-NN-profile\\PROF_000001_20261008130758976_00057857IMJNJKKA\\mindstudio_profiler_output\\api_statistic_20261008130805.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "982.4",
+          "Count": "462",
+          "Avg(us)": "2.126",
+          "Min(us)": "1.22",
+          "Max(us)": "11.78",
+          "Variance": "0.861"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1166.86",
+          "Count": "462",
+          "Avg(us)": "2.526",
+          "Min(us)": "1.34",
+          "Max(us)": "74.27",
+          "Variance": "22.3"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "92054.5",
+          "Count": "151",
+          "Avg(us)": "609.632",
+          "Min(us)": "584.3",
+          "Max(us)": "874.16",
+          "Variance": "2398.274"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "617058.7",
+          "Count": "906",
+          "Avg(us)": "681.08",
+          "Min(us)": "0.63",
+          "Max(us)": "5627.38",
+          "Variance": "2276247.744"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a1-fp16-NT-profile\\PROF_000001_20261008130815249_00058359FJNACCRM\\mindstudio_profiler_output\\api_statistic_20261008130820.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "742.37",
+          "Count": "308",
+          "Avg(us)": "2.41",
+          "Min(us)": "1.3",
+          "Max(us)": "30.5",
+          "Variance": "3.502"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "975.9",
+          "Count": "308",
+          "Avg(us)": "3.169",
+          "Min(us)": "1.31",
+          "Max(us)": "98.2",
+          "Variance": "56.713"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "93532.41",
+          "Count": "151",
+          "Avg(us)": "619.42",
+          "Min(us)": "582.38",
+          "Max(us)": "851.06",
+          "Variance": "3243.674"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "620982.04",
+          "Count": "604",
+          "Avg(us)": "1028.116",
+          "Min(us)": "0.62",
+          "Max(us)": "5003.12",
+          "Variance": "3144578.67"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a1-fp16-TN-profile\\PROF_000001_20261008130836657_00059113BEHQBLFI\\mindstudio_profiler_output\\api_statistic_20261008130842.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "707.79",
+          "Count": "305",
+          "Avg(us)": "2.321",
+          "Min(us)": "1.24",
+          "Max(us)": "13.6",
+          "Variance": "1.125"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "872.88",
+          "Count": "305",
+          "Avg(us)": "2.862",
+          "Min(us)": "1.45",
+          "Max(us)": "74.27",
+          "Variance": "27.888"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "92289.51",
+          "Count": "151",
+          "Avg(us)": "611.189",
+          "Min(us)": "584.97",
+          "Max(us)": "978.62",
+          "Variance": "2638.173"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "616321.13",
+          "Count": "302",
+          "Avg(us)": "2040.798",
+          "Min(us)": "0.87",
+          "Max(us)": "7038.47",
+          "Variance": "4208776.271"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a1-fp16-TT-profile\\PROF_000001_20261008130852932_00059617LBKBAHJQ\\mindstudio_profiler_output\\api_statistic_20261008130900.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1400.27",
+          "Count": "610",
+          "Avg(us)": "2.296",
+          "Min(us)": "1.4",
+          "Max(us)": "9.27",
+          "Variance": "0.514"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1665.93",
+          "Count": "610",
+          "Avg(us)": "2.731",
+          "Min(us)": "1.33",
+          "Max(us)": "117.73",
+          "Variance": "36.575"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "183626.06",
+          "Count": "302",
+          "Avg(us)": "608.033",
+          "Min(us)": "577.16",
+          "Max(us)": "885.78",
+          "Variance": "2451.097"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "1234353.22",
+          "Count": "604",
+          "Avg(us)": "2043.631",
+          "Min(us)": "0.96",
+          "Max(us)": "7213.69",
+          "Variance": "4208490.512"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-bf16-NN-profile\\PROF_000001_20261008130946836_00061377MLBIQPAK\\mindstudio_profiler_output\\api_statistic_20261008130952.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "659.46",
+          "Count": "305",
+          "Avg(us)": "2.162",
+          "Min(us)": "1.36",
+          "Max(us)": "7.62",
+          "Variance": "0.535"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1017.7",
+          "Count": "305",
+          "Avg(us)": "3.337",
+          "Min(us)": "1.3",
+          "Max(us)": "136.11",
+          "Variance": "118.864"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "93646.22",
+          "Count": "151",
+          "Avg(us)": "620.174",
+          "Min(us)": "578.52",
+          "Max(us)": "930.51",
+          "Variance": "4565.028"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "626490.78",
+          "Count": "302",
+          "Avg(us)": "2074.473",
+          "Min(us)": "0.98",
+          "Max(us)": "6599.83",
+          "Variance": "4329696"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-bf16-NT-profile\\PROF_000001_20261008130930563_00060873MFLHNQHF\\mindstudio_profiler_output\\api_statistic_20261008130936.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1347.14",
+          "Count": "610",
+          "Avg(us)": "2.208",
+          "Min(us)": "1.21",
+          "Max(us)": "8.06",
+          "Variance": "0.692"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1523.03",
+          "Count": "610",
+          "Avg(us)": "2.497",
+          "Min(us)": "1.27",
+          "Max(us)": "84.27",
+          "Variance": "22.752"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "188391.28",
+          "Count": "302",
+          "Avg(us)": "623.812",
+          "Min(us)": "582.77",
+          "Max(us)": "934.29",
+          "Variance": "4232.432"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "1225078.36",
+          "Count": "604",
+          "Avg(us)": "2028.275",
+          "Min(us)": "0.87",
+          "Max(us)": "6536.08",
+          "Variance": "4137022.065"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-bf16-TN-profile\\PROF_000001_20261008130909155_00060119JCKGELMF\\mindstudio_profiler_output\\api_statistic_20261008130915.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "705.44",
+          "Count": "308",
+          "Avg(us)": "2.29",
+          "Min(us)": "1.34",
+          "Max(us)": "10.71",
+          "Variance": "0.953"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "958.09",
+          "Count": "308",
+          "Avg(us)": "3.111",
+          "Min(us)": "1.34",
+          "Max(us)": "106.31",
+          "Variance": "67.966"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "92903.03",
+          "Count": "151",
+          "Avg(us)": "615.252",
+          "Min(us)": "571.87",
+          "Max(us)": "892.97",
+          "Variance": "4458.681"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "624726.41",
+          "Count": "604",
+          "Avg(us)": "1034.315",
+          "Min(us)": "0.65",
+          "Max(us)": "4397.27",
+          "Variance": "3173430.369"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-bf16-TT-4-profile\\PROF_000001_20261008130924428_00060623OHQBMIGF\\mindstudio_profiler_output\\api_statistic_20261008130928.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "12.57",
+          "Count": "3",
+          "Avg(us)": "4.19",
+          "Min(us)": "1.66",
+          "Max(us)": "8.72",
+          "Variance": "10.307"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "24.26",
+          "Count": "3",
+          "Avg(us)": "8.087",
+          "Min(us)": "3.01",
+          "Max(us)": "17.69",
+          "Variance": "46.162"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "2781.73",
+          "Count": "302",
+          "Avg(us)": "9.211",
+          "Min(us)": "0.69",
+          "Max(us)": "30.81",
+          "Variance": "69.449"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-fp16-NN-profile\\PROF_000001_20261008130902020_00059867BQROKROJ\\mindstudio_profiler_output\\api_statistic_20261008130907.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "912.85",
+          "Count": "462",
+          "Avg(us)": "1.976",
+          "Min(us)": "1.19",
+          "Max(us)": "7.32",
+          "Variance": "0.439"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1188.37",
+          "Count": "462",
+          "Avg(us)": "2.572",
+          "Min(us)": "1.36",
+          "Max(us)": "80.81",
+          "Variance": "24.424"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "90874.12",
+          "Count": "151",
+          "Avg(us)": "601.815",
+          "Min(us)": "579.61",
+          "Max(us)": "893.65",
+          "Variance": "1997.206"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "631110.75",
+          "Count": "906",
+          "Avg(us)": "696.59",
+          "Min(us)": "0.66",
+          "Max(us)": "7834.3",
+          "Variance": "2422995.383"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-fp16-NT-profile\\PROF_000001_20261008130917292_00060371FJGLJEQO\\mindstudio_profiler_output\\api_statistic_20261008130922.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "691.06",
+          "Count": "308",
+          "Avg(us)": "2.244",
+          "Min(us)": "1.34",
+          "Max(us)": "10.43",
+          "Variance": "1.013"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "932.56",
+          "Count": "308",
+          "Avg(us)": "3.028",
+          "Min(us)": "1.33",
+          "Max(us)": "94.68",
+          "Variance": "53.266"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "92245.75",
+          "Count": "151",
+          "Avg(us)": "610.899",
+          "Min(us)": "583.7",
+          "Max(us)": "835.08",
+          "Variance": "2393.578"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "622385.24",
+          "Count": "604",
+          "Avg(us)": "1030.439",
+          "Min(us)": "0.63",
+          "Max(us)": "6599.86",
+          "Variance": "3173430.816"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-fp16-TN-profile\\PROF_000001_20261008130938699_00061125HAKONGFR\\mindstudio_profiler_output\\api_statistic_20261008130944.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "647.29",
+          "Count": "305",
+          "Avg(us)": "2.122",
+          "Min(us)": "1.15",
+          "Max(us)": "6.94",
+          "Variance": "0.627"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "833.17",
+          "Count": "305",
+          "Avg(us)": "2.732",
+          "Min(us)": "1.35",
+          "Max(us)": "82.89",
+          "Variance": "33.01"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "94512.54",
+          "Count": "151",
+          "Avg(us)": "625.911",
+          "Min(us)": "591.44",
+          "Max(us)": "834.7",
+          "Variance": "2683.025"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "614538.97",
+          "Count": "302",
+          "Avg(us)": "2034.897",
+          "Min(us)": "0.87",
+          "Max(us)": "6498.37",
+          "Variance": "4165932.894"
+        }
+      ]
+    },
+    {
+      "文件": "all\\a2-fp16-TT-profile\\PROF_000001_20261008130954973_00061627GRLQLIII\\mindstudio_profiler_output\\api_statistic_20261008131002.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1439.25",
+          "Count": "610",
+          "Avg(us)": "2.359",
+          "Min(us)": "1.45",
+          "Max(us)": "9.31",
+          "Variance": "0.629"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1727.2",
+          "Count": "610",
+          "Avg(us)": "2.831",
+          "Min(us)": "1.33",
+          "Max(us)": "138.37",
+          "Variance": "46.109"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemsetAsync",
+          "Time(us)": "187585.98",
+          "Count": "302",
+          "Avg(us)": "621.146",
+          "Min(us)": "574.66",
+          "Max(us)": "920.65",
+          "Variance": "4052.209"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "1370653.35",
+          "Count": "604",
+          "Avg(us)": "2269.294",
+          "Min(us)": "0.91",
+          "Max(us)": "25376.67",
+          "Variance": "8237674.345"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-bf16-NN-profile\\PROF_000001_20261008130742703_00057353QBRBPIBI\\mindstudio_profiler_output\\api_statistic_20261008130748.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "810.58",
+          "Count": "456",
+          "Avg(us)": "1.778",
+          "Min(us)": "1.19",
+          "Max(us)": "9.95",
+          "Variance": "0.868"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1139.45",
+          "Count": "456",
+          "Avg(us)": "2.499",
+          "Min(us)": "1.26",
+          "Max(us)": "111.65",
+          "Variance": "50.438"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "343428.83",
+          "Count": "151",
+          "Avg(us)": "2274.363",
+          "Min(us)": "2090.29",
+          "Max(us)": "2562.42",
+          "Variance": "17273.735"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "13830.61",
+          "Count": "302",
+          "Avg(us)": "45.797",
+          "Min(us)": "0.84",
+          "Max(us)": "115.62",
+          "Variance": "2009.348"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-bf16-NT-profile\\PROF_000001_20261008130728428_00056851RJHPAOPF\\mindstudio_profiler_output\\api_statistic_20261008130733.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1585.94",
+          "Count": "912",
+          "Avg(us)": "1.739",
+          "Min(us)": "1.18",
+          "Max(us)": "27.37",
+          "Variance": "1.104"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "2022.37",
+          "Count": "912",
+          "Avg(us)": "2.218",
+          "Min(us)": "1.24",
+          "Max(us)": "104.5",
+          "Variance": "21.334"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "660098.85",
+          "Count": "302",
+          "Avg(us)": "2185.758",
+          "Min(us)": "2000.35",
+          "Max(us)": "4727.2",
+          "Variance": "36173.051"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "7115.97",
+          "Count": "604",
+          "Avg(us)": "11.781",
+          "Min(us)": "0.86",
+          "Max(us)": "124.28",
+          "Variance": "138.745"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-bf16-TN-profile\\PROF_000001_20261008130708025_00056097GGRQFNKO\\mindstudio_profiler_output\\api_statistic_20261008130713.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "825.61",
+          "Count": "459",
+          "Avg(us)": "1.799",
+          "Min(us)": "1.24",
+          "Max(us)": "12.27",
+          "Variance": "0.487"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1189.53",
+          "Count": "459",
+          "Avg(us)": "2.592",
+          "Min(us)": "1.32",
+          "Max(us)": "107.7",
+          "Variance": "48.71"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "364130.42",
+          "Count": "151",
+          "Avg(us)": "2411.46",
+          "Min(us)": "2078.67",
+          "Max(us)": "10742.64",
+          "Variance": "773723.491"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "18910.36",
+          "Count": "604",
+          "Avg(us)": "31.309",
+          "Min(us)": "0.64",
+          "Max(us)": "142.67",
+          "Variance": "2008.095"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-bf16-TT-4-profile\\PROF_000001_20261008130722295_00056599CCOEHHKC\\mindstudio_profiler_output\\api_statistic_20261008130726.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "257.06",
+          "Count": "154",
+          "Avg(us)": "1.669",
+          "Min(us)": "1.47",
+          "Max(us)": "6.04",
+          "Variance": "0.262"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "296.11",
+          "Count": "154",
+          "Avg(us)": "1.923",
+          "Min(us)": "1.64",
+          "Max(us)": "13.22",
+          "Variance": "0.945"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "2546",
+          "Count": "302",
+          "Avg(us)": "8.43",
+          "Min(us)": "0.75",
+          "Max(us)": "32.88",
+          "Variance": "59.45"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-fp16-NN-profile\\PROF_000001_20261008130700888_00055844JQPLIORM\\mindstudio_profiler_output\\api_statistic_20261008130706.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1115.16",
+          "Count": "613",
+          "Avg(us)": "1.819",
+          "Min(us)": "1.16",
+          "Max(us)": "29.98",
+          "Variance": "1.58"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1417.03",
+          "Count": "613",
+          "Avg(us)": "2.312",
+          "Min(us)": "1.34",
+          "Max(us)": "78.29",
+          "Variance": "17.937"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "328126.16",
+          "Count": "151",
+          "Avg(us)": "2173.021",
+          "Min(us)": "1979.09",
+          "Max(us)": "2733.47",
+          "Variance": "22373.056"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "8757.33",
+          "Count": "906",
+          "Avg(us)": "9.666",
+          "Min(us)": "0.62",
+          "Max(us)": "39.97",
+          "Variance": "95.529"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-fp16-NT-profile\\PROF_000001_20261008130715159_00056347RKBLMKPM\\mindstudio_profiler_output\\api_statistic_20261008130720.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "828.66",
+          "Count": "459",
+          "Avg(us)": "1.805",
+          "Min(us)": "1.19",
+          "Max(us)": "11.41",
+          "Variance": "0.631"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1150.38",
+          "Count": "459",
+          "Avg(us)": "2.506",
+          "Min(us)": "1.24",
+          "Max(us)": "88.8",
+          "Variance": "34.462"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "343687.59",
+          "Count": "151",
+          "Avg(us)": "2276.077",
+          "Min(us)": "2063.96",
+          "Max(us)": "4815.19",
+          "Variance": "63358.518"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "12983.11",
+          "Count": "604",
+          "Avg(us)": "21.495",
+          "Min(us)": "0.63",
+          "Max(us)": "97.69",
+          "Variance": "839.374"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-fp16-TN-profile\\PROF_000001_20261008130735565_00057101RLNLNPMQ\\mindstudio_profiler_output\\api_statistic_20261008130740.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "759.55",
+          "Count": "456",
+          "Avg(us)": "1.666",
+          "Min(us)": "1.18",
+          "Max(us)": "7.48",
+          "Variance": "0.238"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "988.91",
+          "Count": "456",
+          "Avg(us)": "2.169",
+          "Min(us)": "1.27",
+          "Max(us)": "71.4",
+          "Variance": "18.146"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "331917.35",
+          "Count": "151",
+          "Avg(us)": "2198.128",
+          "Min(us)": "1999.84",
+          "Max(us)": "4589.68",
+          "Variance": "51329.465"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "3573.25",
+          "Count": "302",
+          "Avg(us)": "11.832",
+          "Min(us)": "0.8",
+          "Max(us)": "34.33",
+          "Variance": "122.041"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b1-fp16-TT-profile\\PROF_000001_20261008130750839_00057605PNPHAARH\\mindstudio_profiler_output\\api_statistic_20261008130756.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1566.58",
+          "Count": "912",
+          "Avg(us)": "1.718",
+          "Min(us)": "1.17",
+          "Max(us)": "7.99",
+          "Variance": "0.265"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "2043.07",
+          "Count": "912",
+          "Avg(us)": "2.24",
+          "Min(us)": "1.25",
+          "Max(us)": "130.83",
+          "Variance": "29.837"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "670587.35",
+          "Count": "302",
+          "Avg(us)": "2220.488",
+          "Min(us)": "2000.9",
+          "Max(us)": "4601.97",
+          "Variance": "37972.779"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "17504.94",
+          "Count": "604",
+          "Avg(us)": "28.982",
+          "Min(us)": "0.81",
+          "Max(us)": "110.75",
+          "Variance": "1362.348"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-bf16-NN-profile\\PROF_000001_20261008131046874_00063387KQFHQHAF\\mindstudio_profiler_output\\api_statistic_20261008131053.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "744.34",
+          "Count": "456",
+          "Avg(us)": "1.632",
+          "Min(us)": "1.14",
+          "Max(us)": "7.91",
+          "Variance": "0.285"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1122.08",
+          "Count": "456",
+          "Avg(us)": "2.461",
+          "Min(us)": "1.28",
+          "Max(us)": "97.03",
+          "Variance": "42.59"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "344257.16",
+          "Count": "151",
+          "Avg(us)": "2279.849",
+          "Min(us)": "2092.83",
+          "Max(us)": "2613.49",
+          "Variance": "16124.679"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "13729.45",
+          "Count": "302",
+          "Avg(us)": "45.462",
+          "Min(us)": "0.84",
+          "Max(us)": "113.78",
+          "Variance": "1984.545"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-bf16-NT-profile\\PROF_000001_20261008131032604_00062885PKRGDMGE\\mindstudio_profiler_output\\api_statistic_20261008131037.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1594.06",
+          "Count": "912",
+          "Avg(us)": "1.748",
+          "Min(us)": "1.13",
+          "Max(us)": "8.65",
+          "Variance": "0.397"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "2049.8",
+          "Count": "912",
+          "Avg(us)": "2.248",
+          "Min(us)": "1.31",
+          "Max(us)": "100.37",
+          "Variance": "20.042"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "653340.06",
+          "Count": "302",
+          "Avg(us)": "2163.378",
+          "Min(us)": "1982.89",
+          "Max(us)": "4866.08",
+          "Variance": "48007.346"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "7270.07",
+          "Count": "604",
+          "Avg(us)": "12.037",
+          "Min(us)": "0.77",
+          "Max(us)": "54.06",
+          "Variance": "129.38"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-bf16-TN-profile\\PROF_000001_20261008131011195_00062131IHAKAEFR\\mindstudio_profiler_output\\api_statistic_20261008131016.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "828.14",
+          "Count": "459",
+          "Avg(us)": "1.804",
+          "Min(us)": "1.19",
+          "Max(us)": "10.63",
+          "Variance": "0.392"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1163.18",
+          "Count": "459",
+          "Avg(us)": "2.534",
+          "Min(us)": "1.3",
+          "Max(us)": "95.73",
+          "Variance": "38.946"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "341211.19",
+          "Count": "151",
+          "Avg(us)": "2259.677",
+          "Min(us)": "2071.38",
+          "Max(us)": "2760.81",
+          "Variance": "22142.053"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "18915.6",
+          "Count": "604",
+          "Avg(us)": "31.317",
+          "Min(us)": "0.68",
+          "Max(us)": "139.32",
+          "Variance": "2013.284"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-bf16-TT-4-profile\\PROF_000001_20261008131025468_00062633EANBKRMQ\\mindstudio_profiler_output\\api_statistic_20261008131030.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "261.57",
+          "Count": "154",
+          "Avg(us)": "1.699",
+          "Min(us)": "1.46",
+          "Max(us)": "7.01",
+          "Variance": "0.373"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "303.22",
+          "Count": "154",
+          "Avg(us)": "1.969",
+          "Min(us)": "1.68",
+          "Max(us)": "13.59",
+          "Variance": "1.045"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "2503.43",
+          "Count": "302",
+          "Avg(us)": "8.29",
+          "Min(us)": "0.71",
+          "Max(us)": "24.39",
+          "Variance": "56.882"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-fp16-NN-profile\\PROF_000001_20261008131004062_00061879HEQAPECE\\mindstudio_profiler_output\\api_statistic_20261008131009.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1096.08",
+          "Count": "613",
+          "Avg(us)": "1.788",
+          "Min(us)": "1.15",
+          "Max(us)": "9.01",
+          "Variance": "0.314"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1392.56",
+          "Count": "613",
+          "Avg(us)": "2.272",
+          "Min(us)": "1.31",
+          "Max(us)": "73.22",
+          "Variance": "17.853"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "328541.23",
+          "Count": "151",
+          "Avg(us)": "2175.77",
+          "Min(us)": "2000.48",
+          "Max(us)": "2597.21",
+          "Variance": "21319.962"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "8507.04",
+          "Count": "906",
+          "Avg(us)": "9.39",
+          "Min(us)": "0.68",
+          "Max(us)": "33.4",
+          "Variance": "90.429"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-fp16-NT-profile\\PROF_000001_20261008131018332_00062383IIEKEBLD\\mindstudio_profiler_output\\api_statistic_20261008131023.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "794.01",
+          "Count": "459",
+          "Avg(us)": "1.73",
+          "Min(us)": "1.24",
+          "Max(us)": "9.74",
+          "Variance": "0.356"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1137.64",
+          "Count": "459",
+          "Avg(us)": "2.479",
+          "Min(us)": "1.28",
+          "Max(us)": "95.91",
+          "Variance": "38.12"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "342594.37",
+          "Count": "151",
+          "Avg(us)": "2268.837",
+          "Min(us)": "2067.34",
+          "Max(us)": "4997.74",
+          "Variance": "70331.182"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "12693.37",
+          "Count": "604",
+          "Avg(us)": "21.016",
+          "Min(us)": "0.64",
+          "Max(us)": "92.92",
+          "Variance": "755.974"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-fp16-TN-profile\\PROF_000001_20261008131039739_00063137KCQJQMMG\\mindstudio_profiler_output\\api_statistic_20261008131044.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "789.93",
+          "Count": "456",
+          "Avg(us)": "1.732",
+          "Min(us)": "1.18",
+          "Max(us)": "13.37",
+          "Variance": "0.723"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "1020.78",
+          "Count": "456",
+          "Avg(us)": "2.239",
+          "Min(us)": "1.3",
+          "Max(us)": "72.87",
+          "Variance": "18.992"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "325605.94",
+          "Count": "151",
+          "Avg(us)": "2156.331",
+          "Min(us)": "1987.26",
+          "Max(us)": "2519.41",
+          "Variance": "15409.38"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "3397.13",
+          "Count": "302",
+          "Avg(us)": "11.249",
+          "Min(us)": "0.79",
+          "Max(us)": "33.56",
+          "Variance": "109.303"
+        }
+      ]
+    },
+    {
+      "文件": "all\\b2-fp16-TT-profile\\PROF_000001_20261008131055012_00063639HMBNDHGI\\mindstudio_profiler_output\\api_statistic_20261008131102.csv",
+      "记录": [
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtFree",
+          "Time(us)": "1676",
+          "Count": "912",
+          "Avg(us)": "1.838",
+          "Min(us)": "1.15",
+          "Max(us)": "9.83",
+          "Variance": "0.664"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMalloc",
+          "Time(us)": "2178.97",
+          "Count": "912",
+          "Avg(us)": "2.389",
+          "Min(us)": "1.25",
+          "Max(us)": "129.68",
+          "Variance": "32.211"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtMemset",
+          "Time(us)": "687271.16",
+          "Count": "302",
+          "Avg(us)": "2275.732",
+          "Min(us)": "1985.37",
+          "Max(us)": "7581.77",
+          "Variance": "155934.619"
+        },
+        {
+          "Device_id": "host",
+          "Level": "acl",
+          "API Name": "aclrtSynchronizeStream",
+          "Time(us)": "17657.27",
+          "Count": "604",
+          "Avg(us)": "29.234",
+          "Min(us)": "0.82",
+          "Max(us)": "109.49",
+          "Variance": "1332.641"
+        }
+      ]
+    }
+  ],
+  "压缩包SHA256": "413b7076e74e402f4d711cb83a2a64decda41ddd976afb530b0f4d0b937f153f"
+}

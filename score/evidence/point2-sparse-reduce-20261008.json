@@ -1,0 +1,2022 @@
+{
+  "说明": "真实NPU普通msprof l0对照，非OJ结果",
+  "源码": {
+    "baseline": "9a438d5f79850e474b82e1c71c3e67b2b64952aa460e73b76ebbd2473d51647e",
+    "candidate": "95d545b5643ca87a91007bd751180a20d9002ac4d2db295e655e36fb37f66b36"
+  },
+  "修改范围": "仅ComputePackedDotsFixed中的点积归约与行最大值归约",
+  "远端编译": "BUILD_SECONDS=68\nBUILD_STATUS=0\n",
+  "对照": {
+    "point2": {
+      "2": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.6595,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.64,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b3",
+            "median_us": 1.66,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b4",
+            "median_us": 1.68,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.64,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.62,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a3",
+            "median_us": 1.6095000000000002,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a4",
+            "median_us": 1.6,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "baseline_us": 1.659875,
+        "candidate_us": 1.617375,
+        "change_percent": -2.5604337676029765
+      }
+    },
+    "all": {
+      "10": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 73.6385,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 73.07849999999999,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 72.80850000000001,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 72.639,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb0ELb0ELb0ELj208ELj1024ELb0ELb1ELj128ELj208EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 73.35849999999999,
+        "candidate_us": 72.72375,
+        "change_percent": -0.8652712364620285
+      },
+      "6": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 3.88,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 3.9995000000000003,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 4.1,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 3.88,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint6ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "baseline_us": 3.93975,
+        "candidate_us": 3.9899999999999998,
+        "change_percent": 1.2754616409670572
+      },
+      "14": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 6.98,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 7.1295,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 7.3495,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 7.04,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint14ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 7.05475,
+        "candidate_us": 7.19475,
+        "change_percent": 1.9844785428257516
+      },
+      "2": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.66,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.66,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.61,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.6,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "baseline_us": 1.66,
+        "candidate_us": 1.605,
+        "change_percent": -3.3132530120481896
+      },
+      "12": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 91.658,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 92.1685,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 91.578,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 92.06800000000001,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIu6__bf16Lb1ELb0ELb1ELj128ELj1024ELb0ELb1ELj256ELj128EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 91.91325,
+        "candidate_us": 91.82300000000001,
+        "change_percent": -0.09819041324291566
+      },
+      "4": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 3.56,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 3.5,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 3.52,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 3.54,
+            "kernels": [
+              "_ZN13batch_max_sum27ComputeBatchDirectDotsFixedIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+            ]
+          }
+        ],
+        "baseline_us": 3.5300000000000002,
+        "candidate_us": 3.5300000000000002,
+        "change_percent": 0.0
+      },
+      "1": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.1,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.1,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.09,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.1195,
+            "kernels": [
+              "_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_"
+            ]
+          }
+        ],
+        "baseline_us": 1.1,
+        "candidate_us": 1.1047500000000001,
+        "change_percent": 0.43181818181818876
+      },
+      "5": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 2.68,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 2.719,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 2.62,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 2.62,
+            "kernels": [
+              "_ZN13batch_max_sum22ComputeSmallManualCubeIDhLb0ELb0ELj32EEEvPhS1_S1_S1_jj"
+            ]
+          }
+        ],
+        "baseline_us": 2.6995,
+        "candidate_us": 2.62,
+        "change_percent": -2.9449898129283114
+      },
+      "13": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 7.34,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 7.41,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 7.14,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 7.22,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint13ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 7.375,
+        "candidate_us": 7.18,
+        "change_percent": -2.644067796610172
+      },
+      "3": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 1.68,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 1.68,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 1.66,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 1.6695,
+            "kernels": [
+              "_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj"
+            ]
+          }
+        ],
+        "baseline_us": 1.68,
+        "candidate_us": 1.66475,
+        "change_percent": -0.9077380952380976
+      },
+      "9": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 52.248999999999995,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 51.3485,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 51.789,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 51.859,
+            "kernels": [
+              "_ZN13batch_max_sum7ComputeIDhLb0ELb1ELb0ELj112ELj1024ELb0ELb1ELj256ELj112EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 51.79875,
+        "candidate_us": 51.824,
+        "change_percent": 0.04874635005671646
+      },
+      "7": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 4.3,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 4.32,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 4.3,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 4.399,
+            "kernels": [
+              "_ZN13batch_max_sum23ComputePoint7ManualCubeEPhS0_S0_S0_"
+            ]
+          }
+        ],
+        "baseline_us": 4.3100000000000005,
+        "candidate_us": 4.3495,
+        "change_percent": 0.9164733178654183
+      },
+      "11": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 72.52850000000001,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 73.4085,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 73.0485,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 72.439,
+            "kernels": [
+              "_ZN13batch_max_sum16ComputeSwappedTTIDhLj256ELj688ELj128ELj256ELb0EEEvPhS1_S1_S1_S1_S1_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 72.9685,
+        "candidate_us": 72.74375,
+        "change_percent": -0.30800962058971093
+      },
+      "15": {
+        "baseline": [
+          {
+            "entry": "b1",
+            "median_us": 6.27,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "b2",
+            "median_us": 6.4094999999999995,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "candidate": [
+          {
+            "entry": "a1",
+            "median_us": 6.38,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          },
+          {
+            "entry": "a2",
+            "median_us": 6.3295,
+            "kernels": [
+              "_ZN13batch_max_sum24ComputePoint15ManualCubeEPhS0_S0_S0_S0_NS_10ParametersE"
+            ]
+          }
+        ],
+        "baseline_us": 6.3397499999999996,
+        "candidate_us": 6.35475,
+        "change_percent": 0.23660238968414848
+      }
+    }
+  },
+  "精度": [
+    {
+      "文件": "baseline-point8.json",
+      "结果": {
+        "commit": "9a438d5f79850e474b82e1c71c3e67b2b64952aa460e73b76ebbd2473d51647e",
+        "execution": "real_npu",
+        "library": "/home/developer/point2-cast-gather-20261008/build/libsimulator_bridge.so",
+        "library_sha256": "77d50dc6b7154fa68fd7fd5ac311774f3a17b09528606cee49a945d5633b3790",
+        "dtype": "bf16",
+        "layout": "TT",
+        "warmup": 3,
+        "repeat": 2,
+        "passed": true,
+        "results": [
+          {
+            "case": 8,
+            "shape": [
+              1,
+              1025,
+              1031,
+              1032
+            ],
+            "passed": true,
+            "input_sha256": [
+              "0c4a752596d7659127c1f6ff7c310f428c366d472e11818312aa5d26c805e62f",
+              "f88ea83b8c6d897cf64cf745399d4eaf8cde1aa577deb7d4d8130345885611b2"
+            ],
+            "launch_begin": 0,
+            "seed": 20260938,
+            "max_abs_error": 0.0,
+            "launch_end": 6
+          }
+        ],
+        "launches": [
+          {
+            "case": 8,
+            "phase": "validation",
+            "position": 0
+          },
+          {
+            "case": 8,
+            "phase": "warmup",
+            "position": 1
+          },
+          {
+            "case": 8,
+            "phase": "warmup",
+            "position": 2
+          },
+          {
+            "case": 8,
+            "phase": "warmup",
+            "position": 3
+          },
+          {
+            "case": 8,
+            "phase": "sample",
+            "position": 4
+          },
+          {
+            "case": 8,
+            "phase": "sample",
+            "position": 5
+          }
+        ],
+        "soc": "Ascend910_9362",
+        "cube_cores": 20
+      }
+    },
+    {
+      "文件": "candidate-point8.json",
+      "结果": {
+        "commit": "95d545b5643ca87a91007bd751180a20d9002ac4d2db295e655e36fb37f66b36",
+        "execution": "real_npu",
+        "library": "/home/developer/point2-sparse-reduce-20261008/build/libsimulator_bridge.so",
+        "library_sha256": "879e99f2183e1e252a69c8f6ec605dfba301df11b9dd162b477a5465f53dba80",
+        "dtype": "bf16",
+        "layout": "TT",
+        "warmup": 3,
+        "repeat": 2,
+        "passed": true,
+        "results": [
+          {
+            "case": 8,
+            "shape": [
+              1,
+              1025,
+              1031,
+              1032
+            ],
+            "passed": true,
+            "input_sha256": [
+              "0c4a752596d7659127c1f6ff7c310f428c366d472e11818312aa5d26c805e62f",
+              "f88ea83b8c6d897cf64cf745399d4eaf8cde1aa577deb7d4d8130345885611b2"
+            ],
+            "launch_begin": 0,
+            "seed": 20260938,
+            "max_abs_error": 0.0,
+            "launch_end": 6
+          }
+        ],
+        "launches": [
+          {
+            "case": 8,
+            "phase": "validation",
+            "position": 0
+          },
+          {
+            "case": 8,
+            "phase": "warmup",
+            "position": 1
+          },
+          {
+            "case": 8,
+            "phase": "warmup",
+            "position": 2
+          },
+          {
+            "case": 8,
+            "phase": "warmup",
+            "position": 3
+          },
+          {
+            "case": 8,
+            "phase": "sample",
+            "position": 4
+          },
+          {
+            "case": 8,
+            "phase": "sample",
+            "position": 5
+          }
+        ],
+        "soc": "Ascend910_9362",
+        "cube_cores": 20
+      }
+    },
+    {
+      "文件": "point2-14.json",
+      "结果": {
+        "case": 14,
+        "label": "点2全负",
+        "shape": [
+          1,
+          3,
+          5,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "c7fa6fb7f9419d3a29f497ffb76380e314cec1903e1e0ec47794e653f5263c05",
+          "5c62d2792dc60671c4493d7db46e4ab2fa8a46ce977abcc59e7857d63bf75f03"
+        ],
+        "input_pattern": "全负",
+        "expected_range": [
+          -24.88414192199707,
+          -24.88414192199707
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "point2-22.json",
+      "结果": {
+        "case": 22,
+        "label": "点2全零",
+        "shape": [
+          1,
+          3,
+          5,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
+          "f50525b416afbb87bbabf6e49c94d107f5fefd7f2f37b976002cff4b0a711c7d"
+        ],
+        "input_pattern": "全零",
+        "expected_range": [
+          0.0,
+          0.0
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "point2-30.json",
+      "结果": {
+        "case": 30,
+        "label": "相邻行列",
+        "shape": [
+          1,
+          2,
+          7,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "a46a667f20dd79c01c49c62e58343f8812a522bbc31f83ea6d2145dbd7011421",
+          "3063cb06121c0e9616516bcc7b29b2aec9a93d7d012f5979f36ff67129a7fd39"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          5.407249450683594,
+          5.407249450683594
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "point2-38.json",
+      "结果": {
+        "case": 38,
+        "label": "相邻K",
+        "shape": [
+          1,
+          3,
+          5,
+          48
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "95e0ef39e9080707338a95179dc54528eb0a39a8af9293f471f4766871445931",
+          "af01520323ed14defef97f6a64899d67989127ecdddf90d5f4bcfb12c0504595"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          3.9412713050842285,
+          3.9412713050842285
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    },
+    {
+      "文件": "point2-6.json",
+      "结果": {
+        "case": 6,
+        "label": "点2随机",
+        "shape": [
+          1,
+          3,
+          5,
+          40
+        ],
+        "dtype": "<class 'ml_dtypes.bfloat16'>",
+        "transpose": [
+          true,
+          false
+        ],
+        "capture": true,
+        "execution": "npu",
+        "passed": true,
+        "input_sha256": [
+          "fb207ae7522a2e9ca22fb2472b1e6c28f08ebb39a9590c7752608ce5c7810f13",
+          "c24d2e0da4fe31675763a906feaacf3ff679fdc5712547155e8418d308eb61eb"
+        ],
+        "input_pattern": "随机或独立构造",
+        "expected_range": [
+          5.382268905639648,
+          5.382268905639648
+        ],
+        "available_cores": 20,
+        "max_abs_error": 0.0
+      }
+    }
+  ],
+  "PMU": [
+    {
+      "版本": "baseline",
+      "轮次": 1,
+      "表格": {
+        "ArithmeticUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_cube_fp16_ratio": "NA",
+            "aic_cube_int8_ratio": "NA",
+            "aic_cube_fops": "NA",
+            "aic_cube_total_instr_number": "NA",
+            "aic_cube_fp_instr_number": "NA",
+            "aic_cube_int_instr_number": "NA",
+            "aiv_time(us)": "1.220606",
+            "aiv_total_cycles": "2014",
+            "aiv_vec_ratio": "0.404171",
+            "aiv_vec_fp32_ratio": "0.169811",
+            "aiv_vec_fp16_ratio": "0.000000",
+            "aiv_vec_int32_ratio": "0.025323",
+            "aiv_vec_int16_ratio": "0.000000",
+            "aiv_vec_misc_ratio": "0.208044",
+            "aiv_vec_fops": "4512",
+            "": ""
+          }
+        ],
+        "L2Cache.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_write_cache_hit": "NA",
+            "aic_write_cache_miss_allocate": "NA",
+            "aic_r0_read_cache_hit": "NA",
+            "aic_r0_read_cache_miss_allocate": "NA",
+            "aic_r1_read_cache_hit": "NA",
+            "aic_r1_read_cache_miss_allocate": "NA",
+            "aic_write_hit_rate(%)": "NA",
+            "aic_read_hit_rate(%)": "NA",
+            "aic_total_hit_rate(%)": "NA",
+            "aiv_time(us)": "1.220606",
+            "aiv_total_cycles": "2014",
+            "aiv_write_cache_hit": "1",
+            "aiv_write_cache_miss_allocate": "1",
+            "aiv_r0_read_cache_hit": "2",
+            "aiv_r0_read_cache_miss_allocate": "2",
+            "aiv_r1_read_cache_hit": "1",
+            "aiv_r1_read_cache_miss_allocate": "3",
+            "aiv_write_hit_rate(%)": "50.000000",
+            "aiv_read_hit_rate(%)": "37.500000",
+            "aiv_total_hit_rate(%)": "40.000000",
+            "": ""
+          }
+        ],
+        "Memory.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "1.220606",
+            "aiv_total_cycles": "2014",
+            "aiv_ub_to_gm_bw(GB/s)": "0.097664",
+            "aiv_gm_to_ub_bw(GB/s)": "0.585984",
+            "aiv_main_mem_read_bw(GB/s)": "0.781312",
+            "aiv_main_mem_write_bw(GB/s)": "0.195328",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.231380",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.085402",
+            "read_main_memory_datas(KB)": "1.000000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.266284",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.052283",
+            "": ""
+          }
+        ],
+        "MemoryL0.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l0a_read_bw(GB/s)": "NA",
+            "aic_l0a_write_bw(GB/s)": "NA",
+            "aic_l0b_read_bw(GB/s)": "NA",
+            "aic_l0b_write_bw(GB/s)": "NA",
+            "aic_l0c_read_bw_cube(GB/s)": "NA",
+            "aic_l0c_write_bw_cube(GB/s)": "NA",
+            "aiv_time(us)": "1.220606",
+            "aiv_total_cycles": "2014",
+            "": ""
+          }
+        ],
+        "OpBasicInfo.csv": [
+          {
+            "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "1.799964",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "32322",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "1.220606",
+            "aiv_total_cycles": "2014",
+            "aiv_vec_time(us)": "0.493333",
+            "aiv_vec_ratio": "0.404171",
+            "aiv_mte2_time(us)": "0.282424",
+            "aiv_mte2_ratio": "0.231380",
+            "aiv_mte2_active_bw(GB/s)": "2.532558",
+            "aiv_mte3_time(us)": "0.104242",
+            "aiv_mte3_ratio": "0.085402",
+            "aiv_mte3_active_bw(GB/s)": "1.143577",
+            "aiv_icache_miss_rate": "0.000000",
+            "aiv_scalar_time(us)": "0.569091",
+            "aiv_scalar_ratio": "0.466236",
+            "aiv_scalar_single_time(us)": "0.072121",
+            "aiv_scalar_dual_time(us)": "0.152121",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "0.130303",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ]
+      }
+    },
+    {
+      "版本": "baseline",
+      "轮次": 2,
+      "表格": {
+        "ArithmeticUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_cube_fp16_ratio": "NA",
+            "aic_cube_int8_ratio": "NA",
+            "aic_cube_fops": "NA",
+            "aic_cube_total_instr_number": "NA",
+            "aic_cube_fp_instr_number": "NA",
+            "aic_cube_int_instr_number": "NA",
+            "aiv_time(us)": "1.214545",
+            "aiv_total_cycles": "2004",
+            "aiv_vec_ratio": "0.406188",
+            "aiv_vec_fp32_ratio": "0.170659",
+            "aiv_vec_fp16_ratio": "0.000000",
+            "aiv_vec_int32_ratio": "0.025449",
+            "aiv_vec_int16_ratio": "0.000000",
+            "aiv_vec_misc_ratio": "0.209082",
+            "aiv_vec_fops": "4512",
+            "": ""
+          }
+        ],
+        "L2Cache.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_write_cache_hit": "NA",
+            "aic_write_cache_miss_allocate": "NA",
+            "aic_r0_read_cache_hit": "NA",
+            "aic_r0_read_cache_miss_allocate": "NA",
+            "aic_r1_read_cache_hit": "NA",
+            "aic_r1_read_cache_miss_allocate": "NA",
+            "aic_write_hit_rate(%)": "NA",
+            "aic_read_hit_rate(%)": "NA",
+            "aic_total_hit_rate(%)": "NA",
+            "aiv_time(us)": "1.214545",
+            "aiv_total_cycles": "2004",
+            "aiv_write_cache_hit": "1",
+            "aiv_write_cache_miss_allocate": "1",
+            "aiv_r0_read_cache_hit": "2",
+            "aiv_r0_read_cache_miss_allocate": "2",
+            "aiv_r1_read_cache_hit": "1",
+            "aiv_r1_read_cache_miss_allocate": "3",
+            "aiv_write_hit_rate(%)": "50.000000",
+            "aiv_read_hit_rate(%)": "37.500000",
+            "aiv_total_hit_rate(%)": "40.000000",
+            "": ""
+          }
+        ],
+        "Memory.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "1.214545",
+            "aiv_total_cycles": "2004",
+            "aiv_ub_to_gm_bw(GB/s)": "0.098151",
+            "aiv_gm_to_ub_bw(GB/s)": "0.588908",
+            "aiv_main_mem_read_bw(GB/s)": "0.785211",
+            "aiv_main_mem_write_bw(GB/s)": "0.196303",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.241018",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.088822",
+            "read_main_memory_datas(KB)": "1.000000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.267613",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.052544",
+            "": ""
+          }
+        ],
+        "MemoryL0.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l0a_read_bw(GB/s)": "NA",
+            "aic_l0a_write_bw(GB/s)": "NA",
+            "aic_l0b_read_bw(GB/s)": "NA",
+            "aic_l0b_write_bw(GB/s)": "NA",
+            "aic_l0c_read_bw_cube(GB/s)": "NA",
+            "aic_l0c_write_bw_cube(GB/s)": "NA",
+            "aiv_time(us)": "1.214545",
+            "aiv_total_cycles": "2004",
+            "": ""
+          }
+        ],
+        "OpBasicInfo.csv": [
+          {
+            "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "1.759965",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "32387",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "1.214545",
+            "aiv_total_cycles": "2004",
+            "aiv_vec_time(us)": "0.493333",
+            "aiv_vec_ratio": "0.406188",
+            "aiv_mte2_time(us)": "0.292727",
+            "aiv_mte2_ratio": "0.241018",
+            "aiv_mte2_active_bw(GB/s)": "2.443420",
+            "aiv_mte3_time(us)": "0.107879",
+            "aiv_mte3_ratio": "0.088822",
+            "aiv_mte3_active_bw(GB/s)": "1.105030",
+            "aiv_icache_miss_rate": "0.000000",
+            "aiv_scalar_time(us)": "0.548485",
+            "aiv_scalar_ratio": "0.451597",
+            "aiv_scalar_single_time(us)": "0.072121",
+            "aiv_scalar_dual_time(us)": "0.152121",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "0.114545",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ]
+      }
+    },
+    {
+      "版本": "baseline",
+      "轮次": 3,
+      "表格": {
+        "ArithmeticUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_cube_fp16_ratio": "NA",
+            "aic_cube_int8_ratio": "NA",
+            "aic_cube_fops": "NA",
+            "aic_cube_total_instr_number": "NA",
+            "aic_cube_fp_instr_number": "NA",
+            "aic_cube_int_instr_number": "NA",
+            "aiv_time(us)": "1.243030",
+            "aiv_total_cycles": "2051",
+            "aiv_vec_ratio": "0.396880",
+            "aiv_vec_fp32_ratio": "0.166748",
+            "aiv_vec_fp16_ratio": "0.000000",
+            "aiv_vec_int32_ratio": "0.024866",
+            "aiv_vec_int16_ratio": "0.000000",
+            "aiv_vec_misc_ratio": "0.204291",
+            "aiv_vec_fops": "4512",
+            "": ""
+          }
+        ],
+        "L2Cache.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_write_cache_hit": "NA",
+            "aic_write_cache_miss_allocate": "NA",
+            "aic_r0_read_cache_hit": "NA",
+            "aic_r0_read_cache_miss_allocate": "NA",
+            "aic_r1_read_cache_hit": "NA",
+            "aic_r1_read_cache_miss_allocate": "NA",
+            "aic_write_hit_rate(%)": "NA",
+            "aic_read_hit_rate(%)": "NA",
+            "aic_total_hit_rate(%)": "NA",
+            "aiv_time(us)": "1.243030",
+            "aiv_total_cycles": "2051",
+            "aiv_write_cache_hit": "1",
+            "aiv_write_cache_miss_allocate": "1",
+            "aiv_r0_read_cache_hit": "2",
+            "aiv_r0_read_cache_miss_allocate": "2",
+            "aiv_r1_read_cache_hit": "1",
+            "aiv_r1_read_cache_miss_allocate": "3",
+            "aiv_write_hit_rate(%)": "50.000000",
+            "aiv_read_hit_rate(%)": "37.500000",
+            "aiv_total_hit_rate(%)": "40.000000",
+            "": ""
+          }
+        ],
+        "Memory.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "1.243030",
+            "aiv_total_cycles": "2051",
+            "aiv_ub_to_gm_bw(GB/s)": "0.095902",
+            "aiv_gm_to_ub_bw(GB/s)": "0.575413",
+            "aiv_main_mem_read_bw(GB/s)": "0.767217",
+            "aiv_main_mem_write_bw(GB/s)": "0.191804",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.234032",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.087762",
+            "read_main_memory_datas(KB)": "1.000000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.261480",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.051339",
+            "": ""
+          }
+        ],
+        "MemoryL0.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l0a_read_bw(GB/s)": "NA",
+            "aic_l0a_write_bw(GB/s)": "NA",
+            "aic_l0b_read_bw(GB/s)": "NA",
+            "aic_l0b_write_bw(GB/s)": "NA",
+            "aic_l0c_read_bw_cube(GB/s)": "NA",
+            "aic_l0c_write_bw_cube(GB/s)": "NA",
+            "aiv_time(us)": "1.243030",
+            "aiv_total_cycles": "2051",
+            "": ""
+          }
+        ],
+        "OpBasicInfo.csv": [
+          {
+            "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "1.819964",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "32454",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "1.243030",
+            "aiv_total_cycles": "2051",
+            "aiv_vec_time(us)": "0.493333",
+            "aiv_vec_ratio": "0.396880",
+            "aiv_mte2_time(us)": "0.290909",
+            "aiv_mte2_ratio": "0.234032",
+            "aiv_mte2_active_bw(GB/s)": "2.458692",
+            "aiv_mte3_time(us)": "0.109091",
+            "aiv_mte3_ratio": "0.087762",
+            "aiv_mte3_active_bw(GB/s)": "1.092752",
+            "aiv_icache_miss_rate": "0.000000",
+            "aiv_scalar_time(us)": "0.580000",
+            "aiv_scalar_ratio": "0.466602",
+            "aiv_scalar_single_time(us)": "0.072121",
+            "aiv_scalar_dual_time(us)": "0.152121",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "0.107879",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ]
+      }
+    },
+    {
+      "版本": "candidate",
+      "轮次": 1,
+      "表格": {
+        "ArithmeticUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_cube_fp16_ratio": "NA",
+            "aic_cube_int8_ratio": "NA",
+            "aic_cube_fops": "NA",
+            "aic_cube_total_instr_number": "NA",
+            "aic_cube_fp_instr_number": "NA",
+            "aic_cube_int_instr_number": "NA",
+            "aiv_time(us)": "1.127273",
+            "aiv_total_cycles": "1860",
+            "aiv_vec_ratio": "0.403226",
+            "aiv_vec_fp32_ratio": "0.169355",
+            "aiv_vec_fp16_ratio": "0.000000",
+            "aiv_vec_int32_ratio": "0.025269",
+            "aiv_vec_int16_ratio": "0.000000",
+            "aiv_vec_misc_ratio": "0.207527",
+            "aiv_vec_fops": "4512",
+            "": ""
+          }
+        ],
+        "L2Cache.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_write_cache_hit": "NA",
+            "aic_write_cache_miss_allocate": "NA",
+            "aic_r0_read_cache_hit": "NA",
+            "aic_r0_read_cache_miss_allocate": "NA",
+            "aic_r1_read_cache_hit": "NA",
+            "aic_r1_read_cache_miss_allocate": "NA",
+            "aic_write_hit_rate(%)": "NA",
+            "aic_read_hit_rate(%)": "NA",
+            "aic_total_hit_rate(%)": "NA",
+            "aiv_time(us)": "1.127273",
+            "aiv_total_cycles": "1860",
+            "aiv_write_cache_hit": "1",
+            "aiv_write_cache_miss_allocate": "1",
+            "aiv_r0_read_cache_hit": "1",
+            "aiv_r0_read_cache_miss_allocate": "3",
+            "aiv_r1_read_cache_hit": "2",
+            "aiv_r1_read_cache_miss_allocate": "2",
+            "aiv_write_hit_rate(%)": "50.000000",
+            "aiv_read_hit_rate(%)": "37.500000",
+            "aiv_total_hit_rate(%)": "40.000000",
+            "": ""
+          }
+        ],
+        "Memory.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "1.127273",
+            "aiv_total_cycles": "1860",
+            "aiv_ub_to_gm_bw(GB/s)": "0.105750",
+            "aiv_gm_to_ub_bw(GB/s)": "0.634501",
+            "aiv_main_mem_read_bw(GB/s)": "0.846001",
+            "aiv_main_mem_write_bw(GB/s)": "0.211500",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.243548",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.074194",
+            "read_main_memory_datas(KB)": "1.000000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.288331",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.056611",
+            "": ""
+          }
+        ],
+        "MemoryL0.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l0a_read_bw(GB/s)": "NA",
+            "aic_l0a_write_bw(GB/s)": "NA",
+            "aic_l0b_read_bw(GB/s)": "NA",
+            "aic_l0b_write_bw(GB/s)": "NA",
+            "aic_l0c_read_bw_cube(GB/s)": "NA",
+            "aic_l0c_write_bw_cube(GB/s)": "NA",
+            "aiv_time(us)": "1.127273",
+            "aiv_total_cycles": "1860",
+            "": ""
+          }
+        ],
+        "OpBasicInfo.csv": [
+          {
+            "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "1.699966",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "32012",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "1.127273",
+            "aiv_total_cycles": "1860",
+            "aiv_vec_time(us)": "0.454545",
+            "aiv_vec_ratio": "0.403226",
+            "aiv_mte2_time(us)": "0.274545",
+            "aiv_mte2_ratio": "0.243548",
+            "aiv_mte2_active_bw(GB/s)": "2.605236",
+            "aiv_mte3_time(us)": "0.083636",
+            "aiv_mte3_ratio": "0.074194",
+            "aiv_mte3_active_bw(GB/s)": "1.425328",
+            "aiv_icache_miss_rate": "0.000000",
+            "aiv_scalar_time(us)": "0.549091",
+            "aiv_scalar_ratio": "0.487097",
+            "aiv_scalar_single_time(us)": "0.070909",
+            "aiv_scalar_dual_time(us)": "0.151515",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "0.099394",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ]
+      }
+    },
+    {
+      "版本": "candidate",
+      "轮次": 2,
+      "表格": {
+        "ArithmeticUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_cube_fp16_ratio": "NA",
+            "aic_cube_int8_ratio": "NA",
+            "aic_cube_fops": "NA",
+            "aic_cube_total_instr_number": "NA",
+            "aic_cube_fp_instr_number": "NA",
+            "aic_cube_int_instr_number": "NA",
+            "aiv_time(us)": "1.333939",
+            "aiv_total_cycles": "2201",
+            "aiv_vec_ratio": "0.340754",
+            "aiv_vec_fp32_ratio": "0.143117",
+            "aiv_vec_fp16_ratio": "0.000000",
+            "aiv_vec_int32_ratio": "0.021354",
+            "aiv_vec_int16_ratio": "0.000000",
+            "aiv_vec_misc_ratio": "0.175375",
+            "aiv_vec_fops": "4512",
+            "": ""
+          }
+        ],
+        "L2Cache.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_write_cache_hit": "NA",
+            "aic_write_cache_miss_allocate": "NA",
+            "aic_r0_read_cache_hit": "NA",
+            "aic_r0_read_cache_miss_allocate": "NA",
+            "aic_r1_read_cache_hit": "NA",
+            "aic_r1_read_cache_miss_allocate": "NA",
+            "aic_write_hit_rate(%)": "NA",
+            "aic_read_hit_rate(%)": "NA",
+            "aic_total_hit_rate(%)": "NA",
+            "aiv_time(us)": "1.333939",
+            "aiv_total_cycles": "2201",
+            "aiv_write_cache_hit": "1",
+            "aiv_write_cache_miss_allocate": "1",
+            "aiv_r0_read_cache_hit": "1",
+            "aiv_r0_read_cache_miss_allocate": "3",
+            "aiv_r1_read_cache_hit": "2",
+            "aiv_r1_read_cache_miss_allocate": "2",
+            "aiv_write_hit_rate(%)": "50.000000",
+            "aiv_read_hit_rate(%)": "37.500000",
+            "aiv_total_hit_rate(%)": "40.000000",
+            "": ""
+          }
+        ],
+        "Memory.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "1.333939",
+            "aiv_total_cycles": "2201",
+            "aiv_ub_to_gm_bw(GB/s)": "0.089366",
+            "aiv_gm_to_ub_bw(GB/s)": "0.536198",
+            "aiv_main_mem_read_bw(GB/s)": "0.714931",
+            "aiv_main_mem_write_bw(GB/s)": "0.178733",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.204453",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.063153",
+            "read_main_memory_datas(KB)": "1.000000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.243660",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.047841",
+            "": ""
+          }
+        ],
+        "MemoryL0.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l0a_read_bw(GB/s)": "NA",
+            "aic_l0a_write_bw(GB/s)": "NA",
+            "aic_l0b_read_bw(GB/s)": "NA",
+            "aic_l0b_write_bw(GB/s)": "NA",
+            "aic_l0c_read_bw_cube(GB/s)": "NA",
+            "aic_l0c_write_bw_cube(GB/s)": "NA",
+            "aiv_time(us)": "1.333939",
+            "aiv_total_cycles": "2201",
+            "": ""
+          }
+        ],
+        "OpBasicInfo.csv": [
+          {
+            "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "1.919962",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "32079",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "1.333939",
+            "aiv_total_cycles": "2201",
+            "aiv_vec_time(us)": "0.454545",
+            "aiv_vec_ratio": "0.340754",
+            "aiv_mte2_time(us)": "0.272727",
+            "aiv_mte2_ratio": "0.204453",
+            "aiv_mte2_active_bw(GB/s)": "2.622604",
+            "aiv_mte3_time(us)": "0.084242",
+            "aiv_mte3_ratio": "0.063153",
+            "aiv_mte3_active_bw(GB/s)": "1.415074",
+            "aiv_icache_miss_rate": "0.000000",
+            "aiv_scalar_time(us)": "0.756970",
+            "aiv_scalar_ratio": "0.567469",
+            "aiv_scalar_single_time(us)": "0.070303",
+            "aiv_scalar_dual_time(us)": "0.151515",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "0.107273",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ]
+      }
+    },
+    {
+      "版本": "candidate",
+      "轮次": 3,
+      "表格": {
+        "ArithmeticUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_cube_fp16_ratio": "NA",
+            "aic_cube_int8_ratio": "NA",
+            "aic_cube_fops": "NA",
+            "aic_cube_total_instr_number": "NA",
+            "aic_cube_fp_instr_number": "NA",
+            "aic_cube_int_instr_number": "NA",
+            "aiv_time(us)": "1.244848",
+            "aiv_total_cycles": "2054",
+            "aiv_vec_ratio": "0.365141",
+            "aiv_vec_fp32_ratio": "0.153359",
+            "aiv_vec_fp16_ratio": "0.000000",
+            "aiv_vec_int32_ratio": "0.022882",
+            "aiv_vec_int16_ratio": "0.000000",
+            "aiv_vec_misc_ratio": "0.187926",
+            "aiv_vec_fops": "4512",
+            "": ""
+          }
+        ],
+        "L2Cache.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_write_cache_hit": "NA",
+            "aic_write_cache_miss_allocate": "NA",
+            "aic_r0_read_cache_hit": "NA",
+            "aic_r0_read_cache_miss_allocate": "NA",
+            "aic_r1_read_cache_hit": "NA",
+            "aic_r1_read_cache_miss_allocate": "NA",
+            "aic_write_hit_rate(%)": "NA",
+            "aic_read_hit_rate(%)": "NA",
+            "aic_total_hit_rate(%)": "NA",
+            "aiv_time(us)": "1.244848",
+            "aiv_total_cycles": "2054",
+            "aiv_write_cache_hit": "1",
+            "aiv_write_cache_miss_allocate": "1",
+            "aiv_r0_read_cache_hit": "1",
+            "aiv_r0_read_cache_miss_allocate": "3",
+            "aiv_r1_read_cache_hit": "2",
+            "aiv_r1_read_cache_miss_allocate": "2",
+            "aiv_write_hit_rate(%)": "50.000000",
+            "aiv_read_hit_rate(%)": "37.500000",
+            "aiv_total_hit_rate(%)": "40.000000",
+            "": ""
+          }
+        ],
+        "Memory.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l1_read_bw(GB/s)": "NA",
+            "aic_l1_write_bw(GB/s)": "NA",
+            "aic_main_mem_read_bw(GB/s)": "NA",
+            "aic_main_mem_write_bw(GB/s)": "NA",
+            "aic_mte1_instructions": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_instructions": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_instructions": "NA",
+            "aic_mte3_ratio": "NA",
+            "aiv_time(us)": "1.244848",
+            "aiv_total_cycles": "2054",
+            "aiv_ub_to_gm_bw(GB/s)": "0.095762",
+            "aiv_gm_to_ub_bw(GB/s)": "0.574573",
+            "aiv_main_mem_read_bw(GB/s)": "0.766097",
+            "aiv_main_mem_write_bw(GB/s)": "0.191524",
+            "aiv_mte2_instructions": "3",
+            "aiv_mte2_ratio": "0.301850",
+            "aiv_mte3_instructions": "2",
+            "aiv_mte3_ratio": "0.067673",
+            "read_main_memory_datas(KB)": "1.000000",
+            "write_main_memory_datas(KB)": "0.250000",
+            "GM_to_L1_datas(KB)": "NA",
+            "GM_to_L1_bw_usage_rate(%)": "NA",
+            "L1_to_GM_datas(KB)(estimate)": "NA",
+            "L1_to_GM_bw_usage_rate(%)(estimate)": "NA",
+            "L0C_to_L1_datas(KB)": "NA",
+            "L0C_to_L1_bw_usage_rate(%)": "NA",
+            "L0C_to_GM_datas(KB)": "NA",
+            "L0C_to_GM_bw_usage_rate(%)": "NA",
+            "GM_to_UB_datas(KB)": "0.750000",
+            "GM_to_UB_bw_usage_rate(%)": "0.261098",
+            "UB_to_GM_datas(KB)": "0.125000",
+            "UB_to_GM_bw_usage_rate(%)": "0.051265",
+            "": ""
+          }
+        ],
+        "MemoryL0.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_l0a_read_bw(GB/s)": "NA",
+            "aic_l0a_write_bw(GB/s)": "NA",
+            "aic_l0b_read_bw(GB/s)": "NA",
+            "aic_l0b_write_bw(GB/s)": "NA",
+            "aic_l0c_read_bw_cube(GB/s)": "NA",
+            "aic_l0c_write_bw_cube(GB/s)": "NA",
+            "aiv_time(us)": "1.244848",
+            "aiv_total_cycles": "2054",
+            "": ""
+          }
+        ],
+        "OpBasicInfo.csv": [
+          {
+            "Op Name": "_ZN13batch_max_sum22ComputePackedDotsFixedIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+            "Op Type": "vector",
+            "Task Duration(us)": "1.819964",
+            "Block Dim": "1",
+            "Mix Block Dim": "NA",
+            "Device Id": "0",
+            "Pid": "32144",
+            "Current Freq": "1650",
+            "Rated Freq": "1650",
+            "": ""
+          }
+        ],
+        "PipeUtilization.csv": [
+          {
+            "block_id": "0",
+            "sub_block_id": "vector0",
+            "aic_time(us)": "NA",
+            "aic_total_cycles": "NA",
+            "aic_cube_time(us)": "NA",
+            "aic_cube_ratio": "NA",
+            "aic_mte1_time(us)": "NA",
+            "aic_mte1_ratio": "NA",
+            "aic_mte2_time(us)": "NA",
+            "aic_mte2_ratio": "NA",
+            "aic_mte3_time(us)": "NA",
+            "aic_mte3_ratio": "NA",
+            "aic_mte3_active_bw(GB/s)": "NA",
+            "aic_fixpipe_time(us)": "NA",
+            "aic_fixpipe_ratio": "NA",
+            "aic_fixpipe_active_bw(GB/s)": "NA",
+            "aic_icache_miss_rate": "NA",
+            "aic_scalar_time(us)": "NA",
+            "aic_scalar_ratio": "NA",
+            "aic_scalar_single_time(us)": "NA",
+            "aic_scalar_dual_time(us)": "NA",
+            "aic_scalar_mte1_stall_time(us)": "NA",
+            "aic_scalar_mte2_stall_time(us)": "NA",
+            "aic_scalar_mte3_stall_time(us)": "NA",
+            "aic_scalar_cube_stall_time(us)": "NA",
+            "aic_scalar_wait_ib_time(us)": "NA",
+            "aic_scalar_wait_time(us)": "NA",
+            "aiv_time(us)": "1.244848",
+            "aiv_total_cycles": "2054",
+            "aiv_vec_time(us)": "0.454545",
+            "aiv_vec_ratio": "0.365141",
+            "aiv_mte2_time(us)": "0.375758",
+            "aiv_mte2_ratio": "0.301850",
+            "aiv_mte2_active_bw(GB/s)": "1.903503",
+            "aiv_mte3_time(us)": "0.084242",
+            "aiv_mte3_ratio": "0.067673",
+            "aiv_mte3_active_bw(GB/s)": "1.415074",
+            "aiv_icache_miss_rate": "0.000000",
+            "aiv_scalar_time(us)": "0.564848",
+            "aiv_scalar_ratio": "0.453749",
+            "aiv_scalar_single_time(us)": "0.070303",
+            "aiv_scalar_dual_time(us)": "0.151515",
+            "aiv_scalar_mte2_stall_time(us)": "0.000000",
+            "aiv_scalar_mte3_stall_time(us)": "0.000000",
+            "aiv_scalar_stall_by_ub_time(us)": "0.000000",
+            "aiv_scalar_vector_stall_time(us)": "0.000000",
+            "aiv_scalar_wait_ib_time(us)": "0.112121",
+            "aiv_scalar_wait_time(us)": "0.000000",
+            "": ""
+          }
+        ]
+      }
+    }
+  ],
+  "点8限制": "两版仅独立短采样精度检查；此前存在未定位的间歇同步超时，本轮未做长性能对照。",
+  "压缩包SHA256": "199e3103e5010bb9e76f9a2240ae87aa94a53b0512969d6df528d5425bfb0c89"
+}
