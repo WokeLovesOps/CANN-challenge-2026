@@ -1,0 +1,78 @@
+[
+  {
+    "case": 0,
+    "label": "点1随机",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": false,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "error": "精度失败: actual=[-1.1496365], expected=[-0.85979325]",
+    "variant": "parallel4",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libparallel4.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "5e548b942b8b4f797f46824b20d19eac17fe53a94ef27fd0e36c4cb0f13a98d8",
+    "library_sha256": "e2c7087e0ad55043c48670e284f7d76834eeaa92963fcb125414b1962b3dd498",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.76,
+        "running_us": 0.76
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.89,
+        "running_us": 0.89
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 0.89,
+        "running_us": 0.89
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 0.89,
+        "running_us": 0.89
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4-case0/profile/OPPROF_20261010024233_JLEWBZFUDDHWUQMI/simulator/visualize_data.bin",
+        "size": 1166424,
+        "sha256": "68215e6cf4d2f2b4a722e53d7e28a5f33afe9f008fbb1b22c2ec971b986d12e9"
+      }
+    ]
+  }
+]
