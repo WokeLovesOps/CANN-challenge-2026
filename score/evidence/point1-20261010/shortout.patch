@@ -1,0 +1,11 @@
+--- baseline.asc
++++ shortout.asc
+@@ -174,7 +174,7 @@
+     WholeReduceSum(result, aFloat, static_cast<int32_t>(K), 1, 1, 1, 4);
+     SetFlag<HardEvent::V_MTE3>(EVENT_ID0);
+     WaitFlag<HardEvent::V_MTE3>(EVENT_ID0);
+-    DataCopyExtParams outputCopy{1, sizeof(float), 0, 0, 0};
++    DataCopyParams outputCopy{1, sizeof(float), 0, 0};
+     DataCopyPad(output, result, outputCopy);
+ }
+ 
