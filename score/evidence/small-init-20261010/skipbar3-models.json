@@ -1,0 +1,168 @@
+[
+  {
+    "case": 369,
+    "label": "小批量向量矩阵",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "ed064640600412e328793115cef35042733b75ae5fb7f3bbc52fe0d1a77b9b4b",
+      "65db762b76bef2245b7eada44ac3f4da10c26b2f457acae66e3358b1876cc02a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      26.504154205322266,
+      27.80176544189453
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.9073486328125e-06,
+    "second_input_sha256": "d9b98cdbe48eba54747e84da07a2938750f0bef590c68936f7c30b3093402c14",
+    "alternating_input": true,
+    "variant": "skipbar3",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case369/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/libskipbar3.so",
+      "--case=369",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case369/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "acae616bde66cb715c4c0e23419144ef82d85466cf02770e0b8a0b9c2aa70626",
+    "library_sha256": "2a4360caedbc9e08e5937124bffad6e04de745231eba8fadd4b510a173fbbd02",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.06
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.07
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case369/profile/OPPROF_20261010015927_HPPHAEBWZYSRBBFV/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1630736,
+        "sha256": "d8bbd45b3237eeaeebf11e66c9b8540fa7fe6eb454cba3bc89001e027ccb4ba0"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case369/profile/OPPROF_20261010015927_HPPHAEBWZYSRBBFV/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1619552,
+        "sha256": "38325aa6bcd5d2b27fb8bf4ea40d513b4b338625f4f09b74fc9a31dd802c7025"
+      }
+    ]
+  },
+  {
+    "case": 393,
+    "label": "小批量向量全负",
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "5ec9b0a8c6e3b91570e15a93b0bd8796b50876aa4e711fd3cf23e3c49ac8e14f",
+      "26f713a7c000ec74f04cee23ad41b37777bf8a0c951cec4beebb5a5abe13ec95"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -70.44444274902344,
+      -68.17902374267578
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "9315dac39124c48e941a675d72eb650c7acc429e2f68d8824f4af522cd05ec16",
+    "alternating_input": true,
+    "variant": "skipbar3",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case393/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/opt-20261005/small/screen_alternating.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/libskipbar3.so",
+      "--case=393",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case393/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "acae616bde66cb715c4c0e23419144ef82d85466cf02770e0b8a0b9c2aa70626",
+    "library_sha256": "2a4360caedbc9e08e5937124bffad6e04de745231eba8fadd4b510a173fbbd02",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.06
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.07,
+        "running_us": 1.07
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.88,
+        "running_us": 0.88
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case393/profile/OPPROF_20261010015932_XRAQQLHNFYCMAXBB/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+        "size": 1631492,
+        "sha256": "3bac18c29c2b866924edc2bbaeef8bd76b0f16b485796cd3eefad96378bae010"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/small-init-20261010/sim/skipbar3-case393/profile/OPPROF_20261010015932_XRAQQLHNFYCMAXBB/_ZN13batch_max_sum21ComputeSmallBatchDotsIDhLb0ELb1ELb1EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+        "size": 1619672,
+        "sha256": "ff3858095eeccbf06d1c8919b3c236144e315a60245e0cfa031455a0a7f6687e"
+      }
+    ]
+  }
+]
