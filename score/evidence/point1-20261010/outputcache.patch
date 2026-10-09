@@ -1,0 +1,10 @@
+--- baseline.asc
++++ outputcache.asc
+@@ -159,6 +159,7 @@
+     a.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x1));
+     b.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x2));
+     output.SetGlobalBuffer(reinterpret_cast<__gm__ float*>(y));
++    output.SetL2CacheHint(CacheMode::CACHE_MODE_DISABLE);
+     auto input = LocalTensor<T>(TPosition::VECCALC, inputBufferOffset, inputBufferBytes / sizeof(T));
+     auto aFloat = LocalTensor<float>(TPosition::VECCALC, convertedBufferOffset, convertedBufferBytes / sizeof(float));
+     auto bFloat = aFloat[K];
