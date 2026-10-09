@@ -1,0 +1,414 @@
+[
+  {
+    "case": 0,
+    "label": "点1随机",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "parallel4serial",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libparallel4serial.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "5fdb4466c6ff1c67f1f33b0a2687aa17b7b938a28b2915a10069333c17126657",
+    "library_sha256": "b1df8d03a56717378eebd7c9778f5e6c2b32f3f66835b3dadb75070e78df2c57",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.04,
+        "running_us": 1.03
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.05,
+        "running_us": 1.03
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.04,
+        "running_us": 1.03
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.17,
+        "running_us": 1.16
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 0.97,
+        "running_us": 0.96
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case0/profile/OPPROF_20261010024419_YANNJBWOVAITZMFI/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1215180,
+        "sha256": "6729ea8d3d76bd8d608fb737ec484109d53466ec0cb362583aa807691727ff23"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case0/profile/OPPROF_20261010024419_YANNJBWOVAITZMFI/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1196196,
+        "sha256": "1c1ce5b6f4ed4064bab13e0416e6f84d66b6ee15890fcd567e413f07a0a8f91a"
+      }
+    ]
+  },
+  {
+    "case": 8,
+    "label": "点1全负",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "691a25c84c250873d65f8833bdedcb3d88685bb2bcffa4a4b67ff7eb8c408076",
+      "70c0425a7899f95f4e3fdd1be4a42e4c97cede7cecbb29afd033fa37b7d8fb7f"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -6.986304759979248,
+      -6.986304759979248
+    ],
+    "available_cores": 20,
+    "max_abs_error": 4.76837158203125e-07,
+    "second_input_sha256": "cb557fb9dd15495d2fe97cfd9a4d919fa1a96302a29f0fd8a8bb1ba8a9a1ab6e",
+    "alternating_input": true,
+    "variant": "parallel4serial",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case8/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libparallel4serial.so",
+      "--case=8",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case8/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "5fdb4466c6ff1c67f1f33b0a2687aa17b7b938a28b2915a10069333c17126657",
+    "library_sha256": "b1df8d03a56717378eebd7c9778f5e6c2b32f3f66835b3dadb75070e78df2c57",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.04,
+        "running_us": 1.03
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.04,
+        "running_us": 1.03
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.04,
+        "running_us": 1.03
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.17,
+        "running_us": 1.16
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 0.97,
+        "running_us": 0.96
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case8/profile/OPPROF_20261010024423_WAAQINILBGAKSKOI/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1215180,
+        "sha256": "c092463d0b80c33ede996f7cdb7ea53b206e1845045f5224060b4803f34c8737"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case8/profile/OPPROF_20261010024423_WAAQINILBGAKSKOI/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1196172,
+        "sha256": "b5d04818180143eb9ac1a99a0f0a90d575ef36e07ede9e84b0bfd942a677e4cf"
+      }
+    ]
+  },
+  {
+    "case": 16,
+    "label": "点1全零",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+    ],
+    "input_pattern": "全零",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "8e34f641cdca82fc7f0537df067d08a5f4c6c183bda893f12caf0b321a15be90",
+    "alternating_input": true,
+    "variant": "parallel4serial",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case16/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libparallel4serial.so",
+      "--case=16",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case16/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "5fdb4466c6ff1c67f1f33b0a2687aa17b7b938a28b2915a10069333c17126657",
+    "library_sha256": "b1df8d03a56717378eebd7c9778f5e6c2b32f3f66835b3dadb75070e78df2c57",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.05,
+        "running_us": 1.03
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.05,
+        "running_us": 1.03
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.05,
+        "running_us": 1.03
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.17,
+        "running_us": 1.16
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 0.97,
+        "running_us": 0.96
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case16/profile/OPPROF_20261010024429_TOHGHLLGKIOAUOBU/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1215604,
+        "sha256": "5ef7abdb7f0cd02f77afd51e6795546fabb3f8cfeb851546bb130737f611fab5"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case16/profile/OPPROF_20261010024429_TOHGHLLGKIOAUOBU/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1196148,
+        "sha256": "5bcf11e29344cddf23d332a7b230ac3977b32cf1df1ed0cfb56b850aa4239d4d"
+      }
+    ]
+  },
+  {
+    "case": 24,
+    "label": "单点积正负抵消",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "cf291829a08fd433380a44efecde63fd60567375039ae9f57691587afbdef276",
+      "37ea9ac3386141dad07601138697e9dbd53d6e54f659b37dad09f4a1cbd6c96f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.5,
+      0.5
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cbf1ce96c3e1185c379e63ff49bfea2558ced0ac2c24b1dc9f1e37959ef13245",
+    "alternating_input": true,
+    "variant": "parallel4serial",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case24/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/libparallel4serial.so",
+      "--case=24",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case24/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "5fdb4466c6ff1c67f1f33b0a2687aa17b7b938a28b2915a10069333c17126657",
+    "library_sha256": "b1df8d03a56717378eebd7c9778f5e6c2b32f3f66835b3dadb75070e78df2c57",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.05,
+        "running_us": 1.03
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 1.05,
+        "running_us": 1.03
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 1.05,
+        "running_us": 1.03
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 1.17,
+        "running_us": 1.16
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core1.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core2.veccore0",
+        "duration_us": 0.85,
+        "running_us": 0.83
+      },
+      {
+        "core": "core3.veccore0",
+        "duration_us": 0.97,
+        "running_us": 0.96
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case24/profile/OPPROF_20261010024434_UIIPZNLSMMKXUQFM/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1215776,
+        "sha256": "8714b395de00d01f7bcd0ce27a7610e2b4fcf30f4d505691998f8eb71149ec44"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-20261010/sim/parallel4serial-case24/profile/OPPROF_20261010024434_UIIPZNLSMMKXUQFM/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1196020,
+        "sha256": "09f7a749f3fbcb98f56633daed66f30f847784578943b0e52738abc8aff15308"
+      }
+    ]
+  }
+]
