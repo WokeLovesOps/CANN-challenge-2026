@@ -1,0 +1,526 @@
+Browser tab: 1, Title: "CANNJudge", URL: "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ac902c4694b590c3cc6741a".
+0 AXWebArea CANNJudge, URL: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ac902c4694b590c3cc6741a
+	1 container
+		2 container app
+			3 container
+				4 link Description: CANNJudge, Value: cannjudge.cn/home
+				5 button 消息
+				6 image avatar
+				7 link Description: wanderer, Value: cannjudge.cn/me
+				8 link Description: 退出, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ac902c4694b590c3cc6741a#
+			9 container
+				10 link Description: 赛事, Value: cannjudge.cn/contests
+				11 text /
+				12 link Description: 2026年CANN挑战赛_上合赛区（初赛）, Value: cannjudge.cn/public/op_challenge_shanghe_prelim
+				13 text /
+				14 link Description: BatchMatmulMaxSum, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum
+				15 text / 提交记录
+				16 heading BatchMatmulMaxSum, Value: 2
+					17 link Description: BatchMatmulMaxSum, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum
+				18 button 下载工程
+				19 text 提交 ID：688879 提交人：wanderer 提交时间：2026/10/09 23:05:40
+				20 container submission-status-cell
+					49 text 提交状态：
+					50 button Runtime Error
+				22 container
+					23 button CMakeLists.txt
+					24 button data_utils.h
+					25 button kernel.asc
+					26 button main.asc
+					27 button run.sh
+					28 button scripts/BatchMatmulMaxSum.py
+					29 button scripts/gen_data.py
+					30 button scripts/verify_result.py
+				31 button 滚动到顶部
+				32 button 复制代码
+				33 text 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+				34 text cmake_minimum_required(VERSION 3.16)
+
+find_package(ASC REQUIRED)
+
+project(batch_matmul_max_sum_custom LANGUAGES ASC CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+if(DEFINED NPU_ARCH)
+    set(SOC_ARCH ${NPU_ARCH})
+else()
+    set(SOC_ARCH "dav-2201")
+endif()
+
+add_executable(batch_matmul_max_sum_custom main.asc)
+
+target_link_libraries(batch_matmul_max_sum_custom PRIVATE
+    tiling_api
+    register
+    platform
+    unified_dlog
+    dl
+    m
+    graph_base
+)
+
+target_include_directories(batch_matmul_max_sum_custom PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_compile_options(batch_matmul_max_sum_custom PRIVATE
+    $<$<COMPILE_LANGUAGE:ASC>:--npu-arch=${SOC_ARCH}>
+)
+
+				35 heading 执行结果, Value: 3
+					36 text 执行结果
+				37 table
+					38 row
+						39 cell
+							40 text 测试点
+						41 cell
+							42 text 结果
+						43 cell
+							44 text 输出错误占比
+						45 cell
+							46 text 用时
+						47 cell
+							48 text 最优用时
+					51 container submission-result-tbody
+						52 row
+							53 cell
+								54 text 1
+							55 cell
+								56 text Wrong Answer
+							57 cell
+								58 text 100.00%
+							59 cell
+								60 text 1.11μs
+							61 cell
+								62 text 1.20μs
+						63 row
+							64 cell
+								65 text 2
+							66 cell
+								67 text Wrong Answer
+							68 cell
+								69 text 100.00%
+							70 cell
+								71 text 0.65μs
+							72 cell
+								73 text 1.55μs
+						74 row
+							75 cell
+								76 text 3
+							77 cell
+								78 text Wrong Answer
+							79 cell
+								80 text 100.00%
+							81 cell
+								82 text 0.66μs
+							83 cell
+								84 text 2.22μs
+						85 row
+							86 cell
+								87 text 4
+							88 cell
+								89 button Runtime Error
+							90 cell
+								91 text 100.00%
+							92 cell
+								93 text -
+							94 cell
+								95 text 2.40μs
+						96 row
+							97 cell
+								98 text 5
+							99 cell
+								100 text Skipped
+							101 cell
+								102 text 100.00%
+							103 cell
+								104 text -
+							105 cell
+								106 text 3.57μs
+						107 row
+							108 cell
+								109 text 6
+							110 cell
+								111 text Skipped
+							112 cell
+								113 text 100.00%
+							114 cell
+								115 text -
+							116 cell
+								117 text 5.94μs
+						118 row
+							119 cell
+								120 text 7
+							121 cell
+								122 text Skipped
+							123 cell
+								124 text 100.00%
+							125 cell
+								126 text -
+							127 cell
+								128 text 6.38μs
+						129 row
+							130 cell
+								131 text 8
+							132 cell
+								133 text Skipped
+							134 cell
+								135 text 100.00%
+							136 cell
+								137 text -
+							138 cell
+								139 text 13.88μs
+						140 row
+							141 cell
+								142 text 9
+							143 cell
+								144 text Skipped
+							145 cell
+								146 text 100.00%
+							147 cell
+								148 text -
+							149 cell
+								150 text 48.48μs
+						151 row
+							152 cell
+								153 text 10
+							154 cell
+								155 text Skipped
+							156 cell
+								157 text 100.00%
+							158 cell
+								159 text -
+							160 cell
+								161 text 64.85μs
+						162 row
+							163 cell
+								164 text 11
+							165 cell
+								166 text Skipped
+							167 cell
+								168 text 100.00%
+							169 cell
+								170 text -
+							171 cell
+								172 text 68.51μs
+						173 row
+							174 cell
+								175 text 12
+							176 cell
+								177 text Skipped
+							178 cell
+								179 text 100.00%
+							180 cell
+								181 text -
+							182 cell
+								183 text 80.85μs
+						184 row
+							185 cell
+								186 text 13
+							187 cell
+								188 text Skipped
+							189 cell
+								190 text 100.00%
+							191 cell
+								192 text -
+							193 cell
+								194 text 7.28μs
+						195 row
+							196 cell
+								197 text 14
+							198 cell
+								199 text Skipped
+							200 cell
+								201 text 100.00%
+							202 cell
+								203 text -
+							204 cell
+								205 text 7.51μs
+						206 row
+							207 cell
+								208 text 15
+							209 cell
+								210 text Skipped
+							211 cell
+								212 text 100.00%
+							213 cell
+								214 text -
+							215 cell
+								216 text 8.18μs
+				217 text 通过：0 / 15
+				218 container 测试点 4：Runtime Error, ID: submission-status-msg-modal
+					219 heading 测试点 4：Runtime Error, Value: 4, ID: submission-status-msg-title
+						220 text 测试点 4：Runtime Error
+					221 button 关闭
+					222 text 2026-10-09 23:06:14 [INFO]  Op profiling analysis start.
+2026-10-09 23:06:14 [INFO]  Running device task: DeviceProf
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+[INFO] <ProfData> Start profiling on device 4, kernel: _Z19DiagnoseEmptyLaunchv
+[INFO] <WarmUp> Warm Up enabled. times:5
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Unknown diagnostic shape
+2026-10-09 23:06:16 [WARN]  Child process exited with status 134
+2026-10-09 23:06:18 [ERROR] Get profiling data failed.
+2026-10-09 23:06:18 [WARN]  Profiling running finished. May cause generating performance files to fail.
+2026-10-09 23:06:18 [WARN]  Running task failed, data parsing start
+2026-10-09 23:06:18 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 0
+2026-10-09 23:06:18 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 1.060021
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:18 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 1
+2026-10-09 23:06:18 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 1.120022
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:18 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 10
+2026-10-09 23:06:18 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.660013
+	Block Dim: 3
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:18 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 11
+2026-10-09 23:06:18 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.680014
+	Block Dim: 3
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:18 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 12
+2026-10-09 23:06:19 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.600012
+	Block Dim: 3
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:19 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 13
+2026-10-09 23:06:19 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.680014
+	Block Dim: 3
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:19 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 14
+2026-10-09 23:06:19 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.660013
+	Block Dim: 3
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:19 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 2
+2026-10-09 23:06:19 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 1.120022
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:19 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 3
+2026-10-09 23:06:19 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 1.160023
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:19 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 4
+2026-10-09 23:06:19 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 1.080022
+	Block Dim: 1
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:19 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 5
+2026-10-09 23:06:19 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.660013
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:19 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 6
+2026-10-09 23:06:20 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.640013
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:20 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 7
+2026-10-09 23:06:20 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.640013
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:20 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 8
+2026-10-09 23:06:20 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.660013
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:20 [INFO]  Start analyze kernel on device: device4, kernel: _Z19DiagnoseEmptyLaunchv, name is: 9
+2026-10-09 23:06:20 [INFO]  Operator Basic Information:
+
+	Op Name: DiagnoseEmptyLaunch
+	Op Type: vector
+	Task Duration(us): 0.660013
+	Block Dim: 2
+	Mix Block Dim: 
+	Device Id: 4
+	Pid: 3415985
+	Current Freq: 1650
+	Rated Freq: 1650
+
+2026-10-09 23:06:20 [INFO]  Profiling results saved in /<path>/OPPROF_20261009230614_EDIKIDEOEFIKOYJV
+2026-10-09 23:06:20 [INFO]  Profiling data parse finished.
+2026-10-09 23:06:20 [INFO]  Op profiling finish. Welcome to next use.
+
+The focused UI element is 221 button 关闭

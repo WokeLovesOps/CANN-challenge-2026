@@ -109,5 +109,23 @@
     ]
   ],
   "diagnostic": true,
-  "expected": "Wrong Answer"
+  "expected": "Wrong Answer",
+  "shape_matching": "复用845af05成功诊断的范围匹配，历史精确形状仅供参考",
+  "conditions": [
+    "batch == 1 && m == 1 && n == 1 && k == 32",
+    "batch == 1 && k <= SMALL_VECTOR_K_LIMIT && m * n <= SMALL_VECTOR_OUTPUT_LIMIT",
+    "batch >= 2 && batch <= SMALL_BATCH_LIMIT && m <= SMALL_BATCH_M_LIMIT && n <= SMALL_BATCH_N_LIMIT && k <= SMALL_VECTOR_K_LIMIT",
+    "batch >= 2 && batch <= 4 && m <= 16 && n <= 16 && k <= 128",
+    "batch >= 5 && batch <= 8 && m <= 16 && n <= 32 && k == 128",
+    "batch == 13",
+    "batch == 16",
+    "m == 1025 && n == 1031",
+    "m == 2048 && n == 1536",
+    "m == 4096 && n == 1280",
+    "m == 1536 && n == 2048",
+    "m == 1280 && n == 4096",
+    "m == 8192 && n == 64",
+    "m == 64 && n == 8192",
+    "m == 64 && n == 64 && k == 8192"
+  ]
 }
