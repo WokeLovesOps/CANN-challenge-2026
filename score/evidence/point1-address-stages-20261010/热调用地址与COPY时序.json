@@ -1,0 +1,197 @@
+[
+  {
+    "stage": 1,
+    "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1-指针校验/profile/OPPROF_20261010160319_ZSBIEYOZTBISMYQE/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core0.veccore0/trace.json",
+    "displayTimeUnit": "ns",
+    "interpretation": "ts/dur按微秒解释，与CSV running_time(us)和模型总时长交叉核对；不照displayTimeUnit将0.201解释为ns",
+    "events": [
+      {
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage1.asc:142",
+          "detail": "dtype:B64,XD:X1=0,XN:X0=0x1022fe00,IMM:0,",
+          "pc_addr": "0x11368df8"
+        },
+        "cname": "startup",
+        "dur": 0.20200000703334808,
+        "name": "LD_XD_XN_IMM",
+        "ph": "X",
+        "pid": 20,
+        "tid": 3,
+        "ts": 12.345999717712402
+      },
+      {
+        "args": {
+          "code": "",
+          "detail": "dtype:B64,XD:X0=0,XN:X0=0x1022fe00,IMM:0x8,",
+          "pc_addr": "0x11368e00"
+        },
+        "cname": "startup",
+        "dur": 0.003000000026077032,
+        "name": "LD_XD_XN_IMM",
+        "ph": "X",
+        "pid": 20,
+        "tid": 1,
+        "ts": 12.548999786376953
+      },
+      {
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_reg.h:112\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:107\n/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage1.asc:151",
+          "detail": "PIPE:ALL",
+          "pc_addr": "0x11368e08"
+        },
+        "cname": "good",
+        "dur": 0.0010000000474974513,
+        "name": "BAR",
+        "ph": "X",
+        "pid": 100,
+        "tid": 1,
+        "ts": 12.553000450134277
+      }
+    ]
+  },
+  {
+    "stage": 2,
+    "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage2-指针校验/profile/OPPROF_20261010160429_FCRSTBWOESRIPXGN/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core0.veccore0/trace.json",
+    "displayTimeUnit": "ns",
+    "interpretation": "ts/dur按微秒解释，与CSV running_time(us)和模型总时长交叉核对；不照displayTimeUnit将0.201解释为ns",
+    "events": [
+      {
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage2.asc:142",
+          "detail": "dtype:B64,XD:X0=0,XN:X1=0x1022fe00,IMM:0,",
+          "pc_addr": "0x11368df8"
+        },
+        "cname": "startup",
+        "dur": 0.20100000500679016,
+        "name": "LD_XD_XN_IMM",
+        "ph": "X",
+        "pid": 20,
+        "tid": 3,
+        "ts": 14.279000282287598
+      },
+      {
+        "args": {
+          "code": "",
+          "detail": "dtype:B64,XD:X1=0,XN:X1=0x1022fe00,IMM:0x8,",
+          "pc_addr": "0x11368e00"
+        },
+        "cname": "startup",
+        "dur": 0.003000000026077032,
+        "name": "LD_XD_XN_IMM",
+        "ph": "X",
+        "pid": 20,
+        "tid": 1,
+        "ts": 14.480999946594238
+      },
+      {
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:485\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1399\n/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage2.asc:155",
+          "detail": "Src:OUT,Dst:UB,XD:X2=0,XN:X0=0x11315800,XM:X1=0x400010,XT:X2=0,Dtype:B16,id:2",
+          "pc_addr": "0x11368e14",
+          "process_bytes": "64"
+        },
+        "cname": "thread_state_iowait",
+        "dur": 0.15399999916553497,
+        "name": "MOV_SRC_TO_DST_ALIGN",
+        "ph": "X",
+        "pid": 60,
+        "tid": 1,
+        "ts": 14.486000061035156
+      },
+      {
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_reg.h:112\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:107\n/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage2.asc:157",
+          "detail": "PIPE:ALL",
+          "pc_addr": "0x11368e18"
+        },
+        "cname": "good",
+        "dur": 0.0010000000474974513,
+        "name": "BAR",
+        "ph": "X",
+        "pid": 100,
+        "tid": 1,
+        "ts": 14.640999794006348
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage3-指针校验/profile/OPPROF_20261010160435_CKMUPAVQNIDIOJWQ/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core0.veccore0/trace.json",
+    "displayTimeUnit": "ns",
+    "interpretation": "ts/dur按微秒解释，与CSV running_time(us)和模型总时长交叉核对；不照displayTimeUnit将0.201解释为ns",
+    "events": [
+      {
+        "args": {
+          "code": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage3.asc:142",
+          "detail": "dtype:B64,XD:X0=0,XN:X1=0x1022fe00,IMM:0,",
+          "pc_addr": "0x11368df8"
+        },
+        "cname": "startup",
+        "dur": 0.20100000500679016,
+        "name": "LD_XD_XN_IMM",
+        "ph": "X",
+        "pid": 20,
+        "tid": 3,
+        "ts": 13.095000267028809
+      },
+      {
+        "args": {
+          "code": "",
+          "detail": "dtype:B64,XD:X1=0,XN:X1=0x1022fe00,IMM:0x8,",
+          "pc_addr": "0x11368e00"
+        },
+        "cname": "startup",
+        "dur": 0.003000000026077032,
+        "name": "LD_XD_XN_IMM",
+        "ph": "X",
+        "pid": 20,
+        "tid": 1,
+        "ts": 13.29699993133545
+      },
+      {
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:485\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1399\n/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage3.asc:155",
+          "detail": "Src:OUT,Dst:UB,XD:X3=0,XN:X0=0x11315800,XM:X2=0x400010,XT:X3=0,Dtype:B16,id:3",
+          "pc_addr": "0x11368e18",
+          "process_bytes": "64"
+        },
+        "cname": "thread_state_iowait",
+        "dur": 0.15399999916553497,
+        "name": "MOV_SRC_TO_DST_ALIGN",
+        "ph": "X",
+        "pid": 60,
+        "tid": 1,
+        "ts": 13.303000450134277
+      },
+      {
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:485\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:1399\n/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage3.asc:158",
+          "detail": "Src:OUT,Dst:UB,XD:X4=0x40,XN:X1=0x11315a00,XM:X2=0x400010,XT:X3=0,Dtype:B16,id:4",
+          "pc_addr": "0x11368e1c",
+          "process_bytes": "64"
+        },
+        "cname": "thread_state_iowait",
+        "dur": 0.1550000011920929,
+        "name": "MOV_SRC_TO_DST_ALIGN",
+        "ph": "X",
+        "pid": 60,
+        "tid": 2,
+        "ts": 13.303000450134277
+      },
+      {
+        "args": {
+          "code": "/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/asc/impl/basic_api/kernel_reg.h:112\n/mnt/newdisk/Ascend/cann-9.0.0/x86_64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:107\n/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage3.asc:160",
+          "detail": "PIPE:ALL",
+          "pc_addr": "0x11368e20"
+        },
+        "cname": "good",
+        "dur": 0.0010000000474974513,
+        "name": "BAR",
+        "ph": "X",
+        "pid": 100,
+        "tid": 1,
+        "ts": 13.458000183105469
+      }
+    ]
+  }
+]
