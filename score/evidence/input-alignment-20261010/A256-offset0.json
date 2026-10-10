@@ -1,0 +1,84 @@
+{
+  "case": 0,
+  "label": "点1随机",
+  "shape": [
+    1,
+    1,
+    1,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+    "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.8597932457923889,
+    -0.8597932457923889
+  ],
+  "available_cores": 20,
+  "tensor": "A",
+  "alignment": 256,
+  "offset": 0,
+  "actual_addresses": [
+    "0x11315800",
+    "0x11315c00"
+  ],
+  "expected_aligned": true,
+  "numerical_correctness_checked": true,
+  "max_abs_error": 5.960464477539063e-08,
+  "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+  "alternating_input": true,
+  "variant": "A256",
+  "command": [
+    "msprof",
+    "op",
+    "simulator",
+    "--soc-version=Ascend910B3",
+    "--launch-count=2",
+    "--timeout=2",
+    "--output=/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile",
+    "python3",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/对齐验证入口.py",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/libA256.so",
+    "--case=0",
+    "--report=/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/检查.json",
+    "--tensor=A",
+    "--alignment=256",
+    "--offset=0",
+    "--batch=1"
+  ],
+  "exit_code": 0,
+  "source_sha256": "9b5518b904c8559a5688dba7d9bc7013817d62dd078f61abc4556db0aef7ec07",
+  "library_sha256": "8c58925ee2d7066e9c54872fbd9e24cd72afbc9aa216ca028f7db42326ea849e",
+  "bins": [
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+      "sha256": "50954cad3d1dc381a56a30ff25595a6d5235f1d2061aea7ea2c6dfc85049b3e8",
+      "size": 992344
+    },
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+      "sha256": "631fd12bb2ebf044694d2f3c334085b492c78825e0c4ac4f3fb6fb825f62d1e7",
+      "size": 985108
+    }
+  ],
+  "csvs": [
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/core2.veccore0/core2.veccore0_instr_exe_20261010174927918.csv",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/core3.veccore0/core3.veccore0_instr_exe_20261010174927918.csv",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/core0.veccore0/core0.veccore0_instr_exe_20261010174927918.csv",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/core1.veccore0/core1.veccore0_instr_exe_20261010174927917.csv",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core2.veccore0/core2.veccore0_instr_exe_20261010174928287.csv",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core3.veccore0/core3.veccore0_instr_exe_20261010174928287.csv",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core0.veccore0/core0.veccore0_instr_exe_20261010174928287.csv",
+    "/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/sim/A256-offset0/profile/OPPROF_20261010174926_QRWOKPHQRPPPOTRT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core1.veccore0/core1.veccore0_instr_exe_20261010174928287.csv"
+  ]
+}
