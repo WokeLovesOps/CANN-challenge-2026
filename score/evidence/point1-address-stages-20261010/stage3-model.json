@@ -368,5 +368,43 @@
       "duration_us": 0.37,
       "running_us": 0.37
     }
+  ],
+  "instruction_counts": [
+    {
+      "BAR": 1,
+      "MOV_SRC_TO_DST_ALIGN": 2,
+      "LD_XD_XN_IMM": 2,
+      "MOVEMASK": 2,
+      "DCCI": 1,
+      "MADD": 1,
+      "MOVK": 2,
+      "MOV_XD_IMM": 8,
+      "MOV_XD_SPR": 3,
+      "ADD_IMM": 1,
+      "NEG": 1,
+      "AND": 1,
+      "ADD": 1,
+      "JUMPCMP": 2,
+      "NOP": 1,
+      "END": 1
+    },
+    {
+      "LD_XD_XN_IMM": 2,
+      "BAR": 1,
+      "MOV_SRC_TO_DST_ALIGN": 2,
+      "MOVEMASK": 2,
+      "DCCI": 1,
+      "MADD": 1,
+      "MOVK": 2,
+      "MOV_XD_IMM": 8,
+      "MOV_XD_SPR": 3,
+      "ADD_IMM": 1,
+      "NEG": 1,
+      "AND": 1,
+      "ADD": 1,
+      "JUMPCMP": 2,
+      "NOP": 1,
+      "END": 1
+    }
   ]
 }
