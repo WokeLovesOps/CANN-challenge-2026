@@ -70,5 +70,29 @@
       "-lgraph_base"
     ],
     "library_sha256": "940ce7d9e76b6db27615cf8f034c37a1a6174cd90d39d73038f4a638902b1a2a"
+  },
+  {
+    "stage": 3,
+    "seconds": 39.77994411700638,
+    "exit_code": 0,
+    "source_sha256": "7555e9cff7d5258cc6a2e96b94313adc87d4c77b165cb021fa5499d6790f8c11",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage3-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/libstage3.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "f894fb056afa73d042c387491680155778fc6b299831cac050b9eb4c0155133a"
   }
 ]
