@@ -1,0 +1,50 @@
+[
+  {
+    "cores": "control64",
+    "seconds": 36.01356022100663,
+    "exit_code": 0,
+    "source_sha256": "e421bf19ccadffcb83628af4bc90061810b61a9b190c345d6484c29bc771a6e0",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-copy128-20261010/control64-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-copy128-20261010/libcontrol64.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "b817c9df2148bbb9b49c0bcc071188424d66841cedbe8a6df44070b2e42f20c9"
+  },
+  {
+    "cores": "wide128",
+    "seconds": 34.95036387600703,
+    "exit_code": 0,
+    "source_sha256": "7f453d3d1bda4af705ff346b36fa65b361de3df4e3ffdf9e60bc56ef5a0333fe",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-copy128-20261010/wide128-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-copy128-20261010/libwide128.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "c3d0bb788defaa9acdebaf2ce01b23d1802863d9964dca4af2d28e795c1dc0fc"
+  }
+]

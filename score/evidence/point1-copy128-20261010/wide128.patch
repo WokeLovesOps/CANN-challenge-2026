@@ -1,0 +1,47 @@
+--- 正式四核.asc
++++ wide128.asc
+@@ -152,7 +152,9 @@
+     SetMaskNorm();
+     ResetMask();
+     constexpr uint32_t inputBufferOffset = 0;
+-    constexpr uint32_t inputBufferBytes = 2 * K * sizeof(T);
++    // A/B各留128B槽，只转换各槽前64B。
++    constexpr uint32_t inputStride = 2 * K;
++    constexpr uint32_t inputBufferBytes = 2 * inputStride * sizeof(T);
+     constexpr uint32_t convertedBufferOffset = (inputBufferOffset + inputBufferBytes + 31) / 32 * 32;
+     constexpr uint32_t convertedBufferBytes = 2 * K * sizeof(float);
+     constexpr uint32_t outputBufferOffset = (convertedBufferOffset + convertedBufferBytes + 31) / 32 * 32;
+@@ -167,26 +169,16 @@
+     auto aFloat = LocalTensor<float>(TPosition::VECCALC, convertedBufferOffset, convertedBufferBytes / sizeof(float));
+     auto bFloat = aFloat[K];
+     auto result = LocalTensor<float>(TPosition::VECCALC, outputBufferOffset, outputBufferBytes / sizeof(float));
+-    DataCopyExtParams inputCopy{1, K * sizeof(T), 0, 0, 0};
++    DataCopyExtParams inputCopy{1, 128, 0, 0, 0};
+     DataCopyPadExtParams<T> noPadding{false, 0, 0, 0};
+-    // 仅在两个完整输入区间紧邻时合并搬运，不读取间隙或扩大输入范围。
+-    const uintptr_t aAddress = reinterpret_cast<uintptr_t>(x1);
+-    const uintptr_t bAddress = reinterpret_cast<uintptr_t>(x2);
+-    constexpr uint32_t bytesPerInput = K * sizeof(T);
+-    if (bAddress == aAddress + bytesPerInput) {
+-        DataCopyExtParams contiguousCopy{1, 2 * bytesPerInput, 0, 0, 0};
+-        DataCopyPad(input, a, contiguousCopy, noPadding);
+-    } else if (aAddress == bAddress + bytesPerInput) {
+-        // 点1为单点积，交换两个乘数不改变FP32乘法与归约语义。
+-        DataCopyExtParams contiguousCopy{1, 2 * bytesPerInput, 0, 0, 0};
+-        DataCopyPad(input, b, contiguousCopy, noPadding);
+-    } else {
+-        DataCopyPad(input, a, inputCopy, noPadding);
+-        DataCopyPad(input[K], b, inputCopy, noPadding);
+-    }
++    DataCopyPad(input, a, inputCopy, noPadding);
++    DataCopyPad(input[inputStride], b, inputCopy, noPadding);
+     SetFlag<HardEvent::MTE2_V>(EVENT_ID0);
+     WaitFlag<HardEvent::MTE2_V>(EVENT_ID0);
+-    Cast(aFloat, input, RoundMode::CAST_NONE, 2 * K);
++    // 每槽只Cast32个half，跳过额外读入的后64B，不参与数学计算。
++    UnaryRepeatParams castRepeats{1, 1, 4, 4};
++    Cast(aFloat, input, RoundMode::CAST_NONE, static_cast<uint64_t>(K),
++        static_cast<uint8_t>(2), castRepeats);
+     PipeBarrier<PIPE_V>();
+     Mul(aFloat, aFloat, bFloat, K);
+     PipeBarrier<PIPE_V>();
