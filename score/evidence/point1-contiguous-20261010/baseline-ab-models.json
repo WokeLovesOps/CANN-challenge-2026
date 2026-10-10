@@ -1,0 +1,82 @@
+[
+  {
+    "case": 0,
+    "label": "点1随机",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "allocation": "ab",
+    "input_addresses": [
+      288446464,
+      288446528
+    ],
+    "address_delta_bytes": 64,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "baseline",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/baseline-ab-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/screen.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/libbaseline.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/baseline-ab-case0/correctness.json",
+      "--allocation=ab"
+    ],
+    "exit_code": 0,
+    "source_sha256": "7241d9f8cde03087d42d2ad3bcd215bd122ed3885bd9e37084651b17cc5687c5",
+    "library_sha256": "d518c7ff441c1c9c9cac329c87e9c65c64d64fb4d14232013702575a0e72f865",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/baseline-ab-case0/profile/OPPROF_20261010142725_QGNTZYJGEHTPBJGC/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 899132,
+        "sha256": "238cc9d2344b1c83d2d20c918d2bb455a23877259b5d9beef54e0c035b1affd4"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/baseline-ab-case0/profile/OPPROF_20261010142725_QGNTZYJGEHTPBJGC/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 897312,
+        "sha256": "632048a88c60183b02ed5d5c2a60a872b7077d1ed3921d938f504971969a871a"
+      }
+    ]
+  }
+]

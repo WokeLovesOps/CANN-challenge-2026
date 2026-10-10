@@ -1,0 +1,482 @@
+[
+  {
+    "case": 0,
+    "label": "点1随机",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "allocation": "separate",
+    "input_addresses": [
+      288446464,
+      288446976
+    ],
+    "address_delta_bytes": 512,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "contiguous",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/screen.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/libcontiguous.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case0/correctness.json",
+      "--allocation=separate"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+    "library_sha256": "ac5e0d390e8a1821f08be47c22e6bc85bd4e3896091c13f8ef239175cbe376e2",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.55
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case0/profile/OPPROF_20261010142459_QGOZEMTETGBWJKWE/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 921104,
+        "sha256": "a303bfbbe59617bda4d8f85f777cb37c1efd4a8c9a3f82672f68ed5ed14c54c0"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case0/profile/OPPROF_20261010142459_QGOZEMTETGBWJKWE/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 919272,
+        "sha256": "3c542356a0f68511353f3d9574aca678d9c15e89f71553cfb2f01022c7852392"
+      }
+    ]
+  },
+  {
+    "case": 8,
+    "label": "点1全负",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "691a25c84c250873d65f8833bdedcb3d88685bb2bcffa4a4b67ff7eb8c408076",
+      "70c0425a7899f95f4e3fdd1be4a42e4c97cede7cecbb29afd033fa37b7d8fb7f"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -6.986304759979248,
+      -6.986304759979248
+    ],
+    "available_cores": 20,
+    "allocation": "separate",
+    "input_addresses": [
+      288446464,
+      288446976
+    ],
+    "address_delta_bytes": 512,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cb557fb9dd15495d2fe97cfd9a4d919fa1a96302a29f0fd8a8bb1ba8a9a1ab6e",
+    "alternating_input": true,
+    "variant": "contiguous",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case8/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/screen.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/libcontiguous.so",
+      "--case=8",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case8/correctness.json",
+      "--allocation=separate"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+    "library_sha256": "ac5e0d390e8a1821f08be47c22e6bc85bd4e3896091c13f8ef239175cbe376e2",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.55
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case8/profile/OPPROF_20261010142505_BKXXZUUUGZOKOTEC/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 921056,
+        "sha256": "6278c9c8d3d9d55a7c9f90b91b72883f4ac871ea52ee6bce19f5543cb8ef34c4"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case8/profile/OPPROF_20261010142505_BKXXZUUUGZOKOTEC/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 919256,
+        "sha256": "0940fc5fdd3016d90886b8359a90755669c87385c2d427937083c32c6a578b1a"
+      }
+    ]
+  },
+  {
+    "case": 16,
+    "label": "点1全零",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+    ],
+    "input_pattern": "全零",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "allocation": "separate",
+    "input_addresses": [
+      288446464,
+      288446976
+    ],
+    "address_delta_bytes": 512,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "8e34f641cdca82fc7f0537df067d08a5f4c6c183bda893f12caf0b321a15be90",
+    "alternating_input": true,
+    "variant": "contiguous",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case16/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/screen.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/libcontiguous.so",
+      "--case=16",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case16/correctness.json",
+      "--allocation=separate"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+    "library_sha256": "ac5e0d390e8a1821f08be47c22e6bc85bd4e3896091c13f8ef239175cbe376e2",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.55
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case16/profile/OPPROF_20261010142510_ZJUMNREHKYPTYUAU/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 921124,
+        "sha256": "df54cea7c415db5c5db823409562406323e065909637f4059e2fe6aa4a2c7556"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case16/profile/OPPROF_20261010142510_ZJUMNREHKYPTYUAU/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 919272,
+        "sha256": "c128eceb2dc5039b12fd5c94da41abed29ed5415096a032b87c0567bef51c50b"
+      }
+    ]
+  },
+  {
+    "case": 24,
+    "label": "单点积正负抵消",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "cf291829a08fd433380a44efecde63fd60567375039ae9f57691587afbdef276",
+      "37ea9ac3386141dad07601138697e9dbd53d6e54f659b37dad09f4a1cbd6c96f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.5,
+      0.5
+    ],
+    "available_cores": 20,
+    "allocation": "separate",
+    "input_addresses": [
+      288446464,
+      288446976
+    ],
+    "address_delta_bytes": 512,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cbf1ce96c3e1185c379e63ff49bfea2558ced0ac2c24b1dc9f1e37959ef13245",
+    "alternating_input": true,
+    "variant": "contiguous",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case24/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/screen.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/libcontiguous.so",
+      "--case=24",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case24/correctness.json",
+      "--allocation=separate"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+    "library_sha256": "ac5e0d390e8a1821f08be47c22e6bc85bd4e3896091c13f8ef239175cbe376e2",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.55
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case24/profile/OPPROF_20261010142515_LJDKULODGEQXZEGV/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 921036,
+        "sha256": "12df1669d7439e73b199e15d33628e9bd31742e63361b0ad5a4a0bccde3ce0a9"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case24/profile/OPPROF_20261010142515_LJDKULODGEQXZEGV/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 919268,
+        "sha256": "1800bbdc84c0e4003ce17fdbb37fe238b5cf8200e74fa7c0b25bf1e371a11969"
+      }
+    ]
+  },
+  {
+    "case": 32,
+    "label": "FP16极值抵消",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9a8fbb567b529a48d9d896a262866fb90cad2694e8f3fa7e405a674eab9d5cb1",
+      "26ecd3f7eba706f0a4cfc55bafeab18f989a5c4248335db4a77dc68195c37357"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "allocation": "separate",
+    "input_addresses": [
+      288446464,
+      288446976
+    ],
+    "address_delta_bytes": 512,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "a66142ce8774e45943013594f81dc87b7f2ac3405786fc96b89122546f4f53d7",
+    "alternating_input": true,
+    "variant": "contiguous",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case32/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/screen.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/libcontiguous.so",
+      "--case=32",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case32/correctness.json",
+      "--allocation=separate"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+    "library_sha256": "ac5e0d390e8a1821f08be47c22e6bc85bd4e3896091c13f8ef239175cbe376e2",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.55
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case32/profile/OPPROF_20261010142520_MUJXHEEDHYMVVGLT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 921132,
+        "sha256": "90d99f148f5b9f40c4f7ed8430279d11478f34f338df49c334ce5e1951845e89"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case32/profile/OPPROF_20261010142520_MUJXHEEDHYMVVGLT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 919288,
+        "sha256": "127601b0701cd838c38af9b6492540a1803c240cef69d7cabd2056beb9a63dbc"
+      }
+    ]
+  },
+  {
+    "case": 40,
+    "label": "FP16次正规数",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "19b8dfd04bee4f9091e6ac9c68ef7f06911a42e057a9d7377f0d8daad7e449c6",
+      "cf291829a08fd433380a44efecde63fd60567375039ae9f57691587afbdef276"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      1.9073486328125e-06,
+      1.9073486328125e-06
+    ],
+    "available_cores": 20,
+    "allocation": "separate",
+    "input_addresses": [
+      288446464,
+      288446976
+    ],
+    "address_delta_bytes": 512,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "1e881f3f75889f2766b7eff70e333148dd38e8c1abd9e378f1b1f6fd01eed081",
+    "alternating_input": true,
+    "variant": "contiguous",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case40/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/screen.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/libcontiguous.so",
+      "--case=40",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case40/correctness.json",
+      "--allocation=separate"
+    ],
+    "exit_code": 0,
+    "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+    "library_sha256": "ac5e0d390e8a1821f08be47c22e6bc85bd4e3896091c13f8ef239175cbe376e2",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.55
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case40/profile/OPPROF_20261010142526_WLWRJVNZBRLBNVKA/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 921128,
+        "sha256": "e76148c38a46d91a6af253c382ce5d853d92b3b28898fc5349f268ef05b2ec53"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-contiguous-20261010/sim/separate-case40/profile/OPPROF_20261010142526_WLWRJVNZBRLBNVKA/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 919260,
+        "sha256": "5f728ee828cdf309d90dc5aabcb2a7608979aff6cc2d8d5e2b377d811e17eb12"
+      }
+    ]
+  }
+]
