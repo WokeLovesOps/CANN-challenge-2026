@@ -1,0 +1,69 @@
+--- 正式基线.asc
++++ core6.asc
+@@ -142,55 +142,8 @@
+ {
+     KERNEL_TASK_TYPE_DEFAULT(KERNEL_TYPE_AIV_ONLY);
+     using namespace AscendC;
+-    constexpr uint32_t K = 32;
+-    // 单任务固定UB布局，保留必要硬件状态设置，省去TPipe资源登记。
+-    SetAtomicNone();
+-    SetMaskNorm();
+-    ResetMask();
+-    constexpr uint32_t inputBufferOffset = 0;
+-    constexpr uint32_t inputBufferBytes = 2 * K * sizeof(T);
+-    constexpr uint32_t convertedBufferOffset = (inputBufferOffset + inputBufferBytes + 31) / 32 * 32;
+-    constexpr uint32_t convertedBufferBytes = 2 * K * sizeof(float);
+-    constexpr uint32_t outputBufferOffset = (convertedBufferOffset + convertedBufferBytes + 31) / 32 * 32;
+-    constexpr uint32_t outputBufferBytes = 32;
+-    GlobalTensor<T> a;
+-    GlobalTensor<T> b;
+-    GlobalTensor<float> output;
+-    a.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x1));
+-    b.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x2));
+-    output.SetGlobalBuffer(reinterpret_cast<__gm__ float*>(y));
+-    auto input = LocalTensor<T>(TPosition::VECCALC, inputBufferOffset, inputBufferBytes / sizeof(T));
+-    auto aFloat = LocalTensor<float>(TPosition::VECCALC, convertedBufferOffset, convertedBufferBytes / sizeof(float));
+-    auto bFloat = aFloat[K];
+-    auto result = LocalTensor<float>(TPosition::VECCALC, outputBufferOffset, outputBufferBytes / sizeof(float));
+-    DataCopyExtParams inputCopy{1, K * sizeof(T), 0, 0, 0};
+-    DataCopyPadExtParams<T> noPadding{false, 0, 0, 0};
+-    // 仅在两个完整输入区间紧邻时合并搬运，不读取间隙或扩大输入范围。
+-    const uintptr_t aAddress = reinterpret_cast<uintptr_t>(x1);
+-    const uintptr_t bAddress = reinterpret_cast<uintptr_t>(x2);
+-    constexpr uint32_t bytesPerInput = K * sizeof(T);
+-    if (bAddress == aAddress + bytesPerInput) {
+-        DataCopyExtParams contiguousCopy{1, 2 * bytesPerInput, 0, 0, 0};
+-        DataCopyPad(input, a, contiguousCopy, noPadding);
+-    } else if (aAddress == bAddress + bytesPerInput) {
+-        // 点1为单点积，交换两个乘数不改变FP32乘法与归约语义。
+-        DataCopyExtParams contiguousCopy{1, 2 * bytesPerInput, 0, 0, 0};
+-        DataCopyPad(input, b, contiguousCopy, noPadding);
+-    } else {
+-        DataCopyPad(input, a, inputCopy, noPadding);
+-        DataCopyPad(input[K], b, inputCopy, noPadding);
+-    }
+-    SetFlag<HardEvent::MTE2_V>(EVENT_ID0);
+-    WaitFlag<HardEvent::MTE2_V>(EVENT_ID0);
+-    Cast(aFloat, input, RoundMode::CAST_NONE, 2 * K);
+-    PipeBarrier<PIPE_V>();
+-    Mul(aFloat, aFloat, bFloat, K);
+-    PipeBarrier<PIPE_V>();
+-    WholeReduceSum(result, aFloat, static_cast<int32_t>(K), 1, 1, 1, 4);
+-    SetFlag<HardEvent::V_MTE3>(EVENT_ID0);
+-    WaitFlag<HardEvent::V_MTE3>(EVENT_ID0);
+-    DataCopyExtParams outputCopy{1, sizeof(float), 0, 0, 0};
+-    DataCopyPad(output, result, outputCopy);
++    // 四个版本使用同一结束屏障，确保已发出的搬运完成。
++    PipeBarrier<PIPE_ALL>();
+ }
+ 
+ // 点6精确形状：手动GM->L1->L0->FP32 MMAD->GM，随后同一个混合核完成Vector归约。
+@@ -3993,7 +3946,7 @@
+         }
+ #else
+         if (m == 1 && n == 1 && k == 32 && a.dtype == 1) {
+-            ComputeDot32<half><<<1, nullptr, stream>>>(x1, x2, y);
++            ComputeDot32<half><<<6, nullptr, stream>>>(x1, x2, y);
+         } else if (a.dtype == 2 && transposeX1 && !transposeX2) {
+             if (batch == 1 && m == 3 && n == 5 && k == 40) {
+                 ComputePackedDotsFixed<bfloat16_t, true, false><<<1, nullptr, stream>>>(
