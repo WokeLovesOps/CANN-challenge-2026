@@ -1,0 +1,98 @@
+[
+  {
+    "cores": 3,
+    "seconds": 35.05129896005383,
+    "exit_code": 0,
+    "source_sha256": "6ff76ae2f25d9a4a84422d5f1e7901120a91f5f98bb45330592c4c1f00c55e36",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/core3-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/libcore3.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "ec712fd7143cbaec6556635f9b859a16ce0fb31ce447906e1c4ed005d07b9a17"
+  },
+  {
+    "cores": 5,
+    "seconds": 33.243644047004636,
+    "exit_code": 0,
+    "source_sha256": "adc7377d0a1c7882f441ca8df4d15d24d8a1b2d2f05d919636bd70ae48db7e25",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/core5-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/libcore5.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "b09cade34f6009f0b7c79123f9673e640808c85a578c4a881ac175bbab74d12d"
+  },
+  {
+    "cores": 6,
+    "seconds": 33.07621135096997,
+    "exit_code": 0,
+    "source_sha256": "3ce95f6deb69c0bcdb36de31b1260ac233d3b397dd9ede448653f60a359e4535",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/core6-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/libcore6.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "fdb36acc781864805453ccfcd0dd25bc70591fbbf7b1b8c6acb1923b47bdd5db"
+  },
+  {
+    "cores": 7,
+    "seconds": 32.85005487699527,
+    "exit_code": 0,
+    "source_sha256": "2c11f2f97c8cc3f24e9eb89845cbfb7a0d914da275da5917012ec93bd5a11afd",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/core7-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/libcore7.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "80b8c301f77ab8199d0ea2f4ee714966402bf118b71ec7aa5c5f322cfffa32fd"
+  }
+]
