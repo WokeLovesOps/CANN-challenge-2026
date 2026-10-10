@@ -120,6 +120,9 @@ for i,batch in enumerate(batches):
   if x is None:entries.append('        {0, 0, 0, 0, 0, 0}')
   else:entries.append(f"        {{{x['rows']}, {x['line']}, {max(x['pitch'],(x['line']+31)//32*32)}, {x['dstGap']}, {x['mode']}, {int(x['pad'])}}}")
  source=header+shape_conditions+'    const CopyProbe configurations[15] = {\n'+',\n'.join(entries)+'\n    };\n'+tail
+ if i in [0,8]:
+  start=source.index('    using namespace AscendC;');end=source.index('\n}\n\ninline void CheckProbeAcl',start)
+  source=source[:start]+'    // 真正空核对照：不加载参数、不初始化、不搬入、不搬出。\n    AscendC::PipeBarrier<PIPE_ALL>();'+source[end:]
  (root/f'batch{i}.asc').write_text(source)
  (root/f'batch{i}-bridge.asc').write_text('#include <cstdint>\nstruct TensorInfo { const int64_t* shape; int64_t numDims; int32_t dtype; };\nstruct TensorGroupInfo { const TensorInfo* tensors; int64_t numTensors; };\n#include "batch'+str(i)+'.asc"\n')
 print(len(samples),len(configs),len(batches))
