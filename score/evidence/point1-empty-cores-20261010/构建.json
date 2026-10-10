@@ -1,0 +1,74 @@
+[
+  {
+    "cores": 2,
+    "seconds": 36.61468755401438,
+    "exit_code": 0,
+    "source_sha256": "6b24438c29721dd45764df0232207dbd18bd66ca2c02105bf261c4fdbcd27ac5",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/core2-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/libcore2.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "19de014feb73ad5d237f8e011b77be34cfe8b71602f88efcf6c8727a60219aa2"
+  },
+  {
+    "cores": 4,
+    "seconds": 33.7806424270093,
+    "exit_code": 0,
+    "source_sha256": "8074a2999b0b522da0700db457b87cdc12e28bc5c44ff2bd84ec8e1b9a143b1a",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/core4-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/libcore4.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "80e45ffb3fe90bff3f12ed7ee91b537428a51bebc349a1abba1efb644ad617c6"
+  },
+  {
+    "cores": 8,
+    "seconds": 33.31346758900327,
+    "exit_code": 0,
+    "source_sha256": "8967e988acf0d41b8ce792f1d0b00334f217f262adea1838248debf489b85e7a",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/core8-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-empty-cores-20261010/libcore8.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "2587d016bd5a0e2d50f4032f2a3f63d6bf8bbd2b825bb5c5cf26cf869f667883"
+  }
+]
