@@ -1,0 +1,71 @@
+--- 正式基线.asc
++++ stage3.asc
+@@ -142,55 +142,22 @@
+ {
+     KERNEL_TASK_TYPE_DEFAULT(KERNEL_TYPE_AIV_ONLY);
+     using namespace AscendC;
+-    constexpr uint32_t K = 32;
+-    // 单任务固定UB布局，保留必要硬件状态设置，省去TPipe资源登记。
+-    SetAtomicNone();
+-    SetMaskNorm();
+-    ResetMask();
+-    constexpr uint32_t inputBufferOffset = 0;
+-    constexpr uint32_t inputBufferBytes = 2 * K * sizeof(T);
+-    constexpr uint32_t convertedBufferOffset = (inputBufferOffset + inputBufferBytes + 31) / 32 * 32;
+-    constexpr uint32_t convertedBufferBytes = 2 * K * sizeof(float);
+-    constexpr uint32_t outputBufferOffset = (convertedBufferOffset + convertedBufferBytes + 31) / 32 * 32;
+-    constexpr uint32_t outputBufferBytes = 32;
++    // 只要求读取两个地址参数，不读取输入内容，不产生UB/GM写入。
++    // 空volatile汇编约束防止编译器删除地址读取；实际效果须由指令验证。
++    const int64_t aAddress = reinterpret_cast<int64_t>(x1);
++    const int64_t bAddress = reinterpret_cast<int64_t>(x2);
++    asm volatile("" : : "r"(aAddress), "r"(bAddress) : "memory");
+     GlobalTensor<T> a;
++    a.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x1));
++    auto input = LocalTensor<T>(TPosition::VECCALC, 0, 64);
++    DataCopyExtParams copy{1, 64, 0, 0, 0};
++    DataCopyPadExtParams<T> padding{false, 0, 0, 0};
++    DataCopyPad(input, a, copy, padding);
+     GlobalTensor<T> b;
+-    GlobalTensor<float> output;
+-    a.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x1));
+     b.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x2));
+-    output.SetGlobalBuffer(reinterpret_cast<__gm__ float*>(y));
+-    auto input = LocalTensor<T>(TPosition::VECCALC, inputBufferOffset, inputBufferBytes / sizeof(T));
+-    auto aFloat = LocalTensor<float>(TPosition::VECCALC, convertedBufferOffset, convertedBufferBytes / sizeof(float));
+-    auto bFloat = aFloat[K];
+-    auto result = LocalTensor<float>(TPosition::VECCALC, outputBufferOffset, outputBufferBytes / sizeof(float));
+-    DataCopyExtParams inputCopy{1, K * sizeof(T), 0, 0, 0};
+-    DataCopyPadExtParams<T> noPadding{false, 0, 0, 0};
+-    // 仅在两个完整输入区间紧邻时合并搬运，不读取间隙或扩大输入范围。
+-    const uintptr_t aAddress = reinterpret_cast<uintptr_t>(x1);
+-    const uintptr_t bAddress = reinterpret_cast<uintptr_t>(x2);
+-    constexpr uint32_t bytesPerInput = K * sizeof(T);
+-    if (bAddress == aAddress + bytesPerInput) {
+-        DataCopyExtParams contiguousCopy{1, 2 * bytesPerInput, 0, 0, 0};
+-        DataCopyPad(input, a, contiguousCopy, noPadding);
+-    } else if (aAddress == bAddress + bytesPerInput) {
+-        // 点1为单点积，交换两个乘数不改变FP32乘法与归约语义。
+-        DataCopyExtParams contiguousCopy{1, 2 * bytesPerInput, 0, 0, 0};
+-        DataCopyPad(input, b, contiguousCopy, noPadding);
+-    } else {
+-        DataCopyPad(input, a, inputCopy, noPadding);
+-        DataCopyPad(input[K], b, inputCopy, noPadding);
+-    }
+-    SetFlag<HardEvent::MTE2_V>(EVENT_ID0);
+-    WaitFlag<HardEvent::MTE2_V>(EVENT_ID0);
+-    Cast(aFloat, input, RoundMode::CAST_NONE, 2 * K);
+-    PipeBarrier<PIPE_V>();
+-    Mul(aFloat, aFloat, bFloat, K);
+-    PipeBarrier<PIPE_V>();
+-    WholeReduceSum(result, aFloat, static_cast<int32_t>(K), 1, 1, 1, 4);
+-    SetFlag<HardEvent::V_MTE3>(EVENT_ID0);
+-    WaitFlag<HardEvent::V_MTE3>(EVENT_ID0);
+-    DataCopyExtParams outputCopy{1, sizeof(float), 0, 0, 0};
+-    DataCopyPad(output, result, outputCopy);
++    DataCopyPad(input[32], b, copy, padding);
++    // 四个版本使用同一结束屏障，确保已发出的搬运完成。
++    PipeBarrier<PIPE_ALL>();
+ }
+ 
+ // 点6精确形状：手动GM->L1->L0->FP32 MMAD->GM，随后同一个混合核完成Vector归约。
