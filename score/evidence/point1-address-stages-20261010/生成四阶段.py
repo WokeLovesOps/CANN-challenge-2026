@@ -14,7 +14,7 @@ addresses='''    // 只要求读取两个地址参数，不读取输入内容，
     // 空volatile汇编约束防止编译器删除地址读取；实际效果须由指令验证。
     const int64_t aAddress = reinterpret_cast<int64_t>(x1);
     const int64_t bAddress = reinterpret_cast<int64_t>(x2);
-    asm volatile("" : : "r"(aAddress), "r"(bAddress) : "memory");
+    asm volatile("" : : "l"(aAddress), "l"(bAddress) : "memory");
 '''
 setup='''    GlobalTensor<T> a;
     a.SetGlobalBuffer(reinterpret_cast<__gm__ T*>(x1));

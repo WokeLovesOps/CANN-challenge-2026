@@ -6,13 +6,14 @@ lines=['# 点1地址加载与单次COPY阶段诊断（2026-10-10）','','## OJ�
 for x in reversed(records):
     t=float(x['table'].splitlines()[1].split('\t')[3].replace('μs',''))
     lines.append('| %s | %s | [%s](%s) | %.2f | %.3f |'%(x['git'],labels[x['stage']],x['id'],x['url'],t,x['upperBoundSeconds']))
-lines+=['','## 方法与边界','','四个ComputeDot32<T>均为(GM_ADDR x1, GM_ADDR x2, GM_ADDR y)签名、KERNEL_TYPE_AIV_ONLY、单核、最终PIPE_ALL。无GM/UB预初始化、无TPipe、无数据计算、无结果搬出；读取平台实际A/B输入，不另外申请源GM。','','阶段0不要求装载未使用参数；阶段1用空volatile汇编的两个寄存器输入约束保留A/B地址参数加载，不访问输入内容、不写UB/GM。阶段2保持同样地址约束，再以常量DataCopyExtParams读取A的64B；阶段3再读B的64B到独立UB槽。接口为当前正式实现的无填充DataCopyPad。','','“相同签名”不能保证相同机器码前缀：编译器可能合并、重排参数和描述符设置。阶段差分是新增操作、设置与完成等待的总成本，不是独立硬件指令延迟。本地核验实际LD/LDP参数加载、0/0/1/2条真实GM→UB指令、无搬出及外部输入输出未修改。','','本地软件模型为CANN9.0.0、dav-2201、Ascend910B3；模型不替代OJ。两次调用改变A，截断诊断不检查数学输出，但检查整个输出区保持不变及输入不变。原始库、源码、BIN、CSV、日志在Build/point1-address-stages-20261010，Git保存补丁、脚本、哈希和摘要。首次桥接文件漏ACL头文件导致编译失败，已补齐；原失败日志保留，没有提交该构建。','','每个阶段OJ前保存Git快照、编辑器复制逐字核对。平台独立编译时间未披露，提交到完整结果观测上界<300秒才保守确认编译上限；沿用至少305秒提交间隔避免前轮限流。','','## 本地指令与模型结果','','| 阶段 | 双次模型μs | 双次COPY条数 | 参数加载指令 | 采集完整 |','|---|---|---|---|---|']
+lines+=['','## 方法与边界','','四个ComputeDot32<T>均为(GM_ADDR x1, GM_ADDR x2, GM_ADDR y)签名、KERNEL_TYPE_AIV_ONLY、单核、最终PIPE_ALL。无GM/UB预初始化、无TPipe、无数据计算、无结果搬出；读取平台实际A/B输入，不另外申请源GM。','','阶段0不要求装载未使用参数；阶段1用空volatile汇编的两个寄存器输入约束保留A/B地址参数加载，不访问输入内容、不写UB/GM。阶段2保持同样地址约束，再以常量DataCopyExtParams读取A的64B；阶段3再读B的64B到独立UB槽。接口为当前正式实现的无填充DataCopyPad。','','“相同签名”不能保证相同机器码前缀：编译器可能合并、重排参数和描述符设置。阶段差分是新增操作、设置与完成等待的总成本，不是独立硬件指令延迟。本地核验实际LD/LDP参数加载、0/0/1/2条真实GM→UB指令、无搬出及外部输入输出未修改。','','本地软件模型为CANN9.0.0、dav-2201、Ascend910B3；模型不替代OJ。两次调用改变A，截断诊断不检查数学输出，但检查整个输出区保持不变及输入不变。原始库、源码、BIN、CSV、日志在Build/point1-address-stages-20261010，Git保存补丁、脚本、哈希和摘要。首次桥接文件漏ACL头文件导致编译失败，已补齐；地址汇编使用r约束亦被bisheng拒绝，SDK示例的64位l约束最小编译通过后重建。所有原失败日志保留，未提交失败构建。','','每个阶段OJ前保存Git快照、编辑器复制逐字核对。平台独立编译时间未披露，提交到完整结果观测上界<300秒才保守确认编译上限；沿用至少305秒提交间隔避免前轮限流。','','## 本地指令与模型结果','','| 阶段 | 双次模型μs | 双次COPY条数 | 参数加载指令 | 采集完整 |','|---|---|---|---|---|']
 for i in range(4):
     p=d/f'stage{i}-model.json'
     if not p.exists():continue
     x=json.loads(p.read_text());ins=x['instructions'][-1];loads=[v['instr']+':'+v['detail'] for v in ins if v['instr'].startswith('LD')]
     lines.append('| %s | %s | %s | %s | %s |'%(labels[i],'/'.join(str(v['duration_us']) for v in x['timings']),x['copy_counts'],'；'.join(loads),x['passed']))
 if records:
+    lines[lines.index('| 平台TBest | 完整算子参考 | — | 1.20（前轮快照，待本轮核验） | — |')]='| 平台TBest（本轮结果） | 完整算子参考 | — | '+records[-1]['table'].splitlines()[1].split('\t')[4]+' | — |'
     lines+=['','## 全部15点原始耗时','','| Git/OJ | '+' | '.join(map(str,range(1,16)))+' |','|---|'+'---:|'*15]
     lines.append('| 平台TBest（本轮结果） | '+' | '.join(v.split('\t')[4].replace('μs','') for v in records[-1]['table'].splitlines()[1:])+' |')
     for x in reversed(records):lines.append('| %s/%s | %s |'%(x['git'],x['id'],' | '.join(v.split('\t')[3].replace('μs','') for v in x['table'].splitlines()[1:])))
