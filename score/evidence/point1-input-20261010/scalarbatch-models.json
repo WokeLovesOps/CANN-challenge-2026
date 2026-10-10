@@ -1,0 +1,440 @@
+[
+  {
+    "case": 0,
+    "label": "点1随机",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+      "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.8597932457923889,
+      -0.8597932457923889
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+    "alternating_input": true,
+    "variant": "scalarbatch",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case0/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/libscalarbatch.so",
+      "--case=0",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case0/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f89ae3e9efe4978bebfd7378a05d7af95540e5a4d6f76943c164c823aaa165c1",
+    "library_sha256": "70928a8af3e432f4722edfb74d1b81c68fd876cfbcceffa75432a40edd904e7e",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.61
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case0/profile/OPPROF_20261010141612_ORMZYLQIGZSCFQVO/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1008284,
+        "sha256": "0b5b037cb9109bf01fffa8db422f202b25db60a259957436a5d1372ed3707a22"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case0/profile/OPPROF_20261010141612_ORMZYLQIGZSCFQVO/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1006320,
+        "sha256": "7f0fe72767a5b68ef4ef9b645a439d74d98bb7d1b4ec81bbbac88a9dc021047a"
+      }
+    ]
+  },
+  {
+    "case": 8,
+    "label": "点1全负",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "691a25c84c250873d65f8833bdedcb3d88685bb2bcffa4a4b67ff7eb8c408076",
+      "70c0425a7899f95f4e3fdd1be4a42e4c97cede7cecbb29afd033fa37b7d8fb7f"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -6.986304759979248,
+      -6.986304759979248
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cb557fb9dd15495d2fe97cfd9a4d919fa1a96302a29f0fd8a8bb1ba8a9a1ab6e",
+    "alternating_input": true,
+    "variant": "scalarbatch",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case8/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/libscalarbatch.so",
+      "--case=8",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case8/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f89ae3e9efe4978bebfd7378a05d7af95540e5a4d6f76943c164c823aaa165c1",
+    "library_sha256": "70928a8af3e432f4722edfb74d1b81c68fd876cfbcceffa75432a40edd904e7e",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.61
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case8/profile/OPPROF_20261010141618_UDNIRIVDTWBDVVNV/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1008272,
+        "sha256": "2202fffbe6d056139ef47d5e10d013d206847d9b0529766dc1046d3b0efac568"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case8/profile/OPPROF_20261010141618_UDNIRIVDTWBDVVNV/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1006336,
+        "sha256": "9f107b308c27e4b5a8c5d24a08ff519385ea6da74ae3ee5ab742048e824c0e28"
+      }
+    ]
+  },
+  {
+    "case": 16,
+    "label": "点1全零",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+    ],
+    "input_pattern": "全零",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "8e34f641cdca82fc7f0537df067d08a5f4c6c183bda893f12caf0b321a15be90",
+    "alternating_input": true,
+    "variant": "scalarbatch",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case16/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/libscalarbatch.so",
+      "--case=16",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case16/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f89ae3e9efe4978bebfd7378a05d7af95540e5a4d6f76943c164c823aaa165c1",
+    "library_sha256": "70928a8af3e432f4722edfb74d1b81c68fd876cfbcceffa75432a40edd904e7e",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.61
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case16/profile/OPPROF_20261010141623_IRGGDXNGGKXRBDGX/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1008276,
+        "sha256": "5df10afd814116d44e4e1854b8f1df434c5a41045804c5d45a48f8e9f604034f"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case16/profile/OPPROF_20261010141623_IRGGDXNGGKXRBDGX/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1006348,
+        "sha256": "59324686a89dd630de67780cb37eb5f3e4f627f92d3b270a0c2cd187864e83cb"
+      }
+    ]
+  },
+  {
+    "case": 24,
+    "label": "单点积正负抵消",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "cf291829a08fd433380a44efecde63fd60567375039ae9f57691587afbdef276",
+      "37ea9ac3386141dad07601138697e9dbd53d6e54f659b37dad09f4a1cbd6c96f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.5,
+      0.5
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "cbf1ce96c3e1185c379e63ff49bfea2558ced0ac2c24b1dc9f1e37959ef13245",
+    "alternating_input": true,
+    "variant": "scalarbatch",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case24/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/libscalarbatch.so",
+      "--case=24",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case24/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f89ae3e9efe4978bebfd7378a05d7af95540e5a4d6f76943c164c823aaa165c1",
+    "library_sha256": "70928a8af3e432f4722edfb74d1b81c68fd876cfbcceffa75432a40edd904e7e",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.61
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case24/profile/OPPROF_20261010141628_WRYHCAOXHGCZQNLQ/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1008260,
+        "sha256": "4ed2a67cc0e0d2b132389e03fd232e8856817dacc49649918a669ce40d878e84"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case24/profile/OPPROF_20261010141628_WRYHCAOXHGCZQNLQ/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1006348,
+        "sha256": "acc3ace80c2182b73dc8e66f34c38f0605c8045d412bd23aa63e27fe8a97e6fc"
+      }
+    ]
+  },
+  {
+    "case": 32,
+    "label": "FP16极值抵消",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "9a8fbb567b529a48d9d896a262866fb90cad2694e8f3fa7e405a674eab9d5cb1",
+      "26ecd3f7eba706f0a4cfc55bafeab18f989a5c4248335db4a77dc68195c37357"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "a66142ce8774e45943013594f81dc87b7f2ac3405786fc96b89122546f4f53d7",
+    "alternating_input": true,
+    "variant": "scalarbatch",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case32/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/libscalarbatch.so",
+      "--case=32",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case32/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f89ae3e9efe4978bebfd7378a05d7af95540e5a4d6f76943c164c823aaa165c1",
+    "library_sha256": "70928a8af3e432f4722edfb74d1b81c68fd876cfbcceffa75432a40edd904e7e",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.61
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case32/profile/OPPROF_20261010141634_DNSTUWECZGJYHHHQ/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1008364,
+        "sha256": "bfd7f027a6afaca2b2abf8669e8db13e8ec3d8deb2734a676f1af09cb889f521"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case32/profile/OPPROF_20261010141634_DNSTUWECZGJYHHHQ/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1006356,
+        "sha256": "6b3938b1287326d10a8fe1da6b7682e708c092b0d3a1c69cd047f40f18a3636f"
+      }
+    ]
+  },
+  {
+    "case": 40,
+    "label": "FP16次正规数",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "simulator",
+    "passed": true,
+    "input_sha256": [
+      "19b8dfd04bee4f9091e6ac9c68ef7f06911a42e057a9d7377f0d8daad7e449c6",
+      "cf291829a08fd433380a44efecde63fd60567375039ae9f57691587afbdef276"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      1.9073486328125e-06,
+      1.9073486328125e-06
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "second_input_sha256": "1e881f3f75889f2766b7eff70e333148dd38e8c1abd9e378f1b1f6fd01eed081",
+    "alternating_input": true,
+    "variant": "scalarbatch",
+    "command": [
+      "msprof",
+      "op",
+      "simulator",
+      "--soc-version=Ascend910B3",
+      "--launch-count=2",
+      "--timeout=2",
+      "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case40/profile",
+      "python3",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/screen_point1.py",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/libscalarbatch.so",
+      "--case=40",
+      "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case40/correctness.json"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f89ae3e9efe4978bebfd7378a05d7af95540e5a4d6f76943c164c823aaa165c1",
+    "library_sha256": "70928a8af3e432f4722edfb74d1b81c68fd876cfbcceffa75432a40edd904e7e",
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.61
+      }
+    ],
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case40/profile/OPPROF_20261010141639_SHWGSUXBKWFNJNUM/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+        "size": 1008324,
+        "sha256": "0ecd568630e52f57a0b6e90f29dba86f3d3fdc05ecbb220043ab27d7c991c980"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-input-20261010/sim/scalarbatch-case40/profile/OPPROF_20261010141639_SHWGSUXBKWFNJNUM/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+        "size": 1006336,
+        "sha256": "22089a42ff5dc0219caf4e946419af369dfd39e6f1d8fe0b45ad1d7884501841"
+      }
+    ]
+  }
+]
