@@ -1,0 +1,54 @@
+[
+  {
+    "point": 4,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 3,
+    "configuration": {
+      "name": "连续2048B",
+      "rows": 1,
+      "line": 2048,
+      "pitch": 2048,
+      "dstGap": 0,
+      "coverage": "点5相似度",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 2048,
+      "payloadBytes": 2048,
+      "readBytes": 2048
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "549d209df86d1a805df74d974f8fb14d0036cfb2b221d4cbac693bc8cfd9f9c0",
+    "library_sha256": "3de1d1ad3f9baa469b244f3d057f96ec3cc25e2639bcca253b18d44d1c5c64a4",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch3-point4-range/profile/OPPROF_20261010150530_UEZBQVZJELDVWRJS/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249616,
+        "sha256": "46eedfb934aa8f2b732717ab8d12564717900a4fd69255b31d1bbd25db6d628e"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch3-point4-range/profile/OPPROF_20261010150530_UEZBQVZJELDVWRJS/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247912,
+        "sha256": "264b7a4a432a2b623309b12d6f5b2b286697149dd72af39ab1bc0df9a5059d88"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.46,
+        "running_us": 0.45
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.4,
+        "running_us": 0.39
+      }
+    ]
+  }
+]

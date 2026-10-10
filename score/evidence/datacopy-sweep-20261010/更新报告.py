@@ -10,7 +10,7 @@ for i,b in enumerate(m['batches']):
  for j,c in enumerate(b['configs'],1):
   if c is None:continue
   lines.append(f"| {i}/{j} | {c['name']} | {c['rows']} | {c['line']} | {c['payloadBytes']} | {c['readBytes']} | {max(c['pitch'],(c['line']+31)//32*32)} | {'DataCopy' if c['mode']==0 else 'DataCopyPad'} | {'启用尾部补零' if c['pad'] else '无'} | {c['coverage']} |")
-lines+=['','## 仿真与构建证据','','本地CANN9.0.0、bisheng dav-2201、Ascend910B3模型。诊断副本不改CMake，9个源版本独立编译。普通调用双采集逐项确认一条真实Src:OUT,Dst:UB指令、无搬出指令、外部输入输出未修改，记录源码/库/BIN哈希。空核确认零搬入。模型时长不替代OJ。','','图捕获试采ACL调用成功，但重放的第二份指令信息为空，因此捕获采集不完整，不作为指令证明；另用完整普通调用采集验证。试采构建地址空间转换报错和输出目录权限错误均已修正，原日志保留。Pad填充值设置MOV_SPR_XN曾被脚本误计为第二次COPY，已改为根据Src:OUT,Dst:UB筛选，原失败记录保留在Build。','','原始源码、库、构建日志、BIN、CSV在Build/datacopy-sweep-20261010，被Git忽略；Git保存实验配置、生成/复现脚本、模型摘要、OJ原始表格和截图，不声称原始BIN入Git。','','## 当前完成状态','']
+lines+=['','## 仿真与构建证据','','本地CANN9.0.0、bisheng dav-2201、Ascend910B3模型。诊断副本不改CMake，9个源版本独立编译。普通调用双采集逐项确认一条真实Src:OUT,Dst:UB指令、无搬出指令、外部输入输出未修改，记录源码/库/BIN哈希。空核确认零搬入。模型时长不替代OJ。','','图捕获试采ACL调用成功，但重放的第二份指令信息为空，因此捕获采集不完整，不作为指令证明；另用完整普通调用采集验证。试采构建地址空间转换报错和输出目录权限错误均已修正，原日志保留。Pad填充值设置MOV_SPR_XN曾被脚本误计为第二次COPY，已改为根据Src:OUT,Dst:UB筛选，原失败记录保留在Build。','','原始源码、库、构建日志、BIN、CSV在Build/datacopy-sweep-20261010，被Git忽略；Git保存实验配置、生成/复现脚本、模型摘要、OJ原始表格和截图，不声称原始BIN入Git。','','修正Host版9批均独立构建通过；完整91配置模型采集对应原Host库，device kernel保持一致。修正Host代表验证对已知形状双次各1条COPY、额外未知形状双次各0条COPY，均未修改输入输出；详见修正Host代表验证.json。','','前两批点4约0.99μs，与其他COPY明显不同。Git历史证实该点精确历史形状曾不匹配OJ，因此按无效COPY样本排除；批3起沿用已验证的小点范围匹配，批7空闲槽补测64B普通COPY和400B Pad补零。正式算子分发不改。','','## 当前完成状态','']
 for i,b in enumerate(m['batches']):
  mods=d/f'batch{i}-models.json';x=json.loads(mods.read_text()) if mods.exists() else [];done=sum(v['passed'] for v in x);oj=next((r for r in results if r['batch']==i),None)
  lines.append(f"- 批{i} {b['name']}：本地完成{done}项；OJ{'已完成，ID'+str(oj['id']) if oj else '待提交/待结果'}。")
@@ -22,7 +22,7 @@ if len(results)==len(m['batches']):
   i=r['batch']
   for j,l in enumerate(r['table'].splitlines()[1:]):
    c=m['batches'][i]['configs'][j]
-   if c is None:continue
+   if c is None or j+1 in r.get('invalidCopySlots',[]):continue
    t=float(l.split('\t')[3].replace('μs',''));name=f"{c['name']} {'Copy' if c['mode']==0 else 'Pad'} {'补零' if c['pad'] else ''}"
    lines.append(f'| {i}/{j+1} | {name} | {t:.2f} | {a[j]:.2f} | {b[j]:.2f} | {t-a[j]:.2f} | {t-b[j]:.2f} | {t-(a[j]+b[j])/2:.2f} |')
 (repo/'score/单次COPY规模诊断-20261010.md').write_text('\n'.join(lines)+'\n')
