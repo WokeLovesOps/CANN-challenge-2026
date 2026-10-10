@@ -1,0 +1,98 @@
+[
+  {
+    "stage": 0,
+    "seconds": 40.66607773298165,
+    "exit_code": 0,
+    "source_sha256": "ffc4d78c57508964167459f9100e22275f03d8dbfc97e63fa757de2a83c30abc",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage0-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/libstage0.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "4ba055f7677538658f749dd98040a2eb5c025113a180229aee2195a1f979bb40"
+  },
+  {
+    "stage": 1,
+    "seconds": 40.848482294997666,
+    "exit_code": 0,
+    "source_sha256": "d36bf1d237263eb75ed1f9b64b323963b7d9b9bdd490bd97bc075b1fa534cb33",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage1-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/libstage1.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "8c3af6aef2800e92f3f3b173dfbe765a1e42fbcf16fe05036a375e4562bed14d"
+  },
+  {
+    "stage": 2,
+    "seconds": 40.81333124701632,
+    "exit_code": 0,
+    "source_sha256": "c1b004e0448654d9221217aaed7b438267a602d8a149e811691aabe1b4f88aeb",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage2-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/libstage2.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "4cce74f16f560a03d27677fcf747361c057ff2ced216ca927d76351d499051c2"
+  },
+  {
+    "stage": 3,
+    "seconds": 38.44440187999862,
+    "exit_code": 0,
+    "source_sha256": "f848c0d7a4f4fb1a94c5f294ce1e93a428bf87f0228663720ac081fb21fa3b8f",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/stage3-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/libstage3.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "34c3127a437ca47758b57632e8d8732404ed6337b2cfbef1e61f59d3b02fe334"
+  }
+]

@@ -3,7 +3,7 @@ import subprocess,json,csv,hashlib,re,sys,os
 r=Path(__file__).resolve().parent
 d=Path('/mnt/newdisk/code/CANN-challenge/score/evidence/point1-address-stages-20261010')
 for i in map(int,sys.argv[1:]):
-    out=r/'sim'/f'stage{i}'
+    out=r/'sim'/f'stage{i}-指针校验'
     out.mkdir(parents=True,mode=0o700,exist_ok=True)
     report=out/'执行检查.json'
     cmd=['msprof','op','simulator','--soc-version=Ascend910B3','--launch-count=2','--timeout=2',f'--output={out}/profile','python3',str(r/'仿真入口.py'),str(r/f'libstage{i}.so'),'--case=0',f'--report={report}']

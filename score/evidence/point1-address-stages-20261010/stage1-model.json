@@ -42,50 +42,50 @@
     "--soc-version=Ascend910B3",
     "--launch-count=2",
     "--timeout=2",
-    "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1/profile",
+    "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1-指针校验/profile",
     "python3",
     "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/仿真入口.py",
     "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/libstage1.so",
     "--case=0",
-    "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1/执行检查.json"
+    "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1-指针校验/执行检查.json"
   ],
-  "source_sha256": "d36bf1d237263eb75ed1f9b64b323963b7d9b9bdd490bd97bc075b1fa534cb33",
-  "library_sha256": "8c3af6aef2800e92f3f3b173dfbe765a1e42fbcf16fe05036a375e4562bed14d",
+  "source_sha256": "cf5e2415daecb8b3776cff40a547bf074ef2979092e4d87f5dac4f0af7cb8318",
+  "library_sha256": "0b55f04c04495368f8da1d6c615997118cb6d8b04e233e2f736eb8c40194eb14",
   "bins": [
     {
-      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1/profile/OPPROF_20261010155604_PRVVNKSOJADNOADN/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
-      "size": 285744,
-      "sha256": "ad279c7a1a69497f903168f8fc8554e6abe5d977fb7e22978854e8c20a195be0"
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1-指针校验/profile/OPPROF_20261010160319_ZSBIEYOZTBISMYQE/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+      "size": 286388,
+      "sha256": "680ee9ac49044de4183a2ed097d4afcf57a5f6efc6a937b834cab94e0e90cf2c"
     },
     {
-      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1/profile/OPPROF_20261010155604_PRVVNKSOJADNOADN/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
-      "size": 284400,
-      "sha256": "b8e09be3264c278bccde82d96265c62a13289f70acb5714a43ad6a129ae6f65e"
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage1-指针校验/profile/OPPROF_20261010160319_ZSBIEYOZTBISMYQE/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+      "size": 285328,
+      "sha256": "fb5f10f9a2b09b62943461902f7cc2d53a6ebb946b9d06fb286b92dbdfe0fa0e"
     }
   ],
   "instructions": [
     [
       {
-        "instr": "BAR",
-        "addr": "288787964",
-        "pipe": "ALL",
-        "call_count": "1",
-        "cycles": "362",
-        "running_time(us)": "0.200000",
-        "detail": "PIPE:ALL"
-      },
-      {
-        "instr": "LDP_XI_XJ_XN",
+        "instr": "LD_XD_XN_IMM",
         "addr": "288787960",
         "pipe": "SCALAR",
         "call_count": "1",
         "cycles": "362",
         "running_time(us)": "0.200000",
-        "detail": "dtype:B64,XI:X0=0,XJ:X1=0,XN:X0=0x1022fe00,IMM:0,"
+        "detail": "dtype:B64,XD:X1=0,XN:X0=0x1022fe00,IMM:0,"
+      },
+      {
+        "instr": "LD_XD_XN_IMM",
+        "addr": "288787968",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "5",
+        "running_time(us)": "0.000000",
+        "detail": "dtype:B64,XD:X0=0,XN:X0=0x1022fe00,IMM:0x8,"
       },
       {
         "instr": "MOV_XD_IMM",
-        "addr": "288787968",
+        "addr": "288787980",
         "pipe": "SCALAR",
         "call_count": "1",
         "cycles": "1",
@@ -154,30 +154,39 @@
         "cycles": "1",
         "running_time(us)": "0.000000",
         "detail": "XD:X29=0x7fa0,IMM:0x7fa0,"
+      },
+      {
+        "instr": "BAR",
+        "addr": "288787976",
+        "pipe": "ALL",
+        "call_count": "1",
+        "cycles": "0",
+        "running_time(us)": "0.000000",
+        "detail": "PIPE:ALL"
       }
     ],
     [
       {
-        "instr": "BAR",
-        "addr": "288787964",
-        "pipe": "ALL",
-        "call_count": "1",
-        "cycles": "364",
-        "running_time(us)": "0.200000",
-        "detail": "PIPE:ALL"
-      },
-      {
-        "instr": "LDP_XI_XJ_XN",
+        "instr": "LD_XD_XN_IMM",
         "addr": "288787960",
         "pipe": "SCALAR",
         "call_count": "1",
         "cycles": "364",
         "running_time(us)": "0.200000",
-        "detail": "dtype:B64,XI:X0=0,XJ:X1=0,XN:X0=0x1022fe00,IMM:0,"
+        "detail": "dtype:B64,XD:X1=0,XN:X0=0x1022fe00,IMM:0,"
+      },
+      {
+        "instr": "LD_XD_XN_IMM",
+        "addr": "288787968",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "5",
+        "running_time(us)": "0.000000",
+        "detail": "dtype:B64,XD:X0=0,XN:X0=0x1022fe00,IMM:0x8,"
       },
       {
         "instr": "MOV_XD_IMM",
-        "addr": "288787968",
+        "addr": "288787980",
         "pipe": "SCALAR",
         "call_count": "1",
         "cycles": "1",
@@ -246,18 +255,27 @@
         "cycles": "1",
         "running_time(us)": "0.000000",
         "detail": "XD:X29=0x7fa0,IMM:0x7fa0,"
+      },
+      {
+        "instr": "BAR",
+        "addr": "288787976",
+        "pipe": "ALL",
+        "call_count": "1",
+        "cycles": "0",
+        "running_time(us)": "0.000000",
+        "detail": "PIPE:ALL"
       }
     ]
   ],
   "timings": [
     {
       "core": "core0.veccore0",
-      "duration_us": 0.21,
+      "duration_us": 0.22,
       "running_us": 0.21
     },
     {
       "core": "core0.veccore0",
-      "duration_us": 0.21,
+      "duration_us": 0.22,
       "running_us": 0.21
     }
   ]

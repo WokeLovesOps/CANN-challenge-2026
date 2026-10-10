@@ -1,0 +1,156 @@
+{
+  "case": 0,
+  "label": "点1随机",
+  "shape": [
+    1,
+    1,
+    1,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": false,
+  "input_sha256": [
+    "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+    "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.8597932457923889,
+    -0.8597932457923889
+  ],
+  "stage": 2,
+  "exit_code": 0,
+  "copy_counts": [
+    0
+  ],
+  "command": [
+    "msprof",
+    "op",
+    "simulator",
+    "--soc-version=Ascend910B3",
+    "--launch-count=2",
+    "--timeout=2",
+    "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage2/profile",
+    "python3",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/仿真入口.py",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/libstage2.so",
+    "--case=0",
+    "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage2/执行检查.json"
+  ],
+  "source_sha256": "c1b004e0448654d9221217aaed7b438267a602d8a149e811691aabe1b4f88aeb",
+  "library_sha256": "4cce74f16f560a03d27677fcf747361c057ff2ced216ca927d76351d499051c2",
+  "bins": [
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-address-stages-20261010/sim/stage2/profile/OPPROF_20261010155710_RMRBMADFUVBTAEDZ/simulator/visualize_data.bin",
+      "size": 239352,
+      "sha256": "b2cd2d997c37927e2b58102f1ca25326ff0c441d49ea87658cbc298a05d526a9"
+    }
+  ],
+  "instructions": [
+    [
+      {
+        "instr": "LDP_XI_XJ_XN",
+        "addr": "288787964",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "362",
+        "running_time(us)": "0.200000",
+        "detail": "dtype:B64,XI:X0=0,XJ:X1=0,XN:X0=0x1022fe00,IMM:0,"
+      },
+      {
+        "instr": "MOV_XD_IMM",
+        "addr": "288787968",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X1=0x10,IMM:0x10,"
+      },
+      {
+        "instr": "MOV_XD_IMM",
+        "addr": "288787960",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X2=0,IMM:0,"
+      },
+      {
+        "instr": "MOV_XD_SPR",
+        "addr": "288787956",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X0=0x1022fe00,SPR:PARA_BASE,"
+      },
+      {
+        "instr": "MOV_XD_IMM",
+        "addr": "288787900",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X29=0x7fa0,IMM:0x7fa0,"
+      },
+      {
+        "instr": "MOV_XD_IMM",
+        "addr": "288787932",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X17=0x8000,IMM:0x8000,"
+      },
+      {
+        "instr": "MOV_XD_IMM",
+        "addr": "288787924",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X0=0x1,IMM:0x1,"
+      },
+      {
+        "instr": "MOV_XD_IMM",
+        "addr": "288787920",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X16=0x7fff,IMM:0x7fff,"
+      },
+      {
+        "instr": "MOV_XD_SPR",
+        "addr": "288787916",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X15=0x18,SPR:COREID,"
+      },
+      {
+        "instr": "MOV_XD_SPR",
+        "addr": "288787908",
+        "pipe": "SCALAR",
+        "call_count": "1",
+        "cycles": "1",
+        "running_time(us)": "0.000000",
+        "detail": "XD:X15=0,SPR:SYS_VA_BASE,"
+      }
+    ]
+  ],
+  "timings": [
+    {
+      "core": "core0.veccore0",
+      "duration_us": 0.21,
+      "running_us": 0.21
+    }
+  ]
+}
