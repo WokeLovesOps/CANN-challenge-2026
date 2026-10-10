@@ -1,0 +1,18 @@
+In file included from /mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/A64-bridge.asc:5:
+/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/A64.asc:3948:31: error: non-constant-expression cannot be narrowed from type 'unsigned long' to 'uint32_t' (aka 'unsigned int') in initializer list [-Wc++11-narrowing]
+    DataCopyExtParams copy{1, batch * sizeof(int32_t), 0, 0, 0};
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/A64.asc:3948:31: note: insert an explicit cast to silence this issue
+    DataCopyExtParams copy{1, batch * sizeof(int32_t), 0, 0, 0};
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+                              static_cast<uint32_t>( )
+1 error generated.
+In file included from /mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/A64-bridge.asc:5:
+/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/A64.asc:3948:31: error: non-constant-expression cannot be narrowed from type 'unsigned long' to 'uint32_t' (aka 'unsigned int') in initializer list [-Wc++11-narrowing]
+    DataCopyExtParams copy{1, batch * sizeof(int32_t), 0, 0, 0};
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/newdisk/code/CANN-challenge/Build/input-alignment-20261010/A64.asc:3948:31: note: insert an explicit cast to silence this issue
+    DataCopyExtParams copy{1, batch * sizeof(int32_t), 0, 0, 0};
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+                              static_cast<uint32_t>( )
+1 error generated.
