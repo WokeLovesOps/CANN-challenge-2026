@@ -1,0 +1,22 @@
+--- 正式单核.asc
++++ 四核启动.asc
+@@ -142,6 +142,10 @@
+ {
+     KERNEL_TASK_TYPE_DEFAULT(KERNEL_TYPE_AIV_ONLY);
+     using namespace AscendC;
++    // 只由核0计算和写出，额外启动核立即退出，避免输出竞争。
++    if (GetBlockIdx() != 0) {
++        return;
++    }
+     constexpr uint32_t K = 32;
+     // 单任务固定UB布局，保留必要硬件状态设置，省去TPipe资源登记。
+     SetAtomicNone();
+@@ -3993,7 +3997,7 @@
+         }
+ #else
+         if (m == 1 && n == 1 && k == 32 && a.dtype == 1) {
+-            ComputeDot32<half><<<1, nullptr, stream>>>(x1, x2, y);
++            ComputeDot32<half><<<4, nullptr, stream>>>(x1, x2, y);
+         } else if (a.dtype == 2 && transposeX1 && !transposeX2) {
+             if (batch == 1 && m == 3 && n == 5 && k == 40) {
+                 ComputePackedDotsFixed<bfloat16_t, true, false><<<1, nullptr, stream>>>(

@@ -1,0 +1,1620 @@
+{
+  "case": 0,
+  "label": "点1随机",
+  "shape": [
+    1,
+    1,
+    1,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "9cd247c8b70de382fbe189390c56f6182fe9121b1f034a29919c6f88aecee044",
+    "b9aa0e3e541e74161b711a3d90a5c2896db36b341db50d1154da513ab72f3147"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.8597932457923889,
+    -0.8597932457923889
+  ],
+  "available_cores": 20,
+  "numerical_correctness_checked": true,
+  "max_abs_error": 5.960464477539063e-08,
+  "second_input_sha256": "3c94c5cb7dfebd9d670e998bd840eb4c4ebd23d90a573e52a19a3fc99eda12c4",
+  "alternating_input": true,
+  "variant": "baseline",
+  "command": [
+    "msprof",
+    "op",
+    "simulator",
+    "--soc-version=Ascend910B3",
+    "--launch-count=2",
+    "--timeout=2",
+    "--output=/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/sim/baseline-case0/profile",
+    "python3",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/正确性入口.py",
+    "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/libbaseline.so",
+    "--case=0",
+    "--report=/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/sim/baseline-case0/正确性.json"
+  ],
+  "exit_code": 0,
+  "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+  "library_sha256": "9a14aa73f266f7fc132a02dce09a958fee51fac30b7494f5bef260cc15f0584b",
+  "bins": [
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/sim/baseline-case0/profile/OPPROF_20261010171210_GCGPCOSKKHNBVCGT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/visualize_data.bin",
+      "sha256": "f670d9f436b24584f811a1bf2d0d07adb60cd8f8235205a46bde7f679f125dd3",
+      "size": 921272
+    },
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/sim/baseline-case0/profile/OPPROF_20261010171210_GCGPCOSKKHNBVCGT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/visualize_data.bin",
+      "sha256": "80a3478ff4cf12b69b002dfc4cab3fe1ed38d6b071449c0cac264aaba1845a68",
+      "size": 919500
+    }
+  ],
+  "instructions": [
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/sim/baseline-case0/profile/OPPROF_20261010171210_GCGPCOSKKHNBVCGT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/0/simulator/core0.veccore0/core0.veccore0_instr_exe_20261010171212319.csv",
+      "copyin": 2,
+      "copyout": 1,
+      "instructions": [
+        {
+          "instr": "WAIT_FLAG",
+          "addr": "288788260",
+          "pipe": "MTE3",
+          "call_count": "1",
+          "cycles": "455",
+          "running_time(us)": "0.250000",
+          "detail": "PIPE:VEC,TRIGGERPIPE:MTE3,FLAGID:0,"
+        },
+        {
+          "instr": "BAR",
+          "addr": "288788244",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "415",
+          "running_time(us)": "0.230000",
+          "detail": "PIPE:VEC"
+        },
+        {
+          "instr": "BAR",
+          "addr": "288788192",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "399",
+          "running_time(us)": "0.220000",
+          "detail": "PIPE:VEC"
+        },
+        {
+          "instr": "MOV_SRC_TO_DST_ALIGN",
+          "addr": "288788092",
+          "pipe": "MTE2",
+          "call_count": "1",
+          "cycles": "390",
+          "running_time(us)": "0.220000",
+          "detail": "Src:OUT,Dst:UB,XD:X5=0x40,XN:X1=0x11315a00,XM:X3=0x400010,XT:X4=0,Dtype:B16,id:2"
+        },
+        {
+          "instr": "MOV_SRC_TO_DST_ALIGN",
+          "addr": "288788088",
+          "pipe": "MTE2",
+          "call_count": "1",
+          "cycles": "390",
+          "running_time(us)": "0.220000",
+          "detail": "Src:OUT,Dst:UB,XD:X4=0,XN:X2=0x11315800,XM:X3=0x400010,XT:X4=0,Dtype:B16,id:1"
+        },
+        {
+          "instr": "BAR",
+          "addr": "288788112",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "389",
+          "running_time(us)": "0.220000",
+          "detail": "PIPE:VEC"
+        },
+        {
+          "instr": "WAIT_FLAG",
+          "addr": "288788108",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "389",
+          "running_time(us)": "0.220000",
+          "detail": "PIPE:MTE2,TRIGGERPIPE:VEC,FLAGID:0,"
+        },
+        {
+          "instr": "SET_FLAG",
+          "addr": "288788104",
+          "pipe": "MTE2",
+          "call_count": "1",
+          "cycles": "389",
+          "running_time(us)": "0.220000",
+          "detail": "PIPE:MTE2,TRIGGERPIPE:VEC,FLAGID:0,"
+        },
+        {
+          "instr": "LD_XD_XN_IMM",
+          "addr": "288787968",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "362",
+          "running_time(us)": "0.200000",
+          "detail": "dtype:B64,XD:X2=0,XN:X2=0x1022fe00,IMM:0,"
+        },
+        {
+          "instr": "LDP_XI_XJ_XN",
+          "addr": "288787964",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "362",
+          "running_time(us)": "0.200000",
+          "detail": "dtype:B64,XI:X1=0,XJ:X0=0,XN:X2=0x1022fe00,IMM:0x8,"
+        },
+        {
+          "instr": "MOV_SRC_TO_DST_ALIGN",
+          "addr": "288788264",
+          "pipe": "MTE3",
+          "call_count": "1",
+          "cycles": "231",
+          "running_time(us)": "0.130000",
+          "detail": "Src:UB,Dst:OUT,XD:X0=0x11315c40,XN:X4=0x180,XM:X2=0x40010,XT:X1=0,Dtype:B32,id:3"
+        },
+        {
+          "instr": "VCADD",
+          "addr": "288788248",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "42",
+          "running_time(us)": "0.020000",
+          "detail": "XD:X4=0x180,XN:X3=0x80,XT:X2=0x100000400010001,Dtype:F32,Id:119"
+        },
+        {
+          "instr": "SET_FLAG",
+          "addr": "288788256",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "41",
+          "running_time(us)": "0.020000",
+          "detail": "PIPE:VEC,TRIGGERPIPE:MTE3,FLAGID:0,"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788212",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "23",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X2=0xffffffff,Pos:0,Id:110"
+        },
+        {
+          "instr": "VMUL",
+          "addr": "288788196",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "23",
+          "running_time(us)": "0.010000",
+          "detail": "XD:X3=0x80,XN:X3=0x80,XM:X4=0x100,XT:X2=0x100080808010101,Dtype:F32,Id:106"
+        },
+        {
+          "instr": "VCONV",
+          "addr": "288788164",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "20",
+          "running_time(us)": "0.010000",
+          "detail": "XD:X3=0x80,XN:X1=0,XT:X2=0x100040800010001,Conv_type:F16_F32,Id:98"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788172",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "20",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X2=0x20,Pos:0,Id:100"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788016",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X5=0xffffffffffffffff,Pos:0,Id:29"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788012",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X5=0xffffffffffffffff,Pos:1,Id:28"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288787948",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X0=0xffffffffffffffff,Pos:1,Id:12"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788152",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X1=0,Pos:1,Id:95"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288787944",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X0=0xffffffffffffffff,Pos:0,Id:11"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788116",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X2=0x40,Pos:0,Id:86"
+        },
+        {
+          "instr": "DCCI",
+          "addr": "288788272",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "5",
+          "running_time(us)": "0.000000",
+          "detail": "XN:X15=0,"
+        },
+        {
+          "instr": "MADD",
+          "addr": "288787940",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "3",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X29=0x1c7fa0,XN:X15=0x18,XM:X17=0x8000,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788228",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788132",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788136",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x10001,IMM:0x1,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788140",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x40800010001,IMM:0x408,UIMM:0x2,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288787904",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X29=0x107fa0,IMM:0x10,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVX8_XD_IMM",
+          "addr": "288788252",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x40010,IMM:0x8002,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788240",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100000400010001,IMM:0x100,UIMM:0x3,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788236",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x400010001,IMM:0x4,UIMM:0x2,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788144",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100040800010001,IMM:0x100,UIMM:0x3,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788148",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0x80,IMM:0x80,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788232",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x10001,IMM:0x1,UIMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788200",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0xffff,IMM:0xffff,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788156",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0x100,IMM:0x100,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788160",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X15=0,IMM:0,"
+        },
+        {
+          "instr": "INSERT_XD",
+          "addr": "288788220",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0,IMM:0,POSITION:0x38,EXT:0,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788168",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x20,IMM:0x20,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288788216",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100000000000000,SPR:CTRL,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788176",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x101,IMM:0x101,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788208",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0x180,IMM:0x180,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788204",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0xffffffff,IMM:0xffff,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788180",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x8010101,IMM:0x801,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788184",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x80808010101,IMM:0x808,UIMM:0x2,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788188",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100080808010101,IMM:0x100,UIMM:0x3,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787932",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X17=0x8000,IMM:0x8000,"
+        },
+        {
+          "instr": "INSERT_XD",
+          "addr": "288787988",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,IMM:0,POSITION:0x38,EXT:0,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787984",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,SPR:CTRL,"
+        },
+        {
+          "instr": "INSERT_XD_XN",
+          "addr": "288787976",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,XN:X4=0,IMM:0x6,UIMM:0x2,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787972",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,SPR:CTRL,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787960",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0,IMM:0,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787956",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x1022fe00,SPR:PARA_BASE,"
+        },
+        {
+          "instr": "ADD_IMM",
+          "addr": "288787952",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X30=0x1c8728,XN:X29=0x1c7fa0,IMM:0x788,"
+        },
+        {
+          "instr": "NEG",
+          "addr": "288787936",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X0=0xffffffffffffffff,XN:X0=0x1,"
+        },
+        {
+          "instr": "INSERT_XD",
+          "addr": "288788124",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100000000000000,IMM:0x1,POSITION:0x38,EXT:0,"
+        },
+        {
+          "instr": "AND",
+          "addr": "288787928",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:B64,XD:X15=0x18,XN:X15=0x18,XM:X16=0x7fff,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787924",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X0=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787920",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X16=0x7fff,IMM:0x7fff,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787916",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X15=0x18,SPR:COREID,"
+        },
+        {
+          "instr": "ADD",
+          "addr": "288787912",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X29=0x107fa0,XN:X29=0x107fa0,XM:X15=0,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787908",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X15=0,SPR:SYS_VA_BASE,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787900",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X29=0x7fa0,IMM:0x7fa0,"
+        },
+        {
+          "instr": "ADD_IMM",
+          "addr": "288787996",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X3=0x11315840,XN:X2=0x11315800,IMM:0x40,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288788120",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0,SPR:CTRL,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788100",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x40,IMM:0x40,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788096",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X1=0,IMM:0,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788084",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X5=0x40,IMM:0x40,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788080",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0,IMM:0,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788076",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0x400010,IMM:0x40,UIMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788072",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0x10,IMM:0x10,"
+        },
+        {
+          "instr": "ADD_IMM",
+          "addr": "288788044",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X3=0x11315a40,XN:X1=0x11315a00,IMM:0x40,"
+        },
+        {
+          "instr": "NEG",
+          "addr": "288788008",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X5=0xffffffffffffffff,XN:X5=0x1,"
+        },
+        {
+          "instr": "CMP",
+          "addr": "288788004",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XN:X3=0x11315840,XM:X1=0x11315a00,cond_op:NE,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788000",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X5=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "JUMPCMP",
+          "addr": "288788048",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "TargetPC:0,CMP_dtype:S64,XN:X3=0x11315a40,Condition_op:1,FC_type:IMM,IMM:0x6CMP_type:REG,XM:X2=0x11315800,"
+        },
+        {
+          "instr": "JUMPC",
+          "addr": "288788020",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "TargetPC:0x11368e38,cond_flag:1"
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288788224",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X2=0,"
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288787980",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X3=0,"
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288787992",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X3=0,"
+        },
+        {
+          "instr": "NOP",
+          "addr": "288788268",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": ""
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288788128",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X2=0x100000000000000,"
+        },
+        {
+          "instr": "END",
+          "addr": "288788276",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "path": "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/sim/baseline-case0/profile/OPPROF_20261010171210_GCGPCOSKKHNBVCGT/_ZN13batch_max_sum12ComputeDot32IDhEEvPhS1_S1_/1/simulator/core0.veccore0/core0.veccore0_instr_exe_20261010171212689.csv",
+      "copyin": 2,
+      "copyout": 1,
+      "instructions": [
+        {
+          "instr": "LD_XD_XN_IMM",
+          "addr": "288787968",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "362",
+          "running_time(us)": "0.200000",
+          "detail": "dtype:B64,XD:X2=0,XN:X2=0x1022fe00,IMM:0,"
+        },
+        {
+          "instr": "LDP_XI_XJ_XN",
+          "addr": "288787964",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "362",
+          "running_time(us)": "0.200000",
+          "detail": "dtype:B64,XI:X1=0,XJ:X0=0,XN:X2=0x1022fe00,IMM:0x8,"
+        },
+        {
+          "instr": "WAIT_FLAG",
+          "addr": "288788260",
+          "pipe": "MTE3",
+          "call_count": "1",
+          "cycles": "344",
+          "running_time(us)": "0.190000",
+          "detail": "PIPE:VEC,TRIGGERPIPE:MTE3,FLAGID:0,"
+        },
+        {
+          "instr": "BAR",
+          "addr": "288788244",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "304",
+          "running_time(us)": "0.170000",
+          "detail": "PIPE:VEC"
+        },
+        {
+          "instr": "BAR",
+          "addr": "288788192",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "288",
+          "running_time(us)": "0.160000",
+          "detail": "PIPE:VEC"
+        },
+        {
+          "instr": "MOV_SRC_TO_DST_ALIGN",
+          "addr": "288788092",
+          "pipe": "MTE2",
+          "call_count": "1",
+          "cycles": "279",
+          "running_time(us)": "0.160000",
+          "detail": "Src:OUT,Dst:UB,XD:X5=0x40,XN:X1=0x11315a00,XM:X3=0x400010,XT:X4=0,Dtype:B16,id:5"
+        },
+        {
+          "instr": "BAR",
+          "addr": "288788112",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "278",
+          "running_time(us)": "0.150000",
+          "detail": "PIPE:VEC"
+        },
+        {
+          "instr": "WAIT_FLAG",
+          "addr": "288788108",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "278",
+          "running_time(us)": "0.150000",
+          "detail": "PIPE:MTE2,TRIGGERPIPE:VEC,FLAGID:0,"
+        },
+        {
+          "instr": "SET_FLAG",
+          "addr": "288788104",
+          "pipe": "MTE2",
+          "call_count": "1",
+          "cycles": "278",
+          "running_time(us)": "0.150000",
+          "detail": "PIPE:MTE2,TRIGGERPIPE:VEC,FLAGID:0,"
+        },
+        {
+          "instr": "MOV_SRC_TO_DST_ALIGN",
+          "addr": "288788088",
+          "pipe": "MTE2",
+          "call_count": "1",
+          "cycles": "278",
+          "running_time(us)": "0.150000",
+          "detail": "Src:OUT,Dst:UB,XD:X4=0,XN:X2=0x11315800,XM:X3=0x400010,XT:X4=0,Dtype:B16,id:4"
+        },
+        {
+          "instr": "MOV_SRC_TO_DST_ALIGN",
+          "addr": "288788264",
+          "pipe": "MTE3",
+          "call_count": "1",
+          "cycles": "231",
+          "running_time(us)": "0.130000",
+          "detail": "Src:UB,Dst:OUT,XD:X0=0x11315c40,XN:X4=0x180,XM:X2=0x40010,XT:X1=0,Dtype:B32,id:6"
+        },
+        {
+          "instr": "VCADD",
+          "addr": "288788248",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "42",
+          "running_time(us)": "0.020000",
+          "detail": "XD:X4=0x180,XN:X3=0x80,XT:X2=0x100000400010001,Dtype:F32,Id:246"
+        },
+        {
+          "instr": "SET_FLAG",
+          "addr": "288788256",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "41",
+          "running_time(us)": "0.020000",
+          "detail": "PIPE:VEC,TRIGGERPIPE:MTE3,FLAGID:0,"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788212",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "23",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X2=0xffffffff,Pos:0,Id:237"
+        },
+        {
+          "instr": "VMUL",
+          "addr": "288788196",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "23",
+          "running_time(us)": "0.010000",
+          "detail": "XD:X3=0x80,XN:X3=0x80,XM:X4=0x100,XT:X2=0x100080808010101,Dtype:F32,Id:233"
+        },
+        {
+          "instr": "VCONV",
+          "addr": "288788164",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "20",
+          "running_time(us)": "0.010000",
+          "detail": "XD:X3=0x80,XN:X1=0,XT:X2=0x100040800010001,Conv_type:F16_F32,Id:225"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788172",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "20",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X2=0x20,Pos:0,Id:227"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788016",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X5=0xffffffffffffffff,Pos:0,Id:156"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788012",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X5=0xffffffffffffffff,Pos:1,Id:155"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288787948",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X0=0xffffffffffffffff,Pos:1,Id:139"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788152",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X1=0,Pos:1,Id:222"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288787944",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X0=0xffffffffffffffff,Pos:0,Id:138"
+        },
+        {
+          "instr": "MOVEMASK",
+          "addr": "288788116",
+          "pipe": "VECTOR",
+          "call_count": "1",
+          "cycles": "16",
+          "running_time(us)": "0.010000",
+          "detail": "XN:X2=0x40,Pos:0,Id:213"
+        },
+        {
+          "instr": "DCCI",
+          "addr": "288788272",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "5",
+          "running_time(us)": "0.000000",
+          "detail": "XN:X15=0,"
+        },
+        {
+          "instr": "MADD",
+          "addr": "288787940",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "3",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X29=0x1c7fa0,XN:X15=0x18,XM:X17=0x8000,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788228",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788132",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788136",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x10001,IMM:0x1,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788140",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x40800010001,IMM:0x408,UIMM:0x2,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288787904",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X29=0x107fa0,IMM:0x10,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVX8_XD_IMM",
+          "addr": "288788252",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x40010,IMM:0x8002,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788240",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100000400010001,IMM:0x100,UIMM:0x3,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788236",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x400010001,IMM:0x4,UIMM:0x2,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788144",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100040800010001,IMM:0x100,UIMM:0x3,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788148",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0x80,IMM:0x80,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788232",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x10001,IMM:0x1,UIMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788200",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0xffff,IMM:0xffff,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788156",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0x100,IMM:0x100,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788160",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X15=0,IMM:0,"
+        },
+        {
+          "instr": "INSERT_XD",
+          "addr": "288788220",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0,IMM:0,POSITION:0x38,EXT:0,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788168",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x20,IMM:0x20,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288788216",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100000000000000,SPR:CTRL,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788176",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x101,IMM:0x101,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788208",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0x180,IMM:0x180,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788204",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0xffffffff,IMM:0xffff,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788180",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x8010101,IMM:0x801,UIMM:0x1,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788184",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x80808010101,IMM:0x808,UIMM:0x2,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788188",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100080808010101,IMM:0x100,UIMM:0x3,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787932",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X17=0x8000,IMM:0x8000,"
+        },
+        {
+          "instr": "INSERT_XD",
+          "addr": "288787988",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,IMM:0,POSITION:0x38,EXT:0,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787984",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,SPR:CTRL,"
+        },
+        {
+          "instr": "INSERT_XD_XN",
+          "addr": "288787976",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,XN:X4=0,IMM:0x6,UIMM:0x2,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787972",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0,SPR:CTRL,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787960",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0,IMM:0,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787956",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x1022fe00,SPR:PARA_BASE,"
+        },
+        {
+          "instr": "ADD_IMM",
+          "addr": "288787952",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X30=0x1c8728,XN:X29=0x1c7fa0,IMM:0x788,"
+        },
+        {
+          "instr": "NEG",
+          "addr": "288787936",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X0=0xffffffffffffffff,XN:X0=0x1,"
+        },
+        {
+          "instr": "INSERT_XD",
+          "addr": "288788124",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x100000000000000,IMM:0x1,POSITION:0x38,EXT:0,"
+        },
+        {
+          "instr": "AND",
+          "addr": "288787928",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:B64,XD:X15=0x18,XN:X15=0x18,XM:X16=0x7fff,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787924",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X0=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787920",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X16=0x7fff,IMM:0x7fff,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787916",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X15=0x18,SPR:COREID,"
+        },
+        {
+          "instr": "ADD",
+          "addr": "288787912",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X29=0x107fa0,XN:X29=0x107fa0,XM:X15=0,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288787908",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X15=0,SPR:SYS_VA_BASE,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288787900",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X29=0x7fa0,IMM:0x7fa0,"
+        },
+        {
+          "instr": "ADD_IMM",
+          "addr": "288787996",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X3=0x11315840,XN:X2=0x11315800,IMM:0x40,"
+        },
+        {
+          "instr": "MOV_XD_SPR",
+          "addr": "288788120",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0,SPR:CTRL,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788100",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X2=0x40,IMM:0x40,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788096",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X1=0,IMM:0,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788084",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X5=0x40,IMM:0x40,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788080",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X4=0,IMM:0,"
+        },
+        {
+          "instr": "MOVK",
+          "addr": "288788076",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0x400010,IMM:0x40,UIMM:0x1,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788072",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X3=0x10,IMM:0x10,"
+        },
+        {
+          "instr": "ADD_IMM",
+          "addr": "288788044",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X3=0x11315a40,XN:X1=0x11315a00,IMM:0x40,"
+        },
+        {
+          "instr": "NEG",
+          "addr": "288788008",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XD:X5=0xffffffffffffffff,XN:X5=0x1,"
+        },
+        {
+          "instr": "CMP",
+          "addr": "288788004",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "dtype:S64,XN:X3=0x11315840,XM:X1=0x11315a00,cond_op:NE,"
+        },
+        {
+          "instr": "MOV_XD_IMM",
+          "addr": "288788000",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "1",
+          "running_time(us)": "0.000000",
+          "detail": "XD:X5=0x1,IMM:0x1,"
+        },
+        {
+          "instr": "JUMPCMP",
+          "addr": "288788048",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "TargetPC:0,CMP_dtype:S64,XN:X3=0x11315a40,Condition_op:1,FC_type:IMM,IMM:0x6CMP_type:REG,XM:X2=0x11315800,"
+        },
+        {
+          "instr": "JUMPC",
+          "addr": "288788020",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "TargetPC:0x11368e38,cond_flag:1"
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288788224",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X2=0,"
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288787980",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X3=0,"
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288787992",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X3=0,"
+        },
+        {
+          "instr": "NOP",
+          "addr": "288788268",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": ""
+        },
+        {
+          "instr": "MOV_SPR_XN",
+          "addr": "288788128",
+          "pipe": "SCALAR",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": "SPR:CTRL,XN:X2=0x100000000000000,"
+        },
+        {
+          "instr": "END",
+          "addr": "288788276",
+          "pipe": "FLOWCTRL",
+          "call_count": "1",
+          "cycles": "0",
+          "running_time(us)": "0.000000",
+          "detail": ""
+        }
+      ]
+    }
+  ],
+  "timings": [
+    [
+      "core0.veccore0",
+      "0.62",
+      "0.61"
+    ],
+    [
+      "core0.veccore0",
+      "0.55",
+      "0.55"
+    ]
+  ]
+}

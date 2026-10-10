@@ -1,0 +1,50 @@
+[
+  {
+    "cores": "baseline",
+    "seconds": 35.477960091026034,
+    "exit_code": 0,
+    "source_sha256": "e37d0733f385dc0b03bd5070c7399ebe148617df86986391a2a95175ac4b8cd9",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/baseline-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/libbaseline.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "9a14aa73f266f7fc132a02dce09a958fee51fac30b7494f5bef260cc15f0584b"
+  },
+  {
+    "cores": "four",
+    "seconds": 34.61322558997199,
+    "exit_code": 0,
+    "source_sha256": "4367cd4b29dc79e0b1fc3c05224b7d6e23be1d2fd6a5b7710c76bc4f9ab8aaa9",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/four-bridge.asc",
+      "-o",
+      "/mnt/newdisk/code/CANN-challenge/Build/point1-four-core-full-20261010/libfour.so",
+      "-ltiling_api",
+      "-lregister",
+      "-lplatform",
+      "-lunified_dlog",
+      "-ldl",
+      "-lm",
+      "-lgraph_base"
+    ],
+    "library_sha256": "257a72bbfa2809298d5f4b3018a37b0ca412f0e715797fcc3e4480123a34d325"
+  }
+]
