@@ -1,0 +1,646 @@
+[
+  {
+    "point": 2,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": {
+      "name": "点14-64行x256列",
+      "rows": 64,
+      "line": 1024,
+      "pitch": 2048,
+      "dstGap": 0,
+      "coverage": "点14实际分行整块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 1024,
+      "payloadBytes": 65536,
+      "readBytes": 65536
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point2-validated/profile/OPPROF_20261010144924_VJVVYFIJRSVCNAQI/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249052,
+        "sha256": "245f13bb64021b5ae462a85dac46bfec541b492d5a2b1c8c54bb1393ff29288c"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point2-validated/profile/OPPROF_20261010144924_VJVVYFIJRSVCNAQI/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247380,
+        "sha256": "2a1a167710d88882bc297bc3d9e62ed5dc9de6c08c4a3defbb336bb501eeb9fb"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.8,
+        "running_us": 0.79
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.68,
+        "running_us": 0.67
+      }
+    ]
+  },
+  {
+    "point": 3,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": {
+      "name": "点15-8组x2048B",
+      "rows": 8,
+      "line": 2048,
+      "pitch": 16384,
+      "dstGap": 0,
+      "coverage": "点15实际分组；读取源部分矩阵",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 2048,
+      "payloadBytes": 16384,
+      "readBytes": 16384
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point3-validated/profile/OPPROF_20261010144928_CBHBEDQIPDMWCOFE/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244456,
+        "sha256": "787a086b2bea7e27eaba5540baf1f5494cc366d4e6f9cdd32ac65cb3216dee40"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point3-validated/profile/OPPROF_20261010144928_CBHBEDQIPDMWCOFE/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242760,
+        "sha256": "4bc9fa330853ecac5d19fe8d93abb1e92e9fe8324180e6ef49412216856f2423"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.52,
+        "running_us": 0.51
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.46,
+        "running_us": 0.45
+      }
+    ]
+  },
+  {
+    "point": 4,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": {
+      "name": "点15-8组x2048B",
+      "rows": 8,
+      "line": 2048,
+      "pitch": 16384,
+      "dstGap": 0,
+      "coverage": "点15实际分组；读取源部分矩阵",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 2048,
+      "payloadBytes": 16384,
+      "readBytes": 16384
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point4-validated/profile/OPPROF_20261010144933_OMWJFFVJDBOUEENC/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249064,
+        "sha256": "e39407c57b966b6651e7d497f5b40d56c25e46f8040db3ff8252cc46a6eb8691"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point4-validated/profile/OPPROF_20261010144933_OMWJFFVJDBOUEENC/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247368,
+        "sha256": "af9cc7c4fda1f0de2c64ebdc844dac2b63bcc46b4d97145dbfc681cba4a813b7"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.52,
+        "running_us": 0.51
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.46,
+        "running_us": 0.45
+      }
+    ]
+  },
+  {
+    "point": 5,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": {
+      "name": "连续1216B",
+      "rows": 1,
+      "line": 1216,
+      "pitch": 1216,
+      "dstGap": 0,
+      "coverage": "点9最终部分结果合并",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 1216,
+      "payloadBytes": 1216,
+      "readBytes": 1216
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point5-validated/profile/OPPROF_20261010144937_AIBJQIHACDSUADJE/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244388,
+        "sha256": "459dc4950eb6c0f1665981c40d8c07abf615caf3208cc913e0edd18141010d97"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point5-validated/profile/OPPROF_20261010144937_AIBJQIHACDSUADJE/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242704,
+        "sha256": "8c814a06b6424df31bf43a8f7394a342a0207dbee692498e0a08504458eec623"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.45,
+        "running_us": 0.45
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.39,
+        "running_us": 0.39
+      }
+    ]
+  },
+  {
+    "point": 6,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": {
+      "name": "连续1216B",
+      "rows": 1,
+      "line": 1216,
+      "pitch": 1216,
+      "dstGap": 0,
+      "coverage": "点9最终部分结果合并",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 1216,
+      "payloadBytes": 1216,
+      "readBytes": 1216
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point6-validated/profile/OPPROF_20261010144941_TUEVPNQFTZLPIEZM/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249048,
+        "sha256": "61c0c4c165e09667e990d367948766439b06f2478b3ca22437b8b58f9da3db00"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point6-validated/profile/OPPROF_20261010144941_TUEVPNQFTZLPIEZM/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247376,
+        "sha256": "e6fed46f5e6357b32d5b93830bb382f2b3706fd2db02628a0b0801fb183def7b"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.46,
+        "running_us": 0.45
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.4,
+        "running_us": 0.39
+      }
+    ]
+  },
+  {
+    "point": 7,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": {
+      "name": "连续3072B",
+      "rows": 1,
+      "line": 3072,
+      "pitch": 3072,
+      "dstGap": 0,
+      "coverage": "点11分N部分结果合并",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 3072,
+      "payloadBytes": 3072,
+      "readBytes": 3072
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point7-validated/profile/OPPROF_20261010144945_YXORGADTLKNNFDQP/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244372,
+        "sha256": "a599e43ce4320540ec9a511c8087c687662f53b2d6a9501f302fd31e33ea7c7c"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point7-validated/profile/OPPROF_20261010144945_YXORGADTLKNNFDQP/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242708,
+        "sha256": "7d42043556c99ce3d857a49a36b0ff8eefa7eb14353ca08055d84413cf17d657"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.46,
+        "running_us": 0.45
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.4,
+        "running_us": 0.39
+      }
+    ]
+  },
+  {
+    "point": 8,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": {
+      "name": "连续3072B",
+      "rows": 1,
+      "line": 3072,
+      "pitch": 3072,
+      "dstGap": 0,
+      "coverage": "点11分N部分结果合并",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 3072,
+      "payloadBytes": 3072,
+      "readBytes": 3072
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point8-validated/profile/OPPROF_20261010144949_UUIEHNZJQFFZYQEC/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249036,
+        "sha256": "206b89d99ec0f2268780a0a71ad44373a1ac0e8a1283bf3a8e70ee68074a5dcf"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point8-validated/profile/OPPROF_20261010144949_UUIEHNZJQFFZYQEC/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247372,
+        "sha256": "fac53899eb024ff7f7595bcd075a5cf43b21e13876f2a6512121baa827c3888a"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.47,
+        "running_us": 0.46
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.4,
+        "running_us": 0.4
+      }
+    ]
+  },
+  {
+    "point": 9,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": null,
+    "exit_code": 0,
+    "copy_counts": [
+      0,
+      0
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point9-validated/profile/OPPROF_20261010144954_ZXVFAUHPQIUZHOQB/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 74136,
+        "sha256": "efffaf766cc20d12b25cd0680512163b4d222aa8b8a63887fd70620a1096a57d"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point9-validated/profile/OPPROF_20261010144954_ZXVFAUHPQIUZHOQB/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 72468,
+        "sha256": "a67c3c1b40c1152353304dbfaa34fc58183466d18be0878582bbf37ea553605b"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.21,
+        "running_us": 0.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.22,
+        "running_us": 0.21
+      }
+    ]
+  },
+  {
+    "point": 10,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": null,
+    "exit_code": 0,
+    "copy_counts": [
+      0,
+      0
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point10-validated/profile/OPPROF_20261010144958_ZKEXEGYXZQJFILTT/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 74136,
+        "sha256": "616acc7b671d5e15a456458af7662de9c6c97bb9fc5b759699e3c5532a601b3b"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point10-validated/profile/OPPROF_20261010144958_ZKEXEGYXZQJFILTT/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 72472,
+        "sha256": "6199d109be20837ecc4a10508e0a7706b6fb15a74ee13b364c85967e122027d9"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.21,
+        "running_us": 0.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.22,
+        "running_us": 0.21
+      }
+    ]
+  },
+  {
+    "point": 11,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": null,
+    "exit_code": 0,
+    "copy_counts": [
+      0,
+      0
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point11-validated/profile/OPPROF_20261010145002_WARZBJQIOGGOIMNS/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 74124,
+        "sha256": "0fc3eb24e2482b15cfc34efe361f00d8fba45ca5ad9211c9c1a36eee52ec2b97"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point11-validated/profile/OPPROF_20261010145002_WARZBJQIOGGOIMNS/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 72452,
+        "sha256": "b6d225e6e2dc2fa31ddc9a440fe1061853d6d8a38b17fb49770e93442bd6f6d2"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.21,
+        "running_us": 0.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.22,
+        "running_us": 0.21
+      }
+    ]
+  },
+  {
+    "point": 12,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": null,
+    "exit_code": 0,
+    "copy_counts": [
+      0,
+      0
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point12-validated/profile/OPPROF_20261010145006_KAAVRTMDNXIZHLLI/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 74132,
+        "sha256": "c7cd0df1ad53269b35d3209b80ee62e934432a17e61b6b5d3aea4061dcb9d81d"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point12-validated/profile/OPPROF_20261010145006_KAAVRTMDNXIZHLLI/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 72468,
+        "sha256": "54d02a143d173a742469b6c79c0ae9290bf3cae6bf0a448b66e82469f8989ff6"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.21,
+        "running_us": 0.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.22,
+        "running_us": 0.21
+      }
+    ]
+  },
+  {
+    "point": 13,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": null,
+    "exit_code": 0,
+    "copy_counts": [
+      0,
+      0
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point13-validated/profile/OPPROF_20261010145010_MGYCOLSRCJMKCJCV/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 74156,
+        "sha256": "04f4edeab2fa502d23d553e675dcc73bbdbb899875f3b8a04e65ebb74c1d8d28"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point13-validated/profile/OPPROF_20261010145010_MGYCOLSRCJMKCJCV/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 72468,
+        "sha256": "8e0739c5726d83c441e7ed55cd618436bf2859ba4d065b88abe213ed9aa29f01"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.21,
+        "running_us": 0.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.22,
+        "running_us": 0.21
+      }
+    ]
+  },
+  {
+    "point": 14,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": null,
+    "exit_code": 0,
+    "copy_counts": [
+      0,
+      0
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point14-validated/profile/OPPROF_20261010145015_IONJWEWRPFMDEXKR/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 74136,
+        "sha256": "6d33d38c3edb1810b6bbc77322c8a8ed925739dcaffe282dbd0e0f1f7ae3e8ae"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point14-validated/profile/OPPROF_20261010145015_IONJWEWRPFMDEXKR/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 72464,
+        "sha256": "9bf150b545f5a641fde722bc9c1eda93af8403250dd065e65945e88b17c26c73"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.21,
+        "running_us": 0.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.22,
+        "running_us": 0.21
+      }
+    ]
+  },
+  {
+    "point": 15,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 7,
+    "configuration": null,
+    "exit_code": 0,
+    "copy_counts": [
+      0,
+      0
+    ],
+    "source_sha256": "fbcc2ee8873d20cb4f4a29de7c8e164df26caf2f38a1f930e8d4843fc7914c05",
+    "library_sha256": "a63be3541dfc46473bae7bb7ce4388585fa96cbd73d2234afac92616624077bb",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point15-validated/profile/OPPROF_20261010145019_BAFWPDFRNDQOJFMW/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 74136,
+        "sha256": "d4669d03282557b448dc60ff7cdae812944e684200bce7948688f1156d7c8c71"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch7-point15-validated/profile/OPPROF_20261010145019_BAFWPDFRNDQOJFMW/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 72472,
+        "sha256": "bd7745e24658b5897c95066baa0d0b52489813307fc6bdacefe36379239f1413"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.21,
+        "running_us": 0.21
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.22,
+        "running_us": 0.21
+      }
+    ]
+  }
+]

@@ -1,0 +1,730 @@
+[
+  {
+    "point": 2,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "连续131072B",
+      "rows": 1,
+      "line": 131072,
+      "pitch": 131072,
+      "dstGap": 0,
+      "coverage": "范围采样，不是实际单次搬入量",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 131072,
+      "payloadBytes": 131072,
+      "readBytes": 131072
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point2-validated/profile/OPPROF_20261010144729_GGUEXJSGGBVOWMTR/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249104,
+        "sha256": "52bfd5850f1bbe57434a983299f24911604dad92dc67e769f5b9c84cb813e9a5"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point2-validated/profile/OPPROF_20261010144729_GGUEXJSGGBVOWMTR/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247412,
+        "sha256": "ded329490bbacffadc109ea5b6909ca1440585701b896249f419d9b18c4a3117"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.21,
+        "running_us": 1.2
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.96,
+        "running_us": 0.95
+      }
+    ]
+  },
+  {
+    "point": 3,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "连续196608B",
+      "rows": 1,
+      "line": 196608,
+      "pitch": 196608,
+      "dstGap": 0,
+      "coverage": "范围上界采样，不是实际单次搬入量",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 196608,
+      "payloadBytes": 196608,
+      "readBytes": 196608
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point3-validated/profile/OPPROF_20261010144733_EIYLXKTWBMFFCTBL/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244496,
+        "sha256": "bc1598f480b31f3a9a04895f306e985ca6107c5c94d20f04e41035a0f778837a"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point3-validated/profile/OPPROF_20261010144733_EIYLXKTWBMFFCTBL/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242792,
+        "sha256": "54efc7e91d3fbf188e072ef1f25c5cb0ad43c4df6c5f94bf8527db70c5be3a6e"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.61,
+        "running_us": 1.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.24,
+        "running_us": 1.24
+      }
+    ]
+  },
+  {
+    "point": 4,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "连续196608B",
+      "rows": 1,
+      "line": 196608,
+      "pitch": 196608,
+      "dstGap": 0,
+      "coverage": "范围上界采样，不是实际单次搬入量",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 196608,
+      "payloadBytes": 196608,
+      "readBytes": 196608
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point4-validated/profile/OPPROF_20261010144737_SFTOXZMDKXCMHMKO/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249096,
+        "sha256": "fa4ff332d0aaa75a1bf776c48dbf7df71482204d25c844d995b2bf3cf3015cde"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point4-validated/profile/OPPROF_20261010144737_SFTOXZMDKXCMHMKO/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247416,
+        "sha256": "007ed5ee6fef43238468dda1e3d111ed663f55fc0d4ad4a48a6b79fc2a9b47a8"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.62,
+        "running_us": 1.61
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.25,
+        "running_us": 1.24
+      }
+    ]
+  },
+  {
+    "point": 5,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-32行x112列",
+      "rows": 32,
+      "line": 448,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 448,
+      "payloadBytes": 14336,
+      "readBytes": 14336
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point5-validated/profile/OPPROF_20261010144741_YMPWYOSDLHYSESKK/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244464,
+        "sha256": "f92a7b33acca85582fa48f2716984a20c7b634272b1ebe0b75437733931e307f"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point5-validated/profile/OPPROF_20261010144741_YMPWYOSDLHYSESKK/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242792,
+        "sha256": "2917df0665c47b15b55ab64212a2d7938541132b96c6a5ec716dd6e80d3f4280"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.74,
+        "running_us": 0.74
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.54
+      }
+    ]
+  },
+  {
+    "point": 6,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-32行x112列",
+      "rows": 32,
+      "line": 448,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 448,
+      "payloadBytes": 14336,
+      "readBytes": 14336
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point6-validated/profile/OPPROF_20261010144745_BPPMXZEJZKPUQTEK/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249112,
+        "sha256": "118ae7b0ca2661e9c236febe6d376fb18889091ca6575a394a74d43a8dbf1495"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point6-validated/profile/OPPROF_20261010144745_BPPMXZEJZKPUQTEK/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247428,
+        "sha256": "56bd19e98995a9fb60e0d426a6102654a0619721f29000a71d47012a5031c4d8"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.75,
+        "running_us": 0.74
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.54
+      }
+    ]
+  },
+  {
+    "point": 7,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-32行x64列",
+      "rows": 32,
+      "line": 256,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 256,
+      "payloadBytes": 8192,
+      "readBytes": 8192
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point7-validated/profile/OPPROF_20261010144750_MOEQFBOFPFDSDUVH/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244480,
+        "sha256": "b40598af2d7dc6b2a9d4dc047535844af069bedb5a3d8e7df07656ad99ed7728"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point7-validated/profile/OPPROF_20261010144750_MOEQFBOFPFDSDUVH/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242792,
+        "sha256": "eca0c31efa9ff494cedf09f6d3e43298a2cf44a4eb00577b412af5b770167040"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.72,
+        "running_us": 0.72
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.53,
+        "running_us": 0.52
+      }
+    ]
+  },
+  {
+    "point": 8,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-32行x64列",
+      "rows": 32,
+      "line": 256,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 256,
+      "payloadBytes": 8192,
+      "readBytes": 8192
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point8-validated/profile/OPPROF_20261010144754_HQRLIOEDHLJLBKNE/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249108,
+        "sha256": "fa4952e98a67342dd5094083ac86073e71fbcc5790206ee280412026a44a6839"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point8-validated/profile/OPPROF_20261010144754_HQRLIOEDHLJLBKNE/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247424,
+        "sha256": "3be9afa42004217c4b7c46b9cc17198d90bcc3188c33dffccb28013020cbf46a"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.73,
+        "running_us": 0.72
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.53,
+        "running_us": 0.52
+      }
+    ]
+  },
+  {
+    "point": 9,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-32行x71列",
+      "rows": 32,
+      "line": 284,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 288,
+      "payloadBytes": 9088,
+      "readBytes": 9216
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point9-validated/profile/OPPROF_20261010144757_BGUPRSTDYONXLDTE/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244456,
+        "sha256": "24503695caab47792139c9f3f2784a14d4e41898548d2b0e088ee99561481cfe"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point9-validated/profile/OPPROF_20261010144757_BGUPRSTDYONXLDTE/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242780,
+        "sha256": "311bca78cb44fc0fed197830b12b59309ac2f657c33004ca43fb216666cf6fa2"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.73,
+        "running_us": 0.73
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.53
+      }
+    ]
+  },
+  {
+    "point": 10,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-32行x71列",
+      "rows": 32,
+      "line": 284,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 284,
+      "payloadBytes": 9088,
+      "readBytes": 9088
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point10-validated/profile/OPPROF_20261010144801_OGJNJTHTTUKNMJVD/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249128,
+        "sha256": "ed20e31e83a614f79ca2eda3a3fccd6629a860df48fcd9b500e96ae02ec400e3"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point10-validated/profile/OPPROF_20261010144801_OGJNJTHTTUKNMJVD/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247448,
+        "sha256": "c9a4260c24efab6c8f54624872a783510c68eb54528a525e22467399af8cdc88"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.94,
+        "running_us": 0.93
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.54
+      }
+    ]
+  },
+  {
+    "point": 11,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-32行x71列",
+      "rows": 32,
+      "line": 284,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 1,
+      "pad": true,
+      "actualLine": 284,
+      "payloadBytes": 9088,
+      "readBytes": 9088
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point11-validated/profile/OPPROF_20261010144805_PTFOOIBKBXHKZWNZ/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 251216,
+        "sha256": "a67adf32dee5a93ff3056973d6abaad63c5cc396953c1d7a11f58a5cd267b5a0"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point11-validated/profile/OPPROF_20261010144805_PTFOOIBKBXHKZWNZ/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 249540,
+        "sha256": "055ce986e3ec39b03872b3b53b1306901d14fbe8067e84b9e1059a16399e910a"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.94,
+        "running_us": 0.93
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.54,
+        "running_us": 0.54
+      }
+    ]
+  },
+  {
+    "point": 12,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-1行x112列",
+      "rows": 1,
+      "line": 448,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 448,
+      "payloadBytes": 448,
+      "readBytes": 448
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point12-validated/profile/OPPROF_20261010144810_NSXUMYYPHZAYYJII/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244460,
+        "sha256": "2f9ae0233f843f59f1dee8e64f0a41ebdce252a2023965b44396cc9174e92bc2"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point12-validated/profile/OPPROF_20261010144810_NSXUMYYPHZAYYJII/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242780,
+        "sha256": "6e77418a19fc4856028c8dc4fc802eb15c3fa86f39371cf28954481ed85ffa0b"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.45,
+        "running_us": 0.44
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.39,
+        "running_us": 0.38
+      }
+    ]
+  },
+  {
+    "point": 13,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-1行x112列",
+      "rows": 1,
+      "line": 448,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 448,
+      "payloadBytes": 448,
+      "readBytes": 448
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point13-validated/profile/OPPROF_20261010144814_KQIRZDRWCHGJYYXO/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249080,
+        "sha256": "b4ef4fce3b2c66c2f8ba3631c61772da5efe41c1ce17cf478dfb609ebaa65a52"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point13-validated/profile/OPPROF_20261010144814_KQIRZDRWCHGJYYXO/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247412,
+        "sha256": "61540eb5ec2be884c6eb5046dd3809f1c3eb0971c9b06bb01569dc711ffd1357"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.45,
+        "running_us": 0.44
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.39,
+        "running_us": 0.38
+      }
+    ]
+  },
+  {
+    "point": 14,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-1行x64列",
+      "rows": 1,
+      "line": 256,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 256,
+      "payloadBytes": 256,
+      "readBytes": 256
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point14-validated/profile/OPPROF_20261010144818_FRMCHHUPGGXIVNWH/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244448,
+        "sha256": "1a07339928bc1ed4796def31f51d815287caecc46b93111206bc49dcce9ce5cd"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point14-validated/profile/OPPROF_20261010144818_FRMCHHUPGGXIVNWH/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242780,
+        "sha256": "440bab7ab86c355310271fcb0251d6de179b5acc0f09361babcc6121d896c1e8"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.45,
+        "running_us": 0.44
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.39,
+        "running_us": 0.38
+      }
+    ]
+  },
+  {
+    "point": 15,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 5,
+    "configuration": {
+      "name": "点8-1行x64列",
+      "rows": 1,
+      "line": 256,
+      "pitch": 2112,
+      "dstGap": 0,
+      "coverage": "点8实际分行整块/尾块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 256,
+      "payloadBytes": 256,
+      "readBytes": 256
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "79d69d88c8f1712f0031a2c69c421156c05304947214210d56dc6e8337a62d56",
+    "library_sha256": "da1e635f39281a9be73444989300d91e4efb0dba5bd51eef53b8f30287376f8e",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point15-validated/profile/OPPROF_20261010144820_ADBQWKXXUXXZOWZJ/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249120,
+        "sha256": "58b08f1aaa05ee9a0e335f51e060084a6f813df954988d6481e593dc1a1c4aeb"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch5-point15-validated/profile/OPPROF_20261010144820_ADBQWKXXUXXZOWZJ/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247432,
+        "sha256": "15afe7c60f8dc8028c23dc9792ee3b89d2b99a0d68f643c2c1bdfa483d413ca3"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.45,
+        "running_us": 0.44
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.39,
+        "running_us": 0.38
+      }
+    ]
+  }
+]

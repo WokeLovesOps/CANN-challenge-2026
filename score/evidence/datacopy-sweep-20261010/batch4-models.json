@@ -1,0 +1,730 @@
+[
+  {
+    "point": 2,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续16384B",
+      "rows": 1,
+      "line": 16384,
+      "pitch": 16384,
+      "dstGap": 0,
+      "coverage": "点7相似度；点15分组合并",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 16384,
+      "payloadBytes": 16384,
+      "readBytes": 16384
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point2-validated/profile/OPPROF_20261010144630_ZLJZJMGSJYEPJLVA/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249100,
+        "sha256": "ff51268021b56a5249cdd5588ab1cc0d0504cf0ec30ad351c23b4c656694474a"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point2-validated/profile/OPPROF_20261010144630_ZLJZJMGSJYEPJLVA/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247388,
+        "sha256": "d091d84c6ff482e2ffb48ad848596eb09e8060d78a3ad5da0dafca70dc3e80b5"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.52,
+        "running_us": 0.51
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.46,
+        "running_us": 0.45
+      }
+    ]
+  },
+  {
+    "point": 3,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续32768B",
+      "rows": 1,
+      "line": 32768,
+      "pitch": 32768,
+      "dstGap": 0,
+      "coverage": "点11尾块；点13整块；点14整块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 32768,
+      "payloadBytes": 32768,
+      "readBytes": 32768
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point3-validated/profile/OPPROF_20261010144634_UNHLYIUYUDFDYBRT/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244480,
+        "sha256": "29991624c33732dc7eb356cff3f5115177247e14a11bd2fd2f8dbebaf0258ed1"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point3-validated/profile/OPPROF_20261010144634_UNHLYIUYUDFDYBRT/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242792,
+        "sha256": "26c29b0a9e18b48baf929d67cb333aa8c32977a2e2825c5499a7783bcc48adff"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.59,
+        "running_us": 0.58
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.53,
+        "running_us": 0.52
+      }
+    ]
+  },
+  {
+    "point": 4,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续32768B",
+      "rows": 1,
+      "line": 32768,
+      "pitch": 32768,
+      "dstGap": 0,
+      "coverage": "点11尾块；点13整块；点14整块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 32768,
+      "payloadBytes": 32768,
+      "readBytes": 32768
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point4-validated/profile/OPPROF_20261010144638_YUVYFZXRJCIXSFUD/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249084,
+        "sha256": "3b6d9b82fb0bdd54a178caa087bdbe4061e0350fe34b78572c48e83341f3ff54"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point4-validated/profile/OPPROF_20261010144638_YUVYFZXRJCIXSFUD/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247428,
+        "sha256": "40dcbc0554b869c926d575962a57ee9c4bbfc7a8475c267932a67c958d9ef41c"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.6,
+        "running_us": 0.59
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.53,
+        "running_us": 0.52
+      }
+    ]
+  },
+  {
+    "point": 5,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续36864B",
+      "rows": 1,
+      "line": 36864,
+      "pitch": 36864,
+      "dstGap": 0,
+      "coverage": "点10尾行数据量",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 36864,
+      "payloadBytes": 36864,
+      "readBytes": 36864
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point5-validated/profile/OPPROF_20261010144642_LVAWMKTFFSMLLWVE/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244492,
+        "sha256": "fa4a1df5cc7f1bd47c23d03c1394783b29f97e9958380bcbcc048306ee900bfb"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point5-validated/profile/OPPROF_20261010144642_LVAWMKTFFSMLLWVE/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242796,
+        "sha256": "421f138fd3d49c0f5add841ce46d41e89a9d4a6de725519103f3a1f1cc75b189"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.67,
+        "running_us": 0.66
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.54
+      }
+    ]
+  },
+  {
+    "point": 6,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续36864B",
+      "rows": 1,
+      "line": 36864,
+      "pitch": 36864,
+      "dstGap": 0,
+      "coverage": "点10尾行数据量",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 36864,
+      "payloadBytes": 36864,
+      "readBytes": 36864
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point6-validated/profile/OPPROF_20261010144647_OAGEWLQVRDAWUTZR/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249088,
+        "sha256": "3adc4c55f096d6f7407811479eb7c610640436d6e74d5fe81be376857c8a4308"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point6-validated/profile/OPPROF_20261010144647_OAGEWLQVRDAWUTZR/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247416,
+        "sha256": "6ce07e7927f395059e6f935039fd48a4ce8dcc4c3c713c42b12ba552e3f584a4"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.67,
+        "running_us": 0.67
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.55,
+        "running_us": 0.54
+      }
+    ]
+  },
+  {
+    "point": 7,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续49152B",
+      "rows": 1,
+      "line": 49152,
+      "pitch": 49152,
+      "dstGap": 0,
+      "coverage": "点11尾块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 49152,
+      "payloadBytes": 49152,
+      "readBytes": 49152
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point7-validated/profile/OPPROF_20261010144651_SLIOPZVRWVJVFWZQ/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244484,
+        "sha256": "e88cc955c73f2ff29c024719994052ed91f420814343b41cd0f13656dbe2b63d"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point7-validated/profile/OPPROF_20261010144651_SLIOPZVRWVJVFWZQ/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242796,
+        "sha256": "02b805d3f4625ad93a3aa9ed8a1b149731f1b40f936e4520051314cf54c56e6f"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.72,
+        "running_us": 0.72
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.6,
+        "running_us": 0.6
+      }
+    ]
+  },
+  {
+    "point": 8,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续49152B",
+      "rows": 1,
+      "line": 49152,
+      "pitch": 49152,
+      "dstGap": 0,
+      "coverage": "点11尾块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 49152,
+      "payloadBytes": 49152,
+      "readBytes": 49152
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point8-validated/profile/OPPROF_20261010144655_XMLSEVKVTXXCNJOY/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249100,
+        "sha256": "42cad9a9027aba720c1bcfe22ad97c3e28ccbce94c3c7ea8b63bee4f8a8e2a73"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point8-validated/profile/OPPROF_20261010144655_XMLSEVKVTXXCNJOY/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247376,
+        "sha256": "38c684169a1a4e0328e436ecb5d78a8c3969e2c4dd1fa7de21739441d9785e8f"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.73,
+        "running_us": 0.72
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.61,
+        "running_us": 0.6
+      }
+    ]
+  },
+  {
+    "point": 9,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续53248B",
+      "rows": 1,
+      "line": 53248,
+      "pitch": 53248,
+      "dstGap": 0,
+      "coverage": "点10整块数据量",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 53248,
+      "payloadBytes": 53248,
+      "readBytes": 53248
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point9-validated/profile/OPPROF_20261010144659_ZEAQIFOPETQXWKKA/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244488,
+        "sha256": "026895a339b4a94662cd4b2c9b843db83ea425d71a405f62d1c4d0f4f4f26d7c"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point9-validated/profile/OPPROF_20261010144659_ZEAQIFOPETQXWKKA/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242804,
+        "sha256": "ac652a7d0f81482741753fb42fcfaaec72e44a1c492832d1ddd3afe79da58e11"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.74,
+        "running_us": 0.74
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      }
+    ]
+  },
+  {
+    "point": 10,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续53248B",
+      "rows": 1,
+      "line": 53248,
+      "pitch": 53248,
+      "dstGap": 0,
+      "coverage": "点10整块数据量",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 53248,
+      "payloadBytes": 53248,
+      "readBytes": 53248
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point10-validated/profile/OPPROF_20261010144703_QPESHTZOLMAUIUWL/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249088,
+        "sha256": "20ada25e7cc60570f19eaedea8324a36a0d1920f45aaca4b3f418284008cae5c"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point10-validated/profile/OPPROF_20261010144703_QPESHTZOLMAUIUWL/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247416,
+        "sha256": "27f9eaa1ccc421a7d5c353f3cba76d33b54461a97e64b8a527f9f61f7e3bd2c6"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.75,
+        "running_us": 0.74
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.62,
+        "running_us": 0.61
+      }
+    ]
+  },
+  {
+    "point": 11,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续57344B",
+      "rows": 1,
+      "line": 57344,
+      "pitch": 57344,
+      "dstGap": 0,
+      "coverage": "点9整块数据量",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 57344,
+      "payloadBytes": 57344,
+      "readBytes": 57344
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point11-validated/profile/OPPROF_20261010144707_WGVWASTWQHMYMKGO/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244464,
+        "sha256": "2afaee0e631bb0abdda07b87f156309a63b13464445364dad63b676e09f7a990"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point11-validated/profile/OPPROF_20261010144707_WGVWASTWQHMYMKGO/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242776,
+        "sha256": "aec1987e9fb44c43fb11654dd8d2d1550f6c16fff959fa8b7a22af70a6fa6cd1"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.76,
+        "running_us": 0.75
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.64,
+        "running_us": 0.63
+      }
+    ]
+  },
+  {
+    "point": 12,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续57344B",
+      "rows": 1,
+      "line": 57344,
+      "pitch": 57344,
+      "dstGap": 0,
+      "coverage": "点9整块数据量",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 57344,
+      "payloadBytes": 57344,
+      "readBytes": 57344
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point12-validated/profile/OPPROF_20261010144712_NABHMOGSOPZXOIND/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249084,
+        "sha256": "9f565d4e994b50f7f1e1115492563dba0ed5b8d8c92e220b5f2757f7b3924db3"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point12-validated/profile/OPPROF_20261010144712_NABHMOGSOPZXOIND/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247416,
+        "sha256": "0c8f9144d3cbc8d2c8b05bf9752bec5c94caaa84d9fdd21abc41172ed4c788c4"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.76,
+        "running_us": 0.76
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.64,
+        "running_us": 0.63
+      }
+    ]
+  },
+  {
+    "point": 13,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续65536B",
+      "rows": 1,
+      "line": 65536,
+      "pitch": 65536,
+      "dstGap": 0,
+      "coverage": "点11整块",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 65536,
+      "payloadBytes": 65536,
+      "readBytes": 65536
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point13-validated/profile/OPPROF_20261010144716_OLZEQJMPNKVVMVNF/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244472,
+        "sha256": "755c2b239871a55ef841775a62924cdb6ffa4e66175e3b3a6f7b6c94323754de"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point13-validated/profile/OPPROF_20261010144716_OLZEQJMPNKVVMVNF/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242800,
+        "sha256": "a93ae236c991b5550249e411e5e6d8fed13d860d8eeb92b3d8a40c1aed829a7f"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.8,
+        "running_us": 0.79
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.67,
+        "running_us": 0.66
+      }
+    ]
+  },
+  {
+    "point": 14,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续65536B",
+      "rows": 1,
+      "line": 65536,
+      "pitch": 65536,
+      "dstGap": 0,
+      "coverage": "点11整块",
+      "mode": 1,
+      "pad": false,
+      "actualLine": 65536,
+      "payloadBytes": 65536,
+      "readBytes": 65536
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point14-validated/profile/OPPROF_20261010144720_GXIGHVZFNHAKAQKF/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 249108,
+        "sha256": "6dbf5fdb5f57a80af712f9997f3d8150cbf14b9816830acee61cca38a0fcc859"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point14-validated/profile/OPPROF_20261010144720_GXIGHVZFNHAKAQKF/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 247400,
+        "sha256": "915f94e1ec500fd885bfbf22a4cfe4b61e9f97325c09f20acb6e77862b670526"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.8,
+        "running_us": 0.79
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.68,
+        "running_us": 0.67
+      }
+    ]
+  },
+  {
+    "point": 15,
+    "passed": true,
+    "capture": false,
+    "execution": "simulator",
+    "initialization": "none",
+    "batch": 4,
+    "configuration": {
+      "name": "连续131072B",
+      "rows": 1,
+      "line": 131072,
+      "pitch": 131072,
+      "dstGap": 0,
+      "coverage": "范围采样，不是实际单次搬入量",
+      "mode": 0,
+      "pad": false,
+      "actualLine": 131072,
+      "payloadBytes": 131072,
+      "readBytes": 131072
+    },
+    "exit_code": 0,
+    "copy_counts": [
+      1,
+      1
+    ],
+    "source_sha256": "db484b420b42fdda88076966c48cc9e9ca2b515b71d341b5a6ba9dd61a7b0a99",
+    "library_sha256": "2049dfa23db2468821ea961dbd48e002f71b12b6b201441a00df78a73196f967",
+    "bins": [
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point15-validated/profile/OPPROF_20261010144724_TIOEWYQULYIEKCKV/_Z11MeasureCopyPh9CopyProbe/0/simulator/visualize_data.bin",
+        "size": 244512,
+        "sha256": "264c772672b4813a4a343c79ce39d89eba414940bfdc1ea77fe7b1d9ca9c5582"
+      },
+      {
+        "path": "/mnt/newdisk/code/CANN-challenge/Build/datacopy-sweep-20261010/sim/batch4-point15-validated/profile/OPPROF_20261010144724_TIOEWYQULYIEKCKV/_Z11MeasureCopyPh9CopyProbe/1/simulator/visualize_data.bin",
+        "size": 242816,
+        "sha256": "1a6e74c6e47247ec4d22f4db9d4c760ce24e524cccb451c64f396c99b60acbe8"
+      }
+    ],
+    "timings": [
+      {
+        "core": "core0.veccore0",
+        "duration_us": 1.2,
+        "running_us": 1.2
+      },
+      {
+        "core": "core0.veccore0",
+        "duration_us": 0.96,
+        "running_us": 0.95
+      }
+    ]
+  }
+]
