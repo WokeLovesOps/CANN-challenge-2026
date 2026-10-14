@@ -1,0 +1,29 @@
+{
+  "case": 138,
+  "label": "TN列容量回退",
+  "shape": [
+    3,
+    31,
+    129,
+    192
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "a4be5c705f62768212b1b2f7d8625df191753865fea99ca840591b2a3e417dc1",
+    "bc429c2abfe0e2b839981748ae5f53fbc3431699e89cf3523aceadc1c4d23d30"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    375.3600158691406,
+    377.72955322265625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 3.0517578125e-05
+}

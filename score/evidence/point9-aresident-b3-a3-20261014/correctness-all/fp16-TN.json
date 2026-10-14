@@ -1,0 +1,54 @@
+{
+  "commit": "candidate",
+  "execution": "real_npu",
+  "library": "/home/developer/cann-point9-aresident-b3-a3-20261014/libcandidate.so",
+  "library_sha256": "e4cf665b4e7c30bcb5f64919999752f3584847a68919e2a641509f8c278b36cf",
+  "dtype": "fp16",
+  "layout": "TN",
+  "warmup": 0,
+  "repeat": 2,
+  "call_mode": "direct",
+  "synchronization": "each_call",
+  "address_mode": "fixed",
+  "validation_calls": 1,
+  "passed": true,
+  "results": [
+    {
+      "case": 7,
+      "shape": [
+        16,
+        32,
+        128,
+        256
+      ],
+      "passed": true,
+      "input_sha256": [
+        "6c470b2262cd775c85245c6a9910e2e19914a1eee8ab30002de368dcf4032c10",
+        "071fa644d9c4e38a7619ea6604f5c3779f20b5d554bb47887e2f53e2feeeb712"
+      ],
+      "launch_begin": 0,
+      "seed": 20260937,
+      "max_abs_error": 3.0517578125e-05,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 7,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}

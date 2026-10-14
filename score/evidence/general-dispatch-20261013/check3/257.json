@@ -1,0 +1,29 @@
+{
+  "case": 257,
+  "label": "紧凑行块",
+  "shape": [
+    1,
+    2048,
+    1536,
+    1280
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "f9c4f7c6add192572b2a66f42c421bffac6aaa720d32ddd3706699ef1f436cfd",
+    "d2f4b0e39836650efc5488741096fd1d076f0589e69de6f2537dfcdd697867ec"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    82341.640625,
+    82341.640625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

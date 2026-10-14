@@ -1,0 +1,29 @@
+{
+  "case": 291,
+  "label": "TT交换表示",
+  "shape": [
+    1,
+    1536,
+    2048,
+    2048
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "0f31addb36771e1a041754af6888179adfc77c0ce3ca94ed896fb626e27b53d8",
+    "d33a5566945ac9cd3e0aabd4f606b242ac10e866e2933fd9dc104d490f4234c5"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    79897.8984375,
+    79897.8984375
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

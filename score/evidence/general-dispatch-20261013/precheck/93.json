@@ -1,0 +1,29 @@
+{
+  "case": 93,
+  "label": "NT驻留容量上界",
+  "shape": [
+    5,
+    32,
+    128,
+    256
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "82a74dc9afae9f801411210db7110214795e4bd1c15d5099dfacf4c0d3a30666",
+    "622bc30a099b4441001738278e7479b4c11847a6241764ca3b0c026c412316e9"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    425.2987060546875,
+    468.5505676269531
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

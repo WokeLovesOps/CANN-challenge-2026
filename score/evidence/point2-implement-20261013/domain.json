@@ -1,0 +1,1305 @@
+{
+  "library": "/home/developer/cann-point2-implement-20261013/libcandidate.so",
+  "library_sha256": "92c3eb99a06245b37346b3555319b369f467ff612b676415bb86c26eb426974b",
+  "execution": "real_npu",
+  "cases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+  ],
+  "capture": false,
+  "passed": false,
+  "results": [
+    {
+      "position": 0,
+      "case": 0,
+      "shape": [
+        1,
+        1,
+        1,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x1x32",
+      "passed": true,
+      "input_sha256": [
+        "38c6af78378a87081db8cd54b4f20d987ea167b3b25632cb51b2aa466e85684f",
+        "87e634649adeabefa88b73bff63d7fe6c1f518c74474cc24fe7a3a7272cc82de"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 1,
+      "case": 1,
+      "shape": [
+        1,
+        1,
+        1,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x1x40",
+      "passed": true,
+      "input_sha256": [
+        "5ce150a3c9f25c298c96ed8704c48eef8525c9cab4ff4f460042b7fae216f408",
+        "2874eb34e3fd83dfd7aaaa3a497a0bbe64e8e696e78d51563b1f9bed2a78eba3"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 2,
+      "case": 2,
+      "shape": [
+        1,
+        1,
+        1,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x1x48",
+      "passed": true,
+      "input_sha256": [
+        "7748c2a7accf732b81466ce3bb52373591f31fa3d3c541b5df6ccd335c64079d",
+        "7463feabcd0af80ecbb83faa193a9899c536ec4377aef105e33aa7ef8c7663b4"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 3,
+      "case": 3,
+      "shape": [
+        1,
+        1,
+        1,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x1x56",
+      "passed": true,
+      "input_sha256": [
+        "3dd3b339ffdca05c5cc9aae6506153634f07be79768055dc024eb29f7678954e",
+        "20ffb7ec86ee62d565e79e65e8d914d9d278c7e8918599e6543930aca62a2fc9"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 4,
+      "case": 4,
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x1x64",
+      "passed": true,
+      "input_sha256": [
+        "1761ff0e7f48a311724aa24d621c0bd9f7e11a2ec35b7d03acbfd958aa353c87",
+        "361e05d50445686231021e2b444bed14f18f9d9aa968ddab331069b94b2110ee"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 5,
+      "case": 5,
+      "shape": [
+        1,
+        1,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x2x32",
+      "passed": true,
+      "input_sha256": [
+        "73ace96846304d4c2a691957dd7f396b055a67b04e6b7e2988459a40916f8e13",
+        "b52af6a7178e1c9a23fa39c46ada728b4356760b49622c6a184702967612d9a9"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 6,
+      "case": 6,
+      "shape": [
+        1,
+        1,
+        2,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x2x40",
+      "passed": true,
+      "input_sha256": [
+        "8d1ee0019d93d20bd5efa9dc08023d62c62aed5307dfb7c6374f9fd27bbe1482",
+        "e4a43445660dbe96ee00f1b5d43c0754005d8f3adb41d1052278bd8da1ac5780"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 7,
+      "case": 7,
+      "shape": [
+        1,
+        1,
+        2,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x2x48",
+      "passed": true,
+      "input_sha256": [
+        "2c5d10282eb2cea34e1bf28074dae173b62c9651110ab9393235f434f7009b83",
+        "6db1be80dbb71e75ad16af354d77b4df39cc5540e0c821bcc4463c5627917bda"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 8,
+      "case": 8,
+      "shape": [
+        1,
+        1,
+        2,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x2x56",
+      "passed": true,
+      "input_sha256": [
+        "380ac40ac0cd6b764c57e8d512767c72b14c9434e5655b926661e9ccf7a8fe0f",
+        "b29a8bba3f4b229ff8a39f5bba24751e789adc69a295ed78f20ebde3de289073"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 9,
+      "case": 9,
+      "shape": [
+        1,
+        1,
+        2,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x2x64",
+      "passed": true,
+      "input_sha256": [
+        "67ded62dde734359565db001e6a40a28df8c4d49a93bc36032baf6e4a1023d5a",
+        "b24f612dd7275a3412463ffb395bef3d5bb1f1d47790dd9c4066482bda2052fb"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 10,
+      "case": 10,
+      "shape": [
+        1,
+        1,
+        3,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x3x32",
+      "passed": true,
+      "input_sha256": [
+        "7d2c251bf3f29f2a297f554d372e316651991fa4bfbd246a5728a05dfa9cd424",
+        "d5c741bd9c730cb02a98d3d78c51b9fabcf738f3b0d6125e4b87eae8f53ed166"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 11,
+      "case": 11,
+      "shape": [
+        1,
+        1,
+        3,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x3x40",
+      "passed": true,
+      "input_sha256": [
+        "98815f71b2bbc6c4c20541d23481f90bf98e35a83171f0b8a7a89e029bae5fb7",
+        "4dceab1fb7533ae0fe86a75106a04c772ea21eedf8ab8017b0f98a33ca1bc0b5"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 12,
+      "case": 12,
+      "shape": [
+        1,
+        1,
+        3,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x3x48",
+      "passed": true,
+      "input_sha256": [
+        "a1c987267e6a90b87bc0a7f57e1ee6e407e96c0ce4869b28fe9fc0ad7ecfac45",
+        "3f4b2b4c5bd12aecbaf8ad10a15a60c1764192491094f4eb3cfc9f53244a71d0"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 13,
+      "case": 13,
+      "shape": [
+        1,
+        1,
+        3,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x3x56",
+      "passed": true,
+      "input_sha256": [
+        "1b43ee55f4d5701afc99dc8e94c1e46dedb84a856d93c3017ba227291fa60ce3",
+        "53d908b45e10f1d8fd8476a99b99bb80c773a28a78465a58edd9d8f01eec1fba"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 14,
+      "case": 14,
+      "shape": [
+        1,
+        1,
+        3,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x3x64",
+      "passed": true,
+      "input_sha256": [
+        "9746696bcdbafbadee0c25d83332e45edb96839545bf72cbfffde894f23b4fad",
+        "651dc18505b3201dca8ac0f7117026e8faa6c6879eb21f5d1a49ffea33fe6d08"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 15,
+      "case": 15,
+      "shape": [
+        1,
+        1,
+        4,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x4x32",
+      "passed": true,
+      "input_sha256": [
+        "406cfcc5170f8a149ba72b74b9bb2f78621856820f84b71ffcc647a142fd0701",
+        "7ddd518911d4a903e10503fdae0d3f264fe65036ac60399a77f0dfb953b1fe8d"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 16,
+      "case": 16,
+      "shape": [
+        1,
+        1,
+        4,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x4x40",
+      "passed": true,
+      "input_sha256": [
+        "d30bc2ed5e7e47a10cba5d1b27ddd14c5ed3c4ac94bb9cd8265c6fcd03bcebde",
+        "f3140354b4e98f24d6ecc51c446e2e9b50fecdea655ff978ce08776437662d02"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 17,
+      "case": 17,
+      "shape": [
+        1,
+        1,
+        4,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x4x48",
+      "passed": true,
+      "input_sha256": [
+        "bf5dfaa2e53555f57f6b90506fde254f073d3919a801a4da623048e9450f38da",
+        "330b451868361fc18e33b7c96de158b83ae7cd867637e7e5a1f3d70e551b40b8"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 18,
+      "case": 18,
+      "shape": [
+        1,
+        1,
+        4,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x4x56",
+      "passed": true,
+      "input_sha256": [
+        "d2a0119d19843950b1d0289cbe9d74ca4d822bd9f578f0b6be7993c64328b0e6",
+        "cc9616d69a3205d77a31b69056c9c6c539fdf38a6caa366d7a244f196ca927ae"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 19,
+      "case": 19,
+      "shape": [
+        1,
+        1,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x4x64",
+      "passed": true,
+      "input_sha256": [
+        "b7773afb359b12d1613fc65d5b55f1f123fd71b76243d3fa532394bf0f4a9c1b",
+        "d5e62baf216c06ce1bf8f852f98748b12fa8f2f4da8490efeacdf4c21a2da926"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 20,
+      "case": 20,
+      "shape": [
+        1,
+        1,
+        5,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x5x32",
+      "passed": true,
+      "input_sha256": [
+        "6abc23c52e121ae0167eefcce92e8d1a495537011c7cbdf0a1d53e1d0fa18f9e",
+        "c2f10b86e9bf3c17c8724bcc1a29e9a8f6f2bd6b3b9e52aab9e18ece49acf917"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 21,
+      "case": 21,
+      "shape": [
+        1,
+        1,
+        5,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x5x40",
+      "passed": true,
+      "input_sha256": [
+        "dbd529f4328786c98e58413a5b9b4e2905f663fa87c063678f5aeaba660859d6",
+        "4cb93464b93f7b78d0a9855e1940dbac6d32c365b41d361703717f812f800fc9"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 22,
+      "case": 22,
+      "shape": [
+        1,
+        1,
+        5,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x5x48",
+      "passed": true,
+      "input_sha256": [
+        "e0fa4f58008f9217389553c4a417c3a65b0688e36f9b4f91a220d6fc8c5cc076",
+        "51064bcbf4cfc23b1b7762fb8fa142af8b02a2abaf198baf2322524d736abd45"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 23,
+      "case": 23,
+      "shape": [
+        1,
+        1,
+        5,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x5x56",
+      "passed": true,
+      "input_sha256": [
+        "eaf2ccfbf513872ef06a1f8142e8c1de2f3d88b06b9df4bdec4ec99a7184a07c",
+        "a73c275471cb997ccd32f826a0066467f2639dd4d4e4577e624e77a45275e0f8"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 24,
+      "case": 24,
+      "shape": [
+        1,
+        1,
+        5,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x5x64",
+      "passed": true,
+      "input_sha256": [
+        "114ff22c5140610874ba6687c3c690dd4d03230598ceae87dee40acf523553db",
+        "2791a2157b1a8d73c2ae438801c78e683fa0b46cadea7949d04fe061e1f7a65c"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 25,
+      "case": 25,
+      "shape": [
+        1,
+        1,
+        6,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x6x32",
+      "passed": true,
+      "input_sha256": [
+        "92f1a757c8f221b3c869bbff8c3b0f65865d2ca3aa9a8114fbc5b0069b9cc108",
+        "89f4d3362f7301c43a4b5d24deb06e3f355e7cda42a4d3fba1489a55fde7b88a"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 26,
+      "case": 26,
+      "shape": [
+        1,
+        1,
+        6,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x6x40",
+      "passed": true,
+      "input_sha256": [
+        "6367892c12314e282d83d05ef492778c334df8a6ffb4169b239ac351737e1a05",
+        "d6ece2c4ace06eaeb733cbdee21f8f6df4ec73e844a2d582d52d9aaab4f97cb9"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 27,
+      "case": 27,
+      "shape": [
+        1,
+        1,
+        6,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x6x48",
+      "passed": true,
+      "input_sha256": [
+        "05362e1a0214e23a6601ae4ac0676128ebc2d767ca1540f9fa744ed488ebeaf0",
+        "fb182a1e68c1cca2a4398abdb631fc7ba1cc283565a77c8b7460b911e6ec04f6"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 28,
+      "case": 28,
+      "shape": [
+        1,
+        1,
+        6,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x6x56",
+      "passed": true,
+      "input_sha256": [
+        "76203639c9b11895990af607faf8f44ab9a4cb3ca578c0ea47a137beb2f615a2",
+        "cc12ef303bb736cc1ecd88d4b09f613217f1dbb562bd0b66986346320e140a71"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 29,
+      "case": 29,
+      "shape": [
+        1,
+        1,
+        6,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x6x64",
+      "passed": true,
+      "input_sha256": [
+        "30302ab4a2a35a767fc5d33f36b25a6a4d9459aeee49d37217270b9f9375d6bb",
+        "9f57b7125c14e0c14e801438e1f80cd2c5f4d629f4c365f6548bdee3687bdfed"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 30,
+      "case": 30,
+      "shape": [
+        1,
+        1,
+        7,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x7x32",
+      "passed": true,
+      "input_sha256": [
+        "7ad6d93c902d134ad98ad787251a932686eac60c448c2446b6de3f9163b6de8b",
+        "363f8ec6dcbb8ef8a91e13d45b24d568fa52a0361aee8c318d862b25d60e6db6"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 31,
+      "case": 31,
+      "shape": [
+        1,
+        1,
+        7,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x7x40",
+      "passed": true,
+      "input_sha256": [
+        "0595c116317243a29d696fd72b0edb7dca3f571eb7f93e18779cafea22014fb8",
+        "311ad842bf258ab7be2d0d8383c47e11005bca9568f2c9ef3003c1dede4bdd69"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 32,
+      "case": 32,
+      "shape": [
+        1,
+        1,
+        7,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x7x48",
+      "passed": true,
+      "input_sha256": [
+        "765f20442729765801159f11d3563bf475fb6cbc639f2d21ac5291550d90084c",
+        "4c9b1f27ac4504f29922ff90f40931852184fcfc810ffcac4f33b530c7e2cd59"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 33,
+      "case": 33,
+      "shape": [
+        1,
+        1,
+        7,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x7x56",
+      "passed": true,
+      "input_sha256": [
+        "a8dc3fc1976e3a52b086033df8c74a7196247b311a02a5fdd15efaf687f7e12c",
+        "a1fb3e170843bd7aa8862ba264d9d1d8ca75787910810963f8047db5e914bbbd"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 34,
+      "case": 34,
+      "shape": [
+        1,
+        1,
+        7,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x7x64",
+      "passed": true,
+      "input_sha256": [
+        "04c4aca0eee2158309694f7f157530445c39abe89e62eaf9e3fba807b1a4923c",
+        "f76203c92595f2312fcf50be48cf7c14f1ba6ecfd0ab3b411e5ca82eaa434cd9"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 35,
+      "case": 35,
+      "shape": [
+        1,
+        1,
+        8,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x8x32",
+      "passed": true,
+      "input_sha256": [
+        "a2e910a697f4ca518b5bfd3a1989a729362b1bfe47e197c3da325f3cf7988489",
+        "37201a87e0b9d90b2d6e0a552af0000be3580e94f03e81e3da1a31b232c50a48"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 36,
+      "case": 36,
+      "shape": [
+        1,
+        1,
+        8,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x8x40",
+      "passed": true,
+      "input_sha256": [
+        "e77309ab4b2be96e0f00a13a229cb013a8e2ecb9827a2f902229c0ce5478b12b",
+        "9522ca3dc7c737976c17a252a5a790387ad9076a09ad10d8e7491b476b4d5902"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 37,
+      "case": 37,
+      "shape": [
+        1,
+        1,
+        8,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x8x48",
+      "passed": true,
+      "input_sha256": [
+        "ca02be553221888aae813dde001e271b844117ce2aaba270502e565a6fa330e3",
+        "fe974449b4ba1d70a5cf872f2d0de993e7d97a5622880525e6e9cc1e04de5af3"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 38,
+      "case": 38,
+      "shape": [
+        1,
+        1,
+        8,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x8x56",
+      "passed": true,
+      "input_sha256": [
+        "f590e6d94dee8c52e43504ea4f3101b79719d84fcd3e2ddd4f199c10e0204324",
+        "436e219142c62c1d94fb0ea1fde6be6b8455d08807d6a6cb080be29a52e65244"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 39,
+      "case": 39,
+      "shape": [
+        1,
+        1,
+        8,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x8x64",
+      "passed": true,
+      "input_sha256": [
+        "92772125e510d64dd8461e1d2211f4d4bd8042d8e21da70a1e6602448aa147b8",
+        "ee4a51a18215ee2612a8a75bf272a77a810427b93a62a16e39da5298d255d8fb"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 40,
+      "case": 40,
+      "shape": [
+        1,
+        1,
+        9,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x9x32",
+      "passed": true,
+      "input_sha256": [
+        "41938e8aab82ccb5194bad91ee8afb22dc8c999ff2056e840bd711eb2f90989f",
+        "f23c22ba3ebe7fdb5b8a384595acb5600c44947fe3fca0746f8c78c7aaf854da"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 41,
+      "case": 41,
+      "shape": [
+        1,
+        1,
+        9,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x9x40",
+      "passed": true,
+      "input_sha256": [
+        "8f3e68cbe75fd1e2780233d8eeb51141f42106c22d125434d74bd4b2a812ffa0",
+        "6dd42f52885ceeb572ec3a656d5f6be435c895bfff3c748244f74d8be53cadae"
+      ],
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "position": 42,
+      "case": 42,
+      "shape": [
+        1,
+        1,
+        9,
+        48
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x9x48",
+      "passed": true,
+      "input_sha256": [
+        "ba5865c7e1c294fe4d9cf137ed56b7f21b9ac0ccf9119d81c3a9350f0a83d278",
+        "3ae19eba8858687bbb568fc06e3b50e3e5d611000b6546585347b14e190222f2"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 43,
+      "case": 43,
+      "shape": [
+        1,
+        1,
+        9,
+        56
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x9x56",
+      "passed": true,
+      "input_sha256": [
+        "63b05a1589bee365db3c9abff6a90475b82b9ea536323415a52a451caf39d59f",
+        "104ed4bab06d1d88a30219cc64d57e2e5590bdb1f6962da48a7de9305edbc33d"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 44,
+      "case": 44,
+      "shape": [
+        1,
+        1,
+        9,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x9x64",
+      "passed": true,
+      "input_sha256": [
+        "48f911aab16eb93a4493b3b8807aebc59e352b69906e96e4a2785adbe41dabde",
+        "f6ee66f2732e0e04fcc55584e869207812d605dc2c1ce2f077e10b5ba81f8b4f"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 45,
+      "case": 45,
+      "shape": [
+        1,
+        1,
+        10,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x10x32",
+      "passed": true,
+      "input_sha256": [
+        "a76de9ee5d76f67f02a6f035c8a81fe21b82ad886b3c533143b7e8ca11417782",
+        "cd73b3ff28ad0f03c79c259107cfc662b0dd3572666e0c38449c0bfb50768be5"
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 46,
+      "case": 46,
+      "shape": [
+        1,
+        1,
+        10,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x10x40",
+      "passed": false,
+      "input_sha256": [
+        "c3e7cdea8828987991a349b915440484006ec95ce7816a144023914b2ad1084c",
+        "3e5e83a5cb16c3291676f46a3c68167e8bb1af5cd938ed9cdc0a976f0f4e8226"
+      ]
+    }
+  ],
+  "available_cores": 20,
+  "error": "精度失败"
+}

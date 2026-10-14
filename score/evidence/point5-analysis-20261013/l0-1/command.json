@@ -1,0 +1,10 @@
+{
+  "command": [
+    "msprof",
+    "--task-time=l0",
+    "--output=/home/developer/cann-point5-analysis-20261013/l0-1/profile",
+    "--application=python3 /home/developer/cann-point8-tail-load-20261013/tests/benchmark.py /home/developer/cann-point8-tail-load-20261013/libcandidate.so --commit current-point5 --report /home/developer/cann-point5-analysis-20261013/l0-1/application.json --cases 5 --dtype fp16 --layout NN --warmup 20 --repeat 50 --real-npu"
+  ],
+  "exit_code": 0,
+  "seconds": 7.072105210998416
+}

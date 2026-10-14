@@ -4,6 +4,27 @@
 
 ## 编译与运行
 
+### 合法输入回退专项回归（2026-10-13）
+
+`legal_input_fallback.py` 定义11个场景，每个场景覆盖两类型、四布局，共88个可选用例。
+重点检查此前被裁剪分支拒绝的小矩阵、小批量非对齐K、中批量与紧凑批量的其他布局，
+以及通用N分片、双GM槽、同核多任务、固化大矩阵和SplitK模板的邻近形状。
+仍使用实际输入的FP64参考、双调用一致性、输入保护及输出保护区检查。
+
+定向仿真命令如下；这里列出18组，不默认执行全部88组：
+
+```bash
+python3 tests/run_simulator_matrix.py /绝对路径/libsimulator_bridge.so \
+    --application tests/legal_input_fallback.py \
+    --cases=0,1,2,3,4,5,6,7,8,16,28,36,40,55,59,68,72,84 \
+    --output=/新建私有目录/合法输入回退
+```
+
+相同入口支持 `--real-npu` 和 `--capture`；真机与图重放通过情况须单独记录。
+本地编译和模型正确性不替代远端编译不超过300秒的验证。
+
+### 常规正确性入口
+
 先加载当前主机的 CANN 环境，再在仓库根目录执行：
 
 ```bash
@@ -214,3 +235,85 @@ python3 tests/simulator_matrix.py Build/npu/libsimulator_bridge.so \
 ```
 
 `allocation-序号-字节数.bin`包含该工作区释放前的字节。系统通信区超过8MiB，默认不保存。普通调用在算子内同步后回读；计算图场景仅在图销毁释放工作区时回读，不能据此区分每次重放的中间值。
+
+## 2026-10-13 通用分派与容量域回归
+
+`tiling_domains.py` 以容量、对齐、任务覆盖和尾块为维度构造48个场景，每场景按FP16/BF16 × NN/NT/TN/TT展开，共384组可选用例。它复用独立FP64参考、双调用一致性、输入不变和输出保护区检查；`--capture`补充计算图捕获及两次重放。全部384组是可选测试空间，实际执行子集以证据中的summary.json为准。
+
+```bash
+python3 tests/tiling_domains.py /绝对路径/libcandidate.so \
+  --case=215 --report=/新目录/尾块.json --real-npu
+python3 tests/tiling_domains.py /绝对路径/libcandidate.so \
+  --case=360 --report=/新目录/单点积重放.json --capture --real-npu
+```
+
+分派设计、已执行的正确性测试、远端编译时间和同输入性能比较见[整改记录](../score/通用分派整改-20261013.md)。历史失败也保留在证据目录，不以邻域测试代替官方隐藏数据或官方OJ编译验证。
+
+## 2026-10-13 紧凑Cast/Gather索引优化回归
+
+`packed_cast_domain.py` 在同一ACL上下文中覆盖BF16/TN、B=1、M×N≤16、32≤K≤64且K为8倍数的全部250种合法形状，并追加11组全负、全零、域外回退、其他核切换和尾列最大值检查。每个形状使用独立FP64参考，检查重复调用、输入不变和输出保护区。形状穷举不等于输入数值穷举。
+
+```bash
+python3 tests/packed_cast_domain.py /绝对路径/libcandidate.so \
+  --real-npu --report=/新目录/domain.json
+python3 tests/packed_cast_domain.py /绝对路径/libcandidate.so \
+  --capture --real-npu --report=/新目录/capture.json
+```
+
+`--capture` 对每组先普通调用，再捕获并执行两次重放。`--cases=46` 可单独复现M=1、N=10、K=40的尾段Max检查。N>8时每次FP32 repeat只覆盖前8个稀疏点积，后半段必须另做Max后合并。
+
+## 2026-10-13 TT驻留核L0C双缓冲回归
+
+`resident_tt_l0c_domains.py` 覆盖64组定向场景，包括64列分块成对通知、单个尾块、最多8个通知事件、M/K尾块、容量回退、全负/全零及布局切换。使用独立FP64参考，检查输入不变、输出保护区与重复结果一致性。`--capture`先普通调用，再捕获并重放两次。
+
+```bash
+python3 tests/resident_tt_l0c_domains.py /绝对路径/libcandidate.so --real-npu --report=/新目录/domain.json
+python3 tests/resident_tt_l0c_domains.py /绝对路径/libcandidate.so --capture --real-npu --report=/新目录/capture.json
+```
+
+## 2026-10-13 小批量静态UB与显式同步回归
+
+`static_ub_domains.py` 穷举BF16/TT、B=2…4、M/N=1…16、K=64或128的1536种形状，追加4组特殊输入及12组其他路径与目标核交替调用，共1552组。检查独立FP64参考、输入不变、输出保护区和重复结果一致性。`--capture`对每组先普通调用，再捕获并重放两次；形状穷举不代表输入数值穷举。
+
+```bash
+python3 tests/static_ub_domains.py /绝对路径/libcandidate.so --capture --real-npu --report=/新目录/static-ub.json
+```
+
+本轮分两批验证：编号0—1539覆盖容量域及特殊输入，1540—1551覆盖同上下文路径切换。实验候选、远端编译及真机性能证据见`score/evidence/point4-control-20261013/`。
+
+## 2026-10-13 TT驻留核112行与B预取回归
+
+`resident_tt_bprefetch_domains.py`在原64组驻留核检查上追加10组112行边界，共74组。覆盖行任务映射、两份B的L1槽复用、N尾块、L1容量回退、布局/类型切换及返回目标路径。`--capture`包含普通执行、图捕获和两次重放，并检查独立FP64参考、输入不变、输出保护区与重复一致性。
+
+```bash
+python3 tests/resident_tt_bprefetch_domains.py /绝对路径/libcandidate.so --capture --real-npu --report=/新目录/resident-bprefetch.json
+```
+
+三版本性能对照、远端编译和全15点回归见`score/点8-B预取优化-20261013.md`。
+
+## 2026-10-13 TT驻留核短K装载合并回归
+
+`resident_tt_tail_load_domains.py`在74组B预取回归上增加10组短K边界，共84组。覆盖单K分形跨行合并装载与原多K分形装载，检查独立FP64参考、输入不变、输出保护区、重复一致性、普通执行及图捕获后的两次重放。
+
+```bash
+python3 tests/resident_tt_tail_load_domains.py /绝对路径/libcandidate.so --capture --real-npu --report=/新目录/resident-tail-load.json
+```
+
+实现、远端完整编译、点2复测、PMU及全15点性能证据见`score/点8短K装载合并实验-20261013.md`。非法K=8/16不属于此测试域。
+
+
+## 普通调用与计算图重放的计时对照
+
+`benchmark.py --call-mode direct|graph`选择普通调用或捕获一次后的图重放，默认direct。两种方式均逐次同步，固定输入地址，并在预热前执行1次正确性校验，因此0次预热不等于首次冷执行。图模式先销毁图再释放输入输出，支持工作区随图释放。
+
+`compare_timing_modes.py`使用同一完整库串行交错对照，默认点2的BF16/TN代表输入，预热0/20/200次，每次50个正式样本。它调用普通msprof采集kernel任务时间，保留全部样本，输出均值、中位数、nearest-rank P90及源码/库/脚本哈希。启动数错配或失败应用不会生成成功汇总。结果目录必须不存在。
+
+```bash
+python3 tests/compare_timing_modes.py /绝对路径/libcandidate.so \
+  --source /对应源码/kernel.asc --output /新的结果目录 \
+  --cases 2 --dtype bf16 --layout TN --warmups 0,20,200 --repeat 50
+```
+
+这一工具不测Host墙钟、整个图的事件区间，也不轮换输入地址。官方OJ口径尚未确认，不能通过选取相近数字来宣称复现OJ。所有预热只在独立开发测试器中，禁止加入提交算子或用于干预判题流程。
+
+统计逻辑可用`python tests/test_summarize_profile.py`验证。真机结果见[普通调用与图重放计时对照](../score/普通调用与图重放计时对照-20261014.md)。

@@ -1,0 +1,29 @@
+{
+  "case": 85,
+  "label": "NT驻留单行列尾",
+  "shape": [
+    3,
+    1,
+    33,
+    32
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": true,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "02fbc391e854199dbd90c426cd351cc8d5d86bbda755ba3a31e4051004493269",
+    "4b717fe94533fe087a838d41199b88dacf406575c2636d088532aa0e76fa11d4"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    4.023584365844727,
+    5.123673439025879
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

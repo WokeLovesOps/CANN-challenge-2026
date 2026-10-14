@@ -1,0 +1,29 @@
+{
+  "case": 144,
+  "label": "高窄驻留",
+  "shape": [
+    1,
+    8192,
+    64,
+    128
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "57ccc3a6412be49f3ff42788d3c719e471aa9ae6575a978dd408f1cb8e919f52",
+    "30a662e53b6ba6163ae7fa84a2414309b93325ce6cacddf96c373135f69fe49c"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    72501.890625,
+    72501.890625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

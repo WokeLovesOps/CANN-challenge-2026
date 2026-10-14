@@ -1,0 +1,50 @@
+{
+  "commit": "current-point5",
+  "execution": "simulator",
+  "library": "/home/developer/cann-point5-direct-cube-20261013/libcandidate.so",
+  "library_sha256": "ee179e85fee1b89deba60c816cf6b9c860f4ef7361103b9b59dd814c02a5f88c",
+  "dtype": "fp16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": true,
+  "results": [
+    {
+      "case": 5,
+      "shape": [
+        8,
+        16,
+        32,
+        128
+      ],
+      "passed": true,
+      "input_sha256": [
+        "94d6decdc750525b62ce4d46dfe4cb331a2afab4655dbd916c51e35733f61be5",
+        "addb74d2aead6a8dbe3be2256e6a943cb3fe3e96170cf7d5735376495db60a97"
+      ],
+      "launch_begin": 0,
+      "seed": 20260935,
+      "max_abs_error": 7.62939453125e-06,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 5,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 5,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 5,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910B3",
+  "cube_cores": 20
+}

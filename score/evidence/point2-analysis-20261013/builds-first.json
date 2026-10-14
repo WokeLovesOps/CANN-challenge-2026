@@ -1,0 +1,74 @@
+[
+  {
+    "variant": "base",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/home/developer/cann-point2-analysis-20261013/base.asc",
+      "-o",
+      "/home/developer/cann-point2-analysis-20261013/libbase.so",
+      "-lascendcl"
+    ],
+    "seconds": 3.5678464110005734,
+    "exit_code": 0,
+    "source_sha256": "944d7d2bf56391ee90b94d2d99cb738fcecf2edff6dcf59858cd0464c6710643",
+    "library_sha256": "51afac295ac2d815d13df19cb944d8a7d312670a633d3a2d2bac9dd6b1d49a63"
+  },
+  {
+    "variant": "static_ub",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/home/developer/cann-point2-analysis-20261013/static_ub.asc",
+      "-o",
+      "/home/developer/cann-point2-analysis-20261013/libstatic_ub.so",
+      "-lascendcl"
+    ],
+    "seconds": 3.417863574999501,
+    "exit_code": 0,
+    "source_sha256": "b79c1febd5914d78d9068b4a3f06ecb73a4df96b920dc99f54f961e6792a50f2",
+    "library_sha256": "4e610a6d006b4ca4df8aba7351ee15974947eedab2da9db9b068c7828e7ef5d3"
+  },
+  {
+    "variant": "mask",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/home/developer/cann-point2-analysis-20261013/mask.asc",
+      "-o",
+      "/home/developer/cann-point2-analysis-20261013/libmask.so",
+      "-lascendcl"
+    ],
+    "seconds": 3.51784523599963,
+    "exit_code": 0,
+    "source_sha256": "5f6cc5b32a1783df8e0ea5f46b6ece29cd4fe0663e090ff1c2be50ef70dd93ec",
+    "library_sha256": "6efafbbe74cbcf3a9a452537e4df45f242981aa6ede615beea69f2a14700a9aa"
+  },
+  {
+    "variant": "static_mask",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/home/developer/cann-point2-analysis-20261013/static_mask.asc",
+      "-o",
+      "/home/developer/cann-point2-analysis-20261013/libstatic_mask.so",
+      "-lascendcl"
+    ],
+    "seconds": 3.317564021999715,
+    "exit_code": 0,
+    "source_sha256": "1076060d327008268c9d047e569ea2f1e50ef0d1c6fba6563665537e806e18ef",
+    "library_sha256": "4a33caa3eb19c9c0fe936f90507d4f05c3194a43e884f1d90262df714c56d86c"
+  }
+]

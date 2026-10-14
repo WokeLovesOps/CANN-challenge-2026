@@ -1,0 +1,29 @@
+{
+  "case": 367,
+  "label": "单点积非对齐K",
+  "shape": [
+    1,
+    1,
+    1,
+    40
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "f43b3ee40b57d1d6ead0af9bf20ec088df9216a414d5bed1a049c68e459dc0ee",
+    "0267a95cca47ff53881a3af031b4b227a223c7009f56cfcf8710824dddf3a03e"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    1.0665178298950195,
+    1.0665178298950195
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

@@ -1,0 +1,29 @@
+{
+  "case": 22,
+  "label": "小输出容量上界",
+  "shape": [
+    1,
+    4,
+    4,
+    64
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "d3c577104093a6695ff6099ce31181f87a68cc38e80e5f15a187d2f3293cbb88",
+    "67c462b845a754845349b3b2dfd53e6cd8def0ba0e2337e4dd87cd6d13ba66b7"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    14.57052230834961,
+    14.57052230834961
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

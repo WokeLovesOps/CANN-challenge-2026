@@ -1,0 +1,29 @@
+{
+  "case": 235,
+  "label": "长K分片",
+  "shape": [
+    1,
+    64,
+    64,
+    8192
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "213ad6ab5c88f5952ec92f4407f6b6ba615ce64af5281e194c50ec353edce3b1",
+    "6177612504ae519b689c604edcc92c4ff1e4dc651b4e580d3ef20b897aacf3f8"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    4432.345703125,
+    4432.345703125
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

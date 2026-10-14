@@ -1,0 +1,30 @@
+{
+  "command": [
+    "msprof",
+    "op",
+    "--aic-metrics=PipeUtilization,Memory,MemoryUB,ArithmeticUtilization",
+    "--launch-count=1",
+    "--launch-skip-before-match=20",
+    "--output=/home/developer/cann-point1-analysis-20261014/pmu-0/profile",
+    "python3",
+    "/home/developer/cann-point5-bfirst-20261014/tests/benchmark.py",
+    "/home/developer/cann-point5-bfirst-20261014/baseline-build/libcandidate.so",
+    "--commit",
+    "current-point1",
+    "--report",
+    "/home/developer/cann-point1-analysis-20261014/pmu-0/application.json",
+    "--cases",
+    "1",
+    "--dtype",
+    "fp16",
+    "--layout",
+    "NN",
+    "--warmup",
+    "20",
+    "--repeat",
+    "2",
+    "--real-npu"
+  ],
+  "exit_code": 0,
+  "seconds": 6.171082275999652
+}

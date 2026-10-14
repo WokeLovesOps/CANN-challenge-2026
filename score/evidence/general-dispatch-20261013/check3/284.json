@@ -1,0 +1,29 @@
+{
+  "case": 284,
+  "label": "扩展行块邻域",
+  "shape": [
+    1,
+    4001,
+    641,
+    520
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "1a22781aea42bb203834ce1810b63496b2771a4f56435054b1b989d57bb18f04",
+    "00fa7af5d5d5a88b8b37bc3d51ff60ce5c47b24890bc5b054feda3bc16928b7f"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    94362.0390625,
+    94362.0390625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0078125
+}

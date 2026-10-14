@@ -1,0 +1,29 @@
+{
+  "case": 56,
+  "label": "紧凑Cube邻域",
+  "shape": [
+    5,
+    13,
+    29,
+    80
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": true,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "f88c5daa66a47939be9160a98a56cae7ad18ca8182f902ab718ebfb83716c8e9",
+    "b0c06a569ae9e0d0e7f4044b6a0caccdf84e0fc2c49f1299dda066407c80bdd2"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    78.91482543945312,
+    85.14659118652344
+  ],
+  "available_cores": 20,
+  "max_abs_error": 7.62939453125e-06
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point2-compact-gather-a3-20261014/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point2-compact-gather-a3-20261014/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 75.30159178899339,
+  "exit_code": 0,
+  "source_sha256": "2747a97eac70b7e5dd851602d9b41c2f280c3e67c23cbfef9b0a95600c6a19cb",
+  "library_sha256": "4771c21041f241229943a34ecd5b8c03b66fd201c25c63e057d69e13c62416b3"
+}

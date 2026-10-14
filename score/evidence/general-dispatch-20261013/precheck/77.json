@@ -1,0 +1,29 @@
+{
+  "case": 77,
+  "label": "NT驻留",
+  "shape": [
+    13,
+    23,
+    73,
+    192
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "1b218e916d9b9e616a503b7647ef6e215a88745e977b9ba00bb8beb778e0214d",
+    "9161943fe3d29f16c1a7c7053cabb7b7da5bbbb914784820d7ff7a3c2e72c591"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    246.0054168701172,
+    281.4909973144531
+  ],
+  "available_cores": 20,
+  "max_abs_error": 3.0517578125e-05
+}

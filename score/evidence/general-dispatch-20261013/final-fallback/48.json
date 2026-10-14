@@ -1,0 +1,29 @@
+{
+  "case": 48,
+  "label": "同核多个batch直写",
+  "shape": [
+    21,
+    31,
+    17,
+    40
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "fb6af9de62e6044a4c9edad7fe17632551a571b5ae9bf6c33e4c1ac4bc9a7fd5",
+    "510fcf200db0f2375371301ab34123cf57a8fc7ecb1357fa67e3e2e72757a41c"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    104.52281188964844,
+    128.68275451660156
+  ],
+  "available_cores": 20,
+  "max_abs_error": 7.62939453125e-06
+}

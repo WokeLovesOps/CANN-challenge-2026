@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point9-lanemax-a3-20261014/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point9-lanemax-a3-20261014/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 74.25108867100062,
+  "exit_code": 0,
+  "source_sha256": "5e25ac53d275d1a74102b8553c6292b6bb018b5f71b02653896ed125567d2322",
+  "library_sha256": "9f7e884072d678c756d207f17a617e99b46859a03c3757a0c06783a05f7ddc15"
+}

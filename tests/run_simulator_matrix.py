@@ -13,6 +13,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("library", type=Path)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--application", type=Path,
+                        default=Path(__file__).with_name("simulator_matrix.py"),
+                        help="复用相同命令行接口的定向正确性入口")
     selection = parser.add_mutually_exclusive_group()
     selection.add_argument("--cases", default="0", help="默认只运行最小用例 0")
     selection.add_argument("--all-cases", action="store_true", help="显式运行完整矩阵，耗时较长")
@@ -35,10 +38,14 @@ def main():
     environment = os.environ.copy()
     environment.update(OPENBLAS_NUM_THREADS="2", OMP_NUM_THREADS="2",
                        PYTHONDONTWRITEBYTECODE="1")
-    application = Path(__file__).with_name("simulator_matrix.py").resolve()
+    application = args.application.resolve()
     if args.all_cases:
-        from simulator_matrix import SHAPES
-        indices = range(len(SHAPES) * 8)
+        import runpy
+        namespace = runpy.run_path(str(application))
+        shapes = namespace.get("SHAPES")
+        if shapes is None:
+            shapes = namespace["simulator_matrix"].SHAPES
+        indices = range(len(shapes) * 8)
     else:
         indices = map(int, args.cases.split(","))
     for index in indices:

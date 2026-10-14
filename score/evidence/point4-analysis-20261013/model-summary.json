@@ -1,0 +1,136 @@
+[
+  {
+    "trace": "model/profile/OPPROF_20261013182637_JRMTMEJOQCLMQKKW/_ZN13batch_max_sum20ComputeBatchStaticUBIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/0/simulator/core0.veccore0/trace.json",
+    "sha256": "0a54025c30a70ac332dc88683a5be63e48b13b689d25a6ed09a6c068997e2a5d",
+    "span_us": 3.445999839808792,
+    "instructions": {
+      "VADDS": {
+        "count": 8,
+        "first_us": 0.879000186920166,
+        "last_us": 0.9729998931288719,
+        "duration_sum_us": 0.08799999952316284
+      },
+      "VMULS": {
+        "count": 1,
+        "first_us": 0.9829998016357422,
+        "last_us": 0.9949998017400503,
+        "duration_sum_us": 0.012000000104308128
+      },
+      "VGATHER": {
+        "count": 16,
+        "first_us": 1.179999828338623,
+        "last_us": 1.7369998209178448,
+        "duration_sum_us": 0.3840000033378601
+      },
+      "VCONV": {
+        "count": 2,
+        "first_us": 1.738999843597412,
+        "last_us": 1.803999837487936,
+        "duration_sum_us": 0.06400000303983688
+      },
+      "VMUL": {
+        "count": 16,
+        "first_us": 1.815999984741211,
+        "last_us": 2.2749997824430466,
+        "duration_sum_us": 0.35199999809265137
+      },
+      "VMLA": {
+        "count": 16,
+        "first_us": 2.2769999504089355,
+        "last_us": 2.997999995946884,
+        "duration_sum_us": 0.7060000039637089
+      },
+      "VCGADD": {
+        "count": 3,
+        "first_us": 3.0,
+        "last_us": 3.2100000455975533,
+        "duration_sum_us": 0.2070000022649765
+      },
+      "VCMAX": {
+        "count": 1,
+        "first_us": 3.2119998931884766,
+        "last_us": 3.286999896168709,
+        "duration_sum_us": 0.07500000298023224
+      },
+      "VCADD": {
+        "count": 1,
+        "first_us": 3.2880001068115234,
+        "last_us": 3.311000106856227,
+        "duration_sum_us": 0.023000000044703484
+      },
+      "MOV_SRC_TO_DST_ALIGN": {
+        "count": 3,
+        "first_us": 0.6459999084472656,
+        "last_us": 3.441000208258629,
+        "duration_sum_us": 0.6370000094175339
+      }
+    }
+  },
+  {
+    "trace": "model/profile/OPPROF_20261013182637_JRMTMEJOQCLMQKKW/_ZN13batch_max_sum20ComputeBatchStaticUBIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj/1/simulator/core0.veccore0/trace.json",
+    "sha256": "30f6e48fd62e095a8dcf8d7b1b8c48d47b3b41d6f9424b10fc8c33759a3b2981",
+    "span_us": 2.638000228907913,
+    "instructions": {
+      "VADDS": {
+        "count": 8,
+        "first_us": 0.4799995422363281,
+        "last_us": 0.5739997252821922,
+        "duration_sum_us": 0.08799999952316284
+      },
+      "VMULS": {
+        "count": 1,
+        "first_us": 0.5850000381469727,
+        "last_us": 0.5970000382512808,
+        "duration_sum_us": 0.012000000104308128
+      },
+      "VGATHER": {
+        "count": 16,
+        "first_us": 0.6090002059936523,
+        "last_us": 1.0240000002086163,
+        "duration_sum_us": 0.3840000033378601
+      },
+      "VCONV": {
+        "count": 2,
+        "first_us": 1.0260000228881836,
+        "last_us": 1.0919994674623013,
+        "duration_sum_us": 0.06400000303983688
+      },
+      "VMUL": {
+        "count": 16,
+        "first_us": 1.1040000915527344,
+        "last_us": 1.4669996947050095,
+        "duration_sum_us": 0.35199999809265137
+      },
+      "VMLA": {
+        "count": 16,
+        "first_us": 1.4679994583129883,
+        "last_us": 2.188999503850937,
+        "duration_sum_us": 0.7060000039637089
+      },
+      "VCGADD": {
+        "count": 3,
+        "first_us": 2.190999984741211,
+        "last_us": 2.401999481022358,
+        "duration_sum_us": 0.2070000022649765
+      },
+      "VCMAX": {
+        "count": 1,
+        "first_us": 2.4029998779296875,
+        "last_us": 2.4779998809099197,
+        "duration_sum_us": 0.07500000298023224
+      },
+      "VCADD": {
+        "count": 1,
+        "first_us": 2.479999542236328,
+        "last_us": 2.5029995422810316,
+        "duration_sum_us": 0.023000000044703484
+      },
+      "MOV_SRC_TO_DST_ALIGN": {
+        "count": 3,
+        "first_us": 0.2589998245239258,
+        "last_us": 2.6319997161626816,
+        "duration_sum_us": 0.5450000017881393
+      }
+    }
+  }
+]

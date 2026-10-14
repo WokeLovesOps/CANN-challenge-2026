@@ -1,0 +1,31 @@
+{
+  "command": [
+    "msprof",
+    "op",
+    "simulator",
+    "--soc-version=Ascend910_9362",
+    "--core-id=0",
+    "--launch-count=2",
+    "--timeout=2",
+    "--output=/home/developer/cann-point2-a3-analysis-20261014/model/profile",
+    "python3",
+    "/home/developer/cann-point2-a3-analysis-20261014/tests/benchmark.py",
+    "/home/developer/cann-point2-a3-analysis-20261014/libcandidate.so",
+    "--commit",
+    "current-point2",
+    "--report",
+    "/home/developer/cann-point2-a3-analysis-20261014/model/application.json",
+    "--cases",
+    "2",
+    "--dtype",
+    "bf16",
+    "--layout",
+    "TN",
+    "--warmup",
+    "0",
+    "--repeat",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 7.322510200996476
+}

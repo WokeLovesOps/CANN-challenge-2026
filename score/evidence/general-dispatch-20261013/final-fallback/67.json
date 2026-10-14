@@ -1,0 +1,29 @@
+{
+  "case": 67,
+  "label": "固化大块邻域",
+  "shape": [
+    1,
+    1024,
+    512,
+    64
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "f0f43782e3744c5f39cb4c72f2152f543f9b72c74a2c939f927cc0baa45efc4c",
+    "47b8b177aef7b0c023dcb374604660812bdcebba51fe83daf1a7cac0cb08d279"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    8252.6064453125,
+    8252.6064453125
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

@@ -1,0 +1,15 @@
+{
+  "说明": "本地WSL编译记录，不替代远端开发机或官方OJ编译验证。",
+  "source_sha256": "81b466110969ce0f6f7fb2f517642e5a6e0ddb67e33119be3dcfa63864e80911",
+  "library_sha256": "b3652d0f8a74786f6688d160bd90347c538471c28f66017a0983cc2208db8aa3",
+  "base_commit": "fce5d900f47352f82388c3a7124547ee795d56f5",
+  "environment": "WSL Ubuntu-22.04，CANN 9.0.0，x86_64，dav-2201",
+  "elapsed_seconds": 48.75,
+  "exit_code": 0,
+  "command": "source /home/rose/Ascend9/cann-9.0.0/set_env.sh; /usr/bin/time -p timeout 300 bisheng -shared -fPIC --npu-arch=dav-2201 -g /mnt/d/python/CANN/tests/simulator_bridge.asc -o /home/rose/cann-fallback-20261013/libsimulator_bridge.so -ltiling_api -lregister -lplatform -lunified_dlog -ldl -lm -lgraph_base",
+  "remote_compile_verified": false,
+  "official_oj_verified": false,
+  "remote_blocker": "当前配置的SSH连接关闭，未取得远端编译或NPU结果。",
+  "raw_artifacts": "/home/rose/cann-fallback-20261013",
+  "local_build_log": "Build/LegalInputFallback20261013/build.log"
+}

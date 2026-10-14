@@ -1,0 +1,57 @@
+{
+  "commit": "graph-workspace-smoke",
+  "mode": "真实NPU普通msprof task-time=l0",
+  "call_mode": "graph",
+  "warmup": 0,
+  "repeat": 2,
+  "percentile_method": "nearest_rank",
+  "timing_scope": "kernel_task_duration",
+  "synchronization": "each_call",
+  "soc": "Ascend910_9362",
+  "dtype": "bf16",
+  "layout": "TT",
+  "library_sha256": "eca051c10f8b47d1d56136bf2b175f829b799a781a87474afd9c8dc1ea771116",
+  "application_report": "/home/developer/cann-timing-modes-20261014/graph-workspace-smoke/application.json",
+  "csv": "/home/developer/cann-timing-modes-20261014/graph-workspace-smoke/profile/PROF_000001_20261014134253033_00054993DICNJGIB/mindstudio_profiler_output/op_summary_20261014134258.csv",
+  "csv_sha256": "1f7c1c60c2ee7a7f932d361bff46baf998fc1f4b7105f8931791bff0e0a64e25",
+  "results": {
+    "4": {
+      "samples_us": [
+        6.26,
+        6.08
+      ],
+      "warmup_us": [],
+      "validation_us": [
+        6.44
+      ],
+      "kernels": [
+        "_ZN13batch_max_sum20ComputeBatchStaticUBIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+      ],
+      "median_us": 6.17,
+      "mean_us": 6.17,
+      "min_us": 6.08,
+      "max_us": 6.26,
+      "count": 2,
+      "p90_us": 6.26
+    },
+    "8": {
+      "samples_us": [
+        41.2,
+        40.06
+      ],
+      "warmup_us": [],
+      "validation_us": [
+        43.86
+      ],
+      "kernels": [
+        "_ZN13batch_max_sum20ComputeBatchStaticUBIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_jjjj"
+      ],
+      "median_us": 40.63,
+      "mean_us": 40.63,
+      "min_us": 40.06,
+      "max_us": 41.2,
+      "count": 2,
+      "p90_us": 41.2
+    }
+  }
+}

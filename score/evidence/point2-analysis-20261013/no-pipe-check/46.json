@@ -1,0 +1,29 @@
+{
+  "case": 46,
+  "label": "五行三列",
+  "shape": [
+    1,
+    5,
+    3,
+    48
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "321ab20a230a97dd94da53e4c803b1b2bca66813caf7168b526ce74a955e466f",
+    "41e2c67f666143547ba88f1111b232815fe92ccceb710ec7851b651e3a4416db"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    8.753782272338867,
+    8.753782272338867
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

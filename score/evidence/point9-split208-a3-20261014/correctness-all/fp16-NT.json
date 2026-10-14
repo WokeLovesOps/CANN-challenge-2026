@@ -1,0 +1,87 @@
+{
+  "commit": "candidate",
+  "execution": "real_npu",
+  "library": "/home/developer/cann-point9-split208-a3-20261014/libcandidate.so",
+  "library_sha256": "d4c47accaad5d044dbb8277f14769e846125e49489031ffc5a9c0cf4fbdee7d9",
+  "dtype": "fp16",
+  "layout": "NT",
+  "warmup": 0,
+  "repeat": 2,
+  "call_mode": "direct",
+  "synchronization": "each_call",
+  "address_mode": "fixed",
+  "validation_calls": 1,
+  "passed": true,
+  "results": [
+    {
+      "case": 3,
+      "shape": [
+        2,
+        7,
+        13,
+        48
+      ],
+      "passed": true,
+      "input_sha256": [
+        "4ca619e305a36f783ba6e0cf9e7a6c2b152efefb863fa70608c1517a7dd4c720",
+        "317dd3eaa3563c0956313dca8b2036651b824f8d0c6d2d811cc2422a9a4c59e5"
+      ],
+      "launch_begin": 0,
+      "seed": 20260933,
+      "max_abs_error": 1.9073486328125e-06,
+      "launch_end": 3
+    },
+    {
+      "case": 9,
+      "shape": [
+        1,
+        2048,
+        1536,
+        1280
+      ],
+      "passed": true,
+      "input_sha256": [
+        "dd9ba30672485fa9eb57d51cbc46d0f354cfd6a2750602127b1324661e4b7287",
+        "7632ba4aa74aab9fede3fe096aac31ff65d8eab98a35dce4006048d1c4bb0d05"
+      ],
+      "launch_begin": 3,
+      "seed": 20260939,
+      "max_abs_error": 0.0,
+      "launch_end": 6
+    }
+  ],
+  "launches": [
+    {
+      "case": 3,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 3,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 3,
+      "phase": "sample",
+      "position": 2
+    },
+    {
+      "case": 9,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 9,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 9,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}

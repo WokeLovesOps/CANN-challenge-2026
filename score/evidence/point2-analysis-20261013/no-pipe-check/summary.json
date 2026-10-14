@@ -1,0 +1,242 @@
+[
+  {
+    "case": 6,
+    "label": "高行单列",
+    "shape": [
+      1,
+      16,
+      1,
+      56
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "d51f99c8cddb0685525cfa4f4cd84ff47ac48ba6118b9fb2f86af4097ca527a9",
+      "334d6f4066a06585083eae367a2a9efec5cac6f2a4354d63f538df5cda9917c9"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      8.968331336975098,
+      8.968331336975098
+    ],
+    "available_cores": 20,
+    "max_abs_error": 9.5367431640625e-07,
+    "exit_code": 0
+  },
+  {
+    "case": 14,
+    "label": "双行八列",
+    "shape": [
+      1,
+      2,
+      8,
+      48
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "54ac43a05d4213a33a0b4e9feb5b3fe9c436e792d087a4e556d1f9c13c52fd6b",
+      "0cb9a283b3682d15f24f89a3f004aca33d460b9de12bfca073776f0548d48ef0"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      3.8102121353149414,
+      3.8102121353149414
+    ],
+    "available_cores": 20,
+    "max_abs_error": 2.384185791015625e-07,
+    "exit_code": 0
+  },
+  {
+    "case": 22,
+    "label": "单行十六列",
+    "shape": [
+      1,
+      1,
+      16,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "2c1c7b4b1ca8c9ad1e2c4611eb7701b28013e7306c7615811f1d119d3d7bd121",
+      "5eed166b97fb674d2cf14b9244e1e474a597f8b1c6cfd28d853d872a7053ac8f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      7.391382694244385,
+      7.391382694244385
+    ],
+    "available_cores": 20,
+    "max_abs_error": 4.76837158203125e-07,
+    "exit_code": 0
+  },
+  {
+    "case": 30,
+    "label": "单行单列",
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "7ad6d93c902d134ad98ad787251a932686eac60c448c2446b6de3f9163b6de8b",
+      "b9bc89b6bc0029c4ad32406e95e7de3f51e366d397e49536091a72a0b1652627"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.27328014373779297,
+      -0.27328014373779297
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0
+  },
+  {
+    "case": 38,
+    "label": "四行四列",
+    "shape": [
+      1,
+      4,
+      4,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "a4fc8d1e38dcffee1555458b0a870e20328d7d11d73ddbcbd7d0c991d3c87ee9",
+      "69db7bfe6dfb9e90ec42f1623bcd1bc9fa97a8847fea198456c679e4c81d8b8f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      7.89858341217041,
+      7.89858341217041
+    ],
+    "available_cores": 20,
+    "max_abs_error": 9.5367431640625e-07,
+    "exit_code": 0
+  },
+  {
+    "case": 46,
+    "label": "五行三列",
+    "shape": [
+      1,
+      5,
+      3,
+      48
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "321ab20a230a97dd94da53e4c803b1b2bca66813caf7168b526ce74a955e466f",
+      "41e2c67f666143547ba88f1111b232815fe92ccceb710ec7851b651e3a4416db"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      8.753782272338867,
+      8.753782272338867
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0
+  },
+  {
+    "case": 54,
+    "label": "紧凑全负",
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "d444646e277248d805d8ab5b03541f3907cc405a8f96aaeea04e4b983cf70a68",
+      "aa7252617a8a0cd8848bfba64bc2acd8b9b66eed518a1ccc57c16da9f2d86b48"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -22.189197540283203,
+      -22.189197540283203
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0
+  },
+  {
+    "case": 62,
+    "label": "紧凑全零",
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
+      "06090950392728434962e61ad5ee0ea8d0d281e4a226b20e2894c39bc58e39ad"
+    ],
+    "input_pattern": "全零",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0
+  }
+]

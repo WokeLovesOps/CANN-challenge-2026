@@ -1,0 +1,734 @@
+{
+  "library": "/home/developer/cann-point4-column-repeat-20261013/libcandidate.so",
+  "library_sha256": "4342285c8fbc502056f65e751fca15ccfb9cefe420ce00a48a070467010520bc",
+  "execution": "real_npu",
+  "cases": [
+    0,
+    1,
+    30,
+    31,
+    480,
+    481,
+    494,
+    495,
+    510,
+    511,
+    992,
+    993,
+    1022,
+    1023,
+    1504,
+    1505,
+    1534,
+    1535,
+    1536,
+    1537,
+    1538,
+    1539
+  ],
+  "capture": true,
+  "passed": true,
+  "results": [
+    {
+      "position": 0,
+      "case": 0,
+      "shape": [
+        2,
+        1,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-1-1-64",
+      "passed": true,
+      "input_sha256": [
+        "402c9b82aee500795b74db4ae15bf7fb235d2149d8e932be07f46a2d4bb0f858",
+        "69c1916c790cd5a3b55b103184acd446dd2953fdd309494af0a188f22b698e3b"
+      ],
+      "actual": [
+        2.382258892059326,
+        6.846957206726074
+      ],
+      "expected": [
+        2.382258892059326,
+        6.846957206726074
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 1,
+      "case": 1,
+      "shape": [
+        2,
+        1,
+        1,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-1-1-128",
+      "passed": true,
+      "input_sha256": [
+        "74e101fad4fe98dacae04290611396876f900f623295c51b3b07e9c7df7f35f3",
+        "a41da9e5bb545287a9dd84069abe6ce73a2b40b21a471dfe19d8349fa5e96094"
+      ],
+      "actual": [
+        -2.801238536834717,
+        -4.019333362579346
+      ],
+      "expected": [
+        -2.801238536834717,
+        -4.019333362579346
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 2,
+      "case": 30,
+      "shape": [
+        2,
+        1,
+        16,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-1-16-64",
+      "passed": true,
+      "input_sha256": [
+        "6feb1106392c50063ad67e36009b28e33326c589ccf9234bf40ab39305c15408",
+        "43c6afb1a28297bcc15952237310d5693a68fd6b95147e874e1abdf62bd2b9f4"
+      ],
+      "actual": [
+        4.495931148529053,
+        5.039697647094727
+      ],
+      "expected": [
+        4.495931148529053,
+        5.039697170257568
+      ],
+      "max_abs_error": 4.76837158203125e-07
+    },
+    {
+      "position": 3,
+      "case": 31,
+      "shape": [
+        2,
+        1,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-1-16-128",
+      "passed": true,
+      "input_sha256": [
+        "c509d23d1f8aef312acb905bc01bd7fdbc91c0e89630f243a6e8bd3c07604647",
+        "c95051d0104b5c407216cf3c7aaed8dab685fbdf3958054a25c9cd1a3d3d2212"
+      ],
+      "actual": [
+        5.254726409912109,
+        5.4997758865356445
+      ],
+      "expected": [
+        5.254726409912109,
+        5.4997758865356445
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 4,
+      "case": 480,
+      "shape": [
+        2,
+        16,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-16-1-64",
+      "passed": true,
+      "input_sha256": [
+        "f534f1b78c33cfe9831e30d8dff51f36b0b55f78c876bfccc0b38c37bec1dd63",
+        "2b12c9ee759784450db3cdedfd05301b644694e498956123e3b6485bf961f6af"
+      ],
+      "actual": [
+        -14.897083282470703,
+        13.095748901367188
+      ],
+      "expected": [
+        -14.897083282470703,
+        13.095749855041504
+      ],
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "position": 5,
+      "case": 481,
+      "shape": [
+        2,
+        16,
+        1,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-16-1-128",
+      "passed": true,
+      "input_sha256": [
+        "fb2ccbe8aac3833850e0b47c00591dab868d6e62e63ca7583212dc7bcf9ec327",
+        "ce1fe41734ff73588b2fe8c5c4270fb7c78e9783fc0c26b5cf4dfc2826766fd1"
+      ],
+      "actual": [
+        13.555197715759277,
+        9.91823673248291
+      ],
+      "expected": [
+        13.555198669433594,
+        9.918237686157227
+      ],
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "position": 6,
+      "case": 494,
+      "shape": [
+        2,
+        16,
+        8,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-16-8-64",
+      "passed": true,
+      "input_sha256": [
+        "a491200771aab6f5a7edfb4666b35507def9a39ed81383d6fb00bf68d06a3763",
+        "55c49d8397592876bb2fd0f73af8f59960903e87f5a1bc3994ef1a45b221f773"
+      ],
+      "actual": [
+        55.69319152832031,
+        59.60211944580078
+      ],
+      "expected": [
+        55.69319534301758,
+        59.60212326049805
+      ],
+      "max_abs_error": 3.814697265625e-06
+    },
+    {
+      "position": 7,
+      "case": 495,
+      "shape": [
+        2,
+        16,
+        8,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-16-8-128",
+      "passed": true,
+      "input_sha256": [
+        "686e67e531943ed192ff82c8ab25962754496d29d2e26979c081028813f6cbd3",
+        "c5d248a8998fea5526d38c75f4f5adfa8ba938c24657d8fe024f96f307c09631"
+      ],
+      "actual": [
+        94.15435791015625,
+        89.005615234375
+      ],
+      "expected": [
+        94.15435791015625,
+        89.005615234375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 8,
+      "case": 510,
+      "shape": [
+        2,
+        16,
+        16,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-16-16-64",
+      "passed": true,
+      "input_sha256": [
+        "23b7946d06b45a94b4022bcfa77bacd35642c1ec6c64f98def25536e44d9c678",
+        "19296927510c055f8afb98e04f8139402acdc0365c6456f71768500af206743a"
+      ],
+      "actual": [
+        77.62165069580078,
+        83.55784606933594
+      ],
+      "expected": [
+        77.62165069580078,
+        83.55784606933594
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 9,
+      "case": 511,
+      "shape": [
+        2,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域2-16-16-128",
+      "passed": true,
+      "input_sha256": [
+        "bf7e0ef3a62263ce3745968e112b85497965293e50e50a5e3f85436cf87e2d0e",
+        "9ee573508d5a85157d19567428583d7223ceb5bb2a780ea03a1678fe5f5be98c"
+      ],
+      "actual": [
+        104.65338897705078,
+        105.10200500488281
+      ],
+      "expected": [
+        104.65338897705078,
+        105.10199737548828
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 10,
+      "case": 992,
+      "shape": [
+        3,
+        16,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域3-16-1-64",
+      "passed": true,
+      "input_sha256": [
+        "21fbaf9dc9f8a269d14bd7c31032d87cca40b17a2ff98b931b6347127e1b5552",
+        "385f022092ff59b640b0b0b41ad151a3940000896e7a02f2858d4810f38bd7f1"
+      ],
+      "actual": [
+        15.883153915405273,
+        -17.80908203125,
+        -1.1935360431671143
+      ],
+      "expected": [
+        15.88315486907959,
+        -17.80908203125,
+        -1.1935362815856934
+      ],
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "position": 11,
+      "case": 993,
+      "shape": [
+        3,
+        16,
+        1,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域3-16-1-128",
+      "passed": true,
+      "input_sha256": [
+        "21baf0d38d3bc93e9eca7e31b51093b688ad4453f01f568a00738d552cfffa7b",
+        "cf86467e6e4e6e008f9e00378acc96bfbdc8b47b8dbde0549302e437d6860f58"
+      ],
+      "actual": [
+        -11.779729843139648,
+        -11.937530517578125,
+        15.671137809753418
+      ],
+      "expected": [
+        -11.779729843139648,
+        -11.937530517578125,
+        15.671136856079102
+      ],
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "position": 12,
+      "case": 1022,
+      "shape": [
+        3,
+        16,
+        16,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域3-16-16-64",
+      "passed": true,
+      "input_sha256": [
+        "6f7e6bd697a547d1d0218dad117e2302f7661d8797a8c1bf732fabf5f220d906",
+        "38bdf3f41d667953e632ba27d701126d3a01bd213c6aab7ffb66c6953f9fbafd"
+      ],
+      "actual": [
+        72.00714111328125,
+        75.41390991210938,
+        70.48206329345703
+      ],
+      "expected": [
+        72.00714111328125,
+        75.41390991210938,
+        70.48206329345703
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 13,
+      "case": 1023,
+      "shape": [
+        3,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域3-16-16-128",
+      "passed": true,
+      "input_sha256": [
+        "6c75c589e69406dcbdb4d108a79ebb2307b0030d78db4c857bd0fa7e435b290b",
+        "b71f1b9195d92ae2db6e0832d04c7aeebdbf7b38c7bea13bba607988bd5fea56"
+      ],
+      "actual": [
+        95.4042739868164,
+        96.44401550292969,
+        84.04318237304688
+      ],
+      "expected": [
+        95.4042739868164,
+        96.44400787353516,
+        84.04317474365234
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 14,
+      "case": 1504,
+      "shape": [
+        4,
+        16,
+        1,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域4-16-1-64",
+      "passed": true,
+      "input_sha256": [
+        "ce1c0e65cf350cc2c1da4731747bd46a744cfd4099b49eb987bb15ee9464f96a",
+        "10c616c776fc84bf64994a91afdf5bced5a92e026b327bb2e508bebdebea8d28"
+      ],
+      "actual": [
+        4.34805965423584,
+        9.389907836914062,
+        -4.983030319213867,
+        -20.939218521118164
+      ],
+      "expected": [
+        4.3480610847473145,
+        9.389908790588379,
+        -4.983029842376709,
+        -20.939218521118164
+      ],
+      "max_abs_error": 1.430511474609375e-06
+    },
+    {
+      "position": 15,
+      "case": 1505,
+      "shape": [
+        4,
+        16,
+        1,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域4-16-1-128",
+      "passed": true,
+      "input_sha256": [
+        "7efaa0264d611a67eefd6bce01ac9d65cbb0b11994c34895428297be6c697804",
+        "3dc107887628c174b7bdb8306b40dcd8eb9863e0cd9fb8875352d2f1ffcbf159"
+      ],
+      "actual": [
+        -0.8276667594909668,
+        -19.210865020751953,
+        1.005889654159546,
+        1.3568792343139648
+      ],
+      "expected": [
+        -0.8276670575141907,
+        -19.210865020751953,
+        1.0058897733688354,
+        1.3568791151046753
+      ],
+      "max_abs_error": 2.980232238769531e-07
+    },
+    {
+      "position": 16,
+      "case": 1534,
+      "shape": [
+        4,
+        16,
+        16,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域4-16-16-64",
+      "passed": true,
+      "input_sha256": [
+        "36d5a10e0eee202a48d66b156b7a7093c1c41c768a5ca7ff349a4bf433a2b010",
+        "8d8bb9711fba503bf151dfc7dd0480373ee0eb8f7830545114eed33ec4d08864"
+      ],
+      "actual": [
+        70.62533569335938,
+        73.43891143798828,
+        70.14666748046875,
+        76.63334655761719
+      ],
+      "expected": [
+        70.62533569335938,
+        73.43891906738281,
+        70.14666748046875,
+        76.63334655761719
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 17,
+      "case": 1535,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "容量域4-16-16-128",
+      "passed": true,
+      "input_sha256": [
+        "902d3f7ac739512a0b9e31df78a04cb1d50ab83d74e3a21a87fd1400f45b4db1",
+        "41487b5f6b86912376be02783f690a45c21ac75e8059db961b882648dfc36611"
+      ],
+      "actual": [
+        90.0404052734375,
+        106.04066467285156,
+        122.59093475341797,
+        126.29234313964844
+      ],
+      "expected": [
+        90.0404052734375,
+        106.0406723022461,
+        122.59093475341797,
+        126.29235076904297
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 18,
+      "case": 1536,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "全负",
+      "passed": true,
+      "input_sha256": [
+        "d037647ad9090acb0bde89214f329dde77cf80f1f8b1f7006a43910a46e2fdaa",
+        "0b965059adc1eab9fda1b8246ace41ead819e70bbe2159be00495affc225de90"
+      ],
+      "actual": [
+        -435.6296081542969,
+        -435.6468505859375,
+        -469.4720764160156,
+        -468.831298828125
+      ],
+      "expected": [
+        -435.6296081542969,
+        -435.6468505859375,
+        -469.4720764160156,
+        -468.831298828125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 19,
+      "case": 1537,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "全零",
+      "passed": true,
+      "input_sha256": [
+        "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "51c56428a93f9ab8b5a814e95f8b2f5aa48e24690b49c9f982ec98bcea9955b2"
+      ],
+      "actual": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 20,
+      "case": 1538,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "尾列最大",
+      "passed": true,
+      "input_sha256": [
+        "604eec62a79939ae630b51da811693679c5a9ed3c7fbf49e6699628ad44c1eda",
+        "7fda2b6bcac368bc66c9ec8b64f528d4532000f38fc0057ee52c80d5304ab737"
+      ],
+      "actual": [
+        4096.0,
+        4096.0,
+        4096.0,
+        4096.0
+      ],
+      "expected": [
+        4096.0,
+        4096.0,
+        4096.0,
+        4096.0
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 21,
+      "case": 1539,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "尾列全负",
+      "passed": true,
+      "input_sha256": [
+        "604eec62a79939ae630b51da811693679c5a9ed3c7fbf49e6699628ad44c1eda",
+        "690d7af631b4fa7bfa43cae964aa5a178e6215bc83c032ab26de9fe2ef43b6c7"
+      ],
+      "actual": [
+        -2048.0,
+        -2048.0,
+        -2048.0,
+        -2048.0
+      ],
+      "expected": [
+        -2048.0,
+        -2048.0,
+        -2048.0,
+        -2048.0
+      ],
+      "max_abs_error": 0.0
+    }
+  ],
+  "available_cores": 20
+}

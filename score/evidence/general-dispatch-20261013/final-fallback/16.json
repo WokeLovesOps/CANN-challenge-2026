@@ -1,0 +1,29 @@
+{
+  "case": 16,
+  "label": "中批量布局回退",
+  "shape": [
+    4,
+    16,
+    16,
+    128
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "8076a3ecf38b01905cafdf4adb36d7de0cbbd8f25c1a87f220afe01406599072",
+    "18168d89911c5ed9bf35aaa9906575f619f7f3f9adb61583a5a15e0febca0295"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    104.60425567626953,
+    112.95152282714844
+  ],
+  "available_cores": 20,
+  "max_abs_error": 7.62939453125e-06
+}

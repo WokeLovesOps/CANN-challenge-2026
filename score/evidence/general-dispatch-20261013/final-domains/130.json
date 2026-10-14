@@ -1,0 +1,29 @@
+{
+  "case": 130,
+  "label": "TN驻留单行单列",
+  "shape": [
+    2,
+    1,
+    1,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "e5a36e54cdb9cffc37bb206ab69e6f9b2f6e8bf5ae56e2a84f1d1c485bf3b384",
+    "9b1b9e72639dc9f59f827e45a2cdfd635ed202690ed4cad8906440628144708f"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.5216395854949951,
+    0.3416725695133209
+  ],
+  "available_cores": 20,
+  "max_abs_error": 2.9802322387695312e-08
+}

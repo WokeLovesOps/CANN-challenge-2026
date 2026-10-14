@@ -1,0 +1,29 @@
+{
+  "case": 299,
+  "label": "TT交换表示尾块",
+  "shape": [
+    1,
+    1537,
+    2017,
+    520
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": true,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "5f8ffdb5cc002c2b99c748bef6dde693ee1f5aeaf25bd98e59d1b33a46670ecb",
+    "cb0fc278683cc882a06ae144e60790de3676b06083eb36112a20e27828ad53b4"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    40118.6796875,
+    40118.6796875
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

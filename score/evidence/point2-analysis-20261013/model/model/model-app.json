@@ -1,0 +1,29 @@
+{
+  "case": 6,
+  "label": "紧凑Gather",
+  "shape": [
+    1,
+    3,
+    5,
+    40
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "simulator",
+  "passed": true,
+  "input_sha256": [
+    "fb207ae7522a2e9ca22fb2472b1e6c28f08ebb39a9590c7752608ce5c7810f13",
+    "c24d2e0da4fe31675763a906feaacf3ff679fdc5712547155e8418d308eb61eb"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    5.382268905639648,
+    5.382268905639648
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

@@ -1,0 +1,87 @@
+{
+  "commit": "candidate",
+  "execution": "real_npu",
+  "library": "/home/developer/cann-point9-aresident-b1-a3-20261014/libcandidate.so",
+  "library_sha256": "56af4843bdc7ab1d52ef255073de472ee4b750d5c3b472fe918170bcaa18f9b6",
+  "dtype": "bf16",
+  "layout": "TT",
+  "warmup": 0,
+  "repeat": 2,
+  "call_mode": "direct",
+  "synchronization": "each_call",
+  "address_mode": "fixed",
+  "validation_calls": 1,
+  "passed": true,
+  "results": [
+    {
+      "case": 4,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "passed": true,
+      "input_sha256": [
+        "7439d9d97b7d25fe603cef01876a421f326d3818e78cbdf5376b20dbe5a9c781",
+        "3e99c57cd28ae396d396236d085191d2cdd9d6eda85312db6c2ab3dd8f59cd86"
+      ],
+      "launch_begin": 0,
+      "seed": 20260934,
+      "max_abs_error": 7.62939453125e-06,
+      "launch_end": 3
+    },
+    {
+      "case": 8,
+      "shape": [
+        1,
+        1025,
+        1031,
+        1032
+      ],
+      "passed": true,
+      "input_sha256": [
+        "0c4a752596d7659127c1f6ff7c310f428c366d472e11818312aa5d26c805e62f",
+        "f88ea83b8c6d897cf64cf745399d4eaf8cde1aa577deb7d4d8130345885611b2"
+      ],
+      "launch_begin": 3,
+      "seed": 20260938,
+      "max_abs_error": 0.0,
+      "launch_end": 6
+    }
+  ],
+  "launches": [
+    {
+      "case": 4,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 4,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 4,
+      "phase": "sample",
+      "position": 2
+    },
+    {
+      "case": 8,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 8,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 8,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}

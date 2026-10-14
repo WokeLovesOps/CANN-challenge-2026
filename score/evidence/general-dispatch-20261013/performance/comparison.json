@@ -1,0 +1,602 @@
+[
+  {
+    "case": 1,
+    "shape": [
+      1,
+      1,
+      1,
+      32
+    ],
+    "dtype": "fp16",
+    "layout": "NN",
+    "inputs": [
+      "f5c96587e411c96561d55199296524ef6c6ac72cdb81b961d7ea83a84ff5f787",
+      "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 1.13
+      },
+      {
+        "version": "candidate",
+        "median_us": 1.17
+      },
+      {
+        "version": "candidate",
+        "median_us": 1.18
+      },
+      {
+        "version": "baseline",
+        "median_us": 1.1
+      }
+    ],
+    "baseline_us": 1.12,
+    "candidate_us": 1.18,
+    "change_percent": 5.357142857142838,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 2,
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "bf16",
+    "layout": "TN",
+    "inputs": [
+      "b919e510af83b3916f5b51d2e547204f81e66aa066088c182ab149976df24636",
+      "1c28efa03d79307085f35e750bb9b812df4973c8996d9ffdf6fc5a087d1b03d3"
+    ],
+    "runs": [
+      {
+        "version": "candidate",
+        "median_us": 1.7
+      },
+      {
+        "version": "baseline",
+        "median_us": 1.63
+      },
+      {
+        "version": "baseline",
+        "median_us": 1.66
+      },
+      {
+        "version": "candidate",
+        "median_us": 1.69
+      }
+    ],
+    "baseline_us": 1.64,
+    "candidate_us": 1.7,
+    "change_percent": 3.658536585365857,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 3,
+    "shape": [
+      2,
+      7,
+      13,
+      48
+    ],
+    "dtype": "fp16",
+    "layout": "NT",
+    "inputs": [
+      "4ca619e305a36f783ba6e0cf9e7a6c2b152efefb863fa70608c1517a7dd4c720",
+      "317dd3eaa3563c0956313dca8b2036651b824f8d0c6d2d811cc2422a9a4c59e5"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 1.59
+      },
+      {
+        "version": "candidate",
+        "median_us": 1.6
+      },
+      {
+        "version": "candidate",
+        "median_us": 1.58
+      },
+      {
+        "version": "baseline",
+        "median_us": 1.5995
+      }
+    ],
+    "baseline_us": 1.5995,
+    "candidate_us": 1.58,
+    "change_percent": -1.2191309784307491,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 4,
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "bf16",
+    "layout": "TT",
+    "inputs": [
+      "7439d9d97b7d25fe603cef01876a421f326d3818e78cbdf5376b20dbe5a9c781",
+      "3e99c57cd28ae396d396236d085191d2cdd9d6eda85312db6c2ab3dd8f59cd86"
+    ],
+    "runs": [
+      {
+        "version": "candidate",
+        "median_us": 3.56
+      },
+      {
+        "version": "baseline",
+        "median_us": 3.4
+      },
+      {
+        "version": "baseline",
+        "median_us": 3.42
+      },
+      {
+        "version": "candidate",
+        "median_us": 3.54
+      }
+    ],
+    "baseline_us": 3.4,
+    "candidate_us": 3.5495,
+    "change_percent": 4.3970588235294095,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 5,
+    "shape": [
+      8,
+      16,
+      32,
+      128
+    ],
+    "dtype": "fp16",
+    "layout": "NN",
+    "inputs": [
+      "94d6decdc750525b62ce4d46dfe4cb331a2afab4655dbd916c51e35733f61be5",
+      "addb74d2aead6a8dbe3be2256e6a943cb3fe3e96170cf7d5735376495db60a97"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 2.62
+      },
+      {
+        "version": "candidate",
+        "median_us": 2.7
+      },
+      {
+        "version": "candidate",
+        "median_us": 2.72
+      },
+      {
+        "version": "baseline",
+        "median_us": 2.62
+      }
+    ],
+    "baseline_us": 2.62,
+    "candidate_us": 2.72,
+    "change_percent": 3.8167938931297662,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 6,
+    "shape": [
+      13,
+      23,
+      73,
+      192
+    ],
+    "dtype": "bf16",
+    "layout": "NT",
+    "inputs": [
+      "14e20f835e676966d4dcb6047354111cc8347432cf12e94d2e9a9faefa0dc090",
+      "2ee709bfbd288bdc0897cad87de5d93121597a1030a4c18cdcb159f0f252fbfb"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 4.01
+      },
+      {
+        "version": "candidate",
+        "median_us": 4.01
+      },
+      {
+        "version": "candidate",
+        "median_us": 4.04
+      },
+      {
+        "version": "baseline",
+        "median_us": 3.98
+      }
+    ],
+    "baseline_us": 4.0,
+    "candidate_us": 4.02,
+    "change_percent": 0.49999999999998934,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 7,
+    "shape": [
+      16,
+      32,
+      128,
+      256
+    ],
+    "dtype": "fp16",
+    "layout": "TN",
+    "inputs": [
+      "6c470b2262cd775c85245c6a9910e2e19914a1eee8ab30002de368dcf4032c10",
+      "071fa644d9c4e38a7619ea6604f5c3779f20b5d554bb47887e2f53e2feeeb712"
+    ],
+    "runs": [
+      {
+        "version": "candidate",
+        "median_us": 4.32
+      },
+      {
+        "version": "baseline",
+        "median_us": 4.4
+      },
+      {
+        "version": "baseline",
+        "median_us": 4.38
+      },
+      {
+        "version": "candidate",
+        "median_us": 4.3
+      }
+    ],
+    "baseline_us": 4.38,
+    "candidate_us": 4.3,
+    "change_percent": -1.82648401826484,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 8,
+    "shape": [
+      1,
+      1025,
+      1031,
+      1032
+    ],
+    "dtype": "bf16",
+    "layout": "TT",
+    "inputs": [
+      "0c4a752596d7659127c1f6ff7c310f428c366d472e11818312aa5d26c805e62f",
+      "f88ea83b8c6d897cf64cf745399d4eaf8cde1aa577deb7d4d8130345885611b2"
+    ],
+    "runs": [
+      {
+        "version": "candidate",
+        "median_us": 43.579
+      },
+      {
+        "version": "baseline",
+        "median_us": 42.1395
+      },
+      {
+        "version": "baseline",
+        "median_us": 41.999
+      },
+      {
+        "version": "candidate",
+        "median_us": 43.479
+      }
+    ],
+    "baseline_us": 42.059,
+    "candidate_us": 43.509,
+    "change_percent": 3.4475379823581287,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 9,
+    "shape": [
+      1,
+      2048,
+      1536,
+      1280
+    ],
+    "dtype": "fp16",
+    "layout": "NT",
+    "inputs": [
+      "dd9ba30672485fa9eb57d51cbc46d0f354cfd6a2750602127b1324661e4b7287",
+      "7632ba4aa74aab9fede3fe096aac31ff65d8eab98a35dce4006048d1c4bb0d05"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 51.8085
+      },
+      {
+        "version": "candidate",
+        "median_us": 52.059
+      },
+      {
+        "version": "candidate",
+        "median_us": 52.199
+      },
+      {
+        "version": "baseline",
+        "median_us": 51.829
+      }
+    ],
+    "baseline_us": 51.819,
+    "candidate_us": 52.129000000000005,
+    "change_percent": 0.5982361682008497,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 10,
+    "shape": [
+      1,
+      4096,
+      1280,
+      1152
+    ],
+    "dtype": "bf16",
+    "layout": "NN",
+    "inputs": [
+      "a8da437db5c9ce69847432d9fb8acf1cc9f9fa374fc93110634b20ec80370be5",
+      "c1544fb295cc258209f4f32969a4e54449a6ed613107ddcccae8989fec175434"
+    ],
+    "runs": [
+      {
+        "version": "candidate",
+        "median_us": 73.41900000000001
+      },
+      {
+        "version": "baseline",
+        "median_us": 73.05850000000001
+      },
+      {
+        "version": "baseline",
+        "median_us": 73.219
+      },
+      {
+        "version": "candidate",
+        "median_us": 73.239
+      }
+    ],
+    "baseline_us": 73.1685,
+    "candidate_us": 73.3385,
+    "change_percent": 0.23234041971613717,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 11,
+    "shape": [
+      1,
+      1536,
+      2048,
+      2048
+    ],
+    "dtype": "fp16",
+    "layout": "TT",
+    "inputs": [
+      "314eb3f8ada2ab43bf155731c63b295f737c3200110844a6ebba81abd0b8d57a",
+      "eaec8b300ad17c97df0c8563cf0d0f63be9059f4bcbd6d7dc9e61c3cfb4ed4bb"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 72.7985
+      },
+      {
+        "version": "candidate",
+        "median_us": 72.82849999999999
+      },
+      {
+        "version": "candidate",
+        "median_us": 73.208
+      },
+      {
+        "version": "baseline",
+        "median_us": 73.259
+      }
+    ],
+    "baseline_us": 73.039,
+    "candidate_us": 73.039,
+    "change_percent": 0.0,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 12,
+    "shape": [
+      1,
+      1280,
+      4096,
+      1536
+    ],
+    "dtype": "bf16",
+    "layout": "TN",
+    "inputs": [
+      "a98e65c7ca89418d07415fb733d729c5c3979788aad12c29df9f1b8045821710",
+      "337218a16571060d78fe88933a9c92a4659e212c2a2c253eacf6e21ee44ca9b7"
+    ],
+    "runs": [
+      {
+        "version": "candidate",
+        "median_us": 91.9885
+      },
+      {
+        "version": "baseline",
+        "median_us": 92.228
+      },
+      {
+        "version": "baseline",
+        "median_us": 91.7885
+      },
+      {
+        "version": "candidate",
+        "median_us": 91.908
+      }
+    ],
+    "baseline_us": 91.818,
+    "candidate_us": 91.9885,
+    "change_percent": 0.1856934370167096,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 13,
+    "shape": [
+      1,
+      8192,
+      64,
+      128
+    ],
+    "dtype": "fp16",
+    "layout": "NN",
+    "inputs": [
+      "c1fd8825487fd523043357f954f27ac8b22c44a4ff60a9dfdbacb3fb8d9c2dae",
+      "7e1ffe22f5e4aa09ae330bee73932d543cf88a833d0648afad37c7ffc90d063b"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 7.32
+      },
+      {
+        "version": "candidate",
+        "median_us": 7.219
+      },
+      {
+        "version": "candidate",
+        "median_us": 7.2595
+      },
+      {
+        "version": "baseline",
+        "median_us": 7.14
+      }
+    ],
+    "baseline_us": 7.26,
+    "candidate_us": 7.239,
+    "change_percent": -0.2892561983471098,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 14,
+    "shape": [
+      1,
+      64,
+      8192,
+      128
+    ],
+    "dtype": "bf16",
+    "layout": "NT",
+    "inputs": [
+      "bd526606ce95a4fc50de0be3611ef543b870074bb147e5fdc272517d36bdcea4",
+      "91213919c292c3ef2739b9e9da7f67e88f4365bef28b438cd4796011961fcc0e"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 7.13
+      },
+      {
+        "version": "candidate",
+        "median_us": 7.1594999999999995
+      },
+      {
+        "version": "candidate",
+        "median_us": 7.3
+      },
+      {
+        "version": "baseline",
+        "median_us": 7.2095
+      }
+    ],
+    "baseline_us": 7.17,
+    "candidate_us": 7.2,
+    "change_percent": 0.4184100418409997,
+    "sample_counts": [
+      100,
+      100
+    ]
+  },
+  {
+    "case": 15,
+    "shape": [
+      1,
+      64,
+      64,
+      8192
+    ],
+    "dtype": "fp16",
+    "layout": "TT",
+    "inputs": [
+      "77dd8976c4d008f00c21477b09db17a91b73d9f8c012f90b870626e63bc6a2f9",
+      "98dfbca3af847c6d90f96d6932efdbc2d3a9f5637c2ffaabe1c69e7cd8899ba4"
+    ],
+    "runs": [
+      {
+        "version": "baseline",
+        "median_us": 6.32
+      },
+      {
+        "version": "candidate",
+        "median_us": 6.84
+      },
+      {
+        "version": "candidate",
+        "median_us": 6.98
+      },
+      {
+        "version": "baseline",
+        "median_us": 6.4
+      }
+    ],
+    "baseline_us": 6.36,
+    "candidate_us": 6.9,
+    "change_percent": 8.490566037735858,
+    "sample_counts": [
+      100,
+      100
+    ]
+  }
+]

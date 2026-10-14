@@ -1,0 +1,29 @@
+{
+  "case": 361,
+  "label": "单点积非对齐K",
+  "shape": [
+    1,
+    1,
+    1,
+    40
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "8cb64858d9ccc306b34c58c1265fc2ad01e4e241f8c2bf30f5f876057d908748",
+    "21e92d51ee1633ba600186bf9718ba4ecdbff454b633f40d53def49ab3d82438"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    1.602344274520874,
+    1.602344274520874
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

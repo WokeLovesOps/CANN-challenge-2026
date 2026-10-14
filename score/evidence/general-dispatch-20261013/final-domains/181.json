@@ -1,0 +1,29 @@
+{
+  "case": 181,
+  "label": "矮宽驻留邻域",
+  "shape": [
+    1,
+    32,
+    2048,
+    80
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "78b65ea8a97ea6062a7234d21c02467eaf6d388a3cd510488b1433dae12531da",
+    "dc58dd442d534a0b6e00dfbbeae7f3c55b2fe6d0bca6958dc8cb0cfb286f9b19"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    322.50286865234375,
+    322.50286865234375
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

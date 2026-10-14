@@ -1,0 +1,54 @@
+{
+  "commit": "candidate",
+  "execution": "real_npu",
+  "library": "/home/developer/cann-point9-lanemax-a3-20261014/libcandidate.so",
+  "library_sha256": "9f7e884072d678c756d207f17a617e99b46859a03c3757a0c06783a05f7ddc15",
+  "dtype": "bf16",
+  "layout": "NN",
+  "warmup": 0,
+  "repeat": 2,
+  "call_mode": "direct",
+  "synchronization": "each_call",
+  "address_mode": "fixed",
+  "validation_calls": 1,
+  "passed": true,
+  "results": [
+    {
+      "case": 10,
+      "shape": [
+        1,
+        4096,
+        1280,
+        1152
+      ],
+      "passed": true,
+      "input_sha256": [
+        "a8da437db5c9ce69847432d9fb8acf1cc9f9fa374fc93110634b20ec80370be5",
+        "c1544fb295cc258209f4f32969a4e54449a6ed613107ddcccae8989fec175434"
+      ],
+      "launch_begin": 0,
+      "seed": 20260940,
+      "max_abs_error": 0.0,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 10,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 10,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 10,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}

@@ -1,0 +1,154 @@
+{
+  "commit": "candidate-point9",
+  "execution": "real_npu",
+  "library": "/home/developer/cann-point9-lanemax-a3-20261014/libcandidate.so",
+  "library_sha256": "9f7e884072d678c756d207f17a617e99b46859a03c3757a0c06783a05f7ddc15",
+  "dtype": "fp16",
+  "layout": "NT",
+  "warmup": 20,
+  "repeat": 2,
+  "call_mode": "direct",
+  "synchronization": "each_call",
+  "address_mode": "fixed",
+  "validation_calls": 1,
+  "passed": true,
+  "results": [
+    {
+      "case": 9,
+      "shape": [
+        1,
+        2048,
+        1536,
+        1280
+      ],
+      "passed": true,
+      "input_sha256": [
+        "dd9ba30672485fa9eb57d51cbc46d0f354cfd6a2750602127b1324661e4b7287",
+        "7632ba4aa74aab9fede3fe096aac31ff65d8eab98a35dce4006048d1c4bb0d05"
+      ],
+      "launch_begin": 0,
+      "seed": 20260939,
+      "max_abs_error": 0.0,
+      "launch_end": 23
+    }
+  ],
+  "launches": [
+    {
+      "case": 9,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 1
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 2
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 3
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 4
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 5
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 6
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 7
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 8
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 9
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 10
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 11
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 12
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 13
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 14
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 15
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 16
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 17
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 18
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 19
+    },
+    {
+      "case": 9,
+      "phase": "warmup",
+      "position": 20
+    },
+    {
+      "case": 9,
+      "phase": "sample",
+      "position": 21
+    },
+    {
+      "case": 9,
+      "phase": "sample",
+      "position": 22
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}

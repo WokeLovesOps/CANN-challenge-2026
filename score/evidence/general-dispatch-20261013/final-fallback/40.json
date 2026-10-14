@@ -1,0 +1,29 @@
+{
+  "case": 40,
+  "label": "双GM槽与多行任务",
+  "shape": [
+    2,
+    33,
+    513,
+    40
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "c16c1c274029d01a8a19c21e84fd4abf11a6114cc58e5fab362968fc00a32e9f",
+    "726d5c29bcc9fa15abe802229d0a5234b985ca7707d3d309daa47e713c5dd69e"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    203.06549072265625,
+    203.42462158203125
+  ],
+  "available_cores": 20,
+  "max_abs_error": 1.52587890625e-05
+}

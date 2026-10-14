@@ -1,0 +1,29 @@
+{
+  "case": 352,
+  "label": "高窄全零",
+  "shape": [
+    1,
+    433,
+    17,
+    80
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "547dc352325039ec7b58bfd572c44192768c8e9850d697540d676771b7934a5c",
+    "1c7f8cf3bc1a7d7edf9ceac08d77f76dc74baf09461e14087781cdd45b5549c8"
+  ],
+  "input_pattern": "全零",
+  "expected_range": [
+    0.0,
+    0.0
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

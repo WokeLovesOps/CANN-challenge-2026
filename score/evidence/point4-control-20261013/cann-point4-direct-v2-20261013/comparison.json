@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "median_us": 3.54,
+    "mean_us": 3.54775,
+    "samples": 100,
+    "input_sha256": [
+      "7439d9d97b7d25fe603cef01876a421f326d3818e78cbdf5376b20dbe5a9c781",
+      "3e99c57cd28ae396d396236d085191d2cdd9d6eda85312db6c2ab3dd8f59cd86"
+    ]
+  },
+  "candidate": {
+    "median_us": 3.32,
+    "mean_us": 3.32234,
+    "samples": 100,
+    "input_sha256": [
+      "7439d9d97b7d25fe603cef01876a421f326d3818e78cbdf5376b20dbe5a9c781",
+      "3e99c57cd28ae396d396236d085191d2cdd9d6eda85312db6c2ab3dd8f59cd86"
+    ]
+  },
+  "model_counts": {
+    "BAR": 71,
+    "WAIT_FLAG": 4,
+    "VMLA": 16,
+    "MOV_SRC_TO_DST_ALIGN": 3,
+    "SET_FLAG": 4,
+    "LD_XD_XN_IMM": 14,
+    "LDP_XI_XJ_XN": 2,
+    "VCGADD": 3,
+    "VMUL": 16,
+    "ST_XD_XN_IMM": 19,
+    "VGATHER": 16,
+    "VCMAX": 1,
+    "MOVEMASK": 89,
+    "VCONV": 2,
+    "VCADD": 1,
+    "STI_XN_IMM": 2,
+    "VMULS": 1,
+    "VADDS": 8,
+    "MUL": 26,
+    "ZEROEXT": 150,
+    "OR": 52,
+    "ADD": 123,
+    "ADD_IMM": 37,
+    "MOV_XD_XN": 36,
+    "SHL": 47,
+    "AND": 40,
+    "DCCI": 1,
+    "CMP_IMM": 25,
+    "INSERT_XD": 24,
+    "MADD": 2,
+    "SUB": 3,
+    "MIN": 3,
+    "MOV_XD_IMM": 94,
+    "MOVK": 30,
+    "SHR": 1,
+    "NEG": 13,
+    "SUB_IMM": 4,
+    "CMP": 2,
+    "NOT": 5,
+    "SEL": 3,
+    "SIGNEXT": 3,
+    "MOVX8_XD_IMM": 3,
+    "MOV_XD_SPR": 13,
+    "INSERT_XD_XN": 1,
+    "END": 1,
+    "JUMPC": 26,
+    "NOP": 1,
+    "JUMPCMP": 45,
+    "JUMP": 18,
+    "MOV_SPR_XN": 6
+  }
+}

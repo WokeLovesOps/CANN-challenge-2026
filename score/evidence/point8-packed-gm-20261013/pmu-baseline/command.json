@@ -1,0 +1,30 @@
+{
+  "command": [
+    "msprof",
+    "op",
+    "--aic-metrics=PipeUtilization,Memory,MemoryUB",
+    "--launch-count=1",
+    "--launch-skip-before-match=20",
+    "--output=/home/developer/cann-point8-packed-gm-20261013/pmu-baseline/profile",
+    "python3",
+    "/home/developer/cann-point8-packed-gm-20261013/tests/benchmark.py",
+    "/home/developer/cann-point4-transpose-20261013/libcandidate.so",
+    "--commit",
+    "baseline",
+    "--report",
+    "/home/developer/cann-point8-packed-gm-20261013/pmu-baseline/application.json",
+    "--cases",
+    "8",
+    "--dtype",
+    "bf16",
+    "--layout",
+    "TT",
+    "--warmup",
+    "20",
+    "--repeat",
+    "2",
+    "--real-npu"
+  ],
+  "exit_code": 0,
+  "seconds": 6.1709100249991025
+}

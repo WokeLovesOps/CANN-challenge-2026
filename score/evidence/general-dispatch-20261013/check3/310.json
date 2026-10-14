@@ -1,0 +1,29 @@
+{
+  "case": 310,
+  "label": "TN宽块",
+  "shape": [
+    1,
+    1280,
+    4096,
+    1536
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "079b08707899910a326ebf6797aa798275b26ed23287f5306683bdad288ef25a",
+    "7a9596d3fee0b191a50d649d515405872dc1c20e78c36156904aafbf0c9cd7c2"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    60632.84765625,
+    60632.84765625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

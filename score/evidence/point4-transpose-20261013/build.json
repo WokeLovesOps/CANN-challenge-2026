@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point4-transpose-20261013/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point4-transpose-20261013/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 74.30050753700016,
+  "exit_code": 0,
+  "source_sha256": "4a5bfbcea3b8814656d2d2ac1cb7da8fe0b5898cefc8693873e2cf0cafa64a33",
+  "library_sha256": "c787f078f84dda751c72e69ed7db98158db257fed39ea712760c291da2c15fae"
+}

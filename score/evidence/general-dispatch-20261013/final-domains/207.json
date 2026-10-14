@@ -1,0 +1,29 @@
+{
+  "case": 207,
+  "label": "TT完整K驻留",
+  "shape": [
+    1,
+    1025,
+    1031,
+    1032
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "3c14904539aff4183308b461ba49c15df893a114228bb4569efafcc747c9781a",
+    "6ac4f645778f157d67a58f5747544f9f94b63b57fa981e3c941fbbd9db148c94"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    35617.19140625,
+    35617.19140625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

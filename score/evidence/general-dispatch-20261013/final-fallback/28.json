@@ -1,0 +1,29 @@
+{
+  "case": 28,
+  "label": "紧凑批量类型回退",
+  "shape": [
+    8,
+    16,
+    32,
+    128
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "d098b9d49fd6d6740ab8369fe6e0434259541d3e3053e91ff3701f4d05b06a65",
+    "487b9710009151fcab037b5afbd017853950b17a0987ade754bd33b988503d8c"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    116.46028900146484,
+    144.16871643066406
+  ],
+  "available_cores": 20,
+  "max_abs_error": 1.52587890625e-05
+}

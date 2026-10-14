@@ -1,0 +1,29 @@
+{
+  "case": 47,
+  "label": "静态UB双段K",
+  "shape": [
+    4,
+    16,
+    16,
+    128
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": true,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "0b6bde752fd9c977272719b0db63a9cb7aae8e799052d028a9f91fb5d87e7727",
+    "a3cb9290fdb2dddceb77c18adec821cea086685cd3837fc4e527180aa4eac820"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    96.49787902832031,
+    105.43643188476562
+  ],
+  "available_cores": 20,
+  "max_abs_error": 7.62939453125e-06
+}

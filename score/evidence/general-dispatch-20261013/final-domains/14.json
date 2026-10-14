@@ -1,0 +1,29 @@
+{
+  "case": 14,
+  "label": "稀疏mask跨64位",
+  "shape": [
+    1,
+    1,
+    16,
+    32
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "ee90024cf478db4b9982ad0776d2a781893bf3a033aa5464c65f4de4bf333784",
+    "4d05d9347e7ee412b90ee6deae8a3aa9efd9c763f5cfc3f3110f4e0a15da196c"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    3.404369354248047,
+    3.404369354248047
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

@@ -1,0 +1,41 @@
+{
+  "library": "/home/developer/cann-point2-implement-20261013/libcandidate.so",
+  "library_sha256": "92c3eb99a06245b37346b3555319b369f467ff612b676415bb86c26eb426974b",
+  "execution": "real_npu",
+  "cases": [
+    46
+  ],
+  "capture": false,
+  "passed": false,
+  "results": [
+    {
+      "position": 0,
+      "case": 46,
+      "shape": [
+        1,
+        1,
+        10,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "容量域1x10x40",
+      "passed": false,
+      "input_sha256": [
+        "c3e7cdea8828987991a349b915440484006ec95ce7816a144023914b2ad1084c",
+        "3e5e83a5cb16c3291676f46a3c68167e8bb1af5cd938ed9cdc0a976f0f4e8226"
+      ],
+      "actual": [
+        2.989048957824707
+      ],
+      "expected": [
+        6.6033477783203125
+      ]
+    }
+  ],
+  "available_cores": 20,
+  "error": "精度失败: actual=[2.989049], expected=[6.603348]"
+}

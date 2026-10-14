@@ -1,0 +1,29 @@
+{
+  "case": 64,
+  "label": "紧凑Cube容量上界",
+  "shape": [
+    8,
+    16,
+    32,
+    128
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "5cbc0371039bdf832470a1315983bcf3e9a3494bc400017bd317a8e05533ed37",
+    "eddd54e4be40dfc8539158af9abdf98e9ddbda9fab0f0c051d2a434bfa5adaf9"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    116.90326690673828,
+    136.09561157226562
+  ],
+  "available_cores": 20,
+  "max_abs_error": 1.52587890625e-05
+}

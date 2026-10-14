@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point5-vector-tail-20261013/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point5-vector-tail-20261013/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 74.00078900099834,
+  "exit_code": 0,
+  "source_sha256": "17f4ea4969d62c6c59e6ec86aa396b7516c40ee124978c627e86ae53fee884ce",
+  "library_sha256": "ae9e7323c77a4c2072be79960da9033b99e1e03bb90b216f276b3c16c57fc424"
+}

@@ -1,0 +1,29 @@
+{
+  "case": 251,
+  "label": "长K单行单列",
+  "shape": [
+    1,
+    1,
+    1,
+    4096
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "94d19fede2953531194431681cb77344d54a592f09c6f6cb7f60d8b27baedd5a",
+    "2c519c55dec7430cc127bf5b7bab8a9e1399570308d03dfe090593667c5f7cdf"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    12.817886352539062,
+    12.817886352539062
+  ],
+  "available_cores": 20,
+  "max_abs_error": 3.814697265625e-06
+}

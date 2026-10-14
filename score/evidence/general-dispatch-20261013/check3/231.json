@@ -1,0 +1,29 @@
+{
+  "case": 231,
+  "label": "TT超L1回退",
+  "shape": [
+    1,
+    1024,
+    1025,
+    1096
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "895e6c3a48aebda4ac41c5975d3c7ef2c8f949e2c7ce6e20306891002583329f",
+    "ca721a966b6d41eca3b376aee9310a13eeb6d97018eb399deb2999679295ffcc"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    36619.00390625,
+    36619.00390625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

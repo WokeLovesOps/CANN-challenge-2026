@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "index_early",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/home/developer/cann-point2-analysis-20261013/index_early.asc",
+      "-o",
+      "/home/developer/cann-point2-analysis-20261013/libindex_early.so",
+      "-lascendcl"
+    ],
+    "seconds": 3.5679377380001824,
+    "exit_code": 0,
+    "source_sha256": "76be7b98ba808402805c28cc877d9c0f5da4c97462121c0e17831a203ce869d0",
+    "library_sha256": "58fe7d586f085d7222144c9086d5536ac706586a9886043295a079e2957aef95"
+  },
+  {
+    "variant": "no_pipe",
+    "command": [
+      "bisheng",
+      "-shared",
+      "-fPIC",
+      "--npu-arch=dav-2201",
+      "-g",
+      "/home/developer/cann-point2-analysis-20261013/no_pipe.asc",
+      "-o",
+      "/home/developer/cann-point2-analysis-20261013/libno_pipe.so",
+      "-lascendcl"
+    ],
+    "seconds": 3.3176066359992546,
+    "exit_code": 0,
+    "source_sha256": "1e6af582441bde2937be434718cff680e4b01b45b2f70b1b4033904aeab94d1d",
+    "library_sha256": "b677bff38d82f03884898e0cf00946951b21ebffc8ba06ab110c276fff8136e3"
+  }
+]

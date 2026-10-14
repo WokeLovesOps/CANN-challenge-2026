@@ -1,0 +1,390 @@
+{
+  "commit": "candidate",
+  "execution": "real_npu",
+  "library": "/home/developer/cann-point4-product-stride-20261013/libcandidate.so",
+  "library_sha256": "aba29b44217262715e9bd8e1d90f74bbcb902b9a8ad3674cbbbad6d2f53114f9",
+  "dtype": "fp16",
+  "layout": "TN",
+  "warmup": 20,
+  "repeat": 50,
+  "passed": true,
+  "results": [
+    {
+      "case": 7,
+      "shape": [
+        16,
+        32,
+        128,
+        256
+      ],
+      "passed": true,
+      "input_sha256": [
+        "6c470b2262cd775c85245c6a9910e2e19914a1eee8ab30002de368dcf4032c10",
+        "071fa644d9c4e38a7619ea6604f5c3779f20b5d554bb47887e2f53e2feeeb712"
+      ],
+      "launch_begin": 0,
+      "seed": 20260937,
+      "max_abs_error": 3.0517578125e-05,
+      "launch_end": 71
+    }
+  ],
+  "launches": [
+    {
+      "case": 7,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 1
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 2
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 3
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 4
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 5
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 6
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 7
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 8
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 9
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 10
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 11
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 12
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 13
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 14
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 15
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 16
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 17
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 18
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 19
+    },
+    {
+      "case": 7,
+      "phase": "warmup",
+      "position": 20
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 21
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 22
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 23
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 24
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 25
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 26
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 27
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 28
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 29
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 30
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 31
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 32
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 33
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 34
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 35
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 36
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 37
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 38
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 39
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 40
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 41
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 42
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 43
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 44
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 45
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 46
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 47
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 48
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 49
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 50
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 51
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 52
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 53
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 54
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 55
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 56
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 57
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 58
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 59
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 60
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 61
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 62
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 63
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 64
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 65
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 66
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 67
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 68
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 69
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 70
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}

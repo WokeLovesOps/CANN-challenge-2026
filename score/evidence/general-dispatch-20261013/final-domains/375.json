@@ -1,0 +1,29 @@
+{
+  "case": 375,
+  "label": "单点积容量上界",
+  "shape": [
+    1,
+    1,
+    1,
+    64
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "ec07680df661b0cb24fd183787323c9f50620132425d5e1d4dcf107c7ff7d0aa",
+    "499af5b6f01c5130322ad50a2fe55b1ea50a83a4508090466fc4a5fa49a74c73"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    3.965822219848633,
+    3.965822219848633
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

@@ -1,0 +1,1107 @@
+{
+  "library": "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+  "library_sha256": "b3652d0f8a74786f6688d160bd90347c538471c28f66017a0983cc2208db8aa3",
+  "git_commit": "fce5d900f47352f82388c3a7124547ee795d56f5",
+  "soc": "Ascend910B3",
+  "parsed_core_ids": "0",
+  "results": [
+    {
+      "case": 0,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "4a182881ca6c2e9bbfd3fcd01fa0e7409fd650a8fad7cfdeba3c8d5f417e815c",
+        "bd7c7c0e69ec8c928de8e29fc5f51978fb4f430b6ee2604829d57465e184f5e5"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        2.9959700107574463,
+        2.9959700107574463
+      ],
+      "available_cores": 20,
+      "max_abs_error": 2.384185791015625e-07,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case0",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=0",
+        "--report=/home/rose/cann-fallback-20261013/models/case0.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case0/OPPROF_20261013113150_DEXGXBEWEFWAKOBC/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4882108,
+          "sha256": "4326874af24540952dc013e0c4c296c1e5586e17c6f8f21bb5aa25ce7eb2f0da"
+        },
+        {
+          "path": "case0/OPPROF_20261013113150_DEXGXBEWEFWAKOBC/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5083668,
+          "sha256": "3b0022fc8f4572d3cfe9fa9a1c9cf9d8b4bf6d37b2affb165f8e6833a33836a3"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 1,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "9432dff06a276ce6554ccf1318962f313780352edc8632ff73d0bccf3164d4e5",
+        "b3a4220ed488682253943d8c7ca81e1580d7257ca777cce516b790c2ce8e04c7"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        1.5389914512634277,
+        1.5389914512634277
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case1",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=1",
+        "--report=/home/rose/cann-fallback-20261013/models/case1.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case1/OPPROF_20261013113203_MNCMBNWXDZCEHXEC/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4877304,
+          "sha256": "76fa9aa380e1aea409ee99a1d1ac2ec570c6112decaf77a80f595b94d995ddca"
+        },
+        {
+          "path": "case1/OPPROF_20261013113203_MNCMBNWXDZCEHXEC/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5074904,
+          "sha256": "c24812983fbd3bf0b4d6c8fcd4c6d33bbd5fedbac592864f806e9cdc22960841"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 2,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "162a8a3e3947b6bcd91fad7ea6062974b445903f57b43a2303316fa19df03876",
+        "26041dd78b1970db34999bd699685bf1cd27f5983adb2e87758db12f7e45a2a8"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        3.4575014114379883,
+        3.4575014114379883
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case2",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=2",
+        "--report=/home/rose/cann-fallback-20261013/models/case2.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case2/OPPROF_20261013113214_AEVGYRABRRIBSEQG/_ZN13batch_max_sum14ComputeGenericIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4868924,
+          "sha256": "68240db55670681624b221cb0bb20c0cae31b796da2ca14a4118bc82613020f3"
+        },
+        {
+          "path": "case2/OPPROF_20261013113214_AEVGYRABRRIBSEQG/_ZN13batch_max_sum14ComputeGenericIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5063452,
+          "sha256": "4e7735bbb9d2d70573dcf1336543f62d08f6288b41712348441bee3268a90181"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb1ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 3,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "6ede93d285d5504554974838ff568c0ffbd40e41fc72dc9a935672fdc7349d86",
+        "22cae2124e8cf4990ce632c4abf212d34b3eec217f8ccfefc67b1bd05ffeffd0"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        1.6537877321243286,
+        1.6537877321243286
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case3",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=3",
+        "--report=/home/rose/cann-fallback-20261013/models/case3.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case3/OPPROF_20261013113225_XREPGRCESHRSGVRZ/_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4858616,
+          "sha256": "6cbd8d220c6b79eef72f13dc5bbef6adb70f594ebd4a71628cf531883837e9c9"
+        },
+        {
+          "path": "case3/OPPROF_20261013113225_XREPGRCESHRSGVRZ/_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5056996,
+          "sha256": "733d730c7784c336916a32ccfad8ebe52b9f4049549c3a8896253cecb5e77ff2"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 4,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "1761ff0e7f48a311724aa24d621c0bd9f7e11a2ec35b7d03acbfd958aa353c87",
+        "361e05d50445686231021e2b444bed14f18f9d9aa968ddab331069b94b2110ee"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        0.32396793365478516,
+        0.32396793365478516
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case4",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=4",
+        "--report=/home/rose/cann-fallback-20261013/models/case4.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case4/OPPROF_20261013113238_CTTQFCOKEWUWTKPC/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4882052,
+          "sha256": "27240eae5ffc4ae938d66c30a86a7a1b2c0d30dcfc80aec3b9fa32a5114a511a"
+        },
+        {
+          "path": "case4/OPPROF_20261013113238_CTTQFCOKEWUWTKPC/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5075360,
+          "sha256": "46d0cf4212045e79a98901a972145df83caafa3a6ec897046e52002d6c68ab74"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 5,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "8088fc2d821213d49c4ef78d8ded36fe3df44b4e45330a7d2551ec05036f13ec",
+        "bcd439575965d94dbcddecdec3e25c3594b32937ac0ed1ef2f7da2dd39e1a9b9"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        5.025712966918945,
+        5.025712966918945
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case5",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=5",
+        "--report=/home/rose/cann-fallback-20261013/models/case5.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case5/OPPROF_20261013113250_KIWPBRBUPKIQXYYY/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4877228,
+          "sha256": "f8f016b875d71446923dc52f04fa5365b3d055f3f5996edd9ff72b838e0934cb"
+        },
+        {
+          "path": "case5/OPPROF_20261013113250_KIWPBRBUPKIQXYYY/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5076820,
+          "sha256": "605ab83fe9c0b74f4a9665445515c8baf3dfa717844d4fa3aeb1fb639edfed9b"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 6,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "70ad44ffbac7491d9f115873e7d479a3014b6ca4db1e623d5b94aa350d837319",
+        "810df7863a19565f65d7dc1dcd9d7f9f193bc2e3b1b315163e4b5df2a3261e4e"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        2.7397289276123047,
+        2.7397289276123047
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case6",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=6",
+        "--report=/home/rose/cann-fallback-20261013/models/case6.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case6/OPPROF_20261013113301_OALCAXPUTHCRTEFQ/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/1/simulator/visualize_data.bin",
+          "size": 2006500,
+          "sha256": "9b43792db7174e8df8c3cad229ec6cbe266a157ef0b419e65146e7273211160c"
+        },
+        {
+          "path": "case6/OPPROF_20261013113301_OALCAXPUTHCRTEFQ/_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj/0/simulator/visualize_data.bin",
+          "size": 2034996,
+          "sha256": "8d9dbfeb1058f7d464d751a3e409eb299a968ebdcf6d008c953edd5ba13e6786"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj",
+        "_ZN13batch_max_sum17ComputePackedDotsIu6__bf16Lb1ELb0EEEvPhS1_S1_jjj"
+      ]
+    },
+    {
+      "case": 7,
+      "label": "原报错小矩阵",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "4e6f8e2a9c08764ccf61a7122d62fac85486a5cd9e5dac4e6d842f656c5310a3",
+        "25a7a2940b0b2561e57a1b88f243b9e4e40b6c6214b8dcc15dd7a9bbe2762668"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        3.125710964202881,
+        3.125710964202881
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case7",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=7",
+        "--report=/home/rose/cann-fallback-20261013/models/case7.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case7/OPPROF_20261013113309_LPXRSVMHPNLKLBKM/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4858760,
+          "sha256": "ec7c5bb4c80d59693dd3f1529b7fcf168b0df6e78d1285f22d999f7c25120e9e"
+        },
+        {
+          "path": "case7/OPPROF_20261013113309_LPXRSVMHPNLKLBKM/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5056404,
+          "sha256": "5a13cef765a4f6a65c6a48e618595db59e9caf530b7c8184e5a2b3f7fb79d234"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 8,
+      "label": "小批量非对齐K",
+      "shape": [
+        2,
+        7,
+        13,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "123bea7255450f91958e20907f42c2582a8c5dc5434b2d37df97bbb94841f54a",
+        "d14636965772083b629a8b4b8eb32cd5e60b47c052185af8d9d3f1e4293b80e1"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        19.926950454711914,
+        26.026004791259766
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case8",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=8",
+        "--report=/home/rose/cann-fallback-20261013/models/case8.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case8/OPPROF_20261013113321_LXYOHHQJQXAWIPOO/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4882084,
+          "sha256": "675134e6a8ab77af6ec3d68c5cbf7d30e3a3966555a14530389b884df0d4785b"
+        },
+        {
+          "path": "case8/OPPROF_20261013113321_LXYOHHQJQXAWIPOO/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5083568,
+          "sha256": "02aac3f27df73363e31efb9e6061922178f8c4da8a21da4c311ee82ae7ff681e"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 16,
+      "label": "中批量布局回退",
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "8076a3ecf38b01905cafdf4adb36d7de0cbbd8f25c1a87f220afe01406599072",
+        "18168d89911c5ed9bf35aaa9906575f619f7f3f9adb61583a5a15e0febca0295"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        104.60425567626953,
+        112.95152282714844
+      ],
+      "available_cores": 20,
+      "max_abs_error": 7.62939453125e-06,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case16",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=16",
+        "--report=/home/rose/cann-fallback-20261013/models/case16.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case16/OPPROF_20261013113334_KQGELOBUROZYRXCK/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4882560,
+          "sha256": "9ee483aed0412fab32bf4412b0bba45afacd24ebe1a6feff5a47ff21aa6b9da4"
+        },
+        {
+          "path": "case16/OPPROF_20261013113334_KQGELOBUROZYRXCK/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5084956,
+          "sha256": "39849c897976e38022de2c84a2b0cf9761dca1c438217f67faca81041c9167a2"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 28,
+      "label": "紧凑批量类型回退",
+      "shape": [
+        8,
+        16,
+        32,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "d098b9d49fd6d6740ab8369fe6e0434259541d3e3053e91ff3701f4d05b06a65",
+        "487b9710009151fcab037b5afbd017853950b17a0987ade754bd33b988503d8c"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        116.46028900146484,
+        144.16871643066406
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.52587890625e-05,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case28",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=28",
+        "--report=/home/rose/cann-fallback-20261013/models/case28.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case28/OPPROF_20261013113346_GXOPEWRIIPBWOQRN/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4882352,
+          "sha256": "20c2e10eecf7a9efd33db592584bd2aea51e167cbddf07f0c3deba59bcaba398"
+        },
+        {
+          "path": "case28/OPPROF_20261013113346_GXOPEWRIIPBWOQRN/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5075628,
+          "sha256": "74b272b0ea95ef91910167664008c3d4baf84996d858669a90844494f56c6d95"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 36,
+      "label": "跨列分片全负",
+      "shape": [
+        1,
+        31,
+        1025,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "3dad98e5f6418b9d6dfb4f8f726360b0f262d9a6e58c5681a06c82fecd12f9f7",
+        "1d73ba5911ebdf828f48a0d58f34cd433150314fb985f6f4b5a8aff424d5b620"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -212.66363525390625,
+        -212.66363525390625
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case36",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=36",
+        "--report=/home/rose/cann-fallback-20261013/models/case36.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case36/OPPROF_20261013113359_TPTROIVTQISLBVBC/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 5400348,
+          "sha256": "7de23a0bc1b2c75b081229a742f1bbe35e3b76b67d7e28799d0a40ef27d7a699"
+        },
+        {
+          "path": "case36/OPPROF_20261013113359_TPTROIVTQISLBVBC/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5593096,
+          "sha256": "f6691af28673b3018978bede2fa8b683c4d7f208c42b2ee4c88b228d703be3c7"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 40,
+      "label": "双GM槽与多行任务",
+      "shape": [
+        2,
+        33,
+        513,
+        40
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "c16c1c274029d01a8a19c21e84fd4abf11a6114cc58e5fab362968fc00a32e9f",
+        "726d5c29bcc9fa15abe802229d0a5234b985ca7707d3d309daa47e713c5dd69e"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        203.06549072265625,
+        203.42462158203125
+      ],
+      "available_cores": 20,
+      "max_abs_error": 1.52587890625e-05,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case40",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=40",
+        "--report=/home/rose/cann-fallback-20261013/models/case40.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case40/OPPROF_20261013113415_MHKCKDGSBZLRLTDX/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 5675248,
+          "sha256": "f0f7d4e6bf7f553a364bed64f405649b144739f3189994d1753136ab8de3e509"
+        },
+        {
+          "path": "case40/OPPROF_20261013113415_MHKCKDGSBZLRLTDX/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5876304,
+          "sha256": "ce9a4c1975d384a7fe27c3134b4c0476816bab41d468c57cf7fbab900e164c24"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 55,
+      "label": "同核多个batch直写",
+      "shape": [
+        21,
+        31,
+        17,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "2c52b2105462d5fc8deff6a9891b0516734388d4633f97684f86fa82fd3e5440",
+        "e759c0acaf83a02a9a7007fa74774fc02bd9c6cc7dcf185f2f76db048f33b1af"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        105.61434173583984,
+        136.29458618164062
+      ],
+      "available_cores": 20,
+      "max_abs_error": 7.62939453125e-06,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case55",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=55",
+        "--report=/home/rose/cann-fallback-20261013/models/case55.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case55/OPPROF_20261013113432_AQGMEGHFMHAAEQOI/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 6261036,
+          "sha256": "2b68caf11e4249d90bfa5ea791ebbc3ff581c2425e99cf95ffa4cae8306ecb78"
+        },
+        {
+          "path": "case55/OPPROF_20261013113432_AQGMEGHFMHAAEQOI/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 6458236,
+          "sha256": "ee103c139e53a8c54522b5e1f619e8096499ef38fb7cf331bb313262a2516490"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 59,
+      "label": "固化SplitK邻域",
+      "shape": [
+        1,
+        1,
+        1,
+        4096
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "eb64964e359424a30a366f8d6873462d4f6ccf5984a72602db5658f5a4343090",
+        "d9eb9d54f05a28bab71537349ccf043a7f9c07b226a937699cbfe7f2ec1e2c67"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        -4.187824249267578,
+        -4.187824249267578
+      ],
+      "available_cores": 20,
+      "max_abs_error": 2.86102294921875e-06,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case59",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=59",
+        "--report=/home/rose/cann-fallback-20261013/models/case59.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case59/OPPROF_20261013113449_KDLHXAHNAVWUABDO/_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 27226584,
+          "sha256": "1cbc8216e83c769f21584beb550b5865443cf215e6764e63be990df3e7943d57"
+        },
+        {
+          "path": "case59/OPPROF_20261013113449_KDLHXAHNAVWUABDO/_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 27424708,
+          "sha256": "01281dfa3828273bc2bffe02bf6d54cdf3150b4f75e109756fe7c470c079e79c"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb1ELb1EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 68,
+      "label": "固化大块邻域",
+      "shape": [
+        1,
+        1024,
+        512,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "885a2669f9c32d8adc0cd6a3de1f59d42defe51c03f44d6c4005decd1d17da86",
+        "405a1da3a4bb7e9a2af88b5408edc66717040fbed14c83ce9dc409dbd08c090d"
+      ],
+      "input_pattern": "随机或独立构造",
+      "expected_range": [
+        8187.44482421875,
+        8187.44482421875
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case68",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=68",
+        "--report=/home/rose/cann-fallback-20261013/models/case68.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case68/OPPROF_20261013113519_EWYDJRDYXZPGKDZN/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 14497108,
+          "sha256": "158abb8f264354c614f72a47ac006bc551729630f1d1931543809f267148c705"
+        },
+        {
+          "path": "case68/OPPROF_20261013113519_EWYDJRDYXZPGKDZN/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 14689884,
+          "sha256": "e7575516ad18b140fe0c79958aba8f6cd6cb5da8d64e6d2f631f0960c0348013"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 72,
+      "label": "小矩阵全负",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "ffbc65675fe2818434fd5a4352292be2674a70ff0dfc432327b1fd95a9e50d6b",
+        "5aa97a7b38f0b0fed657015b6a74b5df580345527c5d686f7017eda63109d7ad"
+      ],
+      "input_pattern": "全负",
+      "expected_range": [
+        -15.189268112182617,
+        -15.189268112182617
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case72",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=72",
+        "--report=/home/rose/cann-fallback-20261013/models/case72.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case72/OPPROF_20261013113551_VHCGCBCNVNKJJCPV/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4881960,
+          "sha256": "405ccbe4333730f06a6fa0ffeac7f578fbce4a1d1e32295a433ae748422025bd"
+        },
+        {
+          "path": "case72/OPPROF_20261013113551_VHCGCBCNVNKJJCPV/_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5083720,
+          "sha256": "7a994bee7606cf74fa8d56a025c9bca880d4d2fdb9fe519b5e42e920f05aba87"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIDhLb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    },
+    {
+      "case": 84,
+      "label": "小矩阵全零",
+      "shape": [
+        1,
+        2,
+        2,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "capture": false,
+      "execution": "simulator",
+      "passed": true,
+      "input_sha256": [
+        "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+        "a5f54891530d92d2535ad5435602a5bd54af34522775d61b9b7b3ba717e53826"
+      ],
+      "input_pattern": "全零",
+      "expected_range": [
+        0.0,
+        0.0
+      ],
+      "available_cores": 20,
+      "max_abs_error": 0.0,
+      "command": [
+        "msprof",
+        "op",
+        "simulator",
+        "--soc-version=Ascend910B3",
+        "--core-id=0",
+        "--launch-count=4",
+        "--timeout=2",
+        "--output=/home/rose/cann-fallback-20261013/models/case84",
+        "/usr/bin/python3",
+        "/mnt/d/python/CANN/tests/legal_input_fallback.py",
+        "/home/rose/cann-fallback-20261013/libsimulator_bridge.so",
+        "--case=84",
+        "--report=/home/rose/cann-fallback-20261013/models/case84.json"
+      ],
+      "profiler_exitcode": 0,
+      "bins": [
+        {
+          "path": "case84/OPPROF_20261013113602_NXWAHHUPFSVZYLPT/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/1/simulator/visualize_data.bin",
+          "size": 4882028,
+          "sha256": "bcadd49b11c0e0381adc547808abfff04a8ae9921a4250f5dcc894ac83011ef4"
+        },
+        {
+          "path": "case84/OPPROF_20261013113602_NXWAHHUPFSVZYLPT/_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE/0/simulator/visualize_data.bin",
+          "size": 5075344,
+          "sha256": "d8ab0f7a0738b6130eef748222c9de34df57cd91d35540f412751a0185651d37"
+        }
+      ],
+      "profiled_launches": [
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE",
+        "_ZN13batch_max_sum14ComputeGenericIu6__bf16Lb0ELb0EEEvPhS1_S1_S1_S1_S1_NS_17GenericParametersE"
+      ]
+    }
+  ]
+}

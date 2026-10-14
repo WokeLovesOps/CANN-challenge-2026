@@ -1,0 +1,50 @@
+{
+  "commit": "current-point7",
+  "execution": "simulator",
+  "library": "/home/developer/cann-point7-cv64-a3-20261014/libcandidate.so",
+  "library_sha256": "438f68eb04b050457355e1efb9be0cee794dd0813f0f0e9987c9188108dfbb7e",
+  "dtype": "fp16",
+  "layout": "TN",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": true,
+  "results": [
+    {
+      "case": 7,
+      "shape": [
+        16,
+        32,
+        128,
+        256
+      ],
+      "passed": true,
+      "input_sha256": [
+        "6c470b2262cd775c85245c6a9910e2e19914a1eee8ab30002de368dcf4032c10",
+        "071fa644d9c4e38a7619ea6604f5c3779f20b5d554bb47887e2f53e2feeeb712"
+      ],
+      "launch_begin": 0,
+      "seed": 20260937,
+      "max_abs_error": 3.0517578125e-05,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 7,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 7,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910_9362",
+  "cube_cores": 20
+}

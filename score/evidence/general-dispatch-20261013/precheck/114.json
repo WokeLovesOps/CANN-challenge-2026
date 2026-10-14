@@ -1,0 +1,29 @@
+{
+  "case": 114,
+  "label": "TN驻留",
+  "shape": [
+    16,
+    32,
+    128,
+    256
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "48bedc02d6cd3e30a457f9715072a00785843dba7fc59567039a0354c64f73b6",
+    "c601dbef3f15d99aae118c41ca3c626da24702a997713e9872a7e7e4bbbde10a"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    428.0355224609375,
+    463.5591735839844
+  ],
+  "available_cores": 20,
+  "max_abs_error": 3.0517578125e-05
+}

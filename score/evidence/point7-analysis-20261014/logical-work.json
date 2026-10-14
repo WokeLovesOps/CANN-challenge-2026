@@ -1,0 +1,22 @@
+{
+  "shape": [
+    16,
+    32,
+    128,
+    256
+  ],
+  "dtype": "fp16",
+  "layout": "TN",
+  "per_batch": {
+    "a_bytes": 16384,
+    "b_bytes": 65536,
+    "intermediate_bytes": 16384,
+    "output_bytes": 4,
+    "matmul_flops": 2097152,
+    "load_a_instructions": 2,
+    "load_b_instructions": 16
+  },
+  "total_input_bytes": 1310720,
+  "total_intermediate_write_read_bytes": 524288,
+  "total_matmul_flops": 33554432
+}

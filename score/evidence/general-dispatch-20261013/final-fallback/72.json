@@ -1,0 +1,29 @@
+{
+  "case": 72,
+  "label": "小矩阵全负",
+  "shape": [
+    1,
+    2,
+    2,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "ffbc65675fe2818434fd5a4352292be2674a70ff0dfc432327b1fd95a9e50d6b",
+    "5aa97a7b38f0b0fed657015b6a74b5df580345527c5d686f7017eda63109d7ad"
+  ],
+  "input_pattern": "全负",
+  "expected_range": [
+    -15.189268112182617,
+    -15.189268112182617
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

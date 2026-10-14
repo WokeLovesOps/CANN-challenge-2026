@@ -1,0 +1,29 @@
+{
+  "case": 109,
+  "label": "NT非对齐K回退",
+  "shape": [
+    2,
+    17,
+    65,
+    200
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "5edc9f54dc1251084c16c2ef7955d7125ee0867609878583c6b5dc7eed0fe814",
+    "52f569494190d5a8d7c77995041117e1a996e4be91519519a2d70641e5aace81"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    190.56680297851562,
+    204.5604248046875
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

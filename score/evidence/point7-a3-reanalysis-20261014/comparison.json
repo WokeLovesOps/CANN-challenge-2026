@@ -1,0 +1,1485 @@
+{
+  "a3": {
+    "soc": "Ascend910_9362",
+    "library_sha256": "eca051c10f8b47d1d56136bf2b175f829b799a781a87474afd9c8dc1ea771116",
+    "passed": true,
+    "input_sha256": [
+      "6c470b2262cd775c85245c6a9910e2e19914a1eee8ab30002de368dcf4032c10",
+      "071fa644d9c4e38a7619ea6604f5c3779f20b5d554bb47887e2f53e2feeeb712"
+    ],
+    "cores": {
+      "core0.cubecore0": {
+        "counts": {
+          "LOAD_2D": 18,
+          "BAR": 2,
+          "WAIT_FLAG": 13,
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+          "SET_FLAG": 13,
+          "FIX_L0C_TO_DST": 1,
+          "LD_XD_XN_IMM": 84,
+          "LDP_XI_XJ_XN": 2,
+          "STP_XI_XJ_XN": 15,
+          "STI_XN_IMM": 23,
+          "ST_XD_XN_IMM": 43,
+          "MMAD": 1,
+          "STI_XN_XM": 10,
+          "MADD": 17,
+          "MOV_XD_XN": 39,
+          "ZEROEXT": 60,
+          "ADD": 37,
+          "SHL": 47,
+          "ADD_IMM": 42,
+          "MOV_SPR_XN": 6,
+          "LD_XD_XN": 5,
+          "DCCI": 1,
+          "CMP_IMM": 28,
+          "SET_CROSS_CORE": 1,
+          "SIGNEXT": 27,
+          "MUL": 5,
+          "SUB_IMM": 24,
+          "MOV_XD_IMM": 37,
+          "OR": 9,
+          "SBITSET": 18,
+          "SFF": 13,
+          "MOVK": 13,
+          "MAX": 1,
+          "INSERT_XD": 7,
+          "SHR": 9,
+          "SEL": 5,
+          "AND": 6,
+          "SUB": 1,
+          "MOVX8_XD_IMM": 1,
+          "INSERT_XD_XN": 1,
+          "MOV_XD_SPR": 6,
+          "CMP": 1,
+          "JUMPCMP": 32,
+          "NOP": 2,
+          "JUMPC": 24,
+          "END": 1,
+          "LOOP": 1,
+          "JUMP": 14,
+          "ENDLOOP": 16
+        },
+        "stages": {
+          "ADD": {
+            "count": 37,
+            "start_us": 0.00099945068359375,
+            "end_us": 0.6899991760728881,
+            "sum_duration_us": 0.0370000017574057
+          },
+          "ADD_IMM": {
+            "count": 42,
+            "start_us": 0.0039997100830078125,
+            "end_us": 0.9100003967760131,
+            "sum_duration_us": 0.042000001994892955
+          },
+          "AND": {
+            "count": 6,
+            "start_us": 0.0019989013671875,
+            "end_us": 0.6899991760728881,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "BAR": {
+            "count": 2,
+            "start_us": 1.4459991455078125,
+            "end_us": 1.6579995880601928,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "CMP": {
+            "count": 1,
+            "start_us": 0.4979991912841797,
+            "end_us": 0.49899919133167714,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "CMP_IMM": {
+            "count": 28,
+            "start_us": 0.38899993896484375,
+            "end_us": 0.9009996185777709,
+            "sum_duration_us": 0.028000001329928637
+          },
+          "DCCI": {
+            "count": 1,
+            "start_us": 1.657999038696289,
+            "end_us": 1.660999038722366,
+            "sum_duration_us": 0.003000000026077032
+          },
+          "END": {
+            "count": 1,
+            "start_us": 1.6590003967285156,
+            "end_us": 1.6590003967285156,
+            "sum_duration_us": 0.0
+          },
+          "ENDLOOP": {
+            "count": 16,
+            "start_us": 0.5060005187988281,
+            "end_us": 0.6040000915527344,
+            "sum_duration_us": 0.0
+          },
+          "FIX_L0C_TO_DST": {
+            "count": 1,
+            "start_us": 1.447000503540039,
+            "end_us": 1.6530005037784576,
+            "sum_duration_us": 0.20600000023841858
+          },
+          "INSERT_XD": {
+            "count": 7,
+            "start_us": 0.42099952697753906,
+            "end_us": 0.9210000763414428,
+            "sum_duration_us": 0.007000000332482159
+          },
+          "INSERT_XD_XN": {
+            "count": 1,
+            "start_us": 0.2049999237060547,
+            "end_us": 0.20599992375355214,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "JUMP": {
+            "count": 14,
+            "start_us": 0.4109992980957031,
+            "end_us": 0.9099998474121094,
+            "sum_duration_us": 0.0
+          },
+          "JUMPC": {
+            "count": 24,
+            "start_us": 0.3969993591308594,
+            "end_us": 0.8999996185302734,
+            "sum_duration_us": 0.0
+          },
+          "JUMPCMP": {
+            "count": 32,
+            "start_us": 0.39299964904785156,
+            "end_us": 0.9090003967285156,
+            "sum_duration_us": 0.0
+          },
+          "LDP_XI_XJ_XN": {
+            "count": 2,
+            "start_us": 0.009000778198242188,
+            "end_us": 0.2060002237558365,
+            "sum_duration_us": 0.3919999897480011
+          },
+          "LD_XD_XN": {
+            "count": 5,
+            "start_us": 0.3899993896484375,
+            "end_us": 0.6770003358833492,
+            "sum_duration_us": 0.017000000458210707
+          },
+          "LD_XD_XN_IMM": {
+            "count": 84,
+            "start_us": 0.006999969482421875,
+            "end_us": 0.9199998169206083,
+            "sum_duration_us": 0.9679999947547913
+          },
+          "LOAD_2D": {
+            "count": 18,
+            "start_us": 0.9650001525878906,
+            "end_us": 1.292000763118267,
+            "sum_duration_us": 1.4920000061392784
+          },
+          "LOOP": {
+            "count": 1,
+            "start_us": 0.5030002593994141,
+            "end_us": 0.5030002593994141,
+            "sum_duration_us": 0.0
+          },
+          "MADD": {
+            "count": 17,
+            "start_us": 0.0030002593994140625,
+            "end_us": 0.6029998322483152,
+            "sum_duration_us": 0.034000001614913344
+          },
+          "MAX": {
+            "count": 1,
+            "start_us": 0.5009994506835938,
+            "end_us": 0.5019994507310912,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "MMAD": {
+            "count": 1,
+            "start_us": 1.292999267578125,
+            "end_us": 1.4429992735385895,
+            "sum_duration_us": 0.15000000596046448
+          },
+          "MOVK": {
+            "count": 13,
+            "start_us": 0.0,
+            "end_us": 0.7330003509996459,
+            "sum_duration_us": 0.013000000617466867
+          },
+          "MOVX8_XD_IMM": {
+            "count": 1,
+            "start_us": 0.20599937438964844,
+            "end_us": 0.2069993744371459,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": {
+            "count": 2,
+            "start_us": 0.4230003356933594,
+            "end_us": 0.9629997611045837,
+            "sum_duration_us": 0.765999972820282
+          },
+          "MOV_SPR_XN": {
+            "count": 6,
+            "start_us": 0.20400047302246094,
+            "end_us": 1.44600024423562,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "MOV_XD_IMM": {
+            "count": 37,
+            "start_us": 0.0,
+            "end_us": 1.6589990387437865,
+            "sum_duration_us": 0.0370000017574057
+          },
+          "MOV_XD_SPR": {
+            "count": 6,
+            "start_us": 0.0,
+            "end_us": 0.22699983220081776,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "MOV_XD_XN": {
+            "count": 39,
+            "start_us": 0.22500038146972656,
+            "end_us": 0.6040006409166381,
+            "sum_duration_us": 0.0390000018524006
+          },
+          "MUL": {
+            "count": 5,
+            "start_us": 0.22699928283691406,
+            "end_us": 0.380999160814099,
+            "sum_duration_us": 0.0050000002374872565
+          },
+          "NOP": {
+            "count": 2,
+            "start_us": 0.006999969482421875,
+            "end_us": 1.657999038696289,
+            "sum_duration_us": 0.0
+          },
+          "OR": {
+            "count": 9,
+            "start_us": 0.41900062561035156,
+            "end_us": 0.7319989929674193,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "SBITSET": {
+            "count": 18,
+            "start_us": 0.2180004119873047,
+            "end_us": 0.7419992218492553,
+            "sum_duration_us": 0.018000000854954123
+          },
+          "SEL": {
+            "count": 5,
+            "start_us": 0.3899993896484375,
+            "end_us": 0.6740003357408568,
+            "sum_duration_us": 0.0050000002374872565
+          },
+          "SET_CROSS_CORE": {
+            "count": 1,
+            "start_us": 1.6539993286132812,
+            "end_us": 1.6559993287082762,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "SET_FLAG": {
+            "count": 13,
+            "start_us": 0.2198638916015625,
+            "end_us": 1.6560810068622231,
+            "sum_duration_us": 0.0070270271971821785
+          },
+          "SFF": {
+            "count": 13,
+            "start_us": 0.21699905395507812,
+            "end_us": 0.7419992218492553,
+            "sum_duration_us": 0.013000000617466867
+          },
+          "SHL": {
+            "count": 47,
+            "start_us": 0.2259998321533203,
+            "end_us": 0.7319989929674193,
+            "sum_duration_us": 0.04700000223238021
+          },
+          "SHR": {
+            "count": 9,
+            "start_us": 0.2259998321533203,
+            "end_us": 0.699999404954724,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "SIGNEXT": {
+            "count": 27,
+            "start_us": 0.2180004119873047,
+            "end_us": 0.903999877977185,
+            "sum_duration_us": 0.027000001282431185
+          },
+          "STI_XN_IMM": {
+            "count": 23,
+            "start_us": 0.207000732421875,
+            "end_us": 0.925000686198473,
+            "sum_duration_us": 1.9609999861568213
+          },
+          "STI_XN_XM": {
+            "count": 10,
+            "start_us": 0.39299964904785156,
+            "end_us": 0.7499994812533259,
+            "sum_duration_us": 0.17999999644234776
+          },
+          "STP_XI_XJ_XN": {
+            "count": 15,
+            "start_us": 0.2089996337890625,
+            "end_us": 0.5329989045858383,
+            "sum_duration_us": 2.253000035881996
+          },
+          "ST_XD_XN_IMM": {
+            "count": 43,
+            "start_us": 0.207000732421875,
+            "end_us": 0.9369998164474964,
+            "sum_duration_us": 2.3789999838918447
+          },
+          "SUB": {
+            "count": 1,
+            "start_us": 0.38500022888183594,
+            "end_us": 0.3860002289293334,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "SUB_IMM": {
+            "count": 24,
+            "start_us": 0.20800018310546875,
+            "end_us": 0.755999160814099,
+            "sum_duration_us": 0.02400000113993883
+          },
+          "WAIT_FLAG": {
+            "count": 13,
+            "start_us": 0.45067596435546875,
+            "end_us": 1.6566211134195328,
+            "sum_duration_us": 2.5654053539037704
+          },
+          "ZEROEXT": {
+            "count": 60,
+            "start_us": 0.22900009155273438,
+            "end_us": 0.9100003967760131,
+            "sum_duration_us": 0.06000000284984708
+          }
+        },
+        "span_us": 1.660999038722366,
+        "input_transfers": [
+          {
+            "name": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+            "start_us": 0.4230003356933594,
+            "duration_us": 0.22699999809265137,
+            "detail": {
+              "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:282\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:311\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:165\n/home/developer/cann-point7-analysis-20261014/tests/../src/kernel.asc:377",
+              "detail": "Src:OUT,Dst:L1,XD:X18=0,XN:X16=0x11315800,XM:X21=0x2001000010,XT:X23=0x101000020,Dtype:B16,id:34",
+              "pc_addr": "0x12498210",
+              "process_bytes": "16384"
+            }
+          },
+          {
+            "name": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+            "start_us": 0.4239997863769531,
+            "duration_us": 0.5389999747276306,
+            "detail": {
+              "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:282\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:311\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:165\n/home/developer/cann-point7-analysis-20261014/tests/../src/kernel.asc:378",
+              "detail": "Src:OUT,Dst:L1,XD:X20=0x4000,XN:X17=0x11355a00,XM:X25=0x8001000010,XT:X22=0x101000080,Dtype:B16,id:35",
+              "pc_addr": "0x12498214",
+              "process_bytes": "65536"
+            }
+          }
+        ]
+      },
+      "core0.veccore0": {
+        "counts": {
+          "WAIT_FLAG_DEVI": 1,
+          "BAR": 6,
+          "WAIT_FLAG": 4,
+          "STI_XN_IMM": 17,
+          "MOV_OUT_TO_UB": 1,
+          "SET_FLAG": 4,
+          "LDP_XI_XJ_XN": 2,
+          "LD_XD_XN_IMM": 31,
+          "STP_XI_XJ_XN": 7,
+          "ST_XD_XN_IMM": 25,
+          "VCMAX": 1,
+          "MOV_SRC_TO_DST_ALIGN": 1,
+          "VMAX": 1,
+          "VCADD": 1,
+          "STI_XN_XM": 4,
+          "MOVEMASK": 10,
+          "LD_XD_XN": 2,
+          "DCCI": 1,
+          "CMP_IMM": 18,
+          "ADD_IMM": 19,
+          "ZEROEXT": 20,
+          "MADD": 2,
+          "MUL": 2,
+          "MOVK": 17,
+          "MOV_XD_IMM": 36,
+          "CMP": 2,
+          "ADD": 8,
+          "NEG": 7,
+          "OR": 6,
+          "SIGNEXT": 10,
+          "MOV_XD_XN": 5,
+          "SHL": 18,
+          "AND": 4,
+          "SEL": 4,
+          "SHR": 4,
+          "SFF": 4,
+          "SBITSET": 6,
+          "SUB_IMM": 13,
+          "MOVX8_XD_IMM": 2,
+          "NOT": 2,
+          "INSERT_XD": 3,
+          "MOV_XD_SPR": 9,
+          "MOV_SPR_XN": 3,
+          "INSERT_XD_XN": 1,
+          "JUMPCMP": 15,
+          "JUMP": 10,
+          "END": 1,
+          "JUMPC": 17,
+          "NOP": 1
+        },
+        "stages": {
+          "ADD": {
+            "count": 8,
+            "start_us": 0.00099945068359375,
+            "end_us": 1.7800012360094115,
+            "sum_duration_us": 0.00800000037997961
+          },
+          "ADD_IMM": {
+            "count": 19,
+            "start_us": 0.0039997100830078125,
+            "end_us": 1.8850007782457396,
+            "sum_duration_us": 0.019000000902451575
+          },
+          "AND": {
+            "count": 4,
+            "start_us": 0.0020008087158203125,
+            "end_us": 1.7140012512682006,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "BAR": {
+            "count": 6,
+            "start_us": 1.9610004425048828,
+            "end_us": 2.292000366258435,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "CMP": {
+            "count": 2,
+            "start_us": 1.6879997253417969,
+            "end_us": 1.7090001831529662,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "CMP_IMM": {
+            "count": 18,
+            "start_us": 1.6580009460449219,
+            "end_us": 1.8810010681627318,
+            "sum_duration_us": 0.018000000854954123
+          },
+          "DCCI": {
+            "count": 1,
+            "start_us": 2.2919998168945312,
+            "end_us": 2.2949998169206083,
+            "sum_duration_us": 0.003000000026077032
+          },
+          "END": {
+            "count": 1,
+            "start_us": 2.293001174926758,
+            "end_us": 2.293001174926758,
+            "sum_duration_us": 0.0
+          },
+          "INSERT_XD": {
+            "count": 3,
+            "start_us": 0.21000099182128906,
+            "end_us": 1.6719995270250365,
+            "sum_duration_us": 0.003000000142492354
+          },
+          "INSERT_XD_XN": {
+            "count": 1,
+            "start_us": 0.2089996337890625,
+            "end_us": 0.20999963383655995,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "JUMP": {
+            "count": 10,
+            "start_us": 1.6990013122558594,
+            "end_us": 1.885000228881836,
+            "sum_duration_us": 0.0
+          },
+          "JUMPC": {
+            "count": 17,
+            "start_us": 1.6660003662109375,
+            "end_us": 1.8800010681152344,
+            "sum_duration_us": 0.0
+          },
+          "JUMPCMP": {
+            "count": 15,
+            "start_us": 1.6620006561279297,
+            "end_us": 1.8840007781982422,
+            "sum_duration_us": 0.0
+          },
+          "LDP_XI_XJ_XN": {
+            "count": 2,
+            "start_us": 0.008001327514648438,
+            "end_us": 0.2050013244152069,
+            "sum_duration_us": 0.392999991774559
+          },
+          "LD_XD_XN": {
+            "count": 2,
+            "start_us": 1.6590003967285156,
+            "end_us": 1.7210004120133817,
+            "sum_duration_us": 0.006000000052154064
+          },
+          "LD_XD_XN_IMM": {
+            "count": 31,
+            "start_us": 0.008001327514648438,
+            "end_us": 1.8800008087418973,
+            "sum_duration_us": 0.288999998010695
+          },
+          "MADD": {
+            "count": 2,
+            "start_us": 0.0030002593994140625,
+            "end_us": 0.21000018320046365,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "MOVEMASK": {
+            "count": 10,
+            "start_us": 0.0039997100830078125,
+            "end_us": 2.150000747293234,
+            "sum_duration_us": 0.08999999612569809
+          },
+          "MOVK": {
+            "count": 17,
+            "start_us": 0.0,
+            "end_us": 1.7430005798814818,
+            "sum_duration_us": 0.017000000807456672
+          },
+          "MOVX8_XD_IMM": {
+            "count": 2,
+            "start_us": 0.2110004425048828,
+            "end_us": 1.7800012360094115,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "MOV_OUT_TO_UB": {
+            "count": 1,
+            "start_us": 1.6739997863769531,
+            "end_us": 1.9609997868537903,
+            "sum_duration_us": 0.28700000047683716
+          },
+          "MOV_SPR_XN": {
+            "count": 3,
+            "start_us": 0.2049999237060547,
+            "end_us": 0.2110004425048828,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "MOV_SRC_TO_DST_ALIGN": {
+            "count": 1,
+            "start_us": 2.1650009155273438,
+            "end_us": 2.2900009155273438,
+            "sum_duration_us": 0.125
+          },
+          "MOV_XD_IMM": {
+            "count": 36,
+            "start_us": 0.0,
+            "end_us": 2.2929998169420287,
+            "sum_duration_us": 0.03600000170990825
+          },
+          "MOV_XD_SPR": {
+            "count": 9,
+            "start_us": 0.0,
+            "end_us": 0.2110009918687865,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "MOV_XD_XN": {
+            "count": 5,
+            "start_us": 0.22299957275390625,
+            "end_us": 1.7140012512682006,
+            "sum_duration_us": 0.0050000002374872565
+          },
+          "MUL": {
+            "count": 2,
+            "start_us": 0.21899986267089844,
+            "end_us": 0.2220006714342162,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "NEG": {
+            "count": 7,
+            "start_us": 0.0030002593994140625,
+            "end_us": 1.739000869798474,
+            "sum_duration_us": 0.007000000332482159
+          },
+          "NOP": {
+            "count": 1,
+            "start_us": 2.2919998168945312,
+            "end_us": 2.2919998168945312,
+            "sum_duration_us": 0.0
+          },
+          "NOT": {
+            "count": 2,
+            "start_us": 1.73699951171875,
+            "end_us": 1.7400003204820678,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "OR": {
+            "count": 6,
+            "start_us": 1.7030010223388672,
+            "end_us": 1.716000152635388,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "SBITSET": {
+            "count": 6,
+            "start_us": 1.6739997863769531,
+            "end_us": 1.785000396776013,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "SEL": {
+            "count": 4,
+            "start_us": 1.6590003967285156,
+            "end_us": 1.7400003204820678,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "SET_FLAG": {
+            "count": 4,
+            "start_us": 1.9604873657226562,
+            "end_us": 2.290217206813395,
+            "sum_duration_us": 0.0021621622145175934
+          },
+          "SFF": {
+            "count": 4,
+            "start_us": 1.6730003356933594,
+            "end_us": 1.785000396776013,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "SHL": {
+            "count": 18,
+            "start_us": 0.220001220703125,
+            "end_us": 1.778999877977185,
+            "sum_duration_us": 0.018000000854954123
+          },
+          "SHR": {
+            "count": 4,
+            "start_us": 0.21899986267089844,
+            "end_us": 1.7440000305650756,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "SIGNEXT": {
+            "count": 10,
+            "start_us": 0.20600128173828125,
+            "end_us": 1.8570009003160521,
+            "sum_duration_us": 0.010000000474974513
+          },
+          "STI_XN_IMM": {
+            "count": 17,
+            "start_us": 0.21199989318847656,
+            "end_us": 1.8779998011887074,
+            "sum_duration_us": 2.1780000496655703
+          },
+          "STI_XN_XM": {
+            "count": 4,
+            "start_us": 1.6630001068115234,
+            "end_us": 1.7970012053847313,
+            "sum_duration_us": 0.06999999843537807
+          },
+          "STP_XI_XJ_XN": {
+            "count": 7,
+            "start_us": 0.21300125122070312,
+            "end_us": 0.3790009617805481,
+            "sum_duration_us": 1.1069999933242798
+          },
+          "ST_XD_XN_IMM": {
+            "count": 25,
+            "start_us": 0.21199989318847656,
+            "end_us": 1.7969998475164175,
+            "sum_duration_us": 1.8890000050887465
+          },
+          "SUB_IMM": {
+            "count": 13,
+            "start_us": 0.21300125122070312,
+            "end_us": 1.7430005798814818,
+            "sum_duration_us": 0.013000000617466867
+          },
+          "VCADD": {
+            "count": 1,
+            "start_us": 2.142000198364258,
+            "end_us": 2.1650001984089613,
+            "sum_duration_us": 0.023000000044703484
+          },
+          "VCMAX": {
+            "count": 1,
+            "start_us": 2.006000518798828,
+            "end_us": 2.1400005221366882,
+            "sum_duration_us": 0.1340000033378601
+          },
+          "VMAX": {
+            "count": 1,
+            "start_us": 1.9630012512207031,
+            "end_us": 2.005001250654459,
+            "sum_duration_us": 0.041999999433755875
+          },
+          "WAIT_FLAG": {
+            "count": 4,
+            "start_us": 1.6804866790771484,
+            "end_us": 2.29075688123703,
+            "sum_duration_us": 1.0075675547122955
+          },
+          "WAIT_FLAG_DEVI": {
+            "count": 1,
+            "start_us": 0.3730010986328125,
+            "end_us": 1.656001091003418,
+            "sum_duration_us": 1.2829999923706055
+          },
+          "ZEROEXT": {
+            "count": 20,
+            "start_us": 0.2220001220703125,
+            "end_us": 1.8850007782457396,
+            "sum_duration_us": 0.020000000949949026
+          }
+        },
+        "span_us": 2.2949998169206083,
+        "input_transfers": []
+      }
+    }
+  },
+  "b3": {
+    "soc": "Ascend910B3",
+    "library_sha256": "eca051c10f8b47d1d56136bf2b175f829b799a781a87474afd9c8dc1ea771116",
+    "passed": true,
+    "input_sha256": [
+      "6c470b2262cd775c85245c6a9910e2e19914a1eee8ab30002de368dcf4032c10",
+      "071fa644d9c4e38a7619ea6604f5c3779f20b5d554bb47887e2f53e2feeeb712"
+    ],
+    "cores": {
+      "core0.cubecore0": {
+        "counts": {
+          "LOAD_2D": 18,
+          "BAR": 2,
+          "WAIT_FLAG": 13,
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+          "SET_FLAG": 13,
+          "FIX_L0C_TO_DST": 1,
+          "LD_XD_XN_IMM": 84,
+          "LDP_XI_XJ_XN": 2,
+          "STI_XN_IMM": 23,
+          "STP_XI_XJ_XN": 15,
+          "ST_XD_XN_IMM": 43,
+          "MMAD": 1,
+          "STI_XN_XM": 10,
+          "MADD": 17,
+          "MOV_XD_XN": 39,
+          "ZEROEXT": 60,
+          "ADD": 37,
+          "SHL": 47,
+          "ADD_IMM": 42,
+          "MOV_SPR_XN": 6,
+          "LD_XD_XN": 5,
+          "DCCI": 1,
+          "CMP_IMM": 28,
+          "SET_CROSS_CORE": 1,
+          "SIGNEXT": 27,
+          "MUL": 5,
+          "SUB_IMM": 24,
+          "MOV_XD_IMM": 37,
+          "OR": 9,
+          "SBITSET": 18,
+          "SFF": 13,
+          "MOVK": 13,
+          "MAX": 1,
+          "INSERT_XD": 7,
+          "SHR": 9,
+          "SEL": 5,
+          "AND": 6,
+          "SUB": 1,
+          "MOVX8_XD_IMM": 1,
+          "INSERT_XD_XN": 1,
+          "MOV_XD_SPR": 6,
+          "CMP": 1,
+          "JUMPCMP": 32,
+          "NOP": 2,
+          "JUMPC": 24,
+          "END": 1,
+          "LOOP": 1,
+          "JUMP": 14,
+          "ENDLOOP": 16
+        },
+        "stages": {
+          "ADD": {
+            "count": 37,
+            "start_us": 0.00099945068359375,
+            "end_us": 0.7090001831529662,
+            "sum_duration_us": 0.0370000017574057
+          },
+          "ADD_IMM": {
+            "count": 42,
+            "start_us": 0.0049991607666015625,
+            "end_us": 0.9350000153062865,
+            "sum_duration_us": 0.042000001994892955
+          },
+          "AND": {
+            "count": 6,
+            "start_us": 0.0019989013671875,
+            "end_us": 0.70999963383656,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "BAR": {
+            "count": 2,
+            "start_us": 1.4860000610351562,
+            "end_us": 1.7039991150377318,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "CMP": {
+            "count": 1,
+            "start_us": 0.5119991302490234,
+            "end_us": 0.5129991302965209,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "CMP_IMM": {
+            "count": 28,
+            "start_us": 0.39999961853027344,
+            "end_us": 0.9259992371080443,
+            "sum_duration_us": 0.028000001329928637
+          },
+          "DCCI": {
+            "count": 1,
+            "start_us": 1.7049999237060547,
+            "end_us": 1.7079999237321317,
+            "sum_duration_us": 0.003000000026077032
+          },
+          "END": {
+            "count": 1,
+            "start_us": 1.7049999237060547,
+            "end_us": 1.7049999237060547,
+            "sum_duration_us": 0.0
+          },
+          "ENDLOOP": {
+            "count": 16,
+            "start_us": 0.5209999084472656,
+            "end_us": 0.6210002899169922,
+            "sum_duration_us": 0.0
+          },
+          "FIX_L0C_TO_DST": {
+            "count": 1,
+            "start_us": 1.48699951171875,
+            "end_us": 1.698999509215355,
+            "sum_duration_us": 0.21199999749660492
+          },
+          "INSERT_XD": {
+            "count": 7,
+            "start_us": 0.43400001525878906,
+            "end_us": 0.94699914555531,
+            "sum_duration_us": 0.007000000332482159
+          },
+          "INSERT_XD_XN": {
+            "count": 1,
+            "start_us": 0.2110004425048828,
+            "end_us": 0.21200044255238026,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "JUMP": {
+            "count": 14,
+            "start_us": 0.4230003356933594,
+            "end_us": 0.9349994659423828,
+            "sum_duration_us": 0.0
+          },
+          "JUMPC": {
+            "count": 24,
+            "start_us": 0.4090003967285156,
+            "end_us": 0.9249992370605469,
+            "sum_duration_us": 0.0
+          },
+          "JUMPCMP": {
+            "count": 32,
+            "start_us": 0.40399932861328125,
+            "end_us": 0.9349994659423828,
+            "sum_duration_us": 0.0
+          },
+          "LDP_XI_XJ_XN": {
+            "count": 2,
+            "start_us": 0.010000228881835938,
+            "end_us": 0.21200023591518402,
+            "sum_duration_us": 0.40400001406669617
+          },
+          "LD_XD_XN": {
+            "count": 5,
+            "start_us": 0.4009990692138672,
+            "end_us": 0.6959994356147945,
+            "sum_duration_us": 0.017000000458210707
+          },
+          "LD_XD_XN_IMM": {
+            "count": 84,
+            "start_us": 0.007999420166015625,
+            "end_us": 0.9459988861344755,
+            "sum_duration_us": 0.9880000203847885
+          },
+          "LOAD_2D": {
+            "count": 18,
+            "start_us": 0.9919986724853516,
+            "end_us": 1.3279992491006851,
+            "sum_duration_us": 1.5269999653100967
+          },
+          "LOOP": {
+            "count": 1,
+            "start_us": 0.5170001983642578,
+            "end_us": 0.5170001983642578,
+            "sum_duration_us": 0.0
+          },
+          "MADD": {
+            "count": 17,
+            "start_us": 0.0030002593994140625,
+            "end_us": 0.620000030612573,
+            "sum_duration_us": 0.034000001614913344
+          },
+          "MAX": {
+            "count": 1,
+            "start_us": 0.5159988403320312,
+            "end_us": 0.5169988403795287,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "MMAD": {
+            "count": 1,
+            "start_us": 1.3299999237060547,
+            "end_us": 1.4839999228715897,
+            "sum_duration_us": 0.15399999916553497
+          },
+          "MOVK": {
+            "count": 13,
+            "start_us": 0.00099945068359375,
+            "end_us": 0.7540002594469115,
+            "sum_duration_us": 0.013000000617466867
+          },
+          "MOVX8_XD_IMM": {
+            "count": 1,
+            "start_us": 0.21199989318847656,
+            "end_us": 0.212999893235974,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "MOV_OUT_TO_L1_MULTI_ND2NZ": {
+            "count": 2,
+            "start_us": 0.4349994659423828,
+            "end_us": 0.9899989366531372,
+            "sum_duration_us": 0.7870000153779984
+          },
+          "MOV_SPR_XN": {
+            "count": 6,
+            "start_us": 0.20999908447265625,
+            "end_us": 1.4869987030979246,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "MOV_XD_IMM": {
+            "count": 37,
+            "start_us": 0.0,
+            "end_us": 1.7049985657213256,
+            "sum_duration_us": 0.0370000017574057
+          },
+          "MOV_XD_SPR": {
+            "count": 6,
+            "start_us": 0.00099945068359375,
+            "end_us": 0.2330003509996459,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "MOV_XD_XN": {
+            "count": 39,
+            "start_us": 0.23200035095214844,
+            "end_us": 0.6209989319322631,
+            "sum_duration_us": 0.0390000018524006
+          },
+          "MUL": {
+            "count": 5,
+            "start_us": 0.23399925231933594,
+            "end_us": 0.3919988403795287,
+            "sum_duration_us": 0.0050000002374872565
+          },
+          "NOP": {
+            "count": 2,
+            "start_us": 0.006999969482421875,
+            "end_us": 1.7039985656738281,
+            "sum_duration_us": 0.0
+          },
+          "OR": {
+            "count": 9,
+            "start_us": 0.430999755859375,
+            "end_us": 0.752998901414685,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "SBITSET": {
+            "count": 18,
+            "start_us": 0.2239990234375,
+            "end_us": 0.7629991302965209,
+            "sum_duration_us": 0.018000000854954123
+          },
+          "SEL": {
+            "count": 5,
+            "start_us": 0.4009990692138672,
+            "end_us": 0.6929994354723021,
+            "sum_duration_us": 0.0050000002374872565
+          },
+          "SET_CROSS_CORE": {
+            "count": 1,
+            "start_us": 1.6999988555908203,
+            "end_us": 1.7019988556858152,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "SET_FLAG": {
+            "count": 13,
+            "start_us": 0.2263336181640625,
+            "end_us": 1.7024445936549455,
+            "sum_duration_us": 0.007222222397103906
+          },
+          "SFF": {
+            "count": 13,
+            "start_us": 0.2239990234375,
+            "end_us": 0.7629991302965209,
+            "sum_duration_us": 0.013000000617466867
+          },
+          "SHL": {
+            "count": 47,
+            "start_us": 0.2329998016357422,
+            "end_us": 0.7519994507310912,
+            "sum_duration_us": 0.04700000223238021
+          },
+          "SHR": {
+            "count": 9,
+            "start_us": 0.23200035095214844,
+            "end_us": 0.7199998627183959,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "SIGNEXT": {
+            "count": 27,
+            "start_us": 0.2239990234375,
+            "end_us": 0.9299989471910521,
+            "sum_duration_us": 0.027000001282431185
+          },
+          "STI_XN_IMM": {
+            "count": 23,
+            "start_us": 0.21399879455566406,
+            "end_us": 0.9510003048926592,
+            "sum_duration_us": 2.0260000117123127
+          },
+          "STI_XN_XM": {
+            "count": 10,
+            "start_us": 0.404998779296875,
+            "end_us": 0.7709993897005916,
+            "sum_duration_us": 0.18799999775364995
+          },
+          "STP_XI_XJ_XN": {
+            "count": 15,
+            "start_us": 0.21500015258789062,
+            "end_us": 0.5479991286993027,
+            "sum_duration_us": 2.3029999881982803
+          },
+          "ST_XD_XN_IMM": {
+            "count": 43,
+            "start_us": 0.2129993438720703,
+            "end_us": 0.9639985971152782,
+            "sum_duration_us": 2.45800001360476
+          },
+          "SUB": {
+            "count": 1,
+            "start_us": 0.3959999084472656,
+            "end_us": 0.3969999084947631,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "SUB_IMM": {
+            "count": 24,
+            "start_us": 0.21399879455566406,
+            "end_us": 0.7769990692613646,
+            "sum_duration_us": 0.02400000113993883
+          },
+          "WAIT_FLAG": {
+            "count": 13,
+            "start_us": 0.46355438232421875,
+            "end_us": 1.7029992789030075,
+            "sum_duration_us": 2.6366666555404663
+          },
+          "ZEROEXT": {
+            "count": 60,
+            "start_us": 0.2349987030029297,
+            "end_us": 0.9350000153062865,
+            "sum_duration_us": 0.06000000284984708
+          }
+        },
+        "span_us": 1.7079999237321317,
+        "input_transfers": [
+          {
+            "name": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+            "start_us": 0.4349994659423828,
+            "duration_us": 0.2329999953508377,
+            "detail": {
+              "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:282\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:311\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:165\n/home/developer/cann-point7-analysis-20261014/tests/../src/kernel.asc:377",
+              "detail": "Src:OUT,Dst:L1,XD:X18=0,XN:X16=0x11315800,XM:X21=0x2001000010,XT:X23=0x101000020,Dtype:B16,id:34",
+              "pc_addr": "0x12498210",
+              "process_bytes": "16384"
+            }
+          },
+          {
+            "name": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+            "start_us": 0.43599891662597656,
+            "duration_us": 0.5540000200271606,
+            "detail": {
+              "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:282\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:311\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:165\n/home/developer/cann-point7-analysis-20261014/tests/../src/kernel.asc:378",
+              "detail": "Src:OUT,Dst:L1,XD:X20=0x4000,XN:X17=0x11355a00,XM:X25=0x8001000010,XT:X22=0x101000080,Dtype:B16,id:35",
+              "pc_addr": "0x12498214",
+              "process_bytes": "65536"
+            }
+          }
+        ]
+      },
+      "core0.veccore0": {
+        "counts": {
+          "WAIT_FLAG_DEVI": 1,
+          "BAR": 6,
+          "WAIT_FLAG": 4,
+          "STI_XN_IMM": 17,
+          "MOV_OUT_TO_UB": 1,
+          "SET_FLAG": 4,
+          "LDP_XI_XJ_XN": 2,
+          "LD_XD_XN_IMM": 31,
+          "STP_XI_XJ_XN": 7,
+          "ST_XD_XN_IMM": 25,
+          "VCMAX": 1,
+          "MOV_SRC_TO_DST_ALIGN": 1,
+          "VMAX": 1,
+          "VCADD": 1,
+          "STI_XN_XM": 4,
+          "MOVEMASK": 10,
+          "LD_XD_XN": 2,
+          "DCCI": 1,
+          "CMP_IMM": 18,
+          "ADD_IMM": 19,
+          "ZEROEXT": 20,
+          "MADD": 2,
+          "MUL": 2,
+          "MOVK": 17,
+          "MOV_XD_IMM": 36,
+          "CMP": 2,
+          "ADD": 8,
+          "NEG": 7,
+          "OR": 6,
+          "SIGNEXT": 10,
+          "MOV_XD_XN": 5,
+          "SHL": 18,
+          "AND": 4,
+          "SEL": 4,
+          "SHR": 4,
+          "SFF": 4,
+          "SBITSET": 6,
+          "SUB_IMM": 13,
+          "MOVX8_XD_IMM": 2,
+          "NOT": 2,
+          "INSERT_XD": 3,
+          "MOV_XD_SPR": 9,
+          "MOV_SPR_XN": 3,
+          "INSERT_XD_XN": 1,
+          "JUMPCMP": 15,
+          "JUMP": 10,
+          "END": 1,
+          "JUMPC": 17,
+          "NOP": 1
+        },
+        "stages": {
+          "ADD": {
+            "count": 8,
+            "start_us": 0.00099945068359375,
+            "end_us": 1.8300004730699584,
+            "sum_duration_us": 0.00800000037997961
+          },
+          "ADD_IMM": {
+            "count": 19,
+            "start_us": 0.0049991607666015625,
+            "end_us": 1.9380002747057006,
+            "sum_duration_us": 0.019000000902451575
+          },
+          "AND": {
+            "count": 4,
+            "start_us": 0.0030002593994140625,
+            "end_us": 1.7619996796129271,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "BAR": {
+            "count": 6,
+            "start_us": 2.016000747680664,
+            "end_us": 2.3559995422838256,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "CMP": {
+            "count": 2,
+            "start_us": 1.7350006103515625,
+            "end_us": 1.755999160814099,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "CMP_IMM": {
+            "count": 18,
+            "start_us": 1.7049999237060547,
+            "end_us": 1.9340005646226928,
+            "sum_duration_us": 0.018000000854954123
+          },
+          "DCCI": {
+            "count": 1,
+            "start_us": 2.3560009002685547,
+            "end_us": 2.3590009002946317,
+            "sum_duration_us": 0.003000000026077032
+          },
+          "END": {
+            "count": 1,
+            "start_us": 2.3570003509521484,
+            "end_us": 2.3570003509521484,
+            "sum_duration_us": 0.0
+          },
+          "INSERT_XD": {
+            "count": 3,
+            "start_us": 0.21599960327148438,
+            "end_us": 1.7190004120348021,
+            "sum_duration_us": 0.003000000142492354
+          },
+          "INSERT_XD_XN": {
+            "count": 1,
+            "start_us": 0.21400070190429688,
+            "end_us": 0.21500070195179433,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "JUMP": {
+            "count": 10,
+            "start_us": 1.746999740600586,
+            "end_us": 1.9379997253417969,
+            "sum_duration_us": 0.0
+          },
+          "JUMPC": {
+            "count": 17,
+            "start_us": 1.7129993438720703,
+            "end_us": 1.9330005645751953,
+            "sum_duration_us": 0.0
+          },
+          "JUMPCMP": {
+            "count": 15,
+            "start_us": 1.7089996337890625,
+            "end_us": 1.9370002746582031,
+            "sum_duration_us": 0.0
+          },
+          "LDP_XI_XJ_XN": {
+            "count": 2,
+            "start_us": 0.009000778198242188,
+            "end_us": 0.21100078523159027,
+            "sum_duration_us": 0.40300001204013824
+          },
+          "LD_XD_XN": {
+            "count": 2,
+            "start_us": 1.7049999237060547,
+            "end_us": 1.769000747706741,
+            "sum_duration_us": 0.006000000052154064
+          },
+          "LD_XD_XN_IMM": {
+            "count": 31,
+            "start_us": 0.007999420166015625,
+            "end_us": 1.9320008545182645,
+            "sum_duration_us": 0.2940000081434846
+          },
+          "MADD": {
+            "count": 2,
+            "start_us": 0.0030002593994140625,
+            "end_us": 0.21499934396706522,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "MOVEMASK": {
+            "count": 10,
+            "start_us": 0.0039997100830078125,
+            "end_us": 2.2100002132356167,
+            "sum_duration_us": 0.08999999612569809
+          },
+          "MOVK": {
+            "count": 17,
+            "start_us": 0.00099945068359375,
+            "end_us": 1.7910009155748412,
+            "sum_duration_us": 0.017000000807456672
+          },
+          "MOVX8_XD_IMM": {
+            "count": 2,
+            "start_us": 0.21700096130371094,
+            "end_us": 1.8300004730699584,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "MOV_OUT_TO_UB": {
+            "count": 1,
+            "start_us": 1.7210006713867188,
+            "end_us": 2.016000658273697,
+            "sum_duration_us": 0.29499998688697815
+          },
+          "MOV_SPR_XN": {
+            "count": 3,
+            "start_us": 0.21000099182128906,
+            "end_us": 0.21599960327148438,
+            "sum_duration_us": 0.0010000000474974513
+          },
+          "MOV_SRC_TO_DST_ALIGN": {
+            "count": 1,
+            "start_us": 2.2259998321533203,
+            "end_us": 2.353999838232994,
+            "sum_duration_us": 0.12800000607967377
+          },
+          "MOV_XD_IMM": {
+            "count": 36,
+            "start_us": 0.0,
+            "end_us": 2.357000900316052,
+            "sum_duration_us": 0.03600000170990825
+          },
+          "MOV_XD_SPR": {
+            "count": 9,
+            "start_us": 0.00099945068359375,
+            "end_us": 0.21600015263538808,
+            "sum_duration_us": 0.009000000427477062
+          },
+          "MOV_XD_XN": {
+            "count": 5,
+            "start_us": 0.22900009155273438,
+            "end_us": 1.7619996796129271,
+            "sum_duration_us": 0.0050000002374872565
+          },
+          "MUL": {
+            "count": 2,
+            "start_us": 0.22500038146972656,
+            "end_us": 0.2279992828844115,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "NEG": {
+            "count": 7,
+            "start_us": 0.0030002593994140625,
+            "end_us": 1.7880006561754271,
+            "sum_duration_us": 0.007000000332482159
+          },
+          "NOP": {
+            "count": 1,
+            "start_us": 2.3560009002685547,
+            "end_us": 2.3560009002685547,
+            "sum_duration_us": 0.0
+          },
+          "NOT": {
+            "count": 2,
+            "start_us": 1.7849998474121094,
+            "end_us": 1.7890001068590209,
+            "sum_duration_us": 0.0020000000949949026
+          },
+          "OR": {
+            "count": 6,
+            "start_us": 1.7509994506835938,
+            "end_us": 1.7640004883287475,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "SBITSET": {
+            "count": 6,
+            "start_us": 1.7210006713867188,
+            "end_us": 1.83499963383656,
+            "sum_duration_us": 0.006000000284984708
+          },
+          "SEL": {
+            "count": 4,
+            "start_us": 1.7059993743896484,
+            "end_us": 1.7890001068590209,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "SET_FLAG": {
+            "count": 4,
+            "start_us": 2.0153331756591797,
+            "end_us": 2.354221861111,
+            "sum_duration_us": 0.002222222276031971
+          },
+          "SFF": {
+            "count": 4,
+            "start_us": 1.7199993133544922,
+            "end_us": 1.83499963383656,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "SHL": {
+            "count": 18,
+            "start_us": 0.2259998321533203,
+            "end_us": 1.8289991150377318,
+            "sum_duration_us": 0.018000000854954123
+          },
+          "SHR": {
+            "count": 4,
+            "start_us": 0.22500038146972656,
+            "end_us": 1.792000366258435,
+            "sum_duration_us": 0.004000000189989805
+          },
+          "SIGNEXT": {
+            "count": 10,
+            "start_us": 0.21199989318847656,
+            "end_us": 1.9090009460924193,
+            "sum_duration_us": 0.010000000474974513
+          },
+          "STI_XN_IMM": {
+            "count": 17,
+            "start_us": 0.2180004119873047,
+            "end_us": 1.9309998471289873,
+            "sum_duration_us": 2.2509999964386225
+          },
+          "STI_XN_XM": {
+            "count": 4,
+            "start_us": 1.7089996337890625,
+            "end_us": 1.848000442609191,
+            "sum_duration_us": 0.07399999909102917
+          },
+          "STP_XI_XJ_XN": {
+            "count": 7,
+            "start_us": 0.21899986267089844,
+            "end_us": 0.3899995684623718,
+            "sum_duration_us": 1.1439999788999557
+          },
+          "ST_XD_XN_IMM": {
+            "count": 25,
+            "start_us": 0.2180004119873047,
+            "end_us": 1.8470009919255972,
+            "sum_duration_us": 1.9579999772831798
+          },
+          "SUB_IMM": {
+            "count": 13,
+            "start_us": 0.21899986267089844,
+            "end_us": 1.792000366258435,
+            "sum_duration_us": 0.013000000617466867
+          },
+          "VCADD": {
+            "count": 1,
+            "start_us": 2.201000213623047,
+            "end_us": 2.2240002136677504,
+            "sum_duration_us": 0.023000000044703484
+          },
+          "VCMAX": {
+            "count": 1,
+            "start_us": 2.062999725341797,
+            "end_us": 2.1999997198581696,
+            "sum_duration_us": 0.13699999451637268
+          },
+          "VMAX": {
+            "count": 1,
+            "start_us": 2.0179996490478516,
+            "end_us": 2.0609996505081654,
+            "sum_duration_us": 0.0430000014603138
+          },
+          "WAIT_FLAG": {
+            "count": 4,
+            "start_us": 1.7275562286376953,
+            "end_us": 2.354777216911316,
+            "sum_duration_us": 1.0355555564165115
+          },
+          "WAIT_FLAG_DEVI": {
+            "count": 1,
+            "start_us": 0.3840007781982422,
+            "end_us": 1.703000783920288,
+            "sum_duration_us": 1.319000005722046
+          },
+          "ZEROEXT": {
+            "count": 20,
+            "start_us": 0.22800064086914062,
+            "end_us": 1.9370008240221068,
+            "sum_duration_us": 0.020000000949949026
+          }
+        },
+        "span_us": 2.3590009002946317,
+        "input_transfers": []
+      }
+    }
+  },
+  "real_npu_evidence": {
+    "reused": true,
+    "source": "../point7-analysis-20261014",
+    "verified_folders": [
+      "l0-0",
+      "l0-1",
+      "l0-2",
+      "pmu-0",
+      "pmu-1"
+    ]
+  }
+}

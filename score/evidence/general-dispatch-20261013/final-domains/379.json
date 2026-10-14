@@ -1,0 +1,29 @@
+{
+  "case": 379,
+  "label": "小核回退原缺口",
+  "shape": [
+    1,
+    2,
+    2,
+    32
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "3876ea69ef7d1e75f97ae834b867369768d88c5a5d2de868e4dd3b4def36ec75",
+    "9a26bd3767885a5b4dfb6a2fe4264be92c0b0f7af9fdf1584d827fea1a2a478b"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    1.3345268964767456,
+    1.3345268964767456
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

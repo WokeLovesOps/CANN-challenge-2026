@@ -1,0 +1,29 @@
+{
+  "case": 59,
+  "label": "固化SplitK邻域",
+  "shape": [
+    1,
+    1,
+    1,
+    4096
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "eb64964e359424a30a366f8d6873462d4f6ccf5984a72602db5658f5a4343090",
+    "d9eb9d54f05a28bab71537349ccf043a7f9c07b226a937699cbfe7f2ec1e2c67"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -4.187824249267578,
+    -4.187824249267578
+  ],
+  "available_cores": 20,
+  "max_abs_error": 2.384185791015625e-06
+}

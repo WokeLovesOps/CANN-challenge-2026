@@ -1,0 +1,29 @@
+{
+  "case": 55,
+  "label": "静态UB单行单列",
+  "shape": [
+    2,
+    1,
+    1,
+    128
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "28443497632d98691efbf6860675d5411ae7d3fb957b36234a1dd3ce8c621133",
+    "192a6062d65e89d138c8f8dca1addaf12eba7ea5de782c96799ed99c3fb491e6"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    -0.9285102486610413,
+    1.8679192066192627
+  ],
+  "available_cores": 20,
+  "max_abs_error": 5.960464477539063e-08
+}

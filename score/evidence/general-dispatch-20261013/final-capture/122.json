@@ -1,0 +1,29 @@
+{
+  "case": 122,
+  "label": "TN驻留邻域",
+  "shape": [
+    3,
+    17,
+    65,
+    80
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": true,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "295eab7d8ab8bdd48034efd30a84c19745d1720959d4b62ce86e8f9332cdfd1a",
+    "d67b92e74e741c1f929cbaa7e7b9b9c30f5f46c044c517ba89a7dad62fbe297e"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    118.6911849975586,
+    120.7928237915039
+  ],
+  "available_cores": 20,
+  "max_abs_error": 7.62939453125e-06
+}

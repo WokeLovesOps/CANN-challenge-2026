@@ -1,0 +1,29 @@
+{
+  "case": 318,
+  "label": "TN宽块邻域",
+  "shape": [
+    1,
+    1153,
+    2049,
+    256
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": true,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "81bd46efed8a73d02afc61c7257ead61f6a59b1bad703ed97439ba92a178f32a",
+    "35851796ca644ce0d18abc17dfda03053ad828905c75a854149bb29cf499baad"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    21125.73828125,
+    21125.73828125
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

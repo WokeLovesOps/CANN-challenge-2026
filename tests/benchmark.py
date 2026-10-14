@@ -36,12 +36,16 @@ def main():
     parser.add_argument("--warmup", type=int, default=20)
     parser.add_argument("--repeat", type=int, default=50)
     parser.add_argument("--real-npu", action="store_true")
+    parser.add_argument("--call-mode", choices=("direct", "graph"), default="direct",
+                        help="普通调用或捕获一次后逐次计算图重放；每次执行后同步")
     parser.add_argument("--progress", action="store_true",
                         help="仅模型诊断：逐次记录已完成同步和首次输出校验")
     args = parser.parse_args()
     simulated = os.environ.get("IS_SIMULATOR_ENV", "").lower() == "true"
     if simulated == args.real_npu:
         parser.error("必须选择 msprof 软件模型或显式 --real-npu，不能混用")
+    if args.call_mode == "graph" and simulated:
+        parser.error("计算图计时只支持显式真机模式")
     if args.progress and not simulated:
         parser.error("逐次进度落盘仅用于模型诊断，不能混入真实NPU性能采样")
     if args.warmup < 0 or args.repeat < 2:
@@ -70,7 +74,8 @@ def main():
                   library=str(args.library.resolve()),
                   library_sha256=hashlib.sha256(args.library.read_bytes()).hexdigest(),
                   dtype=args.dtype, layout=args.layout, warmup=args.warmup,
-                  repeat=args.repeat, passed=False, results=[], launches=[])
+                  repeat=args.repeat, call_mode=args.call_mode, synchronization="each_call",
+                  address_mode="fixed", validation_calls=1, passed=False, results=[], launches=[])
 
     def save():
         args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
@@ -116,6 +121,7 @@ def main():
                           launch_begin=len(report["launches"]), seed=20260930 + index)
             report["results"].append(record)
             addresses = []
+            model = ptr()
             try:
                 for raw in originals + [guard]:
                     address = ptr()
@@ -145,6 +151,19 @@ def main():
                     previous = raw
                     record["max_abs_error"] = float(np.max(np.abs(actual - expected)))
 
+                def launch_direct():
+                    run(addresses[0], c.byref(groups[0]), addresses[1], c.byref(groups[1]),
+                        ptr(addresses[2].value + 64), c.byref(groups[2]), cores.value,
+                        stream, trans_a, trans_b)
+
+                if args.call_mode == "graph":
+                    check(bind("aclmdlRICaptureBegin", [ptr, c.c_int]), stream, 0)
+                    launch_direct()
+                    check(bind("aclmdlRICaptureEnd", [ptr, c.POINTER(ptr)]), stream, c.byref(model))
+                    record["capture_completed"] = True
+                    execute_graph = bind("aclmdlRIExecuteAsync", [ptr, ptr])
+                    save()
+
                 # 首次调用单独校验；随后预热，再连续采样，避免逐次回读干扰缓存。
                 phases = ["validation"] + ["warmup"] * args.warmup + ["sample"] * args.repeat
                 for position, phase in enumerate(phases):
@@ -153,9 +172,10 @@ def main():
                         record["inflight_launch"] = position
                         save()
                         print(f"CASE_{index}_LAUNCH_{position}_{phase}_BEGIN", flush=True)
-                    run(addresses[0], c.byref(groups[0]), addresses[1], c.byref(groups[1]),
-                        ptr(addresses[2].value + 64), c.byref(groups[2]), cores.value,
-                        stream, trans_a, trans_b)
+                    if args.call_mode == "graph":
+                        check(execute_graph, model, stream)
+                    else:
+                        launch_direct()
                     check(sync, stream)
                     if phase == "validation":
                         validate()
@@ -179,6 +199,8 @@ def main():
                 print(f"CASE_{index}_PASS {args.dtype} {args.layout}", flush=True)
             finally:
                 save()
+                if model.value:
+                    check(bind("aclmdlRIDestroy", [ptr]), model)
                 for address in addresses:
                     check(free, address)
         report["passed"] = True

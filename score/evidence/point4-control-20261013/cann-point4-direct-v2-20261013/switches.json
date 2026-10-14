@@ -1,0 +1,422 @@
+{
+  "library": "/home/developer/cann-point4-direct-v2-20261013/libcandidate.so",
+  "library_sha256": "c0ae433ab2f2e2d1a715767b216f27c2c1e8f2b8db741da2414da9e5e354799a",
+  "execution": "real_npu",
+  "cases": [
+    1540,
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546,
+    1547,
+    1548,
+    1549,
+    1550,
+    1551
+  ],
+  "capture": true,
+  "passed": true,
+  "results": [
+    {
+      "position": 0,
+      "case": 1540,
+      "shape": [
+        1,
+        4,
+        4,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "点2切换",
+      "passed": true,
+      "input_sha256": [
+        "bc5bcbc31c8fe3cc353dd4684ed3bc108b8e26ba1d1f1ccdbc7b206064695451",
+        "2e81608728230fc28816a3e27dbb7da01054e0375bf9013631c857576d293e34"
+      ],
+      "actual": [
+        9.127138137817383
+      ],
+      "expected": [
+        9.127138137817383
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 1,
+      "case": 1541,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "返回目标核",
+      "passed": true,
+      "input_sha256": [
+        "24fb47cef4ccdf81c1a6e5a0a495ddbb3595957a4a92cd2adfd3f23a710c24ee",
+        "3a46db18dc855ca1903dbe869d87abc78b1151c565e6c191c2f45e9e67a670fb"
+      ],
+      "actual": [
+        86.52949523925781,
+        110.62105560302734,
+        94.50109100341797,
+        111.8523941040039
+      ],
+      "expected": [
+        86.52949523925781,
+        110.62105560302734,
+        94.50109100341797,
+        111.85238647460938
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 2,
+      "case": 1542,
+      "shape": [
+        1,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "B下界回退",
+      "passed": true,
+      "input_sha256": [
+        "3a37425f842bfbeea3f4f70058747fabb9fcf1af47aa37bb02560793d06231ba",
+        "309025f789db07d1247583a071c5fc41a74f8f8b3fd803f571aee0529be77a0a"
+      ],
+      "actual": [
+        108.12809753417969
+      ],
+      "expected": [
+        108.12809753417969
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 3,
+      "case": 1543,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "返回目标核",
+      "passed": true,
+      "input_sha256": [
+        "74c014e37a9e145b87fc40cce13ea61721ef6a4e3da9ff36815a90f4f4f00cbc",
+        "0cc23801958d6f7d94a7371dfdeadc4b37f80d9e5d2e611d6f647e015094b3d3"
+      ],
+      "actual": [
+        101.8966293334961,
+        121.31123352050781,
+        115.62979125976562,
+        102.39674377441406
+      ],
+      "expected": [
+        101.89663696289062,
+        121.31124114990234,
+        115.62979125976562,
+        102.39674377441406
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 4,
+      "case": 1544,
+      "shape": [
+        5,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "B上界回退",
+      "passed": true,
+      "input_sha256": [
+        "0f101a720471dc433f634b5d6c4544af0cf4239eca653cc967b385116af1eeb1",
+        "4cd9358b2d3e4dabd64b6b4cbfda8b30e4c242c42e311d85c2eefb024ae35f1f"
+      ],
+      "actual": [
+        97.60169982910156,
+        107.450439453125,
+        120.90631866455078,
+        117.7587661743164,
+        113.31071472167969
+      ],
+      "expected": [
+        97.60169219970703,
+        107.45044708251953,
+        120.90631866455078,
+        117.7587661743164,
+        113.31070709228516
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 5,
+      "case": 1545,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "返回目标核",
+      "passed": true,
+      "input_sha256": [
+        "f6771ff43aa53291f719ffaf9927ea9b6d2c3e66395225cc06b2e45957db6616",
+        "a63209360fbf6ab3ab23d4ea1f65f86aee68f118bdce5a2bbe1388b294af75e4"
+      ],
+      "actual": [
+        92.11163330078125,
+        107.698974609375,
+        110.067138671875,
+        115.65567779541016
+      ],
+      "expected": [
+        92.11163330078125,
+        107.698974609375,
+        110.067138671875,
+        115.65567779541016
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 6,
+      "case": 1546,
+      "shape": [
+        4,
+        16,
+        16,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "K下界回退",
+      "passed": true,
+      "input_sha256": [
+        "7db9564fe402cb818b78fea023e54a401930924fd7f4a46ac90aa2b58cab6539",
+        "00afdbeaa9f9a7c2697416e1d96ef3412987b35481f6d19faf35e28e4f12cbca"
+      ],
+      "actual": [
+        52.691341400146484,
+        59.28186798095703,
+        55.60719299316406,
+        44.58428192138672
+      ],
+      "expected": [
+        52.691341400146484,
+        59.2818717956543,
+        55.60719680786133,
+        44.58428192138672
+      ],
+      "max_abs_error": 3.814697265625e-06
+    },
+    {
+      "position": 7,
+      "case": 1547,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "返回目标核",
+      "passed": true,
+      "input_sha256": [
+        "dd5365da1e0cbee85dd3ec19b61579e15dd8abc1453490b3036b09d14c551ffc",
+        "fde62e577e187486397283615fe462abae945a1fa15b2744499e723a2b31b60c"
+      ],
+      "actual": [
+        110.2852554321289,
+        102.06690979003906,
+        86.21931457519531,
+        99.51039123535156
+      ],
+      "expected": [
+        110.2852554321289,
+        102.06690979003906,
+        86.21931457519531,
+        99.51039123535156
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 8,
+      "case": 1548,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "FP16切换",
+      "passed": true,
+      "input_sha256": [
+        "2821feee2a1c3a53e393c7d1ca668b2bccb71351094e7a6f7cb01622c8085118",
+        "fa996f54c3b8f6a25cdf1dd05b0d62fca149fcc4bd462d5eb6ad156aa64e8980"
+      ],
+      "actual": [
+        94.27764129638672,
+        109.52481842041016,
+        94.89952087402344,
+        110.25279235839844
+      ],
+      "expected": [
+        94.27764129638672,
+        109.52482604980469,
+        94.8995132446289,
+        110.25279998779297
+      ],
+      "max_abs_error": 7.62939453125e-06
+    },
+    {
+      "position": 9,
+      "case": 1549,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "返回目标核",
+      "passed": true,
+      "input_sha256": [
+        "0d9f105f7612171acaf95e615faa527379bb05f0704a97a65a247ba564c9a065",
+        "2d85b1f96d9a345afcc2e83e1f2a4f2a2b5422c2489c2f9d3a72a628ec46a5a7"
+      ],
+      "actual": [
+        102.5086898803711,
+        104.79112243652344,
+        111.84805297851562,
+        107.14437866210938
+      ],
+      "expected": [
+        102.5086898803711,
+        104.79112243652344,
+        111.84805297851562,
+        107.14437866210938
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 10,
+      "case": 1550,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "label": "布局切换",
+      "passed": true,
+      "input_sha256": [
+        "3f7fe197316ce08e81e25caf41d716ee537a71b1ff927ef01979f5d88e978630",
+        "ef8eed1d09bc6e280200bc14c2509c8da32a04027c8831f3ce075c978fa9390f"
+      ],
+      "actual": [
+        107.65843963623047,
+        99.5926284790039,
+        96.69503021240234,
+        118.29193115234375
+      ],
+      "expected": [
+        107.65843963623047,
+        99.5926284790039,
+        96.69503021240234,
+        118.29193115234375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 11,
+      "case": 1551,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "返回目标核",
+      "passed": true,
+      "input_sha256": [
+        "db15f94cc483c0d919f18aa24fb1bc8e6d23d5a30c11446f6531f2facedce0bb",
+        "008e994829af1d645186cae2b1ab0ed72ff5dc975e4dab17476b7de79afa75d8"
+      ],
+      "actual": [
+        112.56364440917969,
+        99.02944946289062,
+        104.010009765625,
+        95.16806030273438
+      ],
+      "expected": [
+        112.56364440917969,
+        99.02944946289062,
+        104.010009765625,
+        95.16805267333984
+      ],
+      "max_abs_error": 7.62939453125e-06
+    }
+  ],
+  "available_cores": 20
+}

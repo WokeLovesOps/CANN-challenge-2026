@@ -1,0 +1,29 @@
+{
+  "case": 197,
+  "label": "矮宽非对齐行回退",
+  "shape": [
+    1,
+    31,
+    2048,
+    80
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "28ddafa36a41143741ab7ae630abef0812fdc4b5094751fb5a11fc60e8c4dca2",
+    "8727996ad889b42d0dd1102d33a9ea49f93a8bd472772743df546cd6fb3182ad"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    318.15216064453125,
+    318.15216064453125
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

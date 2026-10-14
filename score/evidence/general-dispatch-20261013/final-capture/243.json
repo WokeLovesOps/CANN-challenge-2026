@@ -1,0 +1,29 @@
+{
+  "case": 243,
+  "label": "长K三维尾块",
+  "shape": [
+    1,
+    17,
+    33,
+    4104
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": true,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "a40164ff76164934de3cb8e583a64f01de2b3417baefea181b5d8a92c73504d8",
+    "5abe1a5dd4ceefda218d174fdd45e6d2dac8cccd3ef307e30734f8159ce3dadb"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    725.1978149414062,
+    725.1978149414062
+  ],
+  "available_cores": 20,
+  "max_abs_error": 6.103515625e-05
+}

@@ -1,0 +1,29 @@
+{
+  "case": 189,
+  "label": "矮宽多分片",
+  "shape": [
+    1,
+    48,
+    4096,
+    64
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "8039dc4c0ce4f398cd400a2f8bb69c402e1ff488198ce72085c0f6701a4112d0",
+    "ac72fab10b9d156817c0b62ca78cdad7309722fe5e8f397a2f4ce5d9f94d576c"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    450.37841796875,
+    450.37841796875
+  ],
+  "available_cores": 20,
+  "max_abs_error": 3.0517578125e-05
+}

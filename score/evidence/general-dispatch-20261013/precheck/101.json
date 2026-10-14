@@ -1,0 +1,29 @@
+{
+  "case": 101,
+  "label": "NT列容量回退",
+  "shape": [
+    3,
+    31,
+    129,
+    192
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "f08319ee38daf6ca5fbcbbbadea10eaf187261260ee5cb90a7baaaca40e5e01a",
+    "f98d6ce23011873cc05ed65e19900f7f3303b89a9fe74360b1a8a5ca6f0213c6"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    365.69287109375,
+    381.8169250488281
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

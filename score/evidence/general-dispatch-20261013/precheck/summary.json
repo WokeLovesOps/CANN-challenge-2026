@@ -1,0 +1,1080 @@
+[
+  {
+    "case": 6,
+    "label": "紧凑Gather",
+    "shape": [
+      1,
+      3,
+      5,
+      40
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "fb207ae7522a2e9ca22fb2472b1e6c28f08ebb39a9590c7752608ce5c7810f13",
+      "c24d2e0da4fe31675763a906feaacf3ff679fdc5712547155e8418d308eb61eb"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      5.382268905639648,
+      5.382268905639648
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "6",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/6.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 14,
+    "label": "稀疏mask跨64位",
+    "shape": [
+      1,
+      1,
+      16,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "ee90024cf478db4b9982ad0776d2a781893bf3a033aa5464c65f4de4bf333784",
+      "4d05d9347e7ee412b90ee6deae8a3aa9efd9c763f5cfc3f3110f4e0a15da196c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      3.404369354248047,
+      3.404369354248047
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "14",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/14.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 22,
+    "label": "小输出容量上界",
+    "shape": [
+      1,
+      4,
+      4,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "d3c577104093a6695ff6099ce31181f87a68cc38e80e5f15a187d2f3293cbb88",
+      "67c462b845a754845349b3b2dfd53e6cd8def0ba0e2337e4dd87cd6d13ba66b7"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      14.57052230834961,
+      14.57052230834961
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "22",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/22.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 30,
+    "label": "紧凑Gather邻域",
+    "shape": [
+      1,
+      5,
+      3,
+      48
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "0d9f533c61671e1633bb4dc0d78f4f0ad94113af015c0b675ac12ff653c1a355",
+      "b071f8c25555bcde4a00942d8724f5aa2efe9b14d8cf414af8ca1730900f4ecb"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      5.941469192504883,
+      5.941469192504883
+    ],
+    "available_cores": 20,
+    "max_abs_error": 4.76837158203125e-07,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "30",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/30.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 39,
+    "label": "静态UB单段K",
+    "shape": [
+      3,
+      15,
+      13,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "a6a946623ee161e49dd8033d4c8619a81e1c03e0dcbacc76e5c482c0b33f2902",
+      "1f05d65a6de0c7b664bf288c6d93ce8cac90753af4d9ab6ebadb98a50f9b531c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      67.57392883300781,
+      80.25320434570312
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "39",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/39.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 47,
+    "label": "静态UB双段K",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "0b6bde752fd9c977272719b0db63a9cb7aae8e799052d028a9f91fb5d87e7727",
+      "a3cb9290fdb2dddceb77c18adec821cea086685cd3837fc4e527180aa4eac820"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      96.49787902832031,
+      105.43643188476562
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "47",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/47.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 55,
+    "label": "静态UB单行单列",
+    "shape": [
+      2,
+      1,
+      1,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "28443497632d98691efbf6860675d5411ae7d3fb957b36234a1dd3ce8c621133",
+      "192a6062d65e89d138c8f8dca1addaf12eba7ea5de782c96799ed99c3fb491e6"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.9285102486610413,
+      1.8679192066192627
+    ],
+    "available_cores": 20,
+    "max_abs_error": 5.960464477539063e-08,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "55",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/55.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 56,
+    "label": "紧凑Cube邻域",
+    "shape": [
+      5,
+      13,
+      29,
+      80
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "f88c5daa66a47939be9160a98a56cae7ad18ca8182f902ab718ebfb83716c8e9",
+      "b0c06a569ae9e0d0e7f4044b6a0caccdf84e0fc2c49f1299dda066407c80bdd2"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      78.91482543945312,
+      85.14659118652344
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "56",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/56.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 64,
+    "label": "紧凑Cube容量上界",
+    "shape": [
+      8,
+      16,
+      32,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "5cbc0371039bdf832470a1315983bcf3e9a3494bc400017bd317a8e05533ed37",
+      "eddd54e4be40dfc8539158af9abdf98e9ddbda9fab0f0c051d2a434bfa5adaf9"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      116.90326690673828,
+      136.09561157226562
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.52587890625e-05,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "64",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/64.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 77,
+    "label": "NT驻留",
+    "shape": [
+      13,
+      23,
+      73,
+      192
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "1b218e916d9b9e616a503b7647ef6e215a88745e977b9ba00bb8beb778e0214d",
+      "9161943fe3d29f16c1a7c7053cabb7b7da5bbbb914784820d7ff7a3c2e72c591"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      246.0054168701172,
+      281.4909973144531
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "77",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/77.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 85,
+    "label": "NT驻留单行列尾",
+    "shape": [
+      3,
+      1,
+      33,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "02fbc391e854199dbd90c426cd351cc8d5d86bbda755ba3a31e4051004493269",
+      "4b717fe94533fe087a838d41199b88dacf406575c2636d088532aa0e76fa11d4"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      4.023584365844727,
+      5.123673439025879
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "85",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/85.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 93,
+    "label": "NT驻留容量上界",
+    "shape": [
+      5,
+      32,
+      128,
+      256
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "82a74dc9afae9f801411210db7110214795e4bd1c15d5099dfacf4c0d3a30666",
+      "622bc30a099b4441001738278e7479b4c11847a6241764ca3b0c026c412316e9"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      425.2987060546875,
+      468.5505676269531
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "93",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/93.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 101,
+    "label": "NT列容量回退",
+    "shape": [
+      3,
+      31,
+      129,
+      192
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "f08319ee38daf6ca5fbcbbbadea10eaf187261260ee5cb90a7baaaca40e5e01a",
+      "f98d6ce23011873cc05ed65e19900f7f3303b89a9fe74360b1a8a5ca6f0213c6"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      365.69287109375,
+      381.8169250488281
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "101",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/101.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 109,
+    "label": "NT非对齐K回退",
+    "shape": [
+      2,
+      17,
+      65,
+      200
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "5edc9f54dc1251084c16c2ef7955d7125ee0867609878583c6b5dc7eed0fe814",
+      "52f569494190d5a8d7c77995041117e1a996e4be91519519a2d70641e5aace81"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      190.56680297851562,
+      204.5604248046875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "109",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/109.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 114,
+    "label": "TN驻留",
+    "shape": [
+      16,
+      32,
+      128,
+      256
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "48bedc02d6cd3e30a457f9715072a00785843dba7fc59567039a0354c64f73b6",
+      "c601dbef3f15d99aae118c41ca3c626da24702a997713e9872a7e7e4bbbde10a"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      428.0355224609375,
+      463.5591735839844
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "114",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/114.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 122,
+    "label": "TN驻留邻域",
+    "shape": [
+      3,
+      17,
+      65,
+      80
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "295eab7d8ab8bdd48034efd30a84c19745d1720959d4b62ce86e8f9332cdfd1a",
+      "d67b92e74e741c1f929cbaa7e7b9b9c30f5f46c044c517ba89a7dad62fbe297e"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      118.6911849975586,
+      120.7928237915039
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "122",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/122.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 130,
+    "label": "TN驻留单行单列",
+    "shape": [
+      2,
+      1,
+      1,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "e5a36e54cdb9cffc37bb206ab69e6f9b2f6e8bf5ae56e2a84f1d1c485bf3b384",
+      "9b1b9e72639dc9f59f827e45a2cdfd635ed202690ed4cad8906440628144708f"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -0.5216395854949951,
+      0.3416725695133209
+    ],
+    "available_cores": 20,
+    "max_abs_error": 2.9802322387695312e-08,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "130",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/130.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 138,
+    "label": "TN列容量回退",
+    "shape": [
+      3,
+      31,
+      129,
+      192
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "a4be5c705f62768212b1b2f7d8625df191753865fea99ca840591b2a3e417dc1",
+      "bc429c2abfe0e2b839981748ae5f53fbc3431699e89cf3523aceadc1c4d23d30"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      375.3600158691406,
+      377.72955322265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "138",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/138.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 144,
+    "label": "高窄驻留",
+    "shape": [
+      1,
+      8192,
+      64,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "57ccc3a6412be49f3ff42788d3c719e471aa9ae6575a978dd408f1cb8e919f52",
+      "30a662e53b6ba6163ae7fa84a2414309b93325ce6cacddf96c373135f69fe49c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      72501.890625,
+      72501.890625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "144",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/144.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 152,
+    "label": "高窄行列尾",
+    "shape": [
+      1,
+      433,
+      17,
+      80
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "b8ce4e054301e7a8e92c15cc0be2b272b3a3224e6f651c597ad09164a6a9e2d1",
+      "3fb6e9095fa47731afb3e7dcee5c8003e638b5e0194b64397132365afdb4100d"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      2339.54296875,
+      2339.54296875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "152",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/152.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 160,
+    "label": "高窄容量邻域",
+    "shape": [
+      1,
+      641,
+      63,
+      112
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "7d57b45248bd6de7aef5c264cfb0679b663a1bd67746bc724047dd215543add6",
+      "f30cd44ece1be3c35bb64c2485fc26c10d2e8d7e3a81a5c39ed9e0d59e15c9f9"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      5364.322265625,
+      5364.322265625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.00048828125,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "160",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/160.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 173,
+    "label": "矮宽驻留",
+    "shape": [
+      1,
+      64,
+      8192,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "520050d363980613ebf77f65a731bcad97886189f5230b8670828bb835ae718a",
+      "fe398355fb21fb3bb21d043c334076f64948ab18ba3377a90178f7fe5bdcbad8"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      916.6301879882812,
+      916.6301879882812
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "173",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/173.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 181,
+    "label": "矮宽驻留邻域",
+    "shape": [
+      1,
+      32,
+      2048,
+      80
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "78b65ea8a97ea6062a7234d21c02467eaf6d388a3cd510488b1433dae12531da",
+      "dc58dd442d534a0b6e00dfbbeae7f3c55b2fe6d0bca6958dc8cb0cfb286f9b19"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      322.50286865234375,
+      322.50286865234375
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "181",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/181.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 189,
+    "label": "矮宽多分片",
+    "shape": [
+      1,
+      48,
+      4096,
+      64
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "8039dc4c0ce4f398cd400a2f8bb69c402e1ff488198ce72085c0f6701a4112d0",
+      "ac72fab10b9d156817c0b62ca78cdad7309722fe5e8f397a2f4ce5d9f94d576c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      450.37841796875,
+      450.37841796875
+    ],
+    "available_cores": 20,
+    "max_abs_error": 3.0517578125e-05,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "189",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/189.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 197,
+    "label": "矮宽非对齐行回退",
+    "shape": [
+      1,
+      31,
+      2048,
+      80
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "28ddafa36a41143741ab7ae630abef0812fdc4b5094751fb5a11fc60e8c4dca2",
+      "8727996ad889b42d0dd1102d33a9ea49f93a8bd472772743df546cd6fb3182ad"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      318.15216064453125,
+      318.15216064453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "197",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/197.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 207,
+    "label": "TT完整K驻留",
+    "shape": [
+      1,
+      1025,
+      1031,
+      1032
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "3c14904539aff4183308b461ba49c15df893a114228bb4569efafcc747c9781a",
+      "6ac4f645778f157d67a58f5747544f9f94b63b57fa981e3c941fbbd9db148c94"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      35617.19140625,
+      35617.19140625
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "207",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/207.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 215,
+    "label": "TT驻留双尾块",
+    "shape": [
+      1,
+      1153,
+      1027,
+      1048
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": false,
+    "input_sha256": [
+      "02ad0fbf1b14b02a72d09e62895ce19f134ba68281addc7e65cda6c0f993d4d4",
+      "3e2d891fdf930cd7d41c774376720c9bd5f14bbdd28ae2b995b3fbe4e220ab67"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      40454.859375,
+      40454.859375
+    ],
+    "exit_code": -6,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/tiling_domains.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "215",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/precheck/215.json",
+      "--real-npu"
+    ]
+  }
+]

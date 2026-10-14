@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point9-cv512-a3-20261014/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point9-cv512-a3-20261014/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 74.80055816000095,
+  "exit_code": 0,
+  "source_sha256": "264011e1d8edab6693415b8bb9893683fd9523c90c52aa261af9fa3c04884c92",
+  "library_sha256": "6f43658bf38c158b615ca893d96590bd33808606547d852853e3abbbd9c2dd26"
+}

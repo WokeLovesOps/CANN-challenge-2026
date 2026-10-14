@@ -1,0 +1,29 @@
+{
+  "case": 152,
+  "label": "高窄行列尾",
+  "shape": [
+    1,
+    433,
+    17,
+    80
+  ],
+  "dtype": "<class 'numpy.float16'>",
+  "transpose": [
+    false,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "b8ce4e054301e7a8e92c15cc0be2b272b3a3224e6f651c597ad09164a6a9e2d1",
+    "3fb6e9095fa47731afb3e7dcee5c8003e638b5e0194b64397132365afdb4100d"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    2339.54296875,
+    2339.54296875
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

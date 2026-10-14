@@ -1,0 +1,898 @@
+{
+  "l0": {
+    "l0-0": {
+      "median_us": 1.18,
+      "min_us": 1.04,
+      "max_us": 3.88
+    },
+    "l0-1": {
+      "median_us": 1.18,
+      "min_us": 1.08,
+      "max_us": 3.98
+    },
+    "l0-2": {
+      "median_us": 1.2,
+      "min_us": 1.02,
+      "max_us": 3.82
+    },
+    "combined": {
+      "median_us": 1.18,
+      "samples": 150,
+      "input_sha256": [
+        "f5c96587e411c96561d55199296524ef6c6ac72cdb81b961d7ea83a84ff5f787",
+        "c9897cb41f46f2958d1b7e3c70f3c475a36a1c591f116f275146d5bd22b469cd"
+      ]
+    }
+  },
+  "pmu": {
+    "pmu-0": {
+      "PipeUtilization": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.353939,
+              "min": 1.353939,
+              "max": 1.353939
+            },
+            "aiv_total_cycles": {
+              "median": 2234.0,
+              "min": 2234.0,
+              "max": 2234.0
+            },
+            "aiv_vec_time(us)": {
+              "median": 0.074545,
+              "min": 0.074545,
+              "max": 0.074545
+            },
+            "aiv_vec_ratio": {
+              "median": 0.055058,
+              "min": 0.055058,
+              "max": 0.055058
+            },
+            "aiv_mte2_time(us)": {
+              "median": 0.221818,
+              "min": 0.221818,
+              "max": 0.221818
+            },
+            "aiv_mte2_ratio": {
+              "median": 0.163832,
+              "min": 0.163832,
+              "max": 0.163832
+            },
+            "aiv_mte2_active_bw(GB/s)": {
+              "median": 1.074838,
+              "min": 1.074838,
+              "max": 1.074838
+            },
+            "aiv_mte3_time(us)": {
+              "median": 0.137576,
+              "min": 0.137576,
+              "max": 0.137576
+            },
+            "aiv_mte3_ratio": {
+              "median": 0.101611,
+              "min": 0.101611,
+              "max": 0.101611
+            },
+            "aiv_mte3_active_bw(GB/s)": {
+              "median": 0.866499,
+              "min": 0.866499,
+              "max": 0.866499
+            },
+            "aiv_icache_miss_rate": {
+              "median": 0.217391,
+              "min": 0.217391,
+              "max": 0.217391
+            },
+            "aiv_scalar_time(us)": {
+              "median": 0.433333,
+              "min": 0.433333,
+              "max": 0.433333
+            },
+            "aiv_scalar_ratio": {
+              "median": 0.320054,
+              "min": 0.320054,
+              "max": 0.320054
+            },
+            "aiv_scalar_single_time(us)": {
+              "median": 0.013939,
+              "min": 0.013939,
+              "max": 0.013939
+            },
+            "aiv_scalar_dual_time(us)": {
+              "median": 0.032727,
+              "min": 0.032727,
+              "max": 0.032727
+            },
+            "aiv_scalar_mte2_stall_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_mte3_stall_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_stall_by_ub_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_vector_stall_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_wait_ib_time(us)": {
+              "median": 0.609697,
+              "min": 0.609697,
+              "max": 0.609697
+            },
+            "aiv_scalar_wait_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      "Memory": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.353939,
+              "min": 1.353939,
+              "max": 1.353939
+            },
+            "aiv_total_cycles": {
+              "median": 2234.0,
+              "min": 2234.0,
+              "max": 2234.0
+            },
+            "aiv_ub_to_gm_bw(GB/s)": {
+              "median": 0.088046,
+              "min": 0.088046,
+              "max": 0.088046
+            },
+            "aiv_gm_to_ub_bw(GB/s)": {
+              "median": 0.176093,
+              "min": 0.176093,
+              "max": 0.176093
+            },
+            "aiv_main_mem_read_bw(GB/s)": {
+              "median": 0.968509,
+              "min": 0.968509,
+              "max": 0.968509
+            },
+            "aiv_main_mem_write_bw(GB/s)": {
+              "median": 0.088046,
+              "min": 0.088046,
+              "max": 0.088046
+            },
+            "aiv_mte2_instructions": {
+              "median": 3.0,
+              "min": 3.0,
+              "max": 3.0
+            },
+            "aiv_mte2_ratio": {
+              "median": 0.163832,
+              "min": 0.163832,
+              "max": 0.163832
+            },
+            "aiv_mte3_instructions": {
+              "median": 2.0,
+              "min": 2.0,
+              "max": 2.0
+            },
+            "aiv_mte3_ratio": {
+              "median": 0.101611,
+              "min": 0.101611,
+              "max": 0.101611
+            },
+            "read_main_memory_datas(KB)": {
+              "median": 1.375,
+              "min": 1.375,
+              "max": 1.375
+            },
+            "write_main_memory_datas(KB)": {
+              "median": 0.125,
+              "min": 0.125,
+              "max": 0.125
+            },
+            "GM_to_UB_datas(KB)": {
+              "median": 0.25,
+              "min": 0.25,
+              "max": 0.25
+            },
+            "GM_to_UB_bw_usage_rate(%)": {
+              "median": 0.08002,
+              "min": 0.08002,
+              "max": 0.08002
+            },
+            "UB_to_GM_datas(KB)": {
+              "median": 0.125,
+              "min": 0.125,
+              "max": 0.125
+            },
+            "UB_to_GM_bw_usage_rate(%)": {
+              "median": 0.047134,
+              "min": 0.047134,
+              "max": 0.047134
+            }
+          }
+        }
+      },
+      "MemoryUB": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.353939,
+              "min": 1.353939,
+              "max": 1.353939
+            },
+            "aiv_total_cycles": {
+              "median": 2234.0,
+              "min": 2234.0,
+              "max": 2234.0
+            },
+            "aiv_ub_read_bw_vector(GB/s)": {
+              "median": 0.528278,
+              "min": 0.528278,
+              "max": 0.528278
+            },
+            "aiv_ub_write_bw_vector(GB/s)": {
+              "median": 0.528278,
+              "min": 0.528278,
+              "max": 0.528278
+            },
+            "aiv_ub_read_bw_scalar(GB/s)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_ub_write_bw_scalar(GB/s)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      "ArithmeticUtilization": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.353939,
+              "min": 1.353939,
+              "max": 1.353939
+            },
+            "aiv_total_cycles": {
+              "median": 2234.0,
+              "min": 2234.0,
+              "max": 2234.0
+            },
+            "aiv_vec_ratio": {
+              "median": 0.055058,
+              "min": 0.055058,
+              "max": 0.055058
+            },
+            "aiv_vec_fp32_ratio": {
+              "median": 0.011638,
+              "min": 0.011638,
+              "max": 0.011638
+            },
+            "aiv_vec_fp16_ratio": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_vec_int32_ratio": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_vec_int16_ratio": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_vec_misc_ratio": {
+              "median": 0.042972,
+              "min": 0.042972,
+              "max": 0.042972
+            },
+            "aiv_vec_fops": {
+              "median": 544.0,
+              "min": 544.0,
+              "max": 544.0
+            }
+          }
+        }
+      },
+      "OpBasicInfo": [
+        {
+          "Op Name": "_ZN13batch_max_sum16ComputeSingleDotIDhEEvPhS1_S1_j",
+          "Op Type": "vector",
+          "Task Duration(us)": "1.940000",
+          "Block Dim": "1",
+          "Mix Block Dim": "NA",
+          "Device Id": "0",
+          "Pid": "11175",
+          "Current Freq": "1650",
+          "Rated Freq": "1650",
+          "": ""
+        }
+      ]
+    },
+    "pmu-1": {
+      "PipeUtilization": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.288485,
+              "min": 1.288485,
+              "max": 1.288485
+            },
+            "aiv_total_cycles": {
+              "median": 2126.0,
+              "min": 2126.0,
+              "max": 2126.0
+            },
+            "aiv_vec_time(us)": {
+              "median": 0.074545,
+              "min": 0.074545,
+              "max": 0.074545
+            },
+            "aiv_vec_ratio": {
+              "median": 0.057855,
+              "min": 0.057855,
+              "max": 0.057855
+            },
+            "aiv_mte2_time(us)": {
+              "median": 0.22,
+              "min": 0.22,
+              "max": 0.22
+            },
+            "aiv_mte2_ratio": {
+              "median": 0.170743,
+              "min": 0.170743,
+              "max": 0.170743
+            },
+            "aiv_mte2_active_bw(GB/s)": {
+              "median": 1.083721,
+              "min": 1.083721,
+              "max": 1.083721
+            },
+            "aiv_mte3_time(us)": {
+              "median": 0.14,
+              "min": 0.14,
+              "max": 0.14
+            },
+            "aiv_mte3_ratio": {
+              "median": 0.108655,
+              "min": 0.108655,
+              "max": 0.108655
+            },
+            "aiv_mte3_active_bw(GB/s)": {
+              "median": 0.851495,
+              "min": 0.851495,
+              "max": 0.851495
+            },
+            "aiv_icache_miss_rate": {
+              "median": 0.234043,
+              "min": 0.234043,
+              "max": 0.234043
+            },
+            "aiv_scalar_time(us)": {
+              "median": 0.466667,
+              "min": 0.466667,
+              "max": 0.466667
+            },
+            "aiv_scalar_ratio": {
+              "median": 0.362182,
+              "min": 0.362182,
+              "max": 0.362182
+            },
+            "aiv_scalar_single_time(us)": {
+              "median": 0.013939,
+              "min": 0.013939,
+              "max": 0.013939
+            },
+            "aiv_scalar_dual_time(us)": {
+              "median": 0.032727,
+              "min": 0.032727,
+              "max": 0.032727
+            },
+            "aiv_scalar_mte2_stall_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_mte3_stall_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_stall_by_ub_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_vector_stall_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_scalar_wait_ib_time(us)": {
+              "median": 0.504242,
+              "min": 0.504242,
+              "max": 0.504242
+            },
+            "aiv_scalar_wait_time(us)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      "Memory": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.288485,
+              "min": 1.288485,
+              "max": 1.288485
+            },
+            "aiv_total_cycles": {
+              "median": 2126.0,
+              "min": 2126.0,
+              "max": 2126.0
+            },
+            "aiv_ub_to_gm_bw(GB/s)": {
+              "median": 0.092519,
+              "min": 0.092519,
+              "max": 0.092519
+            },
+            "aiv_gm_to_ub_bw(GB/s)": {
+              "median": 0.185038,
+              "min": 0.185038,
+              "max": 0.185038
+            },
+            "aiv_main_mem_read_bw(GB/s)": {
+              "median": 1.017709,
+              "min": 1.017709,
+              "max": 1.017709
+            },
+            "aiv_main_mem_write_bw(GB/s)": {
+              "median": 0.092519,
+              "min": 0.092519,
+              "max": 0.092519
+            },
+            "aiv_mte2_instructions": {
+              "median": 3.0,
+              "min": 3.0,
+              "max": 3.0
+            },
+            "aiv_mte2_ratio": {
+              "median": 0.170743,
+              "min": 0.170743,
+              "max": 0.170743
+            },
+            "aiv_mte3_instructions": {
+              "median": 2.0,
+              "min": 2.0,
+              "max": 2.0
+            },
+            "aiv_mte3_ratio": {
+              "median": 0.108655,
+              "min": 0.108655,
+              "max": 0.108655
+            },
+            "read_main_memory_datas(KB)": {
+              "median": 1.375,
+              "min": 1.375,
+              "max": 1.375
+            },
+            "write_main_memory_datas(KB)": {
+              "median": 0.125,
+              "min": 0.125,
+              "max": 0.125
+            },
+            "GM_to_UB_datas(KB)": {
+              "median": 0.25,
+              "min": 0.25,
+              "max": 0.25
+            },
+            "GM_to_UB_bw_usage_rate(%)": {
+              "median": 0.084085,
+              "min": 0.084085,
+              "max": 0.084085
+            },
+            "UB_to_GM_datas(KB)": {
+              "median": 0.125,
+              "min": 0.125,
+              "max": 0.125
+            },
+            "UB_to_GM_bw_usage_rate(%)": {
+              "median": 0.049528,
+              "min": 0.049528,
+              "max": 0.049528
+            }
+          }
+        }
+      },
+      "MemoryUB": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.288485,
+              "min": 1.288485,
+              "max": 1.288485
+            },
+            "aiv_total_cycles": {
+              "median": 2126.0,
+              "min": 2126.0,
+              "max": 2126.0
+            },
+            "aiv_ub_read_bw_vector(GB/s)": {
+              "median": 0.555114,
+              "min": 0.555114,
+              "max": 0.555114
+            },
+            "aiv_ub_write_bw_vector(GB/s)": {
+              "median": 0.555114,
+              "min": 0.555114,
+              "max": 0.555114
+            },
+            "aiv_ub_read_bw_scalar(GB/s)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_ub_write_bw_scalar(GB/s)": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      "ArithmeticUtilization": {
+        "vector0": {
+          "blocks": 1,
+          "metrics": {
+            "aiv_time(us)": {
+              "median": 1.288485,
+              "min": 1.288485,
+              "max": 1.288485
+            },
+            "aiv_total_cycles": {
+              "median": 2126.0,
+              "min": 2126.0,
+              "max": 2126.0
+            },
+            "aiv_vec_ratio": {
+              "median": 0.057855,
+              "min": 0.057855,
+              "max": 0.057855
+            },
+            "aiv_vec_fp32_ratio": {
+              "median": 0.01223,
+              "min": 0.01223,
+              "max": 0.01223
+            },
+            "aiv_vec_fp16_ratio": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_vec_int32_ratio": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_vec_int16_ratio": {
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "aiv_vec_misc_ratio": {
+              "median": 0.045155,
+              "min": 0.045155,
+              "max": 0.045155
+            },
+            "aiv_vec_fops": {
+              "median": 544.0,
+              "min": 544.0,
+              "max": 544.0
+            }
+          }
+        }
+      },
+      "OpBasicInfo": [
+        {
+          "Op Name": "_ZN13batch_max_sum16ComputeSingleDotIDhEEvPhS1_S1_j",
+          "Op Type": "vector",
+          "Task Duration(us)": "1.880000",
+          "Block Dim": "1",
+          "Mix Block Dim": "NA",
+          "Device Id": "0",
+          "Pid": "11238",
+          "Current Freq": "1650",
+          "Rated Freq": "1650",
+          "": ""
+        }
+      ]
+    }
+  },
+  "model": {
+    "core0.veccore0": {
+      "counts": {
+        "LD_XD_XN_IMM": 2,
+        "LDP_XI_XJ_XN": 1,
+        "WAIT_FLAG": 2,
+        "BAR": 4,
+        "MOV_SRC_TO_DST_ALIGN": 3,
+        "SET_FLAG": 2,
+        "VCADD": 1,
+        "VMUL": 1,
+        "MOVEMASK": 11,
+        "VCONV": 1,
+        "DCCI": 1,
+        "MADD": 1,
+        "MOV_XD_IMM": 23,
+        "NEG": 6,
+        "INSERT_XD": 4,
+        "MOV_XD_SPR": 7,
+        "MOVK": 14,
+        "SIGNEXT": 2,
+        "CMP_IMM": 3,
+        "ZEROEXT": 5,
+        "MOVX8_XD_IMM": 1,
+        "SEL": 2,
+        "NOT": 2,
+        "SHL": 6,
+        "SUB_IMM": 1,
+        "MOV_XD_XN": 2,
+        "INSERT_XD_XN": 1,
+        "AND": 4,
+        "ADD_IMM": 3,
+        "ADD": 3,
+        "CMP": 1,
+        "END": 1,
+        "NOP": 1,
+        "MOV_SPR_XN": 4,
+        "JUMPCMP": 2,
+        "JUMPC": 3
+      },
+      "span_us": 0.5759999603033066,
+      "stages": {
+        "ADD": {
+          "count": 3,
+          "start_us": 0.0009999275207519531,
+          "end_us": 0.22299964528065175,
+          "sum_duration_us": 0.003000000142492354
+        },
+        "ADD_IMM": {
+          "count": 3,
+          "start_us": 0.004999637603759766,
+          "end_us": 0.21599967579822987,
+          "sum_duration_us": 0.003000000142492354
+        },
+        "AND": {
+          "count": 4,
+          "start_us": 0.0019998550415039062,
+          "end_us": 0.22799975972156972,
+          "sum_duration_us": 0.004000000189989805
+        },
+        "BAR": {
+          "count": 4,
+          "start_us": 0.38499975204467773,
+          "end_us": 0.42299993138294667,
+          "sum_duration_us": 0.004000000189989805
+        },
+        "CMP": {
+          "count": 1,
+          "start_us": 0.21599960327148438,
+          "end_us": 0.21699960331898183,
+          "sum_duration_us": 0.0010000000474974513
+        },
+        "CMP_IMM": {
+          "count": 3,
+          "start_us": 0.2349996566772461,
+          "end_us": 0.24699981312733144,
+          "sum_duration_us": 0.003000000142492354
+        },
+        "DCCI": {
+          "count": 1,
+          "start_us": 0.2559995651245117,
+          "end_us": 0.25899956515058875,
+          "sum_duration_us": 0.003000000026077032
+        },
+        "END": {
+          "count": 1,
+          "start_us": 0.2569999694824219,
+          "end_us": 0.2569999694824219,
+          "sum_duration_us": 0.0
+        },
+        "INSERT_XD": {
+          "count": 4,
+          "start_us": 0.21299982070922852,
+          "end_us": 0.23999984364490956,
+          "sum_duration_us": 0.004000000189989805
+        },
+        "INSERT_XD_XN": {
+          "count": 1,
+          "start_us": 0.2109999656677246,
+          "end_us": 0.21199996571522206,
+          "sum_duration_us": 0.0010000000474974513
+        },
+        "JUMPC": {
+          "count": 3,
+          "start_us": 0.21700000762939453,
+          "end_us": 0.24199962615966797,
+          "sum_duration_us": 0.0
+        },
+        "JUMPCMP": {
+          "count": 2,
+          "start_us": 0.21899986267089844,
+          "end_us": 0.22299957275390625,
+          "sum_duration_us": 0.0
+        },
+        "LDP_XI_XJ_XN": {
+          "count": 1,
+          "start_us": 0.005999565124511719,
+          "end_us": 0.2079995721578598,
+          "sum_duration_us": 0.20200000703334808
+        },
+        "LD_XD_XN_IMM": {
+          "count": 2,
+          "start_us": 0.004999637603759766,
+          "end_us": 0.2079995721578598,
+          "sum_duration_us": 0.40400001406669617
+        },
+        "MADD": {
+          "count": 1,
+          "start_us": 0.0029997825622558594,
+          "end_us": 0.004999782657250762,
+          "sum_duration_us": 0.0020000000949949026
+        },
+        "MOVEMASK": {
+          "count": 11,
+          "start_us": 0.0039997100830078125,
+          "end_us": 0.431999858468771,
+          "sum_duration_us": 0.10099999606609344
+        },
+        "MOVK": {
+          "count": 14,
+          "start_us": 0.0009999275207519531,
+          "end_us": 0.2539997826097533,
+          "sum_duration_us": 0.014000000664964318
+        },
+        "MOVX8_XD_IMM": {
+          "count": 1,
+          "start_us": 0.2539997100830078,
+          "end_us": 0.25499971013050526,
+          "sum_duration_us": 0.0010000000474974513
+        },
+        "MOV_SPR_XN": {
+          "count": 4,
+          "start_us": 0.21199989318847656,
+          "end_us": 0.23999977111816406,
+          "sum_duration_us": 0.0
+        },
+        "MOV_SRC_TO_DST_ALIGN": {
+          "count": 3,
+          "start_us": 0.23000001907348633,
+          "end_us": 0.5759999603033066,
+          "sum_duration_us": 0.43700000643730164
+        },
+        "MOV_XD_IMM": {
+          "count": 23,
+          "start_us": 0.0,
+          "end_us": 0.2539997826097533,
+          "sum_duration_us": 0.02300000109244138
+        },
+        "MOV_XD_SPR": {
+          "count": 7,
+          "start_us": 0.0009999275207519531,
+          "end_us": 0.2389999161241576,
+          "sum_duration_us": 0.007000000332482159
+        },
+        "MOV_XD_XN": {
+          "count": 2,
+          "start_us": 0.21399974822998047,
+          "end_us": 0.21599967579822987,
+          "sum_duration_us": 0.0020000000949949026
+        },
+        "NEG": {
+          "count": 6,
+          "start_us": 0.0029997825622558594,
+          "end_us": 0.25100000004749745,
+          "sum_duration_us": 0.006000000284984708
+        },
+        "NOP": {
+          "count": 1,
+          "start_us": 0.2559995651245117,
+          "end_us": 0.2559995651245117,
+          "sum_duration_us": 0.0
+        },
+        "NOT": {
+          "count": 2,
+          "start_us": 0.2479996681213379,
+          "end_us": 0.2519999275682494,
+          "sum_duration_us": 0.0020000000949949026
+        },
+        "SEL": {
+          "count": 2,
+          "start_us": 0.24899959564208984,
+          "end_us": 0.2519999275682494,
+          "sum_duration_us": 0.0020000000949949026
+        },
+        "SET_FLAG": {
+          "count": 2,
+          "start_us": 0.3845553398132324,
+          "end_us": 0.447332899319008,
+          "sum_duration_us": 0.0011111111380159855
+        },
+        "SHL": {
+          "count": 6,
+          "start_us": 0.21499967575073242,
+          "end_us": 0.25100000004749745,
+          "sum_duration_us": 0.006000000284984708
+        },
+        "SIGNEXT": {
+          "count": 2,
+          "start_us": 0.23599958419799805,
+          "end_us": 0.24699981312733144,
+          "sum_duration_us": 0.0020000000949949026
+        },
+        "SUB_IMM": {
+          "count": 1,
+          "start_us": 0.24599981307983398,
+          "end_us": 0.24699981312733144,
+          "sum_duration_us": 0.0010000000474974513
+        },
+        "VCADD": {
+          "count": 1,
+          "start_us": 0.4239997863769531,
+          "end_us": 0.4469997864216566,
+          "sum_duration_us": 0.023000000044703484
+        },
+        "VCONV": {
+          "count": 1,
+          "start_us": 0.38699960708618164,
+          "end_us": 0.397999607026577,
+          "sum_duration_us": 0.010999999940395355
+        },
+        "VMUL": {
+          "count": 1,
+          "start_us": 0.39999961853027344,
+          "end_us": 0.41299961879849434,
+          "sum_duration_us": 0.013000000268220901
+        },
+        "WAIT_FLAG": {
+          "count": 2,
+          "start_us": 0.23122215270996094,
+          "end_us": 0.44788847863674164,
+          "sum_duration_us": 0.3466666638851166
+        },
+        "ZEROEXT": {
+          "count": 5,
+          "start_us": 0.21799993515014648,
+          "end_us": 0.2479997406480834,
+          "sum_duration_us": 0.0050000002374872565
+        }
+      }
+    }
+  }
+}

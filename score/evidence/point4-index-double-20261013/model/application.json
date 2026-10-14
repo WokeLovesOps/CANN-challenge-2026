@@ -1,0 +1,50 @@
+{
+  "commit": "current-point4",
+  "execution": "simulator",
+  "library": "/home/developer/cann-point4-index-double-20261013/libcandidate.so",
+  "library_sha256": "71ac79acac6f5f50b92996d4057027a8593ea87acf719adda66d5c8587b1f3a5",
+  "dtype": "bf16",
+  "layout": "TT",
+  "warmup": 0,
+  "repeat": 2,
+  "passed": true,
+  "results": [
+    {
+      "case": 4,
+      "shape": [
+        4,
+        16,
+        16,
+        128
+      ],
+      "passed": true,
+      "input_sha256": [
+        "7439d9d97b7d25fe603cef01876a421f326d3818e78cbdf5376b20dbe5a9c781",
+        "3e99c57cd28ae396d396236d085191d2cdd9d6eda85312db6c2ab3dd8f59cd86"
+      ],
+      "launch_begin": 0,
+      "seed": 20260934,
+      "max_abs_error": 7.62939453125e-06,
+      "launch_end": 3
+    }
+  ],
+  "launches": [
+    {
+      "case": 4,
+      "phase": "validation",
+      "position": 0
+    },
+    {
+      "case": 4,
+      "phase": "sample",
+      "position": 1
+    },
+    {
+      "case": 4,
+      "phase": "sample",
+      "position": 2
+    }
+  ],
+  "soc": "Ascend910B3",
+  "cube_cores": 20
+}

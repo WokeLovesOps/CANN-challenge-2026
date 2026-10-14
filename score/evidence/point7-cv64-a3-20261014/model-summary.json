@@ -1,0 +1,637 @@
+{
+  "core0.cubecore0": {
+    "origin_us": 19.75,
+    "span_us": 1.8430001526139677,
+    "counts": {
+      "LOAD_2D": 34,
+      "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+      "WAIT_FLAG": 17,
+      "BAR": 3,
+      "SET_FLAG": 17,
+      "FIX_L0C_TO_DST": 2,
+      "LD_XD_XN_IMM": 120,
+      "LDP_XI_XJ_XN": 2,
+      "STP_XI_XJ_XN": 17,
+      "STI_XN_IMM": 41,
+      "ST_XD_XN_IMM": 72,
+      "MMAD": 2,
+      "MADD": 17,
+      "STI_XN_XM": 14,
+      "SHL": 102,
+      "MOV_XD_XN": 81,
+      "ZEROEXT": 105,
+      "ADD": 93,
+      "ADD_IMM": 68,
+      "LD_XD_XN": 7,
+      "MOV_SPR_XN": 7,
+      "CMP_IMM": 41,
+      "DCCI": 1,
+      "SET_CROSS_CORE": 2,
+      "SIGNEXT": 34,
+      "MUL": 5,
+      "MOV_XD_IMM": 59,
+      "SBITSET": 24,
+      "INSERT_XD": 14,
+      "SFF": 17,
+      "OR": 18,
+      "MOVK": 20,
+      "SUB_IMM": 35,
+      "SHR": 13,
+      "NEG": 2,
+      "SUB": 1,
+      "SEL": 7,
+      "AND": 7,
+      "CMP": 2,
+      "MOV_XD_SPR": 6,
+      "INSERT_XD_XN": 1,
+      "MOVX8_XD_IMM": 1,
+      "MAX": 1,
+      "JUMPCMP": 42,
+      "JUMP": 18,
+      "END": 1,
+      "JUMPC": 36,
+      "NOP": 2,
+      "ENDLOOP": 32,
+      "LOOP": 2
+    },
+    "stages": [
+      {
+        "name": "MMAD",
+        "start_us": 1.3010005950927734,
+        "duration_us": 0.08100000023841858,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:343\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_mm_base_impl.h:440\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:339\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:541",
+          "detail": "dtype:F16F32XD:0x0XN:0x0XM:0x0XT:0x8000000040100020id:4380",
+          "pc_addr": "0x124992a0"
+        }
+      },
+      {
+        "name": "MMAD",
+        "start_us": 1.4400005340576172,
+        "duration_us": 0.08100000023841858,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:343\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_mm_base_impl.h:440\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:339\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:541",
+          "detail": "dtype:F16F32XD:0x2000XN:0x0XM:0x8000XT:0x8000000040100020id:5330",
+          "pc_addr": "0x124995f4"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.11199951171875,
+        "duration_us": 0.03099999949336052,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:38\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:54\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:516",
+          "detail": "Src:L1,Dst:L0A,XD:X6=0,XN:X18=0,XM:X23=0x1100000,Dtype:B8,id:57",
+          "pc_addr": "0x12498fbc",
+          "process_bytes": "8192"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1130008697509766,
+        "duration_us": 0.04899999871850014,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:38\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:54\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:516",
+          "detail": "Src:L1,Dst:L0A,XD:X24=0x2000,XN:X22=0x2000,XM:X23=0x1100000,Dtype:B8,id:58",
+          "pc_addr": "0x12498fc0",
+          "process_bytes": "8192"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1140003204345703,
+        "duration_us": 0.0560000017285347,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0,XN:X28=0x4000,XM:X20=0x10040000,Dtype:B8,id:59",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.114999771118164,
+        "duration_us": 0.06400000303983688,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x800,XN:X28=0x4200,XM:X20=0x10040000,Dtype:B8,id:60",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1319999694824219,
+        "duration_us": 0.0560000017285347,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x1000,XN:X28=0x4400,XM:X20=0x10040000,Dtype:B8,id:61",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1499996185302734,
+        "duration_us": 0.04600000008940697,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x1800,XN:X28=0x4600,XM:X20=0x10040000,Dtype:B8,id:62",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1550006866455078,
+        "duration_us": 0.05000000074505806,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x2000,XN:X28=0x4800,XM:X20=0x10040000,Dtype:B8,id:63",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1599998474121094,
+        "duration_us": 0.05400000140070915,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x2800,XN:X28=0x4a00,XM:X20=0x10040000,Dtype:B8,id:64",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1660003662109375,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x3000,XN:X28=0x4c00,XM:X20=0x10040000,Dtype:B8,id:65",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1739997863769531,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x3800,XN:X28=0x4e00,XM:X20=0x10040000,Dtype:B8,id:66",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1830005645751953,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x4000,XN:X28=0x5000,XM:X20=0x10040000,Dtype:B8,id:67",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.1919994354248047,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x4800,XN:X28=0x5200,XM:X20=0x10040000,Dtype:B8,id:68",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2000007629394531,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x5000,XN:X28=0x5400,XM:X20=0x10040000,Dtype:B8,id:69",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2089996337890625,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x5800,XN:X28=0x5600,XM:X20=0x10040000,Dtype:B8,id:70",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2180004119873047,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x6000,XN:X28=0x5800,XM:X20=0x10040000,Dtype:B8,id:71",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2259998321533203,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x6800,XN:X28=0x5a00,XM:X20=0x10040000,Dtype:B8,id:72",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2350006103515625,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x7000,XN:X28=0x5c00,XM:X20=0x10040000,Dtype:B8,id:73",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2439994812011719,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X24=0x7800,XN:X28=0x5e00,XM:X20=0x10040000,Dtype:B8,id:74",
+          "pc_addr": "0x12499150",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.253000259399414,
+        "duration_us": 0.0560000017285347,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0x8000,XN:X15=0xc000,XM:X6=0x10040000,Dtype:B8,id:75",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2609996795654297,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0x8800,XN:X15=0xc200,XM:X6=0x10040000,Dtype:B8,id:76",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2689990997314453,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0x9000,XN:X15=0xc400,XM:X6=0x10040000,Dtype:B8,id:77",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2779998779296875,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0x9800,XN:X15=0xc600,XM:X6=0x10040000,Dtype:B8,id:78",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2870006561279297,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xa000,XN:X15=0xc800,XM:X6=0x10040000,Dtype:B8,id:79",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.2950000762939453,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xa800,XN:X15=0xca00,XM:X6=0x10040000,Dtype:B8,id:80",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3040008544921875,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xb000,XN:X15=0xcc00,XM:X6=0x10040000,Dtype:B8,id:81",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3129997253417969,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xb800,XN:X15=0xce00,XM:X6=0x10040000,Dtype:B8,id:82",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3209991455078125,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xc000,XN:X15=0xd000,XM:X6=0x10040000,Dtype:B8,id:83",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3299999237060547,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xc800,XN:X15=0xd200,XM:X6=0x10040000,Dtype:B8,id:84",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3390007019042969,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xd000,XN:X15=0xd400,XM:X6=0x10040000,Dtype:B8,id:85",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3470001220703125,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xd800,XN:X15=0xd600,XM:X6=0x10040000,Dtype:B8,id:86",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3560009002685547,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xe000,XN:X15=0xd800,XM:X6=0x10040000,Dtype:B8,id:87",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.364999771118164,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xe800,XN:X15=0xda00,XM:X6=0x10040000,Dtype:B8,id:88",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3729991912841797,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xf000,XN:X15=0xdc00,XM:X6=0x10040000,Dtype:B8,id:89",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "LOAD_2D",
+        "start_us": 1.3819999694824219,
+        "duration_us": 0.05700000002980232,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/dav_c220/kernel_operator_mm_impl.h:58\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/impl/kernel_operator_mm_load2d_impl.h:57\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_mm_intf_impl.h:50\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:531",
+          "detail": "Src:L1,Dst:L0B,XD:X8=0xf800,XN:X15=0xde00,XM:X6=0x10040000,Dtype:B8,id:90",
+          "pc_addr": "0x124994b8",
+          "process_bytes": "2048"
+        }
+      },
+      {
+        "name": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+        "start_us": 0.5699996948242188,
+        "duration_us": 0.22699999809265137,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:282\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:311\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:165\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:504",
+          "detail": "Src:OUT,Dst:L1,XD:X19=0,XN:X14=0x11315800,XM:X6=0x2001000010,XT:X22=0x101000020,Dtype:B16,id:55",
+          "pc_addr": "0x12498e28",
+          "process_bytes": "16384"
+        }
+      },
+      {
+        "name": "MOV_OUT_TO_L1_MULTI_ND2NZ",
+        "start_us": 0.5720005035400391,
+        "duration_us": 0.5389999747276306,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:282\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:311\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:165\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:505",
+          "detail": "Src:OUT,Dst:L1,XD:X23=0x4000,XN:X18=0x11355a00,XM:X24=0x8001000010,XT:X21=0x101000080,Dtype:B16,id:56",
+          "pc_addr": "0x12498e2c",
+          "process_bytes": "65536"
+        }
+      },
+      {
+        "name": "FIX_L0C_TO_DST",
+        "start_us": 1.3859996795654297,
+        "duration_us": 0.16899999976158142,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_fixpipe_v2_impl.h:0\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_fixpipe_v2_impl.h:284\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_fixpipe_intf_impl.h:158\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:552",
+          "detail": "Src:L0C32,Dst:OUT,XD:X15=0x11455e00,XN:X6=0,XM:X8=0x4000200400,XT:X13=0x80000000020,id:92",
+          "pc_addr": "0x12499384",
+          "process_bytes": "8192"
+        }
+      },
+      {
+        "name": "FIX_L0C_TO_DST",
+        "start_us": 1.559000015258789,
+        "duration_us": 0.2759999930858612,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_fixpipe_v2_impl.h:0\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_fixpipe_v2_impl.h:284\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_fixpipe_intf_impl.h:158\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:552",
+          "detail": "Src:L0C32,Dst:OUT,XD:X6=0x11457e00,XN:X5=0x2000,XM:X8=0x4000200400,XT:X13=0x80000000020,id:95",
+          "pc_addr": "0x124996b4",
+          "process_bytes": "8192"
+        }
+      }
+    ]
+  },
+  "core0.veccore0": {
+    "origin_us": 19.750999450683594,
+    "span_us": 2.4590012817643583,
+    "counts": {
+      "WAIT_FLAG_DEVI": 2,
+      "BAR": 5,
+      "WAIT_FLAG": 6,
+      "STI_XN_IMM": 21,
+      "ST_XD_XN_IMM": 27,
+      "MOV_OUT_TO_UB": 2,
+      "SET_FLAG": 6,
+      "LD_XD_XN_IMM": 42,
+      "LDP_XI_XJ_XN": 2,
+      "STP_XI_XJ_XN": 8,
+      "MOVEMASK": 14,
+      "VCMAX": 2,
+      "MOV_SRC_TO_DST_ALIGN": 1,
+      "VCADD": 1,
+      "STI_XN_XM": 6,
+      "VMAX": 1,
+      "LD_XD_XN": 3,
+      "DCCI": 1,
+      "ZEROEXT": 24,
+      "ADD_IMM": 21,
+      "CMP_IMM": 20,
+      "MADD": 2,
+      "MUL": 2,
+      "SHL": 19,
+      "AND": 5,
+      "MOV_XD_IMM": 39,
+      "ADD": 12,
+      "NEG": 10,
+      "SHR": 7,
+      "SIGNEXT": 17,
+      "SBITSET": 10,
+      "SUB_IMM": 18,
+      "MOVK": 20,
+      "SFF": 6,
+      "MOVX8_XD_IMM": 2,
+      "MOV_XD_SPR": 11,
+      "INSERT_XD": 6,
+      "SEL": 5,
+      "NOT": 2,
+      "OR": 3,
+      "MOV_XD_XN": 6,
+      "INSERT_XD_XN": 1,
+      "MOV_SPR_XN": 5,
+      "CMP": 1,
+      "JUMPCMP": 16,
+      "JUMP": 11,
+      "JUMPC": 17,
+      "END": 1,
+      "NOP": 2
+    },
+    "stages": [
+      {
+        "name": "VCMAX",
+        "start_us": 1.805999755859375,
+        "duration_us": 0.1340000033378601,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_reduce_impl.h:193\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_reduce_impl.h:217\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_reduce_intf_impl.h:572\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:580",
+          "detail": "XD:X7=0x2020,XN:X13=0,XT:X19=0x2000000800010001,Dtype:F32,Id:1247",
+          "pc_addr": "0x1249d984"
+        }
+      },
+      {
+        "name": "VCMAX",
+        "start_us": 2.157001495361328,
+        "duration_us": 0.1340000033378601,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_reduce_impl.h:193\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_reduce_impl.h:217\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_reduce_intf_impl.h:572\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:583",
+          "detail": "XD:X14=0x20a0,XN:X16=0,XT:X5=0x2000000800010001,Dtype:F32,Id:1424",
+          "pc_addr": "0x1249db78"
+        }
+      },
+      {
+        "name": "VMAX",
+        "start_us": 2.2919998168945312,
+        "duration_us": 0.010999999940395355,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_binary_impl.h:271\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_binary_intf_impl.h:585\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:589",
+          "detail": "XD:X7=0x2020,XN:X7=0x2020,XM:X14=0x20a0,XT:X5=0x100080808010101,Dtype:F32,Id:1449",
+          "pc_addr": "0x1249dbdc"
+        }
+      },
+      {
+        "name": "VCADD",
+        "start_us": 2.3050003051757812,
+        "duration_us": 0.023000000044703484,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_reduce_impl.h:265\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_vec_reduce_impl.h:282\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_vec_reduce_intf_impl.h:534\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:592",
+          "detail": "XD:X9=0x2000,XN:X7=0x2020,XT:X10=0x100000400010001,Dtype:F32,Id:1556",
+          "pc_addr": "0x1249dd04"
+        }
+      },
+      {
+        "name": "MOV_OUT_TO_UB",
+        "start_us": 1.5750007629394531,
+        "duration_us": 0.2199999988079071,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:84\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:69\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:728\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:576",
+          "detail": "Src:OUT,Dst:UB,XD:X17=0,XN:X10=0x11455e00,XM:X18=0x1000010,id:96",
+          "pc_addr": "0x1249d8d4",
+          "process_bytes": "8192"
+        }
+      },
+      {
+        "name": "MOV_OUT_TO_UB",
+        "start_us": 1.940999984741211,
+        "duration_us": 0.21400000154972076,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_data_copy_impl.h:84\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:69\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/kernel_operator_data_copy_intf_impl.h:728\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:576",
+          "detail": "Src:OUT,Dst:UB,XD:X17=0,XN:X10=0x11457e00,XM:X18=0x1000010,id:99",
+          "pc_addr": "0x1249da70",
+          "process_bytes": "8192"
+        }
+      },
+      {
+        "name": "WAIT_FLAG_DEVI",
+        "start_us": 0.37400054931640625,
+        "duration_us": 1.1829999685287476,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_sync_impl.h:439\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:253\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:574",
+          "detail": "UIMM:0x8,",
+          "pc_addr": "0x1249d834"
+        }
+      },
+      {
+        "name": "WAIT_FLAG_DEVI",
+        "start_us": 1.605001449584961,
+        "duration_us": 0.23199999332427979,
+        "detail": {
+          "code": "/home/developer/Ascend/cann-9.0.0/aarch64-linux/asc/impl/basic_api/dav_c220/kernel_operator_sync_impl.h:439\n/home/developer/Ascend/cann-9.0.0/aarch64-linux/tikcpp/tikcfw/interface/../../impl/basic_api/kernel_operator_block_sync_intf_impl.h:253\n/home/developer/cann-point7-cv64-a3-20261014/tests/../src/kernel.asc:574",
+          "detail": "UIMM:0x9,",
+          "pc_addr": "0x1249d9c8"
+        }
+      }
+    ]
+  }
+}

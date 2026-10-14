@@ -1,0 +1,29 @@
+{
+  "case": 223,
+  "label": "TT驻留L1边界",
+  "shape": [
+    1,
+    1024,
+    1024,
+    1088
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "d391b1673f9d136ff32bd4018e42387daef2a8b496799516af093e787423969a",
+    "55bdde6a48f81daf27d5ccb4a200339b90f89556db6206c2c878d3d942fc35ba"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    36566.18359375,
+    36566.18359375
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

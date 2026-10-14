@@ -1,0 +1,172 @@
+{
+  "library": "/home/developer/cann-point7-analysis-20261014/libcandidate.so",
+  "library_sha256": "eca051c10f8b47d1d56136bf2b175f829b799a781a87474afd9c8dc1ea771116",
+  "source": "/home/developer/cann-point7-analysis-20261014/src/kernel.asc",
+  "source_sha256": "e30dc47da5b725f5e07d010e235cbe1c6ff27ad287eb32212b974d1f950c99f5",
+  "warmups": [
+    0,
+    20,
+    200
+  ],
+  "repeat": 50,
+  "cases": "2",
+  "dtype": "bf16",
+  "layout": "TN",
+  "timing_scope": "msprof_kernel_task_duration",
+  "synchronization": "each_call",
+  "address_mode": "fixed",
+  "validation_calls": 1,
+  "oj_protocol_confirmed": false,
+  "passed": true,
+  "runs": [
+    {
+      "directory": "w0-0-direct",
+      "warmup": 0,
+      "call_mode": "direct",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w0-0-direct/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w0-0-direct/application.json --cases 2 --dtype bf16 --layout TN --warmup 0 --repeat 50 --call-mode direct --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w0-1-graph",
+      "warmup": 0,
+      "call_mode": "graph",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w0-1-graph/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w0-1-graph/application.json --cases 2 --dtype bf16 --layout TN --warmup 0 --repeat 50 --call-mode graph --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w0-2-graph",
+      "warmup": 0,
+      "call_mode": "graph",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w0-2-graph/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w0-2-graph/application.json --cases 2 --dtype bf16 --layout TN --warmup 0 --repeat 50 --call-mode graph --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w0-3-direct",
+      "warmup": 0,
+      "call_mode": "direct",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w0-3-direct/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w0-3-direct/application.json --cases 2 --dtype bf16 --layout TN --warmup 0 --repeat 50 --call-mode direct --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w20-0-graph",
+      "warmup": 20,
+      "call_mode": "graph",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w20-0-graph/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w20-0-graph/application.json --cases 2 --dtype bf16 --layout TN --warmup 20 --repeat 50 --call-mode graph --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w20-1-direct",
+      "warmup": 20,
+      "call_mode": "direct",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w20-1-direct/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w20-1-direct/application.json --cases 2 --dtype bf16 --layout TN --warmup 20 --repeat 50 --call-mode direct --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w20-2-direct",
+      "warmup": 20,
+      "call_mode": "direct",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w20-2-direct/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w20-2-direct/application.json --cases 2 --dtype bf16 --layout TN --warmup 20 --repeat 50 --call-mode direct --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w20-3-graph",
+      "warmup": 20,
+      "call_mode": "graph",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w20-3-graph/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w20-3-graph/application.json --cases 2 --dtype bf16 --layout TN --warmup 20 --repeat 50 --call-mode graph --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w200-0-direct",
+      "warmup": 200,
+      "call_mode": "direct",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w200-0-direct/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w200-0-direct/application.json --cases 2 --dtype bf16 --layout TN --warmup 200 --repeat 50 --call-mode direct --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w200-1-graph",
+      "warmup": 200,
+      "call_mode": "graph",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w200-1-graph/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w200-1-graph/application.json --cases 2 --dtype bf16 --layout TN --warmup 200 --repeat 50 --call-mode graph --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w200-2-graph",
+      "warmup": 200,
+      "call_mode": "graph",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w200-2-graph/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w200-2-graph/application.json --cases 2 --dtype bf16 --layout TN --warmup 200 --repeat 50 --call-mode graph --real-npu"
+      ],
+      "exit_code": 0
+    },
+    {
+      "directory": "w200-3-direct",
+      "warmup": 200,
+      "call_mode": "direct",
+      "command": [
+        "msprof",
+        "--task-time=l0",
+        "--output=/home/developer/cann-timing-modes-20261014/results/w200-3-direct/profile",
+        "--application=/usr/local/bin/python3 /home/developer/cann-timing-modes-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit timing-modes --report /home/developer/cann-timing-modes-20261014/results/w200-3-direct/application.json --cases 2 --dtype bf16 --layout TN --warmup 200 --repeat 50 --call-mode direct --real-npu"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "script_sha256": {
+    "benchmark.py": "209a0525f44f0ae21c5873903ef8566add283bd2378071b91b650e7c70c60b73",
+    "summarize_profile.py": "ab5a7c12ed51c7382a904367a920e51cdcc11007e49061accf70c4d354152f02",
+    "compare_timing_modes.py": "79acd799d7331027b75d2b0221c5b15e1e4faee45435b68d9c3c9c8a980ddb64"
+  }
+}

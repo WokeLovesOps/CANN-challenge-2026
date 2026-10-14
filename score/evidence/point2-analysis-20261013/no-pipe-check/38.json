@@ -1,0 +1,29 @@
+{
+  "case": 38,
+  "label": "四行四列",
+  "shape": [
+    1,
+    4,
+    4,
+    64
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "a4fc8d1e38dcffee1555458b0a870e20328d7d11d73ddbcbd7d0c991d3c87ee9",
+    "69db7bfe6dfb9e90ec42f1623bcd1bc9fa97a8847fea198456c679e4c81d8b8f"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    7.89858341217041,
+    7.89858341217041
+  ],
+  "available_cores": 20,
+  "max_abs_error": 9.5367431640625e-07
+}

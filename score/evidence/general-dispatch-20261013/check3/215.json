@@ -1,0 +1,29 @@
+{
+  "case": 215,
+  "label": "TT驻留双尾块",
+  "shape": [
+    1,
+    1153,
+    1027,
+    1048
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "02ad0fbf1b14b02a72d09e62895ce19f134ba68281addc7e65cda6c0f993d4d4",
+    "3e2d891fdf930cd7d41c774376720c9bd5f14bbdd28ae2b995b3fbe4e220ab67"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    40454.859375,
+    40454.859375
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

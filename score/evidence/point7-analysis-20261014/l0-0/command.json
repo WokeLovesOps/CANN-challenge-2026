@@ -1,0 +1,10 @@
+{
+  "command": [
+    "msprof",
+    "--task-time=l0",
+    "--output=/home/developer/cann-point7-analysis-20261014/l0-0/profile",
+    "--application=python3 /home/developer/cann-point7-analysis-20261014/tests/benchmark.py /home/developer/cann-point7-analysis-20261014/libcandidate.so --commit current-point7 --report /home/developer/cann-point7-analysis-20261014/l0-0/application.json --cases 7 --dtype fp16 --layout TN --warmup 20 --repeat 50 --real-npu"
+  ],
+  "exit_code": 0,
+  "seconds": 7.0721229880000465
+}

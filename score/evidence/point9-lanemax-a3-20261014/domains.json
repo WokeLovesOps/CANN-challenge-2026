@@ -1,0 +1,1377 @@
+{
+  "library": "/home/developer/cann-point9-lanemax-a3-20261014/libcandidate.so",
+  "library_sha256": "9f7e884072d678c756d207f17a617e99b46859a03c3757a0c06783a05f7ddc15",
+  "execution": "real_npu",
+  "cases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "capture": true,
+  "passed": true,
+  "results": [
+    {
+      "position": 0,
+      "case": 0,
+      "shape": [
+        1,
+        2048,
+        769,
+        256
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界256",
+      "passed": true,
+      "input_sha256": [
+        "610a1bce94d6a64abc483fc8cd7f0bbb177dabf4b5a0f133ac1d4039e46d6654",
+        "6522607528587b90074354e92a6c731c2772ea283284d89184521f3eccee1c7a"
+      ],
+      "actual": [
+        34393.65625
+      ],
+      "expected": [
+        34393.65234375
+      ],
+      "max_abs_error": 0.00390625
+    },
+    {
+      "position": 1,
+      "case": 1,
+      "shape": [
+        1,
+        2048,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界320",
+      "passed": true,
+      "input_sha256": [
+        "faf44b71c9389418b0135337f89fbb7a4852c02b8ab4704324946cf812230a04",
+        "065081790028bd4cad370f14f0148a4a32138862abc86e07221306920503071d"
+      ],
+      "actual": [
+        38643.6953125
+      ],
+      "expected": [
+        38643.6953125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 2,
+      "case": 2,
+      "shape": [
+        1,
+        2048,
+        769,
+        384
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界384",
+      "passed": true,
+      "input_sha256": [
+        "505dcc30d83b4d953129a0aca1c2861fdcb94cf390f858e97ebc7c10b341fe1b",
+        "8852d0e4f351fe0c7134a96cf2c449099cc000c89a968191ab5eb462c30f8beb"
+      ],
+      "actual": [
+        42387.5078125
+      ],
+      "expected": [
+        42387.5078125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 3,
+      "case": 3,
+      "shape": [
+        1,
+        2048,
+        769,
+        1216
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1216",
+      "passed": true,
+      "input_sha256": [
+        "cc3dc5e900bbcff0acc7faf79aa583cae4e8d170b55ffdbba90a411571fe14ca",
+        "59f734e120cd42853e1509b523d3e6e3d8d8b85d7f9d5be9a94ab260ee32c43a"
+      ],
+      "actual": [
+        75318.34375
+      ],
+      "expected": [
+        75318.34375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 4,
+      "case": 4,
+      "shape": [
+        1,
+        2048,
+        769,
+        1272
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1272",
+      "passed": true,
+      "input_sha256": [
+        "5d5fe3da3125798972e151ba73bedc81a52000485c17657fac33eb857f63ed6e",
+        "15706d43fe4117209ae47eb760c8f6b698d38aaa5bc93fbce63b711b8619ac0a"
+      ],
+      "actual": [
+        77172.9375
+      ],
+      "expected": [
+        77172.9375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 5,
+      "case": 5,
+      "shape": [
+        1,
+        2048,
+        769,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1280",
+      "passed": true,
+      "input_sha256": [
+        "d163bfc9cc98b4a8e7277e1b5e20be86be185857ddd49751d165c5728397e0c5",
+        "389278dec1875fb086eb070933ca9a9c8abe225ea87c6c4b57adb3b958164d99"
+      ],
+      "actual": [
+        77503.9453125
+      ],
+      "expected": [
+        77503.9453125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 6,
+      "case": 6,
+      "shape": [
+        1,
+        2048,
+        769,
+        1288
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1288",
+      "passed": true,
+      "input_sha256": [
+        "855e20b75329082e9c596bbdfc0a4e543eee8058f9c5cb128b7d8e3fbccb9047",
+        "0959da0b6a74343d0bc818b99b7cb4462aeefd6c392cd51c82597e6e439f2213"
+      ],
+      "actual": [
+        77378.21875
+      ],
+      "expected": [
+        77378.2265625
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 7,
+      "case": 7,
+      "shape": [
+        1,
+        2048,
+        769,
+        1664
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1664",
+      "passed": true,
+      "input_sha256": [
+        "acde330e8f9e2513e135dc3def9d7c9dae0b285715605b7dd4dd03e7cce90c7c",
+        "cf32fb820f205e374faa6aa44259f305a4bb5e83f71028e8a2f8a55944535cae"
+      ],
+      "actual": [
+        87978.609375
+      ],
+      "expected": [
+        87978.609375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 8,
+      "case": 8,
+      "shape": [
+        1,
+        2048,
+        769,
+        1728
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1728",
+      "passed": true,
+      "input_sha256": [
+        "c2596919de0bbdb6537194e55d7919031dd5eb670254e4b8ff5237cb8bcc03fd",
+        "93ee32cf1a19ccc564d09217edeff7a413f339090809643e2192c1a7931a6acd"
+      ],
+      "actual": [
+        89798.40625
+      ],
+      "expected": [
+        89798.3984375
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 9,
+      "case": 9,
+      "shape": [
+        1,
+        2048,
+        769,
+        1920
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1920",
+      "passed": true,
+      "input_sha256": [
+        "cc24ced1659d6ba0eb498814171f45c8b92a071a06ef22620909145745274d64",
+        "ddfe0278786442e33a1be79ab9cc502c8bd0ef4e413c7e7a31e8df65ddad8708"
+      ],
+      "actual": [
+        94543.140625
+      ],
+      "expected": [
+        94543.1328125
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 10,
+      "case": 10,
+      "shape": [
+        1,
+        2048,
+        769,
+        1984
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界1984",
+      "passed": true,
+      "input_sha256": [
+        "38dd6c6502d7562c9d340003d7ab496f29dc5476c391c9ad961e44b71a5fd487",
+        "89043ddda00ff1ce5fb38209fb513c719e234a50818e95672186bcf0b0d07c29"
+      ],
+      "actual": [
+        95729.328125
+      ],
+      "expected": [
+        95729.328125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 11,
+      "case": 11,
+      "shape": [
+        1,
+        2048,
+        769,
+        2048
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "K边界2048",
+      "passed": true,
+      "input_sha256": [
+        "2e74fdd6b80fd90d33157e570e67fc5ed3c4179ce7c9cc0d9ea20cf3126c18f7",
+        "9fb30ca93f4b3bbd3bc0b5dce169586f9418d19ab88086210bd32f09224a3fab"
+      ],
+      "actual": [
+        97595.8828125
+      ],
+      "expected": [
+        97595.8828125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 12,
+      "case": 12,
+      "shape": [
+        1,
+        2048,
+        511,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界511",
+      "passed": true,
+      "input_sha256": [
+        "99b885ab0f671d3ced71da85441e10fbb0a9d60e6f84bb3e5cd0cd832a648699",
+        "2e18765e104a21045f3525b4490ddce5665dfeee8a66a8004269ecd5fc329540"
+      ],
+      "actual": [
+        74417.7890625
+      ],
+      "expected": [
+        74417.7890625
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 13,
+      "case": 13,
+      "shape": [
+        1,
+        2048,
+        512,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界512",
+      "passed": true,
+      "input_sha256": [
+        "9df1b7925da6b9b854a329de2bb1e0176cbfc0a40a70b3b69b1422127e07f2e7",
+        "e9d621efc238264f0f51a18f6f45f5ef93f407d2b51f617d12721dc9cc492f2a"
+      ],
+      "actual": [
+        74450.46875
+      ],
+      "expected": [
+        74450.4609375
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 14,
+      "case": 14,
+      "shape": [
+        1,
+        2048,
+        513,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界513",
+      "passed": true,
+      "input_sha256": [
+        "97e13dc2bafcefb15397ed3a5f94732e558deafc4b7d925cdb346a6cba889155",
+        "75abd024acb6f0f360cd603085281d2a50038922f96c635135c7cac532f71c29"
+      ],
+      "actual": [
+        74241.109375
+      ],
+      "expected": [
+        74241.1171875
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 15,
+      "case": 15,
+      "shape": [
+        1,
+        2048,
+        575,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界575",
+      "passed": true,
+      "input_sha256": [
+        "07e961c3d7dcd6ee6b69d5b09ba4b071dad150d50e0af4f319258fd6ba72e43c",
+        "60b2d99f0b40ea113c155f103432f8b44538fc6a25af9e885ac9a249c23f948d"
+      ],
+      "actual": [
+        75432.5390625
+      ],
+      "expected": [
+        75432.5390625
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 16,
+      "case": 16,
+      "shape": [
+        1,
+        2048,
+        576,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界576",
+      "passed": true,
+      "input_sha256": [
+        "70502cb67f7fdea01948f3c31f10e44ba2153d27b21970ad86d5426525af01ea",
+        "a3cc23ed62329de277cc36c371afd7c6b5f375acdccf87af55d89968ba73c67d"
+      ],
+      "actual": [
+        75263.484375
+      ],
+      "expected": [
+        75263.484375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 17,
+      "case": 17,
+      "shape": [
+        1,
+        2048,
+        577,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界577",
+      "passed": true,
+      "input_sha256": [
+        "293bf8141846e8dc1857ae7899a0f444e38555654a1d87f6373250ce336e71ae",
+        "746c0a90ec4a028b0d187268edebae99321dc899636118c92dbc151cb6556442"
+      ],
+      "actual": [
+        75180.40625
+      ],
+      "expected": [
+        75180.3984375
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 18,
+      "case": 18,
+      "shape": [
+        1,
+        2048,
+        639,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界639",
+      "passed": true,
+      "input_sha256": [
+        "b5edea46fc8d2d2186ab0ac9e9626977a7462d371dfb2b170af1559aada99fca",
+        "86276f313a9fbc967ecc5809636d7798d1047a3b099c7b4674103d5a139acfdd"
+      ],
+      "actual": [
+        76321.828125
+      ],
+      "expected": [
+        76321.8359375
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 19,
+      "case": 19,
+      "shape": [
+        1,
+        2048,
+        640,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界640",
+      "passed": true,
+      "input_sha256": [
+        "8bda503f41a7d39e676ef491ff198b107bafb23b75257d8ac8b9c35812955e43",
+        "0ad6474dda561b48e4a5cd18cb30763ffea9d724111c9c48114f697903633dc9"
+      ],
+      "actual": [
+        76142.3828125
+      ],
+      "expected": [
+        76142.375
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 20,
+      "case": 20,
+      "shape": [
+        1,
+        2048,
+        641,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界641",
+      "passed": true,
+      "input_sha256": [
+        "4c3083d8ace0338520f85303aa139a75b468b730e66f1c75bab19e51cf43a2ac",
+        "bbb0b7b8a1d673df70b7bc5a56aaf129d5ebb8420e135dafd64dc0a067bcf515"
+      ],
+      "actual": [
+        76258.6171875
+      ],
+      "expected": [
+        76258.609375
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 21,
+      "case": 21,
+      "shape": [
+        1,
+        2048,
+        767,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界767",
+      "passed": true,
+      "input_sha256": [
+        "57a9b5e4734744ac2448061542cbd44aabc4ad13dbc9cf914779972d449947e9",
+        "cf2fbe3e87080e6d100cd65e84af18a86cee9b16b72ea0f341e83ea410780ce9"
+      ],
+      "actual": [
+        77114.59375
+      ],
+      "expected": [
+        77114.6015625
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 22,
+      "case": 22,
+      "shape": [
+        1,
+        2048,
+        768,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界768",
+      "passed": true,
+      "input_sha256": [
+        "39075413a0307a0e17a3056b933dac016ad9ec8bec896fda0a3428f711289674",
+        "195f1a24d650440c123e0d76aa6f54b028789bbf159238a1fa1180a18e18c3ed"
+      ],
+      "actual": [
+        77223.59375
+      ],
+      "expected": [
+        77223.59375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 23,
+      "case": 23,
+      "shape": [
+        1,
+        2048,
+        769,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界769",
+      "passed": true,
+      "input_sha256": [
+        "0fa27ddb9c859376c5f6d5e2c77840344292f1880da0740b276edfc924cb05d3",
+        "cfa5a54fcd050315bf4c13dc4cbe51358cb112b6fde00c96797275e959c66218"
+      ],
+      "actual": [
+        77117.71875
+      ],
+      "expected": [
+        77117.7265625
+      ],
+      "max_abs_error": 0.0078125
+    },
+    {
+      "position": 24,
+      "case": 24,
+      "shape": [
+        1,
+        2048,
+        1023,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界1023",
+      "passed": true,
+      "input_sha256": [
+        "dd9ba30672485fa9eb57d51cbc46d0f354cfd6a2750602127b1324661e4b7287",
+        "222a00bbcb42c7e3696b6ef0139a2233274961b75cc6e019166429cbac09ab3c"
+      ],
+      "actual": [
+        78952.5
+      ],
+      "expected": [
+        78952.5
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 25,
+      "case": 25,
+      "shape": [
+        1,
+        2048,
+        1024,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界1024",
+      "passed": true,
+      "input_sha256": [
+        "9d6c68e2398e95ab42219e066685bf1b47e309d74cbecef703a31f660a0688ae",
+        "58662a90ced73afd8d45c1b429578cbb5fcce73b1fcbef41b3b6e388ee672a17"
+      ],
+      "actual": [
+        79325.078125
+      ],
+      "expected": [
+        79325.078125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 26,
+      "case": 26,
+      "shape": [
+        1,
+        2048,
+        1025,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界1025",
+      "passed": true,
+      "input_sha256": [
+        "dcf4bd449314e1e94282682ce2b48bad6da4dbf5f62e2ea78547d3f9eb015e64",
+        "6d3cf1c24e206a4e7ed6d5f21466a0d35bad1e98ebf476787934b61d96e304f7"
+      ],
+      "actual": [
+        79566.703125
+      ],
+      "expected": [
+        79566.703125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 27,
+      "case": 27,
+      "shape": [
+        1,
+        2048,
+        1535,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界1535",
+      "passed": true,
+      "input_sha256": [
+        "69c6e358f93724b7c8cdd15159bb4842f26ac979ad9420c064688052b954c5ce",
+        "35849f401f82093abf16742d181fb66b3665a3b73764ad9d823531abd3741497"
+      ],
+      "actual": [
+        82050.6796875
+      ],
+      "expected": [
+        82050.6796875
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 28,
+      "case": 28,
+      "shape": [
+        1,
+        2048,
+        1536,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界1536",
+      "passed": true,
+      "input_sha256": [
+        "4a99f96f477f397f4783b0e2e5b14ea8a6cc944efc8b399d42229c32dd70e55e",
+        "0e865bf9451f2ea69978d627d96fc6deea309ee0a46425379db2765be6a002f4"
+      ],
+      "actual": [
+        82423.234375
+      ],
+      "expected": [
+        82423.234375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 29,
+      "case": 29,
+      "shape": [
+        1,
+        2048,
+        1537,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界1537",
+      "passed": true,
+      "input_sha256": [
+        "2aa7c7adce9dcbf22940d7930305288c6b1bbdbb05c82ae6de48b225acd85d1f",
+        "be4050f53aad42dfdb4dc7516c8a7cde1d68491a4d38cd4463592051c2c8c6b8"
+      ],
+      "actual": [
+        82193.765625
+      ],
+      "expected": [
+        82193.765625
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 30,
+      "case": 30,
+      "shape": [
+        1,
+        2048,
+        2049,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "N边界2049",
+      "passed": true,
+      "input_sha256": [
+        "a6d05aa62afa9c575a96d5244eef872b1ce49a3150aeb78c70e7970ed26f9681",
+        "c64bfabd4cfe4906f200cee2b6d96b242af87743e40f9757da21f3c3e09c9e43"
+      ],
+      "actual": [
+        84015.015625
+      ],
+      "expected": [
+        84015.015625
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 31,
+      "case": 31,
+      "shape": [
+        1,
+        1280,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "M边界1280",
+      "passed": true,
+      "input_sha256": [
+        "9a28f3e3e69cd9ec4bfcbd976d9ae8285558f7c31a74c7768cf5758b746faba4",
+        "8b8240d49bc782fb8c2744b7899235689e6ce1b955e918d216df9d2aca0dea60"
+      ],
+      "actual": [
+        23857.68359375
+      ],
+      "expected": [
+        23857.685546875
+      ],
+      "max_abs_error": 0.001953125
+    },
+    {
+      "position": 32,
+      "case": 32,
+      "shape": [
+        1,
+        1281,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "M边界1281",
+      "passed": true,
+      "input_sha256": [
+        "0cae4f618e3c928cd0b1d0dcd64cec92df7fe14a313378117a0232a7361eeb26",
+        "50b9929742e81ee7e95a913e727013be88f302a644590109baa96bb7ddf90ea9"
+      ],
+      "actual": [
+        24068.310546875
+      ],
+      "expected": [
+        24068.30859375
+      ],
+      "max_abs_error": 0.001953125
+    },
+    {
+      "position": 33,
+      "case": 33,
+      "shape": [
+        1,
+        2016,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "M边界2016",
+      "passed": true,
+      "input_sha256": [
+        "8a53208328aaa4749e88e10ca36f506144eabdfa92969fb9588592f3fd337a65",
+        "0ea9494e1194a3dd04e5d46012efb255c49a819328d77965dfad1e770b8f255f"
+      ],
+      "actual": [
+        37995.6328125
+      ],
+      "expected": [
+        37995.63671875
+      ],
+      "max_abs_error": 0.00390625
+    },
+    {
+      "position": 34,
+      "case": 34,
+      "shape": [
+        1,
+        2017,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "M边界2017",
+      "passed": true,
+      "input_sha256": [
+        "94fd94fe7b72a24e50cdb5b183647c77ddf93ee7341403f125c48c92c23a4e81",
+        "f617ba8ee5c2db0cd012ff097205e926c05735b5315b5e0708657c2518b0127d"
+      ],
+      "actual": [
+        38006.12109375
+      ],
+      "expected": [
+        38006.12109375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 35,
+      "case": 35,
+      "shape": [
+        1,
+        2240,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "M边界2240",
+      "passed": true,
+      "input_sha256": [
+        "8076f17691ef3a0257d5b9130deef5391300a87215c5729f07d038b649840864",
+        "c5adb34fb4b84d58904c22214ba5f251d15b5e7e5e549a8c3024836ca51e30ce"
+      ],
+      "actual": [
+        42260.375
+      ],
+      "expected": [
+        42260.375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 36,
+      "case": 36,
+      "shape": [
+        1,
+        2241,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "M边界2241",
+      "passed": true,
+      "input_sha256": [
+        "0b0cbd5e9e772747fc094449ebdcb5c2295e6add7bcb1c9bd4cc4f98ccdb49c7",
+        "d2aaef14351eeb628acafbb523681bd9bb27d530a3053aa54749200352c0d2a6"
+      ],
+      "actual": [
+        42339.60546875
+      ],
+      "expected": [
+        42339.6015625
+      ],
+      "max_abs_error": 0.00390625
+    },
+    {
+      "position": 37,
+      "case": 37,
+      "shape": [
+        1,
+        2048,
+        1536,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "全负",
+      "passed": true,
+      "input_sha256": [
+        "9ad2c13c5bed9519ad0e7726f148b7f95857ff84b0b79e6a0c2565c170224841",
+        "915ed54c4f568048661be94b8a2c8c636c5cd2172c0d7f3cf651ae4cb9e6b03e"
+      ],
+      "actual": [
+        -615457.125
+      ],
+      "expected": [
+        -615457.1875
+      ],
+      "max_abs_error": 0.0625
+    },
+    {
+      "position": 38,
+      "case": 38,
+      "shape": [
+        1,
+        2048,
+        1025,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "全零",
+      "passed": true,
+      "input_sha256": [
+        "c036cbb7553a909f8b8877d4461924307f27ecb66cff928eeeafd569c3887e29",
+        "ff332597e973ab9a8a7a79b07b840c5728f1ca874d885263b1e7dea3202c66ba"
+      ],
+      "actual": [
+        0.0
+      ],
+      "expected": [
+        0.0
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 39,
+      "case": 39,
+      "shape": [
+        1,
+        2049,
+        1537,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "尾列最大",
+      "passed": true,
+      "input_sha256": [
+        "b170e640d1a58e87fb44de8b92e7fcbbf9d04dd17e88df5cca55562cf08c7639",
+        "725b58ae45c5c494854b181dadd37220a5cfa8829cd223a560681442e03b3311"
+      ],
+      "actual": [
+        5245440.0
+      ],
+      "expected": [
+        5245440.0
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 40,
+      "case": 40,
+      "shape": [
+        1,
+        2049,
+        1025,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "尾列全负",
+      "passed": true,
+      "input_sha256": [
+        "34ca9d76bc761cd7df6e6bcf9e26c81981c36a2a3423f87988d86c0e6ec60714",
+        "f93fa56a35dbba5da5120220f083ba2928de94609b47347785f4d1b0d259ab3b"
+      ],
+      "actual": [
+        -655680.0
+      ],
+      "expected": [
+        -655680.0
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 41,
+      "case": 41,
+      "shape": [
+        2,
+        1281,
+        513,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "批量回退",
+      "passed": true,
+      "input_sha256": [
+        "ad2d67d55c642790d35ee0b7ccf458989501aa7e4095f97261c18a55eceeeb94",
+        "29da2f814f2377c3ae315732df886b88bd6ec312375a3d6ce9293868467f147b"
+      ],
+      "actual": [
+        23237.82421875,
+        23136.615234375
+      ],
+      "expected": [
+        23237.82421875,
+        23136.615234375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 42,
+      "case": 42,
+      "shape": [
+        1,
+        2048,
+        769,
+        320
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "BF16切换",
+      "passed": true,
+      "input_sha256": [
+        "cda67417b076ace2d5f0dccd4c7c25a01c082bb4ab56b5ef72fa59a567e9c900",
+        "04a1b1ed1a9e3cbe362daceb7671bb888a55a5ab2b2d03d48f1a97ef8ec12d4f"
+      ],
+      "actual": [
+        38423.0625
+      ],
+      "expected": [
+        38423.06640625
+      ],
+      "max_abs_error": 0.00390625
+    },
+    {
+      "position": 43,
+      "case": 43,
+      "shape": [
+        1,
+        2048,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        false
+      ],
+      "label": "NN切换",
+      "passed": true,
+      "input_sha256": [
+        "0a4eec14f28ee4fe0f0055ce951b64c9af7611e33991f92cd18b2001c90750c0",
+        "f66b43125a83d1cca320848448d6fe6c3a1838280982d654132b867eb3ddefa9"
+      ],
+      "actual": [
+        38436.83203125
+      ],
+      "expected": [
+        38436.8359375
+      ],
+      "max_abs_error": 0.00390625
+    },
+    {
+      "position": 44,
+      "case": 44,
+      "shape": [
+        1,
+        2048,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "TN切换",
+      "passed": true,
+      "input_sha256": [
+        "450ffb966255007ec5f291e966dc50dfdfa0a2b40cd3fc4a6eea2fe7ca8819e8",
+        "168d498e204145a46122aaedf8b2e5a61108dcff3f85e698e439372f2e9e7238"
+      ],
+      "actual": [
+        38660.31640625
+      ],
+      "expected": [
+        38660.3125
+      ],
+      "max_abs_error": 0.00390625
+    },
+    {
+      "position": 45,
+      "case": 45,
+      "shape": [
+        1,
+        2048,
+        769,
+        320
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        true,
+        true
+      ],
+      "label": "TT切换",
+      "passed": true,
+      "input_sha256": [
+        "0a5a272c2ad0b1e8b86f80dfc502ba46bb19795a41ab1b61941b78b86561fdb2",
+        "a220c2aff6b907ca7cd302bc3193539a0fb7ce358c7ad0f016feb6bcd3c305d9"
+      ],
+      "actual": [
+        38678.3984375
+      ],
+      "expected": [
+        38678.39453125
+      ],
+      "max_abs_error": 0.00390625
+    },
+    {
+      "position": 46,
+      "case": 46,
+      "shape": [
+        1,
+        2048,
+        1536,
+        1280
+      ],
+      "dtype": "<class 'numpy.float16'>",
+      "transpose": [
+        false,
+        true
+      ],
+      "label": "返回紧凑NT核",
+      "passed": true,
+      "input_sha256": [
+        "b711a382e5ccf290882ed4478536041ed4d91cb6924ba3416071f558c85312c3",
+        "8ada84292005a524988ee19c27b17f17dac533a1f5ee656a8a3929fc12c1fd98"
+      ],
+      "actual": [
+        82672.375
+      ],
+      "expected": [
+        82672.375
+      ],
+      "max_abs_error": 0.0
+    }
+  ],
+  "available_cores": 20
+}

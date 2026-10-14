@@ -1,0 +1,131 @@
+{
+  "core0.veccore0": {
+    "counts": {
+      "WAIT_FLAG_DEVI": 1,
+      "BAR": 4,
+      "LDP_XI_XJ_XN": 2,
+      "LD_XD_XN_IMM": 30,
+      "ST_XD_XN_IMM": 17,
+      "STP_XI_XJ_XN": 9,
+      "STI_XN_IMM": 14,
+      "WAIT_FLAG": 4,
+      "MOV_OUT_TO_UB": 1,
+      "SET_FLAG": 4,
+      "MOV_SRC_TO_DST_ALIGN": 1,
+      "VCMAX": 1,
+      "VCADD": 1,
+      "STI_XN_XM": 4,
+      "MOVEMASK": 8,
+      "LD_XD_XN": 2,
+      "DCCI": 1,
+      "ZEROEXT": 14,
+      "ADD_IMM": 13,
+      "MADD": 2,
+      "CMP_IMM": 19,
+      "MOVK": 20,
+      "SIGNEXT": 11,
+      "MOV_XD_IMM": 35,
+      "SUB_IMM": 13,
+      "ADD": 8,
+      "SEL": 6,
+      "MOV_XD_XN": 3,
+      "SHL": 13,
+      "OR": 1,
+      "SBITSET": 6,
+      "SFF": 4,
+      "MOVX8_XD_IMM": 2,
+      "NEG": 8,
+      "NOT": 4,
+      "SHR": 3,
+      "MOV_XD_SPR": 9,
+      "INSERT_XD_XN": 1,
+      "INSERT_XD": 2,
+      "AND": 2,
+      "MOV_SPR_XN": 3,
+      "END": 1,
+      "JUMPC": 15,
+      "NOP": 2,
+      "JUMP": 9,
+      "JUMPCMP": 14
+    },
+    "span_us": 1.1010005264542997,
+    "stages": {
+      "WAIT_FLAG_DEVI": {
+        "count": 1,
+        "start_us": 0.23999977111816406,
+        "end_us": 0.6779997646808624
+      },
+      "VCMAX": {
+        "count": 1,
+        "start_us": 0.8660001754760742,
+        "end_us": 0.9410001784563065
+      },
+      "VCADD": {
+        "count": 1,
+        "start_us": 0.9429998397827148,
+        "end_us": 0.9659998398274183
+      }
+    }
+  },
+  "core0.cubecore0": {
+    "counts": {
+      "BAR": 2,
+      "LOAD_2D": 9,
+      "WAIT_FLAG": 3,
+      "MOV_OUT_TO_L1_MULTI_ND2NZ": 2,
+      "SET_FLAG": 3,
+      "LD_XD_XN_IMM": 3,
+      "LDP_XI_XJ_XN": 2,
+      "FIX_L0C_TO_DST": 1,
+      "MMAD": 1,
+      "ADD_IMM": 10,
+      "MOV_XD_XN": 22,
+      "SHL": 27,
+      "ADD": 13,
+      "AND": 13,
+      "ZEROEXT": 17,
+      "MOV_SPR_XN": 6,
+      "DCCI": 1,
+      "SET_CROSS_CORE": 1,
+      "MADD": 1,
+      "MUL": 3,
+      "MOV_XD_IMM": 20,
+      "MOVK": 14,
+      "INSERT_XD": 6,
+      "CMP": 1,
+      "SHR": 1,
+      "MAX": 1,
+      "OR": 6,
+      "MOV_XD_SPR": 6,
+      "INSERT_XD_XN": 1,
+      "END": 1,
+      "NOP": 1,
+      "JUMPC": 1,
+      "LOOP": 1,
+      "ENDLOOP": 8
+    },
+    "span_us": 0.6829993515275419,
+    "stages": {
+      "MOV_OUT_TO_L1_MULTI_ND2NZ": {
+        "count": 2,
+        "start_us": 0.22499942779541016,
+        "end_us": 0.44399942457675934
+      },
+      "LOAD_2D": {
+        "count": 9,
+        "start_us": 0.4459991455078125,
+        "end_us": 0.5059998631477356
+      },
+      "MMAD": {
+        "count": 1,
+        "start_us": 0.5059995651245117,
+        "end_us": 0.5269995648413897
+      },
+      "FIX_L0C_TO_DST": {
+        "count": 1,
+        "start_us": 0.5309991836547852,
+        "end_us": 0.67599917948246
+      }
+    }
+  }
+}

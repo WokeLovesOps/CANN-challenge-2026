@@ -1,0 +1,29 @@
+{
+  "case": 54,
+  "label": "紧凑全负",
+  "shape": [
+    1,
+    3,
+    5,
+    40
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    true,
+    false
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "d444646e277248d805d8ab5b03541f3907cc405a8f96aaeea04e4b983cf70a68",
+    "aa7252617a8a0cd8848bfba64bc2acd8b9b66eed518a1ccc57c16da9f2d86b48"
+  ],
+  "input_pattern": "全负",
+  "expected_range": [
+    -22.189197540283203,
+    -22.189197540283203
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

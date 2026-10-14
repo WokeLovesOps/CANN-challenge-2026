@@ -1,0 +1,29 @@
+{
+  "case": 333,
+  "label": "NT驻留全负",
+  "shape": [
+    3,
+    17,
+    65,
+    80
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "58f5e4d6cd0a05d48c60018c4e056039131e2e8ecc14a6fe0a56d009b1d9a719",
+    "1328b64e649d2cf7cc80803652c78ac8cbff5303cc6dfe5c11ec56f52a49b664"
+  ],
+  "input_pattern": "全负",
+  "expected_range": [
+    -283.4930419921875,
+    -277.1431884765625
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}

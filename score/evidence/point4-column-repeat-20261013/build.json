@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point4-column-repeat-20261013/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point4-column-repeat-20261013/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 73.80057662699983,
+  "exit_code": 0,
+  "source_sha256": "fe698ce4f92afddaae3904c650a717d209a03bdbc82c7b55ada22fb40029d278",
+  "library_sha256": "4342285c8fbc502056f65e751fca15ccfb9cefe420ce00a48a070467010520bc"
+}

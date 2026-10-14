@@ -1,0 +1,722 @@
+[
+  {
+    "case": 0,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "4a182881ca6c2e9bbfd3fcd01fa0e7409fd650a8fad7cfdeba3c8d5f417e815c",
+      "bd7c7c0e69ec8c928de8e29fc5f51978fb4f430b6ee2604829d57465e184f5e5"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      2.9959700107574463,
+      2.9959700107574463
+    ],
+    "available_cores": 20,
+    "max_abs_error": 2.384185791015625e-07,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "0",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/0.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 1,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "9432dff06a276ce6554ccf1318962f313780352edc8632ff73d0bccf3164d4e5",
+      "b3a4220ed488682253943d8c7ca81e1580d7257ca777cce516b790c2ce8e04c7"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      1.5389914512634277,
+      1.5389914512634277
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "1",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/1.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 2,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "162a8a3e3947b6bcd91fad7ea6062974b445903f57b43a2303316fa19df03876",
+      "26041dd78b1970db34999bd699685bf1cd27f5983adb2e87758db12f7e45a2a8"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      3.4575014114379883,
+      3.4575014114379883
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "2",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/2.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 3,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "6ede93d285d5504554974838ff568c0ffbd40e41fc72dc9a935672fdc7349d86",
+      "22cae2124e8cf4990ce632c4abf212d34b3eec217f8ccfefc67b1bd05ffeffd0"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      1.6537877321243286,
+      1.6537877321243286
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "3",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/3.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 4,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "1761ff0e7f48a311724aa24d621c0bd9f7e11a2ec35b7d03acbfd958aa353c87",
+      "361e05d50445686231021e2b444bed14f18f9d9aa968ddab331069b94b2110ee"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      0.32396793365478516,
+      0.32396793365478516
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "4",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/4.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 5,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "8088fc2d821213d49c4ef78d8ded36fe3df44b4e45330a7d2551ec05036f13ec",
+      "bcd439575965d94dbcddecdec3e25c3594b32937ac0ed1ef2f7da2dd39e1a9b9"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      5.025712966918945,
+      5.025712966918945
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "5",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/5.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 6,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "70ad44ffbac7491d9f115873e7d479a3014b6ca4db1e623d5b94aa350d837319",
+      "810df7863a19565f65d7dc1dcd9d7f9f193bc2e3b1b315163e4b5df2a3261e4e"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      2.7397289276123047,
+      2.7397289276123047
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "6",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/6.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 7,
+    "label": "原报错小矩阵",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "4e6f8e2a9c08764ccf61a7122d62fac85486a5cd9e5dac4e6d842f656c5310a3",
+      "25a7a2940b0b2561e57a1b88f243b9e4e40b6c6214b8dcc15dd7a9bbe2762668"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      3.125710964202881,
+      3.125710964202881
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "7",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/7.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 9,
+    "label": "小批量非对齐K",
+    "shape": [
+      2,
+      7,
+      13,
+      40
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "85e8b78816d4c1f93bdba50b512cdf6005e9e517f15e09368bde77bd19ab502d",
+      "44bfdf9343739441efe6ef0825f589fe92b448e03d41be2ef8f725b145014f7c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      22.945999145507812,
+      25.073623657226562
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "9",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/9.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 16,
+    "label": "中批量布局回退",
+    "shape": [
+      4,
+      16,
+      16,
+      128
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "8076a3ecf38b01905cafdf4adb36d7de0cbbd8f25c1a87f220afe01406599072",
+      "18168d89911c5ed9bf35aaa9906575f619f7f3f9adb61583a5a15e0febca0295"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      104.60425567626953,
+      112.95152282714844
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "16",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/16.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 28,
+    "label": "紧凑批量类型回退",
+    "shape": [
+      8,
+      16,
+      32,
+      128
+    ],
+    "dtype": "<class 'ml_dtypes.bfloat16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "d098b9d49fd6d6740ab8369fe6e0434259541d3e3053e91ff3701f4d05b06a65",
+      "487b9710009151fcab037b5afbd017853950b17a0987ade754bd33b988503d8c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      116.46028900146484,
+      144.16871643066406
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.52587890625e-05,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "28",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/28.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 32,
+    "label": "跨列分片全负",
+    "shape": [
+      1,
+      31,
+      1025,
+      40
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "fbe7a5fb2f6b948f08f0aaa0067d1b67fce3806f106532e51fba18bb927a1c73",
+      "2107d30c63062d9efa270d431cf4ddde311fe274ff047d4ed92070de84c7f6ee"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -196.2689666748047,
+      -196.2689666748047
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "32",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/32.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 40,
+    "label": "双GM槽与多行任务",
+    "shape": [
+      2,
+      33,
+      513,
+      40
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "c16c1c274029d01a8a19c21e84fd4abf11a6114cc58e5fab362968fc00a32e9f",
+      "726d5c29bcc9fa15abe802229d0a5234b985ca7707d3d309daa47e713c5dd69e"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      203.06549072265625,
+      203.42462158203125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 1.52587890625e-05,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "40",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/40.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 48,
+    "label": "同核多个batch直写",
+    "shape": [
+      21,
+      31,
+      17,
+      40
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "fb6af9de62e6044a4c9edad7fe17632551a571b5ae9bf6c33e4c1ac4bc9a7fd5",
+      "510fcf200db0f2375371301ab34123cf57a8fc7ecb1357fa67e3e2e72757a41c"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      104.52281188964844,
+      128.68275451660156
+    ],
+    "available_cores": 20,
+    "max_abs_error": 7.62939453125e-06,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "48",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/48.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 59,
+    "label": "固化SplitK邻域",
+    "shape": [
+      1,
+      1,
+      1,
+      4096
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "eb64964e359424a30a366f8d6873462d4f6ccf5984a72602db5658f5a4343090",
+      "d9eb9d54f05a28bab71537349ccf043a7f9c07b226a937699cbfe7f2ec1e2c67"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      -4.187824249267578,
+      -4.187824249267578
+    ],
+    "available_cores": 20,
+    "max_abs_error": 2.384185791015625e-06,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "59",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/59.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 67,
+    "label": "固化大块邻域",
+    "shape": [
+      1,
+      1024,
+      512,
+      64
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      true,
+      true
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "f0f43782e3744c5f39cb4c72f2152f543f9b72c74a2c939f927cc0baa45efc4c",
+      "47b8b177aef7b0c023dcb374604660812bdcebba51fe83daf1a7cac0cb08d279"
+    ],
+    "input_pattern": "随机或独立构造",
+    "expected_range": [
+      8252.6064453125,
+      8252.6064453125
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "67",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/67.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 72,
+    "label": "小矩阵全负",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "ffbc65675fe2818434fd5a4352292be2674a70ff0dfc432327b1fd95a9e50d6b",
+      "5aa97a7b38f0b0fed657015b6a74b5df580345527c5d686f7017eda63109d7ad"
+    ],
+    "input_pattern": "全负",
+    "expected_range": [
+      -15.189268112182617,
+      -15.189268112182617
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "72",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/72.json",
+      "--real-npu"
+    ]
+  },
+  {
+    "case": 80,
+    "label": "小矩阵全零",
+    "shape": [
+      1,
+      2,
+      2,
+      32
+    ],
+    "dtype": "<class 'numpy.float16'>",
+    "transpose": [
+      false,
+      false
+    ],
+    "capture": false,
+    "execution": "npu",
+    "passed": true,
+    "input_sha256": [
+      "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+      "a704e855d80965af8a87792582bd54124d10d82a309ae35847cc865a814611f8"
+    ],
+    "input_pattern": "全零",
+    "expected_range": [
+      0.0,
+      0.0
+    ],
+    "available_cores": 20,
+    "max_abs_error": 0.0,
+    "exit_code": 0,
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/developer/cann-general-dispatch-20261013/tests/legal_input_fallback.py",
+      "/home/developer/cann-general-dispatch-20261013/libcandidate.so",
+      "--case",
+      "80",
+      "--report",
+      "/home/developer/cann-general-dispatch-20261013/final-fallback/80.json",
+      "--real-npu"
+    ]
+  }
+]

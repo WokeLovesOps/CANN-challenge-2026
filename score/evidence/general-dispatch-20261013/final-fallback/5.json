@@ -1,0 +1,29 @@
+{
+  "case": 5,
+  "label": "原报错小矩阵",
+  "shape": [
+    1,
+    2,
+    2,
+    32
+  ],
+  "dtype": "<class 'ml_dtypes.bfloat16'>",
+  "transpose": [
+    false,
+    true
+  ],
+  "capture": false,
+  "execution": "npu",
+  "passed": true,
+  "input_sha256": [
+    "8088fc2d821213d49c4ef78d8ded36fe3df44b4e45330a7d2551ec05036f13ec",
+    "bcd439575965d94dbcddecdec3e25c3594b32937ac0ed1ef2f7da2dd39e1a9b9"
+  ],
+  "input_pattern": "随机或独立构造",
+  "expected_range": [
+    5.025712966918945,
+    5.025712966918945
+  ],
+  "available_cores": 20,
+  "max_abs_error": 0.0
+}
