@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point4-stride72graph-20261015/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point4-stride72graph-20261015/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 76.75368479100871,
+  "exit_code": 0,
+  "source_sha256": "3d64762991b809087a2b5126c6c6d4274876a9b352cbce13a017361e46642928",
+  "library_sha256": "095852b18de021824f165da22cd80324414817f8880f0e413806eea45a475566"
+}
