@@ -1,0 +1,204 @@
+{
+  "library": "/home/developer/cann-point12-resident-a3-20261015/libcandidate.so",
+  "library_sha256": "53d8741905c8fea4173d1481734dd8d0d6e9e3fa1750a1bcbeb472ee15089336",
+  "execution": "real_npu",
+  "cases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "capture": true,
+  "passed": false,
+  "results": [
+    {
+      "position": 0,
+      "case": 0,
+      "shape": [
+        1,
+        1280,
+        4096,
+        32
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "K边界32",
+      "passed": true,
+      "input_sha256": [
+        "332ab01146721e8cc246e38d47421fc3178a4988890642eb40b4a522a6d513f6",
+        "25a4169b14f08cf17c458834b27f737e4bbae33a9ed502728ff662de1bb6d453"
+      ],
+      "actual": [
+        8430.49609375
+      ],
+      "expected": [
+        8430.49609375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 1,
+      "case": 1,
+      "shape": [
+        1,
+        1280,
+        4096,
+        40
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "K边界40",
+      "passed": true,
+      "input_sha256": [
+        "aa7b59a9c25123ad4d152c6f1f9206345fb7436a914e2bb2d5ee640236e90e7a",
+        "c90d9985112898b2afaf8ed65f5b07a46cfd22a0befc470351157e8248e399c7"
+      ],
+      "actual": [
+        9532.166015625
+      ],
+      "expected": [
+        9532.1650390625
+      ],
+      "max_abs_error": 0.0009765625
+    },
+    {
+      "position": 2,
+      "case": 2,
+      "shape": [
+        1,
+        1280,
+        4096,
+        64
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "K边界64",
+      "passed": true,
+      "input_sha256": [
+        "32dfa394cefb23ee88f3acfb380e543e963629c951987e49c899f4bfe5693e7b",
+        "6f94274b58677ed85cab3935c24b09e0a576296218c904f6deec16674897e0db"
+      ],
+      "actual": [
+        12225.89453125
+      ],
+      "expected": [
+        12225.89453125
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 3,
+      "case": 3,
+      "shape": [
+        1,
+        1280,
+        4096,
+        120
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "K边界120",
+      "passed": true,
+      "input_sha256": [
+        "a71f7fb567a62b37546c566097d5e70d8d6964169ba00138b957e0dfa687e396",
+        "617cb40b758afcefc651878ec09c9c5cc3b746cd0c195b36cde002533acade6e"
+      ],
+      "actual": [
+        16722.865234375
+      ],
+      "expected": [
+        16722.865234375
+      ],
+      "max_abs_error": 0.0
+    },
+    {
+      "position": 4,
+      "case": 4,
+      "shape": [
+        1,
+        1280,
+        4096,
+        128
+      ],
+      "dtype": "<class 'ml_dtypes.bfloat16'>",
+      "transpose": [
+        true,
+        false
+      ],
+      "label": "K边界128",
+      "passed": false,
+      "input_sha256": [
+        "562e2fd2b44fb6c3235e30dceaa629437daf57b1e25130f56bed74bebccf31bd",
+        "cd22041719a5ebfe399b6bc368c4b31aaf97c7d81933381378e552c8a5154ee8"
+      ],
+      "actual": [
+        16705.46875
+      ],
+      "expected": [
+        17311.6953125
+      ]
+    }
+  ],
+  "available_cores": 20,
+  "error": "精度失败: actual=[16705.469], expected=[17311.695]"
+}
