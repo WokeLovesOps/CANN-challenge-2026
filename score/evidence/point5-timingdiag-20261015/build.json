@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point5-timingdiag-20261015/tests/point5_timing_bridge.asc",
+    "-o",
+    "/home/developer/cann-point5-timingdiag-20261015/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 76.65271975198993,
+  "exit_code": 0,
+  "source_sha256": "ef5dc81c7bbadf8b18876058ee83f79ec08d4fb92a152f2e7ababaecdda11eb2",
+  "library_sha256": "233d3d8371b72112b2776b383bc7d9321b6bfc73c171eb32f010d7078dd22f18"
+}
