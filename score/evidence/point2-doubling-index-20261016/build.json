@@ -1,0 +1,23 @@
+{
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/home/developer/cann-point2-doubling-index-20261016/tests/simulator_bridge.asc",
+    "-o",
+    "/home/developer/cann-point2-doubling-index-20261016/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "seconds": 77.00385887597804,
+  "exit_code": 0,
+  "source_sha256": "6ad0dfab591fbf2f35584c0bc1d9862b833d43cd84c408f374fd21da0da47951",
+  "library_sha256": "ca0a4f09a44452c043be044d3c005ad5732bdd118bb916fea894dbf89e37a1a0"
+}
