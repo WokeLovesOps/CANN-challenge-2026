@@ -1,0 +1,27 @@
+{
+  "结论": "AG五处列块末屏障范围、SDK队列生命周期及编译实物绑定独审通过",
+  "审查者": "point12_candidate",
+  "source_commit": "2699a123",
+  "source_sha256": "fd70bc5ab1a32a04f5057cf0018542af1460548c2e12282f4303498535c5f436",
+  "library_sha256": "92b7b655bda9ab3630051cbfee40d7e50f113154a173c37d0f6a895b5b1189f6",
+  "build_seconds": 65.99152232598863,
+  "检查": [
+    "仅Compute/ResidentA分段最后一段及两者非分段、Generic列末共五处rowMax后的PIPE_V省略；两个分段仍按nextOffset<validCols保留中间段PIPE_V。",
+    "实际读源码确认最后rowMax更新至原PIPE_ALL之间只有FreeTensor及标量循环尾，没有新的Vector消费者、搬运或Alloc；所有原列末PIPE_ALL保留，ResidentA返还flag仍在ALL后。",
+    "FreeTensor只释放元数据，经FreeBuffer发出V_MTE2事件；下一Alloc等待释放事件，未把buffer提前交给MTE2覆盖。",
+    "2201 AIV PipeBarrierImpl实际转发pipe_barrier；ALL仍在下一列或最终输出消费rowMax之前，覆盖末段Vector完成。",
+    "保留WholeReduceMax/Max之间同步、段间依赖、异步Cube提交与Wait、普通Finish和FinishSplitN；与W替换ALL不同。",
+    "源码与Git2699a123逐字一致，实际source/SO与build.json一致，完整编译exit0。"
+  ],
+  "SDK依据": [
+    "compiler/asc/impl/basic_api/kernel_operator_block_sync_intf_impl.h:105",
+    "compiler/asc/impl/basic_api/kernel_reg.h:90-113",
+    "compiler/asc/impl/basic_api/kernel_tquebind_impl.h:136,422,439,503",
+    "compiler/asc/impl/basic_api/kernel_event.h:510-523"
+  ],
+  "边界": [
+    "不运行NPU/仿真/OJ。",
+    "新增条件及代码布局可能抵消收益；综合分需OJ相邻对照，允许单点退化。",
+    "OJ正确性和远端编译≤300秒待验证。"
+  ]
+}

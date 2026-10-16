@@ -1,0 +1,23 @@
+{
+  "seconds": 65.99152232598863,
+  "exit_code": 0,
+  "command": [
+    "bisheng",
+    "-shared",
+    "-fPIC",
+    "--npu-arch=dav-2201",
+    "-g",
+    "/mnt/newdisk/code/CANN-challenge/Build/column-final-vector-barrier-ag-20261017/tests/simulator_bridge.asc",
+    "-o",
+    "/mnt/newdisk/code/CANN-challenge/Build/column-final-vector-barrier-ag-20261017/Build/ag/libcandidate.so",
+    "-ltiling_api",
+    "-lregister",
+    "-lplatform",
+    "-lunified_dlog",
+    "-ldl",
+    "-lm",
+    "-lgraph_base"
+  ],
+  "source_sha256": "fd70bc5ab1a32a04f5057cf0018542af1460548c2e12282f4303498535c5f436",
+  "library_sha256": "92b7b655bda9ab3630051cbfee40d7e50f113154a173c37d0f6a895b5b1189f6"
+}
