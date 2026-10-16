@@ -1,0 +1,36 @@
+{
+  "说明": "静态地址算术枚举，不是NPU、仿真或数值正确性运行",
+  "源码SHA256": "3e6f28b59d9e75743e6fe2aea4e7f8c6686921c863a114dd7151be5c0d88c164",
+  "仅FinishSplitN范围修改": true,
+  "无诊断printf": true,
+  "静态组合数量": 121757,
+  "各行块mask": {
+    "32": [
+      32
+    ],
+    "64": [
+      64
+    ],
+    "112": [
+      64,
+      48
+    ],
+    "128": [
+      64,
+      64
+    ],
+    "256": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  "预算证明": [
+    "非bulk：G<=floor((budget-fixed)/(rowInputBytes+rowMaximumBytes))，所以fixed+G*(input+maxima)<=budget。",
+    "bulk：先验证remaining>batchInputBytes，再G<=floor((remaining-batchInputBytes)/rowMaximumBytes)，所以fixed+整batch输入+G*maxima<=budget。",
+    "fixed包含133120字节调用方显式上界、256字节output、sums、temp和32字节reduce；各申请都是32字节整数倍。",
+    "budget使用编译时实际TOTAL_VEC_LOCAL_SIZE-sizeof(KfcMsg)，不硬写KFC大小。",
+    "G<2、stride超界或预算不足时，原bulk标志、原输入大小与旧逐tile归约保持。"
+  ]
+}
