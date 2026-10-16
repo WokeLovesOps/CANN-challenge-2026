@@ -1,0 +1,426 @@
+Browser tab: 70, Title: "CANNJudge", URL: "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submit".
+0 AXWebArea CANNJudge, URL: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submit
+	1 container
+		2 container app
+			3 container
+				4 link Description: CANNJudge, Value: cannjudge.cn/home
+				5 link Description: 开放题库, Value: cannjudge.cn/home
+				6 link Description: 开放赛事, Value: cannjudge.cn/contests
+				7 link Description: 小组空间, Value: cannjudge.cn/groups
+				8 button 消息
+				9 image avatar
+				10 link Description: wanderer, Value: cannjudge.cn/me
+				11 link Description: 退出, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submit#
+			12 container
+				13 link Description: 赛事, Value: cannjudge.cn/contests
+				14 text /
+				15 link Description: 2026年CANN挑战赛_上合赛区（初赛）, Value: cannjudge.cn/public/op_challenge_shanghe_prelim
+				16 text /
+				17 link Description: BatchMatmulMaxSum, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum
+				18 text / 答题
+				19 button 下载空工程
+				20 button 提交代码
+				21 container
+					22 heading 题目内容, Value: 3
+						23 text 题目内容
+					24 text 算子核函数工程(beta) cube CANN：9.0.0
+					25 heading 描述, Value: 4
+						26 text 描述
+					27 heading BatchMatmulMaxSum算子, Value: 1
+						28 text BatchMatmulMaxSum算子
+					29 heading 一、赛题背景, Value: 2
+						30 text 一、赛题背景
+					31 text 在神经信息检索和RAG重排场景中，ColBERT使用Late Interaction计算query与document的相关性：先计算token级点积相似度，再对每个query token执行MaxSim，最后求和得到query-document分数。该流程由BatchMatMul、ReduceMax和ReduceSum组成，融合后可减少Kernel Launch与中间数据搬运。
+					32 container
+						33 text 本题要求基于PyTorch中 torch.bmm 、 torch.amax 和 torch.sum 的核心业务逻辑，采用Ascend C编程语言进行算子原生开发，在昇腾NPU硬件上实现一款高性能的BatchMatmulMaxSum算子。
+					34 heading 二、算子功能描述, Value: 2
+						35 text 二、算子功能描述
+					36 text 实现的BatchMatmulMaxSum算子需完成以下核心计算：
+					37 content list
+						38 container
+							39 AXListMarker 1. 
+							40 text 批量矩阵乘 ：对B组一一对应的矩阵执行BatchMatMul，计算query token与document token的点积相似度。
+						41 container
+							42 AXListMarker 2. 
+							43 text MaxSim归约 ：沿document-token维N取最大值，得到每个query token的最高相似度。
+						44 container
+							45 AXListMarker 3. 
+							46 text 求和归约 ：沿query-token维M求和，输出每个query-document pair的相关性分数。
+					47 text 输入embedding的L2归一化由上游网络完成，本算子不执行L2归一化，也不接收padding、有效长度或mask输入。
+					48 text 算子的核心难点在于：在支持四种输入存储布局组合、非对齐尾块、较小Batch和最大可达8192的M/N/K维度时，协调Cube矩阵乘与Vector归约流水，降低相似度计算与两级归约之间的数据搬运开销。
+					49 heading 三、核心定义与约束, Value: 2
+						50 text 三、核心定义与约束
+					51 heading 3.1 参考算子, Value: 3
+						52 text 3.1 参考算子
+					53 container
+						54 text PyTorch原生算子： torch.bmm 、 torch.amax 、 torch.sum
+					55 text 等价python实现：
+					56 text import torch
+
+
+def batch_matmul_max_sum(x1_logical, x2_logical):
+    # x1_logical: [B, M, K]
+    # x2_logical: [B, K, N]
+    similarity = torch.bmm(
+        x1_logical.to(torch.float32),
+        x2_logical.to(torch.float32),
+    )
+    max_sim = torch.amax(similarity, dim=-1)
+    return torch.sum(max_sim, dim=-1, dtype=torch.float32)
+					57 container
+						58 text 上述代码描述固定逻辑shape下的计算语义。 transposeX1 和 transposeX2 只声明输入的storage shape，不参与数学计算，也不表示算子需要额外执行transpose操作。算子行为、计算结果需与上述PyTorch组合实现的数学语义对齐。标准golden使用输入实际存储值在FP64精度下计算，最后转换为FP32。
+					59 heading 3.2 数学公式, Value: 3
+						60 text 3.2 数学公式
+					61 text 参与BatchMatMul的逻辑矩阵固定为：
+					62 text 阶段一——批量矩阵乘：
+					63 text 阶段二——MaxSim归约：
+					64 text 阶段三——求和归约：
+					65 text 第b个x1仅与第b个x2配对，不进行batch broadcast或跨batch笛卡尔积计算。
+					66 heading 3.3 输入输出与属性总览, Value: 3
+						67 text 3.3 输入输出与属性总览
+					68 table
+						69 row
+							70 cell
+								71 text 类型
+							72 cell
+								73 text 参数名
+							74 cell
+								75 text 类型
+							76 cell
+								77 text 逻辑shape / storage shape
+							78 cell
+								79 text 支持数据类型
+							80 cell
+								81 text 数据格式
+							82 cell
+								83 text 备注
+						84 row
+							85 cell
+								86 text INPUT(必选)
+							87 cell
+								88 text x1
+							89 cell
+								90 text tensor
+							91 cell
+								92 text 逻辑shape固定为
+								93 text ；storage shape在
+								94 text transposeX1=false
+								95 text 时为
+								96 text ，
+								97 text true
+								98 text 时为
+							99 cell
+								100 text FLOAT16、BFLOAT16
+							101 cell
+								102 text ND
+							103 cell
+								104 text Query token embedding
+						105 row
+							106 cell
+								107 text INPUT(必选)
+							108 cell
+								109 text x2
+							110 cell
+								111 text tensor
+							112 cell
+								113 text 逻辑shape固定为
+								114 text ；storage shape在
+								115 text transposeX2=false
+								116 text 时为
+								117 text ，
+								118 text true
+								119 text 时为
+							120 cell
+								121 text FLOAT16、BFLOAT16
+							122 cell
+								123 text ND
+							124 cell
+								125 text Document token embedding的矩阵乘布局
+						126 row
+							127 cell
+								128 text OUTPUT(输出)
+							129 cell
+								130 text y
+							131 cell
+								132 text tensor
+							133 cell
+							134 cell
+								135 text FLOAT32
+							136 cell
+								137 text ND
+							138 cell
+								139 text 每个query-document pair的相关性分数
+						140 row
+							141 cell
+								142 text ATTR(可选)
+							143 cell
+								144 text transposeX1
+							145 cell
+								146 text bool
+							147 cell
+								148 text -
+							149 cell
+								150 text BOOL
+							151 cell
+								152 text -
+							153 cell
+								154 text 仅声明x1的storage shape，默认false
+						155 row
+							156 cell
+								157 text ATTR(可选)
+							158 cell
+								159 text transposeX2
+							160 cell
+								161 text bool
+							162 cell
+								163 text -
+							164 cell
+								165 text BOOL
+							166 cell
+								167 text -
+							168 cell
+								169 text 仅声明x2的storage shape，默认false
+					170 heading 3.4 关键输入约束, Value: 3
+						171 text 3.4 关键输入约束
+					172 content list
+						173 container
+							174 AXListMarker • 
+							175 text 维度取值范围（均为正整数） ：
+					176 content list
+						177 container
+							178 AXListMarker • 
+							179 text 。
+						180 container
+							181 AXListMarker • 
+							182 text 。
+						183 container
+							184 AXListMarker • 
+							185 text 。
+						186 container
+							187 AXListMarker • 
+							188 text ，且 为8的整数倍。
+						189 container
+							190 AXListMarker • 
+							191 text 输入规模同时满足 和 。
+						192 container
+							193 AXListMarker • 
+							194 text 形状约束 ：
+					195 content list
+						196 container
+							197 AXListMarker • 
+							198 text x1和x2均为3维Tensor。
+						199 container
+							200 AXListMarker • 
+							201 text x1的逻辑形状固定为 ，x2的逻辑形状固定为 ； transposeX1 和 transposeX2 仅用于确定对应输入的storage shape。
+						202 container
+							203 AXListMarker • 
+							204 text 两个输入的B和K必须分别相等，不支持batch broadcast。
+						205 container
+							206 AXListMarker • 
+							207 text M、N建议为16的整数倍；非对齐场景必须正确处理尾块。
+						208 container
+							209 AXListMarker • 
+							210 text 数据类型约束 ：
+					211 content list
+						212 container
+							213 AXListMarker • 
+							214 text x1和x2的数据类型必须相同。
+						215 container
+							216 AXListMarker • 
+							217 text x1和x2仅支持FLOAT16、BFLOAT16。
+						218 container
+							219 AXListMarker • 
+							220 text K维点积、MaxSim和Sum Reduction采用FLOAT32累加或具有等效精度的实现。
+						221 container
+							222 AXListMarker • 
+							223 text 其他约束 ：
+					224 content list
+						225 container
+							226 AXListMarker • 
+							227 text 不支持空Tensor，仅支持连续ND Tensor。
+						228 container
+							229 AXListMarker • 
+							230 text 输入不包含NaN或正负Inf，输入元素允许为负数。
+						231 container
+							232 AXListMarker • 
+							233 text M和N均表示参与计算的实际token数，不提供padding、有效长度或mask输入。
+						234 container
+							235 AXListMarker • 
+							236 text 算子不得修改输入。
+					237 heading 3.5 核心属性说明, Value: 3
+						238 text 3.5 核心属性说明
+					239 content list
+						240 container
+							241 AXListMarker • 
+							242 text transposeX1 （bool，默认false）：用于说明x1的storage shape。false时storage shape为 ；true时storage shape为 。该属性不改变x1的逻辑shape。
+						243 container
+							244 AXListMarker • 
+							245 text transposeX2 （bool，默认false）：用于说明x2的storage shape。false时storage shape为 ；true时storage shape为 。该属性不改变x2的逻辑shape。
+					246 text 两个属性仅描述输入数据的存储布局，不改变逻辑BatchMatMul与输出结果的定义。
+					247 heading 3.6 输出严格要求, Value: 3
+						248 text 3.6 输出严格要求
+					249 content list
+						250 container
+							251 AXListMarker • 
+							252 text 形状约束 ：输出y的shape固定为 。
+						253 container
+							254 AXListMarker • 
+							255 text 类型约束 ：输出y的数据类型固定为FLOAT32。
+						256 container
+							257 AXListMarker • 
+							258 text 计算顺序 ：必须按照 BatchMatMul → Max(N) → Sum(M) 计算，Max与Sum不可交换。
+						259 container
+							260 AXListMarker • 
+							261 text 有限性 ：所有输出均不得包含NaN或正负Inf。
+					262 heading 3.7 特殊值处理规则, Value: 3
+						263 text 3.7 特殊值处理规则
+					264 content list
+						265 container
+							266 AXListMarker • 
+							267 text 全负相似度 ：MaxSim的初始值必须为负无穷或归约行的首个元素，不得初始化为0；当某行全部为负数时仍需返回其中最大负数。
+						268 container
+							269 AXListMarker • 
+							270 text 大K累加 ：K维点积采用FLOAT32累加或具有等效精度的实现，避免低精度长归约造成明显误差。
+						271 container
+							272 AXListMarker • 
+							273 text 无效输入 ：题目用例不包含NaN、正负Inf、空Tensor或形状不匹配输入。
+					274 heading 四、规则要求, Value: 2
+						275 text 四、规则要求
+					276 content list
+						277 container
+							278 AXListMarker 1. 
+							279 text 数值一致性规则 ：给定相同输入与属性，算子多次执行结果应保持一致。
+						280 container
+							281 AXListMarker 2. 
+							282 text 一一配对规则 ：x1与x2的batch维必须相同，第b组x1只与第b组x2计算，不允许batch broadcast。
+						283 container
+							284 AXListMarker 3. 
+							285 text 归约顺序规则 ：计算顺序固定为先沿N维取最大值，再沿M维求和，不得改写为先求和再取最大值。
+						286 container
+							287 AXListMarker 4. 
+							288 text 存储布局规则 ： transposeX1 和 transposeX2 仅声明对应输入的storage shape，不表示执行转置操作；四种storage shape组合均需正确支持。
+						289 container
+							290 AXListMarker 5. 
+							291 text 性能要求 ：在保证数值精度和正确性的前提下，充分利用NPU硬件特性：
+					292 content list
+						293 container
+							294 AXListMarker • 
+							295 text 合理利用Cube与Vector计算单元，设计BatchMatMul和两级归约的协同流水。
+						296 container
+							297 AXListMarker • 
+							298 text 优化GM、L1、L0和UB之间的数据搬运与复用。
+						299 container
+							300 AXListMarker • 
+							301 text 沿B维和/或M维合理分配多核任务，兼顾较小Batch、大M/N/K和尾块负载均衡。
+						302 container
+							303 AXListMarker • 
+							304 text 鼓励使用Double Buffer或Ping-Pong机制重叠计算与搬运。
+						305 container
+							306 AXListMarker • 
+							307 text 性能基线为 BatchMatMul + ReduceMax + ReduceSum 拆分实现的总耗时，按融合实现相对基线的加速比评分。
+						308 container
+							309 AXListMarker • 
+							310 text 使用 msprof 采集Task Duration、Cube利用率、Vector利用率及MTE带宽利用率。
+					311 heading 五、精度判断规则, Value: 2
+						312 text 五、精度判断规则
+					313 text 精度要求：计算结果需满足以下精度误差要求：
+					314 content list
+						315 container
+							316 AXListMarker • 
+							317 text float32：相对误差 < 1e-4，绝对误差 < 1e-4（双万分之一精度）
+						318 container
+							319 AXListMarker • 
+							320 text float16、bfloat16：相对误差 < 1e-3，绝对误差 < 1e-3（双千分之一精度）
+						321 container
+							322 AXListMarker • 
+							323 text int32：要求计算结果完全准确，无误差
+					324 heading 六、得分规则, Value: 2
+						325 text 六、得分规则
+					326 content list
+						327 container
+							328 AXListMarker • 
+							329 text 本次比赛共15个测试点，所有case点精度全部通过才会计分。
+						330 container
+							331 AXListMarker • 
+							332 text 每个测试点单独计分，逻辑如下（T为最优性能，t为当前提交性能）：
+					333 content list
+						334 container
+							335 AXListMarker • 
+							336 text 排行榜显示的最终分数为所有case得分的均值。若得分计算一致，则以提交时间进行排序，提交越早，排名越高。
+					337 heading 七、示例说明, Value: 2
+						338 text 七、示例说明
+					339 container
+						340 text 示例1 ：基础计算
+					341 content list
+						342 container
+							343 AXListMarker • 
+							344 text x1：shape=(1,2,2)，值为 [[[1,0],[0,1]]] 。
+						345 container
+							346 AXListMarker • 
+							347 text x2：shape=(1,2,3)，值为 [[[1,0,-1],[0,1,0]]] 。
+						348 container
+							349 AXListMarker • 
+							350 text transposeX1=false ， transposeX2=false 。
+						351 container
+							352 AXListMarker • 
+							353 text BatchMatMul结果为 [[[1,0,-1],[0,1,0]]] 。
+						354 container
+							355 AXListMarker • 
+							356 text MaxSim结果为 [[1,1]] ，最终输出 y=[2.0] 。
+					357 container
+						358 text 示例2 ：转置存储布局
+					359 content list
+						360 container
+							361 AXListMarker • 
+							362 text 逻辑矩阵内容与示例1相同。
+						363 container
+							364 AXListMarker • 
+							365 text x1按 物理布局输入，x2按 物理布局输入。
+						366 container
+							367 AXListMarker • 
+							368 text transposeX1=true ， transposeX2=true 。
+						369 container
+							370 AXListMarker • 
+							371 text 两个属性仅说明上述storage shape；x1和x2的逻辑shape仍分别为 和 。算子不额外交换维度，而是直接按照对应存储布局完成相同逻辑计算，输出仍为 y=[2.0] 。
+					372 container
+						373 text 示例3 ：全负相似度
+					374 content list
+						375 container
+							376 AXListMarker • 
+							377 text x1：shape=(1,1,2)，值为 [[[1,0]]] 。
+						378 container
+							379 AXListMarker • 
+							380 text x2：shape=(1,2,2)，值为 [[[-1,-2],[0,0]]] 。
+						381 container
+							382 AXListMarker • 
+							383 text BatchMatMul结果为 [[[-1,-2]]] ，MaxSim结果为 [[-1]] 。
+						384 container
+							385 AXListMarker • 
+							386 text 最终输出 y=[-1.0] ，不能因错误地将MaxSim初始值设为0而输出0。
+				387 container
+					388 button (collapsed) 工程目录 kernel.asc, Secondary Actions: Expand
+						389 text 工程目录
+						390 text kernel.asc
+					391 button kernel.asc
+					392 button ↺, Help: 滚动到顶部
+					393 button ⧉, Help: 复制当前文件
+					394 container Description: Ascend C 代码编辑器, ID: editor-main
+						395 container
+							396 editor (settable) Description: Ascend C 代码编辑器, Value: 存；run_kernel 返回时不能提前释放。
+        CheckAcl(aclmdlRIDestroyRegisterCallback(capturedModel, DestroyCapturedWorkspace, memory.get()),
+            "aclmdlRIDestroyRegisterCallback");
+        memory.release();
+    }
+    LaunchWithFallback(x1, x2, scratchAddr, partialAddr, y, workspaceAddr,
+        params, stream, a.dtype == 1, transposeX1, transposeX2, shapeKey, splitN, genericFallback, residentA);
+    if (!capturing) {
+        CheckAcl(aclrtSynchronizeStream(stream), "aclrtSynchronizeStream");
+    }
+}
+		397 container 错误信息
+			398 heading 错误信息, Value: 4
+				399 text 错误信息
+			400 text 今日提交次数已达上限（50次），请于北京时间 2026-10-18 00:00 后再提交
+			401 button 确定
+
+The focused UI element is 401 button 确定

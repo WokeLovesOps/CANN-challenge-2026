@@ -1,0 +1,304 @@
+Browser tab: 59, Title: "CANNJudge", URL: "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ad27519193e507d8ec2437b".
+0 AXWebArea CANNJudge, URL: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ad27519193e507d8ec2437b
+	1 container
+		2 container app
+			3 container
+				4 link Description: CANNJudge, Value: cannjudge.cn/home
+				5 link Description: 开放题库, Value: cannjudge.cn/home
+				6 link Description: 开放赛事, Value: cannjudge.cn/contests
+				7 link Description: 小组空间, Value: cannjudge.cn/groups
+				8 button 消息
+				9 image avatar
+				10 link Description: wanderer, Value: cannjudge.cn/me
+				11 link Description: 退出, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ad27519193e507d8ec2437b#
+			12 container
+				13 link Description: 赛事, Value: cannjudge.cn/contests
+				14 text /
+				15 link Description: 2026年CANN挑战赛_上合赛区（初赛）, Value: cannjudge.cn/public/op_challenge_shanghe_prelim
+				16 text /
+				17 link Description: BatchMatmulMaxSum, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum
+				18 text / 提交记录
+				19 heading BatchMatmulMaxSum, Value: 2
+					20 link Description: BatchMatmulMaxSum, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum
+				21 button 下载工程
+				22 text 提交 ID：873218 提交人：wanderer 提交时间：2026/10/17 03:03:53
+				23 container submission-status-cell
+					24 text 提交状态： Pass
+				25 button CMakeLists.txt
+				26 button data_utils.h
+				27 button kernel.asc
+				28 button main.asc
+				29 button run.sh
+				30 button scripts/BatchMatmulMaxSum.py
+				31 button scripts/gen_data.py
+				32 button scripts/verify_result.py
+				33 button 滚动到顶部
+				34 button 复制代码
+				35 text 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+				36 text cmake_minimum_required(VERSION 3.16)
+
+find_package(ASC REQUIRED)
+
+project(batch_matmul_max_sum_custom LANGUAGES ASC CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+if(DEFINED NPU_ARCH)
+    set(SOC_ARCH ${NPU_ARCH})
+else()
+    set(SOC_ARCH "dav-2201")
+endif()
+
+add_executable(batch_matmul_max_sum_custom main.asc)
+
+target_link_libraries(batch_matmul_max_sum_custom PRIVATE
+    tiling_api
+    register
+    platform
+    unified_dlog
+    dl
+    m
+    graph_base
+)
+
+target_include_directories(batch_matmul_max_sum_custom PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_compile_options(batch_matmul_max_sum_custom PRIVATE
+    $<$<COMPILE_LANGUAGE:ASC>:--npu-arch=${SOC_ARCH}>
+)
+
+				37 heading 执行结果, Value: 3
+					38 text 执行结果
+				39 table
+					40 row
+						41 cell
+							42 text 测试点
+						43 cell
+							44 text 结果
+						45 cell
+							46 text 输出错误占比
+						47 cell
+							48 text 用时
+						49 cell
+							50 text 最优用时
+					51 container submission-result-tbody
+						52 row
+							53 cell
+								54 text 1
+							55 cell
+								56 text Pass
+							57 cell
+								58 text 0.00%
+							59 cell
+								60 text 1.79μs
+							61 cell
+								62 text 0.99μs
+						63 row
+							64 cell
+								65 text 2
+							66 cell
+								67 text Pass
+							68 cell
+								69 text 0.00%
+							70 cell
+								71 text 2.16μs
+							72 cell
+								73 text 1.47μs
+						74 row
+							75 cell
+								76 text 3
+							77 cell
+								78 text Pass
+							79 cell
+								80 text 0.00%
+							81 cell
+								82 text 2.20μs
+							83 cell
+								84 text 1.92μs
+						85 row
+							86 cell
+								87 text 4
+							88 cell
+								89 text Pass
+							90 cell
+								91 text 0.00%
+							92 cell
+								93 text 2.67μs
+							94 cell
+								95 text 2.48μs
+						96 row
+							97 cell
+								98 text 5
+							99 cell
+								100 text Pass
+							101 cell
+								102 text 0.00%
+							103 cell
+								104 text 4.95μs
+							105 cell
+								106 text 3.42μs
+						107 row
+							108 cell
+								109 text 6
+							110 cell
+								111 text Pass
+							112 cell
+								113 text 0.00%
+							114 cell
+								115 text 9.81μs
+							116 cell
+								117 text 6.08μs
+						118 row
+							119 cell
+								120 text 7
+							121 cell
+								122 text Pass
+							123 cell
+								124 text 0.00%
+							125 cell
+								126 text 7.18μs
+							127 cell
+								128 text 6.26μs
+						129 row
+							130 cell
+								131 text 8
+							132 cell
+								133 text Pass
+							134 cell
+								135 text 0.00%
+							136 cell
+								137 text 39.48μs
+							138 cell
+								139 text 24.59μs
+						140 row
+							141 cell
+								142 text 9
+							143 cell
+								144 text Pass
+							145 cell
+								146 text 0.00%
+							147 cell
+								148 text 70.35μs
+							149 cell
+								150 text 46.46μs
+						151 row
+							152 cell
+								153 text 10
+							154 cell
+								155 text Pass
+							156 cell
+								157 text 0.00%
+							158 cell
+								159 text 82.96μs
+							160 cell
+								161 text 61.58μs
+						162 row
+							163 cell
+								164 text 11
+							165 cell
+								166 text Pass
+							167 cell
+								168 text 0.00%
+							169 cell
+								170 text 82.34μs
+							171 cell
+								172 text 65.53μs
+						173 row
+							174 cell
+								175 text 12
+							176 cell
+								177 text Pass
+							178 cell
+								179 text 0.00%
+							180 cell
+								181 text 104.14μs
+							182 cell
+								183 text 80.07μs
+						184 row
+							185 cell
+								186 text 13
+							187 cell
+								188 text Pass
+							189 cell
+								190 text 0.00%
+							191 cell
+								192 text 9.44μs
+							193 cell
+								194 text 7.64μs
+						195 row
+							196 cell
+								197 text 14
+							198 cell
+								199 text Pass
+							200 cell
+								201 text 0.00%
+							202 cell
+								203 text 10.52μs
+							204 cell
+								205 text 8.10μs
+						206 row
+							207 cell
+								208 text 15
+							209 cell
+								210 text Pass
+							211 cell
+								212 text 0.00%
+							213 cell
+								214 text 11.01μs
+							215 cell
+								216 text 6.19μs
+				217 text 通过：15 / 15
+
+The focused UI element is 0 AXWebArea CANNJudge, URL: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ad27519193e507d8ec2437b
+
+测试点	结果	输出错误占比	用时	最优用时
+1	Pass	0.00%	1.79μs	0.99μs
+2	Pass	0.00%	2.16μs	1.47μs
+3	Pass	0.00%	2.20μs	1.92μs
+4	Pass	0.00%	2.67μs	2.48μs
+5	Pass	0.00%	4.95μs	3.42μs
+6	Pass	0.00%	9.81μs	6.08μs
+7	Pass	0.00%	7.18μs	6.26μs
+8	Pass	0.00%	39.48μs	24.59μs
+9	Pass	0.00%	70.35μs	46.46μs
+10	Pass	0.00%	82.96μs	61.58μs
+11	Pass	0.00%	82.34μs	65.53μs
+12	Pass	0.00%	104.14μs	80.07μs
+13	Pass	0.00%	9.44μs	7.64μs
+14	Pass	0.00%	10.52μs	8.10μs
+15	Pass	0.00%	11.01μs	6.19μs

@@ -1,0 +1,305 @@
+Browser tab: 56, Title: "CANNJudge", URL: "https://cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ad2713f193e507d8ebe7a44".
+0 AXWebArea CANNJudge, URL: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ad2713f193e507d8ebe7a44
+	1 container
+		2 container app
+			3 container
+				4 link Description: CANNJudge, Value: cannjudge.cn/home
+				5 link Description: 开放题库, Value: cannjudge.cn/home
+				6 link Description: 开放赛事, Value: cannjudge.cn/contests
+				7 link Description: 小组空间, Value: cannjudge.cn/groups
+				8 button 消息
+				9 image avatar
+				10 link Description: wanderer, Value: cannjudge.cn/me
+				11 link Description: 退出, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum/submission/6ad2713f193e507d8ebe7a44#
+			12 container
+				13 link Description: 赛事, Value: cannjudge.cn/contests
+				14 text /
+				15 link Description: 2026年CANN挑战赛_上合赛区（初赛）, Value: cannjudge.cn/public/op_challenge_shanghe_prelim
+				16 text /
+				17 link Description: BatchMatmulMaxSum, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum
+				18 text / 提交记录
+				19 heading BatchMatmulMaxSum, Value: 2
+					20 link Description: BatchMatmulMaxSum, Value: cannjudge.cn/public/op_challenge_shanghe_prelim/batchmatmulmaxsum
+				21 button 下载工程
+				22 text 提交 ID：872943 提交人：wanderer 提交时间：2026/10/17 02:47:27
+				23 container submission-status-cell
+					51 text 提交状态： Pass
+				25 button CMakeLists.txt
+				26 button data_utils.h
+				27 button kernel.asc
+				28 button main.asc
+				29 button run.sh
+				30 button scripts/BatchMatmulMaxSum.py
+				31 button scripts/gen_data.py
+				32 button scripts/verify_result.py
+				33 button 滚动到顶部
+				34 button 复制代码
+				221 text 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+				222 text cmake_minimum_required(VERSION 3.16)
+
+find_package(ASC REQUIRED)
+
+project(batch_matmul_max_sum_custom LANGUAGES ASC CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+if(DEFINED NPU_ARCH)
+    set(SOC_ARCH ${NPU_ARCH})
+else()
+    set(SOC_ARCH "dav-2201")
+endif()
+
+add_executable(batch_matmul_max_sum_custom main.asc)
+
+target_link_libraries(batch_matmul_max_sum_custom PRIVATE
+    tiling_api
+    register
+    platform
+    unified_dlog
+    dl
+    m
+    graph_base
+)
+
+target_include_directories(batch_matmul_max_sum_custom PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_compile_options(batch_matmul_max_sum_custom PRIVATE
+    $<$<COMPILE_LANGUAGE:ASC>:--npu-arch=${SOC_ARCH}>
+)
+
+				37 heading 执行结果, Value: 3
+					38 text 执行结果
+				39 table
+					40 row
+						41 cell
+							42 text 测试点
+						43 cell
+							44 text 结果
+						45 cell
+							46 text 输出错误占比
+						47 cell
+							48 text 用时
+						49 cell
+							50 text 最优用时
+					54 container submission-result-tbody
+						55 row
+							56 cell
+								57 text 1
+							58 cell
+								59 text Pass
+							60 cell
+								61 text 0.00%
+							62 cell
+								63 text 1.72μs
+							64 cell
+								65 text 0.99μs
+						66 row
+							67 cell
+								68 text 2
+							69 cell
+								70 text Pass
+							71 cell
+								72 text 0.00%
+							73 cell
+								74 text 2.21μs
+							75 cell
+								76 text 1.47μs
+						77 row
+							78 cell
+								79 text 3
+							80 cell
+								81 text Pass
+							82 cell
+								83 text 0.00%
+							84 cell
+								85 text 2.25μs
+							86 cell
+								87 text 1.92μs
+						88 row
+							89 cell
+								90 text 4
+							91 cell
+								92 text Pass
+							93 cell
+								94 text 0.00%
+							95 cell
+								96 text 2.63μs
+							97 cell
+								98 text 2.48μs
+						99 row
+							100 cell
+								101 text 5
+							102 cell
+								103 text Pass
+							104 cell
+								105 text 0.00%
+							106 cell
+								107 text 4.74μs
+							108 cell
+								109 text 3.42μs
+						110 row
+							111 cell
+								112 text 6
+							113 cell
+								114 text Pass
+							115 cell
+								116 text 0.00%
+							117 cell
+								118 text 9.94μs
+							119 cell
+								120 text 6.08μs
+						121 row
+							122 cell
+								123 text 7
+							124 cell
+								125 text Pass
+							126 cell
+								127 text 0.00%
+							128 cell
+								129 text 7.17μs
+							130 cell
+								131 text 6.39μs
+						132 row
+							133 cell
+								134 text 8
+							135 cell
+								136 text Pass
+							137 cell
+								138 text 0.00%
+							139 cell
+								140 text 38.85μs
+							141 cell
+								142 text 24.59μs
+						143 row
+							144 cell
+								145 text 9
+							146 cell
+								147 text Pass
+							148 cell
+								149 text 0.00%
+							150 cell
+								151 text 70.29μs
+							152 cell
+								153 text 46.46μs
+						154 row
+							155 cell
+								156 text 10
+							157 cell
+								158 text Pass
+							159 cell
+								160 text 0.00%
+							161 cell
+								162 text 82.08μs
+							163 cell
+								164 text 61.58μs
+						165 row
+							166 cell
+								167 text 11
+							168 cell
+								169 text Pass
+							170 cell
+								171 text 0.00%
+							172 cell
+								173 text 82.49μs
+							174 cell
+								175 text 65.53μs
+						176 row
+							177 cell
+								178 text 12
+							179 cell
+								180 text Pass
+							181 cell
+								182 text 0.00%
+							183 cell
+								184 text 104.66μs
+							185 cell
+								186 text 80.07μs
+						187 row
+							188 cell
+								189 text 13
+							190 cell
+								191 text Pass
+							192 cell
+								193 text 0.00%
+							194 cell
+								195 text 8.90μs
+							196 cell
+								197 text 7.64μs
+						198 row
+							199 cell
+								200 text 14
+							201 cell
+								202 text Pass
+							203 cell
+								204 text 0.00%
+							205 cell
+								206 text 10.17μs
+							207 cell
+								208 text 8.10μs
+						209 row
+							210 cell
+								211 text 15
+							212 cell
+								213 text Pass
+							214 cell
+								215 text 0.00%
+							216 cell
+								217 text 10.75μs
+							218 cell
+								219 text 6.19μs
+				220 text 通过：15 / 15
+		223 text 代码已复制
+
+The focused UI element is 25 button CMakeLists.txt
+
+测试点	结果	输出错误占比	用时	最优用时
+1	Pass	0.00%	1.72μs	0.99μs
+2	Pass	0.00%	2.21μs	1.47μs
+3	Pass	0.00%	2.25μs	1.92μs
+4	Pass	0.00%	2.63μs	2.48μs
+5	Pass	0.00%	4.74μs	3.42μs
+6	Pass	0.00%	9.94μs	6.08μs
+7	Pass	0.00%	7.17μs	6.39μs
+8	Pass	0.00%	38.85μs	24.59μs
+9	Pass	0.00%	70.29μs	46.46μs
+10	Pass	0.00%	82.08μs	61.58μs
+11	Pass	0.00%	82.49μs	65.53μs
+12	Pass	0.00%	104.66μs	80.07μs
+13	Pass	0.00%	8.90μs	7.64μs
+14	Pass	0.00%	10.17μs	8.10μs
+15	Pass	0.00%	10.75μs	6.19μs
